@@ -1,0 +1,12 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>亚索 E · 专用动作试版</title>
+<style>body{background:#101d25;color:#d5e9ec;font:15px system-ui;padding:24px;max-width:1000px;margin:auto}p{line-height:1.7;color:#a4bdc6}canvas{image-rendering:pixelated;background:repeating-conic-gradient(#20343d 0% 25%,#192b34 0% 50%) 50%/20px 20px}.stage{overflow:auto;border:1px solid #3b5964;padding:20px;border-radius:12px}button,select{background:#284751;color:white;padding:10px;border:1px solid #63818b;margin:8px 4px;border-radius:5px}a{color:#9cdddd}input{width:100%}.frames{display:flex;flex-wrap:wrap;gap:12px}figure{margin:0}summary{margin:20px 0;cursor:pointer}</style>
+<p>YASUO / SWEEPING BLADE / GENERATED CHARACTER MOTION</p><h1>E · 正右方向专用动作</h1>
+<p>Skill 新绘制的全身动画，不再用走路帧代替。先独立检查动作，尚未替换主游戏素材。</p>
+<div class="stage"><canvas id="animation" aria-label="亚索踏前斩动画"></canvas></div>
+<button id="once">播放一次</button><button id="loop">循环检查</button><button id="pause">暂停</button>
+<select id="speed" aria-label="播放速度"><option value="1">原始速度</option><option value="0.5">半速检查</option><option value="game">0.32 秒游戏节奏</option></select>
+<p id="status"></p><input id="scrub" aria-label="逐帧查看" type="range" min="0" max="7" step="1" value="0">
+<p>检查结论：中段偏宽幅横斩、刀光偏宽，末尾停在持刀收势，尚未达到低姿态穿身斩目标。暂不接入游戏。循环仅用于反复检查，不代表无缝衔接；游戏节奏只改变播放速度，不删帧、不插帧。</p>
+<p><a href="./media/e.webp" download>下载动画 WebP</a> · <a href="./media/e-atlas.png" download>下载透明帧图</a> · <a href="/?practice=e">返回当前 E 练习版</a></p>
+<details><summary>逐帧查看</summary><div class="frames" id="frames"></div></details><details><summary>本次提示词</summary><p id="prompt"></p></details>
+<script type="module" src="./preview.ts"></script></html>

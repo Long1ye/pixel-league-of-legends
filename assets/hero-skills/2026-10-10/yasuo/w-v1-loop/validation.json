@@ -1,0 +1,89 @@
+{
+  "dimensions": [
+    184,
+    120
+  ],
+  "frames": 8,
+  "durations_ms": [
+    125,
+    125,
+    125,
+    125,
+    125,
+    125,
+    125,
+    125
+  ],
+  "transparent": true,
+  "partial_alpha_pixels": [
+    3500,
+    3373,
+    3160,
+    2932,
+    2735,
+    2993,
+    2679,
+    2815
+  ],
+  "frame_bounds": [
+    [
+      40,
+      20,
+      148,
+      104
+    ],
+    [
+      40,
+      20,
+      148,
+      104
+    ],
+    [
+      40,
+      20,
+      148,
+      104
+    ],
+    [
+      40,
+      20,
+      148,
+      104
+    ],
+    [
+      40,
+      20,
+      148,
+      104
+    ],
+    [
+      40,
+      20,
+      148,
+      104
+    ],
+    [
+      40,
+      20,
+      148,
+      104
+    ],
+    [
+      40,
+      20,
+      148,
+      104
+    ]
+  ],
+  "edge_contact_frames": [],
+  "preview_atlas_rgba_identical": true,
+  "media_byte_exact": true,
+  "retained_background_preserved": true,
+  "all_frames_visually_checked": true,
+  "browser_loop_playback_verified": true,
+  "browser_console_warnings_or_errors": [],
+  "browser_proof": "docs/screenshots/yasuo-w-v1-loop-preview.jpg",
+  "game_logic_modified": false,
+  "tests": "111 tests passed in 21 files",
+  "build": "TypeScript and Vite production build passed"
+}

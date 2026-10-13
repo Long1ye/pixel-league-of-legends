@@ -1,0 +1,12 @@
+{
+  "status": "preview-reviewed",
+  "integratedInGame": false,
+  "regenerated": ["e", "se"],
+  "reusedUnmodified": ["nw", "n", "ne", "w", "sw", "s"],
+  "size": [128, 128],
+  "framesPerDirection": 8,
+  "durationMs": 800,
+  "transparent": true,
+  "edgeContacts": [],
+  "visualReview": "All 16 regenerated frames reviewed. No newly exposed blade, unsheathing, slashing or stepping. Hands and legs remain largely in reference pose; motion concentrated in hair. Loop boundary not pixel-identical."
+}

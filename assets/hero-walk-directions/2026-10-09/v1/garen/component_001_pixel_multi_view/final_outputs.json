@@ -1,0 +1,51 @@
+{
+  "status": "success",
+  "job_id": "job_f9ff7693c6ec40568c9bf07844a83f88",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-walk-directions\\2026-10-09\\v1\\garen\\component_001_pixel_multi_view\\iso_back_left.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-walk-directions\\2026-10-09\\v1\\garen\\component_001_pixel_multi_view\\back.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-walk-directions\\2026-10-09\\v1\\garen\\component_001_pixel_multi_view\\iso_back_right.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-walk-directions\\2026-10-09\\v1\\garen\\component_001_pixel_multi_view\\left.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-walk-directions\\2026-10-09\\v1\\garen\\component_001_pixel_multi_view\\right.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-walk-directions\\2026-10-09\\v1\\garen\\component_001_pixel_multi_view\\iso_front_left.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-walk-directions\\2026-10-09\\v1\\garen\\component_001_pixel_multi_view\\front.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-walk-directions\\2026-10-09\\v1\\garen\\component_001_pixel_multi_view\\iso_front_right.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-walk-directions\\2026-10-09\\v1\\garen\\component_001_pixel_multi_view\\preview_3x3.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

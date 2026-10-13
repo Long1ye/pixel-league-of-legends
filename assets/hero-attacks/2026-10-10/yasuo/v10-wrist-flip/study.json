@@ -1,0 +1,270 @@
+{
+  "hero": "yasuo",
+  "approved_prompt": "在最低点翻转手腕，将刀身转为参考图所示的朝向，以这一形态从下向上连贯挥砍。到达最高点后再次翻腕，恢复高位持刀姿态，为下一次向下挥砍做准备。",
+  "optimized_prompt": {
+    "优化方式": "keyframes-run --optimize-prompt; enhanced text is not returned",
+    "刀图输入限制": "keyframes-run does not accept a separate weapon reference; supplied sword is a review reference only"
+  },
+  "final_media": [
+    {
+      "path": "clips/animation-B/在最低点翻转手腕_将刀身转为参考图所示的朝向_以这一形态从下向上连贯挥砍_到_b1ebc41b/result_output_url.webp",
+      "width": 176,
+      "height": 176,
+      "frame_count": 12,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "duration_ms": 1200,
+      "transparent": true,
+      "edge_contact_frames": [],
+      "bounds": [
+        [
+          42,
+          48,
+          152,
+          150
+        ],
+        [
+          42,
+          48,
+          152,
+          150
+        ],
+        [
+          43,
+          48,
+          150,
+          150
+        ],
+        [
+          44,
+          40,
+          148,
+          150
+        ],
+        [
+          17,
+          38,
+          118,
+          150
+        ],
+        [
+          18,
+          33,
+          118,
+          150
+        ],
+        [
+          21,
+          33,
+          118,
+          150
+        ],
+        [
+          26,
+          33,
+          118,
+          150
+        ],
+        [
+          34,
+          35,
+          118,
+          150
+        ],
+        [
+          31,
+          36,
+          117,
+          150
+        ],
+        [
+          39,
+          24,
+          121,
+          150
+        ],
+        [
+          44,
+          33,
+          144,
+          150
+        ]
+      ],
+      "sha256": "ae701e2002e201ecd1a67ebe74bab8f4351c3ca661558bf4b93957677d43c6a2"
+    }
+  ],
+  "newB": {
+    "path": "clips/animation-B/在最低点翻转手腕_将刀身转为参考图所示的朝向_以这一形态从下向上连贯挥砍_到_b1ebc41b/result_output_url.webp",
+    "width": 176,
+    "height": 176,
+    "frame_count": 12,
+    "durations_ms": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    "duration_ms": 1200,
+    "transparent": true,
+    "edge_contact_frames": [],
+    "bounds": [
+      [
+        42,
+        48,
+        152,
+        150
+      ],
+      [
+        42,
+        48,
+        152,
+        150
+      ],
+      [
+        43,
+        48,
+        150,
+        150
+      ],
+      [
+        44,
+        40,
+        148,
+        150
+      ],
+      [
+        17,
+        38,
+        118,
+        150
+      ],
+      [
+        18,
+        33,
+        118,
+        150
+      ],
+      [
+        21,
+        33,
+        118,
+        150
+      ],
+      [
+        26,
+        33,
+        118,
+        150
+      ],
+      [
+        34,
+        35,
+        118,
+        150
+      ],
+      [
+        31,
+        36,
+        117,
+        150
+      ],
+      [
+        39,
+        24,
+        121,
+        150
+      ],
+      [
+        44,
+        33,
+        144,
+        150
+      ]
+    ],
+    "sha256": "ae701e2002e201ecd1a67ebe74bab8f4351c3ca661558bf4b93957677d43c6a2"
+  },
+  "originals": [
+    {
+      "id": "A",
+      "path": "v9-three-variants/variant-1/clips/animation-A/绘制第二次挥刀动画_第一次挥刀结束自然过渡到第二次挥刀结束/result_output_url.webp",
+      "width": 176,
+      "height": 176,
+      "frame_count": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "duration_ms": 800
+    },
+    {
+      "id": "oldB",
+      "path": "v9-three-variants/variant-1/clips/animation-B/绘制第一次挥刀动画_第二次挥刀结束自然过渡到第一次挥刀结束/result_output_url.webp",
+      "width": 176,
+      "height": 176,
+      "frame_count": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "duration_ms": 800
+    }
+  ],
+  "canvas_compatible": true,
+  "downloads": [
+    {
+      "path": "clips/animation-B/在最低点翻转手腕_将刀身转为参考图所示的朝向_以这一形态从下向上连贯挥砍_到_b1ebc41b/result_output_url.webp",
+      "label": "透明WebP"
+    },
+    {
+      "path": "clips/animation-B/在最低点翻转手腕_将刀身转为参考图所示的朝向_以这一形态从下向上连贯挥砍_到_b1ebc41b/result_output_transparent_output_urls_gif.gif",
+      "label": "GIF动画"
+    },
+    {
+      "path": "clips/animation-B/在最低点翻转手腕_将刀身转为参考图所示的朝向_以这一形态从下向上连贯挥砍_到_b1ebc41b/result_output_transparent_output_urls_png.png",
+      "label": "PNG图集"
+    }
+  ],
+  "credits_before": 7935,
+  "credits_after": 7842,
+  "credits_consumed": 93,
+  "pose_preparation_review": {
+    "accepted": false,
+    "reason": "低位被改成高位，高位背景不透明；两个辅助姿势均不用于动画。",
+    "credits_consumed": 18
+  },
+  "review": "12帧已逐帧检查，透明度、尺寸及图集通过技术验证。中段出现明显转身与衣服、发型变化，尚未清楚表现所要求的两次翻腕和参考刀身朝向；末段回到高位时仍有姿势跳变。本版仅供动作对照，未达到美术定稿要求。",
+  "production_ready": false,
+  "runtime_integrated": false
+}

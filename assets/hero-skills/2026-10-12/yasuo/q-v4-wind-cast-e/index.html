@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>亚索 Q · 手势施法与风托刀</title>
+<style>
+:root{color-scheme:dark;font-family:"Microsoft YaHei",system-ui,sans-serif;background:#0d1b24;color:#e6f2ef}*{box-sizing:border-box}body{margin:0;padding:20px}main{max-width:1100px;margin:auto}h1{font-size:25px}h2{font-size:17px;margin-top:0}p{line-height:1.7;color:#b8d0ce}a{color:#9be5d8}.panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}section{border:1px solid #365251;background:#142b34;padding:16px;border-radius:10px}.viewport{overflow:auto}canvas,img{display:block;image-rendering:pixelated}.checker{background-color:#172e38;background-image:conic-gradient(#294c56 25%,transparent 0 50%,#294c56 0 75%,transparent 0);background-size:20px 20px}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:18px 0}button,select,input{font:inherit}button,select{color:#e6f2ef;border:1px solid #527575;border-radius:6px;padding:8px 12px;background:#1b3a45;cursor:pointer}button:disabled{opacity:.5}output{color:#a8e9d8}.note{border-left:2px solid #c6ac7d;padding-left:12px;color:#dccba9}#layers{display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap}figure{margin:0}figcaption{margin-top:8px;color:#b8d0ce}details{margin:20px 0}summary{cursor:pointer}blockquote{margin-left:0;padding-left:14px;border-left:2px solid #547775;line-height:1.8}#scrub{width:170px}@media(max-width:800px){.panels{grid-template-columns:1fr}body{padding:16px}}@media(max-width:360px){body{padding:10px}section{padding:10px}}
+</style></head><body><main>
+<p>YASUO / Q / WIND CAST / EAST</p>
+<h1>亚索 Q · 风托刀</h1>
+<p>手改为施法手势，不再握刀。刀独立悬浮，淡蓝色气流包裹刀身。保留旧版供对比，尚未接入游戏。</p>
+<div class="toolbar">
+<button id="once" disabled>施法一次</button><button id="repeat" disabled>循环检查</button><button id="pause" disabled>暂停</button>
+<label>像素倍率 <select id="zoom" aria-label="像素倍率"><option value="1" selected>1× 原生</option><option value="2">2× 整数放大</option></select></label>
+<label>速度 <select id="speed" aria-label="动画速度"><option value="1">1× · 480ms</option><option value="0.5">0.5× 慢速检查</option></select></label>
+<label><input id="joints" type="checkbox">显示手刀间距</label>
+</div>
+<div class="panels">
+<section><h2>手势施法 · 手不接触刀</h2><div class="viewport"><canvas id="rig" class="checker" width="256" height="160" aria-label="手不接触刀的亚索施法动画"></canvas></div><p>抬手聚风 → 推出 → 风托刀刺击 → 风散收手</p></section>
+<section><h2>地图上的游戏尺寸检查</h2><div class="viewport"><canvas id="scene" width="256" height="160" aria-label="地图上的风托刀技能样稿"></canvas></div><p>沿用当前地图与英雄比例，仅背景合成，不含命中判定。</p></section>
+</div>
+<div class="toolbar"><label for="scrub">动作进度</label><input id="scrub" aria-label="动作进度" type="range" min="0" max="480" step="1" value="0"><output id="status" aria-live="polite">正在加载…</output></div>
+<p class="note">只做朝右。身体和上臂沿用旧版原像素；施法手与缠风刀由 game-assets 修改，气流的流动和出现/消散由代码驱动。身体仍是固定姿态，未扩展八向。</p>
+<details><summary>查看独立素材</summary><div id="layers"></div></details>
+<details><summary>查看这次的修改 prompt</summary><blockquote id="prompt"></blockquote></details>
+<p><a id="sheet">查看修改后的素材图</a> · <a href="../q-v3-layered-e/index.html">旧版握刀对照</a> · <a href="/">返回游戏</a></p>
+</main><script type="module" src="./preview.ts"></script></body></html>

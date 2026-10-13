@@ -1,0 +1,13 @@
+{
+  "version": "w-v4-free-angle",
+  "type": "procedural-world-space-wind-wall",
+  "preview": "index.html",
+  "renderer": "wall.ts",
+  "angles": "continuous 0–360 degrees; eight presets are shortcuts only",
+  "projection": {"groundScale": 0.58, "heightAxis": "screen-up"},
+  "placement": {"distance": 60, "width": 138, "height": 57, "thickness": 10, "orientation": "perpendicular to cast direction", "locksOnCast": true},
+  "timingMs": {"rise": 420, "fadeStart": 3400, "end": 3900, "windLoop": 1800},
+  "export": {"format": "transparent PNG atlas via preview button", "columns": 6, "rows": 4, "frames": 24, "frameWidth": 240, "frameHeight": 192, "frameDurationMs": 75},
+  "scope": {"heroAnimation": false, "mainGameIntegration": false, "projectileBlocking": false, "paidGenerationSubmitted": false},
+  "notes": "Independent visual prototype. World-space ground tangent and upright wind strokes preserve wall orientation. Side-on views intentionally narrow with finite thickness."
+}

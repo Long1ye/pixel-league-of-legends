@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_671c8acfcf3040afbb07f016594c07a9",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-animations\\2026-10-09\\v2\\yasuo\\walk-w\\角色保持输入图中的朝向_屏幕左方_原地交替迈步_双脚轮流向前和向后_头发和蓝色_9d233f4f\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-animations\\2026-10-09\\v2\\yasuo\\walk-w\\角色保持输入图中的朝向_屏幕左方_原地交替迈步_双脚轮流向前和向后_头发和蓝色_9d233f4f\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-animations\\2026-10-09\\v2\\yasuo\\walk-w\\角色保持输入图中的朝向_屏幕左方_原地交替迈步_双脚轮流向前和向后_头发和蓝色_9d233f4f\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

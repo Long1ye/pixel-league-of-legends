@@ -1,0 +1,840 @@
+{
+  "hero": "yasuo",
+  "direction": "se",
+  "width": 176,
+  "height": 176,
+  "variants": [
+    {
+      "id": 1,
+      "clips": [
+        {
+          "id": "entry",
+          "name": "走路→第一次挥刀结束",
+          "job_id": "job_14e51aa264104278a173d6fb246c44e9",
+          "width": 176,
+          "height": 176,
+          "webp": "variant-1/clips/entry/job_14e51aa264104278a173d6fb246c44e9/result_output_url.webp",
+          "gif": "variant-1/clips/entry/job_14e51aa264104278a173d6fb246c44e9/result_output_transparent_output_urls_gif.gif",
+          "sheet": "variant-1/clips/entry/job_14e51aa264104278a173d6fb246c44e9/result_output_transparent_output_urls_png.png",
+          "columns": 3,
+          "rows": 3,
+          "frame_count": 8,
+          "durations_ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "duration_ms": 800,
+          "prompt": "亚索从迈步姿势自然停稳，拔刀并完成一次从低位到高位的挥砍，衔接第一次挥刀结束姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+          "prompt_optimization": true,
+          "edge_contact_frames": [],
+          "webp_sha256": "b831d81e8e1be12b1d2571c48610e86b91bfa8620a5dc906b14da6dd2c386d42",
+          "first_to_input": {
+            "mean_rgb_error": 0.9611419593663912,
+            "alpha_identical": false
+          },
+          "last_to_input": {
+            "mean_rgb_error": 1.019143853305785,
+            "alpha_identical": false
+          }
+        },
+        {
+          "id": "repeat",
+          "name": "第二次→第一次挥刀结束",
+          "job_id": "job_823c87b91f864e59a04b38e633f2dbc0",
+          "width": 176,
+          "height": 176,
+          "webp": "variant-1/clips/repeat/job_823c87b91f864e59a04b38e633f2dbc0/result_output_url.webp",
+          "gif": "variant-1/clips/repeat/job_823c87b91f864e59a04b38e633f2dbc0/result_output_transparent_output_urls_gif.gif",
+          "sheet": "variant-1/clips/repeat/job_823c87b91f864e59a04b38e633f2dbc0/result_output_transparent_output_urls_png.png",
+          "columns": 3,
+          "rows": 3,
+          "frame_count": 8,
+          "durations_ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "duration_ms": 800,
+          "prompt": "亚索从第二次挥刀结束的低位姿势，翻腕后反手从下向上挥砍一次，到高位后翻腕还原，自然衔接第一次挥刀结束姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+          "prompt_optimization": true,
+          "edge_contact_frames": [],
+          "webp_sha256": "8cc8d7325e63c24295debeb516246a288cabd3c76de3ab27ebd8f1cd303f0384",
+          "first_to_input": {
+            "mean_rgb_error": 1.2071065771349863,
+            "alpha_identical": false
+          },
+          "last_to_input": {
+            "mean_rgb_error": 1.1897167699724518,
+            "alpha_identical": false
+          }
+        }
+      ],
+      "seams": [],
+      "review": "不完整：第二段按用户要求不补交。第一段第3–5帧出现明显白色弧形拖影及重复刀身，不符合不要刀光的要求；第三段仍有刀路绕到身体另一侧的问题。",
+      "visual_acceptance": "incomplete_and_effects_rejected"
+    },
+    {
+      "id": 2,
+      "clips": [
+        {
+          "id": "entry",
+          "name": "走路→第一次挥刀结束",
+          "job_id": "job_01e0ca850a29493988cb7ce36bca29b7",
+          "width": 176,
+          "height": 176,
+          "webp": "variant-2/clips/entry/job_01e0ca850a29493988cb7ce36bca29b7/result_output_url.webp",
+          "gif": "variant-2/clips/entry/job_01e0ca850a29493988cb7ce36bca29b7/result_output_transparent_output_urls_gif.gif",
+          "sheet": "variant-2/clips/entry/job_01e0ca850a29493988cb7ce36bca29b7/result_output_transparent_output_urls_png.png",
+          "columns": 3,
+          "rows": 3,
+          "frame_count": 8,
+          "durations_ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "duration_ms": 800,
+          "prompt": "亚索从迈步姿势自然停稳，拔刀并完成一次从低位到高位的挥砍，衔接第一次挥刀结束姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+          "prompt_optimization": true,
+          "edge_contact_frames": [],
+          "webp_sha256": "44c6645599f0b002e1b8a274a089faec4a1302b098b23d96ea254a4d7d3052e5",
+          "first_to_input": {
+            "mean_rgb_error": 0.9819214876033059,
+            "alpha_identical": false
+          },
+          "last_to_input": {
+            "mean_rgb_error": 1.0670626721763086,
+            "alpha_identical": false
+          }
+        },
+        {
+          "id": "second",
+          "name": "第一次→第二次挥刀结束",
+          "job_id": "job_c9afd0438bc64a56ba214c9f836851fa",
+          "width": 176,
+          "height": 176,
+          "webp": "variant-2/clips/second/job_c9afd0438bc64a56ba214c9f836851fa/result_output_url.webp",
+          "gif": "variant-2/clips/second/job_c9afd0438bc64a56ba214c9f836851fa/result_output_transparent_output_urls_gif.gif",
+          "sheet": "variant-2/clips/second/job_c9afd0438bc64a56ba214c9f836851fa/result_output_transparent_output_urls_png.png",
+          "columns": 3,
+          "rows": 3,
+          "frame_count": 8,
+          "durations_ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "duration_ms": 800,
+          "prompt": "亚索从第一次挥刀结束的高位姿势，顺势从上向下挥砍一次，自然衔接第二次挥刀结束的低位姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+          "prompt_optimization": true,
+          "edge_contact_frames": [],
+          "webp_sha256": "8c9a9874db3dc9582ccc90a0791baae4d9d3a4d9b1d70728cf470681e6245a2e",
+          "first_to_input": {
+            "mean_rgb_error": 1.1345773071625345,
+            "alpha_identical": false
+          },
+          "last_to_input": {
+            "mean_rgb_error": 1.206783746556474,
+            "alpha_identical": false
+          }
+        },
+        {
+          "id": "repeat",
+          "name": "第二次→第一次挥刀结束",
+          "job_id": "job_9764ff152020478f98c7b063a44957e0",
+          "width": 176,
+          "height": 176,
+          "webp": "variant-2/clips/repeat/job_9764ff152020478f98c7b063a44957e0/result_output_url.webp",
+          "gif": "variant-2/clips/repeat/job_9764ff152020478f98c7b063a44957e0/result_output_transparent_output_urls_gif.gif",
+          "sheet": "variant-2/clips/repeat/job_9764ff152020478f98c7b063a44957e0/result_output_transparent_output_urls_png.png",
+          "columns": 3,
+          "rows": 3,
+          "frame_count": 8,
+          "durations_ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "duration_ms": 800,
+          "prompt": "亚索从第二次挥刀结束的低位姿势，翻腕后反手从下向上挥砍一次，到高位后翻腕还原，自然衔接第一次挥刀结束姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+          "prompt_optimization": true,
+          "edge_contact_frames": [],
+          "webp_sha256": "7feed235de0f60a4e928a098ddbcc52435b40f78cc2e182f6e1f5065e9b23951",
+          "first_to_input": {
+            "mean_rgb_error": 1.1436380853994492,
+            "alpha_identical": false
+          },
+          "last_to_input": {
+            "mean_rgb_error": 1.2160597451790636,
+            "alpha_identical": false
+          }
+        }
+      ],
+      "seams": [
+        {
+          "from": "walk",
+          "to": "entry",
+          "mean_rgb_error": 0.9819214876033059,
+          "alpha_identical": false
+        },
+        {
+          "from": "entry",
+          "to": "second",
+          "mean_rgb_error": 0.9269111570247933,
+          "alpha_identical": false
+        },
+        {
+          "from": "second",
+          "to": "repeat",
+          "mean_rgb_error": 0.9622718663911846,
+          "alpha_identical": false
+        },
+        {
+          "from": "repeat",
+          "to": "second",
+          "mean_rgb_error": 0.8426523760330579,
+          "alpha_identical": false
+        }
+      ],
+      "review": "造型与右下朝向较稳定，没有明显环形刀光；但第一段中间刀身过长、投影异常，第三段低位停留较久后快速跳到高位。可作动作候选，仍未达到自然流畅的定稿要求。",
+      "visual_acceptance": "candidate_needs_motion_and_blade_cleanup"
+    },
+    {
+      "id": 3,
+      "clips": [
+        {
+          "id": "entry",
+          "name": "走路→第一次挥刀结束",
+          "job_id": "job_4bfd1abd51854548b6f2f60eefed74f0",
+          "width": 176,
+          "height": 176,
+          "webp": "variant-3/clips/entry/亚索从迈步姿势自然停稳_拔刀并完成一次从低位到高位的挥砍_衔接第一次挥刀结束_60d522d6/result_output_url.webp",
+          "gif": "variant-3/clips/entry/亚索从迈步姿势自然停稳_拔刀并完成一次从低位到高位的挥砍_衔接第一次挥刀结束_60d522d6/result_output_transparent_output_urls_gif.gif",
+          "sheet": "variant-3/clips/entry/亚索从迈步姿势自然停稳_拔刀并完成一次从低位到高位的挥砍_衔接第一次挥刀结束_60d522d6/result_output_transparent_output_urls_png.png",
+          "columns": 3,
+          "rows": 3,
+          "frame_count": 8,
+          "durations_ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "duration_ms": 800,
+          "prompt": "亚索从迈步姿势自然停稳，拔刀并完成一次从低位到高位的挥砍，衔接第一次挥刀结束姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+          "prompt_optimization": true,
+          "edge_contact_frames": [],
+          "webp_sha256": "41b6b83383ddb2fa4062c02f06eedc6a884f59f78a7f22bb62760ee938061e6f",
+          "first_to_input": {
+            "mean_rgb_error": 1.0165504476584022,
+            "alpha_identical": false
+          },
+          "last_to_input": {
+            "mean_rgb_error": 1.1659456783746556,
+            "alpha_identical": false
+          }
+        },
+        {
+          "id": "second",
+          "name": "第一次→第二次挥刀结束",
+          "job_id": "job_99b381d18973492ca92376b0de648faa",
+          "width": 176,
+          "height": 176,
+          "webp": "variant-3/clips/second/亚索从第一次挥刀结束的高位姿势_顺势从上向下挥砍一次_自然衔接第二次挥刀结束_c0867a8c/result_output_url.webp",
+          "gif": "variant-3/clips/second/亚索从第一次挥刀结束的高位姿势_顺势从上向下挥砍一次_自然衔接第二次挥刀结束_c0867a8c/result_output_transparent_output_urls_gif.gif",
+          "sheet": "variant-3/clips/second/亚索从第一次挥刀结束的高位姿势_顺势从上向下挥砍一次_自然衔接第二次挥刀结束_c0867a8c/result_output_transparent_output_urls_png.png",
+          "columns": 3,
+          "rows": 3,
+          "frame_count": 8,
+          "durations_ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "duration_ms": 800,
+          "prompt": "亚索从第一次挥刀结束的高位姿势，顺势从上向下挥砍一次，自然衔接第二次挥刀结束的低位姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+          "prompt_optimization": true,
+          "edge_contact_frames": [],
+          "webp_sha256": "d44b68a8cd91ee318b94410b70f061108493838540cc748d26cf76c321daf469",
+          "first_to_input": {
+            "mean_rgb_error": 1.1134857093663912,
+            "alpha_identical": false
+          },
+          "last_to_input": {
+            "mean_rgb_error": 1.2314587637741046,
+            "alpha_identical": false
+          }
+        },
+        {
+          "id": "repeat",
+          "name": "第二次→第一次挥刀结束",
+          "job_id": "job_ed1af2e5e8694a13986eda3c47865748",
+          "width": 176,
+          "height": 176,
+          "webp": "variant-3/clips/repeat/亚索从第二次挥刀结束的低位姿势_翻腕后反手从下向上挥砍一次_到高位后翻腕还原_0b751a4c/result_output_url.webp",
+          "gif": "variant-3/clips/repeat/亚索从第二次挥刀结束的低位姿势_翻腕后反手从下向上挥砍一次_到高位后翻腕还原_0b751a4c/result_output_transparent_output_urls_gif.gif",
+          "sheet": "variant-3/clips/repeat/亚索从第二次挥刀结束的低位姿势_翻腕后反手从下向上挥砍一次_到高位后翻腕还原_0b751a4c/result_output_transparent_output_urls_png.png",
+          "columns": 3,
+          "rows": 3,
+          "frame_count": 8,
+          "durations_ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "duration_ms": 800,
+          "prompt": "亚索从第二次挥刀结束的低位姿势，翻腕后反手从下向上挥砍一次，到高位后翻腕还原，自然衔接第一次挥刀结束姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+          "prompt_optimization": true,
+          "edge_contact_frames": [],
+          "webp_sha256": "9626688c3e326ac2056152348e5767243a99362c7bedcef26594261699d27d9b",
+          "first_to_input": {
+            "mean_rgb_error": 1.1181021866391185,
+            "alpha_identical": false
+          },
+          "last_to_input": {
+            "mean_rgb_error": 1.9846870695592287,
+            "alpha_identical": false
+          }
+        }
+      ],
+      "seams": [
+        {
+          "from": "walk",
+          "to": "entry",
+          "mean_rgb_error": 1.0165504476584022,
+          "alpha_identical": false
+        },
+        {
+          "from": "entry",
+          "to": "second",
+          "mean_rgb_error": 1.0450563877410468,
+          "alpha_identical": false
+        },
+        {
+          "from": "second",
+          "to": "repeat",
+          "mean_rgb_error": 1.0458634641873277,
+          "alpha_identical": false
+        },
+        {
+          "from": "repeat",
+          "to": "second",
+          "mean_rgb_error": 1.803880423553719,
+          "alpha_identical": false
+        }
+      ],
+      "review": "第一段中间造型与刀路变化较大；第二段绕过头顶而不是直接向下衔接，第三段有刀身消失及末帧重复刀身，切换回第二段时跳变明显。不建议作为游戏素材。",
+      "visual_acceptance": "rejected_motion_and_blade_artifacts"
+    },
+    {
+      "id": 4,
+      "clips": [
+        {
+          "id": "entry",
+          "name": "走路→第一次挥刀结束",
+          "job_id": "job_e86598b5220640b4a8dff3d4ffa6499d",
+          "width": 176,
+          "height": 176,
+          "webp": "variant-4/clips/entry/亚索从迈步姿势自然停稳_拔刀并完成一次从低位到高位的挥砍_衔接第一次挥刀结束_60d522d6/result_output_url.webp",
+          "gif": "variant-4/clips/entry/亚索从迈步姿势自然停稳_拔刀并完成一次从低位到高位的挥砍_衔接第一次挥刀结束_60d522d6/result_output_transparent_output_urls_gif.gif",
+          "sheet": "variant-4/clips/entry/亚索从迈步姿势自然停稳_拔刀并完成一次从低位到高位的挥砍_衔接第一次挥刀结束_60d522d6/result_output_transparent_output_urls_png.png",
+          "columns": 3,
+          "rows": 3,
+          "frame_count": 8,
+          "durations_ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "duration_ms": 800,
+          "prompt": "亚索从迈步姿势自然停稳，拔刀并完成一次从低位到高位的挥砍，衔接第一次挥刀结束姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+          "prompt_optimization": true,
+          "edge_contact_frames": [],
+          "webp_sha256": "b41ac97cdc4726cf0d07356939e61dd40c6da06cea4c8ffc271ddf789728284a",
+          "first_to_input": {
+            "mean_rgb_error": 0.9915956439393939,
+            "alpha_identical": false
+          },
+          "last_to_input": {
+            "mean_rgb_error": 1.1005724862258954,
+            "alpha_identical": false
+          }
+        },
+        {
+          "id": "second",
+          "name": "第一次→第二次挥刀结束",
+          "job_id": "job_305da565334a467a9072235cc31c9465",
+          "width": 176,
+          "height": 176,
+          "webp": "variant-4/clips/second/亚索从第一次挥刀结束的高位姿势_顺势从上向下挥砍一次_自然衔接第二次挥刀结束_c0867a8c/result_output_url.webp",
+          "gif": "variant-4/clips/second/亚索从第一次挥刀结束的高位姿势_顺势从上向下挥砍一次_自然衔接第二次挥刀结束_c0867a8c/result_output_transparent_output_urls_gif.gif",
+          "sheet": "variant-4/clips/second/亚索从第一次挥刀结束的高位姿势_顺势从上向下挥砍一次_自然衔接第二次挥刀结束_c0867a8c/result_output_transparent_output_urls_png.png",
+          "columns": 3,
+          "rows": 3,
+          "frame_count": 8,
+          "durations_ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "duration_ms": 800,
+          "prompt": "亚索从第一次挥刀结束的高位姿势，顺势从上向下挥砍一次，自然衔接第二次挥刀结束的低位姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+          "prompt_optimization": true,
+          "edge_contact_frames": [],
+          "webp_sha256": "332b84caf39b9da39d079c7969f20d6ad8287c37d3febcfcdab2705b1a6f9ab0",
+          "first_to_input": {
+            "mean_rgb_error": 1.1035317665289257,
+            "alpha_identical": false
+          },
+          "last_to_input": {
+            "mean_rgb_error": 1.17960141184573,
+            "alpha_identical": false
+          }
+        },
+        {
+          "id": "repeat",
+          "name": "第二次→第一次挥刀结束",
+          "job_id": "job_6f037ed8fc784c5490de8029ed5d73b4",
+          "width": 176,
+          "height": 176,
+          "webp": "variant-4/clips/repeat/亚索从第二次挥刀结束的低位姿势_翻腕后反手从下向上挥砍一次_到高位后翻腕还原_0b751a4c/result_output_url.webp",
+          "gif": "variant-4/clips/repeat/亚索从第二次挥刀结束的低位姿势_翻腕后反手从下向上挥砍一次_到高位后翻腕还原_0b751a4c/result_output_transparent_output_urls_gif.gif",
+          "sheet": "variant-4/clips/repeat/亚索从第二次挥刀结束的低位姿势_翻腕后反手从下向上挥砍一次_到高位后翻腕还原_0b751a4c/result_output_transparent_output_urls_png.png",
+          "columns": 3,
+          "rows": 3,
+          "frame_count": 8,
+          "durations_ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "duration_ms": 800,
+          "prompt": "亚索从第二次挥刀结束的低位姿势，翻腕后反手从下向上挥砍一次，到高位后翻腕还原，自然衔接第一次挥刀结束姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+          "prompt_optimization": true,
+          "edge_contact_frames": [],
+          "webp_sha256": "614afe07d38c2a10a486382f100c21932f29d35881f3e3973988d8bcc73727cb",
+          "first_to_input": {
+            "mean_rgb_error": 1.1370846246556474,
+            "alpha_identical": false
+          },
+          "last_to_input": {
+            "mean_rgb_error": 1.354532541322314,
+            "alpha_identical": false
+          }
+        }
+      ],
+      "seams": [
+        {
+          "from": "walk",
+          "to": "entry",
+          "mean_rgb_error": 0.9915956439393939,
+          "alpha_identical": false
+        },
+        {
+          "from": "entry",
+          "to": "second",
+          "mean_rgb_error": 0.9751958505509641,
+          "alpha_identical": false
+        },
+        {
+          "from": "second",
+          "to": "repeat",
+          "mean_rgb_error": 0.9479274276859505,
+          "alpha_identical": false
+        },
+        {
+          "from": "repeat",
+          "to": "second",
+          "mean_rgb_error": 0.9797800447658402,
+          "alpha_identical": false
+        }
+      ],
+      "review": "未见明显刀光，前两段可用于比较；第三段中间明显转成侧背方向，末帧又跳回右下方向，不满足朝向稳定和自然循环要求。",
+      "visual_acceptance": "rejected_direction_change"
+    },
+    {
+      "id": 5,
+      "clips": [
+        {
+          "id": "entry",
+          "name": "走路→第一次挥刀结束",
+          "job_id": "job_b2d6d36d4aaf43349bef89a876c3a509",
+          "width": 176,
+          "height": 176,
+          "webp": "variant-5/clips/entry/亚索从迈步姿势自然停稳_拔刀并完成一次从低位到高位的挥砍_衔接第一次挥刀结束_60d522d6/result_output_url.webp",
+          "gif": "variant-5/clips/entry/亚索从迈步姿势自然停稳_拔刀并完成一次从低位到高位的挥砍_衔接第一次挥刀结束_60d522d6/result_output_transparent_output_urls_gif.gif",
+          "sheet": "variant-5/clips/entry/亚索从迈步姿势自然停稳_拔刀并完成一次从低位到高位的挥砍_衔接第一次挥刀结束_60d522d6/result_output_transparent_output_urls_png.png",
+          "columns": 3,
+          "rows": 3,
+          "frame_count": 8,
+          "durations_ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "duration_ms": 800,
+          "prompt": "亚索从迈步姿势自然停稳，拔刀并完成一次从低位到高位的挥砍，衔接第一次挥刀结束姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+          "prompt_optimization": true,
+          "edge_contact_frames": [],
+          "webp_sha256": "0f94a7c2481e74370b8083b6efbfeee84feea890df682375ab53e1726e4042a5",
+          "first_to_input": {
+            "mean_rgb_error": 0.966414858815427,
+            "alpha_identical": false
+          },
+          "last_to_input": {
+            "mean_rgb_error": 1.0796207816804408,
+            "alpha_identical": false
+          }
+        },
+        {
+          "id": "second",
+          "name": "第一次→第二次挥刀结束",
+          "job_id": "job_c90d79eb1564433096f195c35644d883",
+          "width": 176,
+          "height": 176,
+          "webp": "variant-5/clips/second/亚索从第一次挥刀结束的高位姿势_顺势从上向下挥砍一次_自然衔接第二次挥刀结束_c0867a8c/result_output_url.webp",
+          "gif": "variant-5/clips/second/亚索从第一次挥刀结束的高位姿势_顺势从上向下挥砍一次_自然衔接第二次挥刀结束_c0867a8c/result_output_transparent_output_urls_gif.gif",
+          "sheet": "variant-5/clips/second/亚索从第一次挥刀结束的高位姿势_顺势从上向下挥砍一次_自然衔接第二次挥刀结束_c0867a8c/result_output_transparent_output_urls_png.png",
+          "columns": 3,
+          "rows": 3,
+          "frame_count": 8,
+          "durations_ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "duration_ms": 800,
+          "prompt": "亚索从第一次挥刀结束的高位姿势，顺势从上向下挥砍一次，自然衔接第二次挥刀结束的低位姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+          "prompt_optimization": true,
+          "edge_contact_frames": [],
+          "webp_sha256": "5bbbc63017e46bffc49a19a5e57dbf3b2cc0d0f11c6112597942c458f59a2dfc",
+          "first_to_input": {
+            "mean_rgb_error": 1.1174672865013775,
+            "alpha_identical": false
+          },
+          "last_to_input": {
+            "mean_rgb_error": 1.2491498794765838,
+            "alpha_identical": false
+          }
+        },
+        {
+          "id": "repeat",
+          "name": "第二次→第一次挥刀结束",
+          "job_id": "job_0c9f84c2dd004fbc923a9cfffccec21d",
+          "width": 176,
+          "height": 176,
+          "webp": "variant-5/clips/repeat/亚索从第二次挥刀结束的低位姿势_翻腕后反手从下向上挥砍一次_到高位后翻腕还原_0b751a4c/result_output_url.webp",
+          "gif": "variant-5/clips/repeat/亚索从第二次挥刀结束的低位姿势_翻腕后反手从下向上挥砍一次_到高位后翻腕还原_0b751a4c/result_output_transparent_output_urls_gif.gif",
+          "sheet": "variant-5/clips/repeat/亚索从第二次挥刀结束的低位姿势_翻腕后反手从下向上挥砍一次_到高位后翻腕还原_0b751a4c/result_output_transparent_output_urls_png.png",
+          "columns": 3,
+          "rows": 3,
+          "frame_count": 8,
+          "durations_ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "duration_ms": 800,
+          "prompt": "亚索从第二次挥刀结束的低位姿势，翻腕后反手从下向上挥砍一次，到高位后翻腕还原，自然衔接第一次挥刀结束姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+          "prompt_optimization": true,
+          "edge_contact_frames": [],
+          "webp_sha256": "c8e5543b929eab02aa6d4444d27b916dd3c5cf18647eb58cc0e91767e7df5e93",
+          "first_to_input": {
+            "mean_rgb_error": 1.1501377410468319,
+            "alpha_identical": false
+          },
+          "last_to_input": {
+            "mean_rgb_error": 1.2040504476584022,
+            "alpha_identical": false
+          }
+        }
+      ],
+      "seams": [
+        {
+          "from": "walk",
+          "to": "entry",
+          "mean_rgb_error": 0.966414858815427,
+          "alpha_identical": false
+        },
+        {
+          "from": "entry",
+          "to": "second",
+          "mean_rgb_error": 1.0185197141873277,
+          "alpha_identical": false
+        },
+        {
+          "from": "second",
+          "to": "repeat",
+          "mean_rgb_error": 1.1951510847107436,
+          "alpha_identical": false
+        },
+        {
+          "from": "repeat",
+          "to": "second",
+          "mean_rgb_error": 1.0411286157024795,
+          "alpha_identical": false
+        }
+      ],
+      "review": "第一段第4–5帧出现明显白色弧形拖影，不符合不要刀光的要求；第二段第7帧也有重复刀身。第三段较少特效，但高低位之间仍有姿势跳变，整版未通过美术验收。",
+      "visual_acceptance": "rejected_effects_and_duplicate_blade"
+    },
+    {
+      "id": 6,
+      "clips": [
+        {
+          "id": "entry",
+          "name": "走路→第一次挥刀结束",
+          "job_id": "job_68c64569c953489e9e9657aac0c400c9",
+          "width": 176,
+          "height": 176,
+          "webp": "variant-6/clips/entry/亚索从迈步姿势自然停稳_拔刀并完成一次从低位到高位的挥砍_衔接第一次挥刀结束_60d522d6/result_output_url.webp",
+          "gif": "variant-6/clips/entry/亚索从迈步姿势自然停稳_拔刀并完成一次从低位到高位的挥砍_衔接第一次挥刀结束_60d522d6/result_output_transparent_output_urls_gif.gif",
+          "sheet": "variant-6/clips/entry/亚索从迈步姿势自然停稳_拔刀并完成一次从低位到高位的挥砍_衔接第一次挥刀结束_60d522d6/result_output_transparent_output_urls_png.png",
+          "columns": 3,
+          "rows": 3,
+          "frame_count": 8,
+          "durations_ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "duration_ms": 800,
+          "prompt": "亚索从迈步姿势自然停稳，拔刀并完成一次从低位到高位的挥砍，衔接第一次挥刀结束姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+          "prompt_optimization": true,
+          "edge_contact_frames": [],
+          "webp_sha256": "91723402c62465fd8f9686f9840b66d62cf41cb66f0f0aa58b0d691a9e71733c",
+          "first_to_input": {
+            "mean_rgb_error": 0.9925426136363636,
+            "alpha_identical": false
+          },
+          "last_to_input": {
+            "mean_rgb_error": 1.1107093663911844,
+            "alpha_identical": false
+          }
+        },
+        {
+          "id": "second",
+          "name": "第一次→第二次挥刀结束",
+          "job_id": "job_bf617a8de2534e1cb496c9e3409f4feb",
+          "width": 176,
+          "height": 176,
+          "webp": "variant-6/clips/second/亚索从第一次挥刀结束的高位姿势_顺势从上向下挥砍一次_自然衔接第二次挥刀结束_c0867a8c/result_output_url.webp",
+          "gif": "variant-6/clips/second/亚索从第一次挥刀结束的高位姿势_顺势从上向下挥砍一次_自然衔接第二次挥刀结束_c0867a8c/result_output_transparent_output_urls_gif.gif",
+          "sheet": "variant-6/clips/second/亚索从第一次挥刀结束的高位姿势_顺势从上向下挥砍一次_自然衔接第二次挥刀结束_c0867a8c/result_output_transparent_output_urls_png.png",
+          "columns": 3,
+          "rows": 3,
+          "frame_count": 8,
+          "durations_ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "duration_ms": 800,
+          "prompt": "亚索从第一次挥刀结束的高位姿势，顺势从上向下挥砍一次，自然衔接第二次挥刀结束的低位姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+          "prompt_optimization": true,
+          "edge_contact_frames": [],
+          "webp_sha256": "087ad26d1b8a4f52d56270cf98f0152feca0e3116a0aa648f6f8dca3ae4828c2",
+          "first_to_input": {
+            "mean_rgb_error": 1.1008630337465564,
+            "alpha_identical": false
+          },
+          "last_to_input": {
+            "mean_rgb_error": 1.2258307506887052,
+            "alpha_identical": false
+          }
+        },
+        {
+          "id": "repeat",
+          "name": "第二次→第一次挥刀结束",
+          "job_id": "job_8670336b2646427d96e354c190b08321",
+          "width": 176,
+          "height": 176,
+          "webp": "variant-6/clips/repeat/亚索从第二次挥刀结束的低位姿势_翻腕后反手从下向上挥砍一次_到高位后翻腕还原_0b751a4c/result_output_url.webp",
+          "gif": "variant-6/clips/repeat/亚索从第二次挥刀结束的低位姿势_翻腕后反手从下向上挥砍一次_到高位后翻腕还原_0b751a4c/result_output_transparent_output_urls_gif.gif",
+          "sheet": "variant-6/clips/repeat/亚索从第二次挥刀结束的低位姿势_翻腕后反手从下向上挥砍一次_到高位后翻腕还原_0b751a4c/result_output_transparent_output_urls_png.png",
+          "columns": 3,
+          "rows": 3,
+          "frame_count": 8,
+          "durations_ms": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "duration_ms": 800,
+          "prompt": "亚索从第二次挥刀结束的低位姿势，翻腕后反手从下向上挥砍一次，到高位后翻腕还原，自然衔接第一次挥刀结束姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+          "prompt_optimization": true,
+          "edge_contact_frames": [],
+          "webp_sha256": "94b7e7b555ed3b56e3482f1b55c6ddaaf2602f2c490e0f3ada812d3e43a771e1",
+          "first_to_input": {
+            "mean_rgb_error": 1.125387396694215,
+            "alpha_identical": false
+          },
+          "last_to_input": {
+            "mean_rgb_error": 1.1665160123966942,
+            "alpha_identical": false
+          }
+        }
+      ],
+      "seams": [
+        {
+          "from": "walk",
+          "to": "entry",
+          "mean_rgb_error": 0.9925426136363636,
+          "alpha_identical": false
+        },
+        {
+          "from": "entry",
+          "to": "second",
+          "mean_rgb_error": 0.9937478477961431,
+          "alpha_identical": false
+        },
+        {
+          "from": "second",
+          "to": "repeat",
+          "mean_rgb_error": 1.0245996900826446,
+          "alpha_identical": false
+        },
+        {
+          "from": "repeat",
+          "to": "second",
+          "mean_rgb_error": 0.9577845213498621,
+          "alpha_identical": false
+        }
+      ],
+      "review": "第一段第5帧刀身变成粗白弧形，第二段第3帧出现月牙形刀身且中间肩甲细节丢失；第三段第2帧有重复刀身，随后快速跳到高位并停留多帧。端点衔接较一致，但内部动作和造型仍未通过美术验收。",
+      "visual_acceptance": "rejected_blade_artifacts_and_pose_jumps"
+    }
+  ],
+  "completed_clips": 17,
+  "expected_clips": 18,
+  "prompts": {
+    "entry": "亚索从迈步姿势自然停稳，拔刀并完成一次从低位到高位的挥砍，衔接第一次挥刀结束姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+    "second": "亚索从第一次挥刀结束的高位姿势，顺势从上向下挥砍一次，自然衔接第二次挥刀结束的低位姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。",
+    "repeat": "亚索从第二次挥刀结束的低位姿势，翻腕后反手从下向上挥砍一次，到高位后翻腕还原，自然衔接第一次挥刀结束姿势。保持右下朝向和原有服装造型，动作连贯、收势自然。只保留真实刀身，不要刀光、拖影或特效。"
+  },
+  "complete_variants": 5,
+  "requested_omission": {
+    "variant": 1,
+    "clip": "second",
+    "reason": "Submission outcome unknown, no job ID. Human explicitly chose not to resubmit or incur duplicate charge."
+  },
+  "walk": {
+    "frames": [
+      "inputs/walk-1.png",
+      "inputs/walk-2.png",
+      "inputs/walk-3.png",
+      "inputs/walk-4.png",
+      "inputs/walk-5.png",
+      "inputs/walk-6.png",
+      "inputs/walk-7.png",
+      "inputs/walk-8.png"
+    ],
+    "durations_ms": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    "duration_ms": 800
+  },
+  "timeline": [
+    "walk_once",
+    "entry_once",
+    "second_repeat",
+    "repeat_repeat"
+  ],
+  "credits_before": 7842,
+  "credits_after": 6923,
+  "credits_consumed": 919,
+  "production_ready": false,
+  "runtime_integrated": false
+}

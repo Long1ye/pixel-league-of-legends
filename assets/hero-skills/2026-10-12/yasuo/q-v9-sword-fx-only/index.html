@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>亚索 Q · 独立刀身风特效样稿</title>
+  <style>
+    :root { color-scheme: dark; font: 15px/1.65 system-ui, "Microsoft YaHei", sans-serif; background: #0b1420; color: #dcebf7; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { max-width: 860px; padding: 28px 20px 40px; margin: auto; }
+    h1 { margin: 4px 0; font-size: 27px; }
+    h2 { font-size: 16px; margin: 0 0 14px; }
+    .eyebrow { color: #7ee4ed; font-size: 12px; letter-spacing: .12em; }
+    .intro, .note { color: #9ab3c7; margin: 8px 0 18px; }
+    .panel { padding: 20px; margin: 18px 0; border: 1px solid #284357; border-radius: 14px; background: #122131; }
+    .stage { display: grid; place-items: center; min-height: 280px; overflow: auto; border: 1px solid #203747; border-radius: 10px; background: #07131e; }
+    .stage.checker { background-color: #132432; background-image: conic-gradient(#1e3442 25%, transparent 0 50%, #1e3442 0 75%, transparent 0); background-size: 24px 24px; }
+    .stage.stone { background: #374644; }
+    canvas, img { image-rendering: pixelated; image-rendering: crisp-edges; }
+    .controls { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; margin-top: 16px; }
+    button, select, a.download { color: #d9f7ff; background: #1c3749; border: 1px solid #3b5b71; border-radius: 7px; padding: 7px 12px; font: inherit; }
+    button, select { cursor: pointer; }
+    button:hover, a.download:hover { background: #285069; }
+    a { color: #8be2ed; text-decoration: none; }
+    input[type=range] { width: min(100%, 520px); accent-color: #76ddeb; }
+    .timeline { display: flex; align-items: center; gap: 12px; margin: 14px 0 4px; }
+    output { font-variant-numeric: tabular-nums; min-width: 115px; }
+    .original { min-height: 75px; display: flex; align-items: center; justify-content: center; background: #07131e; border-radius: 8px; }
+    .original img { width: 228px; height: 44px; }
+    .status { color: #8edce8; font-size: 13px; margin-top: 10px; }
+    details { color: #abc0d2; margin-top: 18px; }
+    summary { cursor: pointer; }
+    pre { white-space: pre-wrap; font: inherit; background: #0e1a27; padding: 14px; border-radius: 8px; }
+    .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+    @media (max-width: 560px) { main { padding: 18px 12px; } .panel { padding: 12px; } h1 { font-size: 23px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">WEAPON FX STUDY · STANDALONE</div>
+    <h1>亚索 Q · 独立刀身风特效</h1>
+    <p class="intro">目标：约 1.5 倍刀身长度，淡蓝色螺旋风、青白刀尖爆发。只展示刀与风，不添加角色、手臂或地图，不替换现有八向动作。</p>
+    <section class="panel">
+      <h2>新特效 · 独立播放</h2>
+      <div class="stage" id="stage"><canvas id="preview" aria-label="亚索Q独立刀身风特效动画"></canvas></div>
+      <div class="controls">
+        <button id="once" type="button">单次播放</button>
+        <button id="loop" type="button">循环播放</button>
+        <button id="pause" type="button">暂停</button>
+        <label>速度 <select id="speed" aria-label="速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label>
+        <label>像素缩放 <select id="zoom" aria-label="像素缩放"><option value="1">1×</option><option value="2" selected>2×</option><option value="3">3×</option></select></label>
+        <label>背景 <select id="background" aria-label="背景"><option value="dark">深色</option><option value="stone">灰绿</option><option value="checker">透明检查</option></select></label>
+      </div>
+      <div class="timeline"><input id="scrub" aria-label="动画帧" type="range" min="0" max="0" value="0" step="1" /><output id="frame-label">加载中</output></div>
+      <div id="status" class="status" role="status">正在加载独立样稿…</div>
+      <div id="metadata" class="status"></div>
+      <p class="note">预览只裁去上下透明留白，保持固定位置和整数倍显示；下载素材未裁切。</p>
+      <div class="links"><a id="download" class="download" download="yasuo-q-sword-wind.webp">下载透明 WebP</a><a href="./media/sword-wind-design.png" download>下载静态底稿</a></div>
+    </section>
+    <section class="panel">
+      <h2>原刀素材 · 同样 2× 显示</h2>
+      <div class="original"><img src="../q-v5-small-grip-wind-e/media/wind-sword.png" alt="原来的亚索Q刀身与风" width="228" height="44" /></div>
+      <p class="note">原刀的实体刀身约 75 像素；本轮长度目标约 113 像素。生成结果以实际样稿为准，握持点与角色衔接留到确认设计后处理。</p>
+    </section>
+    <details><summary>本轮动画提示词</summary><pre id="prompt"></pre></details>
+    <details id="retained-details"><summary>保留背景版本</summary><img id="retained-background" alt="同一动画的保留背景版本" /></details>
+    <div class="links"><a href="../q-v8-direction-picker/index.html">回到现有八向 Q 展示</a><a href="/">游戏首页</a></div>
+  </main>
+  <script type="module" src="./preview.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+{
+  "image_size": [
+    403,
+    273
+  ],
+  "component_count": 8,
+  "parameters": {
+    "alpha_threshold": 8,
+    "background_tolerance": 8,
+    "connectivity": 8,
+    "min_component_area": 100,
+    "padding_px": 2,
+    "merge_contained_fragments": true,
+    "fragment_max_area": 256,
+    "fragment_max_area_ratio": 0.02
+  },
+  "warnings": [],
+  "components": [
+    {
+      "id": "component_001",
+      "file": "component_001.png",
+      "bbox": [
+        162,
+        26,
+        310,
+        128
+      ],
+      "width": 148,
+      "height": 102,
+      "pixel_count": 6222
+    },
+    {
+      "id": "component_002",
+      "file": "component_002.png",
+      "bbox": [
+        164,
+        146,
+        240,
+        256
+      ],
+      "width": 76,
+      "height": 110,
+      "pixel_count": 3516
+    },
+    {
+      "id": "component_003",
+      "file": "component_003.png",
+      "bbox": [
+        90,
+        145,
+        155,
+        256
+      ],
+      "width": 65,
+      "height": 111,
+      "pixel_count": 3278
+    },
+    {
+      "id": "component_004",
+      "file": "component_004.png",
+      "bbox": [
+        5,
+        21,
+        71,
+        130
+      ],
+      "width": 66,
+      "height": 109,
+      "pixel_count": 3254
+    },
+    {
+      "id": "component_005",
+      "file": "component_005.png",
+      "bbox": [
+        78,
+        18,
+        142,
+        129
+      ],
+      "width": 64,
+      "height": 111,
+      "pixel_count": 3249
+    },
+    {
+      "id": "component_006",
+      "file": "component_006.png",
+      "bbox": [
+        319,
+        30,
+        386,
+        129
+      ],
+      "width": 67,
+      "height": 99,
+      "pixel_count": 3244
+    },
+    {
+      "id": "component_007",
+      "file": "component_007.png",
+      "bbox": [
+        14,
+        145,
+        77,
+        256
+      ],
+      "width": 63,
+      "height": 111,
+      "pixel_count": 3214
+    },
+    {
+      "id": "component_008",
+      "file": "component_008.png",
+      "bbox": [
+        250,
+        202,
+        363,
+        257
+      ],
+      "width": 113,
+      "height": 55,
+      "pixel_count": 2933
+    }
+  ],
+  "elapsed_ms": 55.057
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>亚索 W · 独立风墙循环样稿</title>
+  <style>
+    :root { color-scheme:dark; font-family:"Microsoft YaHei",system-ui,sans-serif; background:#0d1b24; color:#e6f2ef; }
+    * { box-sizing:border-box; } body { margin:0; padding:24px; } main { max-width:1080px; margin:auto; }
+    h1 { font-size:26px; } h2 { font-size:18px; margin:0 0 14px; } p { line-height:1.7; color:#b8d0ce; }
+    a { color:#9be5d8; } .panels { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    section { border:1px solid #365251; background:#142b34; padding:18px; border-radius:10px; }
+    .viewport { overflow:auto; } canvas,img { display:block; image-rendering:pixelated; }
+    .checker { background-color:#172e38; background-image:conic-gradient(#294c56 25%,transparent 0 50%,#294c56 0 75%,transparent 0); background-size:24px 24px; }
+    button,select,input { font:inherit; } button,select { color:#e6f2ef; border:1px solid #527575; border-radius:6px; padding:8px 12px; background:#1b3a45; cursor:pointer; }
+    .toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:10px; margin:18px 0; } button:disabled { opacity:.5; cursor:wait; }
+    output { color:#a8e9d8; } .note { border-left:2px solid #c6ac7d; padding-left:14px; color:#dccba9; }
+    details { margin:20px 0; } summary { cursor:pointer; } blockquote { margin-left:0; border-left:2px solid #547775; padding-left:14px; line-height:1.8; }
+    #frames { display:flex; flex-wrap:wrap; gap:8px; padding-top:14px; } .frame { border:1px solid #527575; } .frame button { width:100%; display:block; border-radius:0; }
+    @media(max-width:760px) { body { padding:16px; } .panels { grid-template-columns:1fr; } }
+  </style>
+</head><body><main>
+  <p>YASUO / W / INDEPENDENT WIND WALL / SINGLE VIEW</p>
+  <h1>亚索 W · 独立风墙循环样稿</h1>
+  <p>只制作持续阶段的风墙，不包含英雄、出现或消散动画。这里是素材预览，尚未接入游戏 W 的阻挡逻辑。</p>
+  <div class="toolbar">
+    <button id="play" disabled>循环播放</button><button id="pause" disabled>暂停</button>
+    <label>倍率 <select id="zoom" aria-label="像素倍率"><option value="1">1× 原生像素</option><option value="2" selected>2× 整数放大</option></select></label>
+    <label>速度 <select id="speed" aria-label="动画速度"><option value="1">原速</option><option value="0.5">0.5× 慢速检查</option></select></label>
+  </div>
+  <div class="panels">
+    <section><h2>透明背景 · 原生帧</h2><div class="viewport"><canvas id="wall" class="checker" aria-label="独立风墙循环"></canvas></div><p id="facts"></p><a id="download">下载原动画 WebP</a></section>
+    <section><h2>地图色调中的表现</h2><div class="viewport"><canvas id="scene" aria-label="地图上风墙素材预览"></canvas></div><p>地图只作背景对照，不代表已接入技能。没有旋转、缩放到分数倍率或重绘动画帧。</p></section>
+  </div>
+  <div class="toolbar"><button id="previous" disabled>上一帧</button><button id="next" disabled>下一帧</button><label for="scrub">逐帧</label><input id="scrub" type="range" min="0" value="0" disabled></div>
+  <p><output id="status" aria-live="polite">正在加载…</output></p><p id="review" class="note"></p>
+  <details><summary>检查全部 8 帧</summary><div class="viewport"><div id="frames"></div></div></details>
+  <details><summary>查看生成原文件（原速循环）</summary><div class="viewport"><img id="original" class="checker" alt="原始风墙循环 WebP"></div></details>
+  <details><summary>查看实际动画 prompt</summary><blockquote id="prompt"></blockquote><p>像素风格 / 8 帧 / 循环 / 自动提示词优化 / 保留半透明。</p></details>
+  <section><h2>方向处理：地面线段与竖立风纹分开</h2>
+    <p>本轮只有一个固定斜视角，不能当作八向素材使用。下面仅显示方向关系，没有将整张风墙旋转。</p>
+    <label>施放方向 <input id="angle" aria-label="施放角度示意" type="range" min="-180" max="180" value="-90"> <output id="angle-label"></output></label>
+    <div class="viewport"><canvas id="direction" width="320" height="180" aria-label="风墙方向逻辑示意"></canvas></div>
+    <p>箭头是施放方向；青色线是与其垂直的地面阻挡线。四种墙面轴向可对应八个主施放方向。真正任意角度需要独立小风纹沿线拼装，且风纹仍保持向上，不是旋转整张竖立风墙。</p>
+  </section>
+  <footer><p id="billing"></p><a href="/">返回游戏</a></footer>
+</main><script type="module" src="./preview.ts"></script></body></html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>亚索 · 走路到双刀循环 · 六版</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;padding:20px;color:#dbe9e8;background:#0c171d;font:14px/1.65 "Microsoft YaHei",sans-serif}
+    main{max-width:1280px;margin:auto}h1{margin:6px 0;font-size:28px}h2{margin:4px 0;font-size:20px}h3{font-size:14px;margin:0 0 8px}p{color:#9fb9c0;margin:8px 0}
+    a{color:#92dbc8}button,select{font:inherit;color:#e0ebe7;background:#19323b;border:1px solid #3b5c66;border-radius:6px;padding:6px 11px;cursor:pointer}button:disabled{opacity:.5;cursor:wait}
+    .eyebrow{font:11px monospace;color:#c6b986;letter-spacing:.13em}.controls{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:16px 0}output{color:#a6e0cf}
+    .variants{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,580px),1fr));gap:18px}.variant{border:1px solid #34515c;border-radius:10px;padding:16px;background:#122731;min-width:0}
+    .main-stage{overflow:auto;margin:12px 0;display:flex;justify-content:center}.main-stage canvas{flex:none}.pixel{image-rendering:pixelated;background:repeating-conic-gradient(#243d47 0% 25%,#182e38 0% 50%) 0 0 / 16px 16px;display:block}
+    .clips{display:grid;grid-template-columns:repeat(3,176px);gap:10px;overflow:auto;padding:4px 0}.clip{width:176px;flex:none}.clip canvas{width:176px;height:176px}.downloads{display:flex;gap:9px;flex-wrap:wrap;font-size:12px;margin:5px 0}.metadata{font:12px monospace;color:#a7cbbf}
+    .review{border-left:2px solid #c5b474;padding-left:10px;margin:12px 0;color:#d0c9a3}.phase{color:#a4dac7}.frames{display:grid;grid-template-columns:repeat(3,176px);gap:10px;overflow:auto}.frame-label{font:11px monospace;color:#8fabba}summary{cursor:pointer;color:#99d7c4;margin:8px 0}
+    .notes{border:1px solid #34515c;padding:12px 16px;border-radius:8px;margin:16px 0}.notes p{margin:4px 0}footer{margin:20px 0;border-top:1px solid #34515c;padding-top:10px}code{white-space:normal}#error{color:#f2aaa1}
+  </style>
+</head>
+<body><main>
+  <div class="eyebrow">YASUO / WALK → FIRST ATTACK → TWO-ATTACK LOOP / SIX VARIANTS</div>
+  <h1>亚索 · 走路到双刀循环 · 六版</h1>
+  <p>使用现有右下走路造型，六版独立生成。走路一次 → 第一段一次 → 第二、三段交替循环。要求只有真实刀身，不要刀光。</p>
+  <div class="controls" aria-label="六版动画播放控制">
+    <button id="restart" disabled>从走路重新开始</button><button id="play" disabled>暂停</button>
+    <button id="previous" disabled>上一帧</button><button id="next" disabled>下一帧</button>
+    <label>速度 <select id="rate" aria-label="播放速度"><option value="0.5">0.5× 慢放</option><option value="1" selected>1× 原速</option></select></label>
+    <label>完整循环倍率 <select id="zoom" aria-label="完整循环倍率"><option value="1">1×</option><option value="2" selected>2×</option></select></label>
+    <button id="reload">刷新素材状态</button><output id="status">加载中…</output>
+  </div>
+  <div class="notes"><p id="facts">读取18条动画的状态…</p><p id="cost"></p><p>下方大画布展示完整衔接；三个小画布分别展示每段原速。暂停、逐帧和慢放只改变预览，不修改文件，不倒放、不丢帧。像素仅按整数倍率显示。</p><p>这是单方向美术对比页，尚未扩展八向或接入对局；生成完成不代表无刀光、造型一致和自然流畅已经通过验收。</p></div>
+  <nav class="controls" aria-label="版本跳转"><a href="#variant-1">第1版</a><a href="#variant-2">第2版</a><a href="#variant-3">第3版</a><a href="#variant-4">第4版</a><a href="#variant-5">第5版</a><a href="#variant-6">第6版</a></nav>
+  <p id="error" hidden></p><section id="variants" class="variants" aria-label="六版独立动画"></section>
+  <details><summary>查看实际提交的三段 prompt</summary><div id="prompts"></div><p>三段使用关键帧接口的自动提示词优化，优化后的文本未由服务返回。原始提示词保留用于追溯。</p></details>
+  <footer><a href="../../../../hero-animations/2026-10-09/v2/index.html">原有八向走路动画</a> · <a href="/">返回对局</a></footer>
+</main><script type="module" src="./preview.ts"></script></body>
+</html>

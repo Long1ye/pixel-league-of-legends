@@ -1,0 +1,90 @@
+[
+  {
+    "direction": "e",
+    "source_sha256": "0b5ed77dd4728f72e29d858840da94032f442ebb834aed34c6fedf3b5b8fa1c6",
+    "visible_bounds": [
+      37,
+      12,
+      91,
+      114
+    ],
+    "native_pixels_preserved": true
+  },
+  {
+    "direction": "se",
+    "source_sha256": "37a53d6de5675c1f6d7b13d40c7887fbeb476cae6f809cc66aaa39419961e926",
+    "visible_bounds": [
+      32,
+      11,
+      96,
+      115
+    ],
+    "native_pixels_preserved": true
+  },
+  {
+    "direction": "s",
+    "source_sha256": "a9c03d57e05e703a8ceb59212e2d121cf9506423c5117d5a59331d9a86f3bf28",
+    "visible_bounds": [
+      38,
+      12,
+      90,
+      115
+    ],
+    "native_pixels_preserved": true
+  },
+  {
+    "direction": "sw",
+    "source_sha256": "97c9ab59ac636086a3cbe6a7258e62f634819f4d7d5adbdbe8bfe09c54c5a558",
+    "visible_bounds": [
+      32,
+      11,
+      96,
+      115
+    ],
+    "native_pixels_preserved": true
+  },
+  {
+    "direction": "w",
+    "source_sha256": "04815240ab1513fff04fe48cf1b035a591d9193b2dcee1ad5f29d6e388b221b5",
+    "visible_bounds": [
+      37,
+      12,
+      91,
+      114
+    ],
+    "native_pixels_preserved": true
+  },
+  {
+    "direction": "nw",
+    "source_sha256": "93ee91e4f439f999d0f0a9deed3ede157ce19cd45d1f6fed3d0dd3c47b632099",
+    "visible_bounds": [
+      32,
+      12,
+      95,
+      114
+    ],
+    "native_pixels_preserved": true
+  },
+  {
+    "direction": "n",
+    "source_sha256": "50124cca408adc62cebd576bde3637cf3a5fdeb00b118a05c11d4de9e66562ee",
+    "visible_bounds": [
+      35,
+      11,
+      92,
+      115
+    ],
+    "native_pixels_preserved": true
+  },
+  {
+    "direction": "ne",
+    "source_sha256": "796e8744b879d16b0a0378b8b0138bfe984a396a4554a6183940000e4cb56d9f",
+    "visible_bounds": [
+      33,
+      12,
+      96,
+      114
+    ],
+    "native_pixels_preserved": true
+  }
+]

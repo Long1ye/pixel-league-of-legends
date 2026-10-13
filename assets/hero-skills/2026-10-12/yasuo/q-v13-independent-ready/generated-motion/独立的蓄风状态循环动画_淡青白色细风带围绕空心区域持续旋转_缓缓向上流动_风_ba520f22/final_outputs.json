@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_dafb8f733485482693a235b93f6d5d91",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v13-independent-ready\\generated-motion\\独立的蓄风状态循环动画_淡青白色细风带围绕空心区域持续旋转_缓缓向上流动_风_ba520f22\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v13-independent-ready\\generated-motion\\独立的蓄风状态循环动画_淡青白色细风带围绕空心区域持续旋转_缓缓向上流动_风_ba520f22\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v13-independent-ready\\generated-motion\\独立的蓄风状态循环动画_淡青白色细风带围绕空心区域持续旋转_缓缓向上流动_风_ba520f22\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

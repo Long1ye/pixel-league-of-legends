@@ -1,0 +1,55 @@
+{
+  "status": "partial",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "media/body-e.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/body-se.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/body-s.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/body-sw.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/body-w.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/body-nw.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/body-ne.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/upper-arm.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/forearm-hand.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/wind-sword.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

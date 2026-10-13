@@ -1,0 +1,8 @@
+{
+  "preview": "http://127.0.0.1:5173/",
+  "character": "w-v3-horizontal-e; fixed direction, 8 frames, 800ms",
+  "wall": { "delaySeconds": 0.3, "lifetimeSeconds": 3.9, "width": 84, "height": 35, "thickness": 6, "distance": 32, "continuousAngle": true },
+  "gameplay": "Player W replaces dash; blocks hostile non-tower projectiles; allies pass through. Enemy prototype W remains a dash.",
+  "proof": "in-game.png",
+  "validation": "186 tests passed; production build passed; W animation and wall verified in main game"
+}

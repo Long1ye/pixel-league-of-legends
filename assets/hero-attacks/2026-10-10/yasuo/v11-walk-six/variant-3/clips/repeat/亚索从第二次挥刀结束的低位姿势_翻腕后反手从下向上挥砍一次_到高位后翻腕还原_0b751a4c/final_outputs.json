@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_ed1af2e5e8694a13986eda3c47865748",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v11-walk-six\\variant-3\\clips\\repeat\\亚索从第二次挥刀结束的低位姿势_翻腕后反手从下向上挥砍一次_到高位后翻腕还原_0b751a4c\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v11-walk-six\\variant-3\\clips\\repeat\\亚索从第二次挥刀结束的低位姿势_翻腕后反手从下向上挥砍一次_到高位后翻腕还原_0b751a4c\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v11-walk-six\\variant-3\\clips\\repeat\\亚索从第二次挥刀结束的低位姿势_翻腕后反手从下向上挥砍一次_到高位后翻腕还原_0b751a4c\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

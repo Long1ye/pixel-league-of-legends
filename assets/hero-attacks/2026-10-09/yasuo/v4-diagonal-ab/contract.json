@@ -1,0 +1,44 @@
+{
+  "hero": "yasuo",
+  "action": "two_independent_diagonal_attacks",
+  "direction": "se",
+  "slash_path_a": "screen lower-right to upper-left",
+  "slash_path_b": "screen upper-left to lower-right",
+  "original_source": "assets/hero-walk-directions/2026-10-09/v1/yasuo/component_004_pixel_multi_view/iso_front_right.png",
+  "source_size": [
+    128,
+    128
+  ],
+  "prepared_size": [
+    192,
+    192
+  ],
+  "source_offset": [
+    32,
+    48
+  ],
+  "anchor": [
+    96,
+    163
+  ],
+  "resampled_source": false,
+  "clips": 2,
+  "attacks_per_clip": 1,
+  "requested_duration_ms_per_clip": 3000,
+  "representation": "pixel",
+  "final_format": "animated_webp",
+  "final_transparency": true,
+  "appearance": "original blue scarf and silver shoulder armor; do not inherit v3 appearance errors",
+  "credits_before": 9465,
+  "estimated_credits": 130,
+  "actual_credits": 195,
+  "credits_after": 9270,
+  "selected_a": "clips/a-keyframes",
+  "selected_b": "clips/b",
+  "rejected_a": "clips/a",
+  "rejected_a_reason": "Raised the sword and slashed downward before returning high-left; wrong principal attack direction.",
+  "preview_attack_duration_ms": 1200,
+  "preview_timing_does_not_change_original_media": true,
+  "runtime_integrated": false,
+  "production_ready": false
+}

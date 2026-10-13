@@ -1,0 +1,34 @@
+{
+  "hero": "yasuo",
+  "skill": "Q1/Q2",
+  "direction": "se",
+  "reference": "assets/hero-skills/2026-10-10/yasuo/q-v1-se/references/approved-low-padded.png",
+  "source_sha256": "97554048d5f1a15ef5063f425c2597c2737988157e96639414c2dfd747831ab2",
+  "reference_frame": 0,
+  "source_pixels_preserved": true,
+  "canvas": [
+    248,
+    160
+  ],
+  "reference_anchor": [
+    72,
+    132
+  ],
+  "padding": {
+    "left": 8,
+    "top": 8,
+    "right": 40,
+    "down": 24
+  },
+  "planned_jobs": {
+    "still_edits": 2,
+    "animations": 1
+  },
+  "planned_animation_frames": 8,
+  "optimize_prompt": true,
+  "estimated_credits": 54,
+  "credits_before": 6313,
+  "layered": false,
+  "integrated_into_game": false,
+  "notes": "单方向整身Q刺击样稿。保留原始像素尺度；不生成八向、旋风或分层绑定。"
+}

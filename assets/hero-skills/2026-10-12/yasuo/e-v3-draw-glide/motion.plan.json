@@ -1,0 +1,13 @@
+{
+  "command": "animate-run",
+  "recovery_command": "animate-poll", "recovery_id_flag": "--api-job-id",
+  "args": [
+    "--image-file", "assets/hero-skills/2026-10-12/yasuo/e-v3-draw-glide/generated-pose/保持这张像素亚索的外观_大小_位置和正右朝向_只改成即将向右滑行的拔刀起手姿_81387e23/remove_bg.png",
+    "--prompt", "亚索面朝右，从腰间抽出刀后压低身体向右滑行，低位持刀的手臂和刀保持稳定，前后脚保持滑行姿态，头发围巾向后飘，最后轻轻停稳。动作只有拔刀和滑行，没有挥砍、横扫、戳刺或刀光，不交替迈步跑步。固定镜头，人物保持在画布中央，位移由游戏控制，透明背景。",
+    "--output-frames", "8", "--output-format", "webp", "--animation-type", "other",
+    "--animation-model", "pixel-engine-v1.1", "--intelligence", "advanced", "--optimize-prompt",
+    "--remove-bg-method", "standard", "--color-count", "64",
+    "--padding-top", "0", "--padding-down", "0", "--padding-left", "0", "--padding-right", "0"
+  ],
+  "output_dir": "assets/hero-skills/2026-10-12/yasuo/e-v3-draw-glide/generated-motion"
+}

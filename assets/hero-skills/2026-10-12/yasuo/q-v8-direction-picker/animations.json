@@ -1,0 +1,200 @@
+{
+  "directions": [
+    {
+      "direction": "e",
+      "path": "export/q-e-linked.webp",
+      "width": 288,
+      "height": 256,
+      "source_frames": 16,
+      "encoded_frames": 16,
+      "duration_ms": 1400,
+      "cast_duration_ms": 480,
+      "loop": 0,
+      "anchor": [
+        144,
+        158
+      ],
+      "alpha": true,
+      "edge_contact_frames": [],
+      "method": "Actual preview renderer, encoded losslessly; no image generation"
+    },
+    {
+      "direction": "se",
+      "path": "export/q-se-linked.webp",
+      "width": 288,
+      "height": 256,
+      "source_frames": 16,
+      "encoded_frames": 16,
+      "duration_ms": 1400,
+      "cast_duration_ms": 480,
+      "loop": 0,
+      "anchor": [
+        144,
+        158
+      ],
+      "alpha": true,
+      "edge_contact_frames": [],
+      "method": "Actual preview renderer, encoded losslessly; no image generation"
+    },
+    {
+      "direction": "s",
+      "path": "export/q-s-linked.webp",
+      "width": 288,
+      "height": 256,
+      "source_frames": 16,
+      "encoded_frames": 16,
+      "duration_ms": 1400,
+      "cast_duration_ms": 480,
+      "loop": 0,
+      "anchor": [
+        144,
+        158
+      ],
+      "alpha": true,
+      "edge_contact_frames": [],
+      "method": "Actual preview renderer, encoded losslessly; no image generation"
+    },
+    {
+      "direction": "sw",
+      "path": "export/q-sw-linked.webp",
+      "width": 288,
+      "height": 256,
+      "source_frames": 16,
+      "encoded_frames": 16,
+      "duration_ms": 1400,
+      "cast_duration_ms": 480,
+      "loop": 0,
+      "anchor": [
+        144,
+        158
+      ],
+      "alpha": true,
+      "edge_contact_frames": [],
+      "method": "Actual preview renderer, encoded losslessly; no image generation"
+    },
+    {
+      "direction": "w",
+      "path": "export/q-w-linked.webp",
+      "width": 288,
+      "height": 256,
+      "source_frames": 16,
+      "encoded_frames": 16,
+      "duration_ms": 1400,
+      "cast_duration_ms": 480,
+      "loop": 0,
+      "anchor": [
+        144,
+        158
+      ],
+      "alpha": true,
+      "edge_contact_frames": [],
+      "method": "Actual preview renderer, encoded losslessly; no image generation"
+    },
+    {
+      "direction": "nw",
+      "path": "export/q-nw-linked.webp",
+      "width": 288,
+      "height": 256,
+      "source_frames": 16,
+      "encoded_frames": 16,
+      "duration_ms": 1400,
+      "cast_duration_ms": 480,
+      "loop": 0,
+      "anchor": [
+        144,
+        158
+      ],
+      "alpha": true,
+      "edge_contact_frames": [],
+      "method": "Actual preview renderer, encoded losslessly; no image generation"
+    },
+    {
+      "direction": "n",
+      "path": "export/q-n-linked.webp",
+      "width": 288,
+      "height": 256,
+      "source_frames": 16,
+      "encoded_frames": 16,
+      "duration_ms": 1400,
+      "cast_duration_ms": 480,
+      "loop": 0,
+      "anchor": [
+        144,
+        158
+      ],
+      "alpha": true,
+      "edge_contact_frames": [],
+      "method": "Actual preview renderer, encoded losslessly; no image generation"
+    },
+    {
+      "direction": "ne",
+      "path": "export/q-ne-linked.webp",
+      "width": 288,
+      "height": 256,
+      "source_frames": 16,
+      "encoded_frames": 16,
+      "duration_ms": 1400,
+      "cast_duration_ms": 480,
+      "loop": 0,
+      "anchor": [
+        144,
+        158
+      ],
+      "alpha": true,
+      "edge_contact_frames": [],
+      "method": "Actual preview renderer, encoded losslessly; no image generation"
+    }
+  ],
+  "atlas": "export/yasuo-q-v8-fixed-atlas.png",
+  "atlas_columns": 4,
+  "atlas_rows": 32,
+  "cell_width": 288,
+  "cell_height": 256,
+  "direction_order": [
+    "e",
+    "se",
+    "s",
+    "sw",
+    "w",
+    "nw",
+    "n",
+    "ne"
+  ],
+  "frames_per_direction": 16,
+  "frame_durations_ms": [
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    920
+  ],
+  "cast_sample_times_ms": [
+    0,
+    32,
+    64,
+    96,
+    128,
+    160,
+    192,
+    224,
+    256,
+    288,
+    320,
+    352,
+    384,
+    416,
+    448,
+    480
+  ]
+}

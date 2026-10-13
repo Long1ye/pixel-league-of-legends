@@ -1,0 +1,11 @@
+{
+  "command": "character-multi-view-run",
+  "recovery_command": "character-multi-view-poll",
+  "recovery_id_flag": "--api-job-id",
+  "args": [
+    "--reference-image", "assets/hero-skills/2026-10-12/yasuo/q-v14-user-eight-poses/source.png",
+    "--mode", "pixel", "--canvas-resolution", "1K", "--orientation", "纵版", "--generation-speed", "normal",
+    "--extra-constraint", "用于亚索Q技能的八方向持刀起手图。保持参考图的低重心、屈膝分腿和腰前持刀姿势，肩肘手腕自然连接，手掌比例小且握住刀柄，八方向只改变观察角度。保留原图脸型、发型、蓝围巾、护甲、裤子和像素比例。每个方向人物全身完整、脚底对齐，不画刀光、风、地面或文字，不画挥砍动作。"
+  ],
+  "output_dir": "assets/hero-skills/2026-10-12/yasuo/q-v14-user-eight-poses/generated-views"
+}

@@ -1,0 +1,106 @@
+{
+  "status": "technical_pass",
+  "final_media": [
+    {
+      "path": "clips/animation-B/在最低点翻转手腕_将刀身转为参考图所示的朝向_以这一形态从下向上连贯挥砍_到_b1ebc41b/result_output_url.webp",
+      "width": 176,
+      "height": 176,
+      "frame_count": 12,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "duration_ms": 1200,
+      "transparent": true,
+      "edge_contact_frames": [],
+      "bounds": [
+        [
+          42,
+          48,
+          152,
+          150
+        ],
+        [
+          42,
+          48,
+          152,
+          150
+        ],
+        [
+          43,
+          48,
+          150,
+          150
+        ],
+        [
+          44,
+          40,
+          148,
+          150
+        ],
+        [
+          17,
+          38,
+          118,
+          150
+        ],
+        [
+          18,
+          33,
+          118,
+          150
+        ],
+        [
+          21,
+          33,
+          118,
+          150
+        ],
+        [
+          26,
+          33,
+          118,
+          150
+        ],
+        [
+          34,
+          35,
+          118,
+          150
+        ],
+        [
+          31,
+          36,
+          117,
+          150
+        ],
+        [
+          39,
+          24,
+          121,
+          150
+        ],
+        [
+          44,
+          33,
+          144,
+          150
+        ]
+      ],
+      "sha256": "ae701e2002e201ecd1a67ebe74bab8f4351c3ca661558bf4b93957677d43c6a2"
+    }
+  ],
+  "retained_A_unchanged": true,
+  "gif_frame_count_and_timing_match": true,
+  "png_cells_match_webp": true
+}

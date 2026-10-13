@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>亚索 W · 正右分层动作试版</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;color:#deebee;background:#0c151b}body{margin:0;padding:28px}main{max-width:1000px;margin:auto}a{color:#98d7e2}h1{font-size:28px;margin:6px 0 12px}.eyebrow{color:#72b5ba;font-size:12px;letter-spacing:2px}p{color:#9bb1ba;line-height:1.7}.stage{background:#142127;border:1px solid #30454e;border-radius:12px;padding:18px;overflow:auto}canvas{display:block;image-rendering:pixelated}#scene{width:768px;height:480px;margin:auto}button,select{background:#22383f;color:#e4f6f6;border:1px solid #44636c;border-radius:6px;padding:9px 13px;cursor:pointer}button:hover{background:#35515a}button.primary{background:#276477}label{display:inline-flex;align-items:center;gap:7px}.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:16px 0}.timeline{width:100%;accent-color:#78c7d7}.status{display:flex;justify-content:space-between;color:#b5dae0;min-height:24px}.notes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}.note{border:1px solid #283b44;padding:15px;border-radius:8px}.note h2{font-size:15px;margin:0 0 8px}.note p{font-size:13px;margin:0}.small{font-size:12px;color:#8da4ac}#exports a{margin-right:20px}#contact{width:960px;height:160px;margin-top:12px}@media(max-width:800px){body{padding:12px}.notes{grid-template-columns:1fr}}
+</style></head><body><main>
+<div class="eyebrow">YASUO / WIND WALL / MOTION STUDY 01</div>
+<h1>W 正右方向 · 收刀、短挥、送风</h1>
+<p>复用你的角色分层素材，单独设计 W 的动作轨迹。人物施法 560ms；后续风墙独立持续。<br>当前为动作试版，尚未接入主游戏；风墙是用于观察联动的程序化侧视占位。</p>
+<div class="stage"><canvas id="scene" width="384" height="240" aria-label="亚索正右释放风墙动画"></canvas></div>
+<div class="controls"><button id="replay" class="primary">播放一次</button><button id="pause">暂停</button><label><input id="loop" type="checkbox" checked>循环展示</label><label>速度<select id="speed"><option value="1">1× 正常</option><option value="0.5">0.5× 慢放</option><option value="0.25">0.25× 细看</option></select></label><label><input id="linked" type="checkbox" checked>显示送风与风墙</label><label><input id="joints" type="checkbox">显示骨架锚点</label></div>
+<div class="status"><output id="phase" aria-live="off">素材加载中</output><output id="time">0 / 2700ms</output></div>
+<input id="scrub" class="timeline" type="range" min="0" max="2700" step="1" value="0" aria-label="动画时间">
+<div class="controls"><button data-time="0">初始</button><button data-time="130">蓄力</button><button data-time="190">送风瞬间</button><button data-time="280">随动</button><button data-time="560">收势结束</button></div>
+<div class="notes"><section class="note"><h2>这一版看什么</h2><p>脚底固定，腰带动肩膀；肩、肘、手腕共同运动，刀柄跟随手腕。W 用短挥路径，不再使用 Q 的直线戳刺。</p></section><section class="note"><h2>人物与墙如何分开</h2><p>190ms 从刀身位置送风，300ms 开始起墙。560ms 人物恢复就绪，墙继续存在。正右施法对应南北走向的地面墙线，画面中看到的是墙的侧面。</p></section></div>
+<h2 style="font-size:16px;margin-top:25px">人物关键姿态 · 1× 原像素</h2><div style="overflow:auto"><canvas id="contact" width="960" height="160" aria-label="五个关键姿态"></canvas></div>
+<div class="controls"><button id="export">导出透明人物序列图</button><span id="export-status" class="small"></span></div><div id="exports"></div>
+<p class="small">现有美术素材 + 本地分层动画，没有提交新的付费生成任务。演示中的风墙时长不是最终技能数值。</p>
+<p><a href="/">返回主游戏</a></p>
+</main><script type="module" src="./preview.ts"></script></body></html>

@@ -1,0 +1,26 @@
+{
+  "command": "image-edit-run",
+  "recovery_command": "general-image-poll",
+  "recovery_id_flag": "--job-id",
+  "args": [
+    "--reference-image",
+    "assets\\hero-attacks\\2026-10-10\\yasuo\\v11-walk-six\\poses\\first-end\\保持这张走路亚索的像素造型_服装_发型_持刀手和人物大小_只改变动作_停止迈步_c2a22bae\\edited.png",
+    "--reference-image",
+    "assets/hero-attacks/2026-10-10/yasuo/v11-walk-six/inputs/walk-8.png",
+    "--prompt",
+    "参考图1是要保留的挥刀结束动作，参考图2是人物造型。保持图1的姿势、持刀位置和大小，让服装、银色肩甲与图2一致。去掉全部刀光、发光、光晕和脚下光效，只留下清晰像素人物和实心金属刀，背景完全透明。",
+    "--mode",
+    "pixel",
+    "--strict",
+    "--no-multi-pixelation",
+    "--generation-model",
+    "nano-banana",
+    "--generation-speed",
+    "normal",
+    "--resolution",
+    "1K",
+    "--remove-bg-method",
+    "standard"
+  ],
+  "output_dir": "assets/hero-attacks/2026-10-10/yasuo/v11-walk-six/poses/first-end-clean"
+}

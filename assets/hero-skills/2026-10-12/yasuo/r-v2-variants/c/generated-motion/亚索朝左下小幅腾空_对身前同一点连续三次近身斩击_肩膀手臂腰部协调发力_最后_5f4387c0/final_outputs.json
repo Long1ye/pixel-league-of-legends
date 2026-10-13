@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_15c69873da51421a86affcdb32a74c40",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\r-v2-variants\\c\\generated-motion\\亚索朝左下小幅腾空_对身前同一点连续三次近身斩击_肩膀手臂腰部协调发力_最后_5f4387c0\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\r-v2-variants\\c\\generated-motion\\亚索朝左下小幅腾空_对身前同一点连续三次近身斩击_肩膀手臂腰部协调发力_最后_5f4387c0\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\r-v2-variants\\c\\generated-motion\\亚索朝左下小幅腾空_对身前同一点连续三次近身斩击_肩膀手臂腰部协调发力_最后_5f4387c0\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

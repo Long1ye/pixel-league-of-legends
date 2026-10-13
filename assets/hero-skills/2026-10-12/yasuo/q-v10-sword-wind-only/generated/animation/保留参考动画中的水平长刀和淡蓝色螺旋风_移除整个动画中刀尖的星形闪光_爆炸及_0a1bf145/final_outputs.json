@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "job_id": "job_0cf76d7334b04b26988b19f1249867ca",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v10-sword-wind-only\\generated\\animation\\保留参考动画中的水平长刀和淡蓝色螺旋风_移除整个动画中刀尖的星形闪光_爆炸及_0a1bf145\\meowa_animation.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v10-sword-wind-only\\generated\\animation\\保留参考动画中的水平长刀和淡蓝色螺旋风_移除整个动画中刀尖的星形闪光_爆炸及_0a1bf145\\meowa_animation_background.webp",
+      "mime_type": "image/webp"
+    }
+  ]
+}

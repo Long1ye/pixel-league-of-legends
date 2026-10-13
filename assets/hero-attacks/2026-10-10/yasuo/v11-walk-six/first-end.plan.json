@@ -1,0 +1,24 @@
+{
+  "command": "image-edit-run",
+  "recovery_command": "general-image-poll",
+  "recovery_id_flag": "--job-id",
+  "args": [
+    "--reference-image",
+    "assets/hero-attacks/2026-10-10/yasuo/v11-walk-six/inputs/walk-8.png",
+    "--prompt",
+    "保持这张走路亚索的像素造型、服装、发型、持刀手和人物大小。只改变动作：停止迈步，拔出腰间的武士刀，完成一次向右上方的上挥砍，刀停在身体右侧高位。双脚自然站稳，角色仍朝右下方。只画真实金属刀身，不要刀光、拖影或特效，透明背景。",
+    "--mode",
+    "pixel",
+    "--strict",
+    "--no-multi-pixelation",
+    "--generation-model",
+    "image-2.5",
+    "--resolution",
+    "1K",
+    "--quality",
+    "detailed",
+    "--remove-bg-method",
+    "standard"
+  ],
+  "output_dir": "assets/hero-attacks/2026-10-10/yasuo/v11-walk-six/poses/first-end"
+}

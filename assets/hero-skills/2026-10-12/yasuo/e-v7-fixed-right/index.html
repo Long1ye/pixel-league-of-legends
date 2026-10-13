@@ -1,0 +1,13 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>亚索 E · 用户八向动画</title>
+<style>body{background:#12212b;color:#deecf0;font:15px system-ui;margin:24px auto;padding:0 20px;max-width:960px}p{color:#a7c0ca;line-height:1.6}button,select{background:#294751;color:#edf9fb;border:1px solid #68848c;border-radius:5px;padding:8px;cursor:pointer}button[aria-pressed=true]{border-color:#85f1e0;background:#375c64}canvas{image-rendering:pixelated;background:repeating-conic-gradient(#20343d 0% 25%,#192b34 0% 50%) 50%/16px 16px}#grid{display:grid;grid-template-columns:repeat(3,144px);gap:8px;width:max-content;margin:16px 0}#grid button{padding:7px}#grid canvas{display:block}#grid span{display:block;margin-top:5px}.empty{display:grid;place-items:center;color:#86a5af}.stage{display:flex;align-items:center;gap:20px;flex-wrap:wrap}#selected{width:256px;height:256px}#source{width:128px;height:128px}#controls{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}a{color:#96dedc}#scrub{width:100%}.frames{display:flex;gap:8px;flex-wrap:wrap}figure{margin:0}summary{cursor:pointer;margin:18px 0}</style>
+<p>YASUO / E / V7 · RIGHT DIRECTIONS REDONE</p><h1>E · 正右与右下重做版</h1>
+<p>逐方向使用你提供的原图生成。目标：不挥刀、不迈步，保持持刀姿势，以头发、围巾和身体轻微起伏表现滑行。尚未替换主游戏；不叠加位移或特效。</p>
+<div id="grid" aria-label="八方向选择"></div>
+<p>正右、右下已重做：逐帧未见新增刀刃、拔刀或挥刀，保持原持刀姿势。其余六向沿用上一版，未经修改。尚未接入游戏。</p>
+<h2 id="heading"></h2><div class="stage"><figure><canvas id="source" width="128" height="128"></canvas><figcaption>你的原图 · 1×</figcaption></figure><figure><canvas id="selected" width="128" height="128"></canvas><figcaption>生成动画 · 2×</figcaption></figure></div>
+<div id="controls"><button id="once">播放一次</button><button id="loop">循环检查</button><button id="pause">暂停</button><select id="speed" aria-label="播放速度"><option value="1">原始速度</option><option value="0.5">半速</option><option value="game">0.32 秒游戏节奏</option></select></div>
+<p id="status"></p><input id="scrub" aria-label="逐帧查看" type="range" min="0" max="7" value="0" step="1">
+<p id="review">生成帧仍需检查手部细节与首尾接帧；循环播放不代表已经达到无缝循环。</p>
+<p><a id="download" download>下载当前方向动画</a> · <a id="atlas" download>下载当前方向透明帧图</a></p>
+<details><summary>当前方向的全部帧</summary><div class="frames" id="frames"></div></details>
+<script type="module" src="./preview.ts"></script></html>

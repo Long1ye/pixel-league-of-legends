@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "job_id": "job_c1182ff3e2564c91985950c3c91525b7",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-09\\yasuo\\v4-diagonal-ab\\clips\\b\\亚索只做一次普通攻击_刀从画面左上方沿同一斜线挥到右下方_腰肩带动手臂_最后_f35c17cc\\meowa_animation.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-09\\yasuo\\v4-diagonal-ab\\clips\\b\\亚索只做一次普通攻击_刀从画面左上方沿同一斜线挥到右下方_腰肩带动手臂_最后_f35c17cc\\meowa_animation_background.webp",
+      "mime_type": "image/webp"
+    }
+  ]
+}

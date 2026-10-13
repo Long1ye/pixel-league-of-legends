@@ -1,0 +1,128 @@
+{
+  "bodies": [
+    {
+      "direction": "e",
+      "path": "media/body-e.png",
+      "dimensions": [
+        69,
+        94
+      ],
+      "alpha_bounds": [
+        2,
+        2,
+        67,
+        92
+      ],
+      "native_pixels_preserved": true,
+      "job_id": "reused-approved-v5",
+      "sha256": "89f9a133d6845605bc21dda05de864b1af56c4d299eeafe63b2e20a5bfc0ef09"
+    },
+    {
+      "direction": "se",
+      "path": "media/body-se.png",
+      "dimensions": [
+        70,
+        108
+      ],
+      "alpha_bounds": [
+        2,
+        2,
+        68,
+        106
+      ],
+      "native_pixels_preserved": true,
+      "job_id": "job_1248ba0ad79844c8a7797cdda6510448",
+      "sha256": "f0d4e5d64860f7e509fe8d209cbb259c5b9e373848d38797b3dafd587a3ad2c8"
+    },
+    {
+      "direction": "s",
+      "path": "media/body-s.png",
+      "dimensions": [
+        53,
+        105
+      ],
+      "alpha_bounds": [
+        2,
+        2,
+        51,
+        103
+      ],
+      "native_pixels_preserved": true,
+      "job_id": "job_d56ff448de334c8e841454d1f8044be0",
+      "sha256": "7e9181e72d604372bc72d71ece08edf0e045f9f2df594329de6c0c90e7145f72"
+    },
+    {
+      "direction": "sw",
+      "path": "media/body-sw.png",
+      "dimensions": [
+        68,
+        107
+      ],
+      "alpha_bounds": [
+        2,
+        2,
+        66,
+        105
+      ],
+      "native_pixels_preserved": true,
+      "job_id": "job_192d91e0135f4a92b54dd86a7708dc84",
+      "sha256": "54728123380dfe05b37bae79fed569cc5bef1f622139f4f795acb217564c43ea"
+    },
+    {
+      "direction": "w",
+      "path": "media/body-w.png",
+      "dimensions": [
+        57,
+        107
+      ],
+      "alpha_bounds": [
+        2,
+        2,
+        55,
+        105
+      ],
+      "native_pixels_preserved": true,
+      "job_id": "job_fdf5bee833f441a28a6cfdbead8ae145",
+      "sha256": "97ec0bbf86213c61a8b6846cd3609df57b3d1fbde9e78184fc9f34ddcd3b42f7"
+    },
+    {
+      "direction": "nw",
+      "path": "media/body-nw.png",
+      "dimensions": [
+        67,
+        106
+      ],
+      "alpha_bounds": [
+        2,
+        2,
+        65,
+        104
+      ],
+      "native_pixels_preserved": true,
+      "job_id": "job_42341f3a50ca4b88840569946c40e19d",
+      "sha256": "5aa6c195acd34891de18355eea5983a5974c35656586f291dee0ffc8a07a7e2b"
+    },
+    {
+      "direction": "ne",
+      "path": "media/body-ne.png",
+      "dimensions": [
+        66,
+        107
+      ],
+      "alpha_bounds": [
+        2,
+        2,
+        64,
+        105
+      ],
+      "native_pixels_preserved": true,
+      "job_id": "job_224cbdd6c4e348ae9d3e3e5ea0c20d33",
+      "sha256": "5d8becc5c412af4f1ab6955def4a42cce47389c4152f2125f5181a64aa60dd59"
+    }
+  ],
+  "missing_directions": [
+    "n"
+  ],
+  "reused_arm_and_blade": "V5 byte-exact",
+  "north_retry": "Declined by user; no substitute direction"
+}

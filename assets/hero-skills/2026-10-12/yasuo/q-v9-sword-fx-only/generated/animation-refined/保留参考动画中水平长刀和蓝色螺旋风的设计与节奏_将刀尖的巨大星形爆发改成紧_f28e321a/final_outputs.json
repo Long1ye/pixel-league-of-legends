@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "job_id": "job_c51b862c7ae84b218ef409f76f687ae9",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v9-sword-fx-only\\generated\\animation-refined\\保留参考动画中水平长刀和蓝色螺旋风的设计与节奏_将刀尖的巨大星形爆发改成紧_f28e321a\\meowa_animation.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v9-sword-fx-only\\generated\\animation-refined\\保留参考动画中水平长刀和蓝色螺旋风的设计与节奏_将刀尖的巨大星形爆发改成紧_f28e321a\\meowa_animation_background.webp",
+      "mime_type": "image/webp"
+    }
+  ]
+}

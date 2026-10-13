@@ -1,0 +1,26 @@
+{
+  "1": {
+    "review": "不完整：第二段按用户要求不补交。第一段第3–5帧出现明显白色弧形拖影及重复刀身，不符合不要刀光的要求；第三段仍有刀路绕到身体另一侧的问题。",
+    "visual_acceptance": "incomplete_and_effects_rejected"
+  },
+  "2": {
+    "review": "造型与右下朝向较稳定，没有明显环形刀光；但第一段中间刀身过长、投影异常，第三段低位停留较久后快速跳到高位。可作动作候选，仍未达到自然流畅的定稿要求。",
+    "visual_acceptance": "candidate_needs_motion_and_blade_cleanup"
+  },
+  "3": {
+    "review": "第一段中间造型与刀路变化较大；第二段绕过头顶而不是直接向下衔接，第三段有刀身消失及末帧重复刀身，切换回第二段时跳变明显。不建议作为游戏素材。",
+    "visual_acceptance": "rejected_motion_and_blade_artifacts"
+  },
+  "4": {
+    "review": "未见明显刀光，前两段可用于比较；第三段中间明显转成侧背方向，末帧又跳回右下方向，不满足朝向稳定和自然循环要求。",
+    "visual_acceptance": "rejected_direction_change"
+  },
+  "5": {
+    "review": "第一段第4–5帧出现明显白色弧形拖影，不符合不要刀光的要求；第二段第7帧也有重复刀身。第三段较少特效，但高低位之间仍有姿势跳变，整版未通过美术验收。",
+    "visual_acceptance": "rejected_effects_and_duplicate_blade"
+  },
+  "6": {
+    "review": "第一段第5帧刀身变成粗白弧形，第二段第3帧出现月牙形刀身且中间肩甲细节丢失；第三段第2帧有重复刀身，随后快速跳到高位并停留多帧。端点衔接较一致，但内部动作和造型仍未通过美术验收。",
+    "visual_acceptance": "rejected_blade_artifacts_and_pose_jumps"
+  }
+}

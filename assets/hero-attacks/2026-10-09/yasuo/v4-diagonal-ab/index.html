@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>亚索 · 斜向双普攻 A/B</title>
+  <style>
+    :root { color-scheme: dark; font-family: "Microsoft YaHei", system-ui, sans-serif; background: #0d191f; color: #dfedf1; }
+    * { box-sizing: border-box; } body { margin: 0; padding: 24px; } main { max-width: 1060px; margin: auto; }
+    h1 { margin: 8px 0; font-size: 27px; } h2 { font-size: 18px; margin: 0 0 12px; }
+    .tag { font-size: 12px; letter-spacing: .12em; color: #d6b77f; } p { color: #a5bdc7; line-height: 1.7; }
+    a { color: #89ded3; } .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 14px 0; }
+    button, select { font: inherit; color: #e3f0f4; background: #19333d; border: 1px solid #42616d; border-radius: 6px; padding: 9px 12px; cursor: pointer; }
+    button:hover { border-color: #a1d6cc; } button:disabled { opacity: .5; cursor: wait; }
+    output { color: #97dccc; } .panel, article { background: #122731; border: 1px solid #2d4a58; border-radius: 10px; padding: 16px; }
+    .viewport { overflow-x: auto; } .stage { margin: 12px auto; width: 384px; height: 384px; background: #193239; }
+    .checker { background-color: #192d38; background-image: conic-gradient(#294653 25%, transparent 0 50%, #294653 0 75%, transparent 0); background-size: 32px 32px; }
+    .pixel { image-rendering: pixelated; image-rendering: crisp-edges; } canvas { display: block; } #animation { width: 384px; height: 384px; }
+    .scrub { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 16px 0; } #scrub { flex: 1; min-width: 120px; }
+    .review { border-left: 2px solid #c2a16a; padding-left: 12px; color: #d6c193; }
+    .clips { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 370px), 1fr)); gap: 16px; margin-top: 20px; }
+    .downloads { display: flex; flex-wrap: wrap; gap: 12px; margin: 10px 0; }
+    details { margin-top: 16px; } summary { cursor: pointer; color: #c5dce4; }
+    .frames { display: grid; grid-template-columns: repeat(auto-fit, 194px); gap: 12px; margin-top: 16px; }
+    .frame { border: 1px solid #355261; width: max-content; } .frame.selected { border-color: #e0b675; }
+    .frame button { width: 100%; padding: 5px; border-radius: 0; font-size: 12px; }
+    figure { margin: 14px 0 0; overflow-x: auto; } figure img { display: block; width: 384px; height: 384px; max-width: none; }
+    figcaption, footer { color: #a5bdc7; font-size: 13px; } footer { margin-top: 24px; }
+    @media (max-width: 480px) { body { padding: 12px; } .panel, article { padding: 12px; } .stage { margin-left: 0; margin-right: 0; } }
+  </style>
+</head><body><main>
+  <div class="tag">YASUO / DIAGONAL ATTACK A &amp; B / ORIGINAL OUTFIT</div>
+  <h1>亚索 · 斜向双普攻</h1>
+  <p>A：画面右下 ↖ 左上；B：左上 ↘ 右下。两条独立攻击，分别可单次播放，再检查 A→B→A 的衔接。</p>
+  <p id="facts">素材加载中…</p>
+  <div class="toolbar">
+    <button id="attack-a" disabled>播放A一次</button><button id="attack-b" disabled>播放B一次</button>
+    <button id="pair-once" disabled>播放A→B一次</button><button id="pair-loop" disabled>循环A→B</button>
+    <label>速度 <select id="rate" aria-label="播放速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label>
+    <label>节奏 <select id="cadence" aria-label="攻击节奏"><option value="1200" selected>统一每刀1.2秒</option><option value="original">原始制作时长</option></select></label>
+  </div>
+  <section class="panel">
+    <div class="viewport"><div class="stage checker" id="stage"><canvas class="pixel" id="animation" width="192" height="192" aria-label="亚索斜向普通攻击动画"></canvas></div></div>
+    <div class="scrub"><button id="play" disabled>暂停</button><button id="previous" disabled>上一帧</button><button id="next" disabled>下一帧</button>
+      <label for="scrub">逐帧</label><input type="range" id="scrub" min="0" max="1" value="0" disabled /><output id="status" aria-live="polite">加载中</output></div>
+    <div class="toolbar"><button id="a-first" disabled>A首帧</button><button id="a-last" disabled>A末帧</button><button id="b-first" disabled>B首帧</button><button id="b-last" disabled>B末帧</button><button id="background" aria-pressed="true">棋盘背景</button></div>
+    <p class="review" id="review"></p>
+    <p id="method">主预览2×、逐帧1×整数最近邻，固定画布。默认每刀1.2秒，仅改变播放速率，不改变原文件、帧顺序或帧位置；可切回原始时长。</p>
+    <details><summary>展开全部原始帧</summary><div class="viewport"><div class="frames" id="frames"></div></div></details>
+  </section>
+  <div class="clips" id="clips"></div>
+  <footer><p id="credits"></p><p>单次播放停在各自收刀末帧；原文件WebP自带循环属性，不代表单条动作内包含两次攻击。样稿时长不是最终游戏攻速，未接入对局。</p>
+    <a href="../v3-horizontal/index.html">上一轮横挥样稿</a> · <a href="../v2-ab/index.html">更早的三组A/B</a> · <a href="/">返回中路对局</a></footer>
+</main><script type="module" src="./preview.ts"></script></body></html>

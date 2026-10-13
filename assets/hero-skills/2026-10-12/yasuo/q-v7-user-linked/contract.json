@@ -1,0 +1,26 @@
+{
+  "hero": "yasuo",
+  "skill": "Q directional linked visual study",
+  "direction_body_source": "All eight user-provided direction images, including the separately resent southeast",
+  "directions": ["e", "se", "s", "sw", "w", "nw", "n", "ne"],
+  "source_policy": "Original 1024x1024 PNGs retained byte-exact; 128x128 textures prepared using nearest-neighbor",
+  "method": "Procedural body-part animation, not AI full-body regeneration",
+  "body_motion": "Lower body fixed; upper body sheared around waist; shoulder derived from same transform",
+  "arm_motion": "Balanced 18px upper arm and 21px forearm; wrist/hilt attachment shared; torso burst leads arm thrust by 10ms",
+  "blade_motion": "Precise aim with directional body selection and projected length; pale-blue wind retained",
+  "foot_anchor": [144, 158],
+  "export_frame_cell": [288, 256],
+  "export_frames_per_direction": 16,
+  "cast_duration_ms": 480,
+  "preview_period_ms": 1400,
+  "generation_jobs": 0,
+  "credits_charged": 0,
+  "game_assets_skill_use": "Source preservation, explicit runtime size and alpha checks, integer previews, game-scale validation",
+  "main_game_integrated": false,
+  "limits": [
+    "Procedural torso shear is an approximation to a real articulated body turn",
+    "Arm textures still reuse adapted V5 parts, not newly drawn directional arm designs",
+    "The original non-casting arm remains in the user-provided body image",
+    "Main-game idle/walk animations and Q hit logic are unchanged"
+  ]
+}

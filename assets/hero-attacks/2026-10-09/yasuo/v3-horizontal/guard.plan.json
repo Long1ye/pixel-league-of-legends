@@ -1,0 +1,9 @@
+{
+  "command": "image-edit-run",
+  "args": [
+    "--reference-image", "assets/hero-attacks/2026-10-09/yasuo/v3-horizontal/preparation/padded-source.png",
+    "--prompt", "把亚索改成横斩起手：原来的持刀手握住单把武士刀，另一只手辅助握柄，刀横置胸前，刀刃伸向画面左侧，准备从左向右挥砍。保持右下朝向、蓝围巾、护肩、马尾、原像素大小和双脚位置。224×192透明画布，不加刀光。",
+    "--mode", "pixel", "--strict", "--generation-model", "nano-banana", "--resolution", "1K", "--remove-bg-method", "standard"
+  ],
+  "output_dir": "assets/hero-attacks/2026-10-09/yasuo/v3-horizontal/guard"
+}

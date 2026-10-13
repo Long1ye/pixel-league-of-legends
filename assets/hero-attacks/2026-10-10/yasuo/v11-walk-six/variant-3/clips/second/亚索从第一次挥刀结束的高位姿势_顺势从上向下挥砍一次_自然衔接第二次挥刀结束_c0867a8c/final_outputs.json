@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_99b381d18973492ca92376b0de648faa",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v11-walk-six\\variant-3\\clips\\second\\亚索从第一次挥刀结束的高位姿势_顺势从上向下挥砍一次_自然衔接第二次挥刀结束_c0867a8c\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v11-walk-six\\variant-3\\clips\\second\\亚索从第一次挥刀结束的高位姿势_顺势从上向下挥砍一次_自然衔接第二次挥刀结束_c0867a8c\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v11-walk-six\\variant-3\\clips\\second\\亚索从第一次挥刀结束的高位姿势_顺势从上向下挥砍一次_自然衔接第二次挥刀结束_c0867a8c\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

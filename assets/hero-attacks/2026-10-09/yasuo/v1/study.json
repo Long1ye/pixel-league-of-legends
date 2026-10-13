@@ -1,0 +1,51 @@
+{
+  "hero": "yasuo",
+  "action": "basic_attack",
+  "direction": "se",
+  "status": "motion_study",
+  "width": 176,
+  "height": 176,
+  "frame_count": 8,
+  "columns": 3,
+  "rows": 3,
+  "durations_ms": [
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100
+  ],
+  "duration_ms": 800,
+  "webp": "attack-se/亚索朝屏幕右下方原地做一次快速武士刀斜劈_略微蓄力_刀刃迅速划过身体前方_再_de85f075/result_output_url.webp",
+  "gif": "attack-se/亚索朝屏幕右下方原地做一次快速武士刀斜劈_略微蓄力_刀刃迅速划过身体前方_再_de85f075/result_output_transparent_output_urls_gif.gif",
+  "sheet": "attack-se/亚索朝屏幕右下方原地做一次快速武士刀斜劈_略微蓄力_刀刃迅速划过身体前方_再_de85f075/result_output_transparent_output_urls_png.png",
+  "source": "../../../../hero-walk-directions/2026-10-09/v1/yasuo/component_004_pixel_multi_view/iso_front_right.png",
+  "source_anchor": [
+    64,
+    115
+  ],
+  "source_offset": [
+    8,
+    16
+  ],
+  "anchor": [
+    72,
+    131
+  ],
+  "reference_page": "https://www.leagueoflegends.com/en-us/champions/yasuo/",
+  "reference_video": "https://lol.dyn.riotcdn.net/x/videos/champion-abilities/0157/ability_0157_R1.mp4",
+  "reference_seconds": [
+    6.0,
+    7.2
+  ],
+  "reference_use": "Observed motion, translated to prompt; not uploaded as motion conditioning",
+  "credits_before": 10045,
+  "credits_after": 9985,
+  "credits_consumed": 60,
+  "review": "8帧尺寸与透明度检查通过，挥刀后回收；第3–4帧刀光偏宽亮，末帧与起手并非完全相同。先验收动作，不视为正式美术定稿。脚底检查点固定，未做逐帧自动对齐。",
+  "production_ready": false,
+  "runtime_integrated": false
+}

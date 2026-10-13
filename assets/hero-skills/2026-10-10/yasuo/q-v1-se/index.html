@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>亚索 Q · 右下刺击样稿 V1</title>
+  <style>
+    :root { color-scheme: dark; font-family: "Microsoft YaHei", system-ui, sans-serif; background: #0d191f; color: #dfedf1; }
+    * { box-sizing: border-box; } body { margin: 0; padding: 20px; } main { max-width: 1080px; margin: auto; }
+    h1 { font-size: 26px; margin: 8px 0; } h2 { font-size: 18px; margin-top: 0; } p { line-height: 1.7; color: #b6ccd5; }
+    a { color: #89ded3; } .tag { color: #d6b77f; letter-spacing: .1em; font-size: 12px; }
+    .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 12px 0; }
+    button, select { font: inherit; background: #19333d; color: #e3f0f4; border: 1px solid #42616d; border-radius: 6px; padding: 8px 10px; cursor: pointer; }
+    button:disabled { opacity: .5; cursor: wait; } button:hover { border-color: #a1d6cc; }
+    .panel { border: 1px solid #2d4a58; background: #122731; border-radius: 10px; padding: 16px; }
+    .overview { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+    .viewport { overflow-x: auto; } .stage { width: 496px; height: 320px; margin: 8px auto; }
+    .checker { background-color: #192d38; background-image: conic-gradient(#294653 25%, transparent 0 50%, #294653 0 75%, transparent 0); background-size: 24px 24px; }
+    .pixel { image-rendering: pixelated; image-rendering: crisp-edges; } canvas, img { display: block; }
+    #animation { width: 496px; height: 320px; } output { color: #97dccc; }
+    .scrub { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; } #scrub { flex: 1; min-width: 100px; }
+    .review { border-left: 2px solid #c2a16a; padding-left: 12px; color: #d6c193; }
+    .downloads { display: flex; flex-wrap: wrap; gap: 12px; margin: 12px 0; }
+    blockquote { margin: 12px 0; padding-left: 12px; border-left: 2px solid #42616d; color: #c2d6dd; line-height: 1.7; }
+    details { margin-top: 16px; } summary { cursor: pointer; } .frames { display: grid; grid-template-columns: repeat(auto-fit, minmax(248px, max-content)); gap: 10px; margin-top: 16px; }
+    .frame { width: max-content; border: 1px solid #355261; } .frame.selected { border-color: #e0b675; }
+    .frame button { width: 100%; border-radius: 0; padding: 5px; font-size: 12px; }
+    footer { font-size: 13px; margin-top: 20px; } .poses { display: flex; flex-wrap: wrap; gap: 16px; }
+    .poses figure { margin: 0; } figcaption { margin-top: 8px; color: #b6ccd5; }
+    @media (max-width: 960px) { .overview { display: block; } .original { margin-top: 16px; } }
+  </style>
+</head><body><main>
+  <div class="tag">YASUO / STEEL TEMPEST / SOUTH EAST / V1</div>
+  <h1>亚索 Q · 右下刺击样稿</h1>
+  <p>一条 Q1 / Q2 动作：持刀准备 → 直线刺出 → 收招。不包含 Q3 旋风，不改动你已选定的 A/B 普攻。</p>
+  <p id="facts">正在加载…</p>
+  <div class="toolbar">
+    <button id="once" disabled>播放一次 Q</button><button id="loop" disabled>循环检查</button>
+    <label>节奏 <select id="timing" aria-label="动画节奏"><option value="demo" selected>0.45秒节奏试播</option><option value="source">生成原速</option></select></label>
+    <label>倍率 <select id="zoom" aria-label="像素预览倍率"><option value="1">1× 原生像素</option><option value="2" selected>2× 整数放大</option></select></label>
+  </div>
+  <div class="overview">
+    <section class="panel">
+      <h2>动作预览</h2>
+      <div class="viewport"><div id="stage" class="stage checker"><canvas id="animation" class="pixel" width="248" height="160" aria-label="亚索Q刺击动画"></canvas></div></div>
+      <div class="scrub"><button id="play" disabled>暂停</button><button id="previous" disabled>上一帧</button><button id="next" disabled>下一帧</button>
+        <label for="scrub">逐帧</label><input id="scrub" type="range" min="0" max="7" value="0" disabled></div>
+      <p><output id="status" aria-live="polite">加载中</output></p>
+      <p class="review" id="review"></p>
+    </section>
+    <section class="panel original">
+      <h2>生成原文件</h2>
+      <div class="viewport"><img id="original" class="pixel checker" alt="亚索Q原速透明WebP"></div>
+      <p id="original-facts"></p>
+      <div class="downloads" id="downloads"></div>
+      <h2>本次动画提示词</h2><blockquote id="prompt"></blockquote>
+      <p>已开启提示词自动优化；此处展示提交原文。预览调速只改变播放时序，不改变原始文件或帧像素。</p>
+    </section>
+  </div>
+  <details><summary>查看全部帧</summary><div class="viewport"><div id="frames" class="frames"></div></div></details>
+  <details><summary>查看两张生成关键帧</summary><div class="poses" id="poses"></div></details>
+  <footer>
+    <p id="credits"></p>
+    <p>这是单方向整身动画样稿，尚未拆分持刀手与武器、扩展八向或接入游戏 Q 的命中逻辑。0.45秒为动作节奏试播，不是当前对局中的实际施法。</p>
+    <a href="/">返回游戏</a> · <a href="/assets/hero-attacks/2026-10-10/yasuo/v14-user-selected/index.html">查看已选定的 A/B 普攻</a>
+  </footer>
+</main><script type="module" src="./preview.ts"></script></body></html>

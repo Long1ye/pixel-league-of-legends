@@ -1,0 +1,16 @@
+{
+  "command": "animation-edit-run",
+  "args": [
+    "--animation-file",
+    "assets/hero-attacks/2026-10-09/yasuo/v6-no-fx-transitions/clips/a-to-b/Yasuo_performs_exactly_one_upward_sword_slash_on_the_right_side_of_the_screen_from_the_low_guard_in_the_first_6cbfb547/meowa_animation.webp",
+    "--prompt",
+    "删除动画每一帧中附加的蓝色、白色弧形刀光、发光轨迹和残影，只保留角色手中真实的一把钢制武士刀。保留原来的单次向上挥刀动作、人物衣服与位置、帧数和每帧时长，不添加任何光效或粒子。",
+    "--mode",
+    "pixel",
+    "--generation-speed",
+    "normal",
+    "--remove-bg-method",
+    "standard"
+  ],
+  "output_dir": "assets/hero-attacks/2026-10-09/yasuo/v6-no-fx-transitions/clips/a-remove-fx"
+}

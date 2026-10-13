@@ -1,0 +1,10 @@
+{
+  "command": "image-edit-run",
+  "args": [
+    "--reference-image", "assets/hero-skills/2026-10-12/yasuo/w-v3-horizontal-e/source/user-east-padded.png",
+    "--prompt", "将参考图中的亚索改为面向画面正右的横斩蓄力姿势：屈膝站稳，腰肩略向后拧，双手握住正常长度的武士刀收在腰侧，刀刃近似水平，准备向右前方横向挥砍。保持原角色的像素画风、脸型、服装、体型、画面位置和大小。画完整人物和刀，不画刀光、风墙或其他物体，透明背景。",
+    "--mode", "pixel", "--strict", "--generation-model", "nano-banana",
+    "--resolution", "1K", "--generation-speed", "normal", "--remove-bg-method", "standard"
+  ],
+  "output_dir": "assets/hero-skills/2026-10-12/yasuo/w-v3-horizontal-e/generated-pose"
+}

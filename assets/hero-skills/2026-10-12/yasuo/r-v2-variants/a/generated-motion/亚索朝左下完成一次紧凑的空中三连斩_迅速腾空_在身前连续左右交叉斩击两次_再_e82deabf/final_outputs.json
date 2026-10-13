@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_7f07f6d7281e424c993c5e831547067a",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\r-v2-variants\\a\\generated-motion\\亚索朝左下完成一次紧凑的空中三连斩_迅速腾空_在身前连续左右交叉斩击两次_再_e82deabf\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\r-v2-variants\\a\\generated-motion\\亚索朝左下完成一次紧凑的空中三连斩_迅速腾空_在身前连续左右交叉斩击两次_再_e82deabf\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\r-v2-variants\\a\\generated-motion\\亚索朝左下完成一次紧凑的空中三连斩_迅速腾空_在身前连续左右交叉斩击两次_再_e82deabf\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

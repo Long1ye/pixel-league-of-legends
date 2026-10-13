@@ -1,0 +1,15 @@
+{
+  "hero": "yasuo",
+  "skill": "Q visual experiment",
+  "direction": "e",
+  "scope": "One modified open-hand + wind-covered floating-sword sample; preserve v3 and main-game logic",
+  "method": "Meowa-edited components + procedural casting gesture and independent sword thrust",
+  "reuse_byte_exact": ["v3 body", "v3 upper arm"],
+  "hand_sword_contact": false,
+  "wind_color": "pale blue",
+  "runtime_integrated": false,
+  "other_directions_validated": false,
+  "credits_before": 5925,
+  "credits_charged": null,
+  "billing_note": "No charge is inferred without a final bill."
+}

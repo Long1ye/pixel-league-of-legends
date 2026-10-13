@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>亚索 · 三组 A/B 普攻衔接</title>
+  <style>
+    :root { color-scheme: dark; font-family: "Microsoft YaHei", system-ui, sans-serif; background: #0c171e; color: #dbe9ef; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 24px; }
+    main { max-width: 1440px; margin: auto; }
+    h1 { margin: 0 0 10px; font-size: 27px; } h2 { font-size: 19px; margin: 0 0 8px; }
+    p { color: #a6bdc8; line-height: 1.65; margin: 8px 0; } a { color: #8edcd2; }
+    .tag { color: #d9b879; font-size: 12px; letter-spacing: .12em; margin-bottom: 8px; }
+    .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 16px 0; }
+    button, select { font: inherit; padding: 9px 12px; border: 1px solid #405c69; border-radius: 6px; background: #19313e; color: #e3f0f5; cursor: pointer; }
+    button:hover, button[aria-pressed="true"] { background: #285361; border-color: #88c9c1; }
+    button:disabled { opacity: .5; cursor: wait; }
+    .boundary { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 18px; }
+    output { color: #99ddcc; font-size: 14px; }
+    .groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(368px, 1fr)); gap: 16px; align-items: start; }
+    .group { background: #12232d; border: 1px solid #294754; border-radius: 10px; padding: 16px; min-width: 0; overflow-x: auto; }
+    .group .description { font-size: 13px; min-height: 44px; }
+    .stage { width: 352px; height: 352px; margin: 10px auto; position: relative; background: #193239; border: 0; }
+    .checker { background-color: #192d38; background-image: conic-gradient(#294653 25%, transparent 0 50%, #294653 0 75%, transparent 0); background-size: 32px 32px; }
+    .stage::after { content: ''; position: absolute; width: 32px; height: 1px; background: #e5b779; left: 128px; top: 262px; pointer-events: none; opacity: .7; }
+    .pixel { image-rendering: pixelated; image-rendering: crisp-edges; }
+    .stage canvas { position: relative; z-index: 1; width: 352px; height: 352px; }
+    .frame-status { display: block; text-align: center; padding: 5px 0; }
+    .downloads { display: flex; flex-wrap: wrap; gap: 8px 12px; padding: 9px 0; font-size: 13px; }
+    .note { font-size: 13px; color: #d8bc83; border-left: 2px solid #b9955c; padding-left: 10px; }
+    details { margin-top: 16px; border-top: 1px solid #294754; padding-top: 12px; } summary { cursor: pointer; color: #c3dce5; }
+    .frames { display: grid; grid-template-columns: repeat(auto-fit, 176px); gap: 12px; margin-top: 16px; }
+    .frame { background: #192d38; padding: 0; border: 1px solid #294754; width: 178px; }
+    .frame.selected { border-color: #e8bb71; } .frame button { width: 176px; border-radius: 0; font-size: 12px; padding: 6px; }
+    .frame canvas { width: 176px; height: 176px; display: block; }
+    .originals { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; } figure { margin: 0; max-width: 100%; }
+    figure img { display: block; width: 352px; height: 352px; max-width: none; } figcaption { font-size: 13px; margin-top: 8px; color: #9cb7c4; }
+    .native-overflow { overflow-x: auto; } footer { margin-top: 24px; font-size: 13px; }
+    @media (max-width: 440px) { body { padding: 12px; } .groups { grid-template-columns: 1fr; } .group { padding: 12px; } .stage { margin-left: 0; margin-right: 0; } }
+  </style>
+</head>
+<body><main>
+  <div class="tag">PIXEL MOTION STUDY / YASUO / SE</div>
+  <h1>亚索 · 三组 A / B 普攻衔接</h1>
+  <p>右下朝向 · A → B → A 连续交替。比较刀路与接缝，不是三连击技能，也不是八向定稿。</p>
+  <p id="facts">素材加载中…</p>
+  <div class="toolbar">
+    <button id="play" disabled>暂停</button><button id="once" disabled>播放一次 A+B</button>
+    <button id="previous" disabled>上一帧</button><button id="next" disabled>下一帧</button>
+    <label>速度 <select id="rate" aria-label="播放速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label>
+    <label><input id="loop" type="checkbox" checked /> 连续循环</label>
+    <button id="background" aria-pressed="true">棋盘背景</button><output id="status" aria-live="polite">加载中</output>
+  </div>
+  <div class="boundary" aria-label="接缝逐帧检查">
+    <button data-seam="7" disabled>A 末帧</button><button data-seam="8" disabled>B 首帧</button>
+    <button data-seam="15" disabled>B 末帧</button><button data-seam="0" disabled>A 首帧</button>
+  </div>
+  <div class="groups" id="groups"></div>
+  <footer><p id="review"></p><p id="credits"></p><p>主预览为原始像素 2×，逐帧图为 1×，固定画布与脚底检查线；未做逐帧移位、缩放或端点替换。</p>
+    <a href="../v1/index.html">查看上一版单次普攻</a> · <a href="/">返回中路对局</a>
+  </footer>
+</main><script type="module" src="./preview.ts"></script></body>
+</html>

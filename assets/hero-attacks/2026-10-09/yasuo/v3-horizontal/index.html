@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>亚索 · 连续左右横挥</title>
+  <style>
+    :root { color-scheme: dark; font-family: "Microsoft YaHei", system-ui, sans-serif; background: #0d191f; color: #dfedf1; }
+    * { box-sizing: border-box; } body { margin: 0; padding: 24px; } main { max-width: 1100px; margin: auto; }
+    h1 { margin: 8px 0 10px; font-size: 27px; } h2 { font-size: 18px; margin: 0 0 12px; }
+    .tag { font-size: 12px; color: #d6b77f; letter-spacing: .1em; } p { color: #a5bdc7; line-height: 1.7; margin: 10px 0; }
+    a { color: #89ded3; } .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 16px 0; }
+    button, select { font: inherit; color: #e3f0f4; background: #19333d; border: 1px solid #42616d; border-radius: 6px; padding: 9px 12px; cursor: pointer; }
+    button:hover { border-color: #a1d6cc; } button:disabled { opacity: .5; cursor: wait; }
+    output { color: #97dccc; } .panel { background: #122731; border: 1px solid #2d4a58; border-radius: 10px; padding: 16px; }
+    .viewport { overflow-x: auto; } .stage { margin: 12px auto; background: #193239; }
+    .checker { background-color: #192d38; background-image: conic-gradient(#294653 25%, transparent 0 50%, #294653 0 75%, transparent 0); background-size: 32px 32px; }
+    .pixel { image-rendering: pixelated; image-rendering: crisp-edges; } canvas { display: block; }
+    .scrub { display: flex; gap: 12px; align-items: center; margin: 16px 0; } #scrub { flex: 1; min-width: 120px; }
+    .review { border-left: 2px solid #c2a16a; padding-left: 12px; color: #d6c193; }
+    .links { display: flex; flex-wrap: wrap; gap: 12px; margin: 14px 0; }
+    details { margin-top: 20px; } summary { cursor: pointer; color: #c5dce4; }
+    .frames { display: grid; gap: 12px; margin-top: 16px; } .frame { border: 1px solid #355261; width: max-content; }
+    .frame.selected { border-color: #e0b675; } .frame button { width: 100%; padding: 5px; border-radius: 0; font-size: 12px; }
+    .originals { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; } figure { margin: 0; max-width: 100%; overflow-x: auto; }
+    figure img { display: block; max-width: none; } figcaption { color: #a5bdc7; font-size: 13px; margin-top: 8px; }
+    footer { margin-top: 24px; font-size: 13px; }
+    @media (max-width: 520px) { body { padding: 12px; } .stage { margin-left: 0; margin-right: 0; } .panel { padding: 12px; } }
+  </style>
+</head><body><main>
+  <div class="tag">YASUO / HORIZONTAL SLASH / FULL-FRAME LOOP</div>
+  <h1>亚索 · 连续左右横挥</h1>
+  <p>整条动作重新生成：左右交替横挥，不再拼接独立A/B片段。右下方向样稿，固定画布，保留全部生成帧；循环接缝仍待修正。</p>
+  <p id="facts">素材加载中…</p>
+  <div class="toolbar">
+    <button id="play" disabled>暂停</button><button id="once" disabled>播放一次完整循环</button>
+    <button id="previous" disabled>上一帧</button><button id="next" disabled>下一帧</button>
+    <label>速度 <select id="rate" aria-label="播放速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option></select></label>
+    <label><input id="loop" type="checkbox" checked /> 连续循环</label>
+    <button id="background" aria-pressed="true">棋盘背景</button>
+  </div>
+  <section class="panel">
+    <div class="viewport"><div class="stage checker" id="stage"><canvas class="pixel" id="animation" aria-label="亚索左右交替横挥动画"></canvas></div></div>
+    <div class="scrub"><label for="scrub">逐帧</label><input type="range" id="scrub" min="0" max="1" value="0" disabled /><output id="status" aria-live="polite">加载中</output></div>
+    <div class="toolbar"><button id="last" disabled>末帧</button><button id="first" disabled>首帧</button></div>
+    <p class="review" id="review"></p><div class="links" id="downloads"></div>
+    <details><summary>展开全部原始帧</summary><div class="viewport"><div class="frames" id="frames"></div></div></details>
+    <details><summary>查看原文件循环（不受上方播放控件影响）</summary><div class="originals" id="originals"></div></details>
+  </section>
+  <footer><p id="credits"></p><p id="method"></p><a href="../v2-ab/index.html">对比上一轮三组样稿</a> · <a href="/">返回中路对局</a></footer>
+</main><script type="module" src="./preview.ts"></script></body></html>

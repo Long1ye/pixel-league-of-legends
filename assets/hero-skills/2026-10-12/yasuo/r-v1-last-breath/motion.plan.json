@@ -1,0 +1,14 @@
+{
+  "command":"animate-run",
+  "recovery_command":"animate-poll",
+  "recovery_id_flag":"--api-job-id",
+  "args":[
+    "--image-file","assets/hero-skills/2026-10-12/yasuo/e-v7-fixed-right/sw/source.png",
+    "--prompt","以英雄联盟亚索原皮狂风绝息斩的近身滞空斩击为基础。亚索保持朝左下，从持刀蓄势短暂腾空，在身前同一位置完成一次三连斩组合：两次迅捷交叉斩击，短暂蓄力后一次有力的向下终结斩，随后落地收势。蓝白色细窄风刃紧随刀锋，头发围巾随动作甩动，身体和手臂协调发力。保持参考图人物比例与像素风，镜头固定，只画亚索和刀光，不画敌人，不整圈旋转，不加爆炸或巨大光柱。",
+    "--output-frames","16","--output-format","webp","--animation-type","attack",
+    "--animation-model","pixel-engine-v1.1","--intelligence","advanced","--optimize-prompt",
+    "--remove-bg-method","standard","--color-count","64",
+    "--padding-top","32","--padding-down","16","--padding-left","40","--padding-right","8"
+  ],
+  "output_dir":"assets/hero-skills/2026-10-12/yasuo/r-v1-last-breath/generated-motion"
+}

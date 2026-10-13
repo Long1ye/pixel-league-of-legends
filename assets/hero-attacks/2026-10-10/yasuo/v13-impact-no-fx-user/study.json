@@ -1,0 +1,155 @@
+{
+  "hero": "yasuo",
+  "direction": "se",
+  "width": 176,
+  "height": 176,
+  "clips": [
+    {
+      "id": "A",
+      "name": "高位→低位",
+      "from_pose": 1,
+      "to_pose": 2,
+      "prompt": "亚索从高位挥砍到低位，动作自然流畅，要有打击感，不要有刀光",
+      "prompt_author": "user",
+      "prompt_optimization": true,
+      "job_id": "job_724c0a41f4684cb290f5fa14cf14b30a",
+      "webp": "clips/animation-A/亚索从高位挥砍到低位_动作自然流畅_要有打击感_不要有刀光/result_output_url.webp",
+      "frame_count": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "duration_ms": 800,
+      "columns": 3,
+      "rows": 3,
+      "edge_contact_frames": [],
+      "first_to_input": {
+        "mean_rgb_error": 1.4731835399449036,
+        "alpha_identical": false
+      },
+      "last_to_input": {
+        "mean_rgb_error": 1.2308884297520661,
+        "alpha_identical": false
+      },
+      "final_media": [
+        {
+          "label": "透明WebP",
+          "path": "clips/animation-A/亚索从高位挥砍到低位_动作自然流畅_要有打击感_不要有刀光/result_output_url.webp"
+        },
+        {
+          "label": "透明GIF",
+          "path": "clips/animation-A/亚索从高位挥砍到低位_动作自然流畅_要有打击感_不要有刀光/result_output_transparent_output_urls_gif.gif"
+        },
+        {
+          "label": "PNG图集",
+          "path": "clips/animation-A/亚索从高位挥砍到低位_动作自然流畅_要有打击感_不要有刀光/result_output_transparent_output_urls_png.png"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "name": "低位→高位",
+      "from_pose": 2,
+      "to_pose": 1,
+      "prompt": "亚索从低位挥砍到高位，动作自然流畅，要有打击感，不要有刀光",
+      "prompt_author": "user",
+      "prompt_optimization": true,
+      "job_id": "job_d24b5b274eaf4fecb78d09de3a2423ce",
+      "webp": "clips/animation-B/亚索从低位挥砍到高位_动作自然流畅_要有打击感_不要有刀光/result_output_url.webp",
+      "frame_count": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "duration_ms": 800,
+      "columns": 3,
+      "rows": 3,
+      "edge_contact_frames": [],
+      "first_to_input": {
+        "mean_rgb_error": 1.2102057506887052,
+        "alpha_identical": false
+      },
+      "last_to_input": {
+        "mean_rgb_error": 1.6267002410468319,
+        "alpha_identical": false
+      },
+      "final_media": [
+        {
+          "label": "透明WebP",
+          "path": "clips/animation-B/亚索从低位挥砍到高位_动作自然流畅_要有打击感_不要有刀光/result_output_url.webp"
+        },
+        {
+          "label": "透明GIF",
+          "path": "clips/animation-B/亚索从低位挥砍到高位_动作自然流畅_要有打击感_不要有刀光/result_output_transparent_output_urls_gif.gif"
+        },
+        {
+          "label": "PNG图集",
+          "path": "clips/animation-B/亚索从低位挥砍到高位_动作自然流畅_要有打击感_不要有刀光/result_output_transparent_output_urls_png.png"
+        }
+      ]
+    }
+  ],
+  "attack_loop_sequence": [
+    "A",
+    "B"
+  ],
+  "seams": [
+    {
+      "from": "A",
+      "to": "B",
+      "mean_rgb_error": 1.1039944903581267,
+      "alpha_identical": false
+    },
+    {
+      "from": "B",
+      "to": "A",
+      "mean_rgb_error": 1.2739109848484849,
+      "alpha_identical": false
+    }
+  ],
+  "credits_before": 6473,
+  "credits_after": 6383,
+  "credits_consumed": 90,
+  "review": "没有大片刀光或光带，但A第4帧仍出现双刀轮廓重影；A的挥砍主要集中在第4→5帧，节奏偏短促。两处循环接缝的姿态接近，头发、刀身和衣服仍有轻微跳变。这版用于动作筛选，尚未达到自然流畅的美术定稿标准。",
+  "visual_acceptance": "needs_review",
+  "production_ready": false,
+  "runtime_integrated": false,
+  "source_keyframes_preserved": true,
+  "optimized_prompt_text_returned": false,
+  "no_sword_glow_requirement_fully_met": false,
+  "reviewed_at_native_size": true,
+  "reviewed_frames_per_clip": 8,
+  "issues": [
+    {
+      "clip": "A",
+      "frames": [
+        4
+      ],
+      "issue": "双刀轮廓重影，不是新增付费纠正后的素材"
+    },
+    {
+      "clip": "A",
+      "frames": [
+        4,
+        5
+      ],
+      "issue": "主要挥砍压缩在两帧之间，刀路偏突变"
+    },
+    {
+      "clip": "A/B",
+      "issue": "循环接缝头发、刀身和衣服有轻微差异"
+    }
+  ]
+}

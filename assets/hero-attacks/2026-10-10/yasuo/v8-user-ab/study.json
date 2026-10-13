@@ -1,0 +1,129 @@
+{
+  "hero": "yasuo",
+  "direction": "se",
+  "width": 176,
+  "height": 176,
+  "clips": [
+    {
+      "id": "A",
+      "name": "第二次挥刀 · 图1→图2",
+      "from_pose": 1,
+      "to_pose": 2,
+      "prompt": "绘制第二次挥刀动画，第一次挥刀结束自然过渡到第二次挥刀结束",
+      "prompt_author": "user",
+      "prompt_optimization": true,
+      "job_id": "job_aeb85a2a8f6b49d0a6d1b3bcb1381c40",
+      "webp": "clips/animation-A/绘制第二次挥刀动画_第一次挥刀结束自然过渡到第二次挥刀结束/result_output_url.webp",
+      "frame_count": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "duration_ms": 800,
+      "columns": 3,
+      "rows": 3,
+      "edge_contact_frames": [],
+      "first_to_input": {
+        "mean_rgb_error": 1.383834796831956,
+        "alpha_identical": false
+      },
+      "last_to_input": {
+        "mean_rgb_error": 1.3549414600550964,
+        "alpha_identical": false
+      },
+      "final_media": [
+        {
+          "label": "透明WebP",
+          "path": "clips/animation-A/绘制第二次挥刀动画_第一次挥刀结束自然过渡到第二次挥刀结束/result_output_url.webp"
+        },
+        {
+          "label": "透明GIF",
+          "path": "clips/animation-A/绘制第二次挥刀动画_第一次挥刀结束自然过渡到第二次挥刀结束/result_output_transparent_output_urls_gif.gif"
+        },
+        {
+          "label": "PNG图集",
+          "path": "clips/animation-A/绘制第二次挥刀动画_第一次挥刀结束自然过渡到第二次挥刀结束/result_output_transparent_output_urls_png.png"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "name": "第一次挥刀 · 图2→图1",
+      "from_pose": 2,
+      "to_pose": 1,
+      "prompt": "绘制第一次挥刀动画，第二次挥刀结束自然过渡到第一次挥刀结束",
+      "prompt_author": "user",
+      "prompt_optimization": true,
+      "job_id": "job_64bc6ae212e24876944c4d4046ca833f",
+      "webp": "clips/animation-B/绘制第一次挥刀动画_第二次挥刀结束自然过渡到第一次挥刀结束/result_output_url.webp",
+      "frame_count": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "duration_ms": 800,
+      "columns": 3,
+      "rows": 3,
+      "edge_contact_frames": [],
+      "first_to_input": {
+        "mean_rgb_error": 1.2469331095041323,
+        "alpha_identical": false
+      },
+      "last_to_input": {
+        "mean_rgb_error": 1.5158186983471074,
+        "alpha_identical": false
+      },
+      "final_media": [
+        {
+          "label": "透明WebP",
+          "path": "clips/animation-B/绘制第一次挥刀动画_第二次挥刀结束自然过渡到第一次挥刀结束/result_output_url.webp"
+        },
+        {
+          "label": "透明GIF",
+          "path": "clips/animation-B/绘制第一次挥刀动画_第二次挥刀结束自然过渡到第一次挥刀结束/result_output_transparent_output_urls_gif.gif"
+        },
+        {
+          "label": "PNG图集",
+          "path": "clips/animation-B/绘制第一次挥刀动画_第二次挥刀结束自然过渡到第一次挥刀结束/result_output_transparent_output_urls_png.png"
+        }
+      ]
+    }
+  ],
+  "attack_loop_sequence": [
+    "A",
+    "B"
+  ],
+  "seams": [
+    {
+      "from": "A",
+      "to": "B",
+      "mean_rgb_error": 0.993080664600551,
+      "alpha_identical": false
+    },
+    {
+      "from": "B",
+      "to": "A",
+      "mean_rgb_error": 1.1252044593663912,
+      "alpha_identical": false
+    }
+  ],
+  "credits_before": 8355,
+  "credits_after": 8265,
+  "credits_consumed": 90,
+  "review": "两段均已逐帧检查：A到达低位结束姿势，但中间出现向左回摆再绕到上方的刀路；B从低位上挥至高位，路径较直接。局部头发、披肩和身体轮廓仍有变化，首尾接缝不是逐像素一致，尚未美术定稿。保留原始生成结果，待用户验收，不擅自改prompt重做。",
+  "visual_acceptance": "needs_user_review",
+  "production_ready": false,
+  "runtime_integrated": false
+}

@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_aeb85a2a8f6b49d0a6d1b3bcb1381c40",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v8-user-ab\\clips\\animation-A\\绘制第二次挥刀动画_第一次挥刀结束自然过渡到第二次挥刀结束\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v8-user-ab\\clips\\animation-A\\绘制第二次挥刀动画_第一次挥刀结束自然过渡到第二次挥刀结束\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v8-user-ab\\clips\\animation-A\\绘制第二次挥刀动画_第一次挥刀结束自然过渡到第二次挥刀结束\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

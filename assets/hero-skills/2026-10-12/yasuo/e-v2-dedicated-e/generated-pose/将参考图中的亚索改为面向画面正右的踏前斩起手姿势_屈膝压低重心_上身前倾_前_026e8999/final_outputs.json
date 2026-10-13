@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_1ce7a6f1d1654d75995062ecd2f88f2f",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\e-v2-dedicated-e\\generated-pose\\将参考图中的亚索改为面向画面正右的踏前斩起手姿势_屈膝压低重心_上身前倾_前_026e8999\\remove_bg.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

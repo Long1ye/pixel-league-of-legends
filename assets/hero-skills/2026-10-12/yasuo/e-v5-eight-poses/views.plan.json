@@ -1,0 +1,10 @@
+{
+  "command": "character-multi-view-run",
+  "args": [
+    "--reference-image", "assets/hero-skills/2026-10-12/yasuo/e-v4-held-pose-se/source/prototype.png",
+    "--mode", "pixel", "--canvas-resolution", "1K", "--orientation", "纵版",
+    "--generation-speed", "normal",
+    "--extra-constraint", "以参考图的同一个屈膝持刀姿势绘制八个方向，只改变人物朝向。保持身体略前倾、双腿弯曲分开、双手和刀贴近腰腹的原姿势，不挥刀、不戳刺、不迈步。保持亚索的发型、蓝色围巾、护肩、服装和身材比例，各方向完整且大小一致，不添加刀光或特效。"
+  ],
+  "output_dir": "assets/hero-skills/2026-10-12/yasuo/e-v5-eight-poses/generated-views"
+}

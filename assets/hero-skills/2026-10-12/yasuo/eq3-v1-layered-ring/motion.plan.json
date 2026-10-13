@@ -1,0 +1,9 @@
+{
+  "command": "animation-edit-run",
+  "args": [
+    "--animation-file", "assets/hero-skills/2026-10-12/yasuo/eq-v2-ring-only/media/e.webp",
+    "--prompt", "在原有独立环形斩击上制作强化版：保留下方主环斩，在其上方增加两层高度错开、稍小且更纤细的淡蓝色椭圆风刃，形成向上卷起的三层环斩。保持原动画的展开与消散节奏、下方主环的位置和像素画风，白色锋边配青蓝拖尾，中心留空，起止空白帧仍全透明。仅画独立风刃，不画人物、武器、地面，不加爆炸或巨大光柱，所有风圈留在画布内。",
+    "--mode", "pixel", "--generation-speed", "normal", "--remove-bg-method", "standard"
+  ],
+  "output_dir": "assets/hero-skills/2026-10-12/yasuo/eq3-v1-layered-ring/generated-motion"
+}

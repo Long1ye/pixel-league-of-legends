@@ -1,0 +1,47 @@
+{
+  "source_pixels_preserved": true,
+  "poses": [
+    {
+      "pose": "low-right",
+      "job_id": "job_2d1b43ebdd3f4491ba789e71ff54e2c7",
+      "size": [
+        192,
+        192
+      ],
+      "bounds": [
+        58,
+        60,
+        133,
+        164
+      ]
+    },
+    {
+      "pose": "high-left",
+      "job_id": "job_f802d936522d40ddb66e919d6d56e8ed",
+      "size": [
+        192,
+        192
+      ],
+      "bounds": [
+        66,
+        60,
+        125,
+        164
+      ]
+    },
+    {
+      "pose": "high-left-raised",
+      "job_id": "job_9bf4a6b63c1b422abfcccd53c82011ef",
+      "size": [
+        192,
+        192
+      ],
+      "bounds": [
+        59,
+        61,
+        132,
+        164
+      ]
+    }
+  ]
+}

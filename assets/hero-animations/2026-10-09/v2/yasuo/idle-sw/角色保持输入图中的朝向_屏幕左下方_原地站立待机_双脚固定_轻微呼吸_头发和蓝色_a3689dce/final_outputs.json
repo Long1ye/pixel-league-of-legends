@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_c24be344a2a94f5a8b6f5b2f28b6585f",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-animations\\2026-10-09\\v2\\yasuo\\idle-sw\\角色保持输入图中的朝向_屏幕左下方_原地站立待机_双脚固定_轻微呼吸_头发和蓝色_a3689dce\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-animations\\2026-10-09\\v2\\yasuo\\idle-sw\\角色保持输入图中的朝向_屏幕左下方_原地站立待机_双脚固定_轻微呼吸_头发和蓝色_a3689dce\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-animations\\2026-10-09\\v2\\yasuo\\idle-sw\\角色保持输入图中的朝向_屏幕左下方_原地站立待机_双脚固定_轻微呼吸_头发和蓝色_a3689dce\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

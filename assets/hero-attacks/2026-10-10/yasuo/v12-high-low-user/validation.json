@@ -1,0 +1,257 @@
+{
+  "status": "technical_pass",
+  "clips": [
+    {
+      "id": "A",
+      "native_size": [
+        176,
+        176
+      ],
+      "frame_count": 8,
+      "duration_ms": 800,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "partial_alpha_pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_contact_frames": [],
+      "frame_bounds": [
+        [
+          31,
+          40,
+          133,
+          150
+        ],
+        [
+          31,
+          40,
+          133,
+          150
+        ],
+        [
+          43,
+          30,
+          134,
+          150
+        ],
+        [
+          43,
+          37,
+          149,
+          150
+        ],
+        [
+          43,
+          37,
+          140,
+          154
+        ],
+        [
+          43,
+          38,
+          119,
+          162
+        ],
+        [
+          29,
+          37,
+          119,
+          157
+        ],
+        [
+          17,
+          36,
+          119,
+          150
+        ]
+      ],
+      "sheet_dimensions": [
+        528,
+        528
+      ],
+      "webp_png_visible_pixels_identical": true,
+      "gif_differences": [
+        {
+          "mean_rgb_error": 0.3431366219008265,
+          "alpha_identical": true
+        },
+        {
+          "mean_rgb_error": 0.3346246556473829,
+          "alpha_identical": true
+        },
+        {
+          "mean_rgb_error": 0.37648502066115697,
+          "alpha_identical": true
+        },
+        {
+          "mean_rgb_error": 0.3323756026170799,
+          "alpha_identical": true
+        },
+        {
+          "mean_rgb_error": 0.3276837982093664,
+          "alpha_identical": true
+        },
+        {
+          "mean_rgb_error": 0.3064200241046832,
+          "alpha_identical": true
+        },
+        {
+          "mean_rgb_error": 0.31392045454545453,
+          "alpha_identical": true
+        },
+        {
+          "mean_rgb_error": 0.33981146694214875,
+          "alpha_identical": true
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "native_size": [
+        176,
+        176
+      ],
+      "frame_count": 8,
+      "duration_ms": 800,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "partial_alpha_pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "edge_contact_frames": [],
+      "frame_bounds": [
+        [
+          17,
+          36,
+          119,
+          150
+        ],
+        [
+          17,
+          36,
+          119,
+          150
+        ],
+        [
+          20,
+          37,
+          118,
+          157
+        ],
+        [
+          22,
+          38,
+          157,
+          157
+        ],
+        [
+          43,
+          20,
+          160,
+          150
+        ],
+        [
+          43,
+          26,
+          147,
+          150
+        ],
+        [
+          31,
+          38,
+          133,
+          150
+        ],
+        [
+          31,
+          40,
+          133,
+          150
+        ]
+      ],
+      "sheet_dimensions": [
+        528,
+        528
+      ],
+      "webp_png_visible_pixels_identical": true,
+      "gif_differences": [
+        {
+          "mean_rgb_error": 0.3546724345730028,
+          "alpha_identical": true
+        },
+        {
+          "mean_rgb_error": 0.352283488292011,
+          "alpha_identical": true
+        },
+        {
+          "mean_rgb_error": 0.3846418732782369,
+          "alpha_identical": true
+        },
+        {
+          "mean_rgb_error": 0.43624096074380164,
+          "alpha_identical": true
+        },
+        {
+          "mean_rgb_error": 0.45605199724517903,
+          "alpha_identical": true
+        },
+        {
+          "mean_rgb_error": 0.44364454201101927,
+          "alpha_identical": true
+        },
+        {
+          "mean_rgb_error": 0.3745587982093664,
+          "alpha_identical": true
+        },
+        {
+          "mean_rgb_error": 0.3560713670798898,
+          "alpha_identical": true
+        }
+      ]
+    }
+  ],
+  "seams": [
+    {
+      "from": "A",
+      "to": "B",
+      "mean_rgb_error": 1.4478843836088153,
+      "alpha_identical": false
+    },
+    {
+      "from": "B",
+      "to": "A",
+      "mean_rgb_error": 1.4663502926997245,
+      "alpha_identical": false
+    }
+  ]
+}

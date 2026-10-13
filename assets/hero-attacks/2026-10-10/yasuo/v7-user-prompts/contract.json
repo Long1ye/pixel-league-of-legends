@@ -1,0 +1,20 @@
+{
+  "scope": "Four independent southeast pose transitions. No eight-direction expansion or runtime integration in this generation round.",
+  "prompt_author": "user",
+  "submitted_prompts_modified": false,
+  "prompt_optimization": true,
+  "optimized_backend_text_saved": false,
+  "effects": "The user allows the mild sword effects already visible in the supplied images. No additional effect instructions are appended to their prompts.",
+  "canvas": [192, 192],
+  "ground_anchor": [96, 164],
+  "source_anchors": [[37, 107], [40, 107], [49, 122], [79, 119]],
+  "preparation": "Integer translation and transparent padding only; preserve original pixel scale, clothing and effects. Original uploaded PNGs are copied separately and never overwritten.",
+  "requested_frames_per_clip": 12,
+  "endpoints": [[1, 2], [2, 3], [3, 4], [4, 3]],
+  "preview_sequence": [1, 2, 3, 4],
+  "loop_sequence": [3, 4],
+  "credits_before": 8870,
+  "estimated_credits": 180,
+  "output_contract": "Keep every declared final animation, GIF and sprite sheet. Preview native-size frames and original timing, without manually shifting or redrawing generated frames.",
+  "production_ready": false
+}

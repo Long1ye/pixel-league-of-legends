@@ -1,0 +1,12 @@
+{
+  "command": "image-edit-run",
+  "args": [
+    "--reference-image", "assets/hero-attacks/2026-10-09/yasuo/v4-diagonal-ab/preparation/original-outfit-padded.png",
+    "--prompt", "把亚索改成普通攻击的右上高位端点姿势：原来的持刀手抬到肩膀附近，握一把出鞘的武士刀，刀身伸向画面右上方，刀尖高于头顶，在身体右侧收住，准备沿右侧反向挥到画面右下方。只调整手臂和刀，不换持刀手；角色仍朝画面右下方，保持原图的蓝色围巾、银色护肩、发型、衣服、身体大小和双脚位置。腰侧只保留空刀鞘，不增加第二把刀；没有挥刀光效。",
+    "--mode", "pixel", "--strict",
+    "--generation-model", "nano-banana",
+    "--resolution", "1K",
+    "--remove-bg-method", "standard"
+  ],
+  "output_dir": "assets/hero-attacks/2026-10-09/yasuo/v5-endpoints/poses/b"
+}

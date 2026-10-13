@@ -1,0 +1,9 @@
+{
+  "command": "animation-edit-run",
+  "args": [
+    "--animation-file", "assets/hero-skills/2026-10-12/yasuo/eq3-v1-layered-ring/media/e.webp",
+    "--prompt", "修正三层环斩的裁边：保持底部主环斩的位置大小不变，把上面两层风圈向下收拢，减小高度间距，补全顶部被切断的弧线，最上方留至少12像素透明边距。保持三层风刃清晰分离和原来的颜色与节奏。第1、2、7、8帧必须完全透明，去掉一切残留像素，只在第3至6帧显示完整的三层环斩。仍然只有独立特效，不画人物或地面。",
+    "--mode", "pixel", "--generation-speed", "normal", "--remove-bg-method", "standard"
+  ],
+  "output_dir": "assets/hero-skills/2026-10-12/yasuo/eq3-v1-layered-ring/refined/generated-motion"
+}

@@ -1,0 +1,23 @@
+<!doctype html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>亚索 · B 翻腕上挥精修</title>
+<style>
+:root{color-scheme:dark;font-family:"Microsoft YaHei",system-ui,sans-serif;background:#0d191f;color:#dfedf1}*{box-sizing:border-box}body{margin:0;padding:14px}main{max-width:1200px;margin:auto}h1{font-size:25px}h2{font-size:18px}p{color:#afc5cf;line-height:1.7}a{color:#89ded3}button,select{font:inherit;background:#19333d;color:#e3f0f4;border:1px solid #42616d;border-radius:6px;padding:7px;cursor:pointer}button:disabled{opacity:.5}.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:16px 0}.panel{background:#122731;border:1px solid #2d4a58;border-radius:10px;padding:12px;margin:14px 0}.overflow{overflow-x:auto}.stage{width:max-content;margin:8px auto}canvas{display:block;image-rendering:pixelated;image-rendering:crisp-edges}.checker{background-color:#192d38;background-image:conic-gradient(#294653 25%,transparent 0 50%,#294653 0 75%,transparent 0);background-size:16px 16px}output{color:#97dccc}details{margin:16px 0}summary{cursor:pointer}.frames{display:flex;flex-wrap:wrap;gap:8px;min-width:176px}.frame{border:1px solid #42616d;width:max-content}.frame button{display:block;width:100%;border-radius:0}blockquote{margin:10px 0;border-left:2px solid #42616d;padding-left:10px;line-height:1.7}.downloads{display:flex;flex-wrap:wrap;gap:12px}.review{color:#d6c193;border-left:2px solid #c2a16a;padding-left:10px}.tag{color:#d6b77f;font-size:11px;letter-spacing:.1em}
+</style></head><body><main>
+<div class="tag">YASUO / B WRIST FLIP / FIRST VARIANT REFERENCE</div>
+<h1>亚索 · B 翻腕上挥精修</h1>
+<p>低位翻腕 → 翻面刀身向上挥砍 → 高位翻腕还原。第一版 A 保持不变，本轮只精修 B。</p>
+<p id="facts">正在加载素材…</p>
+<div class="toolbar"><button id="restart" disabled>重新播放 B 对比</button><button id="play" disabled>暂停</button><button id="previous" disabled>上一帧</button><button id="next" disabled>下一帧</button>
+<label>节奏 <select id="pace" aria-label="播放节奏"><option value="original">原始时长</option><option value="matched">新版 B 匹配原 B 的节奏</option></select></label>
+<label>像素倍率 <select id="zoom" aria-label="像素倍率"><option value="1">1×</option><option value="2">2×</option></select></label></div>
+<output id="status">素材准备中；完成后刷新本页即可。</output>
+<section class="panel"><h2>新版 B · 翻腕上挥</h2><div class="overflow"><div class="stage checker"><canvas id="new-B" aria-label="新版B翻腕动画"></canvas></div></div><output id="new-status"></output></section>
+<section class="panel"><h2>第一版原 B · 对照</h2><div class="overflow"><div class="stage checker"><canvas id="old-B" aria-label="第一版原B动画"></canvas></div></div><output id="old-status"></output></section>
+<section class="panel"><h2>第一版 A + 新版 B</h2><p id="pair-note"></p><button id="pair" disabled>A→新版 B 循环</button><div class="overflow"><div class="stage checker"><canvas id="pair-canvas" aria-label="第一版A与新版B衔接"></canvas></div></div></section>
+<section class="panel"><p id="review" class="review"></p><p>按原始帧序播放，不倒放、不丢帧、不重画。节奏匹配只改变预览时长，不修改最终文件；像素仅做整数倍、最近邻显示。</p>
+<details><summary>查看新版 B 全部帧</summary><div class="overflow"><div id="frames" class="frames"></div></div></details>
+<details><summary>已确认 prompt 与自动优化说明</summary><div id="prompts"></div></details>
+<h2>下载最终动画</h2><div id="downloads" class="downloads"></div><p id="credits"></p></section>
+<p>单方向动作样稿，尚未扩展八向或接入对局。<a href="../v9-three-variants/index.html">返回三版对比</a> · <a href="/">返回对局</a></p>
+</main><script type="module" src="./preview.ts"></script></body></html>

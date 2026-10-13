@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "job_id": "job_a179203e105741509f1261bb3f27d16b",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\eq3-v1-layered-ring\\generated-motion\\在原有独立环形斩击上制作强化版_保留下方主环斩_在其上方增加两层高度错开_稍_8d69fdd7\\frames_edit.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\eq3-v1-layered-ring\\generated-motion\\在原有独立环形斩击上制作强化版_保留下方主环斩_在其上方增加两层高度错开_稍_8d69fdd7\\sprite_sheet.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

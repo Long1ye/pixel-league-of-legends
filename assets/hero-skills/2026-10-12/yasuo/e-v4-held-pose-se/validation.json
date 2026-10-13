@@ -1,0 +1,11 @@
+{
+  "status": "preview-only",
+  "integratedInGame": false,
+  "size": [96, 128],
+  "frameCount": 8,
+  "durationMs": 800,
+  "transparent": true,
+  "edgeContacts": [],
+  "visualReview": "All frames inspected: held blade, hands and feet remain stable; no slash or running cycle. Hair changes most, slight upper body motion. Loop boundary is not pixel-identical; preview loop is for inspection.",
+  "sourceJob": "job_b85559c3878e4f5099c54c31434ecdef"
+}

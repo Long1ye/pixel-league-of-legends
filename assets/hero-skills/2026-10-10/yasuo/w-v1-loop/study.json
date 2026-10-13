@@ -1,0 +1,97 @@
+{
+  "skill": "W",
+  "job_id": "job_f3f1ee7174424844995be23e229098e0",
+  "width": 184,
+  "height": 120,
+  "frames": 8,
+  "columns": 4,
+  "rows": 2,
+  "durations_ms": [
+    125,
+    125,
+    125,
+    125,
+    125,
+    125,
+    125,
+    125
+  ],
+  "duration_ms": 1000,
+  "bounds": [
+    [
+      40,
+      20,
+      148,
+      104
+    ],
+    [
+      40,
+      20,
+      148,
+      104
+    ],
+    [
+      40,
+      20,
+      148,
+      104
+    ],
+    [
+      40,
+      20,
+      148,
+      104
+    ],
+    [
+      40,
+      20,
+      148,
+      104
+    ],
+    [
+      40,
+      20,
+      148,
+      104
+    ],
+    [
+      40,
+      20,
+      148,
+      104
+    ],
+    [
+      40,
+      20,
+      148,
+      104
+    ]
+  ],
+  "partial_alpha_pixels": [
+    3500,
+    3373,
+    3160,
+    2932,
+    2735,
+    2993,
+    2679,
+    2815
+  ],
+  "edge_contact_frames": [],
+  "transparent": true,
+  "native_frames_preserved": true,
+  "final_media_sha256": {
+    "transparent": "7dd835caf16acbc792d5ecd149fd0106f688b0725f092b499e342733a82f7a7b",
+    "background": "7673d585a5d74b600c28d43f854392f52f829e95fd3afb99030cd7ab2239462a"
+  },
+  "credits_before": 5989,
+  "credits_after": 5959,
+  "account_balance_delta": -30,
+  "credits_charged": null,
+  "billing_note": "Final manifest has no bill; balance delta is not used as proof of task charges.",
+  "runtime_integrated": false,
+  "direction_count": 1,
+  "visual_review": "frames_and_browser_playback_checked_sample_only",
+  "review": "已检查全部8帧和浏览器循环播放。透明边界一致，没有触边或人物残留，风纹随帧变化。当前白色风幕偏厚，与官网稀疏卷动的气流仍有差距；仅供本轮单视角样稿验收，尚未支持其他方向。",
+  "prompt": "这面风墙保持成型和原位，内部青白色风纹连续向上翻卷，边缘轻微起伏，流动自然，首尾无缝循环。保留参考图的像素风格和倾斜角度，底边位置和宽度稳定，固定镜头，不出现或消散。"
+}

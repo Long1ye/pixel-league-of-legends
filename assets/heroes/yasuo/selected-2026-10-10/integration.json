@@ -1,0 +1,29 @@
+{
+  "status": "integrated",
+  "hero": "yasuo",
+  "team": "blue",
+  "selected_attack_clips": ["A", "B"],
+  "attack_direction": "se",
+  "attack_direction_fallback": "use_approved_direction_without_rotation_or_mirroring",
+  "locomotion_directions": 8,
+  "original_frames_preserved": 48,
+  "original_cycle_ms": 6000,
+  "simulation_windup_seconds": 0.19,
+  "simulation_recovery_seconds": 0.8,
+  "attack_cycle_advances_on": "actual_attack_release_not_cancelled_windup",
+  "runtime_speed": "windup_and_recovery_piecewise_retiming",
+  "damage_and_range_unchanged": true,
+  "combat_rules_still_prototype": true,
+  "transition_animations_available": false,
+  "generated_this_turn": false,
+  "credits_consumed": 0,
+  "verification": {
+    "tests_passed": 107,
+    "build_passed": true,
+    "browser_observed_attack_sequence": ["A", "B"],
+    "pause_observed": true,
+    "preview_frames": 48,
+    "preview_boundaries_verified": ["A24_to_B1", "B24_to_A1"],
+    "development_and_production_preview_loaded": true
+  }
+}

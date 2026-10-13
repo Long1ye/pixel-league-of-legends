@@ -1,0 +1,14 @@
+{
+  "review": "没有大片刀光或光带，但A第4帧仍出现双刀轮廓重影；A的挥砍主要集中在第4→5帧，节奏偏短促。两处循环接缝的姿态接近，头发、刀身和衣服仍有轻微跳变。这版用于动作筛选，尚未达到自然流畅的美术定稿标准。",
+  "visual_acceptance": "needs_review",
+  "production_ready": false,
+  "runtime_integrated": false,
+  "no_sword_glow_requirement_fully_met": false,
+  "reviewed_at_native_size": true,
+  "reviewed_frames_per_clip": 8,
+  "issues": [
+    {"clip": "A", "frames": [4], "issue": "双刀轮廓重影，不是新增付费纠正后的素材"},
+    {"clip": "A", "frames": [4, 5], "issue": "主要挥砍压缩在两帧之间，刀路偏突变"},
+    {"clip": "A/B", "issue": "循环接缝头发、刀身和衣服有轻微差异"}
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "status": "directional_pose_studies_not_runtime_ready",
+  "capability": "character-multi-view-run",
+  "mode": "pixel",
+  "orientation": "纵版",
+  "direction_count_per_hero": 8,
+  "frames_per_direction": 1,
+  "looping_walk_animation": false,
+  "runtime_integration": false,
+  "credits": { "before": 1770, "after": 1725, "consumed": 45 },
+  "angle_convention": "+X east, +Y south, clockwise positive; only artwork is quantized",
+  "hysteresis_degrees": 4,
+  "preview_anchor_strategy": "Approximate alpha-bottom anchor only; weapons, tails and soft alpha can affect it. Final foot anchors require separate review.",
+  "validation": {
+    "final_media_count": 27,
+    "directional_png_count": 24,
+    "transparent": true,
+    "soft_alpha_present": true,
+    "source_pixels_unchanged": true,
+    "mirrored_left_right_pairs": true,
+    "all_files_inspected": true
+  },
+  "heroes": [
+    {
+      "id": "yasuo",
+      "name": "亚索",
+      "job_id": "job_7d7321ab14f246f080dbca6a9619ff5e",
+      "directory": "yasuo/component_004_pixel_multi_view",
+      "cell_size": 128,
+      "preview_scale": 3,
+      "gallery_scale": 2,
+      "preview_sheet": "preview_3x3.png",
+      "notes": ["Diagonal back view too similar to straight back", "Mirroring flips asymmetric shoulder armour and weapon hand", "Stride not equally strong in all directions"],
+      "frames": {
+        "e": { "file": "right.png", "bbox": [36, 12, 91, 115] },
+        "se": { "file": "iso_front_right.png", "bbox": [31, 11, 96, 116] },
+        "s": { "file": "front.png", "bbox": [38, 12, 90, 116] },
+        "sw": { "file": "iso_front_left.png", "bbox": [32, 11, 97, 116] },
+        "w": { "file": "left.png", "bbox": [37, 12, 92, 115] },
+        "nw": { "file": "iso_back_left.png", "bbox": [32, 12, 96, 115] },
+        "n": { "file": "back.png", "bbox": [35, 11, 93, 116] },
+        "ne": { "file": "iso_back_right.png", "bbox": [32, 12, 96, 115] }
+      }
+    },
+    {
+      "id": "ahri",
+      "name": "阿狸",
+      "job_id": "job_9fdb9f5a53684d878bee146149a8d9ea",
+      "directory": "ahri/component_001_pixel_multi_view",
+      "cell_size": 256,
+      "preview_scale": 2,
+      "gallery_scale": 1,
+      "preview_sheet": "preview_3x3.png",
+      "notes": ["Rear tail fan hides most of torso", "Tail count and silhouette need review", "Mirroring flips the orb hand"],
+      "frames": {
+        "e": { "file": "right.png", "bbox": [64, 48, 191, 208] },
+        "se": { "file": "iso_front_right.png", "bbox": [61, 46, 195, 209] },
+        "s": { "file": "front.png", "bbox": [65, 45, 190, 211] },
+        "sw": { "file": "iso_front_left.png", "bbox": [61, 46, 195, 209] },
+        "w": { "file": "left.png", "bbox": [65, 48, 192, 208] },
+        "nw": { "file": "iso_back_left.png", "bbox": [63, 45, 193, 211] },
+        "n": { "file": "back.png", "bbox": [64, 46, 192, 209] },
+        "ne": { "file": "iso_back_right.png", "bbox": [63, 45, 193, 211] }
+      }
+    },
+    {
+      "id": "garen",
+      "name": "盖伦",
+      "job_id": "job_f9ff7693c6ec40568c9bf07844a83f88",
+      "directory": "garen/component_001_pixel_multi_view",
+      "cell_size": 256,
+      "preview_scale": 2,
+      "gallery_scale": 1,
+      "preview_sheet": "preview_3x3.png",
+      "notes": ["Mirroring flips the sword hand", "Cloak hides some rear leg detail", "Sword tip can affect alpha-bottom anchoring"],
+      "frames": {
+        "e": { "file": "right.png", "bbox": [55, 50, 201, 205] },
+        "se": { "file": "iso_front_right.png", "bbox": [57, 44, 199, 212] },
+        "s": { "file": "front.png", "bbox": [55, 42, 201, 213] },
+        "sw": { "file": "iso_front_left.png", "bbox": [57, 44, 199, 212] },
+        "w": { "file": "left.png", "bbox": [55, 50, 201, 205] },
+        "nw": { "file": "iso_back_left.png", "bbox": [60, 48, 196, 207] },
+        "n": { "file": "back.png", "bbox": [57, 45, 199, 210] },
+        "ne": { "file": "iso_back_right.png", "bbox": [60, 48, 196, 207] }
+      }
+    }
+  ]
+}

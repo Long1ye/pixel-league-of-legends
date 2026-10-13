@@ -1,0 +1,19 @@
+{
+  "command": "image-edit-run",
+  "args": [
+    "--reference-image",
+    "assets/hero-attacks/2026-10-09/yasuo/v4-diagonal-ab/preparation/original-outfit-padded.png",
+    "--prompt",
+    "只调整手臂和武士刀：原来的持刀手把刀收到身体右下方，刀尖斜指画面右下，准备向左上斜撩。蓝色围巾必须完整包住颈部和胸口，金属护肩、腰带、裤子、绑腿、马尾的样式和颜色完全保留。保持原身高、右下朝向及双脚位置，透明背景，无刀光。",
+    "--mode",
+    "pixel",
+    "--strict",
+    "--generation-model",
+    "nano-banana",
+    "--resolution",
+    "1K",
+    "--remove-bg-method",
+    "standard"
+  ],
+  "output_dir": "assets/hero-attacks/2026-10-09/yasuo/v4-diagonal-ab/poses/low-right"
+}

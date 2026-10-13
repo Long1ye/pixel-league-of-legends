@@ -1,0 +1,73 @@
+{
+  "image_size": [
+    256,
+    160
+  ],
+  "component_count": 4,
+  "parameters": {
+    "alpha_threshold": 8,
+    "background_tolerance": 8,
+    "connectivity": 8,
+    "min_component_area": 24,
+    "padding_px": 2,
+    "merge_contained_fragments": true,
+    "fragment_max_area": 256,
+    "fragment_max_area_ratio": 0.02
+  },
+  "warnings": [],
+  "components": [
+    {
+      "id": "component_001",
+      "file": "component_001.png",
+      "bbox": [
+        13,
+        33,
+        82,
+        127
+      ],
+      "width": 69,
+      "height": 94,
+      "pixel_count": 3078
+    },
+    {
+      "id": "component_002",
+      "file": "component_002.png",
+      "bbox": [
+        127,
+        94,
+        239,
+        112
+      ],
+      "width": 112,
+      "height": 18,
+      "pixel_count": 727
+    },
+    {
+      "id": "component_003",
+      "file": "component_003.png",
+      "bbox": [
+        123,
+        55,
+        167,
+        80
+      ],
+      "width": 44,
+      "height": 25,
+      "pixel_count": 613
+    },
+    {
+      "id": "component_004",
+      "file": "component_004.png",
+      "bbox": [
+        172,
+        56,
+        221,
+        81
+      ],
+      "width": 49,
+      "height": 25,
+      "pixel_count": 502
+    }
+  ],
+  "elapsed_ms": 35.207
+}

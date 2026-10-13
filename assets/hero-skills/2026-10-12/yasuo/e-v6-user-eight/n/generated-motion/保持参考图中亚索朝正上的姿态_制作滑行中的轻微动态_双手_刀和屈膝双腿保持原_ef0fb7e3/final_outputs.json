@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_cb0dfa4bf0d04e65a5055482fa046ecf",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\e-v6-user-eight\\n\\generated-motion\\保持参考图中亚索朝正上的姿态_制作滑行中的轻微动态_双手_刀和屈膝双腿保持原_ef0fb7e3\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\e-v6-user-eight\\n\\generated-motion\\保持参考图中亚索朝正上的姿态_制作滑行中的轻微动态_双手_刀和屈膝双腿保持原_ef0fb7e3\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\e-v6-user-eight\\n\\generated-motion\\保持参考图中亚索朝正上的姿态_制作滑行中的轻微动态_双手_刀和屈膝双腿保持原_ef0fb7e3\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

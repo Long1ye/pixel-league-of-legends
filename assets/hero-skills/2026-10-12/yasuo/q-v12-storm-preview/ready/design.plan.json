@@ -1,0 +1,1 @@
+{"command":"custom-size-pixel-gen-run","args":["--prompt","一个独立的像素游戏蓄风特效，用于叠在角色脚踝到腰部。斜俯视视角，三条细窄的淡蓝白色断续风丝绕成上下错落的扁椭圆螺旋，中心留空，轻盈克制，只有风丝，不含人物、武器、底座、地面、发光球、闪电或爆炸。画布四周留空。","--width","128","--height","80","--generation-model","nano-banana","--no-fill-canvas","--remove-bg-method","standard"],"output_dir":"assets/hero-skills/2026-10-12/yasuo/q-v12-storm-preview/ready/generated-design"}

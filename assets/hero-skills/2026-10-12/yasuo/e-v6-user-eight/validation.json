@@ -1,0 +1,16 @@
+{
+  "status": "preview-with-two-direction-deviations",
+  "integratedInGame": false,
+  "directions": 8,
+  "framesPerDirection": 8,
+  "frameSize": [128, 128],
+  "durationMs": 800,
+  "allTransparent": true,
+  "allEdgeContactsEmpty": true,
+  "allFramesVisuallyReviewed": true,
+  "needsCorrection": {
+    "e": "Blade exposed and hand posture changed after first frame.",
+    "se": "Blade exposed and arm posture changed after first frame."
+  },
+  "otherDirections": "No obvious slash or stepping cycle. Hair and cloth motion plus slight body motion; loop boundaries not pixel-identical."
+}

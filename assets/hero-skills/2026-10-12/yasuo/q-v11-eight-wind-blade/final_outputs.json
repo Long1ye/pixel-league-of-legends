@@ -1,0 +1,91 @@
+{
+  "status": "success",
+  "generation_jobs": 0,
+  "outputs": [
+    {
+      "type": "interactive_preview",
+      "path": "index.html",
+      "mime_type": "text/html"
+    },
+    {
+      "type": "media",
+      "path": "export/q-e-wind.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "export/q-se-wind.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "export/q-s-wind.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "export/q-sw-wind.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "export/q-w-wind.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "export/q-nw-wind.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "export/q-n-wind.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "export/q-ne-wind.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "export/q-e-wind-atlas.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "export/q-se-wind-atlas.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "export/q-s-wind-atlas.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "export/q-sw-wind-atlas.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "export/q-w-wind-atlas.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "export/q-nw-wind-atlas.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "export/q-n-wind-atlas.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "export/q-ne-wind-atlas.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

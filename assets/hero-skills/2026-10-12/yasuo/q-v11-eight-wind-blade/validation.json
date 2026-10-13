@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "directions": ["e", "se", "s", "sw", "w", "nw", "n", "ne"],
+  "transparent_clips": 8,
+  "frames_per_clip": 31,
+  "cast_duration_ms": 480,
+  "loop_duration_ms": 1400,
+  "edge_contact_frames": [],
+  "automated_checks": "23 relevant tests passed using Vitest threads; TypeScript and production build passed",
+  "browser_checks": ["all eight direction selectors and corresponding WebP download names", "eight-direction impact pose visual review", "single playback reaches 480ms and stops", "0.5x playback reaches 480ms and stops", "timeline pauses at 200ms", "eight public atlas exports decoded and alpha bounds verified"],
+  "screenshot": "qa/preview.png",
+  "new_generation_jobs": 0,
+  "main_game_integrated": false,
+  "limitations": ["Existing 2D layered body and arm motion is retained", "Sword and wind are one baked image layer; wind is frozen at source frame zero during the idle hold"]
+}

@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_d938116d3f184e3a8020b4f35d364c12",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-animations\\2026-10-09\\v1\\ahri\\walk-se\\角色保持朝向右下方_原地交替迈步_双脚轮流向前和向后_白色尾巴随步伐轻摆_保持_8ba0d50e\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-animations\\2026-10-09\\v1\\ahri\\walk-se\\角色保持朝向右下方_原地交替迈步_双脚轮流向前和向后_白色尾巴随步伐轻摆_保持_8ba0d50e\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-animations\\2026-10-09\\v1\\ahri\\walk-se\\角色保持朝向右下方_原地交替迈步_双脚轮流向前和向后_白色尾巴随步伐轻摆_保持_8ba0d50e\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

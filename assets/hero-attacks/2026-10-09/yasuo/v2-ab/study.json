@@ -1,0 +1,193 @@
+{
+  "hero": "yasuo",
+  "action": "basic_attack_ab",
+  "direction": "se",
+  "width": 176,
+  "height": 176,
+  "columns": 3,
+  "rows": 3,
+  "anchor": [
+    72,
+    131
+  ],
+  "frame_count": 8,
+  "groups": [
+    {
+      "id": "g1",
+      "name": "斜劈 · 反撩",
+      "description": "大斜线下劈，再沿反向斜线向上回刀。",
+      "a": {
+        "id": "g1-a",
+        "job_id": "job_0f8fa3a20aed4a54b799fdc1be6b33ea",
+        "webp": "clips/g1-a/从抬刀姿势做一次向右下方的快速斜劈_结束在低位持刀姿势_只有一次挥刀_双脚原_3cebfaa0/result_output_url.webp",
+        "gif": "clips/g1-a/从抬刀姿势做一次向右下方的快速斜劈_结束在低位持刀姿势_只有一次挥刀_双脚原_3cebfaa0/result_output_transparent_output_urls_gif.gif",
+        "sheet": "clips/g1-a/从抬刀姿势做一次向右下方的快速斜劈_结束在低位持刀姿势_只有一次挥刀_双脚原_3cebfaa0/result_output_transparent_output_urls_png.png",
+        "durations_ms": [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "duration_ms": 800,
+        "gif_max_mean_rgb_error": 0.34044636707988984
+      },
+      "b": {
+        "id": "g1-b",
+        "job_id": "job_698a265d0d664fde9dd4b25fa176934e",
+        "webp": "clips/g1-b/从低位持刀姿势做一次向右上方的反手斜撩_结束在抬刀姿势_只有一次挥刀_双脚原_6df55bf1/result_output_url.webp",
+        "gif": "clips/g1-b/从低位持刀姿势做一次向右上方的反手斜撩_结束在抬刀姿势_只有一次挥刀_双脚原_6df55bf1/result_output_transparent_output_urls_gif.gif",
+        "sheet": "clips/g1-b/从低位持刀姿势做一次向右上方的反手斜撩_结束在抬刀姿势_只有一次挥刀_双脚原_6df55bf1/result_output_transparent_output_urls_png.png",
+        "durations_ms": [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "duration_ms": 800,
+        "gif_max_mean_rgb_error": 0.3968879132231405
+      },
+      "seam": {
+        "group": "g1",
+        "a_to_b": {
+          "mean_rgb_error": 1.084398674242424,
+          "changed_canvas_percent": 11.308755165289258,
+          "alpha_identical": false
+        },
+        "b_to_a": {
+          "mean_rgb_error": 1.1081159607438016,
+          "changed_canvas_percent": 11.728434917355372,
+          "alpha_identical": false
+        }
+      },
+      "review": "斜劈与上撩最容易区分；A第3帧刀光偏宽，回收段停留较长。接缝姿势接近，但颜色与轮廓仍有小幅变化，非像素级无缝。"
+    },
+    {
+      "id": "g2",
+      "name": "横斩 · 回斩",
+      "description": "短距离横斩，配反手回斩，动作更紧凑。",
+      "a": {
+        "id": "g2-a",
+        "job_id": "job_9b531b34d761459eb491ccd4f9be2a2d",
+        "webp": "clips/g2-a/从抬刀姿势做一次紧凑的腰前横斩_结束在低位持刀姿势_只有一次挥刀_双脚原地_固_46fafc9b/result_output_url.webp",
+        "gif": "clips/g2-a/从抬刀姿势做一次紧凑的腰前横斩_结束在低位持刀姿势_只有一次挥刀_双脚原地_固_46fafc9b/result_output_transparent_output_urls_gif.gif",
+        "sheet": "clips/g2-a/从抬刀姿势做一次紧凑的腰前横斩_结束在低位持刀姿势_只有一次挥刀_双脚原地_固_46fafc9b/result_output_transparent_output_urls_png.png",
+        "durations_ms": [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "duration_ms": 800,
+        "gif_max_mean_rgb_error": 0.2452543904958678
+      },
+      "b": {
+        "id": "g2-b",
+        "job_id": "job_d48a3eab481c4c068ae36b7d029f0518",
+        "webp": "clips/g2-b/从低位持刀姿势做一次胸前反手回斩_结束在抬刀姿势_只有一次挥刀_双脚原地_固定_1a4b47d8/result_output_url.webp",
+        "gif": "clips/g2-b/从低位持刀姿势做一次胸前反手回斩_结束在抬刀姿势_只有一次挥刀_双脚原地_固定_1a4b47d8/result_output_transparent_output_urls_gif.gif",
+        "sheet": "clips/g2-b/从低位持刀姿势做一次胸前反手回斩_结束在抬刀姿势_只有一次挥刀_双脚原地_固定_1a4b47d8/result_output_transparent_output_urls_png.png",
+        "durations_ms": [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "duration_ms": 800,
+        "gif_max_mean_rgb_error": 0.33415117079889806
+      },
+      "seam": {
+        "group": "g2",
+        "a_to_b": {
+          "mean_rgb_error": 1.0615422692837464,
+          "changed_canvas_percent": 10.446797520661157,
+          "alpha_identical": false
+        },
+        "b_to_a": {
+          "mean_rgb_error": 1.0094804579889807,
+          "changed_canvas_percent": 10.876162190082644,
+          "alpha_identical": false
+        }
+      },
+      "review": "横斩动作较紧凑，但A/B刀路相近，横斩时脚部重心变化更大。接缝姿势接近，但颜色与轮廓仍有小幅变化，非像素级无缝。"
+    },
+    {
+      "id": "g3",
+      "name": "短劈 · 挑刀",
+      "description": "更短的下劈和上挑，比较快节奏普攻的辨识度。",
+      "a": {
+        "id": "g3-a",
+        "job_id": "job_9554cd6271ba4b82bca7e167f0d95953",
+        "webp": "clips/g3-a/从抬刀姿势做一次身体右前方的短促下劈_结束在低位持刀姿势_只有一次挥刀_双脚_384fe399/result_output_url.webp",
+        "gif": "clips/g3-a/从抬刀姿势做一次身体右前方的短促下劈_结束在低位持刀姿势_只有一次挥刀_双脚_384fe399/result_output_transparent_output_urls_gif.gif",
+        "sheet": "clips/g3-a/从抬刀姿势做一次身体右前方的短促下劈_结束在低位持刀姿势_只有一次挥刀_双脚_384fe399/result_output_transparent_output_urls_png.png",
+        "durations_ms": [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "duration_ms": 800,
+        "gif_max_mean_rgb_error": 0.39573648415977963
+      },
+      "b": {
+        "id": "g3-b",
+        "job_id": "job_f3f3cb8b24a2415b92a4d5c76a85d9a7",
+        "webp": "clips/g3-b/从低位持刀姿势做一次身体右前方的短促上挑_结束在抬刀姿势_只有一次挥刀_双脚_d211c6af/result_output_url.webp",
+        "gif": "clips/g3-b/从低位持刀姿势做一次身体右前方的短促上挑_结束在抬刀姿势_只有一次挥刀_双脚_d211c6af/result_output_transparent_output_urls_gif.gif",
+        "sheet": "clips/g3-b/从低位持刀姿势做一次身体右前方的短促上挑_结束在抬刀姿势_只有一次挥刀_双脚_d211c6af/result_output_transparent_output_urls_png.png",
+        "durations_ms": [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "duration_ms": 800,
+        "gif_max_mean_rgb_error": 0.24206912878787878
+      },
+      "seam": {
+        "group": "g3",
+        "a_to_b": {
+          "mean_rgb_error": 1.0288287706611572,
+          "changed_canvas_percent": 11.318440082644628,
+          "alpha_identical": false
+        },
+        "b_to_a": {
+          "mean_rgb_error": 1.0833763774104683,
+          "changed_canvas_percent": 11.87370867768595,
+          "alpha_identical": false
+        }
+      },
+      "review": "A的刀光最克制；B仍有弧形刀光，挥刀转折偏快。接缝姿势接近，但颜色与轮廓仍有小幅变化，非像素级无缝。"
+    }
+  ],
+  "credits_before": 9985,
+  "credits_after": 9595,
+  "credits_consumed": 390,
+  "production_ready": false,
+  "runtime_integrated": false,
+  "review": "game-assets关键帧动画样稿，非官方动作逐帧复刻。各组A/B连续播放，不插入待机帧；接缝姿势接近但非严格无缝，中间帧刀光和造型仍待验收。未接入对局，也未对生成结果逐帧移位修正。"
+}

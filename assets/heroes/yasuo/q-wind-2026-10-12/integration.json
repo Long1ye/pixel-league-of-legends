@@ -1,0 +1,15 @@
+{
+  "status": "integrated",
+  "main_game": "/",
+  "source_preview": "/assets/hero-skills/2026-10-12/yasuo/q-v11-eight-wind-blade/index.html",
+  "directions": 8,
+  "cast_seconds": 0.48,
+  "world_body_height": 26,
+  "fixed_crop_pixels_preserved": true,
+  "texture_pixels": 5111488,
+  "behaviour": ["successful player Q selects the nearest of eight directions from its cast heading", "cast heading stays fixed for the action", "movement and basic attack orders resume after the committed cast", "accepted W or E interrupts Q presentation", "pause uses frozen simulation time", "death and restart clear cast state"],
+  "gameplay_scope": "Q damage, range, mana, cooldown and existing projectile collision are retained; this is animation integration, not a full redesign of the prototype Q ability.",
+  "verification": {"tests_passed": 171, "test_files": 29, "production_build": "passed", "browser": ["east and north Q drawn in actual map", "Q restores idle after cast", "no console errors or warnings in QA tab"]},
+  "screenshots": ["qa/main-game-q.png", "qa/main-game-q-north.png"],
+  "new_generation_jobs": 0
+}

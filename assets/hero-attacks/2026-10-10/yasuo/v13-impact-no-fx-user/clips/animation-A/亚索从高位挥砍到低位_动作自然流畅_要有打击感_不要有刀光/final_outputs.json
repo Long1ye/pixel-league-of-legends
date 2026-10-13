@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_724c0a41f4684cb290f5fa14cf14b30a",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v13-impact-no-fx-user\\clips\\animation-A\\亚索从高位挥砍到低位_动作自然流畅_要有打击感_不要有刀光\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v13-impact-no-fx-user\\clips\\animation-A\\亚索从高位挥砍到低位_动作自然流畅_要有打击感_不要有刀光\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v13-impact-no-fx-user\\clips\\animation-A\\亚索从高位挥砍到低位_动作自然流畅_要有打击感_不要有刀光\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "scope": "Standalone sword and wind effect only. No hero, arm, map, or gameplay integration.",
+  "representation": "pixel",
+  "sourceAnimation": "../q-v9-sword-fx-only/media/yasuo-q-sword-wind.webp",
+  "length": "Preserve the existing longer sword; do not resize the blade or hilt.",
+  "animationPrompt": "只保留水平长刀和沿刀身螺旋缠绕、流动的淡蓝色风。全程去掉刀尖的星形闪光、爆炸和向外放射的粒子，让风丝自然沿刀尖收束。刀柄、刀身形状、长度和位置保持不变，镜头固定，不添加角色或手臂。",
+  "editIntent": "保留参考动画中的水平长刀和淡蓝色螺旋风，移除整个动画中刀尖的星形闪光、爆炸及所有向外放射的粒子。刀尖全程保持普通细长刀尖，只让淡蓝色风沿刀身连续缠绕、流动并自然收束。保持刀的长度、形状、位置和像素风格不变，不添加人或手臂。",
+  "videoDescription": "画面只有一把水平朝右的细长银色刀，左侧为深色刀柄。淡蓝色风丝绕着刀身流动；中段刀尖会出现星形爆发和放射粒子，随后消散。这些刀尖爆发和放射粒子需要全部移除。",
+  "frameEditPrompt": "将所有帧中刀尖的亮蓝色星形图案和周围飞散的碎片擦除，补回干净、细长的银色刀尖。刀身上波浪状的淡蓝色风丝保持原样，未画刀的区域保持透明。刀的长度、形状、位置及动画帧序保持原样，所有帧一致。",
+  "rejectedAttempt": {
+    "jobId": "job_0cf76d7334b04b26988b19f1249867ca",
+    "reason": "Video-reference edit retained the star burst and particles; not approved for display."
+  },
+  "animation": {
+    "command": "animation-edit-run",
+    "mode": "pixel",
+    "generationSpeed": "normal",
+    "sourceFrameCount": 56,
+    "sourceDurationMs": 2000,
+    "preserveInputFrameTiming": true,
+    "backgroundRemoval": "standard",
+    "finalJobId": "job_e0da79854e6541d6ad7ae2282376fb24"
+  }
+}

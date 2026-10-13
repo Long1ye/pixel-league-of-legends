@@ -1,0 +1,13 @@
+{
+  "command": "meowa-animation-run",
+  "recovery_command": "animate-poll",
+  "args": [
+    "--image-file", "assets/hero-attacks/2026-10-09/yasuo/v3-horizontal/guard/把亚索改成横斩起手_原来的持刀手握住单把武士刀_另一只手辅助握柄_刀横置胸前_8b3fd575/remove_bg.png",
+    "--prompt", "亚索原地连续左右横挥同一把武士刀：刀从画面右侧横扫到左侧，再顺势反向横扫回右侧，流畅循环。肩膀和腰胯随挥砍自然转动，双脚稳住，保持同样握法和右下朝向，固定镜头。两刀之间不停下来摆姿势，不加发光刀光。",
+    "--style-mode", "pixel", "--resolution", "480p", "--alpha-mode", "sharp",
+    "--output-frames", "16", "--high-frame-rate", "--quality-mode", "medium",
+    "--animation-mode", "loop", "--remove-bg-method", "standard", "--remove-bg-batch-size", "16",
+    "--background-color", "#c6c6c6", "--optimize-prompt", "--padding", "0"
+  ],
+  "output_dir": "assets/hero-attacks/2026-10-09/yasuo/v3-horizontal/cycle"
+}

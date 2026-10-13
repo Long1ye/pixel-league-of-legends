@@ -1,0 +1,9 @@
+{
+  "command": "image-edit-run",
+  "args": [
+    "--reference-image", "assets/hero-attacks/2026-10-09/yasuo/v4-diagonal-ab/poses/low-right/只调整手臂和武士刀_原来的持刀手把刀收到身体右下方_刀尖斜指画面右下_准备向_7a620388/remove_bg.png",
+    "--prompt", "这是从右下斜撩到左上的途中姿势：原来的持刀手抬到胸前，手臂横过身体，武士刀横向伸向画面左侧并略向上，刀尖刚扫过左胸高度，下一步继续撩向左上。不要举过头顶，不做下劈。完整保留蓝围巾、银色护肩、腰带、裤子、马尾及双脚位置，透明背景，无刀光。",
+    "--mode", "pixel", "--strict", "--generation-model", "nano-banana", "--resolution", "1K", "--remove-bg-method", "standard"
+  ],
+  "output_dir": "assets/hero-attacks/2026-10-09/yasuo/v4-diagonal-ab/poses/a-middle"
+}

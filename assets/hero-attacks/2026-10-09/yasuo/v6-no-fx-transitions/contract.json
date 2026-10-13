@@ -1,0 +1,23 @@
+{
+  "scope": "Two independent attacks, A-to-B and B-to-A. No runtime integration or eight-direction generation.",
+  "canvas": [
+    192,
+    192
+  ],
+  "facing": "screen southeast",
+  "inputs": {
+    "a": "assets/hero-attacks/2026-10-09/yasuo/v6-no-fx-transitions/preparation/a-aligned.png",
+    "b": "assets/hero-attacks/2026-10-09/yasuo/v6-no-fx-transitions/preparation/b-aligned.png"
+  },
+  "input_b_translation_px": [
+    3,
+    0
+  ],
+  "input_pixels_resampled": false,
+  "motion_space": "Existing transparent 192px canvas has at least 44px right and 48px top clearance; no extra padding needed.",
+  "effect_constraint": "Solid blade only. No sword glow, light trails, afterimages, particles or magic effects.",
+  "prompt_enhancement": "Disabled for reviewed, final English prompts to avoid automatically adding sword effects.",
+  "output_contract": "Preserve every declared final transparent and background-retained animation; inspect actual dimensions and timing.",
+  "credits_before": 9225,
+  "estimated_credits": 90
+}

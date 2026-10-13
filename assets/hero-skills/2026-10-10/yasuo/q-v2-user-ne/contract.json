@@ -1,0 +1,48 @@
+{
+  "source": "D:\\Long1ye\\资源\\yasuo-Q.webp",
+  "source_sha256": "a8cc707a91b28754debcc4d141feec3fce699417b71d9b0adb7f8abed7c7070c",
+  "source_dimensions": [
+    256,
+    128
+  ],
+  "frame_count": 16,
+  "durations_ms": [
+    125,
+    125,
+    125,
+    125,
+    125,
+    125,
+    125,
+    125,
+    125,
+    125,
+    125,
+    125,
+    125,
+    125,
+    125,
+    125
+  ],
+  "duration_ms": 2000,
+  "reference": "assets/hero-skills/2026-10-10/yasuo/q-v2-user-ne/references/user-q-top-padded.webp",
+  "padded_dimensions": [
+    256,
+    200
+  ],
+  "padding": {
+    "top": 72,
+    "left": 0,
+    "right": 0,
+    "down": 0
+  },
+  "reference_visible_pixels_and_alpha_preserved": true,
+  "target_direction": "ne",
+  "requested_heading_degrees": -45,
+  "planned_jobs": 1,
+  "estimated_credits": 20,
+  "credits_before": 6019,
+  "mode": "video-reference animation edit",
+  "layered": false,
+  "runtime_integrated": false
+}

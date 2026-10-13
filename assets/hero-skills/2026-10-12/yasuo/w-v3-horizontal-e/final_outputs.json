@@ -1,0 +1,24 @@
+{
+  "final_outputs": [
+    {
+      "path": "index.html",
+      "type": "interactive-preview"
+    },
+    {
+      "path": "media/w-cast-e.webp",
+      "type": "animation"
+    },
+    {
+      "path": "media/w-cast-e-atlas.png",
+      "type": "sprite-atlas"
+    },
+    {
+      "path": "media/w-cast-e-frames.png",
+      "type": "frame-preview"
+    },
+    {
+      "path": "media/preview.png",
+      "type": "preview-screenshot"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "hero": "yasuo",
+  "action": "horizontal_two_slash_loop",
+  "direction": "se",
+  "source_canvas": [
+    176,
+    176
+  ],
+  "prepared_canvas": [
+    224,
+    192
+  ],
+  "source_offset": [
+    24,
+    8
+  ],
+  "anchor": [
+    96,
+    139
+  ],
+  "representation": "pixel",
+  "resampled_source": false,
+  "clips": 1,
+  "requested_duration_seconds": 2,
+  "high_frame_rate": true,
+  "final_format": "animated_webp",
+  "final_transparency": true,
+  "final_dimensions": "Inspect native pixel output; do not rescale",
+  "credits_before": 9595,
+  "estimated_credits": 80,
+  "runtime_integrated": false,
+  "production_ready": false
+}

@@ -1,0 +1,11 @@
+{
+  "command": "image-edit-run",
+  "recovery_command": "pixel-gen-poll",
+  "output_dir": "meowa-output/yasuo-q-v4-wind-cast-e-parts",
+  "args": [
+    "--reference-image", "assets/hero-skills/2026-10-12/yasuo/q-v3-layered-e/media/parts-sheet.png",
+    "--prompt", "保持这张像素分层素材图的布局和各部件大小。把右上第二段手臂末端的握刀拳改成自然微张的施法手势：手掌朝右，手指放松略弯，保留护腕，不握任何物品。给右下武士刀的刀身加淡蓝色通透的风，几条细气流贴着刀身绕行，刀的金属轮廓清楚，刀柄仍在左、刀尖朝右。身体和第一段上臂不改，部件保持分开，透明背景，不画挥砍刀光。",
+    "--mode", "pixel", "--strict", "--generation-model", "image-2.5",
+    "--resolution", "1K", "--quality", "detailed", "--remove-bg-method", "standard"
+  ]
+}

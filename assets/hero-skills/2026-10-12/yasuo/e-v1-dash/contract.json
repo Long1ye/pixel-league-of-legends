@@ -1,0 +1,10 @@
+{
+  "preview": "http://127.0.0.1:5173/?practice=e",
+  "mainGame": "http://127.0.0.1:5173/",
+  "art": "Existing eight-direction locomotion frames, slight compression and three fading afterimages. No newly generated E animation.",
+  "timing": {"startup": 0.04, "dash": 0.22, "recovery": 0.06, "cooldown": 0.5, "perTargetCooldown": 6},
+  "gameplay": {"range": 60, "distance": 80, "damage": 55, "manaCost": 0, "targetOnly": true},
+  "notIncluded": ["EQ", "successive-cast bonus damage", "new dedicated character animation"],
+  "validation": "192 tests passed; production build passed",
+  "screenshot": "preview.png"
+}

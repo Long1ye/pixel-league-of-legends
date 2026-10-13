@@ -1,0 +1,16 @@
+{
+  "command": "animate-run",
+  "recovery_command": "animate-poll",
+  "recovery_id_flag": "--api-job-id",
+  "args": [
+    "--image-file", "assets/hero-skills/2026-10-12/yasuo/e-v7-fixed-right/se/source.png",
+    "--prompt", "亚索从参考图右下朝向的持刀姿势开始，身体小幅拧转，拔刀快速横扫一次，淡蓝色风刃绕身体形成一圈扁椭圆环斩，随后刀光消散并回到起始持刀姿势。人物不整圈旋转、不跳跃，脚下位置固定，刀光中间透明，没有爆炸或飞行弹道。",
+    "--output-frames", "8", "--output-format", "webp",
+    "--animation-type", "attack", "--animation-model", "pixel-engine-v1.1",
+    "--intelligence", "advanced", "--optimize-prompt",
+    "--remove-bg-method", "standard", "--color-count", "64",
+    "--padding-top", "8", "--padding-down", "8",
+    "--padding-left", "24", "--padding-right", "24"
+  ],
+  "output_dir": "assets/hero-skills/2026-10-12/yasuo/eq-v1-se/generated-motion"
+}

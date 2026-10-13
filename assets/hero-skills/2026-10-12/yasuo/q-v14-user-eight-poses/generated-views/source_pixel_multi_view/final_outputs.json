@@ -1,0 +1,51 @@
+{
+  "status": "success",
+  "job_id": "job_ce51c3a7a9e7497eadf51b07290bbd31",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v14-user-eight-poses\\generated-views\\source_pixel_multi_view\\iso_back_left.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v14-user-eight-poses\\generated-views\\source_pixel_multi_view\\back.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v14-user-eight-poses\\generated-views\\source_pixel_multi_view\\iso_back_right.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v14-user-eight-poses\\generated-views\\source_pixel_multi_view\\left.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v14-user-eight-poses\\generated-views\\source_pixel_multi_view\\right.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v14-user-eight-poses\\generated-views\\source_pixel_multi_view\\iso_front_left.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v14-user-eight-poses\\generated-views\\source_pixel_multi_view\\front.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v14-user-eight-poses\\generated-views\\source_pixel_multi_view\\iso_front_right.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v14-user-eight-poses\\generated-views\\source_pixel_multi_view\\preview_3x3.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

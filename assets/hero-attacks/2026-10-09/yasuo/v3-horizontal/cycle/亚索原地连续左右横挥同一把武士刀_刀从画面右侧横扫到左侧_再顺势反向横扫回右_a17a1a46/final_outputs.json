@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "job_id": "job_4e0f10afb87f4b98beacb30fc5509690",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-09\\yasuo\\v3-horizontal\\cycle\\亚索原地连续左右横挥同一把武士刀_刀从画面右侧横扫到左侧_再顺势反向横扫回右_a17a1a46\\meowa_animation.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-09\\yasuo\\v3-horizontal\\cycle\\亚索原地连续左右横挥同一把武士刀_刀从画面右侧横扫到左侧_再顺势反向横扫回右_a17a1a46\\meowa_animation_background.webp",
+      "mime_type": "image/webp"
+    }
+  ]
+}

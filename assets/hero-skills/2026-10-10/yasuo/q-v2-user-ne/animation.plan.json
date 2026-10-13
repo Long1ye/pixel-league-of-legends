@@ -1,0 +1,19 @@
+{
+  "command": "meowa-animation-edit-run",
+  "args": [
+    "--video-file", "assets/hero-skills/2026-10-10/yasuo/q-v2-user-ne/references/user-q-top-padded.webp",
+    "--edit-intent", "将参考动画重绘为亚索朝画面右上45度释放Q的版本。人物身体保持直立，朝向右上，刀尖沿右上方向直线刺出，白色风圈也沿同一方向展开。保留原来的角色造型、像素风格和准备、刺出、收招节奏，双脚原地稳定，固定镜头，不要旋转整张画面。",
+    "--video-description", "像素亚索原地完成一次Q动作：准备拔刀，向画面正右方直线突刺，白色风圈沿刀身展开并消散，然后收刀回到站立姿势。镜头固定，没有移动或跳跃。",
+    "--primary-reference", "video",
+    "--style-mode", "pixel",
+    "--resolution", "480p",
+    "--alpha-mode", "sharp",
+    "--remove-bg-method", "standard",
+    "--remove-bg-batch-size", "16",
+    "--background-color", "#c6c6c6"
+  ],
+  "output_dir": "meowa-output/yasuo-q-v2-user-ne",
+  "recovery_command": "animate-poll",
+  "estimated_credits": 20,
+  "prompt_mode": "reviewed animation-edit fields; no automatic enhancement toggle on this capability"
+}

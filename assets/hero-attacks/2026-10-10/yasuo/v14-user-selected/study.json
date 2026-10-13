@@ -1,0 +1,135 @@
+{
+  "hero": "yasuo",
+  "width": 200,
+  "height": 128,
+  "clips": [
+    {
+      "id": "A",
+      "key": "yasuo-attack-A",
+      "name": "高位→低位",
+      "webp": "../../../../heroes/yasuo/selected-2026-10-10/attack-A.webp",
+      "sheet": "attack-A.png",
+      "width": 200,
+      "height": 128,
+      "frame_count": 24,
+      "columns": 8,
+      "rows": 3,
+      "durations_ms": [
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125
+      ],
+      "duration_ms": 3000,
+      "anchor": [
+        64,
+        124
+      ],
+      "impact_frame": 6,
+      "source_sha256": "c4a040b7b050067deb56e9fe2ad2e75af1e284a687dc181876d8000a7a78e273",
+      "atlas_sha256": "6c53341844f1eb5a6ade140c86c6c136f3259285a4e5e9cc1b8b01e2fcb1b48a",
+      "source_pixels_preserved": true,
+      "edge_contact_frames": [
+        6
+      ],
+      "prompt": "用户自行制作并选定的动画，未重新生成。",
+      "final_media": [
+        {
+          "label": "原始WebP",
+          "path": "../../../../heroes/yasuo/selected-2026-10-10/attack-A.webp"
+        },
+        {
+          "label": "PNG图集",
+          "path": "../../../../heroes/yasuo/selected-2026-10-10/attack-A.png"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "key": "yasuo-attack-B",
+      "name": "低位→高位",
+      "webp": "../../../../heroes/yasuo/selected-2026-10-10/attack-B.webp",
+      "sheet": "attack-B.png",
+      "width": 200,
+      "height": 128,
+      "frame_count": 24,
+      "columns": 8,
+      "rows": 3,
+      "durations_ms": [
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125
+      ],
+      "duration_ms": 3000,
+      "anchor": [
+        64,
+        124
+      ],
+      "impact_frame": 10,
+      "source_sha256": "97554048d5f1a15ef5063f425c2597c2737988157e96639414c2dfd747831ab2",
+      "atlas_sha256": "27551160e8a30b1f6e12e1bf551aff3a91676164506fe08466f295f2ea33ac8b",
+      "source_pixels_preserved": true,
+      "edge_contact_frames": [
+        7,
+        8,
+        9,
+        12
+      ],
+      "prompt": "用户自行制作并选定的动画，未重新生成。",
+      "final_media": [
+        {
+          "label": "原始WebP",
+          "path": "../../../../heroes/yasuo/selected-2026-10-10/attack-B.webp"
+        },
+        {
+          "label": "PNG图集",
+          "path": "../../../../heroes/yasuo/selected-2026-10-10/attack-B.png"
+        }
+      ]
+    }
+  ],
+  "review": "完整保留A/B各24帧、每段3秒，原速循环6秒。末尾包含收势停留；不剪掉静止帧。两处接缝对应高/低位姿态，但不是逐像素一致。原始图中的刀光、触边和位移全部保留，不自动修改用户选定的素材。",
+  "credits_consumed": 0,
+  "credits_after": 0
+}

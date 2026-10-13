@@ -1,0 +1,21 @@
+{
+  "pose_job": "job_ee1119b964064ceb85049c5097d7d769",
+  "animation_job": "job_e9f16a75e44849958bb6f0aa4f7d9fd8",
+  "user_authorized_pose_retry": true,
+  "dimensions": [240, 160],
+  "frame_count": 8,
+  "duration_ms": 800,
+  "alpha_present": true,
+  "edge_contact_frames": [],
+  "motion": "One right-facing horizontal slash; full-body frame animation",
+  "trail_visible_frames_one_based": [3, 4],
+  "trail_review": "Pale blue-gray crescent; broader than the requested thin accent",
+  "end_pose": "Forward sword follow-through; does not restore the original drawn-back pose",
+  "seamless_loop": false,
+  "preview_default": "play once, then hold last frame",
+  "q_animation_reused": false,
+  "wall_included": false,
+  "main_game_modified": false,
+  "browser_checked": ["normal speed full playback", "half-speed full playback", "single frame seeking", "no console warnings or errors"],
+  "build": "passed"
+}

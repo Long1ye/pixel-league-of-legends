@@ -1,0 +1,34 @@
+{
+  "image_size": [
+    256,
+    160
+  ],
+  "component_count": 1,
+  "parameters": {
+    "alpha_threshold": 8,
+    "background_tolerance": 8,
+    "connectivity": 8,
+    "min_component_area": 24,
+    "padding_px": 2,
+    "merge_contained_fragments": true,
+    "fragment_max_area": 256,
+    "fragment_max_area_ratio": 0.02
+  },
+  "warnings": [],
+  "components": [
+    {
+      "id": "component_001",
+      "file": "component_001.png",
+      "bbox": [
+        43,
+        25,
+        109,
+        132
+      ],
+      "width": 66,
+      "height": 107,
+      "pixel_count": 2972
+    }
+  ],
+  "elapsed_ms": 26.825
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>亚索普通攻击 · 第一版动作样稿</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;padding:24px;color:#deebe6;background:#0b151c;font:14px/1.7 "Microsoft YaHei",sans-serif}main{max-width:1180px;margin:auto}
+    h1{font-size:30px;margin:8px 0}h2{font-size:19px;margin:8px 0}p{color:#a7bfc3;margin:8px 0}a{color:#8cdfc7;text-underline-offset:3px}
+    .eyebrow{font:11px/1.8 monospace;letter-spacing:.16em;color:#78d5c1}.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:18px 0}
+    button,select{font:inherit;background:#1b3039;color:#e1eee7;border:1px solid #476269;border-radius:6px;padding:7px 14px;cursor:pointer}button:disabled{opacity:.4}
+    output{color:#b3ecd8;font-family:monospace}.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    article{background:#13242d;border:1px solid #344c57;border-radius:10px;padding:12px;min-width:0}.shell{overflow:auto;max-width:100%;border:1px solid #3b5460;border-radius:5px}
+    .stage{width:600px;height:552px;position:relative;overflow:hidden;background:#243934}.stage.checker,.pixel{background:repeating-conic-gradient(#1c3440 0% 25%,#14252e 0% 50%) 0 0/24px 24px}
+    .terrain{position:absolute;width:1022px;height:654px;left:-170px;top:-40px;opacity:.42;image-rendering:pixelated}.checker .terrain{display:none}
+    .sprite{position:absolute;image-rendering:pixelated}.anchor{position:absolute;border:1px solid #92d8c1;width:40px;height:14px;border-radius:50%;left:256px;top:440px}
+    .caption{position:absolute;left:10px;top:10px;padding:4px 8px;background:#09191fcc;color:#c1e6d9;font-size:12px}.note{margin:18px 0;padding:12px 16px;border-left:3px solid #88d9c1;background:#172b35}
+    .downloads{display:flex;gap:16px;flex-wrap:wrap;margin:10px 0}.frames{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:12px;margin:16px 0}
+    .frame{padding:12px;background:#13252e;overflow:auto;border-radius:7px}.frame canvas{display:block;image-rendering:pixelated}.frame.selected{outline:1px solid #8cdec4}.frame button{margin:8px 0}
+    .raw{display:flex;flex-wrap:wrap;gap:16px}.raw figure{margin:0;overflow:auto;max-width:100%}.raw img{display:block;image-rendering:pixelated}.raw figcaption{color:#b1c6c8}
+    footer{margin-top:24px;border-top:1px solid #344c57;padding-top:12px}@media(max-width:1320px){.pair{grid-template-columns:1fr}}
+  </style>
+</head>
+<body><main>
+  <div class="eyebrow">MIDLINE / YASUO BASIC ATTACK STUDY 01</div>
+  <h1>亚索 · 普通攻击</h1>
+  <p>右下朝向 SE · 一次挥刀 · <span id="facts">素材加载中…</span> · 动作样稿，未接入正式对局。</p>
+  <div class="controls" aria-label="普攻预览控制">
+    <button id="once" disabled>播放一次普攻</button><button id="play" disabled>暂停</button><button id="previous" disabled>上一帧</button><button id="next" disabled>下一帧</button>
+    <label for="rate">速度</label><select id="rate"><option value="0.5">0.5× 慢放</option><option value="1" selected>1× 原速</option><option value="2">2×</option></select>
+    <label><input id="loop" type="checkbox" checked>循环演示，间隔0.6秒</label><button id="background" aria-pressed="false">切换透明棋盘</button><output id="status">加载中…</output>
+  </div>
+  <section class="pair">
+    <article><h2>普攻动画 · 3×整数放大</h2><div class="shell"><div class="stage" id="attack-stage"><img class="terrain" src="../../../../map-studies/2026-10-09/01-forest/参考图片的地形布局_为我们的像素风中路_Solo_游戏绘制一张完整的俯视地图底图_宽_a7693192/sprite_00.png" alt="中路地面背景"><div class="anchor"></div><canvas id="attack" class="sprite" aria-label="亚索右下普攻动画"></canvas><div class="caption" id="phase">完整刀刃 / 原地挥刀 / 固定镜头</div></div></div></article>
+    <article><h2>原角色 · 尺寸与脚底位置对照</h2><div class="shell"><div class="stage" id="source-stage"><img class="terrain" src="../../../../map-studies/2026-10-09/01-forest/参考图片的地形布局_为我们的像素风中路_Solo_游戏绘制一张完整的俯视地图底图_宽_a7693192/sprite_00.png" alt="中路地面背景"><div class="anchor"></div><canvas id="source" class="sprite" aria-label="原始亚索右下素材"></canvas><div class="caption">相同像素倍率与逻辑脚底点，不缩放角色去匹配新图</div></div></div></article>
+  </section>
+  <div class="note"><p>动作参考：<a href="https://www.leagueoflegends.com/en-us/champions/yasuo/" target="_blank" rel="noopener">英雄联盟官方亚索页</a>，R演示约6.0–7.2秒的近身普攻。这里只参考挥刀、身体扭转和回收，不复刻大招、Q刺击及强化特效。</p><p>根据 game-assets 流程先编辑出刀起手，再用 Pixel 帧动画生成。动画时长是素材预览速度，不代表官方攻速或伤害判定时间。</p><p id="review"></p></div>
+  <h2>原始输出</h2><div class="downloads" id="downloads"></div><div class="raw" id="originals"></div>
+  <h2>逐帧检查 · 2×整数放大</h2><p>点击某帧暂停查看。背景棋盘用于检查透明度；不平滑缩小原素材。</p><section id="frames" class="frames"></section>
+  <footer><a href="../../../../hero-animations/2026-10-09/v2/index.html">返回八向待机 / 走路预览</a><p id="credits"></p></footer>
+</main><script type="module" src="./preview.ts"></script></body></html>

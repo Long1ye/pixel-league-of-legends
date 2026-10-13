@@ -1,0 +1,82 @@
+{
+  "hero": "yasuo",
+  "direction": "se",
+  "canvas": [
+    176,
+    176
+  ],
+  "anchor": [
+    80,
+    150
+  ],
+  "requested_frames_per_clip": 8,
+  "requested_clip_count": 2,
+  "prompts": {
+    "A": "亚索从高位挥砍到低位，动作自然流畅",
+    "B": "亚索从低位向上挥砍到高位，动作自然流畅"
+  },
+  "prompt_author": "user",
+  "prompt_optimization": true,
+  "optimized_prompt_text_returned": false,
+  "inputs": [
+    {
+      "pose": 1,
+      "original": "assets/hero-attacks/2026-10-10/yasuo/v12-high-low-user/inputs/pose-1-original.png",
+      "original_sha256": "18348bf8b59bf4575f49ea3437ac8c32e8e4244f9dd098568ad0825a0638d136",
+      "prepared": "assets/hero-attacks/2026-10-10/yasuo/v12-high-low-user/inputs/pose-1.png",
+      "prepared_sha256": "a6add1d69017752b3049a47ea5937cf86dc949b2fe8f409778fd676574e92a4a",
+      "source_size": [
+        128,
+        128
+      ],
+      "source_anchor": [
+        62,
+        118
+      ],
+      "translation": [
+        18,
+        32
+      ],
+      "prepared_bounds": [
+        31,
+        40,
+        133,
+        151
+      ],
+      "pixels_preserved": true
+    },
+    {
+      "pose": 2,
+      "original": "assets/hero-attacks/2026-10-10/yasuo/v12-high-low-user/inputs/pose-2-original.png",
+      "original_sha256": "0e94fcfa3973d8e8bd151cf009c4da39ade151764868a43a6bd1ac505ba4fe48",
+      "prepared": "assets/hero-attacks/2026-10-10/yasuo/v12-high-low-user/inputs/pose-2.png",
+      "prepared_sha256": "792ef5d26e80a7c884868d798cbcf9e7b0576bf1f2129d10d94a21b42662780f",
+      "source_size": [
+        128,
+        128
+      ],
+      "source_anchor": [
+        76,
+        120
+      ],
+      "translation": [
+        4,
+        30
+      ],
+      "prepared_bounds": [
+        17,
+        36,
+        119,
+        151
+      ],
+      "pixels_preserved": true
+    }
+  ],
+  "credits_before": 6823,
+  "estimated_credits": 90,
+  "attack_loop_sequence": [
+    "A",
+    "B"
+  ],
+  "runtime_integration_requested": false
+}

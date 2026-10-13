@@ -1,0 +1,54 @@
+{
+  "hero": "yasuo",
+  "action": "alternating_horizontal_slash_loop",
+  "direction": "se",
+  "width": 256,
+  "height": 192,
+  "frame_count": 16,
+  "durations_ms": [
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100
+  ],
+  "duration_ms": 1600,
+  "webp": "retry/亚索缓慢而连贯地做两次胸前横斩_先把武士刀从右侧挥到左侧_紧接着反手挥回右侧_1b5e7961/result_output_url.webp",
+  "job_id": "job_4b4a4055734244dc9e289b0d8168f36b",
+  "candidate": "retry",
+  "final_media": [
+    {
+      "label": "透明WebP",
+      "path": "retry/亚索缓慢而连贯地做两次胸前横斩_先把武士刀从右侧挥到左侧_紧接着反手挥回右侧_1b5e7961/result_output_url.webp",
+      "animated": true
+    },
+    {
+      "label": "透明GIF",
+      "path": "retry/亚索缓慢而连贯地做两次胸前横斩_先把武士刀从右侧挥到左侧_紧接着反手挥回右侧_1b5e7961/result_output_transparent_output_urls_gif.gif",
+      "animated": true
+    },
+    {
+      "label": "PNG图集",
+      "path": "retry/亚索缓慢而连贯地做两次胸前横斩_先把武士刀从右侧挥到左侧_紧接着反手挥回右侧_1b5e7961/result_output_transparent_output_urls_png.png",
+      "animated": false
+    }
+  ],
+  "credits_before": 9595,
+  "credits_after": 9505,
+  "credits_consumed": 90,
+  "review": "新样稿已有左右横挥和腰肩转动。仍有大面积白色刀光、服装细节变化，以及末帧回到首帧的姿势跳变；尚未达到流畅自然的定稿标准。",
+  "visual_acceptance": "not_accepted",
+  "production_ready": false,
+  "runtime_integrated": false
+}

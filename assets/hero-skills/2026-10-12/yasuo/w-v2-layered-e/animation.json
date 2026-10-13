@@ -1,0 +1,50 @@
+{
+  "type": "local-layered-animation-study",
+  "direction": "e",
+  "new_generation_jobs": 0,
+  "main_game_integrated": false,
+  "wall": "procedural timing placeholder, not final art",
+  "character_duration_ms": 560,
+  "preview_loop_ms": 2700,
+  "webp_loop_ms": 1200,
+  "frame_count": 29,
+  "frame_size": [
+    224,
+    160
+  ],
+  "columns": 8,
+  "rows": 4,
+  "sample_step_ms": 20,
+  "foot_anchor": [
+    64,
+    128
+  ],
+  "transparent": true,
+  "rest_frames_pixel_identical": true,
+  "edge_contacts": 0,
+  "bounds": [
+    18,
+    13,
+    202,
+    134
+  ],
+  "sources": [
+    "../q-v7-user-linked/media/user-e.png",
+    "../q-v5-small-grip-wind-e/media/upper-arm.png",
+    "../q-v5-small-grip-wind-e/media/forearm-hand.png",
+    "../q-v5-small-grip-wind-e/media/wind-sword.png"
+  ],
+  "events_ms": {
+    "send_wind": 190,
+    "wall_rise": 300,
+    "hero_ready": 560,
+    "wall_fade": 1920,
+    "wall_end": 2240
+  },
+  "known_limits": [
+    "One direction only",
+    "Uses existing small grip artwork and affine torso motion",
+    "Hair and scarf are part of the body texture, not independently simulated",
+    "Wall shown side-on for an eastward cast, duration is only for this preview"
+  ]
+}

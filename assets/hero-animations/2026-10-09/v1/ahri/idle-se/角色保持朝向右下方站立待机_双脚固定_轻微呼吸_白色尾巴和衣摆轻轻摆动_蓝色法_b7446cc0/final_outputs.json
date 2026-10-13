@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_78a53c1531f841b8a27ffe5a704683b2",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-animations\\2026-10-09\\v1\\ahri\\idle-se\\角色保持朝向右下方站立待机_双脚固定_轻微呼吸_白色尾巴和衣摆轻轻摆动_蓝色法_b7446cc0\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-animations\\2026-10-09\\v1\\ahri\\idle-se\\角色保持朝向右下方站立待机_双脚固定_轻微呼吸_白色尾巴和衣摆轻轻摆动_蓝色法_b7446cc0\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-animations\\2026-10-09\\v1\\ahri\\idle-se\\角色保持朝向右下方站立待机_双脚固定_轻微呼吸_白色尾巴和衣摆轻轻摆动_蓝色法_b7446cc0\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

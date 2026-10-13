@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>英雄八向待机与走路 · 动画预览</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 24px 20px; color: #e0ebe7; background: #0b151c; font: 14px/1.7 "Microsoft YaHei", sans-serif; }
+    main { max-width: 1180px; margin: auto; }
+    .eyebrow { color: #75d8c3; font: 11px/1.8 monospace; letter-spacing: .16em; }
+    h1 { margin: 8px 0; font-size: 30px; } h2 { margin: 8px 0; font-size: 20px; }
+    p { margin: 8px 0; color: #a4bbc0; }
+    a { color: #97e4d1; text-underline-offset: 3px; }
+    button, select { font: inherit; padding: 7px 14px; color: #e0ebe7; background: #172a33; border: 1px solid #38565e; border-radius: 6px; cursor: pointer; }
+    button[aria-pressed="true"] { background: #285749; border-color: #86dbc2; }
+    button:disabled { opacity: .45; cursor: wait; }
+    .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 16px 0; }
+    .separator { width: 1px; height: 24px; background: #39515b; margin: 0 6px; }
+    #frame-status { margin-left: auto; color: #a4ead5; font-family: monospace; }
+    .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    article { min-width: 0; padding: 12px; border: 1px solid #344b55; border-radius: 10px; background: #12232c; }
+    .stage-shell { max-width: 100%; overflow: auto; border: 1px solid #344b55; border-radius: 6px; }
+    .stage { position: relative; width: 552px; height: 400px; overflow: hidden; background-color: #1a302b; }
+    .stage.checker { background: repeating-conic-gradient(#193139 0% 25%, #132630 0% 50%) 0 0 / 24px 24px; }
+    .terrain { position: absolute; left: -240px; top: -110px; width: 1022px; height: 654px; opacity: .48; image-rendering: pixelated; }
+    .checker .terrain { display: none; }
+    .ground { position: absolute; left: 252px; top: 361px; width: 48px; height: 16px; border: 1px solid #a0e5c7; border-radius: 50%; }
+    .sprite { position: absolute; image-rendering: pixelated; }
+    .caption { position: absolute; top: 9px; left: 10px; font-size: 11px; color: #bee6d6; background: #091b24cf; padding: 3px 8px; }
+    .downloads { display: flex; gap: 16px; flex-wrap: wrap; margin: 8px 0; }
+    .review { margin: 16px 0; padding: 12px 16px; background: #182b35; border-left: 3px solid #8ce0c4; }
+    #hero-notes { color: #e4d8b1; }
+    .originals { margin-top: 24px; }
+    .original-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 14px 0; }
+    .original-card { padding: 12px; overflow: auto; background: #14252e; border-radius: 6px; }
+    .raw-pair { display: flex; gap: 12px; width: max-content; }
+    .raw-pair figure { margin: 0; text-align: center; }
+    .original-card img { display: block; image-rendering: pixelated; background: repeating-conic-gradient(#23404b 0% 25%, #172c37 0% 50%) 0 0 / 16px 16px; }
+    .raw-sheet { max-width: 100%; overflow: auto; margin-top: 8px; }
+    summary { cursor: pointer; color: #a6dfcf; }
+    footer { border-top: 1px solid #324a54; margin-top: 20px; padding-top: 12px; }
+    .directions-panel { display:flex; flex-wrap:wrap; gap:24px; margin:16px 0; padding:16px; border:1px solid #344b55; border-radius:10px; background:#12232c; }
+    .directions-panel > div:last-child { flex:1; min-width:240px; }
+    .compass { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; }
+    .compass span { display:flex; align-items:center; justify-content:center; color:#9bb8bd; }
+    .original-card.selected { outline:1px solid #93dfc8; }
+    .original-card > button { margin-bottom:8px; }
+    @media (max-width: 880px) { .pair { grid-template-columns: 1fr; } #frame-status { margin-left: 0; } }
+  </style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">MIDLINE / EIGHT-DIRECTION ANIMATION STUDIES 04</div>
+  <h1>英雄八向待机与走路</h1>
+  <p>亚索、阿狸、盖伦 · 八向 × 待机 / 走路 · 每条8帧。复用原有6条右下动画，新增其他七向42条，未接入正式对局。</p>
+  <div class="controls" aria-label="动画预览控制">
+    <button type="button" data-hero="yasuo" aria-pressed="true">亚索</button>
+    <button type="button" data-hero="ahri" aria-pressed="false">阿狸</button>
+    <button type="button" data-hero="garen" aria-pressed="false">盖伦</button>
+    <span class="separator"></span>
+    <button type="button" id="play" disabled>暂停</button>
+    <button type="button" id="previous" disabled>上一帧</button>
+    <button type="button" id="next" disabled>下一帧</button>
+    <label for="rate">速度</label>
+    <select id="rate"><option value="0.5">0.5× 慢放</option><option value="1" selected>1× 原速</option><option value="2">2×</option></select>
+    <button type="button" id="background" aria-pressed="false">切换透明棋盘</button>
+    <output id="frame-status" aria-live="off">加载中…</output>
+  </div>
+  <section class="directions-panel" aria-label="八向切换">
+    <div class="compass">
+      <button data-direction="nw">↖ 左上 NW</button><button data-direction="n">↑ 上 N</button><button data-direction="ne">↗ 右上 NE</button>
+      <button data-direction="w">← 左 W</button><span>显示方向</span><button data-direction="e">→ 右 E</button>
+      <button data-direction="sw">↙ 左下 SW</button><button data-direction="s">↓ 下 S</button><button data-direction="se" aria-pressed="true">↘ 右下 SE</button>
+    </div>
+    <div><h2 id="direction-readout">右下 SE</h2><p id="batch-progress">正在读取生成进度…</p><p>八向仅选择角色动画；游戏位置仍按任意角度连续移动，停下保留最后朝向。</p></div>
+  </section>
+  <section class="pair" aria-label="待机与走路对比">
+    <article data-state="idle">
+      <h2 id="idle-title">待机 · Idle</h2>
+      <div class="stage-shell"><div class="stage">
+        <img class="terrain" src="../../../map-studies/2026-10-09/01-forest/参考图片的地形布局_为我们的像素风中路_Solo_游戏绘制一张完整的俯视地图底图_宽_a7693192/sprite_00.png" alt="中路地图背景" width="1022" height="654" />
+        <div class="ground"></div><canvas class="sprite" id="idle-canvas" aria-label="待机动画"></canvas>
+        <div class="caption">放大动作检查 · 非实战比例 · 固定画布锚点</div>
+      </div></div>
+      <p id="idle-info"></p><nav class="downloads" id="idle-downloads" aria-label="待机文件下载"></nav>
+    </article>
+    <article data-state="walk">
+      <h2 id="walk-title">走路 · Walk</h2>
+      <div class="stage-shell"><div class="stage">
+        <img class="terrain" src="../../../map-studies/2026-10-09/01-forest/参考图片的地形布局_为我们的像素风中路_Solo_游戏绘制一张完整的俯视地图底图_宽_a7693192/sprite_00.png" alt="中路地图背景" width="1022" height="654" />
+        <div class="ground"></div><canvas class="sprite" id="walk-canvas" aria-label="走路动画"></canvas>
+        <div class="caption">原地迈步循环 · 位移由游戏逻辑控制</div>
+      </div></div>
+      <p id="walk-info"></p><nav class="downloads" id="walk-downloads" aria-label="走路文件下载"></nav>
+    </article>
+  </section>
+  <section class="review">
+    <p id="hero-notes"></p>
+    <p>亚索按3×、阿狸与盖伦按2×最近邻显示，仅为了比较样稿。原始素材未缩放；画布固定，不按每帧轮廓自动重对齐，便于暴露脚底滑动与造型跳动。</p>
+    <p id="validation-summary">等待全部文件的技术检查。本轮按用户要求不修正造型，镜像持手和动作跳动会保留；不把生成完成等同于正式美术验收。</p>
+  </section>
+  <section class="originals">
+    <h2 id="originals-title">当前英雄 · 全部八向原始输出</h2>
+    <p>下方显示当前英雄的全部16条动画。WebP / GIF使用文件原有速度循环，不受上方播放控件影响。PNG是3×3图集，按行读取前8格，最后一格不参与动画；全部文件均为服务声明的最终输出，包含复用的6条SE动画。</p>
+    <div class="original-grid" id="original-grid"></div>
+  </section>
+  <footer>
+    <p id="cost-summary">新增42条，复用6条；完整48条共384帧。积分将在全部任务完成后核对。</p>
+    <p>游戏位置仍可按任意角度移动；角色外观可映射为最近的八向动画，不改变移动方向。</p>
+    <a href="../../../hero-walk-directions/2026-10-09/v1/index.html">查看八向静态姿势</a> · <a href="/">返回对局</a>
+  </footer>
+</main>
+<script type="module" src="./preview.ts"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "command": "image-edit-run",
+  "args": [
+    "--reference-image", "assets/hero-skills/2026-10-12/yasuo/w-v3-horizontal-e/source/user-east-padded.png",
+    "--prompt", "将参考图中的亚索改为面向画面正右的踏前斩起手姿势：屈膝压低重心，上身前倾，前后脚分开准备蹬地冲刺，右手握住已出鞘的武士刀贴近腰侧，刀尖斜向身后左下方，左手自然保持平衡。保持人物外观、像素画风、体型大小和画面位置，画完整人物和正常长度的刀，不画刀光、残影、敌人或背景。",
+    "--mode", "pixel", "--strict", "--generation-model", "nano-banana",
+    "--resolution", "1K", "--generation-speed", "normal", "--remove-bg-method", "standard"
+  ],
+  "output_dir": "assets/hero-skills/2026-10-12/yasuo/e-v2-dedicated-e/generated-pose"
+}

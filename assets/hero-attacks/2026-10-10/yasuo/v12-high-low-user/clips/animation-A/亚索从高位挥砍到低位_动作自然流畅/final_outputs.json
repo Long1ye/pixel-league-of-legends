@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_7fac67738d8a47edab1908f6fde530d5",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v12-high-low-user\\clips\\animation-A\\亚索从高位挥砍到低位_动作自然流畅\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v12-high-low-user\\clips\\animation-A\\亚索从高位挥砍到低位_动作自然流畅\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v12-high-low-user\\clips\\animation-A\\亚索从高位挥砍到低位_动作自然流畅\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

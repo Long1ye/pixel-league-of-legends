@@ -1,0 +1,17 @@
+{
+  "hero": "yasuo",
+  "skill": "Q visual experiment",
+  "direction": "e",
+  "scope": "Smaller native arm and closed fist, attached sword, pale-blue wind wrapped around blade",
+  "method": "Meowa-edited native components + procedural two-bone thrust and front/back wind ribbons",
+  "reuse_byte_exact": ["v3 body"],
+  "hand_sword_contact": true,
+  "old_arm_dimensions": [[44, 25], [45, 19]],
+  "new_arm_dimensions": [[35, 20], [34, 16]],
+  "wind_color": "pale blue",
+  "runtime_integrated": false,
+  "other_directions_validated": false,
+  "body_motion": "fixed pose",
+  "credits_charged": null,
+  "billing_note": "No charge inferred without a final bill."
+}

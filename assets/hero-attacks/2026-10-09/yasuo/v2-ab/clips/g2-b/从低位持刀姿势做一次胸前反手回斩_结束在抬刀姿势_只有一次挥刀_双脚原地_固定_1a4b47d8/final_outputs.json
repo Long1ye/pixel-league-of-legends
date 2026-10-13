@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_d48a3eab481c4c068ae36b7d029f0518",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-09\\yasuo\\v2-ab\\clips\\g2-b\\从低位持刀姿势做一次胸前反手回斩_结束在抬刀姿势_只有一次挥刀_双脚原地_固定_1a4b47d8\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-09\\yasuo\\v2-ab\\clips\\g2-b\\从低位持刀姿势做一次胸前反手回斩_结束在抬刀姿势_只有一次挥刀_双脚原地_固定_1a4b47d8\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-09\\yasuo\\v2-ab\\clips\\g2-b\\从低位持刀姿势做一次胸前反手回斩_结束在抬刀姿势_只有一次挥刀_双脚原地_固定_1a4b47d8\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

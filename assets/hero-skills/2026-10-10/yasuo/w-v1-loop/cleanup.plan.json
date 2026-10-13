@@ -1,0 +1,10 @@
+{
+  "command": "remove-background-run",
+  "args": [
+    "--image-file", "meowa-output/yasuo-w-v1-loop-base/参考图中亚索风墙的青白色气流_绘制一面独立的像素风墙_适用于俯视斜角MOBA地图_f70ba800/final_pixel_snapper.png",
+    "--mode", "pixel", "--quality", "standard", "--preserve-translucency"
+  ],
+  "output_dir": "meowa-output/yasuo-w-v1-loop-cleanup",
+  "estimated_credits": 5,
+  "purpose": "Required static background removal before the one loop animation; preserve wind translucency"
+}

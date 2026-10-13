@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>经典英雄 · 像素样稿 01</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 40px 24px; background: #0c151c; color: #e1eceb; font: 14px/1.7 "Microsoft YaHei", sans-serif; }
+    main { max-width: 1120px; margin: auto; }
+    .eyebrow { color: #71d4c5; font-size: 11px; letter-spacing: .2em; }
+    h1 { margin: 10px 0; font-size: 32px; }
+    p { color: #a3b6be; margin: 8px 0; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; margin-top: 28px; }
+    article { background: #13212b; border: 1px solid #30434e; border-radius: 10px; overflow: hidden; }
+    .canvas { height: 400px; position: relative; display: flex; justify-content: center; background-color: #1b2a34; background-image: conic-gradient(#21323d 25%, transparent 0 50%, #21323d 0 75%, transparent 0); background-size: 24px 24px; }
+    .canvas::after { content: ""; position: absolute; left: 20px; right: 20px; bottom: 56px; height: 1px; background: #71d4c559; }
+    .canvas img { position: absolute; bottom: calc(56px - var(--foot-offset)); image-rendering: pixelated; flex: none; }
+    .meta { padding: 18px 20px; }
+    h2 { margin: 0; font-size: 21px; }
+    .size { color: #71d4c5; font: 12px/1.8 monospace; }
+    a { color: #8ce4d6; text-underline-offset: 3px; }
+    .note { border-left: 3px solid #71d4c5; padding: 12px 18px; margin-top: 24px; background: #13212b; }
+    footer { margin-top: 18px; font-size: 12px; color: #8298a4; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">MIDLINE / MEOWA HERO STUDIES 01</div>
+    <h1>三个经典英雄，先看像素形象。</h1>
+    <p><a href="../../hero-walk-directions/2026-10-09/v1/index.html">查看三位英雄的八向迈步姿势与360°朝向演示 →</a></p>
+    <p>全部为透明 PNG。亚索 3 倍、阿狸与盖伦 2 倍最近邻放大，并对齐脚底基线，修正亚索明显偏小的预览比例。源图尺寸未改，尚未接入游戏。</p>
+    <div class="cards">
+      <article>
+        <div class="canvas"><img src="01-yasuo/components/component_004.png" width="198" height="327" data-scale="3" data-foot-y="107" style="--foot-offset: 6px" alt="亚索站立像素样稿" /></div>
+        <div class="meta">
+          <h2>亚索 <span class="size">YASUO</span></h2>
+          <div class="size">66 × 109 px · 3× PREVIEW</div>
+          <p>马尾、围巾、护肩与武士刀。生成结果包含 8 个动作姿态，已单独裁出站立图；不是八向图，也不是验收后的动画。</p>
+          <a href="01-yasuo/components/component_004.png">透明站立 PNG</a> · <a href="01-yasuo/为像素风俯视中路游戏绘制一个英雄联盟默认造型的亚索_第一张参考只用于人物身_ec1df7ea/sprite_00.png">原始动作表</a>
+        </div>
+      </article>
+      <article>
+        <div class="canvas"><img src="02-ahri/components/component_001.png" width="280" height="332" data-scale="2" data-foot-y="164" style="--foot-offset: 4px" alt="阿狸像素样稿" /></div>
+        <div class="meta">
+          <h2>阿狸 <span class="size">AHRI</span></h2>
+          <div class="size">140 × 166 px · 2× PREVIEW</div>
+          <p>狐耳、红白服装、白色尾巴和蓝色法球。尾巴占幅较大，正式小尺寸精灵需要压缩轮廓、检查尾巴数量。</p>
+          <a href="02-ahri/components/component_001.png">透明 PNG</a>
+        </div>
+      </article>
+      <article>
+        <div class="canvas"><img src="03-garen/components/component_001.png" width="290" height="340" data-scale="2" data-foot-y="154" style="--foot-offset: 32px" alt="盖伦像素样稿" /></div>
+        <div class="meta">
+          <h2>盖伦 <span class="size">GAREN</span></h2>
+          <div class="size">145 × 170 px · 2× PREVIEW</div>
+          <p>银金重甲、宽护肩、蓝披风与大剑。重装轮廓清晰；大剑和披风仍需预留移动、攻击的动作空间。</p>
+          <a href="03-garen/components/component_001.png">透明 PNG</a>
+        </div>
+      </article>
+    </div>
+    <div class="note">
+      <strong>方向方案：最终推荐八向，先确认形象。</strong>
+      <p>当前游戏是自由走位的俯视战场，八向能更准确地表达移动和攻击朝向。先定稿单向精灵，再制作八向站姿、移动、普攻；技能先用程序特效。快捷八向的左右通常由镜像生成，非对称武器与护肩必须检查。</p>
+      <p>当前只校正了预览倍率和脚底对齐，人物身高为近似匹配，并未统一源图像素密度。尾巴、大剑不计入人物身高。这批不是项目规格中的 32 × 32 精灵，正式素材仍需统一像素尺寸、人物高度、视角与动作留白，不能直接缩图代替重绘。</p>
+    </div>
+    <footer>
+      本批生成消耗 75 Meowa 积分 · 生成前 1845 / 生成后 1770 · 本次预览比例调整未消耗积分，游戏代码与原始 PNG 未改动。<br />
+      角色身份参考官方默认造型：<a href="https://www.leagueoflegends.com/en-us/champions/yasuo/">亚索</a> / <a href="https://www.leagueoflegends.com/en-us/champions/ahri/">阿狸</a> / <a href="https://www.leagueoflegends.com/en-us/champions/garen/">盖伦</a>。同人 Demo 样稿，不代表官方素材或授权。
+    </footer>
+  </main>
+</body>
+</html>

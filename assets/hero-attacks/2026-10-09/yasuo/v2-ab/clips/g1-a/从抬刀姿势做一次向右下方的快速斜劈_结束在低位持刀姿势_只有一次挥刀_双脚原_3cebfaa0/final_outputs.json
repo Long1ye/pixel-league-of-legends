@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_0f8fa3a20aed4a54b799fdc1be6b33ea",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-09\\yasuo\\v2-ab\\clips\\g1-a\\从抬刀姿势做一次向右下方的快速斜劈_结束在低位持刀姿势_只有一次挥刀_双脚原_3cebfaa0\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-09\\yasuo\\v2-ab\\clips\\g1-a\\从抬刀姿势做一次向右下方的快速斜劈_结束在低位持刀姿势_只有一次挥刀_双脚原_3cebfaa0\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-09\\yasuo\\v2-ab\\clips\\g1-a\\从抬刀姿势做一次向右下方的快速斜劈_结束在低位持刀姿势_只有一次挥刀_双脚原_3cebfaa0\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

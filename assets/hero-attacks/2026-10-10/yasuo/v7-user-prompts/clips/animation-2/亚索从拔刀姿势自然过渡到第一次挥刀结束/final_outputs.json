@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_c0a32064e836409c857e8d953e253d50",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v7-user-prompts\\clips\\animation-2\\亚索从拔刀姿势自然过渡到第一次挥刀结束\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v7-user-prompts\\clips\\animation-2\\亚索从拔刀姿势自然过渡到第一次挥刀结束\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v7-user-prompts\\clips\\animation-2\\亚索从拔刀姿势自然过渡到第一次挥刀结束\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "hero": "yasuo",
+  "skill": "Q1/Q2",
+  "direction": "e",
+  "heading_degrees": 0,
+  "method": "AI-generated parts + local procedural two-joint thrust, not whole-sprite rotation",
+  "scope": "One single-direction layered animation proof; no multi-direction generation or main-game integration",
+  "source_q_sha256": "a8cc707a91b28754debcc4d141feec3fce699417b71d9b0adb7f8abed7c7070c",
+  "source_idle_sha256": "0b5ed77dd4728f72e29d858840da94032f442ebb834aed34c6fedf3b5b8fa1c6",
+  "source_q_frames": 16,
+  "source_q_duration_ms": 2000,
+  "references_native_pixels_preserved": true,
+  "planned_primary_jobs": 1,
+  "credits_before": 5969,
+  "runtime_integrated": false,
+  "other_directions_validated": false,
+  "prompt": "将参考亚索绘制成朝画面正右的像素Q戳刺分层素材，保持蓝色围巾、单侧肩甲、发型、衣服和像素大小。同一张透明图上分开摆放四个部件：左侧是双脚站稳、微微蓄力的完整身体，移除靠近镜头的持刀右臂，补全肩根和胸腹，但保留另一只手与刀鞘；右上分别放一段从肩到肘的上臂、以及一段从肘到握刀拳头的前臂，关节处留少量可重叠连接的皮肤；右下放完整武士刀，刀柄在左、刀尖朝右。两段手臂都水平朝右，与身体比例相配，拳头不带刀。部件之间留透明空隙，不要文字、风效或刀光。"
+}

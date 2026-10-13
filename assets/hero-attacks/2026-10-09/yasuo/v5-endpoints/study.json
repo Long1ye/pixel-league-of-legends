@@ -1,0 +1,68 @@
+{
+  "title": "Yasuo static attack endpoints, screen lower-right / upper-right",
+  "status": "Two generated static pose studies; awaiting user's visual approval. No animation submitted.",
+  "facing": "screen southeast",
+  "images": [
+    {
+      "label": "A",
+      "direction": "screen lower-right",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v5-endpoints/poses/a/把亚索改成普通攻击的右下低位端点姿势_原来的持刀手握一把出鞘的武士刀_手在腰_b2b243b1/remove_bg.png",
+      "job_id": "job_f88eef5a48254b1f874e9eaee1ab3acd",
+      "dimensions": [
+        192,
+        192
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "bounds": [
+        49,
+        60,
+        141,
+        164
+      ]
+    },
+    {
+      "label": "B",
+      "direction": "screen upper-right",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v5-endpoints/poses/b-right-tip/以这张低位姿势为基础_只抬起原来的持刀手和武士刀_做右上高位端点_手抬到画面_881d1bc9/remove_bg.png",
+      "job_id": "job_9d0de6727b554c3bb362ac1766942c35",
+      "dimensions": [
+        192,
+        192
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "bounds": [
+        46,
+        48,
+        145,
+        164
+      ]
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "job_id": "job_12c565bb0aaa41eaaefbdc40364a8be4",
+      "reason": "Initial B sword tip pointed screen upper-left; replaced by upper-right-tip edit."
+    }
+  ],
+  "visual_validation": {
+    "single_exposed_katana": true,
+    "blue_scarf_retained": true,
+    "silver_shoulder_armor_retained": true,
+    "clipping": false,
+    "pixel_exact_body_preservation": false,
+    "anchor_note": "B body appears approximately 3px left of A; normalize anchors without resampling before any approved animation generation."
+  },
+  "credits": {
+    "before": 9270,
+    "after": 9225,
+    "total": 45,
+    "breakdown": "A 15, initial B 15, B sword-direction correction 15"
+  },
+  "next_step": "Only after endpoint approval: prepare aligned animation inputs for A-to-B and B-to-A as two independent attacks."
+}

@@ -1,0 +1,24 @@
+{
+  "final_outputs": [
+    {
+      "path": "index.html",
+      "type": "interactive-preview"
+    },
+    {
+      "path": "export/yasuo-w-east.webp",
+      "type": "transparent-animation"
+    },
+    {
+      "path": "export/yasuo-w-east-atlas.png",
+      "type": "sprite-atlas"
+    },
+    {
+      "path": "export/yasuo-w-east-poses.png",
+      "type": "pose-preview"
+    },
+    {
+      "path": "export/preview.png",
+      "type": "interactive-preview-screenshot"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "job_id": "job_f3f1ee7174424844995be23e229098e0",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "meowa-output\\yasuo-w-v1-loop-animation\\这面风墙保持成型和原位_内部青白色风纹连续向上翻卷_边缘轻微起伏_流动自然_首_24471dd0\\meowa_animation.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "meowa-output\\yasuo-w-v1-loop-animation\\这面风墙保持成型和原位_内部青白色风纹连续向上翻卷_边缘轻微起伏_流动自然_首_24471dd0\\meowa_animation_background.webp",
+      "mime_type": "image/webp"
+    }
+  ]
+}

@@ -1,0 +1,1002 @@
+{
+  "status": "technical_pass",
+  "groups": 3,
+  "clips": 6,
+  "frames": 48,
+  "files": [
+    {
+      "id": "g1-a",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/clips/g1-a/\u4ece\u62ac\u5200\u59ff\u52bf\u505a\u4e00\u6b21\u5411\u53f3\u4e0b\u65b9\u7684\u5feb\u901f\u659c\u5288_\u7ed3\u675f\u5728\u4f4e\u4f4d\u6301\u5200\u59ff\u52bf_\u53ea\u6709\u4e00\u6b21\u6325\u5200_\u53cc\u811a\u539f_3cebfaa0/result_output_url.webp",
+      "size": [
+        176,
+        176
+      ],
+      "frames": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "bounds": [
+        [
+          27,
+          27,
+          115,
+          131
+        ],
+        [
+          27,
+          27,
+          115,
+          131
+        ],
+        [
+          16,
+          29,
+          149,
+          140
+        ],
+        [
+          16,
+          29,
+          129,
+          131
+        ],
+        [
+          16,
+          29,
+          129,
+          131
+        ],
+        [
+          16,
+          29,
+          129,
+          131
+        ],
+        [
+          15,
+          29,
+          129,
+          131
+        ],
+        [
+          18,
+          29,
+          127,
+          131
+        ]
+      ]
+    },
+    {
+      "id": "g1-a",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/clips/g1-a/\u4ece\u62ac\u5200\u59ff\u52bf\u505a\u4e00\u6b21\u5411\u53f3\u4e0b\u65b9\u7684\u5feb\u901f\u659c\u5288_\u7ed3\u675f\u5728\u4f4e\u4f4d\u6301\u5200\u59ff\u52bf_\u53ea\u6709\u4e00\u6b21\u6325\u5200_\u53cc\u811a\u539f_3cebfaa0/result_output_transparent_output_urls_gif.gif",
+      "size": [
+        176,
+        176
+      ],
+      "frames": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "bounds": [
+        [
+          27,
+          27,
+          115,
+          131
+        ],
+        [
+          27,
+          27,
+          115,
+          131
+        ],
+        [
+          16,
+          29,
+          149,
+          140
+        ],
+        [
+          16,
+          29,
+          129,
+          131
+        ],
+        [
+          16,
+          29,
+          129,
+          131
+        ],
+        [
+          16,
+          29,
+          129,
+          131
+        ],
+        [
+          15,
+          29,
+          129,
+          131
+        ],
+        [
+          18,
+          29,
+          127,
+          131
+        ]
+      ]
+    },
+    {
+      "id": "g1-a",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/clips/g1-a/\u4ece\u62ac\u5200\u59ff\u52bf\u505a\u4e00\u6b21\u5411\u53f3\u4e0b\u65b9\u7684\u5feb\u901f\u659c\u5288_\u7ed3\u675f\u5728\u4f4e\u4f4d\u6301\u5200\u59ff\u52bf_\u53ea\u6709\u4e00\u6b21\u6325\u5200_\u53cc\u811a\u539f_3cebfaa0/result_output_transparent_output_urls_png.png",
+      "size": [
+        528,
+        528
+      ],
+      "frames": 1,
+      "durations_ms": [
+        0
+      ],
+      "bounds": [
+        [
+          15,
+          27,
+          501,
+          483
+        ]
+      ]
+    },
+    {
+      "id": "g1-b",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/clips/g1-b/\u4ece\u4f4e\u4f4d\u6301\u5200\u59ff\u52bf\u505a\u4e00\u6b21\u5411\u53f3\u4e0a\u65b9\u7684\u53cd\u624b\u659c\u64a9_\u7ed3\u675f\u5728\u62ac\u5200\u59ff\u52bf_\u53ea\u6709\u4e00\u6b21\u6325\u5200_\u53cc\u811a\u539f_6df55bf1/result_output_url.webp",
+      "size": [
+        176,
+        176
+      ],
+      "frames": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "bounds": [
+        [
+          18,
+          29,
+          127,
+          131
+        ],
+        [
+          18,
+          29,
+          127,
+          131
+        ],
+        [
+          20,
+          28,
+          151,
+          131
+        ],
+        [
+          21,
+          29,
+          148,
+          131
+        ],
+        [
+          22,
+          29,
+          123,
+          131
+        ],
+        [
+          24,
+          28,
+          120,
+          131
+        ],
+        [
+          25,
+          26,
+          112,
+          131
+        ],
+        [
+          27,
+          27,
+          115,
+          131
+        ]
+      ]
+    },
+    {
+      "id": "g1-b",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/clips/g1-b/\u4ece\u4f4e\u4f4d\u6301\u5200\u59ff\u52bf\u505a\u4e00\u6b21\u5411\u53f3\u4e0a\u65b9\u7684\u53cd\u624b\u659c\u64a9_\u7ed3\u675f\u5728\u62ac\u5200\u59ff\u52bf_\u53ea\u6709\u4e00\u6b21\u6325\u5200_\u53cc\u811a\u539f_6df55bf1/result_output_transparent_output_urls_gif.gif",
+      "size": [
+        176,
+        176
+      ],
+      "frames": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "bounds": [
+        [
+          18,
+          29,
+          127,
+          131
+        ],
+        [
+          18,
+          29,
+          127,
+          131
+        ],
+        [
+          20,
+          28,
+          151,
+          131
+        ],
+        [
+          21,
+          29,
+          148,
+          131
+        ],
+        [
+          22,
+          29,
+          123,
+          131
+        ],
+        [
+          24,
+          28,
+          120,
+          131
+        ],
+        [
+          25,
+          26,
+          112,
+          131
+        ],
+        [
+          27,
+          27,
+          115,
+          131
+        ]
+      ]
+    },
+    {
+      "id": "g1-b",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/clips/g1-b/\u4ece\u4f4e\u4f4d\u6301\u5200\u59ff\u52bf\u505a\u4e00\u6b21\u5411\u53f3\u4e0a\u65b9\u7684\u53cd\u624b\u659c\u64a9_\u7ed3\u675f\u5728\u62ac\u5200\u59ff\u52bf_\u53ea\u6709\u4e00\u6b21\u6325\u5200_\u53cc\u811a\u539f_6df55bf1/result_output_transparent_output_urls_png.png",
+      "size": [
+        528,
+        528
+      ],
+      "frames": 1,
+      "durations_ms": [
+        0
+      ],
+      "bounds": [
+        [
+          18,
+          28,
+          503,
+          483
+        ]
+      ]
+    },
+    {
+      "id": "g2-a",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/clips/g2-a/\u4ece\u62ac\u5200\u59ff\u52bf\u505a\u4e00\u6b21\u7d27\u51d1\u7684\u8170\u524d\u6a2a\u65a9_\u7ed3\u675f\u5728\u4f4e\u4f4d\u6301\u5200\u59ff\u52bf_\u53ea\u6709\u4e00\u6b21\u6325\u5200_\u53cc\u811a\u539f\u5730_\u56fa_46fafc9b/result_output_url.webp",
+      "size": [
+        176,
+        176
+      ],
+      "frames": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "bounds": [
+        [
+          27,
+          27,
+          115,
+          131
+        ],
+        [
+          27,
+          27,
+          116,
+          131
+        ],
+        [
+          9,
+          28,
+          145,
+          131
+        ],
+        [
+          7,
+          30,
+          151,
+          131
+        ],
+        [
+          7,
+          28,
+          136,
+          131
+        ],
+        [
+          7,
+          28,
+          136,
+          131
+        ],
+        [
+          11,
+          27,
+          128,
+          131
+        ],
+        [
+          18,
+          29,
+          127,
+          131
+        ]
+      ]
+    },
+    {
+      "id": "g2-a",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/clips/g2-a/\u4ece\u62ac\u5200\u59ff\u52bf\u505a\u4e00\u6b21\u7d27\u51d1\u7684\u8170\u524d\u6a2a\u65a9_\u7ed3\u675f\u5728\u4f4e\u4f4d\u6301\u5200\u59ff\u52bf_\u53ea\u6709\u4e00\u6b21\u6325\u5200_\u53cc\u811a\u539f\u5730_\u56fa_46fafc9b/result_output_transparent_output_urls_gif.gif",
+      "size": [
+        176,
+        176
+      ],
+      "frames": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "bounds": [
+        [
+          27,
+          27,
+          115,
+          131
+        ],
+        [
+          27,
+          27,
+          116,
+          131
+        ],
+        [
+          9,
+          28,
+          145,
+          131
+        ],
+        [
+          7,
+          30,
+          151,
+          131
+        ],
+        [
+          7,
+          28,
+          136,
+          131
+        ],
+        [
+          7,
+          28,
+          136,
+          131
+        ],
+        [
+          11,
+          27,
+          128,
+          131
+        ],
+        [
+          18,
+          29,
+          127,
+          131
+        ]
+      ]
+    },
+    {
+      "id": "g2-a",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/clips/g2-a/\u4ece\u62ac\u5200\u59ff\u52bf\u505a\u4e00\u6b21\u7d27\u51d1\u7684\u8170\u524d\u6a2a\u65a9_\u7ed3\u675f\u5728\u4f4e\u4f4d\u6301\u5200\u59ff\u52bf_\u53ea\u6709\u4e00\u6b21\u6325\u5200_\u53cc\u811a\u539f\u5730_\u56fa_46fafc9b/result_output_transparent_output_urls_png.png",
+      "size": [
+        528,
+        528
+      ],
+      "frames": 1,
+      "durations_ms": [
+        0
+      ],
+      "bounds": [
+        [
+          7,
+          27,
+          497,
+          483
+        ]
+      ]
+    },
+    {
+      "id": "g2-b",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/clips/g2-b/\u4ece\u4f4e\u4f4d\u6301\u5200\u59ff\u52bf\u505a\u4e00\u6b21\u80f8\u524d\u53cd\u624b\u56de\u65a9_\u7ed3\u675f\u5728\u62ac\u5200\u59ff\u52bf_\u53ea\u6709\u4e00\u6b21\u6325\u5200_\u53cc\u811a\u539f\u5730_\u56fa\u5b9a_1a4b47d8/result_output_url.webp",
+      "size": [
+        176,
+        176
+      ],
+      "frames": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "bounds": [
+        [
+          18,
+          29,
+          127,
+          131
+        ],
+        [
+          18,
+          29,
+          127,
+          131
+        ],
+        [
+          25,
+          31,
+          175,
+          131
+        ],
+        [
+          13,
+          31,
+          173,
+          131
+        ],
+        [
+          5,
+          30,
+          141,
+          131
+        ],
+        [
+          27,
+          27,
+          116,
+          131
+        ],
+        [
+          27,
+          27,
+          115,
+          131
+        ],
+        [
+          27,
+          27,
+          115,
+          131
+        ]
+      ]
+    },
+    {
+      "id": "g2-b",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/clips/g2-b/\u4ece\u4f4e\u4f4d\u6301\u5200\u59ff\u52bf\u505a\u4e00\u6b21\u80f8\u524d\u53cd\u624b\u56de\u65a9_\u7ed3\u675f\u5728\u62ac\u5200\u59ff\u52bf_\u53ea\u6709\u4e00\u6b21\u6325\u5200_\u53cc\u811a\u539f\u5730_\u56fa\u5b9a_1a4b47d8/result_output_transparent_output_urls_gif.gif",
+      "size": [
+        176,
+        176
+      ],
+      "frames": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "bounds": [
+        [
+          18,
+          29,
+          127,
+          131
+        ],
+        [
+          18,
+          29,
+          127,
+          131
+        ],
+        [
+          25,
+          31,
+          175,
+          131
+        ],
+        [
+          13,
+          31,
+          173,
+          131
+        ],
+        [
+          5,
+          30,
+          141,
+          131
+        ],
+        [
+          27,
+          27,
+          116,
+          131
+        ],
+        [
+          27,
+          27,
+          115,
+          131
+        ],
+        [
+          27,
+          27,
+          115,
+          131
+        ]
+      ]
+    },
+    {
+      "id": "g2-b",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/clips/g2-b/\u4ece\u4f4e\u4f4d\u6301\u5200\u59ff\u52bf\u505a\u4e00\u6b21\u80f8\u524d\u53cd\u624b\u56de\u65a9_\u7ed3\u675f\u5728\u62ac\u5200\u59ff\u52bf_\u53ea\u6709\u4e00\u6b21\u6325\u5200_\u53cc\u811a\u539f\u5730_\u56fa\u5b9a_1a4b47d8/result_output_transparent_output_urls_png.png",
+      "size": [
+        528,
+        528
+      ],
+      "frames": 1,
+      "durations_ms": [
+        0
+      ],
+      "bounds": [
+        [
+          13,
+          29,
+          527,
+          483
+        ]
+      ]
+    },
+    {
+      "id": "g3-a",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/clips/g3-a/\u4ece\u62ac\u5200\u59ff\u52bf\u505a\u4e00\u6b21\u8eab\u4f53\u53f3\u524d\u65b9\u7684\u77ed\u4fc3\u4e0b\u5288_\u7ed3\u675f\u5728\u4f4e\u4f4d\u6301\u5200\u59ff\u52bf_\u53ea\u6709\u4e00\u6b21\u6325\u5200_\u53cc\u811a_384fe399/result_output_url.webp",
+      "size": [
+        176,
+        176
+      ],
+      "frames": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "bounds": [
+        [
+          27,
+          27,
+          115,
+          131
+        ],
+        [
+          27,
+          27,
+          115,
+          131
+        ],
+        [
+          27,
+          22,
+          113,
+          131
+        ],
+        [
+          21,
+          29,
+          130,
+          131
+        ],
+        [
+          20,
+          29,
+          125,
+          131
+        ],
+        [
+          18,
+          26,
+          127,
+          131
+        ],
+        [
+          18,
+          26,
+          127,
+          131
+        ],
+        [
+          18,
+          29,
+          127,
+          131
+        ]
+      ]
+    },
+    {
+      "id": "g3-a",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/clips/g3-a/\u4ece\u62ac\u5200\u59ff\u52bf\u505a\u4e00\u6b21\u8eab\u4f53\u53f3\u524d\u65b9\u7684\u77ed\u4fc3\u4e0b\u5288_\u7ed3\u675f\u5728\u4f4e\u4f4d\u6301\u5200\u59ff\u52bf_\u53ea\u6709\u4e00\u6b21\u6325\u5200_\u53cc\u811a_384fe399/result_output_transparent_output_urls_gif.gif",
+      "size": [
+        176,
+        176
+      ],
+      "frames": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "bounds": [
+        [
+          27,
+          27,
+          115,
+          131
+        ],
+        [
+          27,
+          27,
+          115,
+          131
+        ],
+        [
+          27,
+          22,
+          113,
+          131
+        ],
+        [
+          21,
+          29,
+          130,
+          131
+        ],
+        [
+          20,
+          29,
+          125,
+          131
+        ],
+        [
+          18,
+          26,
+          127,
+          131
+        ],
+        [
+          18,
+          26,
+          127,
+          131
+        ],
+        [
+          18,
+          29,
+          127,
+          131
+        ]
+      ]
+    },
+    {
+      "id": "g3-a",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/clips/g3-a/\u4ece\u62ac\u5200\u59ff\u52bf\u505a\u4e00\u6b21\u8eab\u4f53\u53f3\u524d\u65b9\u7684\u77ed\u4fc3\u4e0b\u5288_\u7ed3\u675f\u5728\u4f4e\u4f4d\u6301\u5200\u59ff\u52bf_\u53ea\u6709\u4e00\u6b21\u6325\u5200_\u53cc\u811a_384fe399/result_output_transparent_output_urls_png.png",
+      "size": [
+        528,
+        528
+      ],
+      "frames": 1,
+      "durations_ms": [
+        0
+      ],
+      "bounds": [
+        [
+          18,
+          22,
+          479,
+          483
+        ]
+      ]
+    },
+    {
+      "id": "g3-b",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/clips/g3-b/\u4ece\u4f4e\u4f4d\u6301\u5200\u59ff\u52bf\u505a\u4e00\u6b21\u8eab\u4f53\u53f3\u524d\u65b9\u7684\u77ed\u4fc3\u4e0a\u6311_\u7ed3\u675f\u5728\u62ac\u5200\u59ff\u52bf_\u53ea\u6709\u4e00\u6b21\u6325\u5200_\u53cc\u811a_d211c6af/result_output_url.webp",
+      "size": [
+        176,
+        176
+      ],
+      "frames": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "bounds": [
+        [
+          18,
+          29,
+          127,
+          131
+        ],
+        [
+          18,
+          29,
+          127,
+          131
+        ],
+        [
+          27,
+          27,
+          151,
+          131
+        ],
+        [
+          27,
+          27,
+          149,
+          131
+        ],
+        [
+          27,
+          27,
+          116,
+          131
+        ],
+        [
+          27,
+          27,
+          116,
+          131
+        ],
+        [
+          27,
+          27,
+          115,
+          131
+        ],
+        [
+          27,
+          27,
+          116,
+          131
+        ]
+      ]
+    },
+    {
+      "id": "g3-b",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/clips/g3-b/\u4ece\u4f4e\u4f4d\u6301\u5200\u59ff\u52bf\u505a\u4e00\u6b21\u8eab\u4f53\u53f3\u524d\u65b9\u7684\u77ed\u4fc3\u4e0a\u6311_\u7ed3\u675f\u5728\u62ac\u5200\u59ff\u52bf_\u53ea\u6709\u4e00\u6b21\u6325\u5200_\u53cc\u811a_d211c6af/result_output_transparent_output_urls_gif.gif",
+      "size": [
+        176,
+        176
+      ],
+      "frames": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "bounds": [
+        [
+          18,
+          29,
+          127,
+          131
+        ],
+        [
+          18,
+          29,
+          127,
+          131
+        ],
+        [
+          27,
+          27,
+          151,
+          131
+        ],
+        [
+          27,
+          27,
+          149,
+          131
+        ],
+        [
+          27,
+          27,
+          116,
+          131
+        ],
+        [
+          27,
+          27,
+          116,
+          131
+        ],
+        [
+          27,
+          27,
+          115,
+          131
+        ],
+        [
+          27,
+          27,
+          116,
+          131
+        ]
+      ]
+    },
+    {
+      "id": "g3-b",
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/clips/g3-b/\u4ece\u4f4e\u4f4d\u6301\u5200\u59ff\u52bf\u505a\u4e00\u6b21\u8eab\u4f53\u53f3\u524d\u65b9\u7684\u77ed\u4fc3\u4e0a\u6311_\u7ed3\u675f\u5728\u62ac\u5200\u59ff\u52bf_\u53ea\u6709\u4e00\u6b21\u6325\u5200_\u53cc\u811a_d211c6af/result_output_transparent_output_urls_png.png",
+      "size": [
+        528,
+        528
+      ],
+      "frames": 1,
+      "durations_ms": [
+        0
+      ],
+      "bounds": [
+        [
+          18,
+          27,
+          503,
+          483
+        ]
+      ]
+    }
+  ],
+  "seams": [
+    {
+      "group": "g1",
+      "a_to_b": {
+        "mean_rgb_error": 1.084398674242424,
+        "changed_canvas_percent": 11.308755165289258,
+        "alpha_identical": false
+      },
+      "b_to_a": {
+        "mean_rgb_error": 1.1081159607438016,
+        "changed_canvas_percent": 11.728434917355372,
+        "alpha_identical": false
+      }
+    },
+    {
+      "group": "g2",
+      "a_to_b": {
+        "mean_rgb_error": 1.0615422692837464,
+        "changed_canvas_percent": 10.446797520661157,
+        "alpha_identical": false
+      },
+      "b_to_a": {
+        "mean_rgb_error": 1.0094804579889807,
+        "changed_canvas_percent": 10.876162190082644,
+        "alpha_identical": false
+      }
+    },
+    {
+      "group": "g3",
+      "a_to_b": {
+        "mean_rgb_error": 1.0288287706611572,
+        "changed_canvas_percent": 11.318440082644628,
+        "alpha_identical": false
+      },
+      "b_to_a": {
+        "mean_rgb_error": 1.0833763774104683,
+        "changed_canvas_percent": 11.87370867768595,
+        "alpha_identical": false
+      }
+    }
+  ],
+  "binary_alpha": true,
+  "edge_contact": false,
+  "png_webp_visible_pixels_identical": true,
+  "production_ready": false,
+  "runtime_integrated": false
+}

@@ -1,0 +1,6 @@
+{
+  "targetedTests": "5 passed",
+  "build": "passed",
+  "visualChecks": ["front 270 degrees", "diagonal 315 degrees", "side 0 degrees retains thickness", "137 degrees non-cardinal", "137-degree placed wall remains locked when next aim changes to 270 degrees"],
+  "limitations": ["Visual prototype only; no gameplay collision", "No character animation included", "Placement drag is bounded to the preview area"]
+}

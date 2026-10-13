@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>亚索 Q · 可选方向展示</title>
+  <style>
+    :root{color-scheme:dark;font-family:"Microsoft YaHei",system-ui,sans-serif;background:#0d1b24;color:#e6f2ef}
+    *{box-sizing:border-box}body{margin:0;padding:22px}main{max-width:1060px;margin:auto}
+    h1{font-size:25px;margin:0 0 10px}h2{font-size:17px;margin:0}p{color:#b8d0ce;line-height:1.7}
+    .eyebrow{color:#87c9c0;font-size:12px;letter-spacing:2px;margin:0 0 8px}.intro{margin:0 0 18px}
+    .layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:18px;align-items:start}
+    section{background:#142b34;border:1px solid #365251;border-radius:12px;padding:18px}
+    button,select,input{font:inherit}button,select{color:#e6f2ef;background:#1b3a45;border:1px solid #527575;border-radius:7px;padding:9px 10px;cursor:pointer}
+    button:disabled,select:disabled,input:disabled{opacity:.45;cursor:wait}button:hover:not(:disabled){background:#285361}
+    button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid #ffd582;outline-offset:3px}
+    button[aria-pressed="true"]{background:#276458;border-color:#93e5c3;color:#fff;box-shadow:inset 0 0 0 1px #93e5c3}
+    .compass{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:15px 0}.compass button{padding:10px 3px;font-size:14px}
+    .compass-center{display:grid;place-items:center;color:#8faaa8;font-size:12px}
+    .controls{display:grid;gap:12px}.controls label{display:flex;justify-content:space-between;align-items:center;gap:8px}
+    .controls select{max-width:150px}.playback{display:flex;flex-wrap:wrap;gap:7px}.playback button{flex:1;white-space:nowrap}
+    .stage-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.badge{color:#a8e9d8;font-size:13px}
+    .viewport{overflow:auto;background-color:#172e38;background-image:conic-gradient(#294c56 25%,transparent 0 50%,#294c56 0 75%,transparent 0);background-size:20px 20px;border-radius:7px}
+    canvas{display:block;image-rendering:pixelated;margin:auto}.timeline{display:flex;gap:10px;align-items:center;margin-top:14px}.timeline input{flex:1;min-width:0}.timeline output{min-width:80px;text-align:right;color:#b8d0ce}
+    #status{display:block;font-size:14px;color:#a8e9d8;margin-top:10px;min-height:24px}
+    .hint{font-size:13px;margin:12px 0 0}a{color:#9be5d8}.links{display:flex;gap:20px;flex-wrap:wrap;margin:16px 0;font-size:14px}
+    .note{font-size:13px;color:#92adaa;margin:8px 0}details{margin-top:18px}summary{cursor:pointer;color:#b8e0d8}
+    li{line-height:1.75;margin:8px 0}
+    #overview{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px}figure{margin:0}figure img{display:block;image-rendering:pixelated;background:#142b34}figcaption{margin:8px 0;color:#b8d0ce;font-size:13px}
+    @media(max-width:900px){.layout{grid-template-columns:1fr}.picker{display:grid;grid-template-columns:220px minmax(0,1fr);gap:20px}.controls{align-content:start}.picker h2{margin-bottom:10px}}
+    @media(max-width:540px){body{padding:12px}section{padding:12px}.picker{grid-template-columns:1fr}.compass{max-width:300px;margin:10px auto}.controls{grid-template-columns:1fr 1fr}.controls label{display:block}.controls select{display:block;max-width:100%;width:100%;margin-top:6px}.playback,.debug{grid-column:1/-1}.hint{display:none}h1{font-size:22px}}
+  </style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">YASUO / Q / DIRECTION PLAYER / V8</p>
+  <h1>亚索 Q · 可选方向展示</h1>
+  <p class="intro">使用你的八向图。朝下三向修正肘部弯曲：肘部稳定留在身体外侧，前臂顺着手腕出刀轨迹运动。</p>
+  <div class="layout">
+    <section class="picker" aria-label="方向与播放控制">
+      <div>
+        <h2>选择施法方向</h2>
+        <div class="compass" role="group" aria-label="八向方向选择">
+          <button data-direction="nw" aria-label="选择左上方向" aria-pressed="false" disabled>↖ 左上</button>
+          <button data-direction="n" aria-label="选择正上方向" aria-pressed="false" disabled>↑ 正上</button>
+          <button data-direction="ne" aria-label="选择右上方向" aria-pressed="false" disabled>↗ 右上</button>
+          <button data-direction="w" aria-label="选择正左方向" aria-pressed="false" disabled>← 正左</button>
+          <span class="compass-center" aria-hidden="true">亚索</span>
+          <button data-direction="e" aria-label="选择正右方向" aria-pressed="true" disabled>→ 正右</button>
+          <button data-direction="sw" aria-label="选择左下方向" aria-pressed="false" disabled>↙ 左下</button>
+          <button data-direction="s" aria-label="选择正下方向" aria-pressed="false" disabled>↓ 正下</button>
+          <button data-direction="se" aria-label="选择右下方向" aria-pressed="false" disabled>↘ 右下</button>
+        </div>
+      </div>
+      <div class="controls">
+        <label>方向 <select id="direction" aria-label="展示方向" disabled></select></label>
+        <label>速度 <select id="speed" aria-label="动画速度" disabled><option value="1">正常速度</option><option value="0.5">0.5× 慢放</option><option value="0.25">0.25× 慢放</option></select></label>
+        <label>像素倍率 <select id="zoom" aria-label="像素倍率" disabled><option value="1">1× 原始尺寸</option><option value="2" selected>2× 整数放大</option></select></label>
+        <div class="playback"><button id="once" disabled>单次</button><button id="loop" disabled>循环</button><button id="pause" disabled>暂停</button></div>
+        <label class="debug"><span><input id="joints" type="checkbox" disabled> 显示腰肩肘腕</span></label>
+        <p class="hint">切换方向后从头播放；拖动进度条可以停在任意动作位置。窄屏可选择 1× 查看完整画面。</p>
+      </div>
+    </section>
+    <section aria-label="选中方向动画">
+      <div class="stage-heading"><h2 id="selected-name">正右 · E</h2><span class="badge">480ms 戳刺</span></div>
+      <div class="viewport"><canvas id="selected" width="576" height="512" aria-label="正右方向的亚索 Q 动画"></canvas></div>
+      <div class="timeline"><label for="scrub">进度</label><input id="scrub" aria-label="动作进度" type="range" min="0" max="480" step="1" value="0" disabled><output id="time">0 / 480ms</output></div>
+      <output id="status" role="status">正在加载八向素材…</output>
+    </section>
+  </div>
+  <div class="links"><a id="download" hidden>下载当前方向 WebP</a><a href="../q-v7-user-linked/index.html">V7 旧版联动对照 / 地图检查</a><a href="/">返回游戏</a></div>
+  <p class="note">左下、正下、右下单独设置肘部弯曲侧与收手／刺出落点，整个动作不跳换弯曲侧。其他五向与原始身体图保持不变；尚未接入主游戏。</p>
+  <details><summary>当前分层动作是怎样动起来的？</summary>
+    <p>这是程序驱动的 2D 分层样稿，不是 3D 模型，也不是每一帧重新绘制整个人物。</p>
+    <ol>
+      <li>身体：选择对应的八向静态图。以腰带为界，腿脚保持固定，上半身做轻微倾斜，形成蓄力与出刀的身体带动。</li>
+      <li>手臂：上臂和“前臂＋握刀手”是独立贴图。先给手腕安排收手、刺出、回收的位置，再按固定臂长计算肘点；肩点跟着上半身一起移动。手腕轨迹与肘部弯曲侧分别控制，朝下三向使用固定的外侧肘点解，避免反折与突然翻边。</li>
+      <li>刀：刀柄固定在握刀手的同一个连接点，整把刀随手移动，并沿施法方向朝向。风也沿刀身的坐标移动，在前后两层流动。</li>
+      <li>遮挡：正面五向先画身体，再画上臂、前臂和刀；背面方向把手臂和刀画在身体后面，用身体遮住远侧部分。</li>
+      <li>时间：0–120ms 蓄力，120–190ms 快速刺出，190–240ms 短暂停留，240–480ms 收刀。每帧重新算位置、转角并叠画；循环时再加 920ms 休止。</li>
+    </ol>
+    <p>勾选“显示腰肩肘腕”并拖动进度条，能看到关节如何联动。当前头发、衣服和原图里的另一只手并没有独立骨骼；它们仍随身体层一起变形，所以只能做轻度动作，不能替代完整的逐帧动作设计。</p>
+  </details>
+  <details><summary>展开八向 WebP 循环总览</summary><div id="overview"></div></details>
+  <details><summary>导出当前八向修正版透明帧图</summary><p><button id="export-fix" disabled>准备修正版帧图</button> <a id="fixed-frames" download="yasuo-q-v8-fixed-atlas.png" hidden>下载修正版帧图</a></p></details>
+</main>
+<script type="module" src="./preview.ts"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>亚索 W · 单次横斩人物动画</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;color:#e0edf1;background:#0d171d}body{margin:0;padding:24px}main{max-width:1000px;margin:auto}.eyebrow{color:#81cbd7;font-size:12px;letter-spacing:2px}h1{font-size:27px;margin:10px 0}p{color:#a0b7c0;line-height:1.7}a{color:#8dd4e6}.stage{border:1px solid #36515b;border-radius:12px;padding:22px;display:flex;justify-content:center;overflow:auto;background:#192c32}canvas,img{image-rendering:pixelated}canvas{flex:none;background:repeating-conic-gradient(#192a30 0% 25%,#1d3037 0% 50%) 50% / 20px 20px}button,select{border:1px solid #40616f;border-radius:6px;background:#223944;color:#e6f6fa;padding:10px 13px;cursor:pointer}button:hover{background:#345360}.primary{background:#28667d}.controls{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:15px 0}label{display:inline-flex;align-items:center;gap:6px}.timeline{width:100%;accent-color:#89d0e2}.status{display:flex;justify-content:space-between;color:#a8d5e2}.note{border-left:3px solid #528c9e;padding:10px 16px;background:#13232b;font-size:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.grid figure{margin:0;background:#172a32;padding:8px;border:1px solid #2c4753;border-radius:6px;overflow:auto}.grid figcaption{font-size:12px;color:#9bb9c6;padding-top:6px}details{margin-top:22px;border-top:1px solid #29414d;padding-top:14px}summary{cursor:pointer;color:#a9c9d5}.small{font-size:12px}@media(max-width:600px){body{padding:12px}.stage{padding:10px}}
+</style></head><body><main>
+<div class="eyebrow">YASUO / WIND WALL CAST / NEW FULL-BODY ANIMATION</div>
+<h1>W · 正右方向单次横斩</h1>
+<p>新生成的完整人物帧动画，不使用旧 Q 的戳刺动作或分层手臂。<br>先看人物横斩与蓝色刀光，暂不加入风墙，也不改主游戏。</p>
+<div class="stage"><canvas id="animation" aria-label="亚索正右方向横斩人物动画"></canvas></div>
+<div class="controls"><button class="primary" id="once">播放一次</button><button id="loop">循环观看</button><button id="pause">暂停</button><label>速度<select id="speed"><option value="1">1× 原速</option><option value="0.5">0.5× 慢放</option><option value="1.5">1.5× 快速</option></select></label><label>缩放<select id="zoom"><option value="2">2× 像素</option><option value="1">1× 原像素</option></select></label></div>
+<div class="status"><output id="status">正在加载动画</output><output id="time"></output></div>
+<input id="scrub" class="timeline" type="range" min="0" max="7" value="0" step="1" aria-label="逐帧查看">
+<p class="note">这一版停在横斩后的持刀收势，尚未补回初始蓄力姿势，因此默认只播放一次。“循环观看”用于反复检查，不是无缝循环。风墙留待后续接在横斩送风时刻。</p>
+<div class="controls"><a id="download" download="yasuo-w-horizontal-e.webp">下载人物动画 WebP</a><a id="atlas" download="yasuo-w-horizontal-e-atlas.png">下载透明帧图</a></div>
+<details><summary>展开逐帧检查</summary><div id="frames" class="grid"></div></details>
+<details><summary>查看本次生成提示词与设置</summary><p id="prompt"></p><p id="settings" class="small"></p></details>
+<p class="small"><a href="/">返回主游戏</a> · 独立动作试版，未接入 W 技能逻辑。</p>
+</main><script type="module" src="./preview.ts"></script></body></html>

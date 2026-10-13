@@ -1,0 +1,225 @@
+{
+  "directions": [
+    {
+      "direction": "e",
+      "path": "export/q-e-wind.webp",
+      "atlas": "export/q-e-wind-atlas.png",
+      "width": 384,
+      "height": 320,
+      "anchor": [
+        192,
+        200
+      ],
+      "source_frames": 31,
+      "encoded_frames": 31,
+      "duration_ms": 1400,
+      "cast_duration_ms": 480,
+      "alpha": true,
+      "edge_contact_frames": []
+    },
+    {
+      "direction": "se",
+      "path": "export/q-se-wind.webp",
+      "atlas": "export/q-se-wind-atlas.png",
+      "width": 384,
+      "height": 320,
+      "anchor": [
+        192,
+        200
+      ],
+      "source_frames": 31,
+      "encoded_frames": 31,
+      "duration_ms": 1400,
+      "cast_duration_ms": 480,
+      "alpha": true,
+      "edge_contact_frames": []
+    },
+    {
+      "direction": "s",
+      "path": "export/q-s-wind.webp",
+      "atlas": "export/q-s-wind-atlas.png",
+      "width": 384,
+      "height": 320,
+      "anchor": [
+        192,
+        200
+      ],
+      "source_frames": 31,
+      "encoded_frames": 31,
+      "duration_ms": 1400,
+      "cast_duration_ms": 480,
+      "alpha": true,
+      "edge_contact_frames": []
+    },
+    {
+      "direction": "sw",
+      "path": "export/q-sw-wind.webp",
+      "atlas": "export/q-sw-wind-atlas.png",
+      "width": 384,
+      "height": 320,
+      "anchor": [
+        192,
+        200
+      ],
+      "source_frames": 31,
+      "encoded_frames": 31,
+      "duration_ms": 1400,
+      "cast_duration_ms": 480,
+      "alpha": true,
+      "edge_contact_frames": []
+    },
+    {
+      "direction": "w",
+      "path": "export/q-w-wind.webp",
+      "atlas": "export/q-w-wind-atlas.png",
+      "width": 384,
+      "height": 320,
+      "anchor": [
+        192,
+        200
+      ],
+      "source_frames": 31,
+      "encoded_frames": 31,
+      "duration_ms": 1400,
+      "cast_duration_ms": 480,
+      "alpha": true,
+      "edge_contact_frames": []
+    },
+    {
+      "direction": "nw",
+      "path": "export/q-nw-wind.webp",
+      "atlas": "export/q-nw-wind-atlas.png",
+      "width": 384,
+      "height": 320,
+      "anchor": [
+        192,
+        200
+      ],
+      "source_frames": 31,
+      "encoded_frames": 31,
+      "duration_ms": 1400,
+      "cast_duration_ms": 480,
+      "alpha": true,
+      "edge_contact_frames": []
+    },
+    {
+      "direction": "n",
+      "path": "export/q-n-wind.webp",
+      "atlas": "export/q-n-wind-atlas.png",
+      "width": 384,
+      "height": 320,
+      "anchor": [
+        192,
+        200
+      ],
+      "source_frames": 31,
+      "encoded_frames": 31,
+      "duration_ms": 1400,
+      "cast_duration_ms": 480,
+      "alpha": true,
+      "edge_contact_frames": []
+    },
+    {
+      "direction": "ne",
+      "path": "export/q-ne-wind.webp",
+      "atlas": "export/q-ne-wind-atlas.png",
+      "width": 384,
+      "height": 320,
+      "anchor": [
+        192,
+        200
+      ],
+      "source_frames": 31,
+      "encoded_frames": 31,
+      "duration_ms": 1400,
+      "cast_duration_ms": 480,
+      "alpha": true,
+      "edge_contact_frames": []
+    }
+  ],
+  "frame_durations_ms": [
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    920
+  ],
+  "sample_times_ms": [
+    0,
+    16,
+    32,
+    48,
+    64,
+    80,
+    96,
+    112,
+    128,
+    144,
+    160,
+    176,
+    192,
+    208,
+    224,
+    240,
+    256,
+    272,
+    288,
+    304,
+    320,
+    336,
+    352,
+    368,
+    384,
+    400,
+    416,
+    432,
+    448,
+    464,
+    480
+  ],
+  "atlas_columns": 4,
+  "atlas_rows": 8,
+  "source_motion": "../q-v8-direction-picker/rig.ts",
+  "source_weapon": "../q-v10-sword-wind-only/media/yasuo-q-sword-wind.webp",
+  "source_weapon_job": "job_e0da79854e6541d6ad7ae2282376fb24",
+  "weapon_grip": [
+    38,
+    104
+  ],
+  "weapon_scale_x": 0.9428571428571428,
+  "weapon_source_rect": [
+    19,
+    93,
+    164,
+    24
+  ],
+  "weapon_phase": "one 2000ms source cycle mapped to 480ms cast, frame zero during rest",
+  "generation_jobs": 0,
+  "integrated_into_main_game": false
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "job_id": "job_ea9b9bdfe5434dffbd03bf1e2e278dcb",
+    "id": "low-guard",
+    "bounds": [
+      18,
+      29,
+      127,
+      132
+    ],
+    "alpha_levels": 2
+  },
+  {
+    "job_id": "job_959a3e0ce91c4c86b136d4480cc24335",
+    "id": "g1-a-impact",
+    "bounds": [
+      16,
+      29,
+      129,
+      132
+    ],
+    "alpha_levels": 2
+  },
+  {
+    "job_id": "job_9edc434e1b0f42beb10d2e4ce6bb0feb",
+    "id": "g1-b-impact",
+    "bounds": [
+      22,
+      29,
+      123,
+      132
+    ],
+    "alpha_levels": 2
+  },
+  {
+    "job_id": "job_e2115d36d0014091bf387f4dd2337b58",
+    "id": "g2-a-impact",
+    "bounds": [
+      7,
+      29,
+      136,
+      132
+    ],
+    "alpha_levels": 2
+  },
+  {
+    "job_id": "job_f36ba0aa59dd43ed86c6fda0ee9c7641",
+    "id": "g2-b-impact",
+    "bounds": [
+      32,
+      29,
+      113,
+      132
+    ],
+    "alpha_levels": 2
+  },
+  {
+    "job_id": "job_32391bb22ede4c3a85b90bacb54feda8",
+    "id": "g3-a-impact",
+    "bounds": [
+      19,
+      29,
+      126,
+      132
+    ],
+    "alpha_levels": 2
+  },
+  {
+    "job_id": "job_92bc3f60e6b142118a06a8e428ef3ccc",
+    "id": "g3-b-impact",
+    "bounds": [
+      27,
+      27,
+      116,
+      132
+    ],
+    "alpha_levels": 2
+  },
+  {
+    "job_id": "job_39a90e50c1924e4eb883d1bed7bb7f4b",
+    "id": "g2-b-impact-repaired",
+    "bounds": [
+      5,
+      30,
+      141,
+      132
+    ],
+    "alpha_levels": 2
+  }
+]

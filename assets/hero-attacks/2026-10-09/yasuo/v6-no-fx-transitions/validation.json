@@ -1,0 +1,107 @@
+{
+  "files": [
+    {
+      "variant": "a",
+      "role": "transparent",
+      "size": [
+        192,
+        192
+      ],
+      "frame_count": 73,
+      "duration_ms": 3000,
+      "loop": 0,
+      "edge_contact_frames": [],
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v6-no-fx-transitions/clips/a-remove-fx/删除动画每一帧中附加的蓝色_白色弧形刀光_发光轨迹和残影_只保留角色手中真实_df79cbb8/frames_edit.webp"
+    },
+    {
+      "variant": "a",
+      "role": "sheet",
+      "size": [
+        14016,
+        192
+      ],
+      "valid_cells": 73,
+      "png_webp_visible_pixels_identical": true,
+      "frame_timing_identical_to_original": true,
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v6-no-fx-transitions/clips/a-remove-fx/删除动画每一帧中附加的蓝色_白色弧形刀光_发光轨迹和残影_只保留角色手中真实_df79cbb8/sprite_sheet.png"
+    },
+    {
+      "variant": "b",
+      "role": "transparent",
+      "size": [
+        192,
+        192
+      ],
+      "frame_count": 73,
+      "duration_ms": 3000,
+      "loop": 0,
+      "edge_contact_frames": [],
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v6-no-fx-transitions/clips/b-to-a/Yasuo_performs_exactly_one_downward_sword_slash_on_the_right_side_of_the_screen_from_the_high_guard_in_the_fir_4d020548/meowa_animation.webp"
+    },
+    {
+      "variant": "b",
+      "role": "background",
+      "size": [
+        192,
+        192
+      ],
+      "frame_count": 73,
+      "duration_ms": 3000,
+      "loop": 0,
+      "edge_contact_frames": [],
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v6-no-fx-transitions/clips/b-to-a/Yasuo_performs_exactly_one_downward_sword_slash_on_the_right_side_of_the_screen_from_the_high_guard_in_the_fir_4d020548/meowa_animation_background.webp"
+    }
+  ],
+  "seams": {
+    "a_to_b": {
+      "mean_rgb_error": 3.539921513310185,
+      "alpha_identical": false
+    },
+    "b_to_a": {
+      "mean_rgb_error": 3.1532841435185186,
+      "alpha_identical": false
+    }
+  },
+  "visual_acceptance": "no_fx_pass_style_mismatch",
+  "effect_constraint_pass": true,
+  "style_consistency_pass": false,
+  "reviewed_native_frames": {
+    "upward": 73,
+    "downward": 73
+  },
+  "technical_checks": {
+    "binary_alpha": true,
+    "no_empty_frames": true,
+    "png_webp_pixels_identical": true,
+    "edited_timing_preserved": true
+  },
+  "browser_checks": {
+    "tab_id": "32",
+    "single_upward_stops_on_last_frame": true,
+    "single_downward_stops_on_last_frame": true,
+    "pair_one_shot_stops_on_last_frame": true,
+    "loop_and_seam_navigation": true,
+    "complete_native_3s_cycles_played": true,
+    "animated_media_loaded": 3,
+    "frame_gallery_cells": 146,
+    "horizontal_overflow": false,
+    "console_errors_or_warnings": 0,
+    "display": "2x nearest-neighbor, 1x frame gallery"
+  },
+  "tests": {
+    "passed": 79,
+    "files": 11,
+    "preview_typescript": "pass",
+    "project_build": "pass"
+  },
+  "runtime_integrated": false,
+  "production_ready": false,
+  "paid_generations": 4,
+  "total_credits_consumed": 165,
+  "limitations": [
+    "Upward no-effects edit redraws clothing and face; must not be promoted as production-ready.",
+    "Generated end holds are long; A/B seams are not pixel-identical.",
+    "The keyframe retry has white trails, so it is not used in the no-effects preview."
+  ],
+  "proof": "docs/screenshots/yasuo-no-fx-ab-preview.png"
+}

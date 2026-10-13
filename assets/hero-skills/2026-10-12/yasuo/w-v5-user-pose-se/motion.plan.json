@@ -1,0 +1,14 @@
+{
+  "command": "animate-run",
+  "recovery_command": "animate-poll",
+  "recovery_id_flag": "--api-job-id",
+  "args": [
+    "--image-file", "assets/hero-skills/2026-10-12/yasuo/w-v5-user-pose-se/source.png",
+    "--prompt", "亚索保持参考图的右下朝向，腰肩带动持刀手臂向身前水平横扫一次，刀锋拖出一道短暂纤细的淡蓝色弧形刀光，随后自然收势回到起始姿势。双脚站稳，动作干脆流畅，镜头固定。只画人物与刀光，不画风墙，不做戳刺或连续挥砍。",
+    "--output-frames", "8", "--output-format", "webp", "--animation-type", "attack",
+    "--animation-model", "pixel-engine-v1.1", "--intelligence", "advanced", "--optimize-prompt",
+    "--remove-bg-method", "standard", "--color-count", "64",
+    "--padding-top", "8", "--padding-down", "8", "--padding-left", "16", "--padding-right", "48"
+  ],
+  "output_dir": "assets/hero-skills/2026-10-12/yasuo/w-v5-user-pose-se/generated-motion"
+}

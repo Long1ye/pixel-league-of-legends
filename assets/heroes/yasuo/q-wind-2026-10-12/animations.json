@@ -1,0 +1,195 @@
+{
+  "version": "v11-eight-wind-blade",
+  "cast_duration_ms": 480,
+  "sample_step_ms": 16,
+  "scale_in_world": 0.28888888888888886,
+  "visible_body_height_in_world": 26,
+  "clips": [
+    {
+      "direction": "e",
+      "key": "yasuo-q-e-wind",
+      "sheet": "q-e-wind.png",
+      "width": 228,
+      "height": 94,
+      "anchor": [
+        47,
+        91
+      ],
+      "frame_count": 31,
+      "columns": 4,
+      "rows": 8,
+      "source_crop": [
+        145,
+        109,
+        373,
+        203
+      ],
+      "source_atlas": "assets/hero-skills/2026-10-12/yasuo/q-v11-eight-wind-blade/export/q-e-wind-atlas.png",
+      "source_sha256": "efdc903da59d3c891bdc696cf885229d1413f1e0a20e13e34e61784fc93e460d",
+      "source_pixels_preserved": true
+    },
+    {
+      "direction": "se",
+      "key": "yasuo-q-se-wind",
+      "sheet": "q-se-wind.png",
+      "width": 157,
+      "height": 146,
+      "anchor": [
+        41,
+        92
+      ],
+      "frame_count": 31,
+      "columns": 4,
+      "rows": 8,
+      "source_crop": [
+        151,
+        108,
+        308,
+        254
+      ],
+      "source_atlas": "assets/hero-skills/2026-10-12/yasuo/q-v11-eight-wind-blade/export/q-se-wind-atlas.png",
+      "source_sha256": "93acad68bfd836e90fc354b0c5c4d191f7649344a79043833fc52a8bdd0e7149",
+      "source_pixels_preserved": true
+    },
+    {
+      "direction": "s",
+      "key": "yasuo-q-s-wind",
+      "sheet": "q-s-wind.png",
+      "width": 69,
+      "height": 175,
+      "anchor": [
+        33,
+        92
+      ],
+      "frame_count": 31,
+      "columns": 4,
+      "rows": 8,
+      "source_crop": [
+        159,
+        108,
+        228,
+        283
+      ],
+      "source_atlas": "assets/hero-skills/2026-10-12/yasuo/q-v11-eight-wind-blade/export/q-s-wind-atlas.png",
+      "source_sha256": "6bb774eaa49030ebfdd7e57f48eaa747099aceb1ea286e6dacdc9d4c5db7578b",
+      "source_pixels_preserved": true
+    },
+    {
+      "direction": "sw",
+      "key": "yasuo-q-sw-wind",
+      "sheet": "q-sw-wind.png",
+      "width": 156,
+      "height": 151,
+      "anchor": [
+        116,
+        92
+      ],
+      "frame_count": 31,
+      "columns": 4,
+      "rows": 8,
+      "source_crop": [
+        76,
+        108,
+        232,
+        259
+      ],
+      "source_atlas": "assets/hero-skills/2026-10-12/yasuo/q-v11-eight-wind-blade/export/q-sw-wind-atlas.png",
+      "source_sha256": "80fca78836fb4e302c7ab7f1697a78263961f95eecddce595d8c5f30e3225721",
+      "source_pixels_preserved": true
+    },
+    {
+      "direction": "w",
+      "key": "yasuo-q-w-wind",
+      "sheet": "q-w-wind.png",
+      "width": 229,
+      "height": 94,
+      "anchor": [
+        180,
+        91
+      ],
+      "frame_count": 31,
+      "columns": 4,
+      "rows": 8,
+      "source_crop": [
+        12,
+        109,
+        241,
+        203
+      ],
+      "source_atlas": "assets/hero-skills/2026-10-12/yasuo/q-v11-eight-wind-blade/export/q-w-wind-atlas.png",
+      "source_sha256": "2f11826afcede4efc1f2c69eeb9b8eb04ed7bc9ba4eb8d899f6d8fdcda520bec",
+      "source_pixels_preserved": true
+    },
+    {
+      "direction": "nw",
+      "key": "yasuo-q-nw-wind",
+      "sheet": "q-nw-wind.png",
+      "width": 166,
+      "height": 142,
+      "anchor": [
+        120,
+        139
+      ],
+      "frame_count": 31,
+      "columns": 4,
+      "rows": 8,
+      "source_crop": [
+        72,
+        61,
+        238,
+        203
+      ],
+      "source_atlas": "assets/hero-skills/2026-10-12/yasuo/q-v11-eight-wind-blade/export/q-nw-wind-atlas.png",
+      "source_sha256": "f81da7865e21709382a1334c56af845cf55736e4b83c9e116dd144a7d51ca84e",
+      "source_pixels_preserved": true
+    },
+    {
+      "direction": "n",
+      "key": "yasuo-q-n-wind",
+      "sheet": "q-n-wind.png",
+      "width": 68,
+      "height": 171,
+      "anchor": [
+        30,
+        168
+      ],
+      "frame_count": 31,
+      "columns": 4,
+      "rows": 8,
+      "source_crop": [
+        162,
+        32,
+        230,
+        203
+      ],
+      "source_atlas": "assets/hero-skills/2026-10-12/yasuo/q-v11-eight-wind-blade/export/q-n-wind-atlas.png",
+      "source_sha256": "8ac3bbcd47b9e45a1bc51eeaa267e7177ca88f930da65c26592abd9b691c21ca",
+      "source_pixels_preserved": true
+    },
+    {
+      "direction": "ne",
+      "key": "yasuo-q-ne-wind",
+      "sheet": "q-ne-wind.png",
+      "width": 161,
+      "height": 143,
+      "anchor": [
+        46,
+        140
+      ],
+      "frame_count": 31,
+      "columns": 4,
+      "rows": 8,
+      "source_crop": [
+        146,
+        60,
+        307,
+        203
+      ],
+      "source_atlas": "assets/hero-skills/2026-10-12/yasuo/q-v11-eight-wind-blade/export/q-ne-wind-atlas.png",
+      "source_sha256": "bb87b618834f85ab4f38dafba22593431ca89d692e7883bf3c0517c8fdded8a5",
+      "source_pixels_preserved": true
+    }
+  ],
+  "new_generation_jobs": 0,
+  "tip_explosion": false
+}

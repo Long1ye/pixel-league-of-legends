@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_9764ff152020478f98c7b063a44957e0",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v11-walk-six\\variant-2\\clips\\repeat\\job_9764ff152020478f98c7b063a44957e0\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v11-walk-six\\variant-2\\clips\\repeat\\job_9764ff152020478f98c7b063a44957e0\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-10\\yasuo\\v11-walk-six\\variant-2\\clips\\repeat\\job_9764ff152020478f98c7b063a44957e0\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

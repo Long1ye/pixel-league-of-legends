@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "job_id": "job_192791e279ff446cbb111d20281fb8d2",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-09\\yasuo\\v6-no-fx-transitions\\clips\\a-remove-fx\\删除动画每一帧中附加的蓝色_白色弧形刀光_发光轨迹和残影_只保留角色手中真实_df79cbb8\\frames_edit.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-attacks\\2026-10-09\\yasuo\\v6-no-fx-transitions\\clips\\a-remove-fx\\删除动画每一帧中附加的蓝色_白色弧形刀光_发光轨迹和残影_只保留角色手中真实_df79cbb8\\sprite_sheet.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

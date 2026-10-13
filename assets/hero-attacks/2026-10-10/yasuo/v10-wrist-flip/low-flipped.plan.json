@@ -1,0 +1,26 @@
+{
+  "command": "image-edit-run",
+  "recovery_command": "general-image-poll",
+  "recovery_id_flag": "--job-id",
+  "args": [
+    "--reference-image",
+    "assets/hero-attacks/2026-10-10/yasuo/v10-wrist-flip/inputs/low.png",
+    "--reference-image",
+    "assets/hero-attacks/2026-10-10/yasuo/v10-wrist-flip/inputs/sword-reference.png",
+    "--prompt",
+    "只输出参考图1中的完整亚索人物。保持服装、发型、身体比例、双脚位置和刀柄位置不变，仅翻转持刀手腕，让刀身采用参考图2的翻面朝向，形成在最低点准备向上反手挥砍的姿势。保持原图176×176透明画布，不添加刀光。",
+    "--mode",
+    "pixel",
+    "--strict",
+    "--no-multi-pixelation",
+    "--generation-model",
+    "image-2.5",
+    "--resolution",
+    "1K",
+    "--quality",
+    "detailed",
+    "--remove-bg-method",
+    "standard"
+  ],
+  "output_dir": "assets/hero-attacks/2026-10-10/yasuo/v10-wrist-flip/poses/low-flipped"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_8ae6d5d0da184ec5ad16d8e25b686cb7",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-animations\\2026-10-09\\v2\\garen\\idle-nw\\角色保持输入图中的朝向_屏幕左上方_原地站立待机_双脚固定_轻微呼吸_披风随动作_4a36bd8b\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-animations\\2026-10-09\\v2\\garen\\idle-nw\\角色保持输入图中的朝向_屏幕左上方_原地站立待机_双脚固定_轻微呼吸_披风随动作_4a36bd8b\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-animations\\2026-10-09\\v2\\garen\\idle-nw\\角色保持输入图中的朝向_屏幕左上方_原地站立待机_双脚固定_轻微呼吸_披风随动作_4a36bd8b\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

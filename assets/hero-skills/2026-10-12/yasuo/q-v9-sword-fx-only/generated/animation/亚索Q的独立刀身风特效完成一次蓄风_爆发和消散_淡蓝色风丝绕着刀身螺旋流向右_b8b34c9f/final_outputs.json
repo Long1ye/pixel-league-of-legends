@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "job_id": "job_04d560ee768d48728e831ba98e6e133d",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v9-sword-fx-only\\generated\\animation\\亚索Q的独立刀身风特效完成一次蓄风_爆发和消散_淡蓝色风丝绕着刀身螺旋流向右_b8b34c9f\\meowa_animation.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v9-sword-fx-only\\generated\\animation\\亚索Q的独立刀身风特效完成一次蓄风_爆发和消散_淡蓝色风丝绕着刀身螺旋流向右_b8b34c9f\\meowa_animation_background.webp",
+      "mime_type": "image/webp"
+    }
+  ]
+}

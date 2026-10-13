@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_30f5dca737414ca9ab466e0f60fe8b0c",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\e-v3-draw-glide\\generated-motion\\亚索面朝右_从腰间抽出刀后压低身体向右滑行_低位持刀的手臂和刀保持稳定_前后_597116d4\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\e-v3-draw-glide\\generated-motion\\亚索面朝右_从腰间抽出刀后压低身体向右滑行_低位持刀的手臂和刀保持稳定_前后_597116d4\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\e-v3-draw-glide\\generated-motion\\亚索面朝右_从腰间抽出刀后压低身体向右滑行_低位持刀的手臂和刀保持稳定_前后_597116d4\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

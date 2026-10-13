@@ -1,0 +1,31 @@
+{
+  "status": "success",
+  "job_id": "job_b21e97ff8c7d4415b8ed9e1ad3a750be",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "media/parts-sheet.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/body.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/upper-arm.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/sword.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/forearm-hand.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

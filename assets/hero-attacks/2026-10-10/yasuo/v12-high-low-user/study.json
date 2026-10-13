@@ -1,0 +1,131 @@
+{
+  "hero": "yasuo",
+  "direction": "se",
+  "width": 176,
+  "height": 176,
+  "clips": [
+    {
+      "id": "A",
+      "name": "高位→低位",
+      "from_pose": 1,
+      "to_pose": 2,
+      "prompt": "亚索从高位挥砍到低位，动作自然流畅",
+      "prompt_author": "user",
+      "prompt_optimization": true,
+      "job_id": "job_7fac67738d8a47edab1908f6fde530d5",
+      "webp": "clips/animation-A/亚索从高位挥砍到低位_动作自然流畅/result_output_url.webp",
+      "frame_count": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "duration_ms": 800,
+      "columns": 3,
+      "rows": 3,
+      "edge_contact_frames": [],
+      "first_to_input": {
+        "mean_rgb_error": 1.4950499311294767,
+        "alpha_identical": false
+      },
+      "last_to_input": {
+        "mean_rgb_error": 1.7523351411845731,
+        "alpha_identical": false
+      },
+      "final_media": [
+        {
+          "label": "透明WebP",
+          "path": "clips/animation-A/亚索从高位挥砍到低位_动作自然流畅/result_output_url.webp"
+        },
+        {
+          "label": "透明GIF",
+          "path": "clips/animation-A/亚索从高位挥砍到低位_动作自然流畅/result_output_transparent_output_urls_gif.gif"
+        },
+        {
+          "label": "PNG图集",
+          "path": "clips/animation-A/亚索从高位挥砍到低位_动作自然流畅/result_output_transparent_output_urls_png.png"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "name": "低位→高位",
+      "from_pose": 2,
+      "to_pose": 1,
+      "prompt": "亚索从低位向上挥砍到高位，动作自然流畅",
+      "prompt_author": "user",
+      "prompt_optimization": true,
+      "job_id": "job_2f409d91839a429cbac15fd38eae9f6e",
+      "webp": "clips/animation-B/亚索从低位向上挥砍到高位_动作自然流畅/result_output_url.webp",
+      "frame_count": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "duration_ms": 800,
+      "columns": 3,
+      "rows": 3,
+      "edge_contact_frames": [],
+      "first_to_input": {
+        "mean_rgb_error": 1.6753400482093663,
+        "alpha_identical": false
+      },
+      "last_to_input": {
+        "mean_rgb_error": 1.8455040461432508,
+        "alpha_identical": false
+      },
+      "final_media": [
+        {
+          "label": "透明WebP",
+          "path": "clips/animation-B/亚索从低位向上挥砍到高位_动作自然流畅/result_output_url.webp"
+        },
+        {
+          "label": "透明GIF",
+          "path": "clips/animation-B/亚索从低位向上挥砍到高位_动作自然流畅/result_output_transparent_output_urls_gif.gif"
+        },
+        {
+          "label": "PNG图集",
+          "path": "clips/animation-B/亚索从低位向上挥砍到高位_动作自然流畅/result_output_transparent_output_urls_png.png"
+        }
+      ]
+    }
+  ],
+  "attack_loop_sequence": [
+    "A",
+    "B"
+  ],
+  "seams": [
+    {
+      "from": "A",
+      "to": "B",
+      "mean_rgb_error": 1.4478843836088153,
+      "alpha_identical": false
+    },
+    {
+      "from": "B",
+      "to": "A",
+      "mean_rgb_error": 1.4663502926997245,
+      "alpha_identical": false
+    }
+  ],
+  "credits_before": 6823,
+  "credits_after": 6733,
+  "credits_consumed": 90,
+  "review": "两段已按你的原文开启自动优化、独立生成，能进行A/B交替播放。端点姿势接近两张参考图，但并非像素完全一致；A第5帧有重复刀身，B第3–6帧出现明显白色刀光和绕身刀路，尚未达到无刀光、自然流畅的美术定稿要求。没有追加生成或擅自修改你的prompt。",
+  "visual_acceptance": "rejected_effects_and_blade_artifacts",
+  "production_ready": false,
+  "runtime_integrated": false,
+  "source_keyframes_preserved": true,
+  "optimized_prompt_text_returned": false
+}

@@ -1,0 +1,9 @@
+{
+  "command": "animation-edit-run",
+  "args": [
+    "--animation-file", "assets/hero-skills/2026-10-12/yasuo/eq-v1-se/media/e.webp",
+    "--prompt", "将这段动画改成独立的环形风刃特效：每一帧都完全去掉人物、武器和刀鞘，只保留淡蓝色斩击。保持原来的扁椭圆位置和展开、环绕、消散节奏，补全原先被人物挡住的弧线。将宽厚光带改成细窄、有锋利白色边缘和少量青蓝拖尾的风刃，中心完全透明，效果利落有力量但克制，不增加爆炸、闪电或大面积光晕。没有刀光的起止帧保持全透明。",
+    "--mode", "pixel", "--generation-speed", "normal", "--remove-bg-method", "standard"
+  ],
+  "output_dir": "assets/hero-skills/2026-10-12/yasuo/eq-v2-ring-only/generated-motion"
+}

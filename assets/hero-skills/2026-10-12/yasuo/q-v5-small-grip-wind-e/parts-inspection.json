@@ -1,0 +1,85 @@
+{
+  "parts": [
+    {
+      "role": "body",
+      "path": "media/body.png",
+      "dimensions": [
+        69,
+        94
+      ],
+      "alpha_bounds": [
+        2,
+        2,
+        67,
+        92
+      ],
+      "native_pixels_preserved": true,
+      "reused_from_v3": true,
+      "sha256": "89f9a133d6845605bc21dda05de864b1af56c4d299eeafe63b2e20a5bfc0ef09"
+    },
+    {
+      "role": "upper-arm",
+      "path": "media/upper-arm.png",
+      "dimensions": [
+        35,
+        20
+      ],
+      "alpha_bounds": [
+        2,
+        2,
+        33,
+        18
+      ],
+      "native_pixels_preserved": true,
+      "reused_from_v3": false,
+      "sha256": "b4c2c91ea70321ff83fe831511dc29338db0175272cedb65e8199375a01fab78"
+    },
+    {
+      "role": "forearm-hand",
+      "path": "media/forearm-hand.png",
+      "dimensions": [
+        34,
+        16
+      ],
+      "alpha_bounds": [
+        2,
+        2,
+        32,
+        14
+      ],
+      "native_pixels_preserved": true,
+      "reused_from_v3": false,
+      "sha256": "0bc45b268abde58035644e68cf207f3adaf7cd854a97af99159a325b4dcf9505"
+    },
+    {
+      "role": "wind-sword",
+      "path": "media/wind-sword.png",
+      "dimensions": [
+        114,
+        22
+      ],
+      "alpha_bounds": [
+        2,
+        2,
+        112,
+        20
+      ],
+      "native_pixels_preserved": true,
+      "reused_from_v3": false,
+      "sha256": "d84ea9eb3e59497c891fa9e96b4432c31dbed5064a8d2ba565e626e6d5a366cf"
+    }
+  ],
+  "sheet_byte_exact": true,
+  "review": "Compact closed fist, smaller native arm parts and pale blue wind-covered blade; body preserved byte-exact.",
+  "previous_arm_canvases": {
+    "upper-arm": [
+      44,
+      25
+    ],
+    "forearm-hand": [
+      45,
+      19
+    ]
+  },
+  "billing": "No charge inferred without a final bill."
+}

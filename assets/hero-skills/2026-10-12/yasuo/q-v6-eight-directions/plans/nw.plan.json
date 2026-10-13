@@ -1,0 +1,24 @@
+{
+  "command": "image-edit-run",
+  "recovery_command": "pixel-gen-poll",
+  "output_dir": "meowa-output/yasuo-q-v6-body-nw",
+  "args": [
+    "--reference-image",
+    "assets/hero-skills/2026-10-12/yasuo/q-v6-eight-directions/references/idle-nw-prepared.png",
+    "--reference-image",
+    "assets/hero-skills/2026-10-12/yasuo/q-v5-small-grip-wind-e/media/parts-sheet.png",
+    "--prompt",
+    "仅编辑参考图1左侧的亚索：朝屏幕左上方，背向镜头偏左，保持参考图1的背面与左侧。头部、躯干和双脚不转向，保留原来的发型、蓝围巾、单侧肩甲、服装和像素大小。为Q戳刺制作无持刀右臂的身体底图：去掉角色的持刀右臂和它握着的刀，补齐肩根和衣服，另一只手与腰侧刀鞘保留。右臂之后会单独绑定，因此身体上不要残留右手或多余的刀。参考图2只用来统一身体设计和比例。只画一个完整身体，右半画布保持空白，不画手臂零件、武器、风效、刀光或文字，透明背景。",
+    "--mode",
+    "pixel",
+    "--strict",
+    "--generation-model",
+    "image-2.5",
+    "--resolution",
+    "1K",
+    "--quality",
+    "detailed",
+    "--remove-bg-method",
+    "standard"
+  ]
+}

@@ -1,0 +1,798 @@
+{
+  "jobId": "job_e0da79854e6541d6ad7ae2282376fb24",
+  "dimensions": [
+    213,
+    213
+  ],
+  "frameCount": 56,
+  "durationMs": 2000,
+  "webpLoop": 0,
+  "hasTransparentBackgroundInEveryFrame": true,
+  "frames": [
+    {
+      "frame": 0,
+      "bounds": [
+        20,
+        96,
+        179,
+        114
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 1,
+      "bounds": [
+        20,
+        96,
+        179,
+        114
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 2,
+      "bounds": [
+        20,
+        96,
+        178,
+        114
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 3,
+      "bounds": [
+        20,
+        95,
+        180,
+        114
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 4,
+      "bounds": [
+        20,
+        95,
+        181,
+        114
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 5,
+      "bounds": [
+        20,
+        95,
+        179,
+        114
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 6,
+      "bounds": [
+        20,
+        95,
+        181,
+        115
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 7,
+      "bounds": [
+        21,
+        95,
+        182,
+        115
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 8,
+      "bounds": [
+        20,
+        94,
+        182,
+        115
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 9,
+      "bounds": [
+        20,
+        94,
+        183,
+        115
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 10,
+      "bounds": [
+        20,
+        93,
+        183,
+        115
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 11,
+      "bounds": [
+        20,
+        93,
+        183,
+        115
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 12,
+      "bounds": [
+        20,
+        93,
+        183,
+        116
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 13,
+      "bounds": [
+        20,
+        93,
+        183,
+        116
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 14,
+      "bounds": [
+        20,
+        93,
+        183,
+        116
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 15,
+      "bounds": [
+        20,
+        93,
+        178,
+        116
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 16,
+      "bounds": [
+        20,
+        93,
+        177,
+        117
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 17,
+      "bounds": [
+        19,
+        93,
+        177,
+        117
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 18,
+      "bounds": [
+        20,
+        93,
+        177,
+        116
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 19,
+      "bounds": [
+        19,
+        93,
+        177,
+        115
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 20,
+      "bounds": [
+        19,
+        93,
+        177,
+        116
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 21,
+      "bounds": [
+        20,
+        93,
+        179,
+        115
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 22,
+      "bounds": [
+        20,
+        94,
+        178,
+        115
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 23,
+      "bounds": [
+        19,
+        95,
+        179,
+        115
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 24,
+      "bounds": [
+        20,
+        95,
+        177,
+        114
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 25,
+      "bounds": [
+        20,
+        95,
+        176,
+        114
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 26,
+      "bounds": [
+        20,
+        96,
+        176,
+        114
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 27,
+      "bounds": [
+        20,
+        96,
+        176,
+        114
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 28,
+      "bounds": [
+        20,
+        96,
+        177,
+        113
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 29,
+      "bounds": [
+        20,
+        96,
+        176,
+        113
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 30,
+      "bounds": [
+        20,
+        96,
+        175,
+        113
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 31,
+      "bounds": [
+        20,
+        95,
+        179,
+        113
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 32,
+      "bounds": [
+        20,
+        95,
+        179,
+        114
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 33,
+      "bounds": [
+        20,
+        94,
+        178,
+        114
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 34,
+      "bounds": [
+        20,
+        94,
+        181,
+        115
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 35,
+      "bounds": [
+        20,
+        94,
+        180,
+        115
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 36,
+      "bounds": [
+        20,
+        93,
+        180,
+        116
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 37,
+      "bounds": [
+        20,
+        93,
+        181,
+        116
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 38,
+      "bounds": [
+        20,
+        93,
+        181,
+        116
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 39,
+      "bounds": [
+        19,
+        93,
+        181,
+        116
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 40,
+      "bounds": [
+        20,
+        93,
+        182,
+        116
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 41,
+      "bounds": [
+        19,
+        93,
+        183,
+        116
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 42,
+      "bounds": [
+        20,
+        93,
+        183,
+        116
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 43,
+      "bounds": [
+        20,
+        93,
+        177,
+        116
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 44,
+      "bounds": [
+        20,
+        93,
+        177,
+        116
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 45,
+      "bounds": [
+        20,
+        94,
+        177,
+        115
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 46,
+      "bounds": [
+        20,
+        94,
+        177,
+        116
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 47,
+      "bounds": [
+        19,
+        95,
+        177,
+        115
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 48,
+      "bounds": [
+        20,
+        96,
+        177,
+        115
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 49,
+      "bounds": [
+        20,
+        96,
+        177,
+        115
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 50,
+      "bounds": [
+        20,
+        96,
+        178,
+        115
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 51,
+      "bounds": [
+        20,
+        96,
+        177,
+        113
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 52,
+      "bounds": [
+        20,
+        96,
+        177,
+        113
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 53,
+      "bounds": [
+        20,
+        95,
+        181,
+        113
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 54,
+      "bounds": [
+        20,
+        95,
+        181,
+        113
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    },
+    {
+      "frame": 55,
+      "bounds": [
+        20,
+        95,
+        181,
+        114
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeContact": false
+    }
+  ],
+  "scope": "standalone preview only; existing directional assets and gameplay untouched"
+}

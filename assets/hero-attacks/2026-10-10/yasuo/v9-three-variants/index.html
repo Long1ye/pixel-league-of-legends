@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>亚索 · 三版 A/B 挥刀对比</title>
+  <style>
+    :root { color-scheme: dark; font-family: "Microsoft YaHei", system-ui, sans-serif; background: #0d191f; color: #dfedf1; --sprite:176px; --card:198px; --grid:614px; }
+    * { box-sizing: border-box; } body { margin:0; padding:12px; } main { max-width:1240px; margin:auto; }
+    h1 { font-size:26px; margin:8px 0; } h2 { font-size:18px; } h3 { font-size:15px; } p { line-height:1.65; color:#afc5cf; }
+    a { color:#89ded3; } .tag { color:#d6b77f; letter-spacing:.1em; font-size:11px; }
+    button, select { font:inherit; background:#19333d; color:#e3f0f4; border:1px solid #42616d; border-radius:6px; padding:7px 9px; cursor:pointer; }
+    button:disabled { opacity:.5; cursor:wait; } .toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0; }
+    .panel, article { border:1px solid #2d4a58; background:#122731; border-radius:10px; padding:10px; }
+    .overflow { overflow-x:auto; } .variants { display:grid; grid-template-columns:repeat(3,minmax(var(--card),1fr)); gap:10px; min-width:var(--grid); }
+    .stage { width:var(--sprite); height:var(--sprite); margin:10px auto; background:#193239; }
+    .stage canvas { width:var(--sprite); height:var(--sprite); }
+    .checker { background-color:#192d38; background-image:conic-gradient(#294653 25%,transparent 0 50%,#294653 0 75%,transparent 0); background-size:16px 16px; }
+    .pixel { image-rendering:pixelated; image-rendering:crisp-edges; } canvas { display:block; } output { color:#97dccc; font-size:13px; }
+    .review { border-left:2px solid #c2a16a; padding-left:9px; color:#d6c193; font-size:13px; }
+    .scrub { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0; } #scrub { flex:1; min-width:150px; }
+    .downloads { display:flex; gap:8px; flex-wrap:wrap; font-size:12px; margin-bottom:12px; }
+    details { margin:12px 0; } summary { cursor:pointer; } .raw { width:176px; height:176px; margin:8px 0; }
+    .frames { display:grid; grid-template-columns:repeat(auto-fit,178px); gap:10px; margin:14px 0; }
+    .frame { border:1px solid #355261; width:max-content; } .frame.selected { border-color:#e0b675; }
+    .frame button { width:100%; font-size:12px; padding:5px; border-radius:0; }
+    blockquote { margin:12px 0; border-left:2px solid #42616d; padding-left:10px; font-size:14px; }
+    footer { font-size:13px; margin-top:18px; } .controls { margin:16px 0; }
+  </style>
+</head><body><main>
+  <div class="tag">YASUO / THREE VERSIONS / SAME USER PROMPTS</div>
+  <h1>亚索 · 三版 A/B 挥刀对比</h1>
+  <p>A：第二次挥刀，图1→图2 · B：第一次挥刀，图2→图1。三版使用相同参考图、prompt 和参数，分别独立生成。</p>
+  <p id="facts">素材加载中…</p>
+  <div class="toolbar">
+    <button id="loop" disabled>A⇄B 循环</button><button id="once" disabled>A→B 各一次</button>
+    <button id="only-A" disabled>只播放 A 一次</button><button id="only-B" disabled>只播放 B 一次</button>
+    <label>速度 <select id="rate" aria-label="播放速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label>
+    <label>像素倍率 <select id="zoom" aria-label="像素倍率"><option value="1" selected>1×</option><option value="2">2×</option></select></label>
+  </div>
+  <div class="overflow"><div id="variants" class="variants"></div></div>
+  <section class="panel controls">
+    <div class="scrub"><button id="play" disabled>暂停</button><button id="previous" disabled>上一帧</button><button id="next" disabled>下一帧</button>
+      <label for="scrub">同步逐帧</label><input id="scrub" type="range" min="0" max="15" value="0" disabled /><output id="status">加载中</output></div>
+    <button id="background" aria-pressed="true">切换棋盘背景</button>
+    <p class="review" id="review"></p>
+    <p>原速同步起播，保留原始帧序、时长和像素。1×便于三版并排比较，2×会扩大展示并允许横向滚动；不平滑缩放、不倒放、不删帧、不重画。</p>
+    <details><summary>用户原始 prompt（自动优化开启）</summary><div id="prompts"></div></details>
+    <details><summary>查看全部48帧</summary><div id="frames"></div></details>
+    <details><summary>比较三版循环接缝</summary><div id="seams"></div></details>
+  </section>
+  <footer><p id="credits"></p><p>本页只展示本轮新增的三组、共六段动画。尚未扩展八向或接入对局。</p>
+    <a href="../v8-user-ab/index.html">查看上一版</a> · <a href="/">返回对局</a></footer>
+</main><script type="module" src="./preview.ts"></script></body></html>

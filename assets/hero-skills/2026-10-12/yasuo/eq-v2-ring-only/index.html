@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EQ · 独立风刃环斩</title>
+<style>body{background:#101c27;color:#e2edf5;font:16px system-ui;margin:32px auto;max-width:1000px;padding:0 20px}h1{font-size:26px}p,pre{color:#abc0cd;line-height:1.7}canvas{image-rendering:pixelated;background:repeating-conic-gradient(#233542 0% 25%,#1b2c38 0% 50%) 0/24px 24px}#animation{display:block;margin:24px auto}button,select{background:#253e50;color:#e2edf5;border:1px solid #527589;padding:10px;border-radius:6px;cursor:pointer}#frames{display:grid;grid-template-columns:repeat(auto-fit,minmax(176px,1fr));gap:12px}figure{margin:0}figure canvas{display:block}figcaption{font-size:13px;color:#aabecb}#scrub{width:100%}pre{white-space:pre-wrap}a{color:#8cdbed}</style></head>
+<body><h1>EQ · 独立风刃环斩</h1><p>独立特效试作，不含人物。以淡蓝风刃呈现一次扁椭圆环斩，可用于八向 E 的共用效果；尚未接入主游戏。</p>
+<canvas id="animation"></canvas>
+<button id="once">播放一次</button> <button id="loop">循环播放</button> <button id="pause">暂停 / 继续</button>
+<select id="speed"><option value="1">原始速度</option><option value="0.5">半速检查</option><option value="game">400ms 节奏试播</option></select>
+<p id="status">加载动画…</p><input id="scrub" type="range" min="0" value="0" step="1">
+<h2>逐帧检查 · 原尺寸</h2><div id="frames"></div><h2>编辑要求</h2><pre id="prompt"></pre>
+<p><a href="./media/e.webp">透明动画 WebP</a> · <a href="./media/e-atlas.png">序列图 PNG</a></p><script type="module" src="./preview.ts"></script></body></html>

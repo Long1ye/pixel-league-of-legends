@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_181829e324ff4cf89d7376f15e236a54",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-animations\\2026-10-09\\v2\\garen\\walk-nw\\角色保持输入图中的朝向_屏幕左上方_原地交替迈步_双脚轮流向前和向后_披风随动_866acbde\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-animations\\2026-10-09\\v2\\garen\\walk-nw\\角色保持输入图中的朝向_屏幕左上方_原地交替迈步_双脚轮流向前和向后_披风随动_866acbde\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-animations\\2026-10-09\\v2\\garen\\walk-nw\\角色保持输入图中的朝向_屏幕左上方_原地交替迈步_双脚轮流向前和向后_披风随动_866acbde\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

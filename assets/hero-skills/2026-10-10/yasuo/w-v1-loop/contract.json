@@ -1,0 +1,21 @@
+{
+  "hero": "yasuo",
+  "skill": "W",
+  "asset_role": "Independent sustained wind-wall loop; no hero animation",
+  "art_style": "pixel",
+  "base_target_dimensions": [160, 96],
+  "reference": "assets/hero-skills/2026-10-10/yasuo/w-reference-official/riot-w-frame-2s.png",
+  "reference_origin": "https://lol.dyn.riotcdn.net/x/videos/champion-abilities/0157/ability_0157_W1.mp4",
+  "scope": "One still, required background cleanup, one loop animation, and local preview only",
+  "credits_before": 5989,
+  "runtime_integrated": false,
+  "direction_contract": {
+    "wall_ground_baseline": "horizontal requested; generated base is slightly diagonal and retained for this sample",
+    "requested_cast_heading_degrees": -90,
+    "requested_wall_heading_degrees": 0,
+    "observed_wall_heading_degrees": null,
+    "directional_frames_generated": 1,
+    "all_direction_support": false,
+    "note": "World-plane wall axis is perpendicular to cast direction. Upright wind streaks must not be rotated with the whole wall sprite. The generated still's angle is retained for this single sample, not claimed to match a horizontal axis."
+  }
+}

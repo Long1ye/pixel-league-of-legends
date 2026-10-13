@@ -1,0 +1,34 @@
+{
+  "status": "passed_for_east_facing_visual_sample",
+  "generation_job_id": "job_db94955965e54c329bf129994f2394db",
+  "asset_review": {
+    "sheet": [256, 160],
+    "body": [69, 94],
+    "body_byte_identical_to_v3": true,
+    "native_parts_not_resampled": true,
+    "transparent_parts_inspected": true,
+    "smaller_closed_gripping_hand": true,
+    "wind_blade": [114, 22],
+    "wind_is_pale_blue_and_wraps_front_and_back": true
+  },
+  "automated_validation": {
+    "new_tests": 7,
+    "all_tests_passed": 133,
+    "test_files_passed": 24,
+    "production_build": "passed"
+  },
+  "browser_validation": {
+    "url": "http://127.0.0.1:5173/assets/hero-skills/2026-10-12/yasuo/q-v5-small-grip-wind-e/index.html",
+    "console_warnings_and_errors": [],
+    "one_shot_returns_to_ready": true,
+    "inspected_milliseconds": [0, 120, 200, 480],
+    "inspected_integer_zoom": [1, 2],
+    "game_scale_map_composite_inspected": true,
+    "proof": "docs/screenshots/yasuo-q-small-grip-wind-e-preview.jpg"
+  },
+  "limitations": [
+    "Only east-facing visual sample; no other direction is validated.",
+    "Body remains a fixed pose; arm and wind motion are procedural, not a new full-body frame animation.",
+    "Not integrated into main game; no hitbox or skill statistics changed."
+  ]
+}

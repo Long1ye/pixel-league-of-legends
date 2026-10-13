@@ -1,0 +1,12 @@
+{
+  "generated": true,
+  "frames": 8,
+  "canvas": [240,160],
+  "durationMs": 800,
+  "alpha": "transparent in every frame",
+  "edgeContacts": [],
+  "sourceFramesPreserved": true,
+  "qualityIssues": ["Broad horizontal slash instead of compact low dash", "Blade trail wider than requested", "End pose does not recover to starting pose"],
+  "integratedIntoGame": false,
+  "productionBuild": "passed"
+}

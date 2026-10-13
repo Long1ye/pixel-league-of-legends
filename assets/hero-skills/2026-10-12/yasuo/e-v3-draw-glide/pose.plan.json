@@ -1,0 +1,10 @@
+{
+  "command": "image-edit-run",
+  "args": [
+    "--reference-image", "assets/hero-skills/2026-10-12/yasuo/w-v3-horizontal-e/source/user-east-padded.png",
+    "--prompt", "保持这张像素亚索的外观、大小、位置和正右朝向，只改成即将向右滑行的拔刀起手姿势：屈膝压低身体，躯干前倾，前脚在右后脚在左，右手握住腰间刀柄，左手稳住刀鞘，刀刃刚抽出一小截。姿态紧凑，不做挥刀蓄力。保持完整人物，透明背景，无刀光和其他特效。",
+    "--mode", "pixel", "--strict", "--generation-model", "nano-banana", "--resolution", "1K",
+    "--generation-speed", "normal", "--remove-bg-method", "standard"
+  ],
+  "output_dir": "assets/hero-skills/2026-10-12/yasuo/e-v3-draw-glide/generated-pose"
+}

@@ -1,0 +1,11 @@
+{
+  "source": "https://github.com/Meowa-AI/meowa-skills",
+  "source_commit": "df7e6369424fb4f1becc45d1c5eb360aeed6d975",
+  "runner_version": "2026.10.11.3",
+  "installed_directory": ".agents/skills/game-assets",
+  "backup_directory": ".agents/skill-backups/game-assets-pre-q-v6-20261012",
+  "reason": "Original north job recovery failed with outdated-client warning",
+  "scope": "Complete skill directory updated; previous version preserved; no credentials changed",
+  "original_north_job_polled_after_update": true,
+  "north_resubmitted": false
+}

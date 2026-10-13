@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>亚索 · 四段动作与双刀循环</title>
+  <style>
+    :root { color-scheme: dark; font-family: "Microsoft YaHei", system-ui, sans-serif; background: #0d191f; color: #dfedf1; }
+    * { box-sizing: border-box; } body { margin: 0; padding: 22px; } main { max-width: 1060px; margin: auto; }
+    h1 { font-size: 27px; margin: 8px 0; } h2 { font-size: 18px; } p { line-height: 1.65; color: #afc5cf; }
+    a { color: #89ded3; } .tag { color: #d6b77f; letter-spacing: .12em; font-size: 12px; }
+    .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 12px 0; }
+    button, select { font: inherit; background: #19333d; color: #e3f0f4; border: 1px solid #42616d; border-radius: 6px; padding: 8px 11px; cursor: pointer; }
+    button:disabled { opacity: .5; cursor: wait; } button:hover { border-color: #a1d6cc; }
+    .panel, article { border: 1px solid #2d4a58; background: #122731; border-radius: 10px; padding: 16px; }
+    .viewport { overflow-x: auto; } .stage { margin: 8px auto; width: 384px; height: 384px; background: #193239; }
+    .checker { background-color: #192d38; background-image: conic-gradient(#294653 25%, transparent 0 50%, #294653 0 75%, transparent 0); background-size: 32px 32px; }
+    .pixel { image-rendering: pixelated; image-rendering: crisp-edges; } canvas { display: block; }
+    #animation { width: 384px; height: 384px; } output { color: #97dccc; }
+    .scrub { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; } #scrub { flex: 1; min-width: 100px; }
+    .review { border-left: 2px solid #c2a16a; padding-left: 12px; color: #d6c193; }
+    .clips { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 370px), 1fr)); gap: 16px; margin-top: 20px; }
+    .clips img { display: block; width: 192px; height: 192px; }
+    .downloads { display: flex; flex-wrap: wrap; gap: 12px; margin: 12px 0; }
+    blockquote { margin: 12px 0; padding-left: 12px; border-left: 2px solid #42616d; color: #c2d6dd; }
+    details { margin-top: 16px; } summary { cursor: pointer; }
+    .frames { display: grid; grid-template-columns: repeat(auto-fit, 194px); gap: 10px; margin-top: 16px; }
+    .frame { width: max-content; border: 1px solid #355261; } .frame.selected { border-color: #e0b675; }
+    .frame button { width: 100%; border-radius: 0; padding: 5px; font-size: 12px; }
+    footer { font-size: 13px; margin-top: 20px; }
+    @media (max-width: 480px) { body { padding: 12px; } .stage { margin-left: 0; } }
+  </style>
+</head><body><main>
+  <div class="tag">YASUO / USER PROMPTS / FOUR TRANSITIONS</div>
+  <h1>亚索 · 四段动作与双刀循环</h1>
+  <p>1 站立→拔刀准备 · 2 拔刀→第一刀结束 · 3 第一刀结束→第二刀结束 · 4 第二刀结束→第一刀结束</p>
+  <p id="facts">素材加载中…</p>
+  <div class="toolbar">
+    <button id="full" disabled>完整进入，再循环3⇄4</button>
+    <button id="loop" disabled>仅循环3⇄4</button><button id="once" disabled>四段各播放一次</button>
+    <label>速度 <select id="rate" aria-label="播放速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label>
+  </div>
+  <section class="panel">
+    <div class="viewport"><div id="stage" class="stage checker"><canvas id="animation" class="pixel" width="192" height="192" aria-label="亚索四段衔接动画"></canvas></div></div>
+    <div class="scrub"><button id="play" disabled>暂停</button><button id="previous" disabled>上一帧</button><button id="next" disabled>下一帧</button>
+      <label for="scrub">逐帧</label><input id="scrub" type="range" min="0" max="47" value="0" disabled /><output id="status" aria-live="polite">加载中</output></div>
+    <div class="toolbar"><button id="background" aria-pressed="true">切换棋盘背景</button></div>
+    <p class="review" id="review"></p>
+    <p>用户原文提交，提示词优化开启。主预览2×、原文件与逐帧1×整数像素；保留原始帧序和时长。进入动作1、2只播放一次，持续攻击只循环3、4。</p>
+    <details><summary>查看全部原始帧及接缝</summary><div class="viewport"><div id="frames" class="frames"></div></div></details>
+  </section>
+  <div id="clips" class="clips"></div>
+  <footer><p id="credits"></p><p>这是单方向动画样稿，尚未扩展八向或接入中路对局。下方单文件预览自行循环，不等于主预览的动作状态逻辑。</p>
+    <a href="../../../2026-10-09/yasuo/v6-no-fx-transitions/index.html">查看上一轮样稿</a> · <a href="/">返回对局</a></footer>
+</main><script type="module" src="./preview.ts"></script></body></html>

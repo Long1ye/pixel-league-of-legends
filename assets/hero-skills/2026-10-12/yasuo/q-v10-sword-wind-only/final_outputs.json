@@ -1,0 +1,311 @@
+{
+  "status": "success",
+  "job_id": "job_e0da79854e6541d6ad7ae2282376fb24",
+  "outputs": [
+    {
+      "type": "preview",
+      "path": "index.html",
+      "mime_type": "text/html"
+    },
+    {
+      "type": "media",
+      "path": "media/yasuo-q-sword-wind.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "media/sword-wind-design.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/generated-animation-1.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "media/sword-wind-atlas.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-00.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-01.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-02.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-03.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-04.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-05.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-06.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-07.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-08.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-09.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-10.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-11.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-12.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-13.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-14.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-15.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-16.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-17.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-18.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-19.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-20.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-21.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-22.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-23.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-24.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-25.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-26.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-27.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-28.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-29.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-30.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-31.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-32.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-33.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-34.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-35.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-36.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-37.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-38.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-39.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-40.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-41.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-42.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-43.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-44.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-45.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-46.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-47.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-48.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-49.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-50.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-51.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-52.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-53.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-54.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "media/frames/frame-55.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

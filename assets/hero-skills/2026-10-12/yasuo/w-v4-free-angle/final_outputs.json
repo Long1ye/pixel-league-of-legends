@@ -1,0 +1,6 @@
+{
+  "preview": "http://127.0.0.1:5173/assets/hero-skills/2026-10-12/yasuo/w-v4-free-angle/index.html",
+  "renderer": "wall.ts",
+  "screenshot": "preview.png",
+  "export": "Use preview export button to generate a transparent atlas at the chosen angle."
+}

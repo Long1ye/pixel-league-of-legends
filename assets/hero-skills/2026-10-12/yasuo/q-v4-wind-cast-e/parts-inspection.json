@@ -1,0 +1,74 @@
+{
+  "parts": [
+    {
+      "role": "body",
+      "path": "media/body.png",
+      "dimensions": [
+        69,
+        94
+      ],
+      "alpha_bounds": [
+        2,
+        2,
+        67,
+        92
+      ],
+      "native_pixels_preserved": true,
+      "reused_from_v3": true,
+      "sha256": "89f9a133d6845605bc21dda05de864b1af56c4d299eeafe63b2e20a5bfc0ef09"
+    },
+    {
+      "role": "upper-arm",
+      "path": "media/upper-arm.png",
+      "dimensions": [
+        44,
+        25
+      ],
+      "alpha_bounds": [
+        2,
+        2,
+        42,
+        23
+      ],
+      "native_pixels_preserved": true,
+      "reused_from_v3": true,
+      "sha256": "cb9268d989e58a179954809d7b5cdcc683deb649042e8caa8882b96d4cb2f991"
+    },
+    {
+      "role": "wind-sword",
+      "path": "media/wind-sword.png",
+      "dimensions": [
+        112,
+        18
+      ],
+      "alpha_bounds": [
+        2,
+        2,
+        110,
+        16
+      ],
+      "native_pixels_preserved": true,
+      "reused_from_v3": false,
+      "sha256": "c306698435c21f641857446d23089c5fe5ef39bb6b6845085d76733baddebe60"
+    },
+    {
+      "role": "casting-hand",
+      "path": "media/casting-hand.png",
+      "dimensions": [
+        49,
+        25
+      ],
+      "alpha_bounds": [
+        2,
+        2,
+        47,
+        23
+      ],
+      "native_pixels_preserved": true,
+      "reused_from_v3": false,
+      "sha256": "72dc8531ee6193ff0371d351153816b4038da72b92dad0ab5b8e1916dd3cd7e9"
+    }
+  ],
+  "sheet_byte_exact": true,
+  "review": "Open casting hand and pale-blue wind around sword inspected; v3 body/upper-arm retained byte-exact."
+}

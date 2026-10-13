@@ -1,0 +1,10 @@
+{
+  "command": "image-edit-run",
+  "args": [
+    "--reference-image", "assets/hero-attacks/2026-10-09/yasuo/v1/preparation/padded-source.png",
+    "--prompt", "把这个亚索像素角色改成普通攻击的起手姿势：保持朝向屏幕右下方，双脚在原位置略微分开，身体轻微蓄力，原来的持剑手把单把武士刀举到肩后准备向右下方斜劈。保留同样的蓝色围巾、单肩护甲、深棕色高马尾、身高、像素大小和脚底位置。只改变手臂、刀和小幅躯干姿势；完整刀刃留在画布内。一个角色，透明背景，没有风墙、龙卷风、敌人或文字。",
+    "--mode", "pixel", "--strict", "--generation-model", "nano-banana", "--resolution", "1K",
+    "--remove-bg-method", "standard"
+  ],
+  "output_dir": "assets/hero-attacks/2026-10-09/yasuo/v1/ready-pose"
+}

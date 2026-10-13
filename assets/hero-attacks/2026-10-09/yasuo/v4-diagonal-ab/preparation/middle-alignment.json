@@ -1,0 +1,10 @@
+{
+  "source": "assets\\hero-attacks\\2026-10-09\\yasuo\\v4-diagonal-ab\\poses\\a-middle\\\u8fd9\u662f\u4ece\u53f3\u4e0b\u659c\u64a9\u5230\u5de6\u4e0a\u7684\u9014\u4e2d\u59ff\u52bf_\u539f\u6765\u7684\u6301\u5200\u624b\u62ac\u5230\u80f8\u524d_\u624b\u81c2\u6a2a\u8fc7\u8eab\u4f53_\u6b66\u58eb\u5200\u6a2a_7cfc5401\\remove_bg.png",
+  "whole_still_pose_offset": [
+    -22,
+    0
+  ],
+  "resampled": false,
+  "visible_pixels_clipped": false,
+  "applies_to_final_animation_frames": false
+}

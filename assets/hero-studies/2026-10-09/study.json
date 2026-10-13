@@ -1,0 +1,57 @@
+{
+  "status": "style_studies_not_runtime_ready",
+  "capability": "pixel-universal-gen-run",
+  "local_preparation": "skill split-components.py, native-pixel crops only",
+  "preview": "index.html",
+  "preview_scale": { "yasuo": 3, "ahri": 2, "garen": 2 },
+  "preview_alignment": "manually reviewed foot anchors on a shared baseline; approximate stature match, not normalized source pixels",
+  "preview_adjustment_credits": 0,
+  "sampling": "nearest_neighbor",
+  "credits": { "before": 1845, "after": 1770, "consumed": 75 },
+  "runtime_integration": false,
+  "all_images": { "format": "PNG", "mode": "RGBA", "alpha_levels": [0, 255] },
+  "direction_plan": {
+    "target": "8 directions after single-view approval",
+    "current": "single-view studies; Yasuo sheet contains actions, not directions",
+    "caveat": "Quick multi-view generation typically mirrors left/right and needs asymmetric equipment checks"
+  },
+  "heroes": [
+    {
+      "id": "yasuo",
+      "name": "亚索",
+      "job_id": "job_5eac0ef384bf430382939415319341ac",
+      "official_reference": "https://www.leagueoflegends.com/en-us/champions/yasuo/",
+      "generated_sheet_size": [403, 273],
+      "component_count": 8,
+      "selected_final": "01-yasuo/components/component_004.png",
+      "selected_size": [66, 109],
+      "preview_foot_y": 107,
+      "notes": ["Unexpected action sheet retained", "Not an eight-direction turnaround", "Animation timing and anchors not validated"]
+    },
+    {
+      "id": "ahri",
+      "name": "阿狸",
+      "job_id": "job_8a5c10b9f4084972aa789118704c5d38",
+      "official_reference": "https://www.leagueoflegends.com/en-us/champions/ahri/",
+      "generated_sheet_size": [415, 280],
+      "component_count": 1,
+      "selected_final": "02-ahri/components/component_001.png",
+      "selected_size": [140, 166],
+      "preview_foot_y": 164,
+      "notes": ["Tail silhouette oversized for current gameplay units", "Nine-tail count needs review"]
+    },
+    {
+      "id": "garen",
+      "name": "盖伦",
+      "job_id": "job_d64e601cb0ae4674ad654d466742067a",
+      "official_reference": "https://www.leagueoflegends.com/en-us/champions/garen/",
+      "generated_sheet_size": [410, 276],
+      "component_count": 1,
+      "selected_final": "03-garen/components/component_001.png",
+      "selected_size": [145, 170],
+      "preview_foot_y": 154,
+      "notes": ["Readable heavy-armour silhouette", "Weapon clearance needed before animation"]
+    }
+  ],
+  "next_checks": ["Choose preferred study style", "Generate true runtime-size sprite", "Unify character height and foot anchor", "Review eight-direction identity and handedness before animation"]
+}

@@ -1,0 +1,40 @@
+{
+  "status": "passed_for_seven_direction_procedural_visual_study",
+  "available_directions": ["e", "se", "s", "sw", "w", "nw", "ne"],
+  "missing_directions": ["n"],
+  "missing_direction_reason": "Original job failed; user explicitly declined another submission",
+  "asset_validation": {
+    "six_new_directional_bodies_inspected": true,
+    "body_direction_reference_contact_sheet": "docs/screenshots/animation-qa/yasuo-q-v6-eight-directions/body-directions-2x.png",
+    "native_pngs_not_resampled": true,
+    "approved_east_body_byte_exact": true,
+    "v5_arm_hand_and_blade_byte_exact": true,
+    "north_replacement_created": false
+  },
+  "automated_validation": {
+    "new_direction_tests_passed": 9,
+    "all_tests_passed": 142,
+    "test_files_passed": 25,
+    "production_build": "passed"
+  },
+  "browser_validation": {
+    "url": "http://127.0.0.1:5173/assets/hero-skills/2026-10-12/yasuo/q-v6-eight-directions/index.html",
+    "all_seven_direction_cards_rendered": true,
+    "wind_wrap_and_hand_blade_connection_inspected": true,
+    "one_shot_returns_to_ready": true,
+    "pose_times_checked_ms": [70, 120, 200, 480],
+    "zoom_modes_checked": [1, 2],
+    "angle_input_twenty_degrees": "East body; exact 20-degree weapon aim",
+    "angle_input_270_degrees": "North missing; no cast or alternate body",
+    "map_click_north_sector": "North missing; no cast or alternate body",
+    "console_warnings_and_errors": [],
+    "proof": "docs/screenshots/yasuo-q-directions-v6-preview.jpg"
+  },
+  "limits": [
+    "Fixed body poses, not new full-body WebP animation clips",
+    "Shared V5 arm is a visual approximation, especially for back-facing directions",
+    "North sector is deliberately disabled",
+    "No main-game integration, hitboxes, damage or cooldown changes"
+  ],
+  "skill_runner_updated_with_full_old_version_backup": true
+}

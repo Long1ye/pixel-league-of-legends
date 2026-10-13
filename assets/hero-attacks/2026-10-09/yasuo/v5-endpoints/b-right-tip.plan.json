@@ -1,0 +1,19 @@
+{
+  "command": "image-edit-run",
+  "args": [
+    "--reference-image",
+    "D:/Long1ye/pixel-league-of-legends/assets/hero-attacks/2026-10-09/yasuo/v5-endpoints/poses/a/把亚索改成普通攻击的右下低位端点姿势_原来的持刀手握一把出鞘的武士刀_手在腰_b2b243b1/remove_bg.png",
+    "--prompt",
+    "以这张低位姿势为基础，只抬起原来的持刀手和武士刀，做右上高位端点。手抬到画面右侧肩膀附近，刀尖斜指画面右上方的空白区域；刀尖必须在握刀手的右上方，并在头部的右边，不要朝左上方。保持蓝围巾、银色护肩、发型、身体大小和双脚位置不变，不换手，仍只有一把出鞘的刀，没有挥刀光效。",
+    "--mode",
+    "pixel",
+    "--strict",
+    "--generation-model",
+    "nano-banana",
+    "--resolution",
+    "1K",
+    "--remove-bg-method",
+    "standard"
+  ],
+  "output_dir": "assets/hero-attacks/2026-10-09/yasuo/v5-endpoints/poses/b-right-tip"
+}

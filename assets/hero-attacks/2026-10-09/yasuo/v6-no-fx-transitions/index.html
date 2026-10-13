@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>亚索 · A ⇄ B 无刀光衔接</title>
+  <style>
+    :root { color-scheme: dark; font-family: "Microsoft YaHei", system-ui, sans-serif; background: #0d191f; color: #dfedf1; }
+    * { box-sizing: border-box; } body { margin: 0; padding: 20px; } main { max-width: 1060px; margin: auto; }
+    h1 { margin: 8px 0; font-size: 26px; } h2 { font-size: 18px; margin: 0 0 12px; }
+    .tag { font-size: 12px; letter-spacing: .12em; color: #d6b77f; } p { color: #a5bdc7; line-height: 1.65; }
+    a { color: #89ded3; } .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 12px 0; }
+    button, select { font: inherit; color: #e3f0f4; background: #19333d; border: 1px solid #42616d; border-radius: 6px; padding: 8px 11px; cursor: pointer; }
+    button:hover { border-color: #a1d6cc; } button:disabled { opacity: .5; cursor: wait; }
+    output { color: #97dccc; } .panel, article { background: #122731; border: 1px solid #2d4a58; border-radius: 10px; padding: 16px; }
+    .viewport { overflow-x: auto; } .stage { margin: 8px auto; width: 384px; height: 384px; background: #193239; }
+    .checker { background-color: #192d38; background-image: conic-gradient(#294653 25%, transparent 0 50%, #294653 0 75%, transparent 0); background-size: 32px 32px; }
+    .pixel { image-rendering: pixelated; image-rendering: crisp-edges; } canvas { display: block; } #animation { width: 384px; height: 384px; }
+    .scrub { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 14px 0; } #scrub { flex: 1; min-width: 120px; }
+    .review { border-left: 2px solid #c2a16a; padding-left: 12px; color: #d6c193; }
+    .clips { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 370px), 1fr)); gap: 16px; margin-top: 20px; }
+    .downloads { display: flex; flex-wrap: wrap; gap: 12px; margin: 10px 0; }
+    details { margin-top: 16px; } summary { cursor: pointer; color: #c5dce4; }
+    .frames { display: grid; grid-template-columns: repeat(auto-fit, 194px); gap: 12px; margin-top: 16px; }
+    .frame { border: 1px solid #355261; width: max-content; } .frame.selected { border-color: #e0b675; }
+    .frame button { width: 100%; padding: 5px; border-radius: 0; font-size: 12px; }
+    figure { margin: 14px 0 0; overflow-x: auto; } figure img { display: block; width: 384px; height: 384px; max-width: none; }
+    figcaption, footer { color: #a5bdc7; font-size: 13px; } footer { margin-top: 24px; }
+    @media (max-width: 480px) { body { padding: 12px; } .panel, article { padding: 12px; } .stage { margin-left: 0; margin-right: 0; } }
+  </style>
+</head><body><main>
+  <div class="tag">YASUO / ENDPOINT TRANSITIONS / SOLID BLADE ONLY</div>
+  <h1>亚索 · A ⇄ B 衔接样稿</h1>
+  <p>A：画面右下低位；B：画面右上高位。上撩 A→B、下斩 B→A，分别是一次独立普通攻击。</p>
+  <p id="facts">素材加载中…</p>
+  <div class="toolbar">
+    <button id="attack-a" disabled>上撩A→B一次</button><button id="attack-b" disabled>下斩B→A一次</button>
+    <button id="pair-once" disabled>往返一次</button><button id="pair-loop" disabled>往返循环</button>
+    <label>速度 <select id="rate" aria-label="播放速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label>
+    <label>节奏 <select id="cadence" aria-label="攻击节奏"><option value="1200" selected>每刀1.2秒</option><option value="original">原始制作时长</option></select></label>
+  </div>
+  <section class="panel">
+    <div class="viewport"><div class="stage checker" id="stage"><canvas class="pixel" id="animation" width="192" height="192" aria-label="亚索无刀光端点衔接动画"></canvas></div></div>
+    <div class="scrub"><button id="play" disabled>暂停</button><button id="previous" disabled>上一帧</button><button id="next" disabled>下一帧</button>
+      <label for="scrub">逐帧</label><input type="range" id="scrub" min="0" max="1" value="0" disabled /><output id="status" aria-live="polite">加载中</output></div>
+    <div class="toolbar"><button id="a-first" disabled>上撩首帧</button><button id="a-last" disabled>上撩末帧</button><button id="b-first" disabled>下斩首帧</button><button id="b-last" disabled>下斩末帧</button><button id="background" aria-pressed="true">棋盘背景</button></div>
+    <p class="review" id="review"></p>
+    <p>主预览2×、逐帧1×整数最近邻。每刀1.2秒仅调整播放速度；不修改生成文件、帧顺序或位置，可切回原速。</p>
+    <details><summary>展开全部原始帧</summary><div class="viewport"><div class="frames" id="frames"></div></div></details>
+  </section>
+  <div class="clips" id="clips"></div>
+  <footer><p id="credits"></p><p>单次播放停在收刀末帧。原文件WebP自行循环，但单条动作设计只包含一刀；当前是美术样稿，未接入对局。</p>
+    <a href="../v4-diagonal-ab/index.html">之前的方向样稿（已被本轮替代）</a> · <a href="/">返回中路对局</a></footer>
+</main><script type="module" src="./preview.ts"></script></body></html>

@@ -1,0 +1,7 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Q · 原图分层右下试版</title>
+<style>body{background:#12252e;color:#deedf2;font:15px system-ui;margin:24px;max-width:980px}p{line-height:1.7;color:#afc6ce}canvas{image-rendering:pixelated;background:repeating-conic-gradient(#20343d 0% 25%,#263c44 0% 50%) 0/20px 20px}#stage{width:560px;height:400px}button,select{padding:9px;background:#254651;color:#fff;border:1px solid #608797;margin:6px}input[type=range]{width:560px}.row{display:flex;gap:18px;flex-wrap:wrap}a{color:#9edbea}</style>
+<h1>Q · 原图分层右下试版</h1><p>直接复用本次原图的像素，不重新生成脸、发型与衣服。身体、上臂、前臂、刀身风效分别驱动。脚底固定，肩膀随上身轻微前倾。先检查画风和手臂衔接，尚未替换游戏。</p>
+<div class="row"><canvas id="stage" width="280" height="200"></canvas><div><p>原图对照 · 2×</p><img id="reference" style="image-rendering:pixelated;width:128px" alt="本次人物原图"></div></div>
+<div><button id="once">播放一次</button><button id="loop">循环播放</button><button id="pause">暂停 / 继续</button><select id="speed" aria-label="播放速度"><option value="1">原速</option><option value="0.5">半速</option><option value="0.25">四分之一速度</option></select></div>
+<label><input id="body" type="checkbox" checked>人物层</label><label><input id="arm" type="checkbox" checked>手臂层</label><label><input id="sword" type="checkbox" checked>风缠刀层</label><label><input id="joints" type="checkbox">关节标记</label>
+<p id="status">加载中…</p><input id="scrub" aria-label="逐帧查看" type="range" min="0" max="480" value="0"><p><a href="/">返回游戏</a></p><script type="module" src="./preview.ts"></script></html>

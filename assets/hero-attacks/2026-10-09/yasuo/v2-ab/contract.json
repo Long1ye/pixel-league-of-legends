@@ -1,0 +1,51 @@
+{
+  "hero": "yasuo",
+  "action": "basic_attack_ab",
+  "direction": "se",
+  "width": 176,
+  "height": 176,
+  "anchor": [
+    72,
+    131
+  ],
+  "groups": [
+    {
+      "id": "g1",
+      "name": "斜劈 · 反撩",
+      "description": "大斜线下劈，再沿反向斜线向上回刀。",
+      "a": "原来的持剑手把武士刀从肩后斜劈向右下方，定格在刀刃经过身体前方、斜指右下的击中姿势。躯干微向前倾。",
+      "b": "原来的持剑手把低位武士刀沿反向斜线撩向右上方，定格在刀刃经过身体前方、斜指右上的击中姿势。",
+      "motionA": "从肩后抬刀姿势做一次向右下方的快速斜劈，结束在低位持刀姿势。",
+      "motionB": "从低位持刀姿势做一次向右上方的反手斜撩，结束在肩后抬刀姿势。"
+    },
+    {
+      "id": "g2",
+      "name": "横斩 · 回斩",
+      "description": "短距离横斩，配反手回斩，动作更紧凑。",
+      "a": "原来的持剑手把肩后的武士刀在腰前短距离横斩，定格在刀刃水平伸向屏幕右侧的击中姿势。",
+      "b": "原来的持剑手把低位武士刀抬到胸前反手横向回斩，定格在刀刃斜向屏幕左上的击中姿势。身体仍朝右下。",
+      "motionA": "从肩后抬刀姿势做一次紧凑的腰前横斩，结束在低位持刀姿势。",
+      "motionB": "从低位持刀姿势做一次胸前反手回斩，结束在肩后抬刀姿势。"
+    },
+    {
+      "id": "g3",
+      "name": "短劈 · 挑刀",
+      "description": "更短的下劈和上挑，比较快节奏普攻的辨识度。",
+      "a": "原来的持剑手把肩后的武士刀在身体右前方快速向下短劈，定格在刀尖朝下、刀刃接近竖直的击中姿势。",
+      "b": "原来的持剑手把低位武士刀在身体右前方快速向上挑，定格在刀尖朝上、刀刃接近竖直的击中姿势。",
+      "motionA": "从肩后抬刀姿势做一次身体右前方的短促下劈，结束在低位持刀姿势。",
+      "motionB": "从低位持刀姿势做一次身体右前方的短促上挑，结束在肩后抬刀姿势。"
+    }
+  ],
+  "clips_per_group": 2,
+  "frames_per_clip": 8,
+  "background": "transparent",
+  "animation_model": "pixel-engine-v1.1",
+  "ready_pose": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/poses/g3-b-impact/原来的持剑手把低位武士刀在身体右前方快速向上挑_定格在刀尖朝上_刀刃接近竖直_813fdc7a/remove_bg.png",
+  "credits_before": 9985,
+  "expected_credits": 390,
+  "pricing_status": "verified: 8 pose edits at 15, 6 keyframe clips at 45",
+  "production_ready": false,
+  "runtime_integrated": false,
+  "pose_review": "Use inspected raised pose with the same screen-right wielding hand as low guard; replace the inconsistent G2 B impact."
+}

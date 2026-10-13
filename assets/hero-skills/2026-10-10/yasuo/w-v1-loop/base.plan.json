@@ -1,0 +1,14 @@
+{
+  "command": "custom-size-pixel-gen-run",
+  "args": [
+    "--prompt", "参考图中亚索风墙的青白色气流，绘制一面独立的像素风墙，适用于俯视斜角MOBA地图。风墙横向展开，底边水平，是竖立在地面的薄风幕，白色和淡青色风纹向上卷动，两端微微弯曲，风纹之间有通透的空隙。用简洁清晰的像素色块表达，完整居中，周围留少量空白。只画风墙，不画英雄、敌人、地图、文字或实体冰墙，背景为纯白色。",
+    "--width", "160", "--height", "96",
+    "--reference-image", "assets/hero-skills/2026-10-10/yasuo/w-reference-official/riot-w-frame-2s.png",
+    "--generation-model", "nano-banana", "--content-mode", "other",
+    "--generation-speed", "normal", "--no-fill-canvas",
+    "--remove-bg-method", "none"
+  ],
+  "output_dir": "meowa-output/yasuo-w-v1-loop-base",
+  "recovery_command": "pixel-gen-poll",
+  "purpose": "One stable horizontal-baseline wind-wall still before a single loop animation; no directional batch"
+}

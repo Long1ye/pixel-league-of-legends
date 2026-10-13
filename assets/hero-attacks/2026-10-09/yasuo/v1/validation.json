@@ -1,0 +1,205 @@
+{
+  "status": "technical_pass",
+  "job_id": "job_7a16e80cc4b042ebb9c1f5d4b2d184f1",
+  "files": [
+    {
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v1/attack-se/亚索朝屏幕右下方原地做一次快速武士刀斜劈_略微蓄力_刀刃迅速划过身体前方_再_de85f075/result_output_url.webp",
+      "format": "WEBP",
+      "size": [
+        176,
+        176
+      ],
+      "frame_count": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": 0,
+      "alpha_levels": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bounds": [
+        [
+          31,
+          28,
+          113,
+          131
+        ],
+        [
+          29,
+          23,
+          104,
+          132
+        ],
+        [
+          5,
+          36,
+          168,
+          141
+        ],
+        [
+          47,
+          37,
+          171,
+          146
+        ],
+        [
+          46,
+          39,
+          167,
+          133
+        ],
+        [
+          41,
+          39,
+          161,
+          133
+        ],
+        [
+          44,
+          37,
+          107,
+          133
+        ],
+        [
+          3,
+          32,
+          106,
+          133
+        ]
+      ]
+    },
+    {
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v1/attack-se/亚索朝屏幕右下方原地做一次快速武士刀斜劈_略微蓄力_刀刃迅速划过身体前方_再_de85f075/result_output_transparent_output_urls_gif.gif",
+      "format": "GIF",
+      "size": [
+        176,
+        176
+      ],
+      "frame_count": 8,
+      "durations_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": 0,
+      "alpha_levels": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bounds": [
+        [
+          31,
+          28,
+          113,
+          131
+        ],
+        [
+          29,
+          23,
+          104,
+          132
+        ],
+        [
+          5,
+          36,
+          168,
+          141
+        ],
+        [
+          47,
+          37,
+          171,
+          146
+        ],
+        [
+          46,
+          39,
+          167,
+          133
+        ],
+        [
+          41,
+          39,
+          161,
+          133
+        ],
+        [
+          44,
+          37,
+          107,
+          133
+        ],
+        [
+          3,
+          32,
+          106,
+          133
+        ]
+      ]
+    },
+    {
+      "path": "assets/hero-attacks/2026-10-09/yasuo/v1/attack-se/亚索朝屏幕右下方原地做一次快速武士刀斜劈_略微蓄力_刀刃迅速划过身体前方_再_de85f075/result_output_transparent_output_urls_png.png",
+      "format": "PNG",
+      "size": [
+        528,
+        528
+      ],
+      "frame_count": 1,
+      "durations_ms": [
+        0
+      ],
+      "loop": null,
+      "alpha_levels": [
+        2
+      ],
+      "bounds": [
+        [
+          31,
+          23,
+          520,
+          485
+        ]
+      ]
+    }
+  ],
+  "png_webp_visible_pixels_identical": true,
+  "gif_mean_rgb_error": [
+    0.31827866735537186,
+    0.31625559573002754,
+    0.24247804752066116,
+    0.23080234159779614,
+    0.23074853650137742,
+    0.21338025137741048,
+    0.2115185950413223,
+    0.2522705750688705
+  ],
+  "frame_count": 8,
+  "edge_contact": false,
+  "production_ready": false,
+  "runtime_integrated": false
+}

@@ -1,0 +1,34 @@
+{
+  "scope": "Standalone sword and wind-effect study only; no hero, arm, map, or gameplay integration.",
+  "representation": "pixel",
+  "reference": "../q-v5-small-grip-wind-e/media/wind-sword.png",
+  "targetCanvas": [192, 64],
+  "targetBladeLengthMultiplier": 1.5,
+  "referenceBladeLengthPixels": 75,
+  "targetBladeLengthPixels": 113,
+  "targetGrip": [31, 32],
+  "stillPrompt": "在参考图基础上设计亚索Q技能的独立刀身和风特效。刀保持水平朝右，刀柄大小和位置不变，银色刀身从护手到刀尖延长至原来的约1.5倍。两股淡蓝色旋风交错缠绕刀身，刀尖凝聚锐利的青白色风芒，搭配少量蓝色风粒子，炫酷但仍能看清细长刀身。保持游戏像素画风，只画这一把刀和风，透明背景，不画角色或手臂。",
+  "correctedStillPrompt": "为像素游戏重绘参考图中的一把水平朝右的亚索Q技能刀。刀柄的位置和大小不变，刀身长度约为原来的1.5倍，保留细长银色刀身。两股淡蓝色风丝紧贴刀身螺旋交错，刀尖有青白色锐利风芒和少量风粒子，炫酷但不遮住刀。所有内容放在画布中央并留出空边。只画刀和风，不画人、手、法阵或文字；背景使用统一纯深绿色，不画棋盘格。",
+  "animationPrompt": "亚索Q的独立刀身风特效完成一次蓄风、爆发和消散：淡蓝色风丝绕着刀身螺旋流向右侧刀尖，刀尖短暂爆出锐利的青白色风芒，细小风粒子向右散开，再平滑回到初始风量。刀柄与刀身保持水平且固定不动，不变形；只让风流动，镜头固定，不出现角色或手臂。",
+  "refinement": {
+    "editIntent": "保留参考动画中水平长刀和蓝色螺旋风的设计与节奏。将刀尖的巨大星形爆发改成紧凑的青白色尖锥风芒，并减少外散粒子的范围，让特效完整留在画布内且右侧留出空边。刀柄和刀身全程固定不动，只让风流动，不添加角色、手臂或文字。",
+    "videoDescription": "画面只有一把水平朝右的细长银色刀，左侧为深色刀柄。淡蓝色风丝螺旋缠绕刀身并流向刀尖，刀尖在中段爆发后风粒子消散，末尾回到初始风量。原动画的爆发过大，右侧出现裁切。"
+  },
+  "animation": {
+    "command": "meowa-animation-run",
+    "durationTierFrames": 16,
+    "highFrameRate": true,
+    "styleMode": "pixel",
+    "quality": "medium",
+    "alphaMode": "soft",
+    "promptOptimization": true,
+    "backgroundRemoval": "standard",
+    "backgroundRemovalBatchSize": 16,
+    "padding": 8,
+    "rejectedEarlierSubmission": "animate-run returned invalid_request with no task ID; not polled or resubmitted."
+  },
+  "notes": [
+    "Length, transparency, and grip stability remain validation targets, not generation guarantees.",
+    "Reference pixels are padded without scaling. Existing eight-direction assets are untouched."
+  ]
+}

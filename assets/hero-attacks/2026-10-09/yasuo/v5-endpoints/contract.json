@@ -1,0 +1,13 @@
+{
+  "scope": "Two static endpoint studies only; no animation submitted.",
+  "source": "../v4-diagonal-ab/preparation/original-outfit-padded.png",
+  "canvas_target": [192, 192],
+  "transparency": true,
+  "facing": "screen southeast",
+  "coordinate_clarification": "User directions are relative to the hero; for this view the endpoints are screen lower-right and upper-right, not upper-left.",
+  "a": "screen lower-right sword guard",
+  "b": "screen upper-right sword guard",
+  "preserve": ["blue scarf", "silver shoulder armor", "same wielding hand", "scale", "foot anchor"],
+  "credits_before": 9270,
+  "estimated_credits": 30
+}

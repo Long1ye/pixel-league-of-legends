@@ -1,0 +1,19 @@
+{
+  "command": "image-edit-run",
+  "args": [
+    "--reference-image",
+    "assets/hero-attacks/2026-10-09/yasuo/v2-ab/poses/low-guard/把图中的抬刀姿势改为低位持刀_原来的持剑手把单把武士刀收到身体右前方低位_刀_ee41ff8c/remove_bg.png",
+    "--prompt",
+    "保持刀在画面右侧的同一只手，让亚索在胸前做反手回斩，定格在单把武士刀横向伸向屏幕左侧的击中姿势。另一只手不拿武器。保持右下朝向、同一造型、176×176透明画布、身高和脚底位置，不加刀光。",
+    "--mode",
+    "pixel",
+    "--strict",
+    "--generation-model",
+    "nano-banana",
+    "--resolution",
+    "1K",
+    "--remove-bg-method",
+    "standard"
+  ],
+  "output_dir": "assets/hero-attacks/2026-10-09/yasuo/v2-ab/poses/g2-b-impact-repaired"
+}

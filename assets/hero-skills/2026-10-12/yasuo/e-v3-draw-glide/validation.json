@@ -1,0 +1,11 @@
+{
+  "status": "preview-only",
+  "integratedInGame": false,
+  "frameCount": 8,
+  "size": [240, 160],
+  "durationMs": 800,
+  "transparent": true,
+  "edgeContacts": [],
+  "visualReview": "No broad slash or blue arc. Low held blade in later glide poses. Startup retains a stepping impression and character shifts within canvas. Foot anchor calibration is required before gameplay integration.",
+  "sourceJob": "job_30f5dca737414ca9ab466e0f60fe8b0c"
+}

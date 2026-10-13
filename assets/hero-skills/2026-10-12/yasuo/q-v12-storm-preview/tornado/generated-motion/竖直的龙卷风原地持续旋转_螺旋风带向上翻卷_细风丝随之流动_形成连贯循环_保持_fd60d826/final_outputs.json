@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_c9f7b16bcdd04d489982f23900d15d26",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v12-storm-preview\\tornado\\generated-motion\\竖直的龙卷风原地持续旋转_螺旋风带向上翻卷_细风丝随之流动_形成连贯循环_保持_fd60d826\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v12-storm-preview\\tornado\\generated-motion\\竖直的龙卷风原地持续旋转_螺旋风带向上翻卷_细风丝随之流动_形成连贯循环_保持_fd60d826\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-12\\yasuo\\q-v12-storm-preview\\tornado\\generated-motion\\竖直的龙卷风原地持续旋转_螺旋风带向上翻卷_细风丝随之流动_形成连贯循环_保持_fd60d826\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

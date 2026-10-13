@@ -1,0 +1,26 @@
+{
+  "base_dimensions": [
+    160,
+    96
+  ],
+  "prepared_dimensions": [
+    184,
+    120
+  ],
+  "padding": 12,
+  "alpha_bounds": [
+    27,
+    6,
+    137,
+    93
+  ],
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "partial_alpha_pixels": 660,
+  "no_resampling": true,
+  "prepared_sha256": "6e298716b715b28626a3c201b163151fb6f3f65fe436aff08cb3e33e1319760a",
+  "base_sha256": "53f37cb74a7dd3a8e37f1f9493461bc7370e2b58e869d47dab46f74debcc4853",
+  "transparent_base_sha256": "706b641948859e9974f8a3675419ffc177eb3a8a7ba9fa49e9896728582f150c"
+}

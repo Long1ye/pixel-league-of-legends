@@ -1,0 +1,12 @@
+{
+  "command": "animate-run",
+  "recovery_command": "animate-poll",
+  "args": [
+    "--image-file", "assets/hero-attacks/2026-10-09/yasuo/v3-horizontal/guard/把亚索改成横斩起手_原来的持刀手握住单把武士刀_另一只手辅助握柄_刀横置胸前_8b3fd575/remove_bg.png",
+    "--prompt", "亚索缓慢而连贯地做两次胸前横斩：先把武士刀从右侧挥到左侧，紧接着反手挥回右侧，形成自然循环。手臂带动刀尖走完整弧线，腰肩随刀转动，脚下稳定，镜头固定；两次挥砍之间不断开，不做上下劈砍，不加刀光。",
+    "--animation-model", "pixel-engine-v1.1", "--intelligence", "advanced",
+    "--output-frames", "16", "--output-format", "webp", "--animation-type", "attack",
+    "--color-count", "64", "--remove-bg-method", "standard", "--optimize-prompt", "--padding-left", "32"
+  ],
+  "output_dir": "assets/hero-attacks/2026-10-09/yasuo/v3-horizontal/retry"
+}

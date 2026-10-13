@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>八向迈步姿势 · 360°朝向演示</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 28px 20px; color: #e5eeea; background: #0b151c; font: 14px/1.7 "Microsoft YaHei", sans-serif; }
+    main { max-width: 1140px; margin: auto; }
+    h1 { margin: 8px 0; font-size: 30px; }
+    h2 { font-size: 20px; margin: 20px 0 10px; }
+    p { color: #a4b9bf; margin: 8px 0; }
+    .eyebrow { color: #71d4c5; font: 11px/1.8 monospace; letter-spacing: .18em; }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0; }
+    button { color: #d9eae5; background: #172a33; border: 1px solid #35535d; border-radius: 6px; padding: 8px 16px; cursor: pointer; font: inherit; }
+    button[aria-pressed="true"] { background: #255248; border-color: #84e0c8; }
+    .demo { display: flex; flex-wrap: wrap; gap: 20px; }
+    .stage-shell { overflow: auto; max-width: 100%; border: 1px solid #405761; border-radius: 10px; }
+    .map-stage { position: relative; width: 560px; height: 580px; overflow: hidden; background: #1c342e; }
+    .terrain { position: absolute; left: -280px; top: -90px; width: 1022px; height: 654px; image-rendering: pixelated; opacity: .6; }
+    .map-stage::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 80px #08161e9c; pointer-events: none; }
+    .caption { position: absolute; top: 12px; left: 14px; z-index: 4; background: #091a23c9; padding: 5px 10px; color: #b4e7d7; font-size: 12px; }
+    .active-pose { position: absolute; z-index: 2; image-rendering: pixelated; }
+    .ground { position: absolute; left: 256px; top: 462px; width: 48px; height: 16px; border: 1px solid #b1f5da; border-radius: 50%; z-index: 1; }
+    #direction-arrow { position: absolute; left: 280px; top: 470px; width: 110px; height: 2px; background: #fce7a1; transform-origin: left center; z-index: 3; }
+    #direction-arrow::after { content: ""; position: absolute; right: -2px; top: -4px; border: 5px solid transparent; border-left: 9px solid #fce7a1; }
+    aside { flex: 1; min-width: 260px; background: #13232d; border: 1px solid #344b55; border-radius: 10px; padding: 20px; }
+    label { display: block; color: #d9e7e5; }
+    input { width: 100%; accent-color: #83dfc4; margin: 16px 0; }
+    output { display: block; font-size: 25px; color: #a3ebd3; margin: 8px 0; }
+    .compass { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 20px 0; }
+    .compass span { display: flex; align-items: center; justify-content: center; color: #8da9ae; }
+    .compass button { padding: 8px 3px; }
+    .notes { padding: 14px; margin-top: 18px; background: #182b35; border-left: 3px solid #91dfc7; }
+    #direction-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(272px, 1fr)); gap: 12px; }
+    figure { margin: 0; padding: 10px; background: #15252f; border: 1px solid #344851; border-radius: 8px; }
+    figure.selected { border-color: #93e2cb; }
+    figure img { display: block; margin: auto; image-rendering: pixelated; }
+    figcaption { text-align: center; color: #acc9c8; }
+    a { color: #99e6d2; text-underline-offset: 3px; }
+    .summary { margin-top: 20px; border-top: 1px solid #304850; padding-top: 12px; }
+    code { color: #d8eabe; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">MIDLINE / WALK DIRECTION STUDIES 02</div>
+    <h1>移动360°，姿势选八向。</h1>
+    <p>亚索、阿狸、盖伦各8张透明迈步姿势。当前每个方向只有1帧，不是循环动画，也未接入正式对局。</p>
+    <div class="hero-buttons" aria-label="选择英雄">
+      <button type="button" data-hero="yasuo" aria-pressed="true">亚索</button>
+      <button type="button" data-hero="ahri" aria-pressed="false">阿狸</button>
+      <button type="button" data-hero="garen" aria-pressed="false">盖伦</button>
+    </div>
+    <section class="demo" aria-label="地图朝向验证">
+      <div class="stage-shell">
+        <div class="map-stage">
+          <img class="terrain" src="../../../map-studies/2026-10-09/01-forest/参考图片的地形布局_为我们的像素风中路_Solo_游戏绘制一张完整的俯视地图底图_宽_a7693192/sprite_00.png" width="1022" height="654" alt="森林中路背景" />
+          <div class="caption">放大姿势验证 · 非实战比例 · 单帧</div>
+          <div class="ground"></div>
+          <img id="active-pose" class="active-pose" alt="亚索当前朝向的迈步姿势" />
+          <div id="direction-arrow"></div>
+        </div>
+      </div>
+      <aside>
+        <label for="angle">移动角度：0°向右，90°向下</label>
+        <input id="angle" type="range" min="0" max="359" step="1" value="45" />
+        <output id="angle-result" for="angle" aria-live="polite">45° → 右下 SE</output>
+        <p>金色箭头连续转动，人物只切换八种视角。滑条演示朝向选择，不移动角色位置。</p>
+        <div class="compass" aria-label="八个显示方向">
+          <button data-direction="nw">↖ 左上</button><button data-direction="n">↑ 上</button><button data-direction="ne">↗ 右上</button>
+          <button data-direction="w">← 左</button><span>八向</span><button data-direction="e">→ 右</button>
+          <button data-direction="sw">↙ 左下</button><button data-direction="s">↓ 下</button><button data-direction="se">↘ 右下</button>
+        </div>
+        <p id="asset-info"></p>
+        <p id="hero-notes"></p>
+        <a id="sheet-link" href="#">下载完整方向预览图</a>
+        <div class="notes">快捷八向的三组左右视角均已验证为镜像，持刀、持剑或持球手会换边；非对称装备不能直接作为正式素材验收。姿势幅度、尾巴与透明边缘还需修正。</div>
+      </aside>
+    </section>
+    <h2>八个方向的原始姿势</h2>
+    <p>每张图仅按整数倍显示，不平滑或缩小；点击方向可以切换上方验证窗口。</p>
+    <div id="direction-gallery"></div>
+    <section class="summary">
+      <p>实现分离：<code>目标点 → 归一化移动向量 → 连续更新位置</code>；另一路 <code>atan2(dy, dx) → 最接近的45°扇区 → 方向PNG</code>。边界加4°容差避免来回切图，停下保留最后朝向。</p>
+      <p>下一步先统一源图像素尺寸与脚底锚点，再为每个方向制作4帧循环：8方向 × 4帧 = 每英雄32帧。不要直接旋转平面角色PNG，那会让人物横倒，而不是转身。</p>
+      <p>本轮消耗45 Meowa积分，剩余1725。3套方向图共24张透明PNG、3张方向预览图。当前对局的镜头、移动与玩法未修改。</p>
+      <a href="../../../hero-animations/2026-10-09/v2/index.html">查看完整八向待机与走路</a> · <a href="../../../hero-animations/2026-10-09/v1/index.html">查看原6条动画样稿</a> · <a href="../../../hero-studies/2026-10-09/index.html">返回最初造型样稿</a>
+    </section>
+  </main>
+  <script type="module" src="./preview.ts"></script>
+</body>
+</html>

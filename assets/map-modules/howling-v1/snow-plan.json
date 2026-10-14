@@ -1,0 +1,1 @@
+{"command":"isometric-tileset-run","args":["--prompt","铺在石板桥面边缘的薄层积雪，白色和浅冰蓝色，平坦而低矮，边缘自然稀疏融化。英雄联盟嚎哭深渊像素风。只有积雪覆盖层，没有石砖、栏杆、立柱、山体或物件。","--terrain-mode","single","--single-terrain-region","foreground","--remove-bg-method","standard"],"output_dir":"assets/map-modules/howling-v1/snow"}

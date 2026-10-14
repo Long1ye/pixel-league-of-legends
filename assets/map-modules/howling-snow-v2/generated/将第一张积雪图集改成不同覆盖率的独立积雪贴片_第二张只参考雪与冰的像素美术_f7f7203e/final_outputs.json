@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_ad120e0567db4ab788e94026c030ed76",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\map-modules\\howling-snow-v2\\generated\\将第一张积雪图集改成不同覆盖率的独立积雪贴片_第二张只参考雪与冰的像素美术_f7f7203e\\remove_bg.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

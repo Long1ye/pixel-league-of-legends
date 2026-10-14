@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "job_id": "job_8b11ca3a7a2b4bc3b66b49a1739a4358",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-13\\yasuo\\q-v28-meowa-eight\\generated\\人物保持参考图的挺拔前后步姿势和像素画风不变_原地居中缓慢匀速旋转360度_展示_d96d9f30\\meowa_animation.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-13\\yasuo\\q-v28-meowa-eight\\generated\\人物保持参考图的挺拔前后步姿势和像素画风不变_原地居中缓慢匀速旋转360度_展示_d96d9f30\\meowa_animation_background.webp",
+      "mime_type": "image/webp"
+    }
+  ]
+}

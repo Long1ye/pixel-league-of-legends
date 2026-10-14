@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_d4b1c1f18fe44a8fbcf72066861c02ad",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\map-modules\\howling-snowstone-v1\\variants\\同一块冷灰蓝像素石砖_积雪减至约25_仅沿一个边角留下破碎薄雪_石砖表面清晰可见_5337131f\\edited.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\map-modules\\howling-snowstone-v1\\variants\\同一块冷灰蓝像素石砖_积雪减至约25_仅沿一个边角留下破碎薄雪_石砖表面清晰可见_5337131f\\edited_2.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\map-modules\\howling-snowstone-v1\\variants\\同一块冷灰蓝像素石砖_积雪减至约25_仅沿一个边角留下破碎薄雪_石砖表面清晰可见_5337131f\\edited_3.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

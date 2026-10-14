@@ -1,8 +1,10 @@
-import { ABILITIES, AI_HOLD, BALANCE, BASES, SPAWNS, TOWERS, WORLD } from './config';
+import { ABILITIES, AI_HOLD, BALANCE, BASES, HOWLING_MAP, MINION_EXITS, SPAWNS, TOWERS, WORLD } from './config';
 import { clampPoint, direction, distance, moveTowards, segmentDistance } from './geometry';
 import { isYasuoQCasting } from './YasuoQ';
+import { YASUO_R } from './YasuoR';
+import { HOMEGUARD, homeguardActive, updateHomeguard } from './Homeguard';
 import { clearStorm, grantStorm, stormReady, STORM } from './YasuoStorm';
-import { E, dashEndpoint, isDashing, pickDashTarget } from './YasuoE';
+import { E, EQ, dashEndpoint, isDashing, pickDashTarget } from './YasuoE';
 import { circleHit, wallHit, W_CAST_SECONDS, W_DELAY, W_DURATION, type WindWall } from './WindWall';
 import { enemyOf, type AbilityKey, type Entity, type EntityKind, type GameEvent, type MatchPhase, type MatchResult, type Point, type Projectile, type Team, type WinReason, type Zone } from './types';
 
@@ -34,6 +36,7 @@ export class Match {
   private nextId = 1;
   private nextWaveAt: number = BALANCE.firstWaveAt;
   private nextAiAt = 1;
+  private formations: {team:Team;wave:number;front:Point;deployed:boolean}[]=[];
   private claims: { team: Team; reason: Exclude<WinReason, 'draw'> }[] = [];
   private options: Required<MatchOptions>;
 
@@ -85,13 +88,20 @@ export class Match {
     this.wave++;
     for (const team of ['blue', 'red'] as const) {
       const base = BASES[team], dir = direction(base, BASES[enemyOf(team)]);
-      for (let i = 0; i < 4; i++) {
-        const side = i % 2 === 0 ? 6 : -6;
-        const p = clampPoint({ x: base.x + dir.x * (18 - i * 7) - dir.y * side, y: base.y + dir.y * (18 - i * 7) + dir.x * side });
-        this.spawnMinion(team, i === 3 ? 'ranged' : 'melee', p);
+      const exit=MINION_EXITS[team];
+      // On the ice bridge, all six form a file extending out from the Nexus rim.
+      // Its trailing caster starts at the outlet, never underneath the stone core.
+      const front=HOWLING_MAP
+        ? {x:exit.x+dir.x*150,y:exit.y+dir.y*150}
+        : {x:base.x+dir.x*190,y:base.y+dir.y*190};
+      this.formations.push({team,wave:this.wave,front,deployed:false});
+      for (let i = 0; i < 6; i++) {
+        const p = clampPoint({x:front.x-dir.x*i*30,y:front.y-dir.y*i*30});
+        const unit=this.spawnMinion(team,i<3?'melee':'ranged',p);
+        unit.formation={wave:this.wave,slot:i,goal:p};
       }
     }
-    this.events.push({ type: 'wave', team: 'blue', ...SPAWNS.blue });
+    this.events.push({ type: 'wave', team: 'blue', ...(HOWLING_MAP?MINION_EXITS.blue:SPAWNS.blue) });
   }
 
   orderMove(team: Team, point: Point): void {
@@ -125,7 +135,8 @@ export class Match {
 
   cast(team: Team, key: AbilityKey, point: Point): boolean {
     if (this.phase !== 'playing') return false;
-    const hero = this.hero(team), spec = team === 'red' && key === 'e' ? {cost:45,cooldown:8,range:105,damage:65} : ABILITIES[key];
+    const hero = this.hero(team), spec = team === 'red' && key === 'e' ? {cost:45,cooldown:8,range:105,damage:65}
+      : team === 'red' && key === 'q' ? {...ABILITIES.q, cooldown:5} : ABILITIES[key];
     if (hero.hp <= 0 || hero.abilities[key] > this.time || hero.mana < spec.cost) return false;
     if(hero.rCast || hero.q3Cast || (hero.airborneUntil??0)>this.time) return false;
     if(key==='r') {
@@ -135,21 +146,23 @@ export class Match {
       const victims=this.entities.filter(e=>e.team!==team&&e.kind!=='tower'&&e.hp>0&&(e.airborneUntil??0)>this.time&&distance(e,target)<=32);
       hero.rCast={startedAt:this.time,targetIds:victims.map(e=>e.id),hit:false};
       clearStorm(hero);
-      for(const v of victims){v.airborneUntil=this.time+1;v.windup=0;v.attackTargetId=null;}
-      Object.assign(hero,clampPoint({x:target.x+16,y:target.y-12}));hero.facing=Math.PI*.75;
+      for(const v of victims){v.airborneUntil=this.time+YASUO_R.airborneDuration;v.windup=0;v.attackTargetId=null;}
+      Object.assign(hero,clampPoint({x:target.x+YASUO_R.offsetX,y:target.y+YASUO_R.offsetY}));hero.facing=Math.PI*.75;
       hero.eCast=null;hero.eqCast=null;hero.qCast=null;hero.wCast=null;hero.destination=null;hero.targetId=null;hero.windup=0;hero.attackTargetId=null;this.clearAttackPresentation(hero);
       hero.abilities.r=this.time+spec.cooldown;hero.mana-=spec.cost;
+      hero.homeguardUntil=0;hero.homeguardCombatAt=this.time;
       this.events.push({type:'cast',team,x:hero.x,y:hero.y,ability:key});return true;
     }
     if (hero.wCast && this.time < hero.wCast.startedAt + W_CAST_SECONDS) return false;
     if (isDashing(hero,this.time)) {
       if(team!=='blue'||key!=='q'||hero.eqCast) return false;
-      const cast=hero.eCast!, triggerAt=Math.max(cast.startedAt+E.startup+E.dash,this.time+0.05);
+      const cast=hero.eCast!, triggerAt=Math.max(cast.startedAt+E.startup+E.dash,this.time+EQ.windup);
       hero.mana-=spec.cost; hero.abilities.q=this.time+spec.cooldown;
       const empowered=stormReady(hero,this.time);
       if(empowered)clearStorm(hero);
-      hero.eqCast={startedAt:triggerAt-0.05,triggerAt,endsAt:triggerAt+0.15,eStartedAt:cast.startedAt,facing:cast.facing,hit:false,empowered};
+      hero.eqCast={startedAt:triggerAt-EQ.windup,triggerAt,endsAt:triggerAt+EQ.recovery,eStartedAt:cast.startedAt,facing:cast.facing,hit:false,empowered};
       hero.qCast=null;
+      hero.homeguardUntil=0;hero.homeguardCombatAt=this.time;
       this.events.push({type:'cast',team,x:hero.x,y:hero.y,ability:'q'});
       return true;
     }
@@ -171,6 +184,7 @@ export class Match {
       if(team==='blue' && stormReady(hero,this.time)) {
         clearStorm(hero);hero.qCast=null;
         hero.q3Cast={startedAt:this.time,facing:hero.facing,released:false};
+        hero.homeguardUntil=0;hero.homeguardCombatAt=this.time;
         this.events.push({type:'cast',team,x:hero.x,y:hero.y,ability:key});
         return true;
       }
@@ -207,6 +221,7 @@ export class Match {
         x: hero.x + dir.x * length, y: hero.y + dir.y * length,
         radius: 26, triggerAt: this.time + 0.55, damage: spec.damage });
     }
+    hero.homeguardUntil=0;hero.homeguardCombatAt=this.time;
     this.events.push({ type: 'cast', team, x: hero.x, y: hero.y, ability: key });
     return true;
   }
@@ -217,6 +232,7 @@ export class Match {
     const dealt = amount * (target.guardUntil > this.time ? 0.6 : 1) * (target.kind === 'tower' ? 0.65 : 1);
     target.hp = Math.max(0, target.hp - dealt);
     target.hitAt = this.time;
+    if (target.kind === 'hero') { target.homeguardUntil = 0; target.homeguardCombatAt = this.time; }
     if (slow) target.slowUntil = this.time + 1.5;
     this.events.push({ type: 'hit', team: source.team, x: target.x, y: target.y, amount: Math.round(dealt) });
     if (source.kind === 'hero' && target.kind === 'hero') {
@@ -257,11 +273,13 @@ export class Match {
       this.thinkAi();
       this.nextAiAt = this.time + BALANCE.aiInterval;
     }
+    this.updateFormations(dt);
     for (const entity of this.entities) {
       if((entity.qStacksUntil??0)<=this.time && (entity.qStacks??0)>0)clearStorm(entity);
       if (entity.hp <= 0) continue;
       entity.cooldown = Math.max(0, entity.cooldown - dt);
       if (entity.kind === 'hero') {
+        updateHomeguard(entity, this.time);
         entity.mana = Math.min(entity.maxMana, entity.mana + BALANCE.manaRegen * dt);
         if (distance(entity, BASES[entity.team]) < BALANCE.fountainRadius) {
           entity.hp = Math.min(entity.maxHp, entity.hp + BALANCE.fountainHeal * dt);
@@ -295,7 +313,7 @@ export class Match {
   }
 
   private chooseTarget(unit: Entity): void {
-    const radius = unit.kind === 'tower' ? unit.range : unit.kind === 'ranged' ? 65 : 39;
+    const radius = unit.kind === 'tower' ? unit.range : unit.formation ? 160 : unit.kind === 'ranged' ? 110 : 39;
     const candidates = this.entities.filter(e => e.hp > 0 && e.team !== unit.team && distance(e, unit) <= radius + e.radius);
     if (unit.kind === 'tower' && unit.aggroUntil > this.time) {
       const forced = candidates.find(e => e.id === unit.aggroTargetId);
@@ -304,8 +322,35 @@ export class Match {
     const priority = (e: Entity): number => e.kind === 'melee' || e.kind === 'ranged' ? 0 : e.kind === 'hero' ? 1 : 2;
     candidates.sort((a, b) => priority(a) - priority(b) || distance(unit, a) - distance(unit, b) || a.id - b.id);
     const previous = candidates.find(e => e.id === unit.targetId);
-    unit.targetId = previous && priority(previous) === priority(candidates[0]) ? previous.id : (candidates[0]?.id ?? null);
-    if (unit.kind !== 'tower') unit.destination = unit.targetId ? null : BASES[enemyOf(unit.team)];
+    unit.targetId = !unit.formation && previous && priority(previous) === priority(candidates[0]) ? previous.id : (candidates[0]?.id ?? null);
+    if (unit.kind !== 'tower') unit.destination = unit.formation?.goal ?? (unit.targetId ? null : BASES[enemyOf(unit.team)]);
+  }
+
+  private updateFormations(dt:number):void {
+    this.formations=this.formations.filter(f=>this.entities.some(e=>e.hp>0&&e.team===f.team&&e.formation?.wave===f.wave));
+    for(const f of this.formations){
+      const dir=direction(BASES[f.team],BASES[enemyOf(f.team)]);
+      const members=this.entities.filter(e=>e.hp>0&&e.team===f.team&&e.formation?.wave===f.wave);
+      const hasMelee=members.some(e=>e.kind==='melee');
+      let clearance=Infinity;
+      for(const e of this.entities){
+        if(e.hp<=0||e.team===f.team)continue;
+        const dx=e.x-f.front.x,dy=e.y-f.front.y;
+        const ahead=dx*dir.x+dy*dir.y,side=-dx*dir.y+dy*dir.x;
+        if(ahead>=-25&&Math.abs(side)<130)clearance=Math.min(clearance,ahead-e.radius-(hasMelee?BALANCE.melee.range-2:BALANCE.ranged.range-2));
+      }
+      if(clearance<220)f.deployed=true;
+      // Wait for the trailing members to finish deploying before advancing again.
+      const caughtUp=members.every(e=>distance(e,e.formation!.goal)<40);
+      const advance=caughtUp?Math.max(0,Math.min(BALANCE.melee.speed*dt,clearance)):0;
+      f.front=clampPoint({x:f.front.x+dir.x*advance,y:f.front.y+dir.y*advance});
+      for(const e of members){
+        const slot=e.formation!.slot;
+        const back=f.deployed?(slot<3||!hasMelee?0:64):slot*30;
+        const side=f.deployed?(slot%3-1)*40:0;
+        e.formation!.goal=clampPoint({x:f.front.x-dir.x*back-dir.y*side,y:f.front.y-dir.y*back+dir.x*side});
+      }
+    }
   }
 
   private clearAttackPresentation(unit: Entity): void {
@@ -316,8 +361,8 @@ export class Match {
   private updateCombat(unit: Entity, dt: number): void {
     if(unit.rCast) {
       const cast=unit.rCast;
-      if(!cast.hit && this.time>=cast.startedAt+.82){cast.hit=true;for(const id of cast.targetIds){const victim=this.entity(id);if(victim&&victim.hp>0)this.damage(unit,victim,ABILITIES.r.damage);}}
-      if(this.time>=cast.startedAt+1.15)unit.rCast=null;
+      if(!cast.hit && this.time>=cast.startedAt+YASUO_R.hitAt){cast.hit=true;for(const id of cast.targetIds){const victim=this.entity(id);if(victim&&victim.hp>0)this.damage(unit,victim,ABILITIES.r.damage);}}
+      if(this.time>=cast.startedAt+YASUO_R.duration)unit.rCast=null;
       return;
     }
     if((unit.airborneUntil??0)>this.time) return;
@@ -335,6 +380,7 @@ export class Match {
       const progress=Math.max(0,Math.min(1,(this.time-cast.startedAt-E.startup)/E.dash));
       unit.x=cast.start.x+(cast.end.x-cast.start.x)*progress;
       unit.y=cast.start.y+(cast.end.y-cast.start.y)*progress; unit.facing=cast.facing;
+      Object.assign(unit,clampPoint(unit,unit.radius));
       const target=this.entity(cast.targetId);
       if (!cast.hit && progress>0 && target && target.hp>0 && segmentDistance(target,from,unit)<=target.radius+unit.radius) {
         cast.hit=true; this.damage(unit,target,ABILITIES.e.damage);
@@ -353,6 +399,18 @@ export class Match {
       return;
     }
     unit.qCast = null;
+    if(unit.formation){
+      const goal=unit.formation.goal;
+      if(distance(unit,goal)>2){
+        unit.windup=0;unit.attackTargetId=null;this.clearAttackPresentation(unit);
+        this.walk(unit,goal,dt);return;
+      }
+      const opponent=this.entity(unit.targetId);
+      if(!opponent||distance(unit,opponent)>unit.range+opponent.radius){
+        unit.windup=0;unit.attackTargetId=null;this.clearAttackPresentation(unit);return;
+      }
+      unit.destination=null;
+    }
     const target = this.entity(unit.targetId);
     if (!target || target.hp <= 0) {
       // A released attack can finish its recovery even if it killed the target.
@@ -399,7 +457,7 @@ export class Match {
 
   private walk(unit: Entity, target: Point, dt: number): void {
     unit.facing = Math.atan2(target.y - unit.y, target.x - unit.x);
-    moveTowards(unit, target, unit.speed * dt * (unit.slowUntil > this.time ? 0.7 : 1));
+    moveTowards(unit, target, unit.speed * dt * (unit.slowUntil > this.time ? 0.7 : 1) * (homeguardActive(unit,this.time) ? HOMEGUARD.multiplier : 1));
     const point = clampPoint(unit, unit.radius);
     unit.x = point.x; unit.y = point.y;
     if (unit.destination && distance(unit, unit.destination) < 1) unit.destination = null;

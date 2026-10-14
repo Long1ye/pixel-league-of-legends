@@ -1,0 +1,11 @@
+{
+  "command": "image-edit-run",
+  "args": [
+    "--reference-image", "C:/Users/PC/AppData/Local/Temp/codex-clipboard-7b888824-bd3a-4598-8fea-001014496661.png",
+    "--prompt", "Edit this exact pixel character into a body layer for a thrust animation. Remove only the thrust arm below the shoulder armor on the RIGHT SIDE OF THE IMAGE, including that upper arm, forearm and hand. Keep the shoulder armor and reconstruct the torso behind the removed arm. Keep the OTHER arm on the LEFT SIDE OF THE IMAGE complete, including its hand. Remove the sword blade, sword handle and guard; keep only the empty scabbard attached at the waist. Preserve the original crouched pose, southeast facing, proportions, face, hair, scarf, clothes, feet, colors and small crisp pixel style. One character on transparent background, no detached parts, no effects.",
+    "--mode", "pixel", "--strict",
+    "--generation-model", "nano-banana", "--resolution", "1K",
+    "--remove-bg-method", "standard"
+  ],
+  "output_dir": "assets/hero-skills/2026-10-13/yasuo/q-v21-one-arm-body/generated"
+}

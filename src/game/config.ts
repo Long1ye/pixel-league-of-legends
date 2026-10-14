@@ -1,11 +1,13 @@
 import type { AbilityKey, Point, Team } from './types';
+import {bridgePoint,bridgeTowerRange,BRIDGE_WORLD,BRIDGE} from './Bridge';
+export const HOWLING_MAP=typeof location!=='undefined'&&new URLSearchParams(location.search).get('map')==='howling';
 
 // Expand terrain in world space without enlarging actors or changing the camera.
 // Keep the source PNG untouched and use integer, nearest-neighbor terrain scale.
 export const MAP_LAYOUT = { sourceWidth: 511, sourceHeight: 327, scale: 2 } as const;
 export const WORLD = {
-  width: MAP_LAYOUT.sourceWidth * MAP_LAYOUT.scale,
-  height: MAP_LAYOUT.sourceHeight * MAP_LAYOUT.scale,
+  width: HOWLING_MAP?BRIDGE_WORLD.width:MAP_LAYOUT.sourceWidth * MAP_LAYOUT.scale,
+  height: HOWLING_MAP?BRIDGE_WORLD.height:MAP_LAYOUT.sourceHeight * MAP_LAYOUT.scale,
   step: 1 / 60,
 } as const;
 export const VIEWPORT = { width: 480, height: 270 } as const;
@@ -15,12 +17,12 @@ export function mapToWorld(point: Point): Point {
 export const BALANCE = {
   csToWin: 100,
   firstWaveAt: 2,
-  waveInterval: 14,
+  waveInterval: 30,
   aiInterval: 0.18,
   hero: { hp: 640, mana: 240, speed: 53, range: 54, damage: 43, attackInterval: 0.8, windup: 0.19 },
-  melee: { hp: 110, speed: 24, range: 11, damage: 10, attackInterval: 1.25, windup: 0.24 },
-  ranged: { hp: 78, speed: 24, range: 43, damage: 13, attackInterval: 1.45, windup: 0.25 },
-  tower: { hp: 1000, range: 78, damage: 90, attackInterval: 1.15, windup: 0.15 },
+  melee: { hp: 180, speed: 28, range: 11, damage: 10, attackInterval: 1.25, windup: 0.24 },
+  ranged: { hp: 125, speed: 28, range: 90, damage: 13, attackInterval: 1.45, windup: 0.25 },
+  tower: { hp: 1000, range: HOWLING_MAP?bridgeTowerRange(BRIDGE.blue.outerTower[0]):78, damage: 90, attackInterval: 1.15, windup: 0.15 },
   projectileSpeed: 190,
   fountainRadius: 22 * MAP_LAYOUT.scale,
   fountainHeal: 42,
@@ -28,7 +30,7 @@ export const BALANCE = {
 } as const;
 
 export const ABILITIES: Record<AbilityKey, { name: string; cost: number; cooldown: number; range: number; damage: number }> = {
-  q: { name: '棱光箭', cost: 30, cooldown: 5, range: 145, damage: 85 },
+  q: { name: '棱光箭', cost: 30, cooldown: 1, range: 145, damage: 85 },
   w: { name: '风之障壁', cost: 25, cooldown: 8, range: 32, damage: 0 },
   e: { name: '踏前斩', cost: 0, cooldown: 0.5, range: 60, damage: 55 },
   r: { name: '狂风绝息斩', cost: 0, cooldown: 70, range: 175, damage: 200 },
@@ -38,4 +40,14 @@ export const ABILITIES: Record<AbilityKey, { name: string; cost: number; cooldow
 export const BASES: Record<Team, Point> = { blue: mapToWorld({ x: 51, y: 305 }), red: mapToWorld({ x: 459, y: 44 }) };
 export const TOWERS: Record<Team, Point> = { blue: mapToWorld({ x: 115, y: 262 }), red: mapToWorld({ x: 395, y: 85 }) };
 export const SPAWNS: Record<Team, Point> = { blue: mapToWorld({ x: 145, y: 241 }), red: mapToWorld({ x: 364, y: 109 }) };
-export const AI_HOLD: Point = mapToWorld({ x: 305, y: 147 });
+/** Exit at the lane-facing rim of each circular Nexus, not inside its stone footprint. */
+export const MINION_EXITS: Record<Team, Point> = {blue: BASES.blue, red: BASES.red};
+export const AI_HOLD: Point = HOWLING_MAP?bridgePoint(70):mapToWorld({ x: 305, y: 147 });
+if(HOWLING_MAP){
+ const b=BRIDGE.blue;
+ BASES.blue=bridgePoint(b.spawn[0]);BASES.red=bridgePoint(-b.spawn[0]);
+ TOWERS.blue=bridgePoint(b.outerTower[0]);TOWERS.red=bridgePoint(-b.outerTower[0]);
+ SPAWNS.blue=bridgePoint(b.spawn[0]);SPAWNS.red=bridgePoint(-b.spawn[0]);
+ MINION_EXITS.blue=bridgePoint(b.nexus[0]+30);
+ MINION_EXITS.red=bridgePoint(-b.nexus[0]-30);
+}

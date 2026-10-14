@@ -6,19 +6,20 @@ const urls = import.meta.glob('../../assets/heroes/yasuo/selected-2026-10-10/*.p
   eager: true, query: '?url', import: 'default',
 }) as Record<string, string>;
 
+const attackUrls=import.meta.glob('../../assets/heroes/yasuo/attacks-v2-2026-10-13/attack-*.png',{eager:true,query:'?url',import:'default'}) as Record<string,string>;
 export const YASUO_TEXTURES: { clip: YasuoClip; url: string }[] = [
   ...YASUO_ASSETS.attacks, ...YASUO_ASSETS.locomotion,
 ].map(clip => {
-  const url = urls[`../../assets/heroes/yasuo/selected-2026-10-10/${clip.sheet}`];
+  const url = 'id' in clip ? attackUrls[`../../assets/heroes/yasuo/attacks-v2-2026-10-13/${clip.sheet}`] : urls[`../../assets/heroes/yasuo/selected-2026-10-10/${clip.sheet}`];
   if (!url) throw new Error(`Missing selected Yasuo atlas: ${clip.sheet}`);
   return { clip, url };
 });
 
-const qUrls = import.meta.glob('../../assets/heroes/yasuo/q-wind-2026-10-12/*.png', {
+const qUrls = import.meta.glob('../../assets/heroes/yasuo/q-meowa-eight-2026-10-13/*.png', {
   eager: true, query: '?url', import: 'default',
 }) as Record<string, string>;
 for (const clip of YASUO_Q_ASSETS.clips) {
-  const url = qUrls[`../../assets/heroes/yasuo/q-wind-2026-10-12/${clip.sheet}`];
+  const url = qUrls[`../../assets/heroes/yasuo/q-meowa-eight-2026-10-13/${clip.sheet}`];
   if (!url) throw new Error(`Missing Yasuo Q atlas: ${clip.sheet}`);
   YASUO_TEXTURES.push({ clip, url });
 }

@@ -1,0 +1,8 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>亚索 · game-assets 八向身体</title>
+<style>body{margin:24px;background:#10252d;color:#e0eff7;font:15px system-ui}p{max-width:800px;line-height:1.7;color:#abc7d2}#views{display:grid;grid-template-columns:repeat(2,max-content);gap:18px}figure{margin:0}img{image-rendering:pixelated;background:repeating-conic-gradient(#20343d 0% 25%,#263c44 0% 50%) 0/20px 20px}figcaption{padding:8px;color:#c5e3ed}a{color:#b6e5ff}</style>
+<h1>亚索 · game-assets 八向身体</h1><p id="status">正在加载方向图…</p><div id="views"></div>
+<script type="module">
+const response=await fetch('./directions.json');
+if(response.ok){const data=await response.json();document.getElementById('status').textContent=data.note;for(const item of data.directions){const fig=document.createElement('figure'),img=document.createElement('img'),caption=document.createElement('figcaption');img.src=item.file;img.alt=item.label;caption.textContent=item.label;fig.append(img,caption);document.getElementById('views').append(fig);}}
+else document.getElementById('status').textContent='方向图尚未完成，请等待生成与检查。';
+</script></html>

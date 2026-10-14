@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_ff8ce74855704cb68b21ac50790a8d2b",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\map-layers\\forest-v1\\generated-ground\\制作这张地图的干净地面补底_移除树冠和河岸的高草_补出它们遮挡的土壤_草地或_82a1b3cc\\edited.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

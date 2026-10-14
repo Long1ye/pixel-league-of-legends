@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_c5591d88811d40808fb3ef0ce4bd98e6",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\units\\minions-animated-v1\\red-ranged\\walk\\角色始终朝屏幕左下方向_原地自然走路循环_双脚交替迈步_武器随身体轻微摆动_保_e68c1098\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\units\\minions-animated-v1\\red-ranged\\walk\\角色始终朝屏幕左下方向_原地自然走路循环_双脚交替迈步_武器随身体轻微摆动_保_e68c1098\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\units\\minions-animated-v1\\red-ranged\\walk\\角色始终朝屏幕左下方向_原地自然走路循环_双脚交替迈步_武器随身体轻微摆动_保_e68c1098\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

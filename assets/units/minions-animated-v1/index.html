@@ -1,0 +1,21 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>红蓝小兵 · 行走与攻击动画</title>
+<style>body{margin:24px;background:#0a1520;color:#d8e6ef;font:15px system-ui}h1{font-size:24px}p{color:#9eb5c6}section{border-top:1px solid #334757;margin-top:28px}.clips{display:flex;flex-wrap:wrap;gap:16px}article{padding:12px;background:#15232e;border:1px solid #395366}img{image-rendering:pixelated;display:block;background:repeating-conic-gradient(#233b45 0% 25%,#1d323b 0% 50%) 0/24px 24px}a{color:#8edff2}.status{color:#adc4d3}</style>
+<h1>小兵动作预览 · v1</h1><p>蓝方向右上，红方向左下。每组先行走、后攻击。原始尺寸播放，尚未接入主游戏。</p><p>初版待修：部分走路首尾有跳动；蓝方法师攻击第 5 帧杖尖缺失；近战攻击仍有少量脚底位移。请先确认动作风格。</p><main id="grid"></main>
+<script type="module">
+const units=[['blue-melee','蓝方近战 · 锤盾 ↗'],['blue-ranged','蓝方远程 · 法杖 ↗'],['red-melee','红方近战 · 斧盾 ↙'],['red-ranged','红方远程 · 法杖 ↙']];
+const webPath=p=>'/'+p.replaceAll('\\','/').split('/assets/').pop().replace(/^assets\//,'').replace(/^/,'assets/');
+for(const [id,label] of units){
+ const section=document.createElement('section');section.innerHTML=`<h2>${label}</h2><div class="clips"></div>`;grid.append(section);
+ for(const action of ['walk','attack']){
+  const card=document.createElement('article');card.innerHTML=`<h3>${action==='walk'?'行走循环':'停步攻击'}</h3><p class="status">读取生成结果…</p>`;section.lastElementChild.append(card);
+  try {const state=await fetch(`plans/${id}-${action}.state.json`).then(r=>r.json());if(state.status!=='success')throw new Error('正在生成，稍后刷新');
+   const manifest=await fetch(webPath(state.manifest)).then(r=>r.json());
+   const media=manifest.outputs.filter(o=>o.type==='media'&&/\.(webp|gif)$/i.test(o.path));
+   if(!media.length)throw new Error('尚无动画文件');
+   const output=media.find(o=>!o.path.includes('background'))??media[0];
+   const img=new Image();img.src=webPath(output.path);img.alt=label+' '+action;card.append(img);card.querySelector('.status').textContent='已生成 · 原尺寸播放';
+   const a=document.createElement('a');a.href=img.src;a.textContent='打开动画文件';card.append(a);
+  } catch(e){card.querySelector('.status').textContent=e.message;}
+ }
+}
+</script></html>

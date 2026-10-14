@@ -1,0 +1,15 @@
+{
+  "command": "meowa-animation-run",
+  "recovery_command": "animate-poll",
+  "args": [
+    "--image-file", "assets/hero-skills/2026-10-13/yasuo/q3-v2-user-tornado/tornado-pale-blue.png",
+    "--prompt", "淡蓝白色龙卷风持续原地旋转，层叠风带沿螺旋向上流动，底部风环随之旋转。保持参考图的浅蓝白配色、像素风格和漏斗轮廓，底部中心固定，镜头固定，首尾自然循环，不添加其他物体。",
+    "--style-mode", "hd", "--resolution", "480p",
+    "--alpha-mode", "soft", "--output-frames", "16",
+    "--quality-mode", "standard", "--animation-mode", "loop",
+    "--remove-bg-method", "standard", "--remove-bg-batch-size", "4",
+    "--background-color", "#c6c6c6", "--optimize-prompt",
+    "--padding", "24", "--padding-alignment", "center"
+  ],
+  "output_dir": "assets/hero-skills/2026-10-13/yasuo/q3-v3-pale-tornado/generated"
+}

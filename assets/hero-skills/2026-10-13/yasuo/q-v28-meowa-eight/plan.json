@@ -1,0 +1,13 @@
+{
+ "command":"meowa-animation-run",
+ "recovery_command":"animate-poll",
+ "args":[
+  "--image-file","assets/hero-skills/2026-10-13/yasuo/q-v27-upright-se/body.png",
+  "--prompt","人物保持参考图的挺拔前后步姿势和像素画风不变，原地居中缓慢匀速旋转360度，展示八个方向，镜头固定。保持银色肩甲下面缺少一条手臂的分层身体结构，另一条手臂完整；肩甲、缺臂和腰间空剑鞘始终在人物原有的身体侧，不能左右镜像。不要长出缺失的手臂，不要增加刀剑，不走路、不挥手，头发、衣服、身体比例与参考一致。",
+  "--style-mode","hd","--resolution","480p","--alpha-mode","sharp",
+  "--output-frames","32","--quality-mode","standard","--animation-mode","loop",
+  "--remove-bg-method","standard","--remove-bg-batch-size","8",
+  "--background-color","#c6c6c6","--optimize-prompt","--padding","0"
+ ],
+ "output_dir":"assets/hero-skills/2026-10-13/yasuo/q-v28-meowa-eight/generated"
+}

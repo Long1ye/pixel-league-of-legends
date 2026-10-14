@@ -1,0 +1,21 @@
+{
+  "status": "packaged",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "edge-0.png"
+    },
+    {
+      "type": "media",
+      "path": "edge-1.png"
+    },
+    {
+      "type": "media",
+      "path": "edge-2.png"
+    },
+    {
+      "type": "media",
+      "path": "edge-3.png"
+    }
+  ]
+}

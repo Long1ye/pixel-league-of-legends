@@ -1,0 +1,5 @@
+{
+ "command":"general-image-run","recovery_command":"general-image-poll","recovery_id_flag":"--job-id",
+ "args":["--prompt","Single game VFX sprite on transparent background: a sharp, perfectly straight horizontal burst of wind energy pointing right. One solid luminous ivory-white core, thin ice-blue border and a deep sky-blue underside. Slender at its left origin, swelling smoothly into a fuller middle, tapering to a very long needle tip on the right. Compact clean pixel-art clusters, a strong filled silhouette, no hollow outline, no separate parallel lines, no particles, no curved swirls, no weapon parts, no character, no text. Center the entire effect with generous transparent margin. It should read as a momentary piercing wind strike, not a flying sword or a lightning bolt.","--generation-model","image-2.5","--quality","detailed","--resolution","1K","--aspect-ratio","16:9","--remove-bg-method","standard"],
+ "output_dir":"assets/hero-skills/2026-10-13/yasuo/q-v35-clean-wind/base-generated"
+}

@@ -1,0 +1,1 @@
+{"command":"tileset-gen-run","args":["--terrain-mode","dual","--foreground-texture","assets/map-studies/midlane-v2/generated-lane.png","--background-texture","assets/map-studies/midlane-v2/generated-grass.png","--prompt","Background is grass; foreground is weathered stone lane."],"output_dir":"assets/map-studies/midlane-v2/generated-atlas"}

@@ -1,0 +1,21 @@
+{
+  "status": "packaged",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "gate-0.png"
+    },
+    {
+      "type": "media",
+      "path": "gate-1.png"
+    },
+    {
+      "type": "media",
+      "path": "gate-2.png"
+    },
+    {
+      "type": "media",
+      "path": "gate-3.png"
+    }
+  ]
+}

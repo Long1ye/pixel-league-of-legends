@@ -1,0 +1,5 @@
+{
+ "command":"animation-edit-run",
+ "args":["--animation-file","assets/hero-skills/2026-10-13/yasuo/q-v35-clean-wind/clean.webp","--prompt","仅修改配色：将风刃动画的所有蓝色和青色区域改为黑色、炭灰和银灰，中央发光核心保持纯白。形成清晰的白色中心、银灰过渡和深黑外沿。不要改变风刃形状、大小、位置、动作、帧数和透明背景，不新增颜色或物体。","--mode","hd","--generation-speed","normal","--remove-bg-method","standard"],
+ "output_dir":"assets/hero-skills/2026-10-13/yasuo/q-v36-monochrome/generated"
+}

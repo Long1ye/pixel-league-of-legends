@@ -1,0 +1,5 @@
+{
+ "command":"meowa-animation-run","recovery_command":"animate-poll",
+ "args":["--image-file","assets/hero-skills/2026-10-13/yasuo/q-v35-clean-wind/base-generated/job_8bb0db174dbf45858899b1e1f7e29102/result_images_0_url.png","--prompt","这道笔直的蓝白风刃在固定位置完成一次攻击闪光：白色核心迅速变亮，随后整条风刃变细、淡出消失。保持水平朝右，根部和尖端位置不移动，不飞行，不旋转，不弯曲，不产生粒子或其他物体。","--style-mode","hd","--resolution","480p","--alpha-mode","soft","--output-frames","8","--quality-mode","standard","--animation-mode","non_loop","--remove-bg-method","standard","--remove-bg-batch-size","4","--background-color","#c6c6c6","--optimize-prompt","--padding","16","--padding-alignment","center"],
+ "output_dir":"assets/hero-skills/2026-10-13/yasuo/q-v35-clean-wind/animated"
+}

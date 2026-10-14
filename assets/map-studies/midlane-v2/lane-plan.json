@@ -1,0 +1,1 @@
+{"command":"texture-gen-run","args":["--prompt","俯视像素游戏中路地面纹理，低饱和暖灰褐色平整磨损石板与泥土，石块大而简洁，接缝稀疏、明暗对比很低，不要草木、凸起物件或文字。英雄联盟中路对线风格。","--self-loop"],"output_dir":"assets/map-studies/midlane-v2/generated-lane"}

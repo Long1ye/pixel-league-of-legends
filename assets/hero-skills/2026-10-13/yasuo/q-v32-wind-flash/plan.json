@@ -1,0 +1,5 @@
+{
+ "command":"animation-edit-run",
+ "args":["--animation-file","assets/hero-skills/2026-10-13/yasuo/q-v31-steel-blade/blade.webp","--prompt","把每一帧的整把实体刀完全替换为一条细长尖锐的淡蓝白色风刃闪光，彻底去除刀柄、护手、金属刀身和任何武器零件。只有抽象的剑气：纤细白色核心，淡蓝风丝，前端尖锐，尾部自然碎散。保持原来的长轴方向、位置和时序，原地亮起后消散，不向前飞行，不要圆环或巨大光团，保持清晰像素风和透明背景。","--mode","pixel","--generation-speed","normal","--remove-bg-method","standard"],
+ "output_dir":"assets/hero-skills/2026-10-13/yasuo/q-v32-wind-flash/generated"
+}

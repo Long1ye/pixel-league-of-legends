@@ -42,7 +42,7 @@ describe('Q stacks and independently rendered readiness',()=>{
  });
  it('EQ grants one stack for multiple hits and empowered EQ knocks up without tornado',()=>{
   const m=createEPractice();m.start();const h=m.hero('blue'),t=m.entities.find(e=>e.kind==='melee'&&e.team==='red')!;
-  ready(m);m.cast('blue','e',t);m.cast('blue','q',t);advance(m,.3);
+  ready(m);m.cast('blue','e',t);m.cast('blue','q',t);advance(m,.6);
   expect(t.airborneUntil).toBeGreaterThan(m.time);expect(h.qStacks).toBe(0);expect(m.projectiles).toHaveLength(0);
  });
  it('R clears readiness and pending Q3 is cancelled by death',()=>{

@@ -1,0 +1,45 @@
+{
+  "status": "packaged",
+  "outputs": [
+    {
+      "path": "repair-sheet.png",
+      "type": "media"
+    },
+    {
+      "path": "repair-0.png",
+      "type": "media"
+    },
+    {
+      "path": "repair-1.png",
+      "type": "media"
+    },
+    {
+      "path": "repair-2.png",
+      "type": "media"
+    },
+    {
+      "path": "repair-3.png",
+      "type": "media"
+    },
+    {
+      "path": "damage-sheet.png",
+      "type": "media"
+    },
+    {
+      "path": "damage-0.png",
+      "type": "media"
+    },
+    {
+      "path": "damage-1.png",
+      "type": "media"
+    },
+    {
+      "path": "damage-2.png",
+      "type": "media"
+    },
+    {
+      "path": "damage-3.png",
+      "type": "media"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "command": "image-edit-run",
+  "args": [
+    "--reference-image", "C:/Users/PC/AppData/Local/Temp/codex-clipboard-96e26456-d955-4dff-830e-ce10d7ebb155.png",
+    "--prompt", "Edit this exact Yasuo pixel sprite into the BODY LAYER of a southeast-facing sword attack. Preserve his face, swept-back ponytail, blue scarf, silver shoulder armor, clothing palette, pixel scale and character proportions. Give him a confident high stance: chest open, head raised looking southeast, torso leaning slightly forward as a whole, front leg slightly bent and rear leg braced, feet separated front-to-back rather than a wide squat. Remove only the sword-wielding arm on the RIGHT SIDE OF THE IMAGE below the shoulder armor, leaving a clean shoulder socket for a separate animated arm. Keep the other arm and hand complete and relaxed near the waist. Keep only the scabbard at the waist, no sword or sword handle. One complete head-body-legs sprite on transparency, no detached parts, no effects, no labels.",
+    "--mode", "pixel", "--strict",
+    "--generation-model", "nano-banana", "--resolution", "1K",
+    "--remove-bg-method", "standard"
+  ],
+  "output_dir": "assets/hero-skills/2026-10-13/yasuo/q-v27-upright-se/generated"
+}

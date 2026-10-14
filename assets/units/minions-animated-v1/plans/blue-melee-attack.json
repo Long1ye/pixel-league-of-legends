@@ -1,0 +1,32 @@
+{
+  "command": "animate-run",
+  "recovery_command": "animate-poll",
+  "output_dir": "assets/units/minions-animated-v1/blue-melee/attack",
+  "args": [
+    "--image-file",
+    "assets/units/minions-v1/components/component_001.png",
+    "--prompt",
+    "角色面朝屏幕右上，停步站稳，用短柄锤朝前挥击一次，另一只手稳住盾牌，然后收回武器。双脚固定在原地，没有走步或冲刺，保持原像素造型、朝向和装备不变，固定镜头，结束回到起始姿势。",
+    "--output-frames",
+    "8",
+    "--output-format",
+    "webp",
+    "--animation-type",
+    "attack",
+    "--animation-model",
+    "frame-engine-v1.1",
+    "--intelligence",
+    "standard",
+    "--optimize-prompt",
+    "--remove-bg-method",
+    "standard",
+    "--padding-top",
+    "56",
+    "--padding-down",
+    "24",
+    "--padding-left",
+    "24",
+    "--padding-right",
+    "64"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_41b771973a7b443eb91cab6d7da2d0f0",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\map-modules\\howling-snow-v3\\generated\\编辑第一张512x256的4行4列积雪图集_保留每格128x64的位置_透明背景_冷灰蓝与白色的_a0c3d384\\remove_bg.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

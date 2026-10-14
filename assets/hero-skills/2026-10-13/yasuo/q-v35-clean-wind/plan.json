@@ -1,0 +1,5 @@
+{
+ "command":"animation-edit-run",
+ "args":["--animation-file","assets/hero-skills/2026-10-13/yasuo/q-v34-focused-thrust/wind.webp","--prompt","重新设计这段剑气动画，替换掉当前空心轮廓和碎线。画成单一饱满的直线风刃：连续实心的冰白中心、紧贴的浅天蓝外沿，根部纤细，中前段稍宽，最前端收成锐利长尖，整体流畅克制。每帧保持一整块干净的风刃形状，通过亮度增强与消散表现攻击，不用平行线、空心框、弯曲线或颗粒表现。沿原来的直线轴固定闪现，不向前移动，不含武器零件、圆环、闪电或人物。保留透明背景、原帧数与时序和清晰像素风。","--mode","pixel","--generation-speed","normal","--remove-bg-method","standard"],
+ "output_dir":"assets/hero-skills/2026-10-13/yasuo/q-v35-clean-wind/generated"
+}

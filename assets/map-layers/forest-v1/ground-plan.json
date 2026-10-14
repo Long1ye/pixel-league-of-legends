@@ -1,0 +1,5 @@
+{
+ "command":"image-edit-run",
+ "args":["--reference-image","assets/map-studies/2026-10-09/01-forest/参考图片的地形布局_为我们的像素风中路_Solo_游戏绘制一张完整的俯视地图底图_宽_a7693192/sprite_00.png","--prompt","制作这张地图的干净地面补底：移除树冠和河岸的高草，补出它们遮挡的土壤、草地或水面；熄灭所有橙色火焰，但保留火盆石座。保留道路、河岸、岩石和建筑的位置、形状、像素风格和颜色。不要移动或新增物件，保持原图尺寸和构图。","--mode","pixel","--strict","--generation-model","nano-banana","--generation-speed","normal","--resolution","1K","--remove-bg-method","none"],
+ "output_dir":"assets/map-layers/forest-v1/generated-ground"
+}

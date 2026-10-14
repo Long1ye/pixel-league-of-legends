@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_a277420f48cf43e09b2a86608c346ef0",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-13\\yasuo\\q-v22-natural-arm-sword\\cleaned\\result_images_0_url\\output.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

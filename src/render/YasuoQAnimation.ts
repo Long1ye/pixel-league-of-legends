@@ -1,4 +1,4 @@
-import registry from '../../assets/heroes/yasuo/q-wind-2026-10-12/animations.json';
+import registry from '../../assets/heroes/yasuo/q-meowa-eight-2026-10-13/animations.json';
 import { headingToDirection } from '../../assets/hero-walk-directions/2026-10-09/v1/direction';
 import { isYasuoQCasting } from '../game/YasuoQ';
 import type { Entity } from '../game/types';

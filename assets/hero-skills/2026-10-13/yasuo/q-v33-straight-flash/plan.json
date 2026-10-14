@@ -1,0 +1,5 @@
+{
+ "command":"animation-edit-run",
+ "args":["--animation-file","assets/hero-skills/2026-10-13/yasuo/q-v32-wind-flash/wind.webp","--prompt","把每一帧剑气改成完全笔直的淡蓝白色直线闪光：所有光线沿同一条直轴平行延伸，像细长的尖锥，前端尖锐，尾端细碎消散。去掉所有弧线、波浪、螺旋、绕卷和侧向分叉。保持源动画的朝向、位置、时序和透明背景，原地亮起后消散，不飞行，没有刀柄、护手或实体刀。清晰像素风。","--mode","pixel","--generation-speed","normal","--remove-bg-method","standard"],
+ "output_dir":"assets/hero-skills/2026-10-13/yasuo/q-v33-straight-flash/generated"
+}

@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>Q · 实体钢刀闪光试版</title>
+<style>body{margin:0;background:#0c1a22;color:#d8eef5;font:16px system-ui}main{margin:24px auto;width:max-content;max-width:100%}h1{font-size:24px}p{color:#9ebcc8}canvas{display:block;width:960px;height:540px;image-rendering:pixelated;border:1px solid #365563}button,select{background:#193540;color:#e4f8ff;border:1px solid #517485;padding:10px;margin:5px}img{image-rendering:pixelated}a{color:#9bdeff}</style>
+<main><h1>斩钢闪 · 实体钢刀版</h1><p>银白实体刀刃 + 淡蓝沿刃闪光 · 人物 / 武器独立 · 鼠标自由瞄准 · 不飞行</p>
+<button id="cast">播放一次</button><button id="loop">自动演示：开</button><label>速度 <select id="speed"><option value="1">正常</option><option value="0.25">慢放 ×0.25</option></select></label>
+<label>逐帧检查 <input id="scrub" type="range" min="0" max="720" value="0"></label><canvas id="stage" width="480" height="270"></canvas><p id="status"></p>
+<p>下方为生成的原始动画（4 倍整数放大）。上方压缩为一次 0.3 秒闪光，并加宽显示以保持游戏尺寸下的剑形辨识度。</p>
+<img src="blade.webp" width="540" height="156" alt="独立钢刀闪光动画"><p><a href="blade.webp">下载动画</a> · 独立试版，未替换主游戏</p></main>
+<script type="module">
+const canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d');
+const load=src=>new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=reject;im.src=src});
+const [body,sword]=await Promise.all([load('/assets/heroes/yasuo/q-draw-2026-10-13/body.png'),load('./blade-sheet.png')]);
+let age=0,previous=0,loop=true,angle=0,paused=false;
+document.querySelector('#scrub').oninput=e=>{age=Number(e.target.value)/1000;paused=true};
+document.querySelector('#cast').onclick=()=>{age=0;paused=false};
+document.querySelector('#loop').onclick=e=>{loop=!loop;e.target.textContent=`自动演示：${loop?'开':'关'}`;age=0;paused=false};
+canvas.onpointermove=e=>{const r=canvas.getBoundingClientRect();angle=Math.atan2((e.clientY-r.top)*270/r.height-132,(e.clientX-r.left)*480/r.width-240)};
+canvas.onclick=()=>{age=0;paused=false};
+function draw(now){
+ const dt=previous?Math.min(.1,(now-previous)/1000):0;previous=now;
+ if(!paused)age+=dt*Number(document.querySelector('#speed').value);if(loop&&age>1.4)age=0;
+ ctx.fillStyle='#19312c';ctx.fillRect(0,0,480,270);ctx.strokeStyle='#28443d';ctx.lineWidth=.5;
+ for(let x=0;x<480;x+=20){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,270);ctx.stroke()}
+ for(let y=0;y<270;y+=20){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(480,y);ctx.stroke()}
+ ctx.imageSmoothingEnabled=false;
+ const x=240,y=150,dx=Math.cos(angle),dy=Math.sin(angle),frame=age<.72?Math.min(37,Math.floor(age/.72*38)):0;
+ ctx.fillStyle='#07171288';ctx.beginPath();ctx.ellipse(x,y,10,3,0,0,Math.PI*2);ctx.fill();
+ ctx.save();ctx.translate(x,y);ctx.scale(dx<-.001?-.375:.375,.375);
+ ctx.drawImage(body,frame%8*64,Math.floor(frame/8)*113,64,113,-32,-108,64,113);ctx.restore();
+ if(age>=.12&&age<.42){
+  const f=Math.min(15,Math.floor((age-.12)/.3*16));
+  ctx.save();ctx.translate(x+dx*26,y-18+dy*26);ctx.rotate(angle-Math.atan2(27,112));
+  ctx.globalAlpha=Math.min(1,(.42-age)/.06);ctx.scale(.65,.65);
+  ctx.drawImage(sword,f*135,0,135,39,0,0,135,39);ctx.restore();
+ }
+ ctx.strokeStyle='#88c6d8';ctx.beginPath();ctx.arc(x+dx*126,y-18+dy*126,3,0,Math.PI*2);ctx.stroke();
+ document.querySelector('#status').textContent=`角度 ${Math.round(angle*180/Math.PI)}° · ${Math.round(Math.min(age,.72)*1000)} / 720 ms · 固定闪光 120–420 ms`;
+ requestAnimationFrame(draw);
+}requestAnimationFrame(draw);
+</script></html>

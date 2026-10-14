@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "job_id": "job_695c9e719c594a37aa9ba48946f1c5cc",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-13\\yasuo\\q-v37-official-study\\animated\\这道细长笔直的青白突刺风痕在固定位置闪亮一次_然后迅速变细并消失_灰黑破风残_56e3b002\\meowa_animation.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-13\\yasuo\\q-v37-official-study\\animated\\这道细长笔直的青白突刺风痕在固定位置闪亮一次_然后迅速变细并消失_灰黑破风残_56e3b002\\meowa_animation_background.webp",
+      "mime_type": "image/webp"
+    }
+  ]
+}

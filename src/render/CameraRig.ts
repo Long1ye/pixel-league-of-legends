@@ -1,17 +1,18 @@
-import { VIEWPORT, WORLD } from '../game/config';
+import { VIEWPORT, WORLD, HOWLING_MAP } from '../game/config';
 import { clamp } from '../game/geometry';
 import type { Point } from '../game/types';
+import { snapRenderCoordinate } from './Presentation';
 
 /** Camera math is independent of simulation, rendering and the DOM. */
 export class CameraRig {
   private focus: Point = { x: WORLD.width / 2, y: WORLD.height / 2 };
   following = true;
-  zoom: 1 | 1.5 = 1;
+  zoom: 0.6 | 1 | 1.5 = HOWLING_MAP ? 0.6 : 1;
 
   get center(): Point {
     return {
-      x: clamp(Math.round(this.focus.x), VIEWPORT.width / this.zoom / 2, WORLD.width - VIEWPORT.width / this.zoom / 2),
-      y: clamp(Math.round(this.focus.y), VIEWPORT.height / this.zoom / 2, WORLD.height - VIEWPORT.height / this.zoom / 2),
+      x: clamp(snapRenderCoordinate(this.focus.x,this.zoom), VIEWPORT.width / this.zoom / 2, WORLD.width - VIEWPORT.width / this.zoom / 2),
+      y: clamp(snapRenderCoordinate(this.focus.y,this.zoom), VIEWPORT.height / this.zoom / 2, WORLD.height - VIEWPORT.height / this.zoom / 2),
     };
   }
 
@@ -22,7 +23,7 @@ export class CameraRig {
 
   reset(hero: Point): void {
     this.following = true;
-    this.zoom = 1;
+    this.zoom = HOWLING_MAP ? 0.6 : 1;
     this.lookAt(hero);
   }
 
@@ -45,9 +46,15 @@ export class CameraRig {
     this.lookAt({ x: this.focus.x + dx, y: this.focus.y + dy });
   }
 
-  setZoom(zoom: 1 | 1.5): void {
+  setZoom(zoom: 0.6 | 1 | 1.5): void {
     this.zoom = zoom;
     this.lookAt(this.focus);
+  }
+
+  zoomStep(closer: boolean): void {
+    const levels = [0.6, 1, 1.5] as const;
+    const index = levels.indexOf(this.zoom);
+    this.setZoom(levels[Math.max(0, Math.min(levels.length - 1, index + (closer ? 1 : -1)))]);
   }
 
   screenToWorld(point: Point): Point {

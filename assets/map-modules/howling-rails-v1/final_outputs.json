@@ -1,0 +1,21 @@
+{
+  "status": "packaged",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "rail-0.png"
+    },
+    {
+      "type": "media",
+      "path": "rail-1.png"
+    },
+    {
+      "type": "media",
+      "path": "rail-2.png"
+    },
+    {
+      "type": "media",
+      "path": "rail-3.png"
+    }
+  ]
+}

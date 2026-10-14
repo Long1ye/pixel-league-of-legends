@@ -1,0 +1,5 @@
+{
+ "command":"image-edit-run",
+ "args":["--reference-image","assets/hero-skills/2026-10-13/yasuo/q-v22-natural-arm-sword/components/component_001.png","--prompt","Keep this exact sword silhouette, position, angle, dimensions and handle unchanged. Make only the metal blade shine with a restrained pale ice-blue wind energy highlight, bright white-blue along the cutting edge and soft blue inside the blade. No external aura, no ribbons outside the blade, no tip explosion, no particles, no text. Transparent background. This is the illuminated state of the same pixel-art sword for a layered attack flash animation.","--mode","pixel","--strict","--generation-model","nano-banana","--resolution","1K","--remove-bg-method","standard"],
+ "output_dir":"assets/hero-skills/2026-10-13/yasuo/q-v24-held-flash/generated"
+}

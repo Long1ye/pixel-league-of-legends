@@ -1,0 +1,10 @@
+{
+  "asset": "nexus.png",
+  "sourceJob": "job_17bbe4b234c84ceabd8598e9b4e0dc89",
+  "capability": "game-assets general-image-run, Image 2.5 detailed, 1K transparent PNG",
+  "styleReferences": [
+    "assets/map-modules/howling-sites-v2/nexus.png",
+    "assets/map-modules/howling-fortress-v2/module-4.png"
+  ],
+  "purpose": "Broad circular ice-bridge Nexus, visually distinct from the slim inhibitor crystal"
+}

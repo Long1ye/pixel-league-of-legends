@@ -1,0 +1,5 @@
+{
+  "command": "pixel-universal-gen-run",
+  "args": ["--prompt", "为像素版英雄联盟嚎哭深渊制作一段桥面美术样板，不是完整地图。斜俯视正交游戏视角，宽阔桥面从画面左下向右上延伸，两端延伸出画面，桥沿相互平行，没有透视消失点。中央约四分之三宽度是平整、低对比、偏暗的冷灰蓝古老大石砖，砖缝细且不规则，少量磨损裂纹，不要密集纹理和粗黑描边。两侧窄石沿覆盖浅蓝薄冰与白色积雪，桥外是深蓝深渊。干净清晰的像素块，适合像素角色战斗，冰雪亮点集中在桥边。没有角色、防御塔、草丛、文字、界面、符文发光或装饰建筑。", "--view", "standard", "--aspect-ratio", "4:3", "--remove-bg-method", "none"],
+  "output_dir": "assets/map-studies/howling-bridge-sample-v1/generated"
+}

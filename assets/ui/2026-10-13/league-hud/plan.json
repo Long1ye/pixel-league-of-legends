@@ -1,0 +1,6 @@
+{
+ "command":"ui-gen-run",
+ "recovery_command":"ui-gen-poll",
+ "args":["--prompt","Create a game UI asset sheet with exactly four separate square ability icons in a single horizontal row, ordered left to right: Yasuo Steel Tempest, a silver katana piercing through pale blue wind; Wind Wall, an upright translucent cyan barrier of wind; Sweeping Blade, a swordsman dashing forward as a blue silhouette; Last Breath, a dramatic diagonal silver sword slash through a dark violet airborne vortex. League of Legends classic in-game ability icon style, dark navy backgrounds, restrained antique gold square borders, strong readable painted shapes, subtle pixel-game compatible edges. Each icon has its own opaque dark background. Equal size, generous transparent gaps between icons, no text, no letters, no extra objects, no surrounding sheet frame.","--mode","generate","--generation-model","image-2.5","--quality","standard","--resolution","1K","--aspect-ratio","16:9","--remove-bg-method","standard"],
+ "output_dir":"assets/ui/2026-10-13/league-hud/generated"
+}

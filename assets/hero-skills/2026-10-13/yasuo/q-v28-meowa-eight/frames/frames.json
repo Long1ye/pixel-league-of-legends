@@ -1,0 +1,359 @@
+{
+  "source": "assets\\hero-skills\\2026-10-13\\yasuo\\q-v28-meowa-eight\\generated\\\u4eba\u7269\u4fdd\u6301\u53c2\u8003\u56fe\u7684\u633a\u62d4\u524d\u540e\u6b65\u59ff\u52bf\u548c\u50cf\u7d20\u753b\u98ce\u4e0d\u53d8_\u539f\u5730\u5c45\u4e2d\u7f13\u6162\u5300\u901f\u65cb\u8f6c360\u5ea6_\u5c55\u793a_d96d9f30\\meowa_animation.webp",
+  "width": 576,
+  "height": 704,
+  "frames": [
+    {
+      "index": 0,
+      "file": "00.png",
+      "duration_ms": 125,
+      "bounds": [
+        102,
+        76,
+        438,
+        617
+      ]
+    },
+    {
+      "index": 1,
+      "file": "01.png",
+      "duration_ms": 125,
+      "bounds": [
+        102,
+        76,
+        438,
+        617
+      ]
+    },
+    {
+      "index": 2,
+      "file": "02.png",
+      "duration_ms": 125,
+      "bounds": [
+        102,
+        76,
+        439,
+        618
+      ]
+    },
+    {
+      "index": 3,
+      "file": "03.png",
+      "duration_ms": 125,
+      "bounds": [
+        120,
+        77,
+        445,
+        623
+      ]
+    },
+    {
+      "index": 4,
+      "file": "04.png",
+      "duration_ms": 125,
+      "bounds": [
+        142,
+        77,
+        447,
+        627
+      ]
+    },
+    {
+      "index": 5,
+      "file": "05.png",
+      "duration_ms": 125,
+      "bounds": [
+        179,
+        79,
+        442,
+        629
+      ]
+    },
+    {
+      "index": 6,
+      "file": "06.png",
+      "duration_ms": 125,
+      "bounds": [
+        216,
+        79,
+        429,
+        630
+      ]
+    },
+    {
+      "index": 7,
+      "file": "07.png",
+      "duration_ms": 125,
+      "bounds": [
+        195,
+        79,
+        403,
+        627
+      ]
+    },
+    {
+      "index": 8,
+      "file": "08.png",
+      "duration_ms": 125,
+      "bounds": [
+        174,
+        80,
+        391,
+        622
+      ]
+    },
+    {
+      "index": 9,
+      "file": "09.png",
+      "duration_ms": 125,
+      "bounds": [
+        154,
+        79,
+        415,
+        614
+      ]
+    },
+    {
+      "index": 10,
+      "file": "10.png",
+      "duration_ms": 125,
+      "bounds": [
+        138,
+        78,
+        434,
+        608
+      ]
+    },
+    {
+      "index": 11,
+      "file": "11.png",
+      "duration_ms": 125,
+      "bounds": [
+        128,
+        76,
+        447,
+        601
+      ]
+    },
+    {
+      "index": 12,
+      "file": "12.png",
+      "duration_ms": 125,
+      "bounds": [
+        127,
+        74,
+        454,
+        596
+      ]
+    },
+    {
+      "index": 13,
+      "file": "13.png",
+      "duration_ms": 125,
+      "bounds": [
+        134,
+        72,
+        474,
+        595
+      ]
+    },
+    {
+      "index": 14,
+      "file": "14.png",
+      "duration_ms": 125,
+      "bounds": [
+        139,
+        70,
+        485,
+        601
+      ]
+    },
+    {
+      "index": 15,
+      "file": "15.png",
+      "duration_ms": 125,
+      "bounds": [
+        124,
+        68,
+        482,
+        606
+      ]
+    },
+    {
+      "index": 16,
+      "file": "16.png",
+      "duration_ms": 125,
+      "bounds": [
+        118,
+        66,
+        464,
+        611
+      ]
+    },
+    {
+      "index": 17,
+      "file": "17.png",
+      "duration_ms": 125,
+      "bounds": [
+        125,
+        64,
+        437,
+        614
+      ]
+    },
+    {
+      "index": 18,
+      "file": "18.png",
+      "duration_ms": 125,
+      "bounds": [
+        139,
+        63,
+        395,
+        618
+      ]
+    },
+    {
+      "index": 19,
+      "file": "19.png",
+      "duration_ms": 125,
+      "bounds": [
+        159,
+        62,
+        354,
+        620
+      ]
+    },
+    {
+      "index": 20,
+      "file": "20.png",
+      "duration_ms": 125,
+      "bounds": [
+        175,
+        62,
+        357,
+        621
+      ]
+    },
+    {
+      "index": 21,
+      "file": "21.png",
+      "duration_ms": 125,
+      "bounds": [
+        163,
+        62,
+        379,
+        620
+      ]
+    },
+    {
+      "index": 22,
+      "file": "22.png",
+      "duration_ms": 125,
+      "bounds": [
+        137,
+        63,
+        395,
+        617
+      ]
+    },
+    {
+      "index": 23,
+      "file": "23.png",
+      "duration_ms": 125,
+      "bounds": [
+        118,
+        64,
+        416,
+        612
+      ]
+    },
+    {
+      "index": 24,
+      "file": "24.png",
+      "duration_ms": 125,
+      "bounds": [
+        111,
+        66,
+        433,
+        607
+      ]
+    },
+    {
+      "index": 25,
+      "file": "25.png",
+      "duration_ms": 125,
+      "bounds": [
+        85,
+        67,
+        445,
+        600
+      ]
+    },
+    {
+      "index": 26,
+      "file": "26.png",
+      "duration_ms": 125,
+      "bounds": [
+        74,
+        70,
+        447,
+        596
+      ]
+    },
+    {
+      "index": 27,
+      "file": "27.png",
+      "duration_ms": 125,
+      "bounds": [
+        75,
+        73,
+        442,
+        605
+      ]
+    },
+    {
+      "index": 28,
+      "file": "28.png",
+      "duration_ms": 125,
+      "bounds": [
+        83,
+        74,
+        433,
+        610
+      ]
+    },
+    {
+      "index": 29,
+      "file": "29.png",
+      "duration_ms": 125,
+      "bounds": [
+        101,
+        76,
+        437,
+        617
+      ]
+    },
+    {
+      "index": 30,
+      "file": "30.png",
+      "duration_ms": 125,
+      "bounds": [
+        102,
+        76,
+        438,
+        617
+      ]
+    },
+    {
+      "index": 31,
+      "file": "31.png",
+      "duration_ms": 125,
+      "bounds": [
+        102,
+        76,
+        438,
+        617
+      ]
+    }
+  ]
+}

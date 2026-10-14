@@ -4,16 +4,47 @@
   "local_tools": {
     "complex_pattern_split": {
       "script": "scripts/split-components.py",
-      "web_sources": ["services/imageComponentSplitService.ts:analyzeImageComponents", "components/Workspace.tsx:splitImageComponentsToCanvas"],
+      "web_sources": [
+        "services/imageComponentSplitService.ts:analyzeImageComponents",
+        "components/Workspace.tsx:splitImageComponentsToCanvas"
+      ],
       "parameters": {
-        "alpha_threshold": {"flag": "--alpha-threshold", "default": 8},
-        "background_tolerance": {"flag": "--background-tolerance", "default": 8},
-        "connectivity": {"flag": "--connectivity", "default": 8, "choices": [4, 8]},
-        "min_component_area": {"flag": "--min-component-area", "default": 16},
-        "padding_px": {"flag": "--padding-px", "default": 0},
-        "merge_contained_fragments": {"flag": "--no-merge-contained-fragments", "default": true},
-        "fragment_max_area": {"flag": "--fragment-max-area", "default": 256},
-        "fragment_max_area_ratio": {"flag": "--fragment-max-area-ratio", "default": 0.02}
+        "alpha_threshold": {
+          "flag": "--alpha-threshold",
+          "default": 8
+        },
+        "background_tolerance": {
+          "flag": "--background-tolerance",
+          "default": 8
+        },
+        "connectivity": {
+          "flag": "--connectivity",
+          "default": 8,
+          "choices": [
+            4,
+            8
+          ]
+        },
+        "min_component_area": {
+          "flag": "--min-component-area",
+          "default": 16
+        },
+        "padding_px": {
+          "flag": "--padding-px",
+          "default": 0
+        },
+        "merge_contained_fragments": {
+          "flag": "--no-merge-contained-fragments",
+          "default": true
+        },
+        "fragment_max_area": {
+          "flag": "--fragment-max-area",
+          "default": 256
+        },
+        "fragment_max_area_ratio": {
+          "flag": "--fragment-max-area-ratio",
+          "default": 0.02
+        }
       }
     }
   },
@@ -110,8 +141,23 @@
             "8:1"
           ],
           "request_field": "aspectRatio"
+        },
+        "generation_model": {
+          "flag": "--generation-model",
+          "default": "image-2.5",
+          "choices": [
+            "nano-banana",
+            "image-2",
+            "image-2.5"
+          ],
+          "request_field": "generationProvider"
         }
-      }
+      },
+      "legacy_command": "nano-banana-run",
+      "command_args": [
+        "--generation-model",
+        "nano-banana"
+      ]
     },
     "general_image2_5": {
       "command": "general-image-run",
@@ -167,8 +213,23 @@
             "16:9"
           ],
           "request_field": "aspectRatio"
+        },
+        "generation_model": {
+          "flag": "--generation-model",
+          "default": "image-2.5",
+          "choices": [
+            "nano-banana",
+            "image-2",
+            "image-2.5"
+          ],
+          "request_field": "generationProvider"
         }
-      }
+      },
+      "legacy_command": "image-2.5-run",
+      "command_args": [
+        "--generation-model",
+        "image-2.5"
+      ]
     },
     "general_image2": {
       "command": "general-image-run",
@@ -215,8 +276,23 @@
             "16:9"
           ],
           "request_field": "aspectRatio"
+        },
+        "generation_model": {
+          "flag": "--generation-model",
+          "default": "image-2.5",
+          "choices": [
+            "nano-banana",
+            "image-2",
+            "image-2.5"
+          ],
+          "request_field": "generationProvider"
         }
-      }
+      },
+      "legacy_command": "image-2-run",
+      "command_args": [
+        "--generation-model",
+        "image-2"
+      ]
     },
     "image_edit": {
       "command": "image-edit-run",
@@ -2272,7 +2348,11 @@
       "browser_handoff": "https://meowa.ai/canvas?free_credits=1",
       "read_endpoint": "/api/credits/free-rewards/status",
       "claim_endpoint": "/api/credits/free-rewards/claim",
-      "claim_modes": ["auto", "manual", "unavailable"]
+      "claim_modes": [
+        "auto",
+        "manual",
+        "unavailable"
+      ]
     }
   }
 }

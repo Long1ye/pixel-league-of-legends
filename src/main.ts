@@ -8,6 +8,10 @@ import { AudioFeedback } from './ui/AudioFeedback';
 import { createEPractice } from './game/EPractice';
 import { createRPractice } from './game/RPractice';
 import { clearStorm, grantStorm, stormReady } from './game/YasuoStorm';
+import { mountLeagueHud } from './ui/LeagueHud';
+import { RENDER_SCALE } from './render/Presentation';
+import { HOWLING_MAP } from './game/config';
+import { BRIDGE_OUTLINE, BRIDGE_SLOTS, bridgePoint } from './game/Bridge';
 
 function element<T extends HTMLElement>(id: string): T {
   const node = document.getElementById(id);
@@ -41,6 +45,22 @@ document.getElementById('mini-lane')!.setAttribute('stroke-width', `${55 * MAP_L
 const riverStart = mapToWorld({ x: 40, y: 0 }), riverEnd = mapToWorld({ x: 471, y: 327 });
 document.getElementById('mini-river')!.setAttribute('d', `M${riverStart.x} ${riverStart.y} ${riverEnd.x} ${riverEnd.y}`);
 document.getElementById('mini-river')!.setAttribute('stroke-width', `${90 * MAP_LAYOUT.scale}`);
+if(HOWLING_MAP){
+  const atmosphereToggle=document.createElement('button');
+  atmosphereToggle.textContent='风雪氛围：开';atmosphereToggle.setAttribute('aria-pressed','true');
+  atmosphereToggle.onclick=()=>{scene.atmosphereEnabled=!scene.atmosphereEnabled;atmosphereToggle.textContent=scene.atmosphereEnabled?'风雪氛围：开':'风雪氛围：关';atmosphereToggle.setAttribute('aria-pressed',String(scene.atmosphereEnabled));};
+  document.querySelector('.match-actions')!.append(atmosphereToggle);
+ document.getElementById('mini-terrain')!.setAttribute('fill','#091521');
+ document.getElementById('mini-river')!.setAttribute('display','none');
+ const lane=document.getElementById('mini-lane')!;
+ lane.setAttribute('d',BRIDGE_OUTLINE.map((p,i)=>`${i?'L':'M'}${p.x} ${p.y}`).join(' ')+' Z');
+ lane.setAttribute('fill','#647e90');lane.setAttribute('stroke-width','2');
+ for(const site of BRIDGE_SLOTS){
+  const p=bridgePoint(site.u,site.v),dot=document.createElementNS('http://www.w3.org/2000/svg','circle');
+  dot.setAttribute('cx',String(p.x));dot.setAttribute('cy',String(p.y));dot.setAttribute('r',site.id.includes('spawn')?'15':'11');
+  dot.setAttribute('fill',site.team==='blue'?'#83cdeb':'#e9a8b7');lane.parentNode!.insertBefore(dot,lane.nextSibling);
+ }
+}
 const ePractice = new URLSearchParams(location.search).get('practice') === 'e';
 const rPractice = new URLSearchParams(location.search).get('practice') === 'r';
 const qPractice = new URLSearchParams(location.search).get('practice') === 'q';
@@ -79,7 +99,7 @@ function syncHud(state: Match): void {
   const rig = scene.cameraRig, bounds = rig.bounds;
   ui.camera.setAttribute('aria-pressed', `${rig.following}`);
   ui.camera.textContent = rig.following ? '跟随镜头 · Y' : '自由镜头 · Y';
-  ui.cameraLabel.textContent = `${rig.zoom}× 局部视角`;
+  ui.cameraLabel.textContent = `${rig.zoom}× ${rig.zoom < 1 ? '高位视角' : '局部视角'}`;
   const miniView = document.getElementById('mini-view')!;
   for (const [key, value] of Object.entries(bounds)) miniView.setAttribute(key, `${value}`);
   for (const team of ['blue', 'red'] as const) {
@@ -105,7 +125,7 @@ function syncHud(state: Match): void {
   const target = state.entity(scene.selectedId);
   ui.target.hidden = !target || target.hp <= 0;
   if (target && target.hp > 0) {
-    const names = { hero: '棱光游侠', melee: '近战兵', ranged: '远程兵', tower: '防御塔' };
+    const names = { hero: target.team === 'red' ? '卡牌大师' : '亚索', melee: '近战兵', ranged: '远程兵', tower: '防御塔' };
     ui.targetName.textContent = `${target.team === 'blue' ? '友方' : '敌方'} · ${names[target.kind]}`;
     ui.targetHealth.textContent = `${Math.ceil(target.hp)} / ${target.maxHp}`;
     ui.targetBar.value = target.hp / target.maxHp * 100;
@@ -127,7 +147,7 @@ function syncHud(state: Match): void {
   if (state.phase === 'ready') {
     ui.kicker.textContent = 'THE MIDLINE TRIAL';
     ui.symbol.textContent = '◈';
-    ui.title.textContent = '赢下这条中路';
+    ui.title.textContent = HOWLING_MAP?'嚎哭深渊 · 冰桥对线':'赢下这条中路';
     ui.description.textContent = '补好每一刀，找准出手的时机。一血、一塔、一百刀，任意一项即可获胜。';
     ui.start.textContent = '进入对线 →';
     if (ePractice) {
@@ -168,7 +188,7 @@ const scene = new ArenaScene(match, {
   },
 });
 const game = new Phaser.Game({
-  type: Phaser.AUTO, parent: 'game', width: VIEWPORT.width, height: VIEWPORT.height,
+  type: Phaser.AUTO, parent: 'game', width: VIEWPORT.width * RENDER_SCALE, height: VIEWPORT.height * RENDER_SCALE,
   backgroundColor: '#142b28', pixelArt: true, roundPixels: true,
   render: { antialias: false, pixelArt: true, roundPixels: true },
   scale: { mode: Phaser.Scale.NONE, autoCenter: Phaser.Scale.NO_CENTER },
@@ -204,12 +224,43 @@ function cast(key: AbilityKey): void {
   syncHud(match);
 }
 const practiceLink = document.createElement('a');
-practiceLink.href = ePractice ? '/' : '/?practice=e';
-practiceLink.textContent = ePractice ? '返回主游戏' : 'E 技能测试场';
+const accentsToggle=document.createElement('button');
+accentsToggle.textContent='场景与命中特效：开';accentsToggle.setAttribute('aria-pressed','true');
+accentsToggle.onclick=()=>{scene.accentsEnabled=!scene.accentsEnabled;accentsToggle.textContent=scene.accentsEnabled?'场景与命中特效：开':'场景与命中特效：关';accentsToggle.setAttribute('aria-pressed',String(scene.accentsEnabled));};
+document.querySelector('.match-actions')!.append(accentsToggle);
+if(HOWLING_MAP){
+  const lightToggle=document.createElement('button');
+  const firelightToggle=document.createElement('button');
+  const materialToggle=document.createElement('button');
+  materialToggle.textContent='石砖凹凸受光：开';materialToggle.setAttribute('aria-pressed','true');
+  materialToggle.title='需要开启引擎光影；使用程序生成的浅浮雕法线，不改变地形';
+  materialToggle.onclick=()=>{scene.materialLightingEnabled=!scene.materialLightingEnabled;materialToggle.textContent=scene.materialLightingEnabled?'石砖凹凸受光：开':'石砖凹凸受光：关';materialToggle.setAttribute('aria-pressed',String(scene.materialLightingEnabled));};
+  document.querySelector('.match-actions')!.append(materialToggle);
+  lightToggle.textContent='引擎光影：开';lightToggle.setAttribute('aria-pressed','true');
+  lightToggle.onclick=()=>{scene.lightingEnabled=!scene.lightingEnabled;lightToggle.textContent=scene.lightingEnabled?'引擎光影：开':'引擎光影：关';lightToggle.setAttribute('aria-pressed',String(scene.lightingEnabled));};
+  document.querySelector('.match-actions')!.append(lightToggle);
+  firelightToggle.textContent='动态火光：开';firelightToggle.setAttribute('aria-pressed','true');
+  firelightToggle.title='控制环境火盆的动态受光；关闭后保留原有静态照明，不影响技能特效';
+  firelightToggle.onclick=()=>{scene.firelightMotionEnabled=!scene.firelightMotionEnabled;firelightToggle.textContent=scene.firelightMotionEnabled?'动态火光：开':'动态火光：关';firelightToggle.setAttribute('aria-pressed',String(scene.firelightMotionEnabled));};
+  document.querySelector('.match-actions')!.append(firelightToggle);
+}
+const mapToggle=document.createElement('button');
+const iceToggle=document.createElement('button');
+iceToggle.textContent='地面：新版石砖＋积雪';iceToggle.setAttribute('aria-pressed','true');
+iceToggle.onclick=()=>{scene.iceMap=!scene.iceMap;iceToggle.textContent=scene.iceMap?'地面：新版石砖＋积雪':'地面：原森林';iceToggle.setAttribute('aria-pressed',String(scene.iceMap));mapToggle.disabled=scene.iceMap;};
+document.querySelector('.match-actions')!.append(iceToggle);
+if(HOWLING_MAP){iceToggle.disabled=true;iceToggle.textContent='地图：嚎哭深渊冰桥';}
+mapToggle.textContent='动态地图：开';mapToggle.setAttribute('aria-pressed','true');
+mapToggle.disabled=scene.iceMap;
+mapToggle.title='仅控制原森林的动态层；石砖和积雪是静态地面材质';
+mapToggle.onclick=()=>{scene.dynamicMap=!scene.dynamicMap;mapToggle.textContent=scene.dynamicMap?'动态地图：开':'动态地图：关（原图）';mapToggle.setAttribute('aria-pressed',String(scene.dynamicMap));};
+document.querySelector('.match-actions')!.append(mapToggle);
+practiceLink.href = ePractice ? '/?map=howling' : '/?practice=e';
+practiceLink.textContent = ePractice ? '返回冰桥对局' : 'E 技能测试场';
 practiceLink.style.cssText = 'color:#9fe8db;margin:8px;display:inline-block';
 document.querySelector('.match-actions')!.append(practiceLink);
-const rLink=document.createElement('a');rLink.href=rPractice?'/':'/?practice=r';rLink.textContent=rPractice?'返回主游戏':'R 大招测试场';rLink.style.cssText=practiceLink.style.cssText;document.querySelector('.match-actions')!.append(rLink);
-const qLink=document.createElement('a');qLink.href=qPractice?'/':'/?practice=q';qLink.textContent=qPractice?'返回主游戏':'Q 蓄风测试场';qLink.style.cssText=practiceLink.style.cssText;document.querySelector('.match-actions')!.append(qLink);
+const rLink=document.createElement('a');rLink.href=rPractice?'/?map=howling':'/?practice=r';rLink.textContent=rPractice?'返回冰桥对局':'R 大招测试场';rLink.style.cssText=practiceLink.style.cssText;document.querySelector('.match-actions')!.append(rLink);
+const qLink=document.createElement('a');qLink.href=qPractice?'/?map=howling':'/?practice=q';qLink.textContent=qPractice?'返回冰桥对局':'Q 蓄风测试场';qLink.style.cssText=practiceLink.style.cssText;document.querySelector('.match-actions')!.append(qLink);
 if(qPractice){
  const panel=document.createElement('section');panel.setAttribute('aria-label','Q 测试控制');panel.style.cssText='display:flex;gap:8px;flex-wrap:wrap;padding:12px;background:#18332f;color:#d4eee7';
  const ready=()=>{reset();const h=match.hero('blue');grantStorm(h,match.time);grantStorm(h,match.time);};
@@ -257,6 +308,7 @@ if (ePractice) {
   clear.onclick = () => { match.eTargetLocks.clear(); match.hero('blue').abilities.e=match.time; match.hero('blue').abilities.q=match.time; syncHud(match); };
   panel.append(slow,clear); document.querySelector('.page-heading')!.after(panel);
 }
+mountLeagueHud(ePractice || rPractice || qPractice);
 ui.start.addEventListener('click', begin);
 ui.restart.addEventListener('click', () => reset());
 ui.pause.addEventListener('click', () => { match.togglePause(); syncHud(match); });
@@ -307,7 +359,7 @@ window.addEventListener('blur', () => {
 });
 function resize(): void {
   const available = Math.min(ui.arena.clientWidth / VIEWPORT.width, ui.arena.clientHeight / VIEWPORT.height);
-  game.scale.setZoom(available >= 1 ? Math.floor(available) : available);
+  game.scale.setZoom(available / RENDER_SCALE);
   game.scale.updateBounds();
 }
 game.events.once(Phaser.Core.Events.READY, resize);

@@ -1,0 +1,13 @@
+{
+  "command": "general-image-run",
+  "recovery_command": "general-image-poll",
+  "recovery_id_flag": "--job-id",
+  "args": [
+    "--reference-image", "C:/Users/PC/AppData/Local/Temp/codex-clipboard-492d2196-ce54-43dc-892b-7b025fd7f9b9.png",
+    "--prompt", "Create three separate pixel-art animation parts matching this small Yasuo sprite: one bare upper arm without shoulder armor, one forearm with muted blue-gray bracer and a naturally closed sword-gripping hand, and one complete slender katana with handle and small guard. These replace the missing arm under the shoulder armor at image right, for a southeast thrust. Match the reference warm skin, dark plum outlines, restrained shading and chunky pixel detail. Show the arm parts in compatible three-quarter view with a relaxed wrist and natural grip, not a giant fist. Upper arm and elbow-to-wrist lengths should be similar; hand length about half the forearm length. Round overlapping joint ends allow later shoulder and elbow rotation. Separate the sword from the hand so its handle can fit inside the grip in animation. Arrange the three non-touching parts in three rows, at one consistent scale; sword total length about three times the combined arm length. No body, no extra arms, no labels, no scabbard, no wind or glow. Transparent background. This is a modular parts sheet, not an illustration.",
+    "--generation-model", "image-2.5", "--resolution", "1K",
+    "--aspect-ratio", "4:3", "--quality", "standard",
+    "--remove-bg-method", "standard"
+  ],
+  "output_dir": "assets/hero-skills/2026-10-13/yasuo/q-v22-natural-arm-sword/generated"
+}

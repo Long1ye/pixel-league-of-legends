@@ -1,0 +1,1 @@
+{"command":"image-edit-run","args":["--reference-image","assets/map-modules/howling-v1/stone.png","--prompt","这是4乘4等距地形图集。严格保留16格布局、每格形状、边界和透明区域。只在所有灰蓝实心地面内部添加一致的冷灰蓝古老大石砖纹理，细而低对比的砖缝，少量磨损，石砖沿等距菱形轴排列。完整实心格也必须有石砖，不要留纯色。不要物件、雪、文字或侧壁。","--mode","pixel","--strict","--remove-bg-method","standard"],"output_dir":"assets/map-modules/howling-v1/stone-detail"}

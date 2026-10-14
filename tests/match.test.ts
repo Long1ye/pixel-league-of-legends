@@ -227,7 +227,7 @@ describe('towers and lifecycle', () => {
     advance(state, BALANCE.firstWaveAt + 0.02);
     expect(state.wave).toBe(1);
     expect(state.entities.filter(e => e.kind === 'melee')).toHaveLength(6);
-    expect(state.entities.filter(e => e.kind === 'ranged')).toHaveLength(2);
+    expect(state.entities.filter(e => e.kind === 'ranged')).toHaveLength(6);
     advance(state, BALANCE.waveInterval);
     expect(state.wave).toBe(2);
   });

@@ -14,6 +14,8 @@ export interface Entity extends Point {
   maxHp: number;
   radius: number;
   speed: number;
+  homeguardUntil?: number;
+  homeguardCombatAt?: number;
   range: number;
   damage: number;
   attackInterval: number;
@@ -37,6 +39,7 @@ export interface Entity extends Point {
   rCast?: { startedAt:number; targetIds:number[]; hit:boolean } | null;
   eqCast?: { startedAt: number; triggerAt: number; endsAt: number; eStartedAt: number; facing: number; hit: boolean; empowered?: boolean } | null;
   destination: Point | null;
+  formation?: { wave:number; slot:number; goal:Point };
   facing: number;
   slowUntil: number;
   hitAt: number;

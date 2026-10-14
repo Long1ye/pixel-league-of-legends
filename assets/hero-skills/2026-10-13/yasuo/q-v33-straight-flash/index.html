@@ -1,0 +1,23 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>Q · 直线剑气闪光</title>
+<style>body{margin:0;background:#0c1a22;color:#dcf0f8;font:16px system-ui}main{width:960px;margin:24px auto}h1{font-size:24px}p{color:#9dbcc8}canvas{width:960px;height:540px;image-rendering:pixelated;border:1px solid #34544f}button,select{padding:8px;background:#193540;color:#def5ff;border:1px solid #537383;margin:6px}img{image-rendering:pixelated}a{color:#99dfff}</style>
+<main><h1>斩钢闪 · 直线剑气试版</h1><p>无实体刀 · 笔直淡蓝白剑气 · 固定闪现、不飞行 · 鼠标控制方向</p>
+<button id="play">重播</button><label>速度 <select id="speed"><option value="1">正常</option><option value=".25">慢放</option></select></label><label>逐帧 <input id="scrub" type="range" min="0" max="720" value="0"></label>
+<canvas width="480" height="270"></canvas><p id="status"></p><p>独立特效原始动画（4 倍整数放大）</p><img src="wind.webp" width="540" height="156" alt="直线剑气动画"><p><a href="wind.webp">动画文件</a> · 尚未替换游戏</p></main>
+<script type="module">
+const canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d');
+const load=src=>new Promise((ok,no)=>{const i=new Image();i.onload=()=>ok(i);i.onerror=no;i.src=src});
+const [body,wind]=await Promise.all([load('/assets/heroes/yasuo/q-draw-2026-10-13/body.png'),load('./wind-sheet.png')]);
+let age=0,last=0,angle=0,paused=false;
+document.querySelector('#play').onclick=()=>{age=0;paused=false};
+document.querySelector('#scrub').oninput=e=>{age=Number(e.target.value)/1000;paused=true};
+canvas.onpointermove=e=>{const r=canvas.getBoundingClientRect();angle=Math.atan2((e.clientY-r.top)*270/r.height-132,(e.clientX-r.left)*480/r.width-240)};
+canvas.onclick=()=>{age=0;paused=false};
+function tick(now){const dt=last?Math.min(.1,(now-last)/1000):0;last=now;if(!paused)age+=dt*Number(document.querySelector('#speed').value);if(age>1.4)age=0;
+ctx.fillStyle='#19312c';ctx.fillRect(0,0,480,270);ctx.strokeStyle='#29453e';ctx.lineWidth=.5;
+for(let x=0;x<480;x+=20){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,270);ctx.stroke()}for(let y=0;y<270;y+=20){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(480,y);ctx.stroke()}
+ctx.imageSmoothingEnabled=false;const dx=Math.cos(angle),dy=Math.sin(angle),f=age<.72?Math.min(37,Math.floor(age/.72*38)):0;
+ctx.save();ctx.translate(240,150);ctx.scale(dx<-.001?-.375:.375,.375);ctx.drawImage(body,f%8*64,Math.floor(f/8)*113,64,113,-32,-108,64,113);ctx.restore();
+if(age>=.12&&age<.42){const fi=Math.min(15,Math.floor((age-.12)/.3*16));ctx.save();ctx.translate(240+dx*20,132+dy*20);ctx.rotate(angle-Math.atan2(27,112));ctx.scale(.65,.65);ctx.globalAlpha=Math.min(1,(age-.12)/.025,(.42-age)/.07);ctx.drawImage(wind,fi*135,0,135,39,0,0,135,39);ctx.restore()}
+document.querySelector('#status').textContent=`${Math.round(angle*180/Math.PI)}° · ${Math.round(Math.min(age,.72)*1000)} ms · 拔刀 720 ms / 闪光 300 ms`;
+requestAnimationFrame(tick)}requestAnimationFrame(tick);
+</script></html>

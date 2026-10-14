@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_ab6b53e3388340e3a6fe0000b7103370",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\map-modules\\howling-v1\\snow\\铺在石板桥面边缘的薄层积雪_白色和浅冰蓝色_平坦而低矮_边缘自然稀疏融化_英雄_eb73ccb9\\tileset.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

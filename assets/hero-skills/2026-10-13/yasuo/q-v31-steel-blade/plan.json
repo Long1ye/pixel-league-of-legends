@@ -1,0 +1,6 @@
+{
+ "command":"animation-edit-run",
+ "recovery_command":"animation-edit-poll",
+ "args":["--animation-file","assets/hero-skills/2026-10-13/yasuo/q-v25-user-sword-subtle/sword.webp","--prompt","将这段武士刀动画改为亚索斩钢闪风格的清晰实体钢刀闪光特效。每帧保留同一把完整的刀：深蓝缠柄、明显的小护手、明亮银白刀刃和浅蓝刀背、细长尖锐刀尖。提高剑身在深色游戏地图上的辨识度，刀刃保持实体不透明，不被光雾遮盖。只在刀刃边缘附着少量淡蓝风线和一次从护手到刀尖的白色高光。保持原来的方向、位置和动画时序，不让剑飞行，不加入人物、圆环、大面积光团或背景色块。","--mode","pixel","--generation-speed","normal","--remove-bg-method","standard"],
+ "output_dir":"assets/hero-skills/2026-10-13/yasuo/q-v31-steel-blade/generated"
+}

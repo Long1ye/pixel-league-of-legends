@@ -1,0 +1,32 @@
+{
+  "command": "animate-run",
+  "recovery_command": "animate-poll",
+  "output_dir": "assets/units/minions-animated-v1/blue-ranged/walk",
+  "args": [
+    "--image-file",
+    "assets/units/minions-v1/components/component_004.png",
+    "--prompt",
+    "角色始终朝屏幕右上方向，原地自然走路循环，双脚交替迈步，武器随身体轻微摆动。保持原像素造型、颜色、背面或正面视角不变，固定镜头，不转身，不沿画面移动，首尾衔接。",
+    "--output-frames",
+    "8",
+    "--output-format",
+    "webp",
+    "--animation-type",
+    "walk",
+    "--animation-model",
+    "frame-engine-v1.1",
+    "--intelligence",
+    "standard",
+    "--optimize-prompt",
+    "--remove-bg-method",
+    "standard",
+    "--padding-top",
+    "56",
+    "--padding-down",
+    "24",
+    "--padding-left",
+    "24",
+    "--padding-right",
+    "64"
+  ]
+}

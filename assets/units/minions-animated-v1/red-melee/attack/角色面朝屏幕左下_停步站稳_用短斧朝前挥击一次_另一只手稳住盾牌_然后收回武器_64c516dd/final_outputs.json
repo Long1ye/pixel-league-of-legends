@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_b8536c81f9694dd1ac64afd42b4f8f60",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\units\\minions-animated-v1\\red-melee\\attack\\角色面朝屏幕左下_停步站稳_用短斧朝前挥击一次_另一只手稳住盾牌_然后收回武器_64c516dd\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\units\\minions-animated-v1\\red-melee\\attack\\角色面朝屏幕左下_停步站稳_用短斧朝前挥击一次_另一只手稳住盾牌_然后收回武器_64c516dd\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\units\\minions-animated-v1\\red-melee\\attack\\角色面朝屏幕左下_停步站稳_用短斧朝前挥击一次_另一只手稳住盾牌_然后收回武器_64c516dd\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

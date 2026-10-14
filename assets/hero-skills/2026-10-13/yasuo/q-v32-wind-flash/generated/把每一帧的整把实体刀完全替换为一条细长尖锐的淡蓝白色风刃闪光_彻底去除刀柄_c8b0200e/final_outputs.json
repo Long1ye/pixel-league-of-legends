@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "job_id": "job_88306d92e8cd464691de71ac16bf7715",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-13\\yasuo\\q-v32-wind-flash\\generated\\把每一帧的整把实体刀完全替换为一条细长尖锐的淡蓝白色风刃闪光_彻底去除刀柄_c8b0200e\\frames_edit.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-13\\yasuo\\q-v32-wind-flash\\generated\\把每一帧的整把实体刀完全替换为一条细长尖锐的淡蓝白色风刃闪光_彻底去除刀柄_c8b0200e\\sprite_sheet.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

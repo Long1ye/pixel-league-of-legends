@@ -1,0 +1,12 @@
+{
+  "capability": "game-assets image-edit-run, pixel strict, Image 2.5",
+  "nexus": {
+    "source": "assets/map-modules/howling-sites-v3/nexus.png",
+    "job": "job_409bf138d4d34c0ab0c2bbb088c72b35"
+  },
+  "inhibitor": {
+    "source": "assets/map-modules/howling-brush-crystal-v2/inhibitor.png",
+    "job": "job_5ebdbeab3fbc40af896098f5aba5e740"
+  },
+  "intent": "Red energy and inner glow for enemy-side base and inhibitor, retaining snow and gray masonry"
+}

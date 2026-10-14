@@ -1,0 +1,16 @@
+{
+  "purpose": "Howling Abyss-inspired bridge brush and inhibitor art",
+  "source": "game-assets skill / Meowa Image2.5 general generation, followed by pixel background removal",
+  "brush": {
+    "generationJob": "job_a4de672c26704d60a261fdb308886855",
+    "cleanupJob": "job_37a4f2649db441a8840f30c0a6926cc4",
+    "file": "brush.png",
+    "sourceCrop": [48, 192, 928, 394]
+  },
+  "inhibitor": {
+    "generationJob": "job_5495e79fe2c145f092ae6a4af6a1eefa",
+    "cleanupJob": "job_4bfe8feaefc24d4baac8e2051556e6d7",
+    "file": "inhibitor.png",
+    "sourceCrop": [210, 78, 605, 867]
+  }
+}

@@ -1,0 +1,1 @@
+{"command":"isometric-tileset-run","args":["--prompt","平整的冷灰蓝古老石板桥面，低对比，大块石砖，细砖缝和少量磨损，英雄联盟嚎哭深渊像素风。只有平面地砖，没有栏杆、雪、立柱、桥体侧壁或装饰。","--terrain-mode","single","--single-terrain-region","foreground","--remove-bg-method","standard"],"output_dir":"assets/map-modules/howling-v1/stone"}

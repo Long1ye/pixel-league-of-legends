@@ -1,0 +1,36 @@
+{
+  "status": "success",
+  "job_id": "job_1bc048162e4543b28d5107782e58c71f",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\map-modules\\howling-snowstone-v2\\variants\\同一块像素风冰桥石砖_保持石砖外轮廓_尺寸_冷灰蓝调和清晰像素笔触_仅在左上角_11cfd510\\edited.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\map-modules\\howling-snowstone-v2\\variants\\同一块像素风冰桥石砖_保持石砖外轮廓_尺寸_冷灰蓝调和清晰像素笔触_仅在左上角_11cfd510\\edited_2.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\map-modules\\howling-snowstone-v2\\variants\\同一块像素风冰桥石砖_保持石砖外轮廓_尺寸_冷灰蓝调和清晰像素笔触_仅在左上角_11cfd510\\edited_3.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\map-modules\\howling-snowstone-v2\\variants\\同一块像素风冰桥石砖_保持石砖外轮廓_尺寸_冷灰蓝调和清晰像素笔触_仅在左上角_11cfd510\\edited_4.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\map-modules\\howling-snowstone-v2\\variants\\同一块像素风冰桥石砖_保持石砖外轮廓_尺寸_冷灰蓝调和清晰像素笔触_仅在左上角_11cfd510\\edited_5.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "assets\\map-modules\\howling-snowstone-v2\\variants\\同一块像素风冰桥石砖_保持石砖外轮廓_尺寸_冷灰蓝调和清晰像素笔触_仅在左上角_11cfd510\\edited_6.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

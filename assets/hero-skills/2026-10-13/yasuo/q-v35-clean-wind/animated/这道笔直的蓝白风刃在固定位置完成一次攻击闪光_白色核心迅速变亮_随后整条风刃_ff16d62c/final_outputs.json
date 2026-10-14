@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "job_id": "job_2eb9eea602a7496d8c18bac3af7bf25e",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-13\\yasuo\\q-v35-clean-wind\\animated\\这道笔直的蓝白风刃在固定位置完成一次攻击闪光_白色核心迅速变亮_随后整条风刃_ff16d62c\\meowa_animation.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-13\\yasuo\\q-v35-clean-wind\\animated\\这道笔直的蓝白风刃在固定位置完成一次攻击闪光_白色核心迅速变亮_随后整条风刃_ff16d62c\\meowa_animation_background.webp",
+      "mime_type": "image/webp"
+    }
+  ]
+}

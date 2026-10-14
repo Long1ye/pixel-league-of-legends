@@ -206,3 +206,8 @@ Asset cloning (`asset-clone-run`) uses `--clone-count` in its default prompt (de
 - **去背景**：GPT Image2.5 去背景不收附加积分；Nano Banana（包括 2.1）开启去背景需额外积分，以当前报价为准。
 
 Nano Banana 2.1 is available in general generation: `nano-banana-run --model gemini-nano-banana-2.1 --prompt "..."`. It supports 1K/2K/4K (5/10/20 credits), all 14 aspect ratios, and only `--generation-speed normal` (default). Each reference image adds 2 credits. The default model remains `gemini-3.1-flash-image`.
+
+
+Final downloads use the server-selected URL, including the domestic media domain. Re-query an existing successful job to obtain its current route; never guess a replacement hostname. Small image downloads share a 45-second budget across at most three attempts, and files are saved only after a complete media response. Large media uses bounded inactive reads. `general-image-run` mirrors the web model selector (default Image2.5, Standard, 1K, 1:1, no background removal); `general-image-poll` resumes the original job. Model-specific legacy commands retain the same requests. The runner is statically distributed; there is no remote bootstrap execution.
+
+Domestic ready final files may use `media-cn.meowjito.com`; legacy `media.meowjito.com` links remain valid. Follow the exact server-returned final URL and re-query the job to refresh its route. No storage or provider option is required.

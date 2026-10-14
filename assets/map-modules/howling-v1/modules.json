@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "projection": "isometric-2:1",
+  "atlasSize": [512,256],
+  "cellSize": [128,64],
+  "neighborOffsets": [[64,32],[-64,32]],
+  "cornerBits": {"northwest":1,"southwest":2,"northeast":4,"southeast":8},
+  "atlasCellByKey": [[0,3],[3,3],[0,0],[3,2],[0,2],[1,2],[2,3],[3,1],[1,3],[0,1],[3,0],[2,0],[1,0],[2,2],[1,1],[2,1]],
+  "layers": [{"id":"floor","file":"stone.png","z":0},{"id":"snow","file":"snow.png","z":1}],
+  "scope": "First ground module pack. Rails, bridge sidewalls, decals, bushes and towers are not included."
+}

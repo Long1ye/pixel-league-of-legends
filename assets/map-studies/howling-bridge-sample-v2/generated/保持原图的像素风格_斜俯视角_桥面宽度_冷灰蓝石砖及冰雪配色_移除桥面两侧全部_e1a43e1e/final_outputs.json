@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_0e8e0040bc9b4272bb8f992c8144b30a",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\map-studies\\howling-bridge-sample-v2\\generated\\保持原图的像素风格_斜俯视角_桥面宽度_冷灰蓝石砖及冰雪配色_移除桥面两侧全部_e1a43e1e\\edited.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

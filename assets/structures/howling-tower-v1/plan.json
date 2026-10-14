@@ -1,0 +1,7 @@
+{
+ "command":"general-image-run",
+ "recovery_command":"general-image-poll",
+ "recovery_id_flag":"--job-id",
+ "output_dir":"assets/structures/howling-tower-v1/generated",
+ "args":["--generation-model","image-2.5","--resolution","1K","--aspect-ratio","4:3","--quality","standard","--remove-bg-method","standard","--reference-image","assets/structures/howling-tower-v1/references/turrets.jpg","--prompt","为像素版英雄联盟冰桥游戏制作一张透明背景防御塔素材图，左右并排两个完整独立防御塔，同样大小同样造型，左蓝色右红色阵营。参考图片中两座直立防御塔，不是圆形水晶建筑：保留高挑石雕塔身、厚重兽首肩部、侧面竖直法杖和法杖顶端发光宝珠、刻有装饰的垂直护板，以及八角形层叠石基座。转换成精美且轮廓清晰的像素游戏精灵，俯视三分之四视角，冷灰蓝石材、少量金属包边和基座积雪，光从左上方来。两个塔只改变宝珠与符文的阵营颜色，蓝为冰蓝、红为暖红，塔身材质保持一致。明显的方形像素块和简洁阴影，避免写实绘画、模糊光晕和过细的噪点。两塔均朝画面左下方，同一落脚基线，周围留透明边距，塔之间留足间隔。只画防御塔，不画地图地面、角色、水晶、文字、标尺或界面。"]
+}

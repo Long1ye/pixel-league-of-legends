@@ -1,0 +1,9 @@
+{
+  "generator": "Meowa game-assets general-image Image2.5",
+  "assets": {
+    "nexus.png": {"job": "job_902ee3746b4e41aaaf9c568f41450f1b", "reference": "../howling-brush-crystal-v2/inhibitor.png"},
+    "shop.png": {"job": "job_19a43c7fe99649e38b335f51937e0bb0", "reference": "../howling-fortress-v2/module-4.png"},
+    "relic.png": {"job": "job_34f064d0e33d4eaba566209bab1b19fb", "reference": "../howling-brush-crystal-v2/inhibitor.png"}
+  },
+  "runtime": "1024x1024 transparent PNG sources; positioned and scaled in BridgeSiteArt.ts"
+}

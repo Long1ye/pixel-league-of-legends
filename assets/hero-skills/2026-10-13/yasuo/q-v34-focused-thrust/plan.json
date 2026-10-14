@@ -1,0 +1,5 @@
+{
+ "command":"animation-edit-run",
+ "args":["--animation-file","assets/hero-skills/2026-10-13/yasuo/q-v33-straight-flash/wind.webp","--prompt","将这段直线剑气改为有力而克制的斩钢闪风压：一条连续明亮的白色主锋线，包裹一层紧贴的淡蓝尖锥风压。整个长度同时闪亮，再干净消散。去掉分散的碎丝、颗粒和分叉，让主锋线更厚实清晰，最前端尖锐。保持原来的直线方向、位置和动画时序，不弯曲、不旋转、不飞行，没有刀柄护手或金属刀身，透明背景，清晰像素风。","--mode","pixel","--generation-speed","normal","--remove-bg-method","standard"],
+ "output_dir":"assets/hero-skills/2026-10-13/yasuo/q-v34-focused-thrust/generated"
+}

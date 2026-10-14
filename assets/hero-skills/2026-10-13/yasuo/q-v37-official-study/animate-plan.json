@@ -1,0 +1,6 @@
+{
+  "command": "meowa-animation-run",
+  "recovery_command": "animate-poll",
+  "args": ["--image-file", "assets/hero-skills/2026-10-13/yasuo/q-v37-official-study/base-generated/游戏用独立斩钢闪突刺风痕_透明背景_主体是一道从左向右的笔直_极细_锐利青白色_aa215ad3/result_images_0_url.png", "--prompt", "这道细长笔直的青白突刺风痕在固定位置闪亮一次，然后迅速变细并消失，灰黑破风残影略微舒展后消散。左端固定，不整体飞走，不旋转，不弯曲，不新增物体。镜头固定，完成一次攻击。", "--style-mode", "hd", "--resolution", "480p", "--alpha-mode", "soft", "--output-frames", "8", "--quality-mode", "standard", "--animation-mode", "non_loop", "--remove-bg-method", "standard", "--remove-bg-batch-size", "4", "--background-color", "#c6c6c6", "--optimize-prompt", "--padding", "16", "--padding-alignment", "center"],
+  "output_dir": "assets/hero-skills/2026-10-13/yasuo/q-v37-official-study/animated"
+}

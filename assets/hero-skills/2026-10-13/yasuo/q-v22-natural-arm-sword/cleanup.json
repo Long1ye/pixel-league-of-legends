@@ -1,0 +1,8 @@
+{
+  "command": "remove-background-run",
+  "args": [
+    "--image-file", "assets/hero-skills/2026-10-13/yasuo/q-v22-natural-arm-sword/generated/Create_three_separate_pixel-art_animation_parts_matching_this_small_Yasuo_sprite_one_bare_upper_arm_without_sh_49d6b3d9/result_images_0_url.png",
+    "--mode", "pixel", "--quality", "standard"
+  ],
+  "output_dir": "assets/hero-skills/2026-10-13/yasuo/q-v22-natural-arm-sword/cleaned"
+}

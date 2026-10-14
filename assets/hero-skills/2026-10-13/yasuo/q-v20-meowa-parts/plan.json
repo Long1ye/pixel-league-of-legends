@@ -1,0 +1,18 @@
+{
+  "command": "image-edit-run",
+  "recovery_command": "image-edit-poll",
+  "recovery_id_flag": "--job-id",
+  "output_dir": "assets/hero-skills/2026-10-13/yasuo/q-v20-meowa-parts/generated",
+  "args": [
+    "--reference-image", "assets/hero-skills/2026-10-13/yasuo/q-v19-matched-parts-se/parts.png",
+    "--reference-image", "assets/hero-skills/2026-10-13/yasuo/q-v17-crouched-body-se/body-base.png",
+    "--prompt", "Redraw the three separate animation parts in image 1 to match the pixel art, warm skin and muted blue-gray armor of the character in image 2. Keep three horizontal rows: compact bare upper arm pointing right, forearm with a small gripping hand pointing right, and a slender katana pointing right with its grip on the left. Use dark plum outlines and restrained steel highlights. Thin pale-blue wind wraps the blade, without glow haze or tip explosions. Keep the parts separate on transparency. Do not include the character, text, frames or extra parts.",
+    "--mode", "pixel",
+    "--generation-model", "image-2.5",
+    "--quality", "detailed",
+    "--resolution", "1K",
+    "--regional-pixelation",
+    "--no-multi-pixelation",
+    "--remove-bg-method", "standard"
+  ]
+}

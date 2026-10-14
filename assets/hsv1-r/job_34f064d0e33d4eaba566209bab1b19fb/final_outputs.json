@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_34f064d0e33d4eaba566209bab1b19fb",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hsv1-r\\job_34f064d0e33d4eaba566209bab1b19fb\\result_images_0_url.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

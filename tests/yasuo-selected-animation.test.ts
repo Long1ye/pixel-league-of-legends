@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { WORLD, BALANCE } from '../src/game/config';
 import { Match } from '../src/game/Match';
-import { attackClipFor, attackFrameAt, spriteFrameAt, YasuoAnimator, YASUO_ASSETS } from '../src/render/YasuoAnimation';
+import { attackClipFor, attackFrameAt, spriteFrameAt, YasuoAnimator, YASUO_ASSETS, flipYasuoAttack } from '../src/render/YasuoAnimation';
 
 function setup() {
   const match = new Match({ ai: false, waves: false }); match.start();
@@ -22,9 +22,10 @@ describe('user-selected Yasuo attack assets', () => {
     expect(YASUO_ASSETS.attacks.map(c => c.id)).toEqual(['A', 'B']);
     for (const clip of YASUO_ASSETS.attacks) {
       expect(clip.source_sha256).toMatch(/^[a-f0-9]{64}$/);
-      expect([clip.width, clip.height, clip.frame_count]).toEqual([200, 128, 24]);
-      expect(clip.durations_ms).toEqual(Array(24).fill(125));
-      expect(clip.duration_ms).toBe(3000);
+      expect([clip.width, clip.height, clip.frame_count]).toEqual([201, 201, 48]);
+      expect(clip.durations_ms).toHaveLength(48);
+      expect(clip.durations_ms.every(d=>d>0)).toBe(true);
+      expect(clip.duration_ms).toBe(1973);
       expect(clip.source_pixels_preserved).toBe(true);
     }
     expect(YASUO_ASSETS.locomotion).toHaveLength(16);
@@ -32,9 +33,9 @@ describe('user-selected Yasuo attack assets', () => {
 
   it('samples all source frames in order, and holds rather than looping at the endpoint', () => {
     for (const clip of YASUO_ASSETS.attacks) {
-      expect(Array.from({ length: 24 }, (_, i) => spriteFrameAt(i * 125, clip.durations_ms, false))).toEqual(Array.from({ length: 24 }, (_, i) => i));
-      expect(spriteFrameAt(3000, clip.durations_ms, false)).toBe(23);
-      expect(spriteFrameAt(3000, clip.durations_ms, true)).toBe(0);
+      expect(clip.durations_ms.map((_,i)=>spriteFrameAt(clip.durations_ms.slice(0,i).reduce((a,b)=>a+b,0),clip.durations_ms,false))).toEqual(Array.from({length:48},(_,i)=>i));
+      expect(spriteFrameAt(clip.duration_ms, clip.durations_ms, false)).toBe(47);
+      expect(spriteFrameAt(clip.duration_ms, clip.durations_ms, true)).toBe(0);
     }
     expect(spriteFrameAt(50, [50, 100], false)).toBe(1);
     expect(() => spriteFrameAt(-1, [125], false)).toThrow(RangeError);
@@ -42,6 +43,10 @@ describe('user-selected Yasuo attack assets', () => {
 });
 
 describe('simulation-linked A/B attack presentation', () => {
+  it('mirrors left-facing attacks without flipping right or vertical attacks',()=>{
+    for(const a of [Math.PI,Math.PI*.75,Math.PI*1.25])expect(flipYasuoAttack(a)).toBe(true);
+    for(const a of [0,Math.PI/4,Math.PI/2,-Math.PI/2])expect(flipYasuoAttack(a)).toBe(false);
+  });
   it('alternates only after an actual attack release and preserves existing balance', () => {
     const { match, hero, target } = setup();
     match.orderAttack('blue', target.id); match.step(WORLD.step);

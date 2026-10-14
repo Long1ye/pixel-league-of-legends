@@ -15,7 +15,7 @@ describe('expanded terrain footprint', () => {
     const state = new Match(), rig = new CameraRig(); rig.reset(state.hero('blue'));
     expect(rig.zoom).toBe(1); expect(rig.bounds).toMatchObject({ width: 480, height: 270 });
     expect(state.hero('blue')).toMatchObject({ speed: 53, radius: 7, range: 54 });
-    expect(BALANCE.melee.speed).toBe(24); expect(BALANCE.waveInterval).toBe(14);
+    expect(BALANCE.melee.speed).toBe(28); expect(BALANCE.waveInterval).toBe(30);
   });
 
   it('keeps fountains, towers, spawns and the AI hold point aligned with terrain', () => {
@@ -50,8 +50,8 @@ describe('expanded terrain footprint', () => {
     const blue = state.entities.filter(e => e.team === 'blue' && e.kind === 'melee');
     expect(blue).toHaveLength(3);
     for (const unit of blue) {
-      expect(distance(unit, BASES.blue)).toBeLessThan(35);
-      expect(unit.destination).toEqual(BASES.red);
+      expect(distance(unit, BASES.blue)).toBeLessThan(200);
+      expect(unit.destination).toEqual(unit.formation?.goal);
     }
   });
 

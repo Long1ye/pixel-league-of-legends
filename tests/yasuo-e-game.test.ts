@@ -8,6 +8,12 @@ function setup() {
   return {m,h,t};
 }
 describe('Yasuo targeted dash',()=>{
+  it('takes twice as long over the same distance',()=>{
+    const {m,h,t}=setup();
+    expect(E.dash).toBe(.44); expect(E.duration).toBe(.64);
+    m.cast('blue','e',t); m.step(E.startup+E.dash/2);
+    expect(h.x).toBeCloseTo(540); expect(h.eCast).not.toBeNull();
+  });
   it('rejects ground, allies and distant targets without cooldown',()=>{
     const {m,h}=setup(); expect(m.cast('blue','e',{x:700,y:300})).toBe(false);
     expect(m.cast('blue','e',h)).toBe(false); expect(h.abilities.e).toBe(0);
@@ -17,17 +23,17 @@ describe('Yasuo targeted dash',()=>{
     const {m,h,t}=setup(); const other=m.spawnMinion('red','melee',{x:565,y:350}); other.speed=0;
     expect(m.cast('blue','e',t)).toBe(true); m.step(.02); expect(h.x).toBe(500);
     m.step(.12); expect(h.x).toBeGreaterThan(500); expect(h.x).toBeLessThan(580);
-    m.step(.2); expect(h.x).toBe(580); expect(t.hp).toBe(t.maxHp-55); expect(other.hp).toBe(other.maxHp);
+    m.step(E.duration-.14); expect(h.x).toBe(580); expect(t.hp).toBe(t.maxHp-55); expect(other.hp).toBe(other.maxHp);
     expect(h.eCast).toBeNull(); expect(m.zones).toHaveLength(0);
   });
   it('rejects repeat target but accepts a different one after global cooldown',()=>{
-    const {m,h,t}=setup(); m.cast('blue','e',t); m.step(.51);
+    const {m,h,t}=setup(); m.cast('blue','e',t); m.step(E.duration+.01);
     expect(m.cast('blue','e',t)).toBe(false);
     const next=m.spawnMinion('red','melee',{x:h.x+40,y:h.y}); expect(m.cast('blue','e',next)).toBe(true);
   });
   it('keeps trajectory on target death and honors pause and death',()=>{
     const {m,h,t}=setup(); m.cast('blue','e',t); t.hp=0; m.togglePause(); m.step(1); expect(h.x).toBe(500);
-    m.togglePause(); m.step(.4); expect(h.x).toBe(580);
+    m.togglePause(); m.step(E.duration); expect(h.x).toBe(580);
     const next=m.spawnMinion('red','melee',{x:620,y:350}); m.step(.2); m.cast('blue','e',next);
     m.damage(m.hero('red'),h,9999); expect(h.eCast).toBeNull();
   });

@@ -1,0 +1,13 @@
+{
+  "note": "game-assets / Meowa 转身生成试稿。保留单侧缺臂结构，以下为八向候选帧，尚未接入游戏。当前输出有横向杂线和部分朝向偏差，不作为最终可用素材。",
+  "directions": [
+    {"file":"frames/00.png","label":"右下 · 基准方向"},
+    {"file":"frames/04.png","label":"正下 · 候选"},
+    {"file":"frames/06.png","label":"左下 · 候选"},
+    {"file":"frames/09.png","label":"正左 · 候选"},
+    {"file":"frames/12.png","label":"左上 · 候选"},
+    {"file":"frames/17.png","label":"正上 · 候选，角度待校准"},
+    {"file":"frames/20.png","label":"右上 · 候选"},
+    {"file":"frames/23.png","label":"正右 · 候选"}
+  ]
+}

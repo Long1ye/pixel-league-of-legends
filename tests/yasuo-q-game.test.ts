@@ -15,18 +15,33 @@ function advance(match: Match, seconds: number) {
   for (let i = 0; i < Math.ceil(seconds / WORLD.step); i++) match.step(WORLD.step);
 }
 describe('Yasuo Q in the main game', () => {
+  it('uses a one-second Q cooldown without changing the opponent cooldown', () => {
+    const { match, hero } = setup();
+    const aim = { x: 600, y: 300 };
+    expect(ABILITIES.q.cooldown).toBe(1);
+    expect(match.cast('blue', 'q', aim)).toBe(true);
+    advance(match, .9);
+    expect(match.cast('blue', 'q', aim)).toBe(false);
+    advance(match, .11);
+    expect(match.cast('blue', 'q', aim)).toBe(true);
+    expect(hero.abilities.q - match.time).toBeCloseTo(1);
+    expect(match.cast('red', 'q', hero)).toBe(true);
+    expect(match.hero('red').abilities.q - match.time).toBeCloseTo(5);
+  });
   it('selects all eight approved clips from cast aim, including arbitrary angles without facing hysteresis', () => {
     for (let i = 0; i < DIRECTIONS.length; i++) {
       const { match, hero, animator } = setup(), angle = i * Math.PI / 4 + 0.15;
       expect(match.cast('blue', 'q', { x: hero.x + Math.cos(angle) * 100, y: hero.y + Math.sin(angle) * 100 })).toBe(true);
       const sample = animator.sample(hero, match.time);
       expect(sample.state).toBe('Q'); expect(sample.clip.key).toBe(`yasuo-q-${DIRECTIONS[i]}-wind`);
-      expect(sample.frame).toBe(0); expect(sample.scale * 90).toBeCloseTo(26);
+      expect(sample.frame).toBe(0); expect(sample.scale * 108).toBeCloseTo(26);
       expect(match.projectiles[0].vx).toBeCloseTo(Math.cos(angle));
       expect(match.projectiles[0].vy).toBeCloseTo(Math.sin(angle));
     }
-    expect(YASUO_Q_ASSETS.cast_duration_ms / 1000).toBe(YASUO_Q_CAST_SECONDS);
-    expect(YASUO_Q_ASSETS.clips.every(c => c.source_pixels_preserved && c.frame_count === 31)).toBe(true);
+    expect(YASUO_Q_CAST_SECONDS).toBe(.72);
+    expect(YASUO_Q_ASSETS.version).toBe('v29-meowa-layered-corrected-elbows');
+    expect(YASUO_Q_ASSETS.clips.every(c => !c.source_pixels_preserved && c.frame_count === 31 && c.width === 480 && c.height === 430)).toBe(true);
+    for (const clip of YASUO_Q_ASSETS.clips) expect(clip.anchor).toEqual([234,272]);
   });
   it('holds position and cast heading, then resumes a movement command queued during the cast', () => {
     const { match, hero, animator } = setup(); animator.sample(hero, match.time);
@@ -36,7 +51,7 @@ describe('Yasuo Q in the main game', () => {
     advance(match, 0.3);
     expect([hero.x, hero.y]).toEqual([500, 300]); expect(hero.facing).toBeCloseTo(-Math.PI / 2);
     expect(animator.sample(hero, match.time).clip.key).toBe('yasuo-q-n-wind');
-    advance(match, 0.2);
+    advance(match, 0.45);
     expect(hero.x).toBeLessThan(500); expect(hero.y).toBeGreaterThan(300);
     expect(animator.sample(hero, match.time).state).toBe('walk'); expect(hero.qCast).toBeNull();
   });
@@ -48,7 +63,7 @@ describe('Yasuo Q in the main game', () => {
     match.cast('blue', 'q', { x: 500, y: 200 });
     expect(hero.attackStartedAt).toBeNull(); expect(hero.windup).toBe(0);
     advance(match, 0.3); expect(hero.attacksReleased).toBe(0); expect(animator.sample(hero, match.time).state).toBe('Q');
-    advance(match, 0.2); expect(animator.sample(hero, match.time).state).toBe('A');
+    advance(match, 0.45); expect(animator.sample(hero, match.time).state).toBe('A');
     advance(match, 0.21); expect(hero.attacksReleased).toBe(1);
   });
   it('freezes with simulation pause, ends after recovery, and never loops during cooldown', () => {
@@ -56,7 +71,7 @@ describe('Yasuo Q in the main game', () => {
     match.cast('blue', 'q', { x: 600, y: 300 }); advance(match, 0.2);
     const sample = animator.sample(hero, match.time); expect(sample.frame).toBeGreaterThan(0);
     match.togglePause(); advance(match, 5); expect(animator.sample(hero, match.time)).toEqual(sample);
-    match.togglePause(); advance(match, 0.3); expect(animator.sample(hero, match.time).state).toBe('idle');
+    match.togglePause(); advance(match, 0.55); expect(animator.sample(hero, match.time).state).toBe('idle');
     advance(match, 1.4); expect(sampleYasuoQ(hero, match.time)).toBeNull();
   });
   it('does not restart on rejected input, keeps current damage/range/cost/cooldown and leaves the opponent unchanged', () => {
@@ -77,7 +92,7 @@ describe('Yasuo Q in the main game', () => {
       }
       if (ending === 'death') match.damage(match.hero('red'), hero, 1000);
       if (ending === 'restart') { animator.reset(); expect(animator.sample(new Match().hero('blue'), 0).state).toBe('idle'); continue; }
-      if (ending === 'stop') { match.stop('blue'); expect(animator.sample(hero, match.time).state).toBe('Q'); advance(match, 0.5); }
+      if (ending === 'stop') { match.stop('blue'); expect(animator.sample(hero, match.time).state).toBe('Q'); advance(match, 0.75); }
       expect(hero.qCast).toBeNull(); expect(animator.sample(hero, match.time).state).not.toBe('Q');
       expect(hero.attacksReleased).toBe(0);
     }

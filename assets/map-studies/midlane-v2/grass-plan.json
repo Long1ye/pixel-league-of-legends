@@ -1,0 +1,1 @@
+{"command":"texture-gen-run","args":["--prompt","俯视像素游戏草地纹理，低饱和橄榄绿与苔绿色，平坦短草，细节稀疏、明暗对比很低，不要花朵石块和物件，适合英雄联盟中路线边缘。","--self-loop"],"output_dir":"assets/map-studies/midlane-v2/generated-grass"}

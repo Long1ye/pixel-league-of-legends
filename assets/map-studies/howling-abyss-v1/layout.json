@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "name": "Howling Abyss inspired — layout blockout",
+  "units": "local bridge coordinates, not Riot game units",
+  "bridge": {"halfLength": 720, "halfWidth": 112, "baseStart": 470, "baseHalfWidth": 160},
+  "projection": {"origin": [540, 306], "along": [0.59, -0.28], "across": [0.60, 0.65]},
+  "blue": {
+    "spawn": [-659, 0], "nexus": [-580, 0],
+    "nexusTowers": [[-510, -63], [-510, 63]],
+    "inhibitor": [-425, 0], "innerTower": [-330, 0], "outerTower": [-195, 0]
+  },
+  "brush": [
+    {"id":"blue-tower-side","u":-270,"v":-87,"length":76,"width":26},
+    {"id":"blue-mid-side","u":-90,"v":-86,"length":86,"width":30},
+    {"id":"center-opposite","u":0,"v":84,"length":96,"width":32},
+    {"id":"red-mid-side","u":90,"v":-86,"length":86,"width":30},
+    {"id":"red-tower-side","u":270,"v":-87,"length":76,"width":26}
+  ],
+  "relics": [],
+  "assetSlots": {"bridgeFloor":null,"bridgeRail":null,"bridgePier":null,"brush":"assets/map-modules/howling-brush-crystal-v2/brush.png","tower":null,"inhibitor":"assets/map-modules/howling-brush-crystal-v2/inhibitor.png","redInhibitor":"assets/map-modules/howling-red-team-v1/inhibitor.png","nexus":"assets/map-modules/howling-sites-v3/nexus.png","redNexus":"assets/map-modules/howling-red-team-v1/nexus.png","spawn":null},
+  "layers": ["abyss", "bridgeSupports", "floor", "edge", "decals", "objectSlots", "actors", "foreground", "atmosphere"],
+  "reference": "https://www.leagueoflegends.com/en-us/news/game-updates/aram-2023-preview/",
+  "scope": "Structural interpretation for a solo pixel game; not a dimension-accurate reconstruction or current ARAM ruleset."
+}

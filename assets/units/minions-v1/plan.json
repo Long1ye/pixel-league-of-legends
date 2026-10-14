@@ -1,0 +1,7 @@
+{
+ "command":"general-image-run",
+ "recovery_command":"general-image-poll",
+ "recovery_id_flag":"--job-id",
+ "output_dir":"assets/units/minions-v1/generated",
+ "args":["--generation-model","image-2.5","--resolution","1K","--aspect-ratio","1:1","--quality","standard","--remove-bg-method","standard","--reference-image","assets/units/minions-v1/references/melee.png","--reference-image","assets/units/minions-v1/references/gameplay.jpg","--prompt","制作像素版英雄联盟小兵的四角色透明素材图，2行2列，不要文字或边框。参考第一图的近战兵模型和第二图的游戏内远程兵模型，转换成清晰简练的像素游戏角色，统一三分之四俯视摄像机、比例、像素块大小和左上光源。左上是蓝方近战兵，方形金属头盔、蓝色战袍、短柄锤和矩形盾；右上是蓝方远程兵，蓝色兜帽长袍、浅色领口、蓝水晶短法杖。两个蓝兵必须面朝屏幕右上方行进，背部朝观众，三分之四背面，头部、躯干、双脚和武器方向一致。左下是红方近战兵，尖形兜帽和金属肩甲、红战袍、短斧和菱形盾；右下是红方远程兵，红色尖兜帽长袍、暗面孔亮眼睛、红水晶法杖。两个红兵必须朝屏幕左下方行进，三分之四正面，头部、躯干、双脚和武器方向一致。四个都是自然迈步单姿态，双腿一前一后，手臂紧凑不外张，不是攻击动作。四个角色一样大小，各自完整独立居中在格子内，武器和脚不能裁切，四周留足透明空间。用明确的像素色块、深色细轮廓和少量层次阴影，简化细节适合以后制作小尺寸游戏动画，不做3D渲染、不画地面、底座、投影、光晕或血条。"]
+}

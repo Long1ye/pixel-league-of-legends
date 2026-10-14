@@ -1,0 +1,15 @@
+{
+  "command": "animate-run",
+  "recovery_command": "animate-poll",
+  "args": [
+    "--image-file", "assets/hero-skills/2026-10-13/yasuo/q-v22-natural-arm-sword/components/component_001.png",
+    "--prompt", "The sword stays completely stationary in its original position and angle. Thin pale blue wind ribbons flow from the guard toward the tip, spiraling around the blade, passing alternately behind and in front. Gentle continuous looping wind, restrained brightness, blade always clearly visible. No explosion at the tip, no slash movement, no camera movement, no character. Preserve the original pixel-art sword and palette.",
+    "--output-frames", "8", "--output-format", "webp",
+    "--animation-type", "idle", "--animation-model", "frame-engine-v1.1",
+    "--intelligence", "standard", "--optimize-prompt",
+    "--padding-top", "40", "--padding-down", "40",
+    "--padding-left", "16", "--padding-right", "32",
+    "--remove-bg-method", "standard"
+  ],
+  "output_dir": "assets/hero-skills/2026-10-13/yasuo/q-v23-flowing-wind-sword/retry-generated"
+}

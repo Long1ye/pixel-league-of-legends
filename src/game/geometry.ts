@@ -1,9 +1,11 @@
-import { WORLD } from './config';
+import { WORLD, HOWLING_MAP } from './config';
+import {clampBridge} from './Bridge';
 import type { Point } from './types';
 
 export function distance(a: Point, b: Point): number { return Math.hypot(a.x - b.x, a.y - b.y); }
 export function clamp(value: number, min: number, max: number): number { return Math.max(min, Math.min(max, value)); }
 export function clampPoint(p: Point, margin = 8): Point {
+  if(HOWLING_MAP)return clampBridge(p,margin);
   return { x: clamp(p.x, margin, WORLD.width - margin), y: clamp(p.y, margin, WORLD.height - margin) };
 }
 export function direction(a: Point, b: Point): Point {

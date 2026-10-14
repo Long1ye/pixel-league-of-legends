@@ -1,0 +1,7 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>冰桥 · 破损封印模块</title>
+<style>body{margin:28px;background:#101c28;color:#d0e0e9;font:16px system-ui}h1{font-size:24px}p{max-width:850px;color:#9fb6c6}section{display:flex;flex-wrap:wrap;gap:16px}figure{margin:0}img{width:256px;height:256px;image-rendering:pixelated;display:block}figcaption{padding:8px 0 20px}h2{font-size:18px}</style>
+<h1>冰桥 · 破损封印模块</h1><p>16 格独立石砖候选：完整雕纹、边框连接件、断裂边框、重战损。原生 256×256 展示，未替换游戏。边框连接位置需在组合时检查，不承诺自动无缝拼接。</p>
+<div id="pack"></div><script>
+const groups=['完整雕纹','边框连接件','破损边框','战损与修复'];
+for(let row=0;row<4;row++){const h=document.createElement('h2');h.textContent=groups[row];const s=document.createElement('section');for(let col=0;col<4;col++){const i=row*4+col,f=document.createElement('figure'),img=document.createElement('img'),cap=document.createElement('figcaption');img.src=`stone-${String(i).padStart(2,'0')}.png`;img.alt=`模块 ${i+1}`;cap.textContent=`${String(i+1).padStart(2,'0')} · ${groups[row]}`;f.append(img,cap);s.append(f);}document.querySelector('#pack').append(h,s);}
+</script></html>

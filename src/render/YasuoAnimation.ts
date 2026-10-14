@@ -1,4 +1,8 @@
-import registry from '../../assets/heroes/yasuo/selected-2026-10-10/animations.json';
+import originalRegistry from '../../assets/heroes/yasuo/selected-2026-10-10/animations.json';
+import attackRegistry from '../../assets/heroes/yasuo/attacks-v2-2026-10-13/animations.json';
+const registry={...originalRegistry,attacks:attackRegistry.attacks};
+
+export function flipYasuoAttack(facing:number):boolean {return Math.cos(facing)<-0.001;}
 import { headingToDirection, type SpriteDirection } from '../../assets/hero-walk-directions/2026-10-09/v1/direction';
 import { BALANCE } from '../game/config';
 import type { Entity } from '../game/types';
@@ -42,12 +46,13 @@ export class YasuoAnimator {
   private previous: { x: number; y: number; time: number } | null = null;
   private moving = false;
   private direction: SpriteDirection | undefined;
-  private clipKey = '';
   private stateStartedAt = 0;
+  private locomotionState: 'idle' | 'walk' | null = null;
 
   reset(): void {
     this.previous = null; this.moving = false; this.direction = undefined;
-    this.clipKey = ''; this.stateStartedAt = 0;
+    this.stateStartedAt = 0;
+    this.locomotionState = null;
   }
 
   sample(entity: Entity, now: number): YasuoSample {
@@ -55,19 +60,21 @@ export class YasuoAnimator {
     this.previous = { x: entity.x, y: entity.y, time: now };
     this.direction = headingToDirection(entity.facing, this.direction);
     const e = sampleYasuoE(entity, now);
-    if (e) { this.clipKey = e.clip.key; return e; }
+    if (e) { this.locomotionState = null; return e; }
     const q = sampleYasuoQ(entity, now);
-    if (q) { this.clipKey = q.clip.key; return q; }
+    if (q) { this.locomotionState = null; return q; }
     const attacking = entity.hp > 0 && entity.attackStartedAt !== null &&
       (entity.windup > 0 || (!this.moving && entity.attackReleasedAt !== null && now - entity.attackReleasedAt <= entity.attackInterval));
     if (attacking) {
       const clip = attackClipFor(entity);
-      this.clipKey = clip.key;
+      this.locomotionState = null;
       return { clip, frame: attackFrameAt(entity, now, clip), state: clip.id as 'A' | 'B', scale: registry.scale_in_world };
     }
     const state = this.moving && entity.hp > 0 ? 'walk' : 'idle';
     const clip = registry.locomotion.find(c => c.state === state && c.direction === this.direction)!;
-    if (this.clipKey !== clip.key) { this.clipKey = clip.key; this.stateStartedAt = now; }
+    // Turning changes the view, not the footstep clock. Actions still restart locomotion.
+    if (this.locomotionState !== state) this.stateStartedAt = now;
+    this.locomotionState = state;
     return { clip, frame: spriteFrameAt(Math.max(0, now - this.stateStartedAt) * 1000, clip.durations_ms, true), state, scale: registry.scale_in_world };
   }
 }

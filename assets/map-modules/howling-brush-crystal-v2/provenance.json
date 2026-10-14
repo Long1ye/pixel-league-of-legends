@@ -1,0 +1,15 @@
+{
+  "description": "Denser frost brush and wider two-tier inhibitor foundation for the playable ice bridge",
+  "brush": {
+    "file": "brush.png",
+    "generationJob": "job_eaa847c67303440d8646f6d2f390b688",
+    "source": "howling-brush-crystal-v1/brush.png",
+    "alphaCleanup": "Meowa pixel background removal"
+  },
+  "inhibitor": {
+    "file": "inhibitor.png",
+    "generationJob": "job_7d0c40ba958543c692874318a75318d4",
+    "source": "howling-brush-crystal-v1/inhibitor.png",
+    "alphaCleanup": "Meowa pixel background removal"
+  }
+}

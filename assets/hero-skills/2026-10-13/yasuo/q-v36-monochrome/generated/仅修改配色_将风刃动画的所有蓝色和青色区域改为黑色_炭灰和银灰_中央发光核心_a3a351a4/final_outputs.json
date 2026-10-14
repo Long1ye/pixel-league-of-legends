@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "job_id": "job_fdef9378215f466eba745686c167c4bf",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-13\\yasuo\\q-v36-monochrome\\generated\\仅修改配色_将风刃动画的所有蓝色和青色区域改为黑色_炭灰和银灰_中央发光核心_a3a351a4\\frames_edit.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-skills\\2026-10-13\\yasuo\\q-v36-monochrome\\generated\\仅修改配色_将风刃动画的所有蓝色和青色区域改为黑色_炭灰和银灰_中央发光核心_a3a351a4\\sprite_sheet.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "status": "packaged",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "abyss-0.png"
+    },
+    {
+      "type": "media",
+      "path": "abyss-1.png"
+    },
+    {
+      "type": "media",
+      "path": "abyss-2.png"
+    },
+    {
+      "type": "media",
+      "path": "abyss-3.png"
+    }
+  ]
+}

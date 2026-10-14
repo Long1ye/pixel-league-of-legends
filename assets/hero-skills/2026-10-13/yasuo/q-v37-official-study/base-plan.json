@@ -1,0 +1,7 @@
+{
+  "command": "general-image-run",
+  "recovery_command": "general-image-poll",
+  "recovery_id_flag": "--job-id",
+  "args": ["--prompt", "游戏用独立斩钢闪突刺风痕，透明背景。主体是一道从左向右的笔直、极细、锐利青白色亮线，右端尖锐；亮线附近只有少量半透明灰黑色破风残影，整体瘦长而克制，表现高速刺穿空气的瞬间。不要实体刀剑、人物、圆环、弧形斩击、粗大发光团或文字。主体横向居中，四周留透明空白。", "--generation-model", "image-2.5", "--quality", "detailed", "--resolution", "1K", "--aspect-ratio", "16:9", "--remove-bg-method", "standard"],
+  "output_dir": "assets/hero-skills/2026-10-13/yasuo/q-v37-official-study/base-generated"
+}

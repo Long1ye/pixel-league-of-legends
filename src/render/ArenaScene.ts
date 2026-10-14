@@ -1,25 +1,45 @@
 import Phaser from 'phaser';
-import { HERO_VISUAL_SCALE, HERO_EFFECT_SCALE } from './Presentation';
+import { actorDepth, RENDER_DEPTH } from './RenderDepth';
+import { ArenaLighting } from './ArenaLighting';
+import { ArenaAccents } from './ArenaAccents';
+import { YASUO_R, yasuoRFrame } from '../game/YasuoR';
+import { HowlingAtmosphere } from './HowlingAtmosphere';
+import { TF_URLS, tfTextureKey, tfPose } from './TwistedFate';
+import homeguardUrl from '../../assets/effects/homeguard-v1/generated/Single_isolated_pixel_art_game_VFX_sprite_for_homeguard_movement_speed_boost_Three_delicate_icy_pale_blue_and_99487f23/result_images_0_url.png?url';
+import { homeguardActive } from '../game/Homeguard';
+import { LayeredForest } from './LayeredForest';
+import { HERO_VISUAL_SCALE, HERO_EFFECT_SCALE, HERO_ATTACHMENT_SCALE, RENDER_SCALE, toLogicalPointer, snapRenderCoordinate } from './Presentation';
 import rOriginalUrl from '../../assets/hero-skills/2026-10-12/yasuo/r-v1-last-breath/media/e-atlas.png?url';
 import eqRingUrl from '../../assets/hero-skills/2026-10-12/yasuo/eq-v2-ring-only/media/e-atlas.png?url';
 import eq3RingUrl from '../../assets/hero-skills/2026-10-12/yasuo/eq3-v1-layered-ring/refined/media/e-atlas.png?url';
 import { isFrontArc } from '../../assets/hero-skills/2026-10-12/yasuo/eq3-v1-layered-ring/depth';
 import readyWindUrl from '../../assets/hero-skills/2026-10-12/yasuo/q-v13-independent-ready/media/e-atlas.png?url';
-import tornadoUrl from '../../assets/hero-skills/2026-10-12/yasuo/q-v12-storm-preview/tornado/media/e-atlas.png?url';
+import tornadoUrl from '../../assets/hero-skills/2026-10-13/yasuo/q3-v3-pale-tornado/tornado-atlas.png?url';
 import { stormReady, STORM } from '../game/YasuoStorm';
-import { ABILITIES, BALANCE, BASES, MAP_LAYOUT, VIEWPORT, WORLD } from '../game/config';
+import { ABILITIES, BALANCE, BASES, VIEWPORT, WORLD } from '../game/config';
 import { distance } from '../game/geometry';
 import { Match } from '../game/Match';
 import type { AbilityKey, Entity, GameEvent, Point } from '../game/types';
 import { CameraRig } from './CameraRig';
-import { YasuoAnimator } from './YasuoAnimation';
+import { YasuoAnimator, flipYasuoAttack } from './YasuoAnimation';
 import { Q_DIRECTION_LABELS } from './YasuoQAnimation';
+import { qDrawPose, qSwordFlash } from './YasuoQDraw';
+import qDrawUrl from '../../assets/heroes/yasuo/q-draw-v2-2026-10-13/body.png?url';
+import qSwordUrl from '../../assets/heroes/yasuo/q-draw-2026-10-13/sword.png?url';
+import { yasuoCastFacing } from './YasuoCastFacing';
+import { drawStormVfx } from './StormVfx';
 import { YASUO_TEXTURES } from './YasuoAssets';
 import wUserCastUrl from '../../assets/hero-skills/2026-10-12/yasuo/w-v5-user-pose-se/media/e-atlas.png?url';
 import { drawWindWall } from '../../assets/hero-skills/2026-10-12/yasuo/w-v4-free-angle/wall';
 import { W_CAST_SECONDS, wallEnds } from '../game/WindWall';
-import { E, dashEndpoint } from '../game/YasuoE';
+import { E, EQ, dashEndpoint } from '../game/YasuoE';
 import forestMapUrl from '../../assets/map-studies/2026-10-09/01-forest/参考图片的地形布局_为我们的像素风中路_Solo_游戏绘制一张完整的俯视地图底图_宽_a7693192/sprite_00.png?url';
+import {IceFloor} from './IceFloor';
+import {BridgeDecor} from './BridgeDecor';
+import {HOWLING_MAP} from '../game/config';
+import {BRIDGE_SLOTS,bridgePoint} from '../game/Bridge';
+import {TOWER_ART,TOWER_SCALE,TOWER_ORIGIN_Y,TOWER_BAR_OFFSET} from './TowerArt';
+import {MINION_CLIPS,MINION_URLS,minionPose} from './MinionAnimation';
 
 const COLORS = { blue: 0x6de5db, red: 0xee8582 } as const;
 
@@ -36,6 +56,22 @@ export class ArenaScene extends Phaser.Scene {
   readonly cameraRig = new CameraRig();
   recenterHeld = false;
   simulationSpeed = 1;
+  dynamicMap = true;
+  iceMap = true;
+  lightingEnabled = true;
+  firelightMotionEnabled = true;
+  materialLightingEnabled = true;
+  accentsEnabled = true;
+  private accents?:ArenaAccents;
+  atmosphereEnabled = true;
+  private atmosphere?:HowlingAtmosphere;
+  private lighting?:ArenaLighting;
+  private staticLitViews:Phaser.GameObjects.Image[]=[];
+  private staticShadows:Phaser.GameObjects.Image[]=[];
+  private shadows=new Map<number,Phaser.GameObjects.Image>();
+  private iceFloor?:IceFloor;
+  private bridgeDecor?:BridgeDecor;
+  private forest?:LayeredForest;
   heroAnimationLabel = '亚索 · 待机';
   private yasuoAnimator = new YasuoAnimator();
   private callbacks: SceneCallbacks;
@@ -47,6 +83,8 @@ export class ArenaScene extends Phaser.Scene {
   private eqRings: Phaser.GameObjects.Image[] = [];
   private readyWind: Phaser.GameObjects.Image[] = [];
   private tornadoViews = new Map<number, Phaser.GameObjects.Image>();
+  private qSwordViews = new Map<number, Phaser.GameObjects.Image>();
+  private homeguardViews = new Map<number, Phaser.GameObjects.Image[]>();
   private ground!: Phaser.GameObjects.Graphics;
   private effects!: Phaser.GameObjects.Graphics;
   private bars!: Phaser.GameObjects.Graphics;
@@ -62,9 +100,22 @@ export class ArenaScene extends Phaser.Scene {
   }
 
   preload(): void {
+    for(const [path,url] of Object.entries(TF_URLS))this.load.image(tfTextureKey(path),url);
+    this.load.image('homeguard-wind',homeguardUrl);
+    for(const [key,clip] of Object.entries(MINION_CLIPS)){
+      const url=Object.entries(MINION_URLS).find(([path])=>path.endsWith(`/${key}.png`))![1];
+      this.load.spritesheet(`minion-${key}`,url,{frameWidth:clip.width,frameHeight:clip.height,endFrame:7});
+    }
+    for(const [team,url] of Object.entries(TOWER_ART)) this.load.image(`tower-art-${team}`,url);
     this.load.image('forest-map', forestMapUrl);
+    IceFloor.preload(this);
+    if(HOWLING_MAP)BridgeDecor.preload(this);
+    if(HOWLING_MAP)HowlingAtmosphere.preload(this);
+    LayeredForest.preload(this);
+    this.load.spritesheet('yasuo-q-draw',qDrawUrl,{frameWidth:64,frameHeight:113,endFrame:36});
+    this.load.spritesheet('yasuo-q-sword',qSwordUrl,{frameWidth:135,frameHeight:39,endFrame:15});
     this.load.spritesheet('yasuo-ready-wind',readyWindUrl,{frameWidth:143,frameHeight:96,endFrame:7});
-    this.load.spritesheet('yasuo-tornado',tornadoUrl,{frameWidth:112,frameHeight:141,endFrame:7});
+    this.load.spritesheet('yasuo-tornado',tornadoUrl,{frameWidth:640,frameHeight:640,endFrame:15});
     this.load.spritesheet('yasuo-r-original',rOriginalUrl,{frameWidth:176,frameHeight:176,endFrame:15});
     this.load.spritesheet('yasuo-eq-ring',eqRingUrl,{frameWidth:176,frameHeight:144,endFrame:7});
     this.load.image('yasuo-eq3-source',eq3RingUrl);
@@ -76,6 +127,23 @@ export class ArenaScene extends Phaser.Scene {
 
   create(): void {
     this.makeTextures();
+    this.accents=new ArenaAccents(this);
+    for(const path of Object.keys(TF_URLS))this.textures.get(tfTextureKey(path)).setFilter(Phaser.Textures.FilterMode.NEAREST);
+    if(HOWLING_MAP)this.lighting=new ArenaLighting(this);
+    for(const key of Object.keys(MINION_CLIPS)) this.textures.get(`minion-${key}`).setFilter(Phaser.Textures.FilterMode.NEAREST);
+    for(const team of ['blue','red']) this.textures.get(`tower-art-${team}`).setFilter(Phaser.Textures.FilterMode.NEAREST);
+    if(HOWLING_MAP) for(const slot of BRIDGE_SLOTS.filter(s=>s.id.includes('nexus-tower')||s.id.endsWith('inner'))){
+      const p=bridgePoint(slot.u,slot.v);
+      const tower=this.add.image(p.x,p.y,`tower-art-${slot.team}`).setOrigin(.5,TOWER_ORIGIN_Y).setScale(TOWER_SCALE).setFlipX(slot.team==='blue').setDepth(actorDepth(p.y));
+      this.staticLitViews.push(tower);
+      // Ground contact is separate from the tall, directional sprite silhouette.
+      const contact=this.add.graphics().setDepth(.85);
+      contact.fillStyle(0x07131e,.12).fillEllipse(p.x,p.y+2,62,23);
+      contact.fillStyle(0x07131e,.22).fillEllipse(p.x,p.y+1,42,13);
+      this.staticShadows.push(this.add.image(p.x+6,p.y+3,`tower-art-${slot.team}`)
+        .setOrigin(.5,TOWER_ORIGIN_Y).setScale(TOWER_SCALE,-TOWER_SCALE*.32)
+        .setFlipX(slot.team==='blue').setRotation(-.55).setTintFill(0x071222).setAlpha(.23).setDepth(.8));
+    }
     // Separate all three front arcs from their rear arcs; retain the original pixels.
     const eq3Source=this.textures.get('yasuo-eq3-source').getSourceImage() as HTMLImageElement;
     for(let layer=0;layer<2;layer++) {
@@ -90,16 +158,17 @@ export class ArenaScene extends Phaser.Scene {
       texture.setFilter(Phaser.Textures.FilterMode.NEAREST);
     }
     this.textures.get('yasuo-w-user-cast').setFilter(Phaser.Textures.FilterMode.NEAREST);
-    for(const key of ['yasuo-ready-wind','yasuo-tornado'])this.textures.get(key).setFilter(Phaser.Textures.FilterMode.NEAREST);
+    for(const key of ['yasuo-ready-wind','yasuo-tornado','yasuo-q-draw','yasuo-q-sword'])this.textures.get(key).setFilter(Phaser.Textures.FilterMode.NEAREST);
     this.readyWind=[0,1].map((i)=>this.add.image(0,0,'yasuo-ready-wind').setOrigin(71.5/143,84/96).setScale(HERO_EFFECT_SCALE).setCrop(0,i?52:0,143,i?44:52).setVisible(false));
     this.textures.get('yasuo-r-original').setFilter(Phaser.Textures.FilterMode.NEAREST);
     this.textures.get('yasuo-eq-ring').setFilter(Phaser.Textures.FilterMode.NEAREST);
     this.eqRings=[0,1].map(()=>this.add.image(0,0,'yasuo-eq-ring').setOrigin(88/176,125/144).setScale(HERO_EFFECT_SCALE).setVisible(false));
     for (const { clip } of YASUO_TEXTURES) this.textures.get(clip.key).setFilter(Phaser.Textures.FilterMode.NEAREST);
     this.drawMap();
+    if(HOWLING_MAP)this.bridgeDecor=new BridgeDecor(this);
     this.ground = this.add.graphics().setDepth(1);
-    this.effects = this.add.graphics().setDepth(800);
-    this.bars = this.add.graphics().setDepth(900);
+    this.effects = this.add.graphics().setDepth(RENDER_DEPTH.feedback);
+    this.bars = this.add.graphics().setDepth(RENDER_DEPTH.bars);
     this.dashGhosts = [0,1,2].map(()=>this.add.image(0,0,'blue-hero').setVisible(false));
     this.input.mouse?.disableContextMenu();
     this.cursorKeys = this.input.keyboard!.createCursorKeys();
@@ -111,7 +180,7 @@ export class ArenaScene extends Phaser.Scene {
     this.input.on('pointermove', (pointer: Phaser.Input.Pointer) => {
       this.pointerInside = true;
       if (this.dragPoint && pointer.middleButtonDown()) {
-        this.cameraRig.pan((this.dragPoint.x - pointer.x) / this.cameraRig.zoom, (this.dragPoint.y - pointer.y) / this.cameraRig.zoom);
+        this.cameraRig.pan((this.dragPoint.x - pointer.x) / (this.cameraRig.zoom * RENDER_SCALE), (this.dragPoint.y - pointer.y) / (this.cameraRig.zoom * RENDER_SCALE));
         this.dragPoint = { x: pointer.x, y: pointer.y };
         this.applyCamera();
       }
@@ -138,7 +207,7 @@ export class ArenaScene extends Phaser.Scene {
       } else if (pointer.leftButtonDown()) this.selectedId = hit?.id ?? null;
     });
     this.input.on('wheel', (_pointer: Phaser.Input.Pointer, _objects: Phaser.GameObjects.GameObject[], _dx: number, dy: number) => {
-      if (this.match.phase === 'playing' && dy !== 0) this.cameraRig.setZoom(dy < 0 ? 1.5 : 1);
+      if (this.match.phase === 'playing' && dy !== 0) this.cameraRig.zoomStep(dy < 0);
     });
     this.game.canvas.addEventListener('mousedown', event => { if (event.button === 1) event.preventDefault(); });
     this.game.canvas.addEventListener('wheel', event => { event.preventDefault(); }, { passive: false });
@@ -147,6 +216,7 @@ export class ArenaScene extends Phaser.Scene {
   }
 
   setMatch(match: Match): void {
+    this.accents?.clear();
     for (const view of this.views.values()) view.destroy();
     this.views.clear();
     for (const {image, texture} of this.wallViews.values()) { image.destroy(); this.textures.remove(texture.key); }
@@ -188,13 +258,14 @@ export class ArenaScene extends Phaser.Scene {
 
   private updateAim(pointer: Phaser.Input.Pointer): void {
     // Never use screen coordinates as simulation coordinates after camera movement.
-    this.aim = this.cameraRig.screenToWorld({ x: pointer.x, y: pointer.y });
+    this.aim = this.cameraRig.screenToWorld(toLogicalPointer(pointer));
   }
 
   private applyCamera(): void {
+    this.iceFloor?.setSmoothSampling(this.cameraRig.following || this.recenterHeld || !!this.cursorKeys?.space.isDown);
     const camera = this.cameras.main;
     camera.setBounds(0, 0, WORLD.width, WORLD.height);
-    camera.setZoom(this.cameraRig.zoom).centerOn(this.cameraRig.center.x, this.cameraRig.center.y);
+    camera.setZoom(this.cameraRig.zoom * RENDER_SCALE).centerOn(this.cameraRig.center.x, this.cameraRig.center.y);
     camera.roundPixels = true;
   }
 
@@ -203,7 +274,7 @@ export class ArenaScene extends Phaser.Scene {
       const keys = this.cursorKeys;
       let dx = Number(keys.right.isDown) - Number(keys.left.isDown);
       let dy = Number(keys.down.isDown) - Number(keys.up.isDown);
-      const pointer = this.input.activePointer;
+      const pointer = toLogicalPointer(this.input.activePointer);
       if (!this.cameraRig.following && this.pointerInside && !this.dragPoint && !this.recenterHeld) {
         if (pointer.x < 10) dx--;
         if (pointer.x > VIEWPORT.width - 10) dx++;
@@ -274,28 +345,61 @@ export class ArenaScene extends Phaser.Scene {
   }
 
   private drawMap(): void {
+    if(HOWLING_MAP)this.atmosphere=new HowlingAtmosphere(this);
     this.textures.get('forest-map').setFilter(Phaser.Textures.FilterMode.NEAREST);
-    this.add.image(0, 0, 'forest-map').setOrigin(0).setScale(MAP_LAYOUT.scale).setDepth(0);
-    const g = this.add.graphics().setDepth(0);
-    for (const team of ['blue', 'red'] as const) {
-      const base = BASES[team];
-      const radius = BALANCE.fountainRadius;
-      g.fillStyle(COLORS[team], 0.1).fillCircle(base.x, base.y, radius);
-      g.lineStyle(1, COLORS[team], 0.5).strokeCircle(base.x, base.y, radius).strokeCircle(base.x, base.y, radius * 0.7);
-      g.fillStyle(COLORS[team], 0.5).fillRect(base.x - 4, base.y - 14, 8, 28).fillRect(base.x - 14, base.y - 4, 28, 8);
+    this.forest=new LayeredForest(this);
+    this.iceFloor=new IceFloor(this);
+    if(!HOWLING_MAP){
+      const g = this.add.graphics().setDepth(1);
+      for (const team of ['blue', 'red'] as const) {
+        const base = BASES[team];
+        const radius = BALANCE.fountainRadius;
+        g.fillStyle(COLORS[team], 0.1).fillCircle(base.x, base.y, radius);
+        g.lineStyle(1, COLORS[team], 0.5).strokeCircle(base.x, base.y, radius).strokeCircle(base.x, base.y, radius * 0.7);
+        g.fillStyle(COLORS[team], 0.5).fillRect(base.x - 4, base.y - 14, 8, 28).fillRect(base.x - 14, base.y - 4, 28, 8);
+      }
     }
   }
 
   private renderMatch(): void {
     if (!this.booted) return;
     this.ground.clear(); this.bars.clear(); this.effects.clear();
+    if(this.accents){this.accents.enabled=this.accentsEnabled;this.accents.update(this.match);}
     this.dashGhosts.forEach(image=>image.setVisible(false));
     this.eqRings.forEach(image=>image.setVisible(false));
     this.readyWind.forEach(image=>image.setVisible(false));
     const liveIds = new Set(this.match.entities.map(e => e.id));
+    for (const [id, images] of this.homeguardViews) if (!liveIds.has(id)) { images.forEach(image=>image.destroy()); this.homeguardViews.delete(id); }
     for (const [id, view] of this.views) if (!liveIds.has(id)) { view.destroy(); this.views.delete(id); }
     const hero = this.match.hero('blue');
+    this.forest?.update(this.match.time,hero,this.dynamicMap,!this.iceMap);
+    this.iceFloor?.setVisible(this.iceMap);
+    this.bridgeDecor?.update(this.match.time,this.iceMap,this.dynamicMap,[this.match.hero('blue'),this.match.hero('red')]);
+    this.atmosphere?.update(this.match.time,this.atmosphereEnabled&&this.iceMap);
+    if(this.lighting){
+      this.lighting.enabled=this.lightingEnabled;
+      this.lighting.motionEnabled=this.firelightMotionEnabled;
+      this.lighting.update(this.match,this.iceMap);
+      this.iceFloor?.setLighting(this.lightingEnabled&&this.lighting.supported);
+      this.iceFloor?.setMaterial(this.materialLightingEnabled);
+      this.staticLitViews.forEach(view=>this.lighting!.receive(view));
+      this.staticShadows.forEach(view=>view.setVisible(this.lightingEnabled&&this.lighting!.supported));
+    }
+    for(const [id,shadow] of this.shadows)if(!liveIds.has(id)){shadow.destroy();this.shadows.delete(id);}
     for (const entity of this.match.entities) {
+      if (entity.kind === 'hero') {
+        let winds=this.homeguardViews.get(entity.id);
+        if(!winds){winds=[0,1].map(()=>this.add.image(0,0,'homeguard-wind').setBlendMode(Phaser.BlendModes.ADD));this.homeguardViews.set(entity.id,winds);}
+        const running=homeguardActive(entity,this.match.time) && !!entity.destination && distance(entity,entity.destination)>1;
+        winds.forEach((wind,i)=>{
+          const phase=(this.match.time*2.4+i*.5)%1;
+          const back=10+phase*28, side=i===0?-9:9;
+          const c=Math.cos(entity.facing),s=Math.sin(entity.facing);
+          wind.setVisible(running).setPosition(entity.x-c*back-s*side,entity.y-s*back+c*side-3)
+            .setRotation(entity.facing).setDisplaySize(72+phase*22,45)
+            .setAlpha(Math.sin(phase*Math.PI)*.7).setDepth(actorDepth(entity.y,-1));
+        });
+      }
       let view = this.views.get(entity.id);
       if (!view) {
         view = this.add.image(entity.x, entity.y, `${entity.team}-${entity.kind}`).setOrigin(0.5, 0.875);
@@ -304,28 +408,31 @@ export class ArenaScene extends Phaser.Scene {
       const moving = entity.speed > 0 && (entity.destination || (entity.targetId && !entity.windup && entity.cooldown <= 0));
       const bob = moving && this.match.phase === 'playing' ? Math.floor(this.match.time * 7 + entity.id) % 2 : 0;
       const isYasuo = entity === hero;
+      const isMinion=entity.kind==='melee'||entity.kind==='ranged';
       if (isYasuo) {
         const sample = this.yasuoAnimator.sample(entity, this.match.time), clip = sample.clip;
         view.setTexture(clip.key, sample.frame).setOrigin(clip.anchor[0] / clip.width, clip.anchor[1] / clip.height).setScale(sample.scale * HERO_VISUAL_SCALE);
         const action = sample.state === 'Q' ? `Q 戳刺 · ${Q_DIRECTION_LABELS['direction' in clip ? clip.direction : 'e']}`
           : sample.state === 'E' ? `E 滑行 · ${Q_DIRECTION_LABELS['direction' in clip ? clip.direction : 'e']}` : sample.state === 'idle' ? '待机' : sample.state === 'walk' ? '走路' : `攻击 ${sample.state}`;
         this.heroAnimationLabel = `亚索 · ${action} · ${sample.frame + 1}/${clip.frame_count}帧`;
-        // Single-direction attack artwork is not rotated or mirrored into fake eight-way art.
-        view.setFlipX(false);
+        // Mirror only A/B for left-side targets, preserving the off-center foot anchor.
+        const attackFlip=(sample.state==='A'||sample.state==='B')&&flipYasuoAttack(entity.facing);
+        view.setFlipX(attackFlip);
+        if(attackFlip)view.setOrigin(1-clip.anchor[0]/clip.width,clip.anchor[1]/clip.height);
         if(stormReady(entity,this.match.time)) {
           const frame=Math.floor(Math.max(0,this.match.time-(entity.qReadyAt??this.match.time))*10)%8;
-          this.readyWind.forEach((image,i)=>image.setVisible(true).setFrame(frame).setPosition(Math.round(entity.x),Math.round(entity.y)).setDepth(10+Math.round(entity.y)+(i?.1:-.1)));
+          this.readyWind.forEach((image,i)=>image.setVisible(true).setFrame(frame).setPosition(Math.round(entity.x),Math.round(entity.y)).setDepth(actorDepth(entity.y,i?.1:-.1)));
           this.heroAnimationLabel+=' · Q3 已蓄风';
         }
         if(entity.eqCast && entity.hp>0) {
           const age=this.match.time-entity.eqCast.startedAt;
-          if(age>=0 && age<.2) {
-            const frame=Math.min(5,2+Math.floor(age/.05));
+          if(age>=0 && age<EQ.duration) {
+            const frame=Math.min(5,2+Math.floor(age/EQ.frameSeconds));
             this.eqRings.forEach((image,i)=>{
               image.setVisible(true).setTexture(entity.eqCast!.empowered?`yasuo-eq3-${i}`:'yasuo-eq-ring',frame);
               if(entity.eqCast!.empowered)image.setCrop();
               else image.setCrop(0,i?88:0,176,i?56:88);
-              image.setPosition(Math.round(entity.x),Math.round(entity.y)).setDepth(10+Math.round(entity.y)+(i?.1:-.1));
+              image.setPosition(Math.round(entity.x),Math.round(entity.y)).setDepth(actorDepth(entity.y,i?.1:-.1));
             });
           }
           if(age>=0)this.heroAnimationLabel=entity.eqCast.empowered?'亚索 · EQ3 多层环斩':'亚索 · EQ 环斩';
@@ -340,35 +447,66 @@ export class ArenaScene extends Phaser.Scene {
               this.dashGhosts[i].setVisible(p>0).setTexture(clip.key,sample.frame)
                 .setOrigin(clip.anchor[0]/clip.width,clip.anchor[1]/clip.height).setScale(sample.scale * HERO_VISUAL_SCALE)
                 .setPosition(cast.start.x+(cast.end.x-cast.start.x)*previous,cast.start.y+(cast.end.y-cast.start.y)*previous)
-                .setDepth(9+entity.y).setTint(0xafece8).setAlpha((0.22-i*0.06)*(1-Math.max(0,(age-.26)/.06)));
+                .setDepth(actorDepth(entity.y,-1)).setTint(0xafece8).setAlpha((0.22-i*0.06)*(1-Math.min(1,Math.max(0,(age-E.startup-E.dash)/E.recovery))));
             }
             const tail=Math.max(0,p-.36), tx=cast.start.x+(cast.end.x-cast.start.x)*tail, ty=cast.start.y+(cast.end.y-cast.start.y)*tail;
             this.effects.lineStyle(2,0xb7eeec,0.45).lineBetween(tx,ty-8,entity.x,entity.y-8);
           }
         }
+        if(sample.state==='Q' && entity.qCast){
+          const pose=qDrawPose(this.match.time-entity.qCast.startedAt,entity.qCast.facing);
+          view.setTexture('yasuo-q-draw',pose.frame).setOrigin(pose.originX,pose.originY).setScale(HERO_EFFECT_SCALE).setFlipX(pose.flipX);
+          this.heroAnimationLabel=`亚索 · Q 拔刀 v2 · 刀身闪光 · ${pose.frame+1}/37帧`;
+        }
         if (entity.wCast && entity.hp > 0 && this.match.time < entity.wCast.startedAt + W_CAST_SECONDS) {
           const frame = Math.min(7, Math.floor((this.match.time - entity.wCast.startedAt) * 10));
-          // Source pose is 64px wide, padded 16px left; keep its ground anchor fixed.
-          view.setTexture('yasuo-w-user-cast', frame).setOrigin(48 / 128, 117 / 127).setScale(HERO_EFFECT_SCALE).setFlipX(false);
+          const facing=yasuoCastFacing(entity.wCast.facing);
+          view.setTexture('yasuo-w-user-cast', frame).setOrigin(facing.originX,facing.originY).setScale(HERO_EFFECT_SCALE).setFlipX(facing.flipX);
           this.heroAnimationLabel = `亚索 · W 横斩 · ${frame + 1}/8帧`;
         }
         if(entity.q3Cast && entity.hp>0) {
           const frame=Math.min(7,Math.floor((this.match.time-entity.q3Cast.startedAt)*10));
-          view.setTexture('yasuo-w-user-cast',frame).setOrigin(48/128,117/127).setScale(HERO_EFFECT_SCALE).setFlipX(false);
+          const facing=yasuoCastFacing(entity.q3Cast.facing);
+          view.setTexture('yasuo-w-user-cast',frame).setOrigin(facing.originX,facing.originY).setScale(HERO_EFFECT_SCALE).setFlipX(facing.flipX);
           this.heroAnimationLabel=`亚索 · Q3 横斩 · ${frame+1}/8帧`;
         }
       }
       const airRemaining=Math.max(0,(entity.airborneUntil??0)-this.match.time);
       const lift=Math.min(1,airRemaining/.15)*13;
-      view.setPosition(Math.round(entity.x), Math.round(entity.y - (isYasuo ? 0 : bob)-lift));
+      const snap=(value:number)=>snapRenderCoordinate(value,this.cameraRig.zoom);
+      view.setPosition(snap(entity.x), snap(entity.y - (isYasuo ? 0 : bob)-lift));
       if(isYasuo&&entity.rCast&&entity.hp>0){
         const age=this.match.time-entity.rCast.startedAt;
-        if(age<1){view.setTexture('yasuo-r-original',Math.min(15,Math.floor(age*16))).setOrigin(104/176,149/176).setScale(HERO_EFFECT_SCALE).setFlipX(false);}
-        this.heroAnimationLabel=age<1?'亚索 · R 狂风绝息斩 · 原版':'亚索 · R 收势';
+        if(age<YASUO_R.animationDuration){view.setTexture('yasuo-r-original',yasuoRFrame(age)).setOrigin(104/176,149/176).setScale(HERO_EFFECT_SCALE).setFlipX(false);}
+        this.heroAnimationLabel=age<YASUO_R.animationDuration?'亚索 · R 狂风绝息斩 · 慢速':'亚索 · R 收势';
       }
-      view.setDepth(10 + Math.round(entity.y));
+      view.setDepth(actorDepth(entity.y));
       if (!isYasuo) view.setScale(entity.kind === 'hero' ? HERO_VISUAL_SCALE : 1).setFlipX(entity.kind !== 'tower' && Math.cos(entity.facing) < 0);
+      if(entity.kind==='tower') view.setTexture(`tower-art-${entity.team}`).setOrigin(.5,TOWER_ORIGIN_Y).setScale(TOWER_SCALE).setFlipX(entity.team==='blue');
+      if(isMinion){
+        const target=this.match.entity(entity.targetId);
+        const advancing=entity.hp>0&&entity.windup<=0&&(entity.formation?distance(entity,entity.formation.goal)>2:(
+          (!!entity.destination&&distance(entity,entity.destination)>1)||
+          (!!target&&target.hp>0&&distance(entity,target)>entity.range+target.radius)));
+        const pose=minionPose(entity,this.match.time,advancing);
+        view.setTexture(pose.key,pose.frame).setOrigin(pose.originX,pose.originY).setScale(pose.scale)
+          .setFlipX(false).setPosition(snap(entity.x),snap(entity.y-lift));
+      }
+      if(entity.kind==='hero'&&!isYasuo){
+        const pose=tfPose(entity,this.match.time,this.match.entity(entity.targetId));
+        view.setTexture(pose.key).setOrigin(pose.originX,pose.originY).setScale(pose.scale).setFlipX(false)
+          .setPosition(snap(entity.x),snap(entity.y-lift-pose.bob));
+      }
       view.setAlpha(entity.hp > 0 ? 1 : 0.25);
+      this.lighting?.receive(view);
+      if(this.lighting?.supported){
+        let shadow=this.shadows.get(entity.id);
+        if(!shadow){shadow=this.add.image(0,0,view.texture.key);this.shadows.set(entity.id,shadow);}
+        shadow.setTexture(view.texture.key,view.frame.name).setOrigin(view.originX,view.originY)
+          .setPosition(entity.x+6,entity.y+3).setScale(view.scaleX,-view.scaleY*.32)
+          .setFlip(view.flipX,false).setRotation(-.55).setTintFill(0x071222).setAlpha(.23)
+          .setDepth(.8).setVisible(this.lightingEnabled&&entity.hp>0);
+      }
       if (this.match.time - entity.hitAt < 0.1) view.setTintFill(0xffffff); else view.clearTint();
       if (entity.hp <= 0) continue;
       const lock=this.match.eTargetLocks.get(entity.id) ?? 0;
@@ -376,15 +514,21 @@ export class ArenaScene extends Phaser.Scene {
         this.ground.lineStyle(1,0xa08d91,0.9).strokeEllipse(entity.x,entity.y+2,entity.radius*2+8,7);
         this.bars.lineStyle(2,0xcdb39a,0.9).lineBetween(entity.x-5,entity.y-20,entity.x-5+10*(lock-this.match.time)/E.targetCooldown,entity.y-20);
       }
-      this.ground.fillStyle(0x061016, 0.45).fillEllipse(entity.x, entity.y + 1, entity.radius * 2 + 4, entity.radius + 2);
+      const footprintScale=entity.kind==='hero'?HERO_ATTACHMENT_SCALE:1;
+      const contactWidth=(entity.radius*2+4)*footprintScale,contactHeight=(entity.radius+2)*footprintScale;
+      this.ground.fillStyle(0x061016,.12).fillEllipse(entity.x,entity.y+1,contactWidth*1.2,contactHeight*1.12);
+      this.ground.fillStyle(0x061016,.28).fillEllipse(entity.x,entity.y+1,contactWidth*.8,contactHeight*.68);
       const selected = entity.id === this.selectedId || entity.id === hero.targetId;
-      if (selected) this.ground.lineStyle(1, entity.team === 'blue' ? COLORS.blue : 0xf9cd8e, 0.9).strokeEllipse(entity.x, entity.y + 1, entity.radius * 2 + 9, entity.radius + 7);
+      if (selected) this.ground.lineStyle(1, entity.team === 'blue' ? COLORS.blue : 0xf9cd8e, 0.9).strokeEllipse(entity.x, entity.y + 1, (entity.radius * 2 + 9)*footprintScale, (entity.radius + 7)*footprintScale);
       if (entity.guardUntil > this.match.time) this.effects.lineStyle(1, COLORS[entity.team], 0.85).strokeCircle(entity.x, entity.y - 9, 15);
-      if (entity.kind === 'tower' && distance(hero, entity) < entity.range + 35) {
-        this.ground.lineStyle(1, COLORS[entity.team], entity.team === 'red' ? 0.3 : 0.12).strokeCircle(entity.x, entity.y, entity.range);
+      if (entity.kind === 'tower' && entity.hp > 0) {
+        // Always show nominal range; gameplay also accounts for the target radius.
+        const danger=entity.team!==hero.team&&distance(hero,entity)<=entity.range+hero.radius;
+        this.ground.fillStyle(COLORS[entity.team],danger?0.12:0.035).fillCircle(entity.x,entity.y,entity.range);
+        this.ground.lineStyle(danger?2:1, COLORS[entity.team], danger?0.9:0.6).strokeCircle(entity.x, entity.y, entity.range);
       }
-      const width = entity.kind === 'tower' ? 29 : entity.kind === 'hero' ? 24 : 12;
-      const y = Math.round(entity.y - (entity.kind === 'tower' ? 42 : isYasuo ? 33*HERO_VISUAL_SCALE : entity.kind === 'hero' ? 28*HERO_VISUAL_SCALE : 16));
+      const width = entity.kind === 'tower' ? 52 : entity.kind === 'hero' ? Math.round(24*HERO_ATTACHMENT_SCALE) : 24;
+      const y = Math.round(entity.y - (entity.kind === 'tower' ? TOWER_BAR_OFFSET : isYasuo ? 33*HERO_VISUAL_SCALE : entity.kind === 'hero' ? 28*HERO_VISUAL_SCALE : 51));
       const x = Math.round(entity.x - width / 2);
       this.bars.fillStyle(0x07151d).fillRect(x - 1, y - 1, width + 2, 5);
       this.bars.fillStyle(COLORS[entity.team]).fillRect(x, y, Math.max(1, Math.round(width * entity.hp / entity.maxHp)), 2);
@@ -411,7 +555,7 @@ export class ArenaScene extends Phaser.Scene {
       // Game coordinates are already map-projected: do not squash ground Y a second time.
       if (age >= 0) drawWindWall(context, { center: {x: 0, y: 0}, angle: wall.angle * 180 / Math.PI,
         width: 84, height: 35, thickness: 6 }, { origin: {x: 96, y: 110}, groundScale: 1 }, age, age);
-      value.texture.refresh(); value.image.setPosition(wall.x, wall.y).setDepth(11 + wall.y);
+      value.texture.refresh(); value.image.setPosition(wall.x, wall.y).setDepth(actorDepth(wall.y,1));
     }
     if (this.aimKey === 'w') {
       const angle = Math.atan2(this.aim.y - hero.y, this.aim.x - hero.x);
@@ -433,12 +577,28 @@ export class ArenaScene extends Phaser.Scene {
       }
     }
     const stormIds=new Set(this.match.projectiles.filter(p=>p.empowered).map(p=>p.id));
+    const swordCasters=this.match.entities.filter(e=>e.team==='blue'&&e.hp>0&&e.qCast);
+    const swordIds=new Set(swordCasters.map(e=>e.id));
+    for(const [id,image] of this.qSwordViews)if(!swordIds.has(id)){image.destroy();this.qSwordViews.delete(id);}
+    for(const caster of swordCasters){
+      const pose=qSwordFlash(this.match.time-caster.qCast!.startedAt,caster.x,caster.y,caster.qCast!.facing);
+      let image=this.qSwordViews.get(caster.id);
+      if(!image){image=this.add.image(pose.x,pose.y,'yasuo-q-sword');this.qSwordViews.set(caster.id,image);}
+      image.setVisible(pose.visible).setFrame(pose.frame).setOrigin(pose.originX,pose.originY).setScale(pose.scale)
+        .setRotation(pose.rotation).setPosition(pose.x,pose.y).setDepth(actorDepth(caster.y,.2)).setAlpha(pose.alpha);
+    }
     for(const [id,image] of this.tornadoViews)if(!stormIds.has(id)){image.destroy();this.tornadoViews.delete(id);}
     for (const shot of this.match.projectiles) {
       if(shot.empowered) {
         let image=this.tornadoViews.get(shot.id);
-        if(!image){image=this.add.image(shot.x,shot.y,'yasuo-tornado').setOrigin(57/112,112/141).setScale(.25);this.tornadoViews.set(shot.id,image);}
-        image.setFrame(Math.floor(Math.max(0,this.match.time-(shot.startedAt??this.match.time))*10)%8).setPosition(shot.x,shot.y).setDepth(10+shot.y).setRotation(0).setAlpha(Math.min(1,shot.remaining/12));
+        if(!image){image=this.add.image(shot.x,shot.y,'yasuo-tornado').setOrigin(.5,590/640).setScale(.0625);this.tornadoViews.set(shot.id,image);}
+        const age=Math.max(0,this.match.time-(shot.startedAt??this.match.time));
+        image.setFrame(Math.floor(age*8)%16).setPosition(shot.x,shot.y).setDepth(actorDepth(shot.y)).setRotation(0).setAlpha(Math.min(1,age/.06,shot.remaining/16));
+        drawStormVfx(this.effects,shot.x,shot.y,shot.vx,shot.vy,age,shot.remaining);
+        continue;
+      }
+      if(shot.kind==='q' && shot.team==='blue'){
+        // Damage travels as before; the sword is a separate, stationary cast flash.
         continue;
       }
       const color = COLORS[shot.team];
@@ -459,13 +619,14 @@ export class ArenaScene extends Phaser.Scene {
   }
 
   private showEvent(event: GameEvent): void {
+    this.accents?.event(event,this.match.time);
     if (event.type !== 'hit' && event.type !== 'last-hit') return;
     const cs = event.type === 'last-hit';
     const text = this.add.text(event.x, event.y - 24, cs ? '+1 CS' : `${event.amount}`, {
       fontFamily: 'Consolas, monospace', fontSize: cs ? '7px' : '6px',
       color: cs ? '#ffe0a0' : event.team === 'blue' ? '#b5eee3' : '#f0b0a3',
       stroke: '#10212b', strokeThickness: 1,
-    }).setOrigin(0.5).setDepth(950).setData('transient', true);
+    }).setOrigin(0.5).setDepth(RENDER_DEPTH.text).setData('transient', true);
     this.tweens.add({ targets: text, y: text.y - (cs ? 15 : 9), alpha: 0, duration: cs ? 850 : 550, onComplete: () => text.destroy() });
   }
 }

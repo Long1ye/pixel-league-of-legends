@@ -1,0 +1,22 @@
+{
+  "command": "general-image-run",
+  "recovery_command": "general-image-poll",
+  "recovery_id_flag": "--job-id",
+  "output_dir": "assets/units/minions-v1/facing-fixed",
+  "args": [
+    "--generation-model",
+    "image-2.5",
+    "--resolution",
+    "1K",
+    "--aspect-ratio",
+    "1:1",
+    "--quality",
+    "standard",
+    "--remove-bg-method",
+    "standard",
+    "--reference-image",
+    "assets/units/minions-v1/generated/制作像素版英雄联盟小兵的四角色透明素材图_2行2列_不要文字或边框_参考第一图的_96006215/result_images_0_url.png",
+    "--prompt",
+    "修改参考图中的四个像素小兵素材，保持2行2列排布、角色尺寸、装备和像素风。只修正左上蓝方近战兵：让头盔转向屏幕右上方，与已经朝右上的身体完全同向，观众只能看见头盔的后脑金属板和侧后方，不应看到正面眼孔或面罩；锤盾和行走双腿保留。右上蓝方法师仍朝右上背对观众，下排两个红兵仍朝左下。去掉所有角色周围的彩色雾和暗色背景，角色外是完全透明，保留完整角色，不要文字或格线。"
+  ]
+}

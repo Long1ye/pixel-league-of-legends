@@ -2,11 +2,12 @@
 from pathlib import Path
 from PIL import Image,ImageSequence
 import json
-source=next(Path('D:/Long1ye/camp-rest-v1').glob('*/result_output_url.webp'))
+root=Path(__file__).resolve().parent.parent
+source=next((root / 'assets/generation-archive/units/bridge-camp/camp-rest-v1').glob('*/result_output_url.webp'))
 im=Image.open(source)
 frames=[f.convert('RGBA').copy() for f in ImageSequence.Iterator(im)]
 w,h=im.size
-out=Path('assets/units/bridge-camp-v1');out.mkdir(exist_ok=True)
+out=(root/'assets/units/bridge-camp-v1');out.mkdir(exist_ok=True)
 atlas=Image.new('RGBA',(w*4,h*2));anchors=[]
 for i,f in enumerate(frames):
     box=f.getchannel('A').getbbox()

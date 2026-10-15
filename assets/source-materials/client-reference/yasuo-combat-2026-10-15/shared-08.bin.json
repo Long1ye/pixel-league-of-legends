@@ -1,0 +1,766 @@
+{
+  "Characters/Yasuo/CAC/Yasuo_Base": {
+    "mCooldown": 15.0,
+    "mSituations": {
+      "Taunt": {
+        "mRules": [
+          {
+            "mRuleName": "Taunt",
+            "mAudioAction": {
+              "mSelfEventName": "Taunt3DGeneral",
+              "mAllyEventName": "Taunt3DGeneral",
+              "mEnemyEventName": "Taunt3DGeneral",
+              "mSpectatorEventName": "Taunt3DGeneral",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          }
+        ],
+        "__type": "ContextualSituation"
+      },
+      "EnemyEncounter": {
+        "mCoolDownTime": 15.0,
+        "mRules": [
+          {
+            "mRuleName": "First Encounter - Yone",
+            "mConditions": [
+              {
+                "mCharacterType": 1,
+                "mChildConditions": [
+                  {
+                    "mCharacters": [
+                      "Characters/Yone/CharacterRecords/Root"
+                    ],
+                    "__type": "ContextualConditionCharacterName"
+                  },
+                  {
+                    "__type": "ContextualConditionEnemyEncounterNumber"
+                  }
+                ],
+                "__type": "ContextualConditionCharacter"
+              }
+            ],
+            "mAudioAction": {
+              "mMaxOccurences": 1,
+              "mSelfEventName": "FirstEncounter3DYone",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "First Encounter - Riven",
+            "mConditions": [
+              {
+                "mCharacterType": 1,
+                "mChildConditions": [
+                  {
+                    "mCharacters": [
+                      "Characters/Riven/CharacterRecords/Root"
+                    ],
+                    "__type": "ContextualConditionCharacterName"
+                  },
+                  {
+                    "__type": "ContextualConditionEnemyEncounterNumber"
+                  }
+                ],
+                "__type": "ContextualConditionCharacter"
+              }
+            ],
+            "mAudioAction": {
+              "mMaxOccurences": 1,
+              "mSelfEventName": "FirstEncounter3DRiven",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "First Encounter - Master Yi",
+            "mConditions": [
+              {
+                "mCharacterType": 1,
+                "mChildConditions": [
+                  {
+                    "mCharacters": [
+                      "Characters/MasterYi/CharacterRecords/Root"
+                    ],
+                    "__type": "ContextualConditionCharacterName"
+                  },
+                  {
+                    "__type": "ContextualConditionEnemyEncounterNumber"
+                  }
+                ],
+                "__type": "ContextualConditionCharacter"
+              }
+            ],
+            "mAudioAction": {
+              "mMaxOccurences": 1,
+              "mSelfEventName": "FirstEncounter3DMasterYi",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "First Encounter - Shen",
+            "mConditions": [
+              {
+                "mCharacterType": 1,
+                "mChildConditions": [
+                  {
+                    "mCharacters": [
+                      "Characters/Shen/CharacterRecords/Root"
+                    ],
+                    "__type": "ContextualConditionCharacterName"
+                  },
+                  {
+                    "__type": "ContextualConditionEnemyEncounterNumber"
+                  }
+                ],
+                "__type": "ContextualConditionCharacter"
+              }
+            ],
+            "mAudioAction": {
+              "mMaxOccurences": 1,
+              "mSelfEventName": "FirstEncounter3DShen",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          }
+        ],
+        "__type": "ContextualSituation"
+      },
+      "FirstMove2D": {
+        "mRules": [
+          {
+            "mRuleName": "First Move",
+            "mConditions": [
+              {
+                "mChildConditions": [
+                  {
+                    "mCharacters": [
+                      "Characters/Yone/CharacterRecords/Root"
+                    ],
+                    "__type": "ContextualConditionCharacterName"
+                  },
+                  {
+                    "__type": "ContextualConditionIsAlly"
+                  }
+                ],
+                "__type": "ContextualConditionAnyOtherHero"
+              }
+            ],
+            "mAudioAction": {
+              "mMaxOccurences": 1,
+              "mSelfEventName": "Move2DFirstEnemyYone",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "First Move",
+            "mAudioAction": {
+              "mMaxOccurences": 1,
+              "mSelfEventName": "Move2DStandard",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          }
+        ],
+        "__type": "ContextualSituation"
+      },
+      "MoveOrder2D": {
+        "mRules": [
+          {
+            "mRuleName": "Move - Standard",
+            "mConditions": [
+              {
+                "mDistance": 400.0,
+                "mCompareOp": 3,
+                "__type": "ContextualConditionMoveDistance"
+              }
+            ],
+            "mAudioAction": {
+              "mSelfEventName": "Move2DStandard",
+              "mWaitTimeout": -1.0,
+              "__type": "ContextualActionPlayVO"
+            },
+            "__type": "ContextualRule"
+          }
+        ],
+        "__type": "ContextualSituation"
+      },
+      "AttackMinion2D": {
+        "mRules": [
+          {
+            "mRuleName": "Attack - Minion",
+            "mAudioAction": {
+              "mSelfEventName": "Attack2DGeneral",
+              "__type": "ContextualActionPlayVO"
+            },
+            "__type": "ContextualRule"
+          }
+        ],
+        "__type": "ContextualSituation"
+      },
+      "AttackNeutral2D": {
+        "mRules": [
+          {
+            "mRuleName": "Attack - Neutral",
+            "mAudioAction": {
+              "mSelfEventName": "Attack2DGeneral",
+              "__type": "ContextualActionPlayVO"
+            },
+            "__type": "ContextualRule"
+          }
+        ],
+        "__type": "ContextualSituation"
+      },
+      "Joke": {
+        "mRules": [
+          {
+            "mRuleName": "Joke",
+            "mAudioAction": {
+              "mSelfEventName": "Joke3DGeneral",
+              "mAllyEventName": "Joke3DGeneral",
+              "mEnemyEventName": "Joke3DGeneral",
+              "mSpectatorEventName": "Joke3DGeneral",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          }
+        ],
+        "__type": "ContextualSituation"
+      },
+      "Laugh": {
+        "mRules": [
+          {
+            "mRuleName": "Laugh",
+            "mAudioAction": {
+              "mSelfEventName": "Laugh3DGeneral",
+              "mAllyEventName": "Laugh3DGeneral",
+              "mEnemyEventName": "Laugh3DGeneral",
+              "mSpectatorEventName": "Laugh3DGeneral",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          }
+        ],
+        "__type": "ContextualSituation"
+      },
+      "SpellCast": {
+        "mRules": [
+          {
+            "mRuleName": "Basic Attack",
+            "mConditions": [
+              {
+                "mSpell": "Characters/Yasuo/Spells/YasuoBasicAttack",
+                "__type": "ContextualConditionSpellName"
+              },
+              {
+                "mPercentChanceToPlay": 50,
+                "__type": "ContextualConditionChanceToPlay"
+              }
+            ],
+            "mAudioAction": {
+              "mSelfEventName": "cast3D",
+              "mAllyEventName": "cast3D",
+              "mEnemyEventName": "cast3D",
+              "mSpectatorEventName": "cast3D",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "DontResetTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "Basic Attack 2",
+            "mConditions": [
+              {
+                "mSpell": "Characters/Yasuo/Spells/YasuoBasicAttack2",
+                "__type": "ContextualConditionSpellName"
+              },
+              {
+                "mPercentChanceToPlay": 50,
+                "__type": "ContextualConditionChanceToPlay"
+              }
+            ],
+            "mAudioAction": {
+              "mSelfEventName": "cast3D",
+              "mAllyEventName": "cast3D",
+              "mEnemyEventName": "cast3D",
+              "mSpectatorEventName": "cast3D",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "DontResetTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "Basic Attack 3",
+            "mConditions": [
+              {
+                "mSpell": "Characters/Yasuo/Spells/YasuoBasicAttack3",
+                "__type": "ContextualConditionSpellName"
+              },
+              {
+                "mPercentChanceToPlay": 50,
+                "__type": "ContextualConditionChanceToPlay"
+              }
+            ],
+            "mAudioAction": {
+              "mSelfEventName": "cast3D",
+              "mAllyEventName": "cast3D",
+              "mEnemyEventName": "cast3D",
+              "mSpectatorEventName": "cast3D",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "DontResetTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "Basic Attack 4",
+            "mConditions": [
+              {
+                "mSpell": "Characters/Yasuo/Spells/YasuoBasicAttack4",
+                "__type": "ContextualConditionSpellName"
+              },
+              {
+                "mPercentChanceToPlay": 50,
+                "__type": "ContextualConditionChanceToPlay"
+              }
+            ],
+            "mAudioAction": {
+              "mSelfEventName": "cast3D",
+              "mAllyEventName": "cast3D",
+              "mEnemyEventName": "cast3D",
+              "mSpectatorEventName": "cast3D",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "DontResetTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "Basic Attack 5",
+            "mConditions": [
+              {
+                "mSpell": "Characters/Yasuo/Spells/YasuoBasicAttack5",
+                "__type": "ContextualConditionSpellName"
+              },
+              {
+                "mPercentChanceToPlay": 50,
+                "__type": "ContextualConditionChanceToPlay"
+              }
+            ],
+            "mAudioAction": {
+              "mSelfEventName": "cast3D",
+              "mAllyEventName": "cast3D",
+              "mEnemyEventName": "cast3D",
+              "mSpectatorEventName": "cast3D",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "DontResetTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "Basic Attack 6",
+            "mConditions": [
+              {
+                "mSpell": "Characters/Yasuo/Spells/YasuoBasicAttack6",
+                "__type": "ContextualConditionSpellName"
+              },
+              {
+                "mPercentChanceToPlay": 50,
+                "__type": "ContextualConditionChanceToPlay"
+              }
+            ],
+            "mAudioAction": {
+              "mSelfEventName": "cast3D",
+              "mAllyEventName": "cast3D",
+              "mEnemyEventName": "cast3D",
+              "mSpectatorEventName": "cast3D",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "DontResetTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "Crit Attack",
+            "mConditions": [
+              {
+                "mSpell": "Characters/Yasuo/Spells/YasuoCritAttack",
+                "__type": "ContextualConditionSpellName"
+              },
+              {
+                "mPercentChanceToPlay": 50,
+                "__type": "ContextualConditionChanceToPlay"
+              }
+            ],
+            "mAudioAction": {
+              "mSelfEventName": "cast3D",
+              "mAllyEventName": "cast3D",
+              "mEnemyEventName": "cast3D",
+              "mSpectatorEventName": "cast3D",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "DontResetTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "Crit Attack 2",
+            "mConditions": [
+              {
+                "mSpell": "Characters/Yasuo/Spells/YasuoCritAttack2",
+                "__type": "ContextualConditionSpellName"
+              },
+              {
+                "mPercentChanceToPlay": 50,
+                "__type": "ContextualConditionChanceToPlay"
+              }
+            ],
+            "mAudioAction": {
+              "mSelfEventName": "cast3D",
+              "mAllyEventName": "cast3D",
+              "mEnemyEventName": "cast3D",
+              "mSpectatorEventName": "cast3D",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "DontResetTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "Crit Attack 3",
+            "mConditions": [
+              {
+                "mSpell": "Characters/Yasuo/Spells/YasuoCritAttack3",
+                "__type": "ContextualConditionSpellName"
+              },
+              {
+                "mPercentChanceToPlay": 50,
+                "__type": "ContextualConditionChanceToPlay"
+              }
+            ],
+            "mAudioAction": {
+              "mSelfEventName": "cast3D",
+              "mAllyEventName": "cast3D",
+              "mEnemyEventName": "cast3D",
+              "mSpectatorEventName": "cast3D",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "DontResetTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "Crit Attack 4",
+            "mConditions": [
+              {
+                "mSpell": "Characters/Yasuo/Spells/YasuoCritAttack4",
+                "__type": "ContextualConditionSpellName"
+              },
+              {
+                "mPercentChanceToPlay": 50,
+                "__type": "ContextualConditionChanceToPlay"
+              }
+            ],
+            "mAudioAction": {
+              "mSelfEventName": "cast3D",
+              "mAllyEventName": "cast3D",
+              "mEnemyEventName": "cast3D",
+              "mSpectatorEventName": "cast3D",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "DontResetTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "Crit Attack 5",
+            "mConditions": [
+              {
+                "mSpell": "Characters/Yasuo/Spells/YasuoCritAttack5",
+                "__type": "ContextualConditionSpellName"
+              },
+              {
+                "mPercentChanceToPlay": 50,
+                "__type": "ContextualConditionChanceToPlay"
+              }
+            ],
+            "mAudioAction": {
+              "mSelfEventName": "cast3D",
+              "mAllyEventName": "cast3D",
+              "mEnemyEventName": "cast3D",
+              "mSpectatorEventName": "cast3D",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "DontResetTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "Q1",
+            "mConditions": [
+              {
+                "mSpell": "Characters/Yasuo/Spells/YasuoQ1WrapperAbility/YasuoQ1",
+                "__type": "ContextualConditionSpellName"
+              },
+              {
+                "mPercentChanceToPlay": 50,
+                "__type": "ContextualConditionChanceToPlay"
+              }
+            ],
+            "mAudioAction": {
+              "mSelfEventName": "cast3D",
+              "mAllyEventName": "cast3D",
+              "mEnemyEventName": "cast3D",
+              "mSpectatorEventName": "cast3D",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "DontResetTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "Q2",
+            "mConditions": [
+              {
+                "mSpell": "Characters/Yasuo/Spells/YasuoQ1WrapperAbility/YasuoQ2",
+                "__type": "ContextualConditionSpellName"
+              }
+            ],
+            "mAudioAction": {
+              "mSelfEventName": "cast3D",
+              "mAllyEventName": "cast3D",
+              "mEnemyEventName": "cast3D",
+              "mSpectatorEventName": "cast3D",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "DontResetTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "Q3",
+            "mConditions": [
+              {
+                "mSpell": "Characters/Yasuo/Spells/YasuoQ1WrapperAbility/YasuoQ3Wrapper",
+                "__type": "ContextualConditionSpellName"
+              }
+            ],
+            "mAudioAction": {
+              "mSelfEventName": "cast3D",
+              "mAllyEventName": "cast3D",
+              "mEnemyEventName": "cast3D",
+              "mSpectatorEventName": "cast3D",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "DontResetTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "W",
+            "mConditions": [
+              {
+                "mSpell": "Characters/Yasuo/Spells/YasuoWAbility/YasuoW",
+                "__type": "ContextualConditionSpellName"
+              }
+            ],
+            "mAudioAction": {
+              "mSelfEventName": "cast3D",
+              "mAllyEventName": "cast3D",
+              "mEnemyEventName": "cast3D",
+              "mSpectatorEventName": "cast3D",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "DontResetTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "E",
+            "mConditions": [
+              {
+                "mSpell": "Characters/Yasuo/Spells/YasuoEDash",
+                "__type": "ContextualConditionSpellName"
+              }
+            ],
+            "mAudioAction": {
+              "mSelfEventName": "cast3D",
+              "mAllyEventName": "cast3D",
+              "mEnemyEventName": "cast3D",
+              "mSpectatorEventName": "cast3D",
+              "__type": "ContextualActionPlayVO"
+            },
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "DontResetTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          },
+          {
+            "mRuleName": "R",
+            "mConditions": [
+              {
+                "mSpell": "Characters/Yasuo/Spells/YasuoRAbility/YasuoR",
+                "__type": "ContextualConditionSpellName"
+              }
+            ],
+            "mAudioAction": {
+              "mSelfEventName": "cast3D",
+              "mAllyEventName": "cast3D",
+              "mEnemyEventName": "cast3D",
+              "mSpectatorEventName": "cast3D",
+              "__type": "ContextualActionPlayVO"
+            },
+            "mPriority": 100,
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          }
+        ],
+        "__type": "ContextualSituation"
+      },
+      "AttackChampion2D": {
+        "mRules": [
+          {
+            "mRuleName": "Attack - Champion",
+            "mAudioAction": {
+              "mSelfEventName": "Attack2DGeneral",
+              "mWaitTimeout": -1.0,
+              "__type": "ContextualActionPlayVO"
+            },
+            "__type": "ContextualRule"
+          }
+        ],
+        "__type": "ContextualSituation"
+      },
+      "KillChampion": {
+        "mRules": [
+          {
+            "mRuleName": "Kill - Yone",
+            "mConditions": [
+              {
+                "mCharacterType": 6,
+                "mChildConditions": [
+                  {
+                    "mCharacters": [
+                      "Characters/Yone/CharacterRecords/Root"
+                    ],
+                    "__type": "ContextualConditionCharacterName"
+                  }
+                ],
+                "__type": "ContextualConditionCharacter"
+              }
+            ],
+            "mAudioAction": {
+              "mMaxOccurences": 1,
+              "mSelfEventName": "Kill3DYone",
+              "mEnemyEventName": "Kill3DYone",
+              "mWaitForAnnouncerQueue": true,
+              "__type": "ContextualActionPlayVO"
+            },
+            "mPriority": 30,
+            "CooldownModifications": {
+              "IgnoreTimer": true,
+              "__type": "ContextualActionCooldownModifications"
+            },
+            "__type": "ContextualRule"
+          }
+        ],
+        "__type": "ContextualSituation"
+      }
+    },
+    "mObjectPath": "Characters/Yasuo/CAC/Yasuo_Base",
+    "__type": "ContextualActionData"
+  },
+  "__linked": []
+}

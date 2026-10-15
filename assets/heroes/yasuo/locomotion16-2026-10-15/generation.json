@@ -1,0 +1,183 @@
+{
+  "frame_count": 16,
+  "cycle_ms": 800,
+  "estimated_credits": 560,
+  "jobs": [
+    {
+      "key": "idle-se",
+      "state": "idle",
+      "direction": "se",
+      "source": "assets/heroes/yasuo/locomotion16-2026-10-15/inputs/idle-se.png",
+      "source_sha256": "4d2c51d4e9ca7df43e3d97ffadd0d034ab65622e8962b0d1eda41c9ac6f0781e",
+      "prompt": "角色始终保持输入图中的朝向（屏幕右下方），双脚固定，缓慢轻微呼吸，围巾与头发轻摆。动作首尾自然衔接，不转身，不平移，镜头固定，保持现有造型、服装、武器与像素风格。",
+      "status": "success",
+      "job_id": "job_361d7475dbcc40a8b65c6c2ed5bc5bc8",
+      "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/generated/idle-se/job_361d7475dbcc40a8b65c6c2ed5bc5bc8/final_outputs.json"
+    },
+    {
+      "key": "walk-se",
+      "state": "walk",
+      "direction": "se",
+      "source": "assets/heroes/yasuo/locomotion16-2026-10-15/inputs/walk-se.png",
+      "source_sha256": "31fc3bb94ed6712d410f4b051c1f080a69c3ba120a077977d16e25f12edce07d",
+      "prompt": "角色始终保持输入图中的朝向（屏幕右下方），原地缓慢交替迈步，完成一个完整左右脚步行循环，落脚稳定，围巾和头发自然跟随。动作首尾自然衔接，不转身，不平移，镜头固定，保持现有造型、服装、武器与像素风格。",
+      "status": "success",
+      "job_id": "job_dfab9a4c59c8475cb4a7fbfb561df9f8",
+      "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/generated/walk-se/job_dfab9a4c59c8475cb4a7fbfb561df9f8/final_outputs.json"
+    },
+    {
+      "key": "idle-e",
+      "state": "idle",
+      "direction": "e",
+      "source": "assets/heroes/yasuo/locomotion16-2026-10-15/inputs/idle-e.png",
+      "source_sha256": "cd0a4a368fd548094a5d91471f253d0940906733a69d882777d77ce9b715294c",
+      "prompt": "角色始终保持输入图中的朝向（屏幕右方），双脚固定，缓慢轻微呼吸，围巾与头发轻摆。动作首尾自然衔接，不转身，不平移，镜头固定，保持现有造型、服装、武器与像素风格。",
+      "status": "success",
+      "job_id": "job_ca3b6813ea304579abaa498004bf2642",
+      "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/generated/idle-e/角色始终保持输入图中的朝向_屏幕右方_双脚固定_缓慢轻微呼吸_围巾与头发轻摆_动_ee0a4a88/final_outputs.json"
+    },
+    {
+      "key": "walk-e",
+      "state": "walk",
+      "direction": "e",
+      "source": "assets/heroes/yasuo/locomotion16-2026-10-15/inputs/walk-e.png",
+      "source_sha256": "3d73e5a44eb70faf8fde5a717c636707b59e6bbe482cfefa8ff5b072231eef66",
+      "prompt": "角色始终保持输入图中的朝向（屏幕右方），原地缓慢交替迈步，完成一个完整左右脚步行循环，落脚稳定，围巾和头发自然跟随。动作首尾自然衔接，不转身，不平移，镜头固定，保持现有造型、服装、武器与像素风格。",
+      "status": "success",
+      "job_id": "job_d33bd61ba0ec4ae6b939e2bc5148f5f3",
+      "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/generated/walk-e/角色始终保持输入图中的朝向_屏幕右方_原地缓慢交替迈步_完成一个完整左右脚步_6dbe2650/final_outputs.json"
+    },
+    {
+      "key": "idle-s",
+      "state": "idle",
+      "direction": "s",
+      "source": "assets/heroes/yasuo/locomotion16-2026-10-15/inputs/idle-s.png",
+      "source_sha256": "82f2620cee386ae19875de91fb803c5b7f5d725bbac323585f9768dd1577b855",
+      "prompt": "角色始终保持输入图中的朝向（屏幕下方），双脚固定，缓慢轻微呼吸，围巾与头发轻摆。动作首尾自然衔接，不转身，不平移，镜头固定，保持现有造型、服装、武器与像素风格。",
+      "status": "success",
+      "job_id": "job_35372604883f4a2983049bf4ff22c999",
+      "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/generated/idle-s/角色始终保持输入图中的朝向_屏幕下方_双脚固定_缓慢轻微呼吸_围巾与头发轻摆_动_d0e88152/final_outputs.json"
+    },
+    {
+      "key": "walk-s",
+      "state": "walk",
+      "direction": "s",
+      "source": "assets/heroes/yasuo/locomotion16-2026-10-15/inputs/walk-s.png",
+      "source_sha256": "e7bd99ea5cefbe5fe361eca38441175346ded4505411a967e53fef5cf240f3f0",
+      "prompt": "角色始终保持输入图中的朝向（屏幕下方），原地缓慢交替迈步，完成一个完整左右脚步行循环，落脚稳定，围巾和头发自然跟随。动作首尾自然衔接，不转身，不平移，镜头固定，保持现有造型、服装、武器与像素风格。",
+      "status": "success",
+      "job_id": "job_0f89542292f343b8a783ac7589f38a84",
+      "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/generated/walk-s/角色始终保持输入图中的朝向_屏幕下方_原地缓慢交替迈步_完成一个完整左右脚步_d129dbe0/final_outputs.json"
+    },
+    {
+      "key": "idle-sw",
+      "state": "idle",
+      "direction": "sw",
+      "source": "assets/heroes/yasuo/locomotion16-2026-10-15/inputs/idle-sw.png",
+      "source_sha256": "6db82344f0f145b78b0bcd2fd39678a9f872ac2849e73aad102a5b2c955c4b3b",
+      "prompt": "角色始终保持输入图中的朝向（屏幕左下方），双脚固定，缓慢轻微呼吸，围巾与头发轻摆。动作首尾自然衔接，不转身，不平移，镜头固定，保持现有造型、服装、武器与像素风格。",
+      "status": "success",
+      "job_id": "job_24b2baeb62174ee69bc4dc520f8e80ce",
+      "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/generated/idle-sw/角色始终保持输入图中的朝向_屏幕左下方_双脚固定_缓慢轻微呼吸_围巾与头发轻摆_9e105840/final_outputs.json"
+    },
+    {
+      "key": "walk-sw",
+      "state": "walk",
+      "direction": "sw",
+      "source": "assets/heroes/yasuo/locomotion16-2026-10-15/inputs/walk-sw.png",
+      "source_sha256": "d32ef5a9f4e9a660f07cb184453f27481bacec5f073bb7d81c2e2a42868ea0d7",
+      "prompt": "角色始终保持输入图中的朝向（屏幕左下方），原地缓慢交替迈步，完成一个完整左右脚步行循环，落脚稳定，围巾和头发自然跟随。动作首尾自然衔接，不转身，不平移，镜头固定，保持现有造型、服装、武器与像素风格。",
+      "status": "success",
+      "job_id": "job_2979c763c489408e9f6c98f212d4dbb5",
+      "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/generated/walk-sw/角色始终保持输入图中的朝向_屏幕左下方_原地缓慢交替迈步_完成一个完整左右脚_b063e91d/final_outputs.json"
+    },
+    {
+      "key": "idle-w",
+      "state": "idle",
+      "direction": "w",
+      "source": "assets/heroes/yasuo/locomotion16-2026-10-15/inputs/idle-w.png",
+      "source_sha256": "f8231af34238fffe3307e58e31d804aa4313e805a151f5763d3bdb9871ac02c1",
+      "prompt": "角色始终保持输入图中的朝向（屏幕左方），双脚固定，缓慢轻微呼吸，围巾与头发轻摆。动作首尾自然衔接，不转身，不平移，镜头固定，保持现有造型、服装、武器与像素风格。",
+      "status": "success",
+      "job_id": "job_2890bb1b2ce243088fca5ccc1ddc59f2",
+      "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/generated/idle-w/角色始终保持输入图中的朝向_屏幕左方_双脚固定_缓慢轻微呼吸_围巾与头发轻摆_动_0299073a/final_outputs.json"
+    },
+    {
+      "key": "walk-w",
+      "state": "walk",
+      "direction": "w",
+      "source": "assets/heroes/yasuo/locomotion16-2026-10-15/inputs/walk-w.png",
+      "source_sha256": "1576c21bd3f90fc72867c72902ff51e46c8db032c9e2857bdaa5664aaa5fc6b2",
+      "prompt": "角色始终保持输入图中的朝向（屏幕左方），原地缓慢交替迈步，完成一个完整左右脚步行循环，落脚稳定，围巾和头发自然跟随。动作首尾自然衔接，不转身，不平移，镜头固定，保持现有造型、服装、武器与像素风格。",
+      "status": "success",
+      "job_id": "job_c2d7396834784cd293f3af671c7cad9f",
+      "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/generated/walk-w/角色始终保持输入图中的朝向_屏幕左方_原地缓慢交替迈步_完成一个完整左右脚步_5a5a6d18/final_outputs.json"
+    },
+    {
+      "key": "idle-nw",
+      "state": "idle",
+      "direction": "nw",
+      "source": "assets/heroes/yasuo/locomotion16-2026-10-15/inputs/idle-nw.png",
+      "source_sha256": "a417cbce23aa4442ad87b4d80c4c9e9e2b29f614cc0effe041e5e1a9f7a3e36d",
+      "prompt": "角色始终保持输入图中的朝向（屏幕左上方），双脚固定，缓慢轻微呼吸，围巾与头发轻摆。动作首尾自然衔接，不转身，不平移，镜头固定，保持现有造型、服装、武器与像素风格。",
+      "status": "success",
+      "job_id": "job_0d2bcb2ff2d24ab0bcd1aa4a895ebd83",
+      "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/generated/idle-nw/角色始终保持输入图中的朝向_屏幕左上方_双脚固定_缓慢轻微呼吸_围巾与头发轻摆_eebd8fa9/final_outputs.json"
+    },
+    {
+      "key": "walk-nw",
+      "state": "walk",
+      "direction": "nw",
+      "source": "assets/heroes/yasuo/locomotion16-2026-10-15/inputs/walk-nw.png",
+      "source_sha256": "95d4486dcb57dabf228f41b56b4346bcccbf1f74ee00103ecd084f7c4939335d",
+      "prompt": "角色始终保持输入图中的朝向（屏幕左上方），原地缓慢交替迈步，完成一个完整左右脚步行循环，落脚稳定，围巾和头发自然跟随。动作首尾自然衔接，不转身，不平移，镜头固定，保持现有造型、服装、武器与像素风格。",
+      "status": "success",
+      "job_id": "job_ff76c6bdfca64a7e91d87ded841f71db",
+      "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/generated/walk-nw/角色始终保持输入图中的朝向_屏幕左上方_原地缓慢交替迈步_完成一个完整左右脚_3bb1e9f2/final_outputs.json"
+    },
+    {
+      "key": "idle-n",
+      "state": "idle",
+      "direction": "n",
+      "source": "assets/heroes/yasuo/locomotion16-2026-10-15/inputs/idle-n.png",
+      "source_sha256": "6c01ae1ec175fa0bf124a8dda5b035c5630b6f9ce98972334f246329d9603017",
+      "prompt": "角色始终保持输入图中的朝向（屏幕上方），双脚固定，缓慢轻微呼吸，围巾与头发轻摆。动作首尾自然衔接，不转身，不平移，镜头固定，保持现有造型、服装、武器与像素风格。",
+      "status": "success",
+      "job_id": "job_c171a2e26a6e4f15a8d40da031172e26",
+      "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/generated/idle-n/角色始终保持输入图中的朝向_屏幕上方_双脚固定_缓慢轻微呼吸_围巾与头发轻摆_动_f52e1d61/final_outputs.json"
+    },
+    {
+      "key": "walk-n",
+      "state": "walk",
+      "direction": "n",
+      "source": "assets/heroes/yasuo/locomotion16-2026-10-15/inputs/walk-n.png",
+      "source_sha256": "d5fc722f92a5df564de95f8ccee920015b8be18663396987079f55df346290c3",
+      "prompt": "角色始终保持输入图中的朝向（屏幕上方），原地缓慢交替迈步，完成一个完整左右脚步行循环，落脚稳定，围巾和头发自然跟随。动作首尾自然衔接，不转身，不平移，镜头固定，保持现有造型、服装、武器与像素风格。",
+      "status": "success",
+      "job_id": "job_38ffc616092e4772b8685d8721357142",
+      "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/generated/walk-n/角色始终保持输入图中的朝向_屏幕上方_原地缓慢交替迈步_完成一个完整左右脚步_2d61794e/final_outputs.json"
+    },
+    {
+      "key": "idle-ne",
+      "state": "idle",
+      "direction": "ne",
+      "source": "assets/heroes/yasuo/locomotion16-2026-10-15/inputs/idle-ne.png",
+      "source_sha256": "30565c648f2fdd0e51248cc10d3fe1732e0304d15dd63604596d818d5c7079df",
+      "prompt": "角色始终保持输入图中的朝向（屏幕右上方），双脚固定，缓慢轻微呼吸，围巾与头发轻摆。动作首尾自然衔接，不转身，不平移，镜头固定，保持现有造型、服装、武器与像素风格。",
+      "status": "success",
+      "job_id": "job_3940ef8c6ae84ad181cb0e44ed1f197c",
+      "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/generated/idle-ne/角色始终保持输入图中的朝向_屏幕右上方_双脚固定_缓慢轻微呼吸_围巾与头发轻摆_5c3dab63/final_outputs.json"
+    },
+    {
+      "key": "walk-ne",
+      "state": "walk",
+      "direction": "ne",
+      "source": "assets/heroes/yasuo/locomotion16-2026-10-15/inputs/walk-ne.png",
+      "source_sha256": "c99b245ee103831fd590200ca864132c929e422fefedd38dbdadc65f764fadd3",
+      "prompt": "角色始终保持输入图中的朝向（屏幕右上方），原地缓慢交替迈步，完成一个完整左右脚步行循环，落脚稳定，围巾和头发自然跟随。动作首尾自然衔接，不转身，不平移，镜头固定，保持现有造型、服装、武器与像素风格。",
+      "status": "success",
+      "job_id": "job_6c57635de1ea4ee0a4027258891286f4",
+      "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/generated/walk-ne/角色始终保持输入图中的朝向_屏幕右上方_原地缓慢交替迈步_完成一个完整左右脚_ab69c6ab/final_outputs.json"
+    }
+  ]
+}

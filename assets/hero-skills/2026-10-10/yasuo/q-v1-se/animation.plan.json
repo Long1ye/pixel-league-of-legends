@@ -1,5 +1,5 @@
 {
   "command": "keyframes-run",
-  "output_dir": "meowa-output/yasuo-q-v1-se-animation",
+  "output_dir": "assets/generation-archive/legacy-meowa/yasuo-q-v1-se-animation",
   "args": ["--keyframe", "0=assets/hero-skills/2026-10-10/yasuo/q-v1-se/poses/ready.png", "--keyframe", "3=assets/hero-skills/2026-10-10/yasuo/q-v1-se/poses/impact.png", "--keyframe", "7=assets/hero-skills/2026-10-10/yasuo/q-v1-se/poses/ready.png", "--keyframe-strength", "3=0.85", "--prompt", "亚索朝画面右下完成一次Q直线突刺：短促蓄力，快速伸臂把刀直线刺出，然后顺势收回准备姿势。脚底位置和角色外观保持不变，动作自然连贯，不挥砍，不要刀光、风痕或其他特效。", "--animation-model", "pixel-engine-v1.1", "--optimize-prompt", "--total-frames", "8", "--output-format", "webp", "--animation-type", "attack", "--color-count", "64", "--remove-bg-method", "advanced", "--padding-top", "0", "--padding-down", "0", "--padding-left", "0", "--padding-right", "0"]
 }

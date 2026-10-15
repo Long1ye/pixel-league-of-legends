@@ -1,0 +1,8 @@
+{
+  "job_id": "job_7a9f30688e6544988cb1a0c86ff65026",
+  "status": "success",
+  "purpose": "Redo right-up walking with original gait keyframes",
+  "frame_count": 16,
+  "output_root": "assets/heroes/yasuo/locomotion16-2026-10-15/corrections/walk-ne-keyframes/generated",
+  "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/corrections/walk-ne-keyframes/generated/\u89d2\u8272\u59cb\u7ec8\u671d\u5c4f\u5e55\u53f3\u4e0a\u65b9_\u6309\u7167\u7ed9\u5b9a\u5173\u952e\u59ff\u52bf\u5b8c\u6210\u4e00\u6b21\u7f13\u6162\u81ea\u7136\u7684\u539f\u5730\u6b65\u884c\u5faa\u73af_\u53cc\u811a\u4ea4_78ee4d48/final_outputs.json"
+}

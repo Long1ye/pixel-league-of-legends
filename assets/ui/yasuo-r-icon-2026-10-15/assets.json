@@ -1,0 +1,12 @@
+{
+  "job": "job_aa0a92e9ef8a4afa88ce52685dc3e11e",
+  "officialReference": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/spell/YasuoR.png",
+  "file": "runtime/r.png",
+  "size": [
+    1024,
+    1024
+  ],
+  "mode": "RGB",
+  "resampled": false,
+  "sha256": "f9b7826ab747afd9e62858151ba76bab17853cd8a2480805544ed00c1c439c7e"
+}

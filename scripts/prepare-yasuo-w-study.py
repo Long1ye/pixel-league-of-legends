@@ -87,7 +87,7 @@ def prepare():
                  "--quality-mode", "standard", "--animation-mode", "loop",
                  "--remove-bg-method", "standard", "--remove-bg-batch-size", "8",
                  "--background-color", "#c6c6c6", "--optimize-prompt", "--padding", "0"],
-        "output_dir": "meowa-output/yasuo-w-v1-loop-animation",
+        "output_dir": "assets/generation-archive/legacy-meowa/yasuo-w-v1-loop-animation",
         "recovery_command": "animate-poll",
         "estimated_credits": 20,
         "purpose": "One independent sustained loop, with soft alpha for wind translucency; no direction batch"

@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_f663be2813aa4d2586a6b1eb624e6456",
+  "outputs": [
+    {
+      "type": "media",
+      "path": ".cache\\shieldmotion\\A_smooth_stationary_looping_defensive_wind_shield_around_an_empty_human-sized_center_Three_silver-white_wind_r_474b2177\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": ".cache\\shieldmotion\\A_smooth_stationary_looping_defensive_wind_shield_around_an_empty_human-sized_center_Three_silver-white_wind_r_474b2177\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": ".cache\\shieldmotion\\A_smooth_stationary_looping_defensive_wind_shield_around_an_empty_human-sized_center_Three_silver-white_wind_r_474b2177\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

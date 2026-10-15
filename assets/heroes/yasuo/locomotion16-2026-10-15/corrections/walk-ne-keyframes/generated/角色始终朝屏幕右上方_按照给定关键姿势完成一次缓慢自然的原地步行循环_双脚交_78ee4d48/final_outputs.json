@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_7a9f30688e6544988cb1a0c86ff65026",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\heroes\\yasuo\\locomotion16-2026-10-15\\corrections\\walk-ne-keyframes\\generated\\角色始终朝屏幕右上方_按照给定关键姿势完成一次缓慢自然的原地步行循环_双脚交_78ee4d48\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\heroes\\yasuo\\locomotion16-2026-10-15\\corrections\\walk-ne-keyframes\\generated\\角色始终朝屏幕右上方_按照给定关键姿势完成一次缓慢自然的原地步行循环_双脚交_78ee4d48\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\heroes\\yasuo\\locomotion16-2026-10-15\\corrections\\walk-ne-keyframes\\generated\\角色始终朝屏幕右上方_按照给定关键姿势完成一次缓慢自然的原地步行循环_双脚交_78ee4d48\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

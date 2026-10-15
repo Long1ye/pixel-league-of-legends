@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_6c57635de1ea4ee0a4027258891286f4",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "D:\\Long1ye\\pixel-league-of-legends\\assets\\heroes\\yasuo\\locomotion16-2026-10-15\\generated\\walk-ne\\角色始终保持输入图中的朝向_屏幕右上方_原地缓慢交替迈步_完成一个完整左右脚_ab69c6ab\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "D:\\Long1ye\\pixel-league-of-legends\\assets\\heroes\\yasuo\\locomotion16-2026-10-15\\generated\\walk-ne\\角色始终保持输入图中的朝向_屏幕右上方_原地缓慢交替迈步_完成一个完整左右脚_ab69c6ab\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "D:\\Long1ye\\pixel-league-of-legends\\assets\\heroes\\yasuo\\locomotion16-2026-10-15\\generated\\walk-ne\\角色始终保持输入图中的朝向_屏幕右上方_原地缓慢交替迈步_完成一个完整左右脚_ab69c6ab\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

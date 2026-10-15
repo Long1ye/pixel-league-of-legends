@@ -24,7 +24,7 @@ it('runs the bridge match with waves, towers and abyss movement limits',async()=
  expect(m.wave).toBeGreaterThan(0);
  expect(m.hero('blue').x).not.toBe(0);
 });
-it('starts each six-minion file at the forward rim of its centered Nexus',async()=>{
+it('starts spread minion lanes ahead of the Nexus without occupying its footprint',async()=>{
  vi.stubGlobal('location',{search:'?map=howling'});vi.resetModules();
  const [{Match},{BASES,MINION_EXITS}]=await Promise.all([
   import('../src/game/Match'),import('../src/game/config'),
@@ -38,8 +38,8 @@ it('starts each six-minion file at the forward rim of its centered Nexus',async(
   const other=BASES[team==='blue'?'red':'blue'];
   const dx=other.x-BASES[team].x,dy=other.y-BASES[team].y,len=Math.hypot(dx,dy);
   const ahead=(p:{x:number;y:number})=>((p.x-exit.x)*dx+(p.y-exit.y)*dy)/len;
-  expect(Math.abs(ahead(units[5]))).toBeLessThan(2);
-  expect(ahead(units[0])-ahead(units[5])).toBeCloseTo(150,0);
+  expect(units.every(unit=>ahead(unit)>20)).toBe(true);
+  expect(ahead(units[0])-ahead(units[3])).toBeCloseTo(58,0);
   expect(units.every(unit=>onPlayableBridge(unit))).toBe(true);
  }
 });

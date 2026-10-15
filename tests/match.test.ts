@@ -116,7 +116,7 @@ describe('combat and abilities', () => {
     expect(state.hero('blue').cooldown).toBeGreaterThan(0);
   });
 
-  it('Q stops at the first enemy and counts its last hit once', () => {
+  it('Q pierces both enemies and counts its last hit once', () => {
     const state = match(); centerHero(state);
     const first = state.spawnMinion('red', 'melee', { x: 251, y: 140 });
     const second = state.spawnMinion('red', 'melee', { x: 290, y: 140 });
@@ -124,18 +124,18 @@ describe('combat and abilities', () => {
     expect(state.cast('blue', 'q', { x: 370, y: 140 })).toBe(true);
     advance(state, 0.8);
     expect(first.hp).toBe(0);
-    expect(second.hp).toBe(second.maxHp);
+    expect(second.hp).toBe(second.maxHp - ABILITIES.q.damage);
     expect(state.cs.blue).toBe(1);
     expect(state.projectiles.filter(p => p.kind === 'q')).toHaveLength(0);
   });
 
-  it('Q uses a swept collision so a fast projectile cannot skip a target', () => {
+  it('Q applies its entire thrust at contact without a travelling projectile', () => {
     const state = match(); centerHero(state);
     const enemy = state.spawnMinion('red', 'melee', { x: 270, y: 140 });
     enemy.speed = 0;
     state.cast('blue', 'q', { x: 370, y: 140 });
-    state.projectiles[0].speed = 2000;
-    state.step(0.1);
+    expect(state.projectiles).toHaveLength(0);
+    state.step(0.5);
     expect(enemy.hp).toBe(enemy.maxHp - ABILITIES.q.damage);
   });
 
@@ -153,7 +153,7 @@ describe('combat and abilities', () => {
     expect(state.cs.blue).toBe(1);
   });
 
-  it('enforces cooldown and insufficient mana without spending again', () => {
+  it('enforces cooldown and target eligibility without spending a resource', () => {
     const state = match(); centerHero(state);
     const hero = state.hero('blue');
     state.cast('blue', 'q', { x: 300, y: 140 });

@@ -15,18 +15,20 @@ function advance(match: Match, seconds: number) {
   for (let i = 0; i < Math.ceil(seconds / WORLD.step); i++) match.step(WORLD.step);
 }
 describe('Yasuo Q in the main game', () => {
-  it('uses a one-second Q cooldown without changing the opponent cooldown', () => {
+  it('uses a 2.5-second Q cooldown for both Yasuo heroes', () => {
     const { match, hero } = setup();
     const aim = { x: 600, y: 300 };
-    expect(ABILITIES.q.cooldown).toBe(1);
+    expect(ABILITIES.q.cooldown).toBe(2.5);
     expect(match.cast('blue', 'q', aim)).toBe(true);
-    advance(match, .9);
-    expect(match.cast('blue', 'q', aim)).toBe(false);
+    advance(match, 2.4);
+    expect(match.cast('blue', 'q', aim)).toBe(true);
+    expect(hero.abilities.q).toBeCloseTo(2.5);
     advance(match, .11);
-    expect(match.cast('blue', 'q', aim)).toBe(true);
-    expect(hero.abilities.q - match.time).toBeCloseTo(1);
+    expect(match.bufferedOrder('blue')).toBeUndefined();
+    expect(hero.abilities.q - match.time).toBeGreaterThan(2.45);
+    expect(hero.abilities.q - match.time).toBeLessThanOrEqual(2.5);
     expect(match.cast('red', 'q', hero)).toBe(true);
-    expect(match.hero('red').abilities.q - match.time).toBeCloseTo(5);
+    expect(match.hero('red').abilities.q - match.time).toBeCloseTo(2.5);
   });
   it('selects all eight approved clips from cast aim, including arbitrary angles without facing hysteresis', () => {
     for (let i = 0; i < DIRECTIONS.length; i++) {
@@ -35,8 +37,9 @@ describe('Yasuo Q in the main game', () => {
       const sample = animator.sample(hero, match.time);
       expect(sample.state).toBe('Q'); expect(sample.clip.key).toBe(`yasuo-q-${DIRECTIONS[i]}-wind`);
       expect(sample.frame).toBe(0); expect(sample.scale * 108).toBeCloseTo(26);
-      expect(match.projectiles[0].vx).toBeCloseTo(Math.cos(angle));
-      expect(match.projectiles[0].vy).toBeCloseTo(Math.sin(angle));
+      expect(Math.cos(hero.qCast!.facing)).toBeCloseTo(Math.cos(angle));
+      expect(Math.sin(hero.qCast!.facing)).toBeCloseTo(Math.sin(angle));
+      expect(match.projectiles).toHaveLength(0);
     }
     expect(YASUO_Q_CAST_SECONDS).toBe(.72);
     expect(YASUO_Q_ASSETS.version).toBe('v29-meowa-layered-corrected-elbows');
@@ -74,17 +77,18 @@ describe('Yasuo Q in the main game', () => {
     match.togglePause(); advance(match, 0.55); expect(animator.sample(hero, match.time).state).toBe('idle');
     advance(match, 1.4); expect(sampleYasuoQ(hero, match.time)).toBeNull();
   });
-  it('does not restart on rejected input, keeps current damage/range/cost/cooldown and leaves the opponent unchanged', () => {
+  it('does not restart on rejected input, keeps current damage/range/cost/cooldown for both teams', () => {
     const { match, hero } = setup(); const initialMana = hero.mana;
     match.cast('blue', 'q', { x: 600, y: 300 }); const cast = hero.qCast;
     expect(hero.mana).toBe(initialMana - ABILITIES.q.cost); expect(hero.abilities.q).toBe(ABILITIES.q.cooldown);
-    expect(match.projectiles[0]).toMatchObject({ damage: ABILITIES.q.damage, remaining: ABILITIES.q.range });
+    expect(match.projectiles).toHaveLength(0);
     expect(match.cast('blue', 'q', { x: 400, y: 300 })).toBe(false); expect(hero.qCast).toBe(cast);
-    match.cast('red', 'q', hero); expect(match.hero('red').qCast).toBeNull();
+    match.cast('red', 'q', hero); expect(match.hero('red').qCast).not.toBeNull();
   });
   it('clears on another accepted skill, death and restart; stop clears orders without a ghost basic attack', () => {
     for (const ending of ['w', 'e', 'death', 'restart', 'stop'] as const) {
       const { match, hero, animator } = setup(); match.cast('blue', 'q', { x: 600, y: 300 });
+      if(ending==='w'||ending==='e')advance(match,.5);
       if (ending === 'w') match.cast('blue', ending, { x: 600, y: 300 });
       if (ending === 'e') {
         const target=match.spawnMinion('red','melee',{x:hero.x+40,y:hero.y});

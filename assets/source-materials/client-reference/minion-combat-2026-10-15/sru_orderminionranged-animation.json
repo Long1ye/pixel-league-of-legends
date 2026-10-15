@@ -1,0 +1,151 @@
+{
+  "Characters/SRU_OrderMinionRanged/Animations/Skin0": {
+    "mCascadeBlendValue": 0.0,
+    "mClipDataMap": {
+      "Win1": {
+        "mTrackDataName": "Default",
+        "mAnimationResourceData": {
+          "mAnimationFilePath": "{fa0bf462a64e323e}",
+          "__type": "AnimationResourceData"
+        },
+        "__type": "AtomicClipData"
+      },
+      "{bec63b4e}": {
+        "mTrackDataName": "Default",
+        "mEventDataMap": {
+          "DeathParticle": {
+            "mName": "DeathParticle",
+            "mEffectName": "doesnotexist.troy",
+            "mParticleEventDataPairList": [
+              {
+                "__type": "ParticleEventDataPair"
+              }
+            ],
+            "mIsLoop": false,
+            "mIsKillEvent": false,
+            "__type": "ParticleEventData"
+          }
+        },
+        "mAnimationResourceData": {
+          "mAnimationFilePath": "{aa4b77d339502646}",
+          "__type": "AnimationResourceData"
+        },
+        "__type": "AtomicClipData"
+      },
+      "Lose1": {
+        "mTrackDataName": "Default",
+        "mAnimationResourceData": {
+          "mAnimationFilePath": "{fa0bf462a64e323e}",
+          "__type": "AnimationResourceData"
+        },
+        "__type": "AtomicClipData"
+      },
+      "Attack2": {
+        "mTrackDataName": "Default",
+        "mAnimationResourceData": {
+          "mAnimationFilePath": "{a936dfbe8e6e3678}",
+          "__type": "AnimationResourceData"
+        },
+        "__type": "AtomicClipData"
+      },
+      "{41f434dd}": {
+        "mTrackDataName": "Default",
+        "mAnimationResourceData": {
+          "mAnimationFilePath": "{f3b03e2c24bfbf21}",
+          "__type": "AnimationResourceData"
+        },
+        "__type": "AtomicClipData"
+      },
+      "Death_Caster": {
+        "mTrackDataName": "Default",
+        "mAnimationResourceData": {
+          "mAnimationFilePath": "{55b4630286b07430}",
+          "__type": "AnimationResourceData"
+        },
+        "__type": "AtomicClipData"
+      },
+      "Run": {
+        "mTrackDataName": "Default",
+        "mAnimationResourceData": {
+          "mAnimationFilePath": "{20550b99206279cd}",
+          "__type": "AnimationResourceData"
+        },
+        "__type": "AtomicClipData"
+      },
+      "Death": {
+        "mTrackDataName": "Default",
+        "mAnimationResourceData": {
+          "mAnimationFilePath": "{aa4b77d339502646}",
+          "__type": "AnimationResourceData"
+        },
+        "__type": "AtomicClipData"
+      },
+      "Idle1": {
+        "mTrackDataName": "Default",
+        "mAnimationResourceData": {
+          "mAnimationFilePath": "{fa0bf462a64e323e}",
+          "__type": "AnimationResourceData"
+        },
+        "__type": "AtomicClipData"
+      },
+      "Attack1": {
+        "mTrackDataName": "Default",
+        "mAnimationResourceData": {
+          "mAnimationFilePath": "{1540c760c16248be}",
+          "__type": "AnimationResourceData"
+        },
+        "__type": "AtomicClipData"
+      }
+    },
+    "mTrackDataMap": {
+      "Default": {
+        "__type": "TrackData"
+      }
+    },
+    "mBlendDataTable": {
+      "3084207952482581837": {
+        "mTime": 0.0,
+        "__type": "TimeBlendData"
+      },
+      "4545597366952574285": {
+        "mTime": 0.0,
+        "__type": "TimeBlendData"
+      },
+      "4752481633748696397": {
+        "mTime": 0.0,
+        "__type": "TimeBlendData"
+      },
+      "6247030502141246797": {
+        "mTime": 0.0,
+        "__type": "TimeBlendData"
+      },
+      "6463208476870491469": {
+        "mTime": 0.0,
+        "__type": "TimeBlendData"
+      },
+      "11374364255402376525": {
+        "mTime": 0.0,
+        "__type": "TimeBlendData"
+      },
+      "11414086196014923085": {
+        "mTime": 0.0,
+        "__type": "TimeBlendData"
+      },
+      "12403878670851685709": {
+        "mTime": 0.0,
+        "__type": "TimeBlendData"
+      },
+      "13630352413820501325": {
+        "mTime": 0.0,
+        "__type": "TimeBlendData"
+      },
+      "13746740121962069325": {
+        "mTime": 0.0,
+        "__type": "TimeBlendData"
+      }
+    },
+    "objectPath": "Characters/SRU_OrderMinionRanged/Animations/Skin0",
+    "__type": "AnimationGraphData"
+  },
+  "__linked": []
+}

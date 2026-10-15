@@ -1,0 +1,249 @@
+{
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_sound": {
+    "complexEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 10.0,
+        "emitterName": "empty",
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "meshRenderFlags": 0,
+        "isUniformScale": 1,
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_Emote_taunt_sound",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_sound",
+    "soundPersistentDefault": "Play_sfx_Yasuo_Taunt3D_buffactivate",
+    "flags": 132,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_sound",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt2_sound": {
+    "complexEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 10.0,
+        "emitterName": "empty",
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "meshRenderFlags": 0,
+        "isUniformScale": 1,
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_Emote_taunt2_sound",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt2_sound",
+    "soundPersistentDefault": "Play_sfx_Yasuo_Taunt23D_buffactivate",
+    "flags": 132,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt2_sound",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_interactive_riven": {
+    "complexEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 10.0,
+        "emitterName": "empty",
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "meshRenderFlags": 0,
+        "isUniformScale": 1,
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_Emote_taunt_interactive_riven",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_interactive_riven",
+    "flags": 164,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_interactive_riven",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_joke_sound": {
+    "complexEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 10.0,
+        "emitterName": "empty",
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "meshRenderFlags": 0,
+        "isUniformScale": 1,
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_Emote_joke_sound",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_joke_sound",
+    "soundPersistentDefault": "Play_sfx_Yasuo_Joke3D_buffactivate",
+    "flags": 132,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_joke_sound",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_laugh_sound": {
+    "complexEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 10.0,
+        "emitterName": "empty",
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "meshRenderFlags": 0,
+        "isUniformScale": 1,
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_Emote_laugh_sound",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_laugh_sound",
+    "soundPersistentDefault": "Play_sfx_Yasuo_Laugh3D_buffactivate",
+    "flags": 132,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_laugh_sound",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_interactive_yi": {
+    "complexEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 10.0,
+        "emitterName": "empty",
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "meshRenderFlags": 0,
+        "isUniformScale": 1,
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_Emote_taunt_interactive_yi",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_interactive_yi",
+    "flags": 164,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_interactive_yi",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_generic": {
+    "complexEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 10.0,
+        "emitterName": "empty",
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "meshRenderFlags": 0,
+        "isUniformScale": 1,
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_Emote_taunt_generic",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_generic",
+    "flags": 164,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_generic",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_death_sound": {
+    "complexEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 10.0,
+        "emitterName": "empty",
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "meshRenderFlags": 0,
+        "isUniformScale": 1,
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_Emote_death_sound",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_death_sound",
+    "soundPersistentDefault": "Play_sfx_Yasuo_Death3D_cast",
+    "flags": 132,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_death_sound",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_interactive_ninja": {
+    "simpleEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "particleLifetime": {
+          "constantValue": 0.0,
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 10.0,
+        "emitterName": "empty",
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "meshRenderFlags": 0,
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "LegacySimple": {
+          "birthScale": {
+            "constantValue": 0.0,
+            "__type": "ValueFloat"
+          },
+          "__type": "VfxEmitterLegacySimple"
+        },
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_Emote_taunt_interactive_ninja",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_interactive_ninja",
+    "flags": 164,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_interactive_ninja",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_dance_in_sound": {
+    "simpleEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "particleLifetime": {
+          "constantValue": 0.0,
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 10.0,
+        "emitterName": "empty",
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "meshRenderFlags": 0,
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "LegacySimple": {
+          "birthScale": {
+            "constantValue": 0.0,
+            "__type": "ValueFloat"
+          },
+          "__type": "VfxEmitterLegacySimple"
+        },
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_Emote_dance_in_sound",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_dance_in_sound",
+    "soundOnCreateDefault": "Play_sfx_Yasuo_Dance3D_buffactivate_leadin",
+    "flags": 132,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_dance_in_sound",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "__linked": []
+}

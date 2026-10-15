@@ -1,0 +1,1 @@
+function e(e,t){let n=Math.atan2(27,112);for(let r of[!1,!0])e.save(),e.beginPath(),e.rect(r?17:-2048,-2048,r?2048:2065,4096),e.clip(),r&&(e.translate(17,0),e.scale(3,1),e.translate(-17,0)),e.rotate(-n),e.drawImage(t,-16,-5),e.restore()}export{e as t};

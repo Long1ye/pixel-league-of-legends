@@ -1,0 +1,114 @@
+[
+  {
+    "file": "yasuo-swing.mp3",
+    "source": "yasuo-R.mp4",
+    "start": 4.58,
+    "duration": 0.12,
+    "gain": 3
+  },
+  {
+    "file": "yasuo-attack-hit.mp3",
+    "source": "yasuo-R.mp4",
+    "start": 4.7,
+    "duration": 0.35,
+    "gain": 1.8367
+  },
+  {
+    "file": "yasuo-q-cast.mp3",
+    "source": "yasuo-Q.mp4",
+    "start": 0.48,
+    "duration": 0.18,
+    "gain": 1.7522
+  },
+  {
+    "file": "yasuo-q-hit.mp3",
+    "source": "yasuo-Q.mp4",
+    "start": 0.7,
+    "duration": 0.55,
+    "gain": 1.0
+  },
+  {
+    "file": "yasuo-q3-cast.mp3",
+    "source": "yasuo-Q.mp4",
+    "start": 6.15,
+    "duration": 0.8,
+    "gain": 0.6149
+  },
+  {
+    "file": "yasuo-q3-hit.mp3",
+    "source": "yasuo-Q.mp4",
+    "start": 6.95,
+    "duration": 0.35,
+    "gain": 0.6295
+  },
+  {
+    "file": "yasuo-w.mp3",
+    "source": "yasuo-W.mp4",
+    "start": 0.2,
+    "duration": 1.3,
+    "gain": 1.4623
+  },
+  {
+    "file": "yasuo-e.mp3",
+    "source": "yasuo-E.mp4",
+    "start": 0.2,
+    "duration": 0.65,
+    "gain": 1.9742
+  },
+  {
+    "file": "yasuo-r-cast.mp3",
+    "source": "yasuo-R.mp4",
+    "start": 1.8,
+    "duration": 0.65,
+    "gain": 0.5987
+  },
+  {
+    "file": "yasuo-r-hit.mp3",
+    "source": "yasuo-R.mp4",
+    "start": 2.85,
+    "duration": 0.7,
+    "gain": 0.7035
+  },
+  {
+    "file": "tf-swing.mp3",
+    "source": "twisted-fate-E.webm",
+    "start": 0.56,
+    "duration": 0.17,
+    "gain": 0.8848
+  },
+  {
+    "file": "tf-hit.mp3",
+    "source": "twisted-fate-E.webm",
+    "start": 0.9,
+    "duration": 0.35,
+    "gain": 0.4529
+  },
+  {
+    "file": "tf-q-cast.mp3",
+    "source": "twisted-fate-Q.webm",
+    "start": 0.15,
+    "duration": 0.25,
+    "gain": 1.2119
+  },
+  {
+    "file": "tf-q-hit.mp3",
+    "source": "twisted-fate-Q.webm",
+    "start": 0.45,
+    "duration": 0.6,
+    "gain": 0.376
+  },
+  {
+    "file": "tf-w.mp3",
+    "source": "twisted-fate-W.webm",
+    "start": 0,
+    "duration": 0.45,
+    "gain": 3
+  },
+  {
+    "file": "tf-red-hit.mp3",
+    "source": "twisted-fate-W.webm",
+    "start": 6.7,
+    "duration": 0.65,
+    "gain": 0.4855
+  }
+]

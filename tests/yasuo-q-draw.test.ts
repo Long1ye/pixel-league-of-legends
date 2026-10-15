@@ -1,5 +1,5 @@
 import {expect,it} from 'vitest';
-import {HERO_ATTACHMENT_SCALE} from '../src/render/Presentation';
+import {HERO_ATTACHMENT_SCALE,HERO_EFFECT_SCALE} from '../src/render/Presentation';
 import {qDrawPose,qSwordPose,qSwordFlash,Q_FLASH_START,Q_FLASH_DURATION} from '../src/render/YasuoQDraw';
 it('retimes all draw frames and mirrors left-facing casts around the foot anchor',()=>{
   expect(qDrawPose(0,0).frame).toBe(0);
@@ -14,9 +14,11 @@ it('flashes once outside the body without traveling',()=>{
     const a=qSwordFlash(Q_FLASH_START+.02,100,100,angle),b=qSwordFlash(Q_FLASH_START+.12,100,100,angle);
     expect(a.visible).toBe(true);expect(b.visible).toBe(true);
     expect([a.x,a.y]).toEqual([b.x,b.y]);
-    expect(Math.hypot(a.x-100,a.y-(100-18*HERO_ATTACHMENT_SCALE))).toBeCloseTo(10*HERO_ATTACHMENT_SCALE);
+    const side=qDrawPose(Q_FLASH_START+.02,angle).flipX?-1:1;
+    expect(a.x).toBeCloseTo(100+side*16*HERO_EFFECT_SCALE);
+    expect(a.y).toBeCloseTo(100-30*HERO_EFFECT_SCALE);
     expect(a.scale).toBe(.65*HERO_ATTACHMENT_SCALE*.8);
-    expect([a.originX,a.originY]).toEqual([0,0]);
+    expect([a.originX,a.originY]).toEqual([14/135,8/39]);
     expect(qSwordFlash(.05,100,100,angle).visible).toBe(false);
     expect(qSwordFlash(Q_FLASH_START+Q_FLASH_DURATION+.001,100,100,angle).visible).toBe(false);
   }

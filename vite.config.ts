@@ -7,6 +7,9 @@ export default defineConfig({
     chunkSizeWarningLimit: 1500,
     rolldownOptions: { input: {
       game: 'index.html',
+      auraSummoners: 'assets/effects/yasuo-aura-summoners-2026-10-15/index.html',
+      windWallV2: 'assets/effects/wind-wall-v2-2026-10-15/index.html',
+      passiveShield: 'assets/effects/yasuo-passive-shield-2026-10-15/index.html',
       forestLayers: 'assets/map-layers/forest-v1/index.html',
       midlaneV2: 'assets/map-studies/midlane-v2/index.html',
       howlingAbyss: 'assets/map-studies/howling-abyss-v1/index.html',
@@ -49,6 +52,7 @@ export default defineConfig({
       yasuoQUserEight: 'assets/hero-skills/2026-10-13/yasuo/q-v26-user-eight/index.html',
       yasuoQUpright: 'assets/hero-skills/2026-10-13/yasuo/q-v27-upright-se/index.html',
       yasuoQMeowaLayered: 'assets/hero-skills/2026-10-13/yasuo/q-v29-meowa-layered/index.html',
+      yasuoLocomotion16: 'assets/hero-studies/2026-10-15/yasuo-locomotion16/index.html',
     } },
   },
   test: { include: ['tests/**/*.test.ts'], environment: 'node' },

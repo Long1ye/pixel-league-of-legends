@@ -1,0 +1,114 @@
+{
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_R_cantcast_beam": {
+    "complexEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "particleLifetime": {
+          "constantValue": 0.800000011920929,
+          "__type": "ValueFloat"
+        },
+        "lifetime": 8.0,
+        "isSingleParticle": 1,
+        "emitterName": "chain",
+        "bindWeight": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "primitive": {
+          "mBeam": {
+            "mBirthTilingSize": {
+              "constantValue": [
+                0.0,
+                50.0,
+                1.0
+              ],
+              "__type": "ValueVector3"
+            },
+            "__type": "VfxBeamDefinitionData"
+          },
+          "__type": "VfxPrimitiveBeam"
+        },
+        "blendMode": 1,
+        "Color": {
+          "constantValue": [
+            1.0,
+            1.0,
+            1.0,
+            0.699999988079071
+          ],
+          "dynamics": {
+            "times": [
+              0.0,
+              0.10000000149011612,
+              0.800000011920929,
+              1.0
+            ],
+            "values": [
+              [
+                1.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                1.0,
+                1.0,
+                1.0,
+                0.699999988079071
+              ],
+              [
+                1.0,
+                1.0,
+                1.0,
+                0.699999988079071
+              ],
+              [
+                1.0,
+                1.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "__type": "VfxAnimatedColorVariableData"
+          },
+          "__type": "ValueColor"
+        },
+        "pass": 10,
+        "colorLookUpTypeY": 3,
+        "birthRotation0": {
+          "constantValue": [
+            90.0,
+            0.0,
+            0.0
+          ],
+          "__type": "ValueVector3"
+        },
+        "birthScale0": {
+          "constantValue": [
+            30.0,
+            1.0,
+            1.0
+          ],
+          "__type": "ValueVector3"
+        },
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_R_beam_indicator_test.tex",
+        "birthUvScrollRate": {
+          "constantValue": [
+            5.0,
+            0.0
+          ],
+          "__type": "ValueVector2"
+        },
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_base_R_cantcast_beam",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_R_cantcast_beam",
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_R_cantcast_beam",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "__linked": []
+}

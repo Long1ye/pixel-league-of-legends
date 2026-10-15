@@ -4,7 +4,6 @@ import snowUrl from '../../assets/map-modules/howling-snow-v3/snow.png?url';
 import {WORLD,HOWLING_MAP} from '../game/config';
 import {BRIDGE,BRIDGE_OUTLINE,bridgePoint} from '../game/Bridge';
 import {halfWidth} from '../../assets/map-studies/howling-abyss-v1/geometry';
-import {drawBridgeSites} from './BridgeSites';
 import {terrainNormals} from './TerrainNormals';
 import {edgeSnowPatch,edgeChips,BRIDGE_SURFACE} from './BridgeSurface';
 import {drawStoneCells,STONE_URLS,SNOW_STONE_URLS,SNOW_STONE_COUNT,stoneKey,snowStoneKey} from './BridgeTiles';
@@ -138,7 +137,6 @@ export class IceFloor {
     data.data.set(terrainNormals(data.data,normal.width,normal.height));nc.putImageData(data,0,0);
     texture.setDataSource(normal);this.normalSource=texture.dataSource[0];
    }
-   drawBridgeSites(ctx);
    const propImages=Object.fromEntries(Object.keys(PROP_URLS).map(index=>[index,scene.textures.get(propKey(Number(index))).getSourceImage() as HTMLImageElement]));
    const lightImages=Object.fromEntries(Object.keys(LIGHT_URLS).map(kind=>[kind,scene.textures.get(lightKey(kind as BridgeLightKind)).getSourceImage() as HTMLImageElement])) as Record<BridgeLightKind,HTMLImageElement>;
    drawBridgeRails(ctx,Array.from({length:4},(_,i)=>scene.textures.get(railKey(i)).getSourceImage() as HTMLImageElement));
@@ -161,7 +159,10 @@ export class IceFloor {
   this.smoothSampling=enabled;
   this.image.texture.setFilter(enabled?Phaser.Textures.FilterMode.LINEAR:Phaser.Textures.FilterMode.NEAREST);
  }
- setLighting(enabled:boolean){if(enabled)this.image.setPipeline('Light2D');else this.image.resetPipeline();}
+ setLighting(enabled:boolean){
+  if(enabled){if(this.image.pipeline.name!=='Light2D')this.image.setPipeline('Light2D');}
+  else if(this.image.pipeline.name==='Light2D')this.image.resetPipeline();
+ }
  setMaterial(enabled:boolean){
   if(!this.normalSource||enabled===this.materialEnabled)return;
   this.materialEnabled=enabled;

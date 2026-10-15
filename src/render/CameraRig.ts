@@ -5,19 +5,24 @@ import { snapRenderCoordinate } from './Presentation';
 
 /** Camera math is independent of simulation, rendering and the DOM. */
 export class CameraRig {
+  readonly viewport:{width:number;height:number}={...VIEWPORT};
+  setViewport(width:number,height:number):void {
+    if(!Number.isFinite(width)||!Number.isFinite(height)||width<=0||height<=0)throw new RangeError('Invalid camera viewport');
+    this.viewport.width=width;this.viewport.height=height;this.lookAt(this.focus);
+  }
   private focus: Point = { x: WORLD.width / 2, y: WORLD.height / 2 };
   following = true;
   zoom: 0.6 | 1 | 1.5 = HOWLING_MAP ? 0.6 : 1;
 
   get center(): Point {
     return {
-      x: clamp(snapRenderCoordinate(this.focus.x,this.zoom), VIEWPORT.width / this.zoom / 2, WORLD.width - VIEWPORT.width / this.zoom / 2),
-      y: clamp(snapRenderCoordinate(this.focus.y,this.zoom), VIEWPORT.height / this.zoom / 2, WORLD.height - VIEWPORT.height / this.zoom / 2),
+      x: clamp(snapRenderCoordinate(this.focus.x,this.zoom), this.viewport.width / this.zoom / 2, WORLD.width - this.viewport.width / this.zoom / 2),
+      y: clamp(snapRenderCoordinate(this.focus.y,this.zoom), this.viewport.height / this.zoom / 2, WORLD.height - this.viewport.height / this.zoom / 2),
     };
   }
 
   get bounds(): { x: number; y: number; width: number; height: number } {
-    const width = VIEWPORT.width / this.zoom, height = VIEWPORT.height / this.zoom;
+    const width = this.viewport.width / this.zoom, height = this.viewport.height / this.zoom;
     return { x: this.center.x - width / 2, y: this.center.y - height / 2, width, height };
   }
 
@@ -28,7 +33,7 @@ export class CameraRig {
   }
 
   lookAt(point: Point): void {
-    const halfWidth = VIEWPORT.width / this.zoom / 2, halfHeight = VIEWPORT.height / this.zoom / 2;
+    const halfWidth = this.viewport.width / this.zoom / 2, halfHeight = this.viewport.height / this.zoom / 2;
     // Retain subpixel pan increments; only the rendered center snaps to pixels.
     this.focus = {
       x: clamp(point.x, halfWidth, WORLD.width - halfWidth),

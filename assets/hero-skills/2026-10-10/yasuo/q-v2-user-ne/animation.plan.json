@@ -12,7 +12,7 @@
     "--remove-bg-batch-size", "16",
     "--background-color", "#c6c6c6"
   ],
-  "output_dir": "meowa-output/yasuo-q-v2-user-ne",
+  "output_dir": "assets/generation-archive/legacy-meowa/yasuo-q-v2-user-ne",
   "recovery_command": "animate-poll",
   "estimated_credits": 20,
   "prompt_mode": "reviewed animation-edit fields; no automatic enhancement toggle on this capability"

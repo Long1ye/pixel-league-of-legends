@@ -1,0 +1,4233 @@
+{
+  "scope": "Local client base Yasuo metadata; not server gameplay logic or rendered visual verification",
+  "files": 21,
+  "vfx_count": 82,
+  "animation_clip_count": 65,
+  "vfx": [
+    {
+      "name": "Yasuo_Base_Emote_dance_sound",
+      "source": "shared-02.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_dance_sound",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "empty",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+          "particle_lifetime": null
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_NightmareBot_E_timer5",
+      "source": "shared-02.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer5",
+      "excluded_from_base_reference": true,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "timer",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_ring.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy.tex",
+          "particle_lifetime": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_NightmareBot_E_timer4",
+      "source": "shared-02.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer4",
+      "excluded_from_base_reference": true,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "timer",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_ring.tex",
+          "particle_lifetime": 5.0
+        },
+        {
+          "name": "spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy.tex",
+          "particle_lifetime": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_NightmareBot_E_timer1",
+      "source": "shared-02.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer1",
+      "excluded_from_base_reference": true,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "timer",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_ring.tex",
+          "particle_lifetime": 8.0
+        },
+        {
+          "name": "spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy.tex",
+          "particle_lifetime": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_NightmareBot_E_timer3",
+      "source": "shared-02.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer3",
+      "excluded_from_base_reference": true,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "timer",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_ring.tex",
+          "particle_lifetime": 6.0
+        },
+        {
+          "name": "spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy.tex",
+          "particle_lifetime": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_NightmareBot_E_timer2",
+      "source": "shared-02.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer2",
+      "excluded_from_base_reference": true,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "timer",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_ring.tex",
+          "particle_lifetime": 7.0
+        },
+        {
+          "name": "spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy.tex",
+          "particle_lifetime": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Emote_taunt_sound",
+      "source": "shared-03.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_sound",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "empty",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+          "particle_lifetime": null
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Emote_taunt2_sound",
+      "source": "shared-03.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt2_sound",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "empty",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+          "particle_lifetime": null
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Emote_taunt_interactive_riven",
+      "source": "shared-03.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_interactive_riven",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "empty",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+          "particle_lifetime": null
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Emote_joke_sound",
+      "source": "shared-03.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_joke_sound",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "empty",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+          "particle_lifetime": null
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Emote_laugh_sound",
+      "source": "shared-03.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_laugh_sound",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "empty",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+          "particle_lifetime": null
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Emote_taunt_interactive_yi",
+      "source": "shared-03.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_interactive_yi",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "empty",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+          "particle_lifetime": null
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Emote_taunt_generic",
+      "source": "shared-03.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_generic",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "empty",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+          "particle_lifetime": null
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Emote_death_sound",
+      "source": "shared-03.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_death_sound",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "empty",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+          "particle_lifetime": null
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Emote_taunt_interactive_ninja",
+      "source": "shared-03.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_taunt_interactive_ninja",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "empty",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+          "particle_lifetime": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Emote_dance_in_sound",
+      "source": "shared-03.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_dance_in_sound",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_Dance3D_buffactivate_leadin",
+      "emitters": [
+        {
+          "name": "empty",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+          "particle_lifetime": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Wall_XinZhao_OLD",
+      "source": "shared-05.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Wall_XinZhao_OLD",
+      "excluded_from_base_reference": true,
+      "sound_on_create": null,
+      "emitters": []
+    },
+    {
+      "name": "Yasuo_Base_Q3_Hand",
+      "source": "shared-05.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q3_Hand",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": []
+    },
+    {
+      "name": "Yasuo_Base_Q_sound",
+      "source": "shared-05.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q_sound",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "empty",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+          "particle_lifetime": null
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Q_Hand",
+      "source": "shared-05.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q_Hand",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": []
+    },
+    {
+      "name": "Yasuo_Base_R_tar_imp_01",
+      "source": "shared-07.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_R_tar_imp_01",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "sparks",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_FireHit.tex",
+          "particle_lifetime": 0.5
+        },
+        {
+          "name": "flame",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_FireHit.tex",
+          "particle_lifetime": 0.30000001192092896
+        },
+        {
+          "name": "sparks_02",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_FireHit.tex",
+          "particle_lifetime": 0.5
+        },
+        {
+          "name": "magic_sparks",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Flare-Rainbow_purp_01.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "molten_rock_02",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_DirtBits_03.tex",
+          "particle_lifetime": 0.30000001192092896
+        },
+        {
+          "name": "followsparks",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Fireball_hit.tex",
+          "particle_lifetime": 0.5
+        },
+        {
+          "name": "flat",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Flare-Sun_17.tex",
+          "particle_lifetime": 0.10000000149011612
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Q_wind_mis",
+      "source": "shared-07.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q_wind_mis",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoQ3W_missilelaunch",
+      "emitters": [
+        {
+          "name": "tornado",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_Q_tonado_wind_cas.tex",
+          "particle_lifetime": 0.75
+        },
+        {
+          "name": "tornado_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_tonado.tex",
+          "particle_lifetime": 0.75
+        },
+        {
+          "name": "ground_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_tornado_ground_shape_cas.tex",
+          "particle_lifetime": 0.5
+        },
+        {
+          "name": "ground_ring",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_Z_wind_blow_mis_01.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "rock",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_Q_ground_rock_mis.tex",
+          "particle_lifetime": 0.699999988079071
+        },
+        {
+          "name": "ground_dirt",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Q_ground_dirt_mis.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "smoke",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_smoke.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "ground_crack",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_q_groud_crack.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "blade",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_Q_tornado_blade.tex",
+          "particle_lifetime": 0.25
+        },
+        {
+          "name": "core",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_block_impact.tex",
+          "particle_lifetime": 0.6000000238418579
+        },
+        {
+          "name": "ground_base",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_E_dash_smoke.tex",
+          "particle_lifetime": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_R_indicator_beam",
+      "source": "shared-09.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_R_indicator_beam",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoRLeashParticle_buffactivate",
+      "emitters": [
+        {
+          "name": "chain",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_R_beam_indicator.tex",
+          "particle_lifetime": 0.800000011920929
+        },
+        {
+          "name": "chain_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_R_indicator_glow.tex",
+          "particle_lifetime": 0.800000011920929
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_Recall",
+      "source": "shared-10.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_Recall",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "ground_crack",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_Recall_ground_crack.tex",
+          "particle_lifetime": 6.0
+        },
+        {
+          "name": "wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 1.2000000476837158
+        },
+        {
+          "name": "wind_shape2",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main.tex",
+          "particle_lifetime": 1.2000000476837158
+        },
+        {
+          "name": "wind_shape3",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 1.100000023841858
+        },
+        {
+          "name": "ground_spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_recall_spark.tex",
+          "particle_lifetime": 0.20000000298023224
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_recall_start_sound",
+      "source": "shared-11.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_recall_start_sound",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "empty",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+          "particle_lifetime": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_R_CloneVFX",
+      "source": "shared-12.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_R_CloneVFX",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": []
+    },
+    {
+      "name": "Yasuo_Base_deathscaress_buf",
+      "source": "shared-13.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_deathscaress_buf",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "spritwheel",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_DeathsCaress05.tex",
+          "particle_lifetime": null
+        },
+        {
+          "name": "bloom",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_DeathsCaress06.tex",
+          "particle_lifetime": 10.0
+        },
+        {
+          "name": "outerring",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_DeathsCaress06.tex",
+          "particle_lifetime": 10.0
+        },
+        {
+          "name": "outerring2",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_DeathsCaress06.tex",
+          "particle_lifetime": 10.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_R_tar_marker_02",
+      "source": "shared-13.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_R_tar_marker_02",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "marker",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_akali_blade_10.tex",
+          "particle_lifetime": 0.3499999940395355
+        },
+        {
+          "name": "flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Flare-Sun_17.tex",
+          "particle_lifetime": 0.25
+        },
+        {
+          "name": "smoke_cloud",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Poof.tex",
+          "particle_lifetime": 0.25
+        },
+        {
+          "name": "ring",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_ring_purp_02.tex",
+          "particle_lifetime": 6.0
+        },
+        {
+          "name": "blade",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_akali_blade_10.tex",
+          "particle_lifetime": 0.3499999940395355
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_R_tar_marker_01",
+      "source": "shared-13.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_R_tar_marker_01",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "marker",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_akali_blade_10.tex",
+          "particle_lifetime": 1000.0
+        },
+        {
+          "name": "flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Flare-Sun_17.tex",
+          "particle_lifetime": 0.25
+        },
+        {
+          "name": "smoke_cloud",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Poof.tex",
+          "particle_lifetime": 0.25
+        },
+        {
+          "name": "persistent_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Flare-Rainbow_purp_01.tex",
+          "particle_lifetime": 0.4000000059604645
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_W_windwall_activate",
+      "source": "shared-14.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_W_windwall_activate",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoWindWallBuff_missilecast",
+      "emitters": [
+        {
+          "name": "empty",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+          "particle_lifetime": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_Taunt_spit",
+      "source": "shared-15.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_Taunt_spit",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "spit",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_taunt_spit.tex",
+          "particle_lifetime": 0.20000000298023224
+        },
+        {
+          "name": "mist",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_E_dash_smoke.tex",
+          "particle_lifetime": 0.6000000238418579
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_R_cantcast_beam",
+      "source": "shared-16.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_R_cantcast_beam",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "chain",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_R_beam_indicator_test.tex",
+          "particle_lifetime": 0.800000011920929
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_EQ_SwordGlow",
+      "source": "shared-17.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_EQ_SwordGlow",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "Sword_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_dash_linger.tex",
+          "particle_lifetime": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_R_cas_marker_01",
+      "source": "shared-18.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_R_cas_marker_01",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "flat",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Flare-Sun_17.tex",
+          "particle_lifetime": 0.10000000149011612
+        },
+        {
+          "name": "sparkle_02",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Flare-Rainbow_purp_01.tex",
+          "particle_lifetime": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Q3_Indicator_Ring_alt",
+      "source": "shared-19.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q3_Indicator_Ring_alt",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "TeamCircle-Green",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Q3_indicator_ring.tex",
+          "particle_lifetime": 5.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Q3_Indicator_Ring",
+      "source": "shared-19.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q3_Indicator_Ring",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "TeamCircle-Green",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Q3_indicator_ring.tex",
+          "particle_lifetime": 1.5
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_BA_Crit_hit_01",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_BA_Crit_hit_01",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "blood",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Blood.tex",
+          "particle_lifetime": 0.6000000238418579
+        },
+        {
+          "name": "slash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_basic_attack_impact_slash.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "soft",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Blood.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "wind_ring",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_basic_attack_wind_ring_02.tex",
+          "particle_lifetime": 0.5
+        },
+        {
+          "name": "sub_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_e_dash_sub.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "ground_blood",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_basicA_blood_splash.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_tornado_blast.tex",
+          "particle_lifetime": 0.15000000596046448
+        },
+        {
+          "name": "crit_base",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_BA_Crit_blast.tex",
+          "particle_lifetime": 0.30000001192092896
+        },
+        {
+          "name": "crit_flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_BA_Crit_flare.tex",
+          "particle_lifetime": 0.15000000596046448
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_BA_Crit_hit_02",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_BA_Crit_hit_02",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "blood",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Blood.tex",
+          "particle_lifetime": 0.6000000238418579
+        },
+        {
+          "name": "slash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_basic_attack_impact_slash.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "soft",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Blood.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "wind_ring",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_basic_attack_wind_ring_02.tex",
+          "particle_lifetime": 0.5
+        },
+        {
+          "name": "sub_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_e_dash_sub.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "ground_blood",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_basicA_blood_splash.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_tornado_blast.tex",
+          "particle_lifetime": 0.15000000596046448
+        },
+        {
+          "name": "crit_base",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_BA_Crit_blast.tex",
+          "particle_lifetime": 0.30000001192092896
+        },
+        {
+          "name": "crit_flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_BA_Crit_flare.tex",
+          "particle_lifetime": 0.15000000596046448
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_W_windwall_big_impact",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_W_windwall_big_impact",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoWMovingWall_hit",
+      "emitters": [
+        {
+          "name": "wind_impact",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy.tex",
+          "particle_lifetime": 0.75
+        },
+        {
+          "name": "circle_sub",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Q_wind_hit_tar.tex",
+          "particle_lifetime": 0.6000000238418579
+        },
+        {
+          "name": "impact",
+          "texture": null,
+          "particle_lifetime": 0.25
+        },
+        {
+          "name": "flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_R_hit_flash_tar_2.tex",
+          "particle_lifetime": 0.15000000596046448
+        },
+        {
+          "name": "wind_impact_core",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy.tex",
+          "particle_lifetime": 0.800000011920929
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_BA_Crit_hit_03",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_BA_Crit_hit_03",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "blood",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Blood.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "slash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_basic_attack_impact_slash.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "soft",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Blood.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "wind_ring",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_basic_attack_wind_ring_02.tex",
+          "particle_lifetime": 0.5
+        },
+        {
+          "name": "sub_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_e_dash_sub.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "ground_blood",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_basicA_blood_splash.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_tornado_blast.tex",
+          "particle_lifetime": 0.15000000596046448
+        },
+        {
+          "name": "crit_base",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_BA_Crit_blast.tex",
+          "particle_lifetime": 0.30000001192092896
+        },
+        {
+          "name": "crit_flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_BA_Crit_flare.tex",
+          "particle_lifetime": 0.15000000596046448
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_BA_Crit_hit_04",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_BA_Crit_hit_04",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "blood",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Blood.tex",
+          "particle_lifetime": 0.6000000238418579
+        },
+        {
+          "name": "slash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_basic_attack_impact_slash.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "soft",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Blood.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "wind_ring",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_basic_attack_wind_ring_02.tex",
+          "particle_lifetime": 0.5
+        },
+        {
+          "name": "sub_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_e_dash_sub.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "ground_blood",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_basicA_blood_splash.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_tornado_blast.tex",
+          "particle_lifetime": 0.15000000596046448
+        },
+        {
+          "name": "crit_base",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_BA_Crit_blast.tex",
+          "particle_lifetime": 0.30000001192092896
+        },
+        {
+          "name": "crit_flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_BA_Crit_flare.tex",
+          "particle_lifetime": 0.15000000596046448
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_E_Dash",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_E_Dash",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "Flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_E_dash_flash.tex",
+          "particle_lifetime": 0.20000000298023224
+        },
+        {
+          "name": "afterimage",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_dash_afterimage.tex",
+          "particle_lifetime": 0.8500000238418579
+        },
+        {
+          "name": "sub_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_e_dash_sub.tex",
+          "particle_lifetime": 0.75
+        },
+        {
+          "name": "wisp",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_E_dash_smoke.tex",
+          "particle_lifetime": 0.5
+        },
+        {
+          "name": "outer_Ring",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_dash_ring.tex",
+          "particle_lifetime": 0.30000001192092896
+        },
+        {
+          "name": "inner_ring",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_dash_ring.tex",
+          "particle_lifetime": 0.30000001192092896
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_BA_hit_tar_01",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_BA_hit_tar_01",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "blood",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Blood.tex",
+          "particle_lifetime": 0.6000000238418579
+        },
+        {
+          "name": "slash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_basic_attack_impact_slash.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "soft",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Blood.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "sub_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_e_dash_sub.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "ground_blood",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_basicA_blood_splash.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_BA_Hit_flash.tex",
+          "particle_lifetime": 0.15000000596046448
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_BA_hit_tar_03",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_BA_hit_tar_03",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "blood",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Blood.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "slash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_basic_attack_impact_slash.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "soft",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Blood.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "sub_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_e_dash_sub.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "ground_blood",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_basicA_blood_splash.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_BA_Hit_flash.tex",
+          "particle_lifetime": 0.15000000596046448
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Q_hit_tar",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q_hit_tar",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoQ_hit",
+      "emitters": [
+        {
+          "name": "bloodstrands",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_Q_blood_tar.tex",
+          "particle_lifetime": 0.5
+        },
+        {
+          "name": "blast",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_R_land_exp_ring_af.tex",
+          "particle_lifetime": 0.20000000298023224
+        },
+        {
+          "name": "suckin",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_tornado_blast.tex",
+          "particle_lifetime": 0.20000000298023224
+        },
+        {
+          "name": "flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_Q_hit_spark_tar.tex",
+          "particle_lifetime": 0.30000001192092896
+        },
+        {
+          "name": "bloodball",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_BlurDrops.tex",
+          "particle_lifetime": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_BA_hit_tar_02",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_BA_hit_tar_02",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "blood",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Blood.tex",
+          "particle_lifetime": 0.6000000238418579
+        },
+        {
+          "name": "slash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_basic_attack_impact_slash.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "soft",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Blood.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "sub_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_e_dash_sub.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "ground_blood",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_basicA_blood_splash.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_BA_Hit_flash.tex",
+          "particle_lifetime": 0.15000000596046448
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_BA_hit_tar_04",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_BA_hit_tar_04",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "blood",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Blood.tex",
+          "particle_lifetime": 0.6000000238418579
+        },
+        {
+          "name": "slash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_basic_attack_impact_slash.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "soft",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Blood.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "sub_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_e_dash_sub.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "ground_blood",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_basicA_blood_splash.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_BA_Hit_flash.tex",
+          "particle_lifetime": 0.15000000596046448
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_EQ3_cas",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_EQ3_cas",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "Tornado",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_tonado_wind_cas.tex",
+          "particle_lifetime": 1.149999976158142
+        },
+        {
+          "name": "Tornado_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_tonado.tex",
+          "particle_lifetime": 0.75
+        },
+        {
+          "name": "TornadoBase",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "dirt",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Q_ground_dirt_mis.tex",
+          "particle_lifetime": 1.75
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Passive_Burst",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Passive_Burst",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "orb",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_passive_wind.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_R_hit_flash_tar_2.tex",
+          "particle_lifetime": 0.25
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_R_impact_tar",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_R_impact_tar",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "hit_slash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_basic_attack_impact_slash.tex",
+          "particle_lifetime": 0.30000001192092896
+        },
+        {
+          "name": "blood",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Blood.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "blood_splash1",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_Q_blood_tar.tex",
+          "particle_lifetime": 0.5
+        },
+        {
+          "name": "splash1",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_R_hit_streak_tar.tex",
+          "particle_lifetime": 0.5
+        },
+        {
+          "name": "splash2",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_R_hit_streak_tar.tex",
+          "particle_lifetime": 0.5
+        },
+        {
+          "name": "splash3",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_R_hit_streak_tar.tex",
+          "particle_lifetime": 0.6000000238418579
+        },
+        {
+          "name": "sub_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_e_dash_sub.tex",
+          "particle_lifetime": 0.15000000596046448
+        },
+        {
+          "name": "flash1",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_R_hit_flash_tar_2.tex",
+          "particle_lifetime": 0.10000000149011612
+        },
+        {
+          "name": "flash2",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_R_hit_flash_tar_2.tex",
+          "particle_lifetime": 0.10000000149011612
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Q_WindStrike",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q_WindStrike",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "sword",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_sword.tex",
+          "particle_lifetime": 0.3499999940395355
+        },
+        {
+          "name": "sword_sub",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_sword_sub.tex",
+          "particle_lifetime": 0.44999998807907104
+        },
+        {
+          "name": "Flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_sword.tex",
+          "particle_lifetime": 0.15000000596046448
+        },
+        {
+          "name": "distort",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_e_dash_sub.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "shadow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_sword_shadow.tex",
+          "particle_lifetime": 0.30000001192092896
+        },
+        {
+          "name": "smoke",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_smoke.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "build-up",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_indicator.tex",
+          "particle_lifetime": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_R_land_tar",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_R_land_tar",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoRKnockUpCombo_hit_land",
+      "emitters": [
+        {
+          "name": "ground_crack",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_R_Ground_crack.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "land_string",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_R_land_impact_string.tex",
+          "particle_lifetime": 0.44999998807907104
+        },
+        {
+          "name": "smoke",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_smoke.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "ground_blast",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_r_wind_blast.tex",
+          "particle_lifetime": 0.550000011920929
+        },
+        {
+          "name": "exp_ring",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_R_land_exp_ring.tex",
+          "particle_lifetime": 0.3499999940395355
+        },
+        {
+          "name": "distort",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Aura_Self.tex",
+          "particle_lifetime": 0.6000000238418579
+        },
+        {
+          "name": "dirt",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Q_ground_dirt_mis.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "chunk",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_R_explosion_chunk.tex",
+          "particle_lifetime": 0.3499999940395355
+        },
+        {
+          "name": "after_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Q_wind_hit_tar.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_E_dash_flash.tex",
+          "particle_lifetime": 0.15000000596046448
+        },
+        {
+          "name": "dark_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_dash_black.tex",
+          "particle_lifetime": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_E_timer4",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_E_timer4",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "timer",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_ring.tex",
+          "particle_lifetime": 6.75
+        },
+        {
+          "name": "spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy_alpha_fix.tex",
+          "particle_lifetime": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_E_timer5",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_E_timer5",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "timer",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_ring.tex",
+          "particle_lifetime": 5.75
+        },
+        {
+          "name": "spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy_alpha_fix.tex",
+          "particle_lifetime": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_E_timer2",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_E_timer2",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "timer",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_ring.tex",
+          "particle_lifetime": 9.0
+        },
+        {
+          "name": "spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy_alpha_fix.tex",
+          "particle_lifetime": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_E_timer3",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_E_timer3",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "timer",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_ring.tex",
+          "particle_lifetime": 7.75
+        },
+        {
+          "name": "spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy_alpha_fix.tex",
+          "particle_lifetime": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_E_dash_hit",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_E_dash_hit",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoDashWrapper_hit",
+      "emitters": [
+        {
+          "name": "Cut",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_basic_attack_impact_slash.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "impact",
+          "texture": null,
+          "particle_lifetime": null
+        },
+        {
+          "name": "flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_tornado_blast.tex",
+          "particle_lifetime": 0.15000000596046448
+        },
+        {
+          "name": "soft",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_0fluid.tex",
+          "particle_lifetime": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_E_timer1",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_E_timer1",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "timer",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_ring.tex",
+          "particle_lifetime": 9.75
+        },
+        {
+          "name": "spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy_alpha_fix.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "spark1",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy_alpha_fix.tex",
+          "particle_lifetime": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_I_sheath_spark",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_I_sheath_spark",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_I_sheath_flash.tex",
+          "particle_lifetime": 0.3499999940395355
+        },
+        {
+          "name": "spark_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_I_sheath_spark_glow.tex",
+          "particle_lifetime": 0.30000001192092896
+        },
+        {
+          "name": "flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_I_sheath_flash.tex",
+          "particle_lifetime": 0.25
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Q_wind_hit_tar",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q_wind_hit_tar",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoQ3W_hit",
+      "emitters": [
+        {
+          "name": "Tornado",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Q_wind_hit_tar.tex",
+          "particle_lifetime": 0.800000011920929
+        },
+        {
+          "name": "wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy_alpha_fix.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "Lightning_Flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_Q_wind_hit_flash.tex",
+          "particle_lifetime": 0.10000000149011612
+        },
+        {
+          "name": "tornado1",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_Q_tonado_wind_cas.tex",
+          "particle_lifetime": 0.75
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_EQ_cas",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_EQ_cas",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "stormDarkness",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_EQ_fill_circle_cas.tex",
+          "particle_lifetime": 0.699999988079071
+        },
+        {
+          "name": "blue_slash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_Q_wind_hit_tar.tex",
+          "particle_lifetime": 0.5
+        },
+        {
+          "name": "dark_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_dash_black.tex",
+          "particle_lifetime": 0.699999988079071
+        },
+        {
+          "name": "inner_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01.tex",
+          "particle_lifetime": 0.75
+        },
+        {
+          "name": "dark_wind1",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_dash_white.tex",
+          "particle_lifetime": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_BA_trail_4",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_BA_trail_4",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "Trail",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Basic_attack_trail.tex",
+          "particle_lifetime": 0.20000000298023224
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_BA_trail_1",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_BA_trail_1",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "Trail",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Basic_attack_trail.tex",
+          "particle_lifetime": 0.20000000298023224
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_BA_trail_2",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_BA_trail_2",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "Trail",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Basic_attack_trail.tex",
+          "particle_lifetime": 0.20000000298023224
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_BA_trail_3",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_BA_trail_3",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "Trail",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Basic_attack_trail.tex",
+          "particle_lifetime": 0.20000000298023224
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_w_windwall_enemy_01",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_w_windwall_enemy_01",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoWMovingWall_buffactivate",
+      "emitters": [
+        {
+          "name": "wind_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "steam_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "wind_shape2",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "side_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_steam",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "top_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 0.75
+        },
+        {
+          "name": "Team_Ind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_indicator_enemy.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "Team_Ind_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_basic_attack_flash.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "Team_Ind_sub",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_W_windwall_indicator_sub.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "ground_crack",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_W_windwall_groud_crack.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "ground_crack_hot",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_groud_crack_alpha.tex",
+          "particle_lifetime": 1.5
+        },
+        {
+          "name": "ground_spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_crack_spark.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "wind_smoke",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_E_dash_smoke.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "distort",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_w_windwall_distort_text.tex",
+          "particle_lifetime": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_w_windwall_enemy_03",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_w_windwall_enemy_03",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoWMovingWall_buffactivate",
+      "emitters": [
+        {
+          "name": "wind_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "steam_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "wind_shape2",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "side_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_steam",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "top_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 0.75
+        },
+        {
+          "name": "Team_Ind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_indicator_enemy.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "Team_Ind_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_basic_attack_flash.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "Team_Ind_sub",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_W_windwall_indicator_sub.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "ground_crack",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_W_windwall_groud_crack.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "ground_crack_hot",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_groud_crack_alpha.tex",
+          "particle_lifetime": 1.5
+        },
+        {
+          "name": "ground_spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_recall_spark.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "wind_smoke",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_E_dash_smoke.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "distort",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_w_windwall_distort_text.tex",
+          "particle_lifetime": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_w_windwall_enemy_02",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_w_windwall_enemy_02",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoWMovingWall_buffactivate",
+      "emitters": [
+        {
+          "name": "wind_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "steam_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "wind_shape2",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "side_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_steam",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "top_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 0.75
+        },
+        {
+          "name": "Team_Ind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_indicator_enemy.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "Team_Ind_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_basic_attack_flash.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "Team_Ind_sub",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_W_windwall_indicator_sub.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "ground_crack",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_W_windwall_groud_crack.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "ground_crack_hot",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_groud_crack_alpha.tex",
+          "particle_lifetime": 1.5
+        },
+        {
+          "name": "ground_spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_crack_spark.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "wind_smoke",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_E_dash_smoke.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "distort",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_w_windwall_distort_text.tex",
+          "particle_lifetime": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_w_windwall_enemy_05",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_w_windwall_enemy_05",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoWMovingWall_buffactivate",
+      "emitters": [
+        {
+          "name": "wind_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "steam_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "wind_shape2",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "side_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_steam",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "top_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 0.75
+        },
+        {
+          "name": "Team_Ind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_indicator_enemy.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "Team_Ind_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_basic_attack_flash.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "Team_Ind_sub",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_W_windwall_indicator_sub.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "ground_crack",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_W_windwall_groud_crack.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "ground_crack_hot",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_groud_crack_alpha.tex",
+          "particle_lifetime": 1.5
+        },
+        {
+          "name": "ground_spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_crack_spark.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "wind_smoke",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_E_dash_smoke.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "distort",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_w_windwall_distort_text.tex",
+          "particle_lifetime": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_w_windwall_enemy_04",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_w_windwall_enemy_04",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoWMovingWall_buffactivate",
+      "emitters": [
+        {
+          "name": "wind_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "steam_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "wind_shape2",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "side_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_steam",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "top_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 0.75
+        },
+        {
+          "name": "Team_Ind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_indicator_enemy.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "Team_Ind_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_basic_attack_flash.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "Team_Ind_sub",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_W_windwall_indicator_sub.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "ground_crack",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_W_windwall_groud_crack.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "ground_crack_hot",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_groud_crack_alpha.tex",
+          "particle_lifetime": 1.5
+        },
+        {
+          "name": "ground_spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_crack_spark.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "wind_smoke",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_E_dash_smoke.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "distort",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_w_windwall_distort_text.tex",
+          "particle_lifetime": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_passive_activate",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_passive_activate",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoPassiveMSShieldOn_buffdeactivate",
+      "emitters": [
+        {
+          "name": "orb",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_passive_wind.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "outro",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_passive_wind.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "distort",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Aura_Self.tex",
+          "particle_lifetime": 0.6000000238418579
+        },
+        {
+          "name": "flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_Q_wind_hit_flash.tex",
+          "particle_lifetime": 0.4000000059604645
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_W_windwall1",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_W_windwall1",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoWMovingWall_buffactivate",
+      "emitters": [
+        {
+          "name": "wind_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "steam_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "wind_shape2",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "side_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_steam",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "top_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 0.75
+        },
+        {
+          "name": "Team_Ind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_indicator.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "Team_Ind_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_windwall_glow.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "Team_Ind_sub",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_W_windwall_indicator_sub.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "ground_crack",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_W_windwall_groud_crack.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "ground_crack_hot",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_groud_crack_alpha.tex",
+          "particle_lifetime": 1.5
+        },
+        {
+          "name": "ground_spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_crack_spark.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "wind_smoke",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_E_dash_smoke.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "distort",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_w_windwall_distort_text.tex",
+          "particle_lifetime": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_W_windwall3",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_W_windwall3",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoWMovingWall_buffactivate",
+      "emitters": [
+        {
+          "name": "wind_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "steam_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "wind_shape2",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "side_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_steam",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "top_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 0.75
+        },
+        {
+          "name": "Team_Ind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_indicator.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "Team_Ind_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_windwall_glow.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "Team_Ind_sub",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_W_windwall_indicator_sub.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "ground_crack",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_W_windwall_groud_crack.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "ground_crack_hot",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_groud_crack_alpha.tex",
+          "particle_lifetime": 1.5
+        },
+        {
+          "name": "ground_spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_recall_spark.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "wind_smoke",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_E_dash_smoke.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "distort",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_w_windwall_distort_text.tex",
+          "particle_lifetime": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_W_windwall2",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_W_windwall2",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoWMovingWall_buffactivate",
+      "emitters": [
+        {
+          "name": "wind_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "steam_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "wind_shape2",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "side_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_steam",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "top_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 0.75
+        },
+        {
+          "name": "Team_Ind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_indicator.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "Team_Ind_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_windwall_glow.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "Team_Ind_sub",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_W_windwall_indicator_sub.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "ground_crack",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_W_windwall_groud_crack.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "ground_crack_hot",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_groud_crack_alpha.tex",
+          "particle_lifetime": 1.5
+        },
+        {
+          "name": "ground_spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_crack_spark.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "wind_smoke",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_E_dash_smoke.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "distort",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_w_windwall_distort_text.tex",
+          "particle_lifetime": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_W_windwall5",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_W_windwall5",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoWMovingWall_buffactivate",
+      "emitters": [
+        {
+          "name": "wind_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "steam_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "wind_shape2",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "side_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_steam",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "top_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 0.75
+        },
+        {
+          "name": "Team_Ind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_indicator.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "Team_Ind_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_windwall_glow.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "Team_Ind_sub",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_W_windwall_indicator_sub.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "ground_crack",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_W_windwall_groud_crack.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "ground_crack_hot",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_groud_crack_alpha.tex",
+          "particle_lifetime": 1.5
+        },
+        {
+          "name": "ground_spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_crack_spark.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "wind_smoke",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_E_dash_smoke.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "distort",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_w_windwall_distort_text.tex",
+          "particle_lifetime": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_W_windwall4",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_W_windwall4",
+      "excluded_from_base_reference": false,
+      "sound_on_create": "Play_sfx_Yasuo_YasuoWMovingWall_buffactivate",
+      "emitters": [
+        {
+          "name": "wind_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "steam_wall",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "wind_shape2",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "side_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_windwall_main_02.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "back_wind_steam",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "top_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01_redraw.tex",
+          "particle_lifetime": 0.75
+        },
+        {
+          "name": "Team_Ind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_indicator.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "Team_Ind_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_windwall_glow.tex",
+          "particle_lifetime": 1.2999999523162842
+        },
+        {
+          "name": "Team_Ind_sub",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_skin01_W_windwall_indicator_sub.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "ground_crack",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Base_W_windwall_groud_crack.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "ground_crack_hot",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_windwall_groud_crack_alpha.tex",
+          "particle_lifetime": 1.5
+        },
+        {
+          "name": "ground_spark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_W_crack_spark.tex",
+          "particle_lifetime": 0.4000000059604645
+        },
+        {
+          "name": "wind_smoke",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_E_dash_smoke.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "distort",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_w_windwall_distort_text.tex",
+          "particle_lifetime": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Q_windstrike_02",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q_windstrike_02",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "sword",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_sword.tex",
+          "particle_lifetime": 0.3499999940395355
+        },
+        {
+          "name": "sword_sub",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_sword_sub.tex",
+          "particle_lifetime": 0.44999998807907104
+        },
+        {
+          "name": "Flash",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_sword.tex",
+          "particle_lifetime": 0.15000000596046448
+        },
+        {
+          "name": "distort",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_e_dash_sub.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "shadow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_sword_shadow.tex",
+          "particle_lifetime": 0.30000001192092896
+        },
+        {
+          "name": "smoke",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_smoke.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "build-up",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_indicator.tex",
+          "particle_lifetime": 0.5
+        },
+        {
+          "name": "second_swirl",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_Q_second_swirl.tex",
+          "particle_lifetime": 0.699999988079071
+        },
+        {
+          "name": "second_swirl_sub",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_Q_second_swirl.tex",
+          "particle_lifetime": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_R_slash_cas",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_R_slash_cas",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "slash1",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Basic_attack_trail.tex",
+          "particle_lifetime": 0.30000001192092896
+        },
+        {
+          "name": "slash2",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Basic_attack_trail.tex",
+          "particle_lifetime": 0.30000001192092896
+        },
+        {
+          "name": "slash3",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Basic_attack_trail.tex",
+          "particle_lifetime": 0.25
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_R_SwordGlow",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_R_SwordGlow",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "Sword_glow",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_dash_linger.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "Sword_glow2",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_passive_smoke.tex",
+          "particle_lifetime": 0.5
+        },
+        {
+          "name": "texture_swap",
+          "texture": null,
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "sword_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_R_sword_shape.tex",
+          "particle_lifetime": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_Q_wind_ready_buff",
+      "source": "skin0.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q_wind_ready_buff",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "orb",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_tornado_buff_af.tex",
+          "particle_lifetime": 1.0
+        },
+        {
+          "name": "smoke",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_Q_smoke.tex",
+          "particle_lifetime": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_Base_R_dash",
+      "source": "yasuo_multi_skins_skin0_skins_skin1_skins_skin4_skins_skin5_skins_skin6_skins_skin7_skins_skin8.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_R_dash",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "smoke_fill",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_R_dash_smoke_fill.tex",
+          "particle_lifetime": 0.20000000298023224
+        },
+        {
+          "name": "smoke_shape",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_passive_smoke.tex",
+          "particle_lifetime": 0.800000011920929
+        }
+      ]
+    },
+    {
+      "name": "Yasuo_base_Dance_flute_wind",
+      "source": "yasuo_multi_skins_skin0_skins_skin2_skins_skin34_skins_skin54_skins_skin55_skins_skin9.bin.json",
+      "entry": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_base_Dance_flute_wind",
+      "excluded_from_base_reference": false,
+      "sound_on_create": null,
+      "emitters": [
+        {
+          "name": "Ground_dark",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_EQ_fill_circle_cas.tex",
+          "particle_lifetime": 4.0
+        },
+        {
+          "name": "dark_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_dash_black.tex",
+          "particle_lifetime": 2.0
+        },
+        {
+          "name": "inner_wind",
+          "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_wind_blow_01.tex",
+          "particle_lifetime": 4.0
+        }
+      ]
+    }
+  ],
+  "animation_clips": [
+    {
+      "name": "{08b0f422}",
+      "type": "AtomicClipData",
+      "tick_duration": null,
+      "animation": {
+        "mAnimationFilePath": "{e9ee141e95cf8537}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "{56f6d84b}",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{1a2e91c33dc85e21}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Sword2LHandSheath": {
+          "mName": "Sword2LHandSheath",
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword2LHandSheath",
+          "__type": "JointSnapEventData"
+        },
+        "Sheath2LHand": {
+          "mName": "Sheath2LHand",
+          "mJointNameToOverride": "Sheath",
+          "mJointNameToSnapTo": "Sheath2LHand",
+          "__type": "JointSnapEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Attack2",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{9b7d384ecf7cb6e3}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "{96ee59ff}": {
+          "mName": "{96ee59ff}",
+          "mStartFrame": 3.0,
+          "mEffectKey": "Yasuo_BA_trail_2",
+          "mParticleEventDataPairList": [
+            {
+              "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "mIsKillEvent": false,
+          "__type": "ParticleEventData"
+        },
+        "{f4ea4345}": {
+          "mName": "{f4ea4345}",
+          "mShowSubmeshList": [
+            "Yasuo_Base_Weapon_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "{6b01d0e8}",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{7d4ae1418c385969}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "{401ff3c4}",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{c385ebb7335d1ed6}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Sword2LHandSheath": {
+          "mName": "Sword2LHandSheath",
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword2LHandSheath",
+          "__type": "JointSnapEventData"
+        },
+        "Sheath2LHand": {
+          "mName": "Sheath2LHand",
+          "mJointNameToOverride": "Sheath",
+          "mJointNameToSnapTo": "Sheath2LHand",
+          "__type": "JointSnapEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Run",
+      "type": "SequencerClipData",
+      "tick_duration": null,
+      "animation": null,
+      "events": {},
+      "composition": [
+        "{401ff3c4}"
+      ]
+    },
+    {
+      "name": "Attack3",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{a5f039cb35d6f796}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "{95ee586c}": {
+          "mName": "{95ee586c}",
+          "mStartFrame": 3.0,
+          "mEffectKey": "Yasuo_BA_trail_3",
+          "mParticleEventDataPairList": [
+            {
+              "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "mIsKillEvent": false,
+          "__type": "ParticleEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Attack4",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{76b8eab2d2aaa5eb}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "{94ee56d9}": {
+          "mName": "{94ee56d9}",
+          "mEffectKey": "Yasuo_BA_trail_4",
+          "mParticleEventDataPairList": [
+            {
+              "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "mIsKillEvent": false,
+          "__type": "ParticleEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Attack_First",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{e7981d9ae639c666}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "{1113e4d8}": {
+          "mName": "{1113e4d8}",
+          "mStartFrame": 3.0,
+          "mEffectKey": "Yasuo_BA_trail_1",
+          "mParticleEventDataPairList": [
+            {
+              "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "mIsKillEvent": false,
+          "__type": "ParticleEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Spell1_Dash",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{ab4154c837bd9535}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "{f4ea4345}": {
+          "mName": "{f4ea4345}",
+          "mShowSubmeshList": [
+            "Yasuo_Base_Weapon_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Spell3",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{b552d9ec8bc6b19a}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Sword2World": {
+          "mName": "Sword2World",
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword_World",
+          "__type": "JointSnapEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Run2",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{914cccfafa983f69}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "Spell2_BASE",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{a0a8567f730d0bd9}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "Spell2_180",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{e076a19807c35dac}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "{f4ea4345}": {
+          "mName": "{f4ea4345}",
+          "mShowSubmeshList": [
+            "Yasuo_Base_Weapon_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Spell2_-180",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{15d1be0c8c6101e8}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "Death",
+      "type": "AtomicClipData",
+      "tick_duration": null,
+      "animation": {
+        "mAnimationFilePath": "{1963572c04ad0ee7}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Audio_Death": {
+          "mName": "Audio_Death",
+          "mEffectKey": "Yasuo_Emote_death_sound",
+          "mParticleEventDataPairList": [
+            {
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "__type": "ParticleEventData"
+        },
+        "Sword2World": {
+          "mName": "Sword2World",
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword_World",
+          "__type": "JointSnapEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "{4f00d30c}",
+      "type": "AtomicClipData",
+      "tick_duration": null,
+      "animation": {
+        "mAnimationFilePath": "{ecbe4687cb38ebf2}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "Spell4",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{485a89afd1b29bc2}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "{49b908d9}",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{c385ebb7335d1ed6}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Sword2LHandSheath": {
+          "mName": "Sword2LHandSheath",
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword2LHandSheath",
+          "__type": "JointSnapEventData"
+        },
+        "Sheath2LHand": {
+          "mName": "Sheath2LHand",
+          "mJointNameToOverride": "Sheath",
+          "mJointNameToSnapTo": "Sheath2LHand",
+          "__type": "JointSnapEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Spell1A",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{094984a8ace32050}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "{f4ea4345}": {
+          "mName": "{f4ea4345}",
+          "mShowSubmeshList": [
+            "Yasuo_Base_Weapon_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Spell1B",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{5e59998e6d955c70}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "{f4ea4345}": {
+          "mName": "{f4ea4345}",
+          "mShowSubmeshList": [
+            "Yasuo_Base_Weapon_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Spell1C",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{8ac970374e309fe6}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "{f4ea4345}": {
+          "mName": "{f4ea4345}",
+          "mShowSubmeshList": [
+            "Yasuo_Base_Weapon_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Spell1_Wind",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{8e723b23cef8ea27}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "Channel",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{a92e9e223cfd6605}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "{4100ffc8}": {
+          "mName": "{4100ffc8}",
+          "mHideSubmeshList": [
+            "Yasuo_Base_Weapon_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Channel_Wndup",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{1f11ad83b2c7067e}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "{4100ffc8}": {
+          "mName": "{4100ffc8}",
+          "mHideSubmeshList": [
+            "Yasuo_Base_Weapon_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Spell2_90",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{2347400f2bf393fd}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "Spell2_-90",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{48c77bdeda06cc48}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "Run_Fast",
+      "type": "SequencerClipData",
+      "tick_duration": null,
+      "animation": null,
+      "events": {},
+      "composition": [
+        "Run_Fast_In",
+        "Run_Fast_Loop",
+        "Run_Fast_Loop",
+        "{f1b6fdb7}",
+        "{4f00d30c}"
+      ]
+    },
+    {
+      "name": "Run_Fast_In",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{65e5845dd83fcbe5}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "Joke",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{b130c796b1e5c025}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Sword2LHandSheath": {
+          "mName": "Sword2LHandSheath",
+          "mStartFrame": 166.0,
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword2LHandSheath",
+          "__type": "JointSnapEventData"
+        },
+        "Audio_Joke": {
+          "mName": "Audio_Joke",
+          "mStartFrame": -2.0,
+          "mEffectKey": "Yasuo_Emote_joke_sound",
+          "mParticleEventDataPairList": [
+            {
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "__type": "ParticleEventData"
+        },
+        "{4d92f4fb}": {
+          "mName": "{4d92f4fb}",
+          "mEndFrame": 2.0,
+          "mHideSubmeshList": [
+            "Yasuo_Base_Weapon_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        },
+        "{4e92f68e}": {
+          "mName": "{4e92f68e}",
+          "mStartFrame": 169.0,
+          "mHideSubmeshList": [
+            "Yasuo_Base_Weapon_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Taunt",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{aa2f2d0bf7845d4f}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Taunt": {
+          "mName": "Taunt",
+          "mEffectKey": "Yasuo_Taunt_spit",
+          "mParticleEventDataPairList": [
+            {
+              "mBoneName": "c_buffbone_glb_head_loc",
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "__type": "ParticleEventData"
+        },
+        "Audio_Taunt": {
+          "mName": "Audio_Taunt",
+          "mStartFrame": 2.0,
+          "mEffectKey": "Yasuo_Emote_taunt_sound",
+          "mParticleEventDataPairList": [
+            {
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "__type": "ParticleEventData"
+        },
+        "{4100ffc8}": {
+          "mName": "{4100ffc8}",
+          "mStartFrame": 104.0,
+          "mEndFrame": 166.0,
+          "mShowSubmeshList": [
+            "Yasuo_Base_Weapon_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        },
+        "{4d92f4fb}": {
+          "mName": "{4d92f4fb}",
+          "mEndFrame": 103.0,
+          "mHideSubmeshList": [
+            "Yasuo_Base_Weapon_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        },
+        "{4e92f68e}": {
+          "mName": "{4e92f68e}",
+          "mStartFrame": 167.0,
+          "mEndFrame": 222.0,
+          "mHideSubmeshList": [
+            "Yasuo_Base_Weapon_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        },
+        "Sword2LHandSheath": {
+          "mName": "Sword2LHandSheath",
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword2LHandSheath",
+          "__type": "JointSnapEventData"
+        },
+        "{fe09406e}": {
+          "mName": "{fe09406e}",
+          "mJointNameToOverride": "Sheath2LHand",
+          "mJointNameToSnapTo": "Sheath",
+          "__type": "JointSnapEventData"
+        },
+        "{632cebf2}": {
+          "mName": "{632cebf2}",
+          "mEffectKey": "Yasuo_Emote_taunt_generic",
+          "mParticleEventDataPairList": [
+            {
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "mIsKillEvent": false,
+          "__type": "ParticleEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Laugh",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{3f722193d202d4fb}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Audio_Laugh": {
+          "mName": "Audio_Laugh",
+          "mEffectKey": "Yasuo_Emote_laugh_sound",
+          "mParticleEventDataPairList": [
+            {
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "__type": "ParticleEventData"
+        },
+        "{4100ffc8}": {
+          "mName": "{4100ffc8}",
+          "mHideSubmeshList": [
+            "Yasuo_Base_Weapon_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        },
+        "Sword2LHandSheath": {
+          "mName": "Sword2LHandSheath",
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword2LHandSheath",
+          "__type": "JointSnapEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Spell2_0",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{08d13acd89534af9}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "{f4ea4345}": {
+          "mName": "{f4ea4345}",
+          "mShowSubmeshList": [
+            "Yasuo_Base_Weapon_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "{822d5260}",
+      "type": "ParametricClipData",
+      "tick_duration": null,
+      "animation": null,
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "{3f589716}",
+      "type": "ParametricClipData",
+      "tick_duration": null,
+      "animation": null,
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "Run_Fast_Loop",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{77f58d7f55c21908}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "{f1b6fdb7}",
+      "type": "AtomicClipData",
+      "tick_duration": null,
+      "animation": {
+        "mAnimationFilePath": "{c385ebb7335d1ed6}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "{f724b619}": {
+          "mName": "{f724b619}",
+          "mStartFrame": 32.0,
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword_Sheathed",
+          "__type": "JointSnapEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "{aec9ef19}",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{81eebbc3a14d6f0e}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "{f724b619}": {
+          "mName": "{f724b619}",
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword_Sheathed",
+          "__type": "JointSnapEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "{fb8f4ae2}",
+      "type": "SequencerClipData",
+      "tick_duration": null,
+      "animation": null,
+      "events": {},
+      "composition": [
+        "Run_Fast_IN_Sheathed",
+        "{4f00d30c}"
+      ]
+    },
+    {
+      "name": "Run_Fast_IN_Sheathed",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{1e59873cda933369}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "{f724b619}": {
+          "mName": "{f724b619}",
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword_Sheathed",
+          "__type": "JointSnapEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "{eed63eca}",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{f57bf42fe7f3e8cf}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "{5a558fb9}",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{0374202da684ac7d}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Recall": {
+          "mName": "Recall",
+          "mEffectKey": "Yasuo_Recall",
+          "mParticleEventDataPairList": [
+            {
+              "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "__type": "ParticleEventData"
+        },
+        "Audio_Recall": {
+          "mName": "Audio_Recall",
+          "mStartFrame": 14.0,
+          "mEffectKey": "Yasuo_recall_start_sound",
+          "mParticleEventDataPairList": [
+            {
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "__type": "ParticleEventData"
+        },
+        "Sword2World": {
+          "mName": "Sword2World",
+          "mEndFrame": 86.0,
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword_World",
+          "__type": "JointSnapEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Recall",
+      "type": "SequencerClipData",
+      "tick_duration": null,
+      "animation": null,
+      "events": {},
+      "composition": [
+        "{5a558fb9}",
+        "{eed63eca}"
+      ]
+    },
+    {
+      "name": "{120aa0ea}",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333299979567528,
+      "animation": {
+        "mAnimationFilePath": "{a25fcac120a4b3da}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "{4100ffc8}": {
+          "mName": "{4100ffc8}",
+          "mStartFrame": 9.0,
+          "mShowSubmeshList": [
+            "Yasuo_Base_Weapon_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        },
+        "Sword2LHandSheath": {
+          "mName": "Sword2LHandSheath",
+          "mStartFrame": 136.0,
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword2LHandSheath",
+          "__type": "JointSnapEventData"
+        },
+        "Sheath2LHand": {
+          "mName": "Sheath2LHand",
+          "mStartFrame": 136.0,
+          "mJointNameToOverride": "Sheath",
+          "mJointNameToSnapTo": "Sheath2LHand",
+          "__type": "JointSnapEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "{31084864}",
+      "type": "SelectorClipData",
+      "tick_duration": null,
+      "animation": null,
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "Idle1",
+      "type": "SequencerClipData",
+      "tick_duration": null,
+      "animation": null,
+      "events": {},
+      "composition": [
+        "{56f6d84b}",
+        "{31084864}"
+      ]
+    },
+    {
+      "name": "Spell2",
+      "type": "ParallelClipData",
+      "tick_duration": null,
+      "animation": null,
+      "events": {},
+      "composition": [
+        "Spell2_BASE",
+        "{822d5260}"
+      ]
+    },
+    {
+      "name": "Dance_LOOP_Raw",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333333879709244,
+      "animation": {
+        "mAnimationFilePath": "{be555317836192e3}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Flute": {
+          "mName": "Flute",
+          "mShowSubmeshList": [
+            "Yasuo_Instrument_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        },
+        "Audio_Dance": {
+          "mName": "Audio_Dance",
+          "mStartFrame": 2.0,
+          "mEffectKey": "Yasuo_Emote_dance_sound",
+          "mParticleEventDataPairList": [
+            {
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "__type": "ParticleEventData"
+        },
+        "flute_wind": {
+          "mName": "flute_wind",
+          "mStartFrame": 2.0,
+          "mEffectKey": "Yasuo_Dance_flute_wind",
+          "mParticleEventDataPairList": [
+            {
+              "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "__type": "ParticleEventData"
+        },
+        "Sword2World": {
+          "mName": "Sword2World",
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword_World",
+          "__type": "JointSnapEventData"
+        },
+        "{4100ffc8}": {
+          "mName": "{4100ffc8}",
+          "mHideSubmeshList": [
+            "Yasuo_Base_Weapon_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Dance_IN_RAW",
+      "type": "AtomicClipData",
+      "tick_duration": null,
+      "animation": {
+        "mAnimationFilePath": "{d324fe4ac2680a68}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Flute": {
+          "mName": "Flute",
+          "mStartFrame": 64.0,
+          "mShowSubmeshList": [
+            "Yasuo_Instrument_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        },
+        "{ddf80471}": {
+          "mName": "{ddf80471}",
+          "mStartFrame": 35.0,
+          "mEffectKey": "Yasuo_Emote_dance_in_sound",
+          "mParticleEventDataPairList": [
+            {
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "__type": "ParticleEventData"
+        },
+        "Sword2World": {
+          "mName": "Sword2World",
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword_World",
+          "__type": "JointSnapEventData"
+        },
+        "{4100ffc8}": {
+          "mName": "{4100ffc8}",
+          "mHideSubmeshList": [
+            "Yasuo_Base_Weapon_Mat"
+          ],
+          "__type": "SubmeshVisibilityEventData"
+        },
+        "FaceCamera": {
+          "YRotationDegrees": 135.0,
+          "__type": "FaceTargetEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Dance",
+      "type": "SequencerClipData",
+      "tick_duration": null,
+      "animation": null,
+      "events": {},
+      "composition": [
+        "Dance_IN_RAW",
+        "Dance_LOOP_Raw"
+      ]
+    },
+    {
+      "name": "Run_Haste",
+      "type": "AtomicClipData",
+      "tick_duration": null,
+      "animation": {
+        "mAnimationFilePath": "{ecbe4687cb38ebf2}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Sword2LHandSheath": {
+          "mName": "Sword2LHandSheath",
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword2LHandSheath",
+          "__type": "JointSnapEventData"
+        },
+        "Sheath2LHand": {
+          "mName": "Sheath2LHand",
+          "mJointNameToOverride": "Sheath",
+          "mJointNameToSnapTo": "Sheath2LHand",
+          "__type": "JointSnapEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "{f337510f}",
+      "type": "AtomicClipData",
+      "tick_duration": null,
+      "animation": {
+        "mAnimationFilePath": "{e9ee141e95cf8537}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Sword2LHandSheath": {
+          "mName": "Sword2LHandSheath",
+          "mStartFrame": 36.0,
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword2LHandSheath",
+          "__type": "JointSnapEventData"
+        },
+        "Sheath2LHand": {
+          "mName": "Sheath2LHand",
+          "mJointNameToOverride": "Sheath",
+          "mJointNameToSnapTo": "Sheath2LHand",
+          "__type": "JointSnapEventData"
+        },
+        "sheath_spark": {
+          "mName": "sheath_spark",
+          "mStartFrame": 40.0,
+          "mEffectKey": "Yasuo_I_sheath_spark",
+          "mParticleEventDataPairList": [
+            {
+              "mBoneName": "Sheath",
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "mIsKillEvent": false,
+          "__type": "ParticleEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Sheath_Run",
+      "type": "AtomicClipData",
+      "tick_duration": null,
+      "animation": {
+        "mAnimationFilePath": "{7d4ae1418c385969}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Sword2LHandSheath": {
+          "mName": "Sword2LHandSheath",
+          "mStartFrame": 35.0,
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword2LHandSheath",
+          "__type": "JointSnapEventData"
+        },
+        "Sheath2LHand": {
+          "mName": "Sheath2LHand",
+          "mJointNameToOverride": "Sheath",
+          "mJointNameToSnapTo": "Sheath2LHand",
+          "__type": "JointSnapEventData"
+        },
+        "sheath_spark": {
+          "mName": "sheath_spark",
+          "mStartFrame": 40.0,
+          "mEffectKey": "Yasuo_I_sheath_spark",
+          "mParticleEventDataPairList": [
+            {
+              "mBoneName": "Sheath",
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "mIsKillEvent": false,
+          "__type": "ParticleEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Sheath",
+      "type": "ConditionBoolClipData",
+      "tick_duration": null,
+      "animation": null,
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "Idle_Out",
+      "type": "AtomicClipData",
+      "tick_duration": 0.03333333879709244,
+      "animation": {
+        "mAnimationFilePath": "{11dcf5cb5180ef2e}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "{86b7dee4}",
+      "type": "AtomicClipData",
+      "tick_duration": null,
+      "animation": {
+        "mAnimationFilePath": "{c385ebb7335d1ed6}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Sword2LHandSheath": {
+          "mName": "Sword2LHandSheath",
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword2LHandSheath",
+          "__type": "JointSnapEventData"
+        },
+        "Sheath2LHand": {
+          "mName": "Sheath2LHand",
+          "mJointNameToOverride": "Sheath",
+          "mJointNameToSnapTo": "Sheath2LHand",
+          "__type": "JointSnapEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Run_Haste_Out",
+      "type": "AtomicClipData",
+      "tick_duration": null,
+      "animation": {
+        "mAnimationFilePath": "{2a38ce95a5a9b825}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Sheath2LHand": {
+          "mName": "Sheath2LHand",
+          "mJointNameToOverride": "Sheath",
+          "mJointNameToSnapTo": "Sheath2LHand",
+          "__type": "JointSnapEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "Sheath_Run_Haste",
+      "type": "AtomicClipData",
+      "tick_duration": null,
+      "animation": {
+        "mAnimationFilePath": "{ffff4880b47e9e2b}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Sheath2LHand": {
+          "mName": "Sheath2LHand",
+          "mJointNameToOverride": "Sheath",
+          "mJointNameToSnapTo": "Sheath2LHand",
+          "__type": "JointSnapEventData"
+        },
+        "{42da2f84}": {
+          "mName": "{42da2f84}",
+          "mStartFrame": 34.0,
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword2LHandSheath",
+          "__type": "JointSnapEventData"
+        },
+        "sheath_spark": {
+          "mName": "sheath_spark",
+          "mStartFrame": 40.0,
+          "mEffectKey": "Yasuo_I_sheath_spark",
+          "mParticleEventDataPairList": [
+            {
+              "mBoneName": "Sheath",
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "mIsKillEvent": false,
+          "__type": "ParticleEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "{4f62db84}",
+      "type": "AtomicClipData",
+      "tick_duration": null,
+      "animation": {
+        "mAnimationFilePath": "{af4807ca49a70312}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "Run_Out_Loop",
+      "type": "AtomicClipData",
+      "tick_duration": null,
+      "animation": {
+        "mAnimationFilePath": "{609d500be7ac92e5}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {},
+      "composition": null
+    },
+    {
+      "name": "{2116d5e1}",
+      "type": "SequencerClipData",
+      "tick_duration": null,
+      "animation": null,
+      "events": {},
+      "composition": [
+        "{4f62db84}",
+        "Run_Out_Loop"
+      ]
+    },
+    {
+      "name": "Attack1",
+      "type": "AtomicClipData",
+      "tick_duration": null,
+      "animation": {
+        "mAnimationFilePath": "{e7981d9ae639c666}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "{cf539fae}": {
+          "mName": "{cf539fae}",
+          "mStartFrame": 3.0,
+          "mEffectKey": "Yasuo_BA_trail_1",
+          "mParticleEventDataPairList": [
+            {
+              "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "mIsKillEvent": false,
+          "__type": "ParticleEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "{c2cfde5a}",
+      "type": "AtomicClipData",
+      "tick_duration": null,
+      "animation": {
+        "mAnimationFilePath": "{a25fcac120a4b3da}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Sword2LHandSheath": {
+          "mName": "Sword2LHandSheath",
+          "mStartFrame": 136.0,
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword2LHandSheath",
+          "__type": "JointSnapEventData"
+        },
+        "Sheath2LHand": {
+          "mName": "Sheath2LHand",
+          "mStartFrame": 136.0,
+          "mJointNameToOverride": "Sheath",
+          "mJointNameToSnapTo": "Sheath2LHand",
+          "__type": "JointSnapEventData"
+        },
+        "{c29e922c}": {
+          "mName": "{c29e922c}",
+          "mStartFrame": 13.0,
+          "mEffectKey": "Yasuo_Emote_taunt_interactive_riven",
+          "mParticleEventDataPairList": [
+            {
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "mIsKillEvent": false,
+          "__type": "ParticleEventData"
+        },
+        "{f44d7fb4}": {
+          "mName": "{f44d7fb4}",
+          "mStartFrame": 1.0,
+          "mEffectKey": "Yasuo_Emote_taunt2_sound",
+          "mParticleEventDataPairList": [
+            {
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "__type": "ParticleEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "{0138ce20}",
+      "type": "AtomicClipData",
+      "tick_duration": null,
+      "animation": {
+        "mAnimationFilePath": "{a25fcac120a4b3da}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Sword2LHandSheath": {
+          "mName": "Sword2LHandSheath",
+          "mStartFrame": 136.0,
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword2LHandSheath",
+          "__type": "JointSnapEventData"
+        },
+        "Sheath2LHand": {
+          "mName": "Sheath2LHand",
+          "mStartFrame": 136.0,
+          "mJointNameToOverride": "Sheath",
+          "mJointNameToSnapTo": "Sheath2LHand",
+          "__type": "JointSnapEventData"
+        },
+        "{cdaa1a22}": {
+          "mName": "{cdaa1a22}",
+          "mStartFrame": 10.0,
+          "mEffectKey": "Yasuo_Emote_taunt_interactive_ninja",
+          "mParticleEventDataPairList": [
+            {
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "mIsKillEvent": false,
+          "__type": "ParticleEventData"
+        },
+        "{f44d7fb4}": {
+          "mName": "{f44d7fb4}",
+          "mStartFrame": 1.0,
+          "mEffectKey": "Yasuo_Emote_taunt2_sound",
+          "mParticleEventDataPairList": [
+            {
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "__type": "ParticleEventData"
+        }
+      },
+      "composition": null
+    },
+    {
+      "name": "{6438e53a}",
+      "type": "AtomicClipData",
+      "tick_duration": null,
+      "animation": {
+        "mAnimationFilePath": "{a25fcac120a4b3da}",
+        "__type": "AnimationResourceData"
+      },
+      "events": {
+        "Sword2LHandSheath": {
+          "mName": "Sword2LHandSheath",
+          "mStartFrame": 136.0,
+          "mJointNameToOverride": "Sword",
+          "mJointNameToSnapTo": "Sword2LHandSheath",
+          "__type": "JointSnapEventData"
+        },
+        "Sheath2LHand": {
+          "mName": "Sheath2LHand",
+          "mStartFrame": 136.0,
+          "mJointNameToOverride": "Sheath",
+          "mJointNameToSnapTo": "Sheath2LHand",
+          "__type": "JointSnapEventData"
+        },
+        "{7baeda82}": {
+          "mName": "{7baeda82}",
+          "mStartFrame": 14.0,
+          "mEffectKey": "Yasuo_Emote_taunt_interactive_yi",
+          "mParticleEventDataPairList": [
+            {
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "mIsKillEvent": false,
+          "__type": "ParticleEventData"
+        },
+        "{f44d7fb4}": {
+          "mName": "{f44d7fb4}",
+          "mStartFrame": 1.0,
+          "mEffectKey": "Yasuo_Emote_taunt2_sound",
+          "mParticleEventDataPairList": [
+            {
+              "__type": "ParticleEventDataPair"
+            }
+          ],
+          "mIsLoop": false,
+          "__type": "ParticleEventData"
+        }
+      },
+      "composition": null
+    }
+  ],
+  "audio_events": [
+    "Play_sfx_Yasuo_Dance3D_buffactivate",
+    "Play_sfx_Yasuo_Dance3D_buffactivate_leadin",
+    "Play_sfx_Yasuo_Death3D_cast",
+    "Play_sfx_Yasuo_Joke3D_buffactivate",
+    "Play_sfx_Yasuo_Laugh3D_buffactivate",
+    "Play_sfx_Yasuo_Recall_windup",
+    "Play_sfx_Yasuo_Taunt23D_buffactivate",
+    "Play_sfx_Yasuo_Taunt3D_buffactivate",
+    "Play_sfx_Yasuo_YasuoBasicAttack2_OnCast",
+    "Play_sfx_Yasuo_YasuoBasicAttack2_OnHit",
+    "Play_sfx_Yasuo_YasuoBasicAttack3_OnCast",
+    "Play_sfx_Yasuo_YasuoBasicAttack3_OnHit",
+    "Play_sfx_Yasuo_YasuoBasicAttack4_OnCast",
+    "Play_sfx_Yasuo_YasuoBasicAttack4_OnHit",
+    "Play_sfx_Yasuo_YasuoBasicAttack5_OnCast",
+    "Play_sfx_Yasuo_YasuoBasicAttack5_OnHit",
+    "Play_sfx_Yasuo_YasuoBasicAttack6_OnCast",
+    "Play_sfx_Yasuo_YasuoBasicAttack6_OnHit",
+    "Play_sfx_Yasuo_YasuoBasicAttack_OnCast",
+    "Play_sfx_Yasuo_YasuoBasicAttack_OnHit",
+    "Play_sfx_Yasuo_YasuoCritAttack2_OnCast",
+    "Play_sfx_Yasuo_YasuoCritAttack2_OnHit",
+    "Play_sfx_Yasuo_YasuoCritAttack3_OnCast",
+    "Play_sfx_Yasuo_YasuoCritAttack3_OnHit",
+    "Play_sfx_Yasuo_YasuoCritAttack4_OnCast",
+    "Play_sfx_Yasuo_YasuoCritAttack4_OnHit",
+    "Play_sfx_Yasuo_YasuoCritAttack5_OnCast",
+    "Play_sfx_Yasuo_YasuoCritAttack5_OnHit",
+    "Play_sfx_Yasuo_YasuoCritAttack_OnCast",
+    "Play_sfx_Yasuo_YasuoCritAttack_OnHit",
+    "Play_sfx_Yasuo_YasuoDashWrapper_cast",
+    "Play_sfx_Yasuo_YasuoDashWrapper_hit",
+    "Play_sfx_Yasuo_YasuoEQComboSoundHit_OnBuffActivate",
+    "Play_sfx_Yasuo_YasuoEQComboSoundHit_OnHit",
+    "Play_sfx_Yasuo_YasuoPassiveMSShieldOn_buffdeactivate",
+    "Play_sfx_Yasuo_YasuoPassiveShield_OnBuffActivate",
+    "Play_sfx_Yasuo_YasuoQ2_OnCast",
+    "Play_sfx_Yasuo_YasuoQ3W_OnBuffActivate",
+    "Play_sfx_Yasuo_YasuoQ3W_OnBuffDeactivate",
+    "Play_sfx_Yasuo_YasuoQ3W_OnCast",
+    "Play_sfx_Yasuo_YasuoQ3W_hit",
+    "Play_sfx_Yasuo_YasuoQ3W_missilelaunch",
+    "Play_sfx_Yasuo_YasuoQW_OnCast",
+    "Play_sfx_Yasuo_YasuoQW_buffactivate",
+    "Play_sfx_Yasuo_YasuoQ_hit",
+    "Play_sfx_Yasuo_YasuoRDummySpell_OnCast",
+    "Play_sfx_Yasuo_YasuoRKnockUpCombo_OnBuffActivate",
+    "Play_sfx_Yasuo_YasuoRKnockUpCombo_hit_land",
+    "Play_sfx_Yasuo_YasuoRLeashParticle_buffactivate",
+    "Play_sfx_Yasuo_YasuoSheathSpark_buffactivate",
+    "Play_sfx_Yasuo_YasuoWMovingWall_OnCast",
+    "Play_sfx_Yasuo_YasuoWMovingWall_buffactivate",
+    "Play_sfx_Yasuo_YasuoWMovingWall_hit",
+    "Play_sfx_Yasuo_YasuoWindWallBuff_missilecast"
+  ]
+}

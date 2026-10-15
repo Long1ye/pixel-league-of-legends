@@ -1,0 +1,9 @@
+{
+  "command": "ui-gen-run",
+  "prompt": "Create a crisp pixel-art MOBA HUD icon sheet inspired by the reference interface. Exactly eight separate square icons in two rows of four, read left to right. Top row: portrait of Yasuo, the dark-haired wind swordsman with high ponytail and blue scarf; passive skill, a cyan wind shield with a small sword; Q, silver katana thrust with pale blue wind; W, upright cyan wind barrier. Bottom row: E, a blue swordsman silhouette dashing forward; R READY, bright silver diagonal sword in a violet airborne vortex, fully colored and illuminated; D, golden flash; F, a red-orange flame. All eight icons have consistent thin stepped antique-gold pixel borders and opaque dark navy interiors. Authentic carefully clustered 48-pixel-game artwork with visible square pixels, limited colors, strong silhouettes and hard edges, no smooth painted shading. Equal square icons, generous fully transparent gaps, transparent sheet background. Only these eight icons. No letters, numbers, level badges, equipment, gold counters, buff strips, upgrade arrows or interface panel. Use reference only for icon meaning and palette; redraw all eight in matching pixel art.",
+  "reference_images": [
+    "assets/ui/original-gameplay-breakdown-2026-10-15/components/01-player-hud.png",
+    "assets/ui/original-gameplay-breakdown-2026-10-15/selected/08-skill-r-ready.png"
+  ],
+  "output_dir": "assets\\ui\\pixel-hud-v2-2026-10-15\\generated"
+}

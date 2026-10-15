@@ -10,7 +10,7 @@ from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = ROOT / "assets/hero-skills/2026-10-10/yasuo/q-v2-user-ne"
-OUTPUT = ROOT / "meowa-output/yasuo-q-v2-user-ne"
+OUTPUT = ROOT / "assets/generation-archive/legacy-meowa/yasuo-q-v2-user-ne"
 QA = ROOT / "docs/screenshots/animation-qa/yasuo-q-v2-user-ne"
 
 

@@ -1,0 +1,1 @@
+var e=new URL(`remove_bg-FnYxC6tj.png`,import.meta.url).href;export{e as t};

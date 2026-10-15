@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_0ae63385bf34493ab4dab49faf318fc7",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\generation-archive\\legacy-meowa\\yasuo-q-v1-se-animation\\亚索朝画面右下完成一次Q直线突刺_短促蓄力_快速伸臂把刀直线刺出_然后顺势收回_2e36e4f8\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\generation-archive\\legacy-meowa\\yasuo-q-v1-se-animation\\亚索朝画面右下完成一次Q直线突刺_短促蓄力_快速伸臂把刀直线刺出_然后顺势收回_2e36e4f8\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\generation-archive\\legacy-meowa\\yasuo-q-v1-se-animation\\亚索朝画面右下完成一次Q直线突刺_短促蓄力_快速伸臂把刀直线刺出_然后顺势收回_2e36e4f8\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

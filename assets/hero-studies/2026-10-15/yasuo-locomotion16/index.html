@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>亚索 · 16 帧走路与待机对比</title>
+  <style>
+    :root{color-scheme:dark;font:15px system-ui;color:#e1eaf2;background:#0c1520}
+    body{margin:24px auto;padding:0 24px;max-width:1320px}h1{font-size:26px}h2{font-size:20px;margin-top:32px}
+    p{color:#a3b6c8;line-height:1.7}.tools{position:sticky;top:0;z-index:2;display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:14px;background:#102132f2;border:1px solid #354d61;border-radius:8px}
+    button,select{padding:8px 12px;border:1px solid #516a7f;border-radius:4px;color:#dceaf0;background:#203548;cursor:pointer}
+    input{width:180px}output{font-variant-numeric:tabular-nums}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(274px,1fr));gap:16px}
+    figure{margin:0;padding:12px 8px;background:#142433;border:1px solid #30475a;border-radius:6px;overflow:auto}figure:target{outline:2px solid #b9d9eb;outline-offset:3px}figcaption{text-align:center;margin-bottom:8px;font-weight:600}
+    canvas{display:block;width:256px;height:128px;image-rendering:pixelated;margin:auto}.labels{display:flex;justify-content:space-around;font-size:12px;color:#a6bbce;margin:8px 0 0}
+    a{color:#a6d9f2}.status{font-size:12px;color:#9eb7cc}.zoom2 canvas{width:512px;height:256px}.zoom2 .grid{grid-template-columns:repeat(auto-fit,minmax(538px,1fr))}
+  </style>
+</head>
+<body>
+  <h1>亚索 · 八向走路与待机 · 16 帧</h1>
+  <p>普通走路放缓至每轮 1.28 秒，加速走路保持每轮 0.8 秒；两种状态均使用完整 16 帧，待机节奏保持原样。可切换回原版 8 帧与新版 16 帧对比。</p>
+  <div class="tools">
+    <button id="play">暂停</button><button id="step">下一帧</button>
+    <label>对比 <select id="comparison"><option value="movement">普通 / 加速</option><option value="frames">8 帧 / 16 帧</option></select></label>
+    <label>速度 <select id="speed"><option value="1">原速</option><option value="0.5">0.5×</option><option value="0.25">0.25×</option></select></label>
+    <label>显示 <select id="zoom"><option value="1">1×</option><option value="2">2×</option></select></label>
+    <input id="seek" type="range" min="0" max="15" value="0" aria-label="动画帧">
+    <output id="frame">加载中…</output><span id="status" class="status"></span>
+  </div>
+  <section><h2>走路</h2><div id="walk" class="grid"></div></section>
+  <section><h2>待机</h2><div id="idle" class="grid"></div></section>
+  <p><a href="../../../../?map=howling">进入冰桥对局</a> · <a href="../yasuo-current-locomotion/index.html">查看原版 8 帧素材</a></p>
+  <script type="module">
+    import old from '../../../heroes/yasuo/selected-2026-10-10/animations.json';
+    import current from '../../../heroes/yasuo/locomotion16-2026-10-15/animations.json';
+    import {HOMEGUARD} from '../../../../src/game/Homeguard';
+    const oldUrls=import.meta.glob('../../../heroes/yasuo/selected-2026-10-10/*.png',{eager:true,query:'?url',import:'default'});
+    const newUrls=import.meta.glob('../../../heroes/yasuo/locomotion16-2026-10-15/runtime/*.png',{eager:true,query:'?url',import:'default'});
+    const imageUrl=(urls,sheet)=>Object.entries(urls).find(([path])=>path.endsWith('/'+sheet))[1];
+    const labels={n:'上 N',ne:'右上 NE',e:'右 E',se:'右下 SE',s:'下 S',sw:'左下 SW',w:'左 W',nw:'左上 NW'};
+    const images=new Map();
+    const load=async(url)=>{if(images.has(url))return images.get(url);const image=new Image();image.src=url;await image.decode();images.set(url,image);return image;};
+    const views=[];
+    for(const state of ['walk','idle'])for(const [direction,label] of Object.entries(labels)){
+      const clip=current.locomotion.find(c=>c.state===state&&c.direction===direction);
+      const previous=old.locomotion.find(c=>c.state===state&&c.direction===direction);
+      const figure=document.createElement('figure'),title=document.createElement('figcaption'),canvas=document.createElement('canvas'),caption=document.createElement('div');
+      figure.id=`${state}-${direction}`;
+      title.textContent=label;canvas.width=256;canvas.height=128;caption.className='labels';caption.innerHTML='<span>原版 · 8 帧</span><span>新版 · 16 帧</span>';
+      figure.append(title,canvas,caption);document.getElementById(state).append(figure);
+      views.push({canvas,caption,state,clip,previous,oldImage:await load(imageUrl(oldUrls,previous.sheet)),newImage:clip?await load(imageUrl(newUrls,clip.sheet)):null});
+    }
+    let phase=0,playing=true,last=performance.now(),speed=1,comparison='movement',manualFrame=null;
+    const label=document.getElementById('frame'),seek=document.getElementById('seek'),play=document.getElementById('play');
+    document.getElementById('status').textContent=`${current.locomotion.length} / 16 段已就绪`;
+    function frameAt(time,clip){let elapsed=time%clip.duration_ms;for(let i=0;i<clip.durations_ms.length;i++){if(elapsed<clip.durations_ms[i])return i;elapsed-=clip.durations_ms[i];}return clip.frame_count-1;}
+    function draw(){
+      const frame=manualFrame??Math.floor(phase/50)%16;
+      for(const view of views){
+        const ctx=view.canvas.getContext('2d');ctx.imageSmoothingEnabled=false;
+        for(let y=0;y<128;y+=8)for(let x=0;x<256;x+=8){ctx.fillStyle=(x/8+y/8)%2?'#1d2d3a':'#243847';ctx.fillRect(x,y,8,8);}
+        const oldFrame=manualFrame===null?frameAt(phase,view.previous):Math.floor(manualFrame/2);
+        const newFrame=manualFrame??(view.clip?frameAt(phase,view.clip):frame);
+        if(comparison==='movement'&&view.newImage){
+          const normalFrame=manualFrame??frameAt(phase/(view.state==='walk'?HOMEGUARD.multiplier:1),view.clip);
+          ctx.drawImage(view.newImage,normalFrame%4*128,Math.floor(normalFrame/4)*128,128,128,0,0,128,128);
+        }else ctx.drawImage(view.oldImage,oldFrame%3*128,Math.floor(oldFrame/3)*128,128,128,0,0,128,128);
+        if(view.newImage)ctx.drawImage(view.newImage,newFrame%4*128,Math.floor(newFrame/4)*128,128,128,128,0,128,128);
+        else{ctx.fillStyle='#9eb7cc';ctx.font='12px system-ui';ctx.fillText('生成中',168,68);}
+      }
+      label.textContent=manualFrame!==null?`逐帧 ${manualFrame+1} / 16`:comparison==='movement'?`普通步态相位 ${Math.floor(phase/(50*HOMEGUARD.multiplier))%16+1} / 16 · 加速相位 ${frame+1} / 16`:`新版步态相位 ${frame+1} / 16 · 原版 ${Math.floor(frame/2)+1} / 8 帧`;seek.value=String(frame);
+    }
+    function updateCaptions(){for(const view of views)view.caption.innerHTML=comparison==='frames'?'<span>原版 · 8 帧</span><span>新版 · 16 帧</span>':view.state==='walk'?'<span>普通 · 1.28 秒 / 轮</span><span>加速 · 0.8 秒 / 轮</span>':'<span>待机 · 16 帧</span><span>待机 · 16 帧</span>';}
+    function pause(){playing=false;play.textContent='播放';}
+    play.onclick=()=>{playing=!playing;if(playing)manualFrame=null;play.textContent=playing?'暂停':'播放';last=performance.now();};
+    document.getElementById('step').onclick=()=>{pause();manualFrame=((manualFrame??Math.floor(phase/50)%16)+1)%16;phase=manualFrame*50;draw();};
+    seek.oninput=()=>{pause();manualFrame=Number(seek.value);phase=manualFrame*50;draw();};
+    document.getElementById('speed').onchange=e=>{speed=Number(e.target.value);};
+    document.getElementById('comparison').onchange=e=>{comparison=e.target.value;updateCaptions();draw();};
+    document.getElementById('zoom').onchange=e=>document.body.classList.toggle('zoom2',e.target.value==='2');
+    document.addEventListener('visibilitychange',()=>{last=performance.now();});
+    function tick(now){if(playing&&!document.hidden)phase=(phase+(now-last)*speed)%6400;last=now;draw();requestAnimationFrame(tick);}
+    if(new URLSearchParams(location.search).get('zoom')==='2'){document.body.classList.add('zoom2');document.getElementById('zoom').value='2';}
+    updateCaptions();draw();document.getElementById(location.hash.slice(1))?.scrollIntoView({block:'center'});requestAnimationFrame(tick);
+  </script>
+</body>
+</html>

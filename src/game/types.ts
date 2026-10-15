@@ -14,6 +14,7 @@ export interface Entity extends Point {
   maxHp: number;
   radius: number;
   speed: number;
+  fluteAt?: number | null;
   homeguardUntil?: number;
   homeguardCombatAt?: number;
   range: number;
@@ -27,24 +28,36 @@ export interface Entity extends Point {
   attackStartedAt: number | null;
   attackReleasedAt: number | null;
   attacksReleased: number;
-  /** The player's Q locks its artwork heading for the committed cast. */
-  qCast: { startedAt: number; facing: number } | null;
+  /** Both Yasuo heroes lock Q heading and resolve one piercing contact per cast. */
+  qCast: { startedAt: number; facing: number; hit?: boolean;critical?:boolean } | null;
   qStacks?: number;
   qStacksUntil?: number;
   qReadyAt?: number;
-  q3Cast?: { startedAt: number; facing: number; released: boolean } | null;
+  q3Cast?: { startedAt: number; facing: number; released: boolean;critical?:boolean } | null;
   wCast?: { startedAt: number; facing: number } | null;
   eCast?: import('./YasuoE').DashCast | null;
   airborneUntil?: number;
   rCast?: { startedAt:number; targetIds:number[]; hit:boolean } | null;
-  eqCast?: { startedAt: number; triggerAt: number; endsAt: number; eStartedAt: number; facing: number; hit: boolean; empowered?: boolean } | null;
+  eqCast?: { startedAt: number; triggerAt: number; endsAt: number; eStartedAt: number; facing: number; hit: boolean; empowered?: boolean;critical?:boolean } | null;
   destination: Point | null;
   formation?: { wave:number; slot:number; goal:Point };
   facing: number;
   slowUntil: number;
   hitAt: number;
+  /** Short hit stun, separate from knock-up, animation duration and damage reduction. */
+  flinchUntil?: number;
+  flinchProtectedUntil?: number;
+  /** Last impact direction is presentation-only; it never changes simulation position. */
+  hitFrom?: Point;
   mana: number;
   maxMana: number;
+  /** Legacy mana fields stay zero; Yasuo's actual resource is Flow. */
+  flow?:number;
+  passiveShield?:number;
+  passiveShieldAt?:number;
+  passiveShieldUntil?:number;
+  level?:number;
+  critChance?:number;
   abilities: Record<AbilityKey, number>;
   guardUntil: number;
   aggroUntil: number;
@@ -52,6 +65,7 @@ export interface Entity extends Point {
 }
 
 export interface Projectile extends Point {
+  critical?:boolean;
   empowered?: boolean;
   startedAt?: number;
   hitIds?: number[];
@@ -83,11 +97,22 @@ export interface MatchResult {
   time: number;
 }
 
+export type ImpactKind = 'attack' | 'q' | 'q3' | 'e' | 'eq' | 'eq3' | 'r' | 'spell' | 'ignite';
 export interface GameEvent extends Point {
-  type: 'hit' | 'kill' | 'last-hit' | 'wave' | 'cast' | 'end' | 'move';
+  type: 'hit' | 'kill' | 'last-hit' | 'wave' | 'cast' | 'end' | 'move' | 'attack';
   team: Team;
   amount?: number;
+  absorbed?:number;
+  critical?:boolean;
   ability?: AbilityKey;
+  /** Presentation context, captured at the actual simulation event. */
+  at?: number;
+  sourceId?: number;
+  targetId?: number;
+  sourceKind?: EntityKind;
+  targetKind?: EntityKind;
+  from?: Point;
+  impact?: ImpactKind;
 }
 
 export function enemyOf(team: Team): Team { return team === 'blue' ? 'red' : 'blue'; }

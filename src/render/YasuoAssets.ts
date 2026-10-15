@@ -1,8 +1,10 @@
+import fluteUrl from '../../assets/heroes/yasuo/flute-user/flute.png?url';
+import {YASUO_FLUTE} from './YasuoAnimation';
 import { YASUO_ASSETS, type YasuoClip } from './YasuoAnimation';
 import { YASUO_Q_ASSETS } from './YasuoQAnimation';
 import { YASUO_E_CLIPS } from './YasuoEAnimation';
 
-const urls = import.meta.glob('../../assets/heroes/yasuo/selected-2026-10-10/*.png', {
+const urls = import.meta.glob('../../assets/heroes/yasuo/locomotion16-2026-10-15/runtime/*.png', {
   eager: true, query: '?url', import: 'default',
 }) as Record<string, string>;
 
@@ -10,7 +12,7 @@ const attackUrls=import.meta.glob('../../assets/heroes/yasuo/attacks-v2-2026-10-
 export const YASUO_TEXTURES: { clip: YasuoClip; url: string }[] = [
   ...YASUO_ASSETS.attacks, ...YASUO_ASSETS.locomotion,
 ].map(clip => {
-  const url = 'id' in clip ? attackUrls[`../../assets/heroes/yasuo/attacks-v2-2026-10-13/${clip.sheet}`] : urls[`../../assets/heroes/yasuo/selected-2026-10-10/${clip.sheet}`];
+  const url = 'id' in clip ? attackUrls[`../../assets/heroes/yasuo/attacks-v2-2026-10-13/${clip.sheet}`] : urls[`../../assets/heroes/yasuo/locomotion16-2026-10-15/runtime/${clip.sheet}`];
   if (!url) throw new Error(`Missing selected Yasuo atlas: ${clip.sheet}`);
   return { clip, url };
 });
@@ -31,3 +33,5 @@ for (const clip of YASUO_E_CLIPS) {
   if (!url) throw new Error(`Missing Yasuo E atlas: ${clip.direction}`);
   YASUO_TEXTURES.push({ clip, url });
 }
+
+YASUO_TEXTURES.push({clip:YASUO_FLUTE,url:fluteUrl});

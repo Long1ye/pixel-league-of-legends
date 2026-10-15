@@ -1,0 +1,25 @@
+{
+  "walk-ne": {
+    "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/corrections/walk-ne-keyframes/generated/角色始终朝屏幕右上方_按照给定关键姿势完成一次缓慢自然的原地步行循环_双脚交_78ee4d48/final_outputs.json",
+    "note": "Entire walking motion rebuilt from original eight-frame gait key poses at 0/4/8/12/15; rejected local arm repair.",
+    "durations_ms": [
+      20,
+      20,
+      57,
+      57,
+      57,
+      57,
+      57,
+      57,
+      57,
+      57,
+      57,
+      57,
+      57,
+      57,
+      56,
+      20
+    ],
+    "timing_note": "Compress the three similar boundary poses from 150ms to 60ms; redistribute 90ms over the moving poses, preserving the 800ms cycle."
+  }
+}

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { WORLD, BALANCE } from '../src/game/config';
 import { Match } from '../src/game/Match';
-import { attackClipFor, attackFrameAt, spriteFrameAt, YasuoAnimator, YASUO_ASSETS, flipYasuoAttack } from '../src/render/YasuoAnimation';
+import { attackClipFor, attackFrameAt, spriteFrameAt, YasuoAnimator, YASUO_ASSETS, flipYasuoAttack, yasuoWalkPlaybackRate } from '../src/render/YasuoAnimation';
 
 function setup() {
   const match = new Match({ ai: false, waves: false }); match.start();
@@ -29,6 +29,23 @@ describe('user-selected Yasuo attack assets', () => {
       expect(clip.source_pixels_preserved).toBe(true);
     }
     expect(YASUO_ASSETS.locomotion).toHaveLength(16);
+  });
+
+  it('uses sixteen poses per direction without changing the locomotion cycle length', () => {
+    for (const state of ['idle', 'walk']) {
+      const clips = YASUO_ASSETS.locomotion.filter(clip => clip.state === state);
+      expect(clips.map(clip => clip.direction).sort()).toEqual(['e','ne','n','nw','se','s','sw','w'].sort());
+      for (const clip of clips) {
+        expect([clip.width, clip.height, clip.frame_count, clip.columns, clip.rows]).toEqual([128,128,16,4,4]);
+        if(clip.state==='walk'&&clip.direction==='ne'){
+          expect(clip.durations_ms[0]+clip.durations_ms[1]+clip.durations_ms[15]).toBeLessThanOrEqual(60);
+          expect(clip.durations_ms.reduce((a,b)=>a+b,0)).toBe(800);
+        }else expect(clip.durations_ms).toEqual(Array(16).fill(50));
+        expect(clip.duration_ms).toBe(800);
+        expect(spriteFrameAt(799,clip.durations_ms,true)).toBe(15);
+        expect(spriteFrameAt(800,clip.durations_ms,true)).toBe(0);
+      }
+    }
   });
 
   it('samples all source frames in order, and holds rather than looping at the endpoint', () => {
@@ -120,5 +137,25 @@ describe('simulation-linked A/B attack presentation', () => {
     expect(animator.sample(hero, match.time)).toEqual(sample);
     match.stop('blue'); match.step(WORLD.step);
     expect(animator.sample(hero, match.time).state).toBe('idle');
+  });
+
+  it('keeps boosted cadence and gives ordinary walking a longer stride cycle',()=>{
+    const {hero}=setup();hero.homeguardUntil=0;hero.slowUntil=0;
+    expect(.8/yasuoWalkPlaybackRate(hero,1)).toBeCloseTo(1.04);
+    hero.homeguardUntil=20;expect(.8/yasuoWalkPlaybackRate(hero,1)).toBeCloseTo(.65);
+    hero.slowUntil=5;expect(yasuoWalkPlaybackRate(hero,1)).toBeCloseTo(.8/.65*.7);
+    hero.homeguardUntil=0;expect(yasuoWalkPlaybackRate(hero,1)).toBeCloseTo(.8/1.04*.7);
+  });
+
+  it('changes movement cadence without restarting or jumping the footstep phase',()=>{
+    const {hero}=setup(),animator=new YasuoAnimator();hero.homeguardUntil=0;hero.slowUntil=0;hero.facing=0;
+    animator.sample(hero,1);hero.x++;animator.sample(hero,1.1);
+    hero.x++;expect(animator.sample(hero,1.35).frame).toBe(3);
+    hero.homeguardUntil=20;
+    expect(animator.sample(hero,1.35).frame).toBe(3);
+    hero.x++;expect(animator.sample(hero,1.46).frame).toBe(6);
+    hero.homeguardUntil=0;
+    expect(animator.sample(hero,1.46).frame).toBe(6);
+    hero.x++;expect(animator.sample(hero,1.62).frame).toBe(9);
   });
 });

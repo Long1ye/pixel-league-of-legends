@@ -1,0 +1,11 @@
+<!doctype html><html lang="zh-CN">
+<script type="module" crossorigin src="../../../assets/midlaneV2-CzTaY1WR.js"></script>
+<link rel="modulepreload" crossorigin href="../../../assets/modulepreload-polyfill-P2Xu9kJm.js">
+<link rel="modulepreload" crossorigin href="../../../assets/reeds-west-uO47DnWo.js">
+<link rel="modulepreload" crossorigin href="../../../assets/idle-se-DIg69LZa.js">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>中路对线 · 模块化地图 V2</title>
+<style>*{box-sizing:border-box}body{color:#dce4df;background:#101b20;margin:0;font:14px system-ui}main{width:1064px;margin:24px auto}header{justify-content:space-between;align-items:center;display:flex}h1{margin:8px 0;font-size:24px}small,.muted{color:#99ada9}nav{align-items:center;gap:18px;margin:18px 0;display:flex}button{color:#dce4df;cursor:pointer;background:#263b41;border:1px solid #658083;border-radius:4px;padding:8px 12px}canvas{width:1024px;height:640px;image-rendering:pixelated;cursor:crosshair;display:block}section{background:#17292d;border:1px solid #355156;padding:19px}footer{justify-content:space-between;margin-top:14px;line-height:1.8;display:flex}input{accent-color:#8bc4b6}#status{color:#95cbbb}</style>
+<main><header><div><small>PIXEL MIDLANE / MAP STUDY 02</small><h1>把空间还给对线</h1></div><span class="muted">可编辑地形 · 独立动态层 · 原地图保留</span></header>
+<nav><label>中路宽度 <input id="width" type="range" min="192" max="320" step="32" value="256"> <output id="widthValue">256</output></label><label><input id="zones" type="checkbox">可行走区域</label><label><input id="motion" type="checkbox" checked>环境动态</label><button id="reset">重置位置</button><button id="export">导出布局 JSON</button></nav>
+<section><canvas width="1024" height="640" aria-label="模块化中路地图，可用 WASD 移动角色"></canvas></section>
+<footer><div>WASD / 方向键走位 · 点击地图选择行走目标<br><span class="muted">蓝红塔位为布局占位图形；本页不包含战斗、寻路或草丛视野机制。</span></div><div id="status">加载地表素材…</div></footer></main></html>

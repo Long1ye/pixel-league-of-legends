@@ -6,6 +6,7 @@ import {fireFlicker,crystalBreath} from './EnvironmentalLight';
 import {halfWidth} from '../../assets/map-studies/howling-abyss-v1/geometry';
 import {actorDepth} from './RenderDepth';
 import type { Match } from '../game/Match';
+import {environmentWind} from './EnvironmentWind';
 
 /** Native Light2D illumination; shadows remain explicit 2D silhouettes. */
 export class ArenaLighting {
@@ -57,9 +58,10 @@ export class ArenaLighting {
   }
   receive(image:Phaser.GameObjects.Image){
     if(!this.supported)return;
-    if(this.enabled)image.setPipeline('Light2D');else image.resetPipeline();
+    if(this.enabled){if(image.pipeline.name!=='Light2D')image.setPipeline('Light2D');}
+    else if(image.pipeline.name==='Light2D')image.resetPipeline();
   }
-  update(match:Match,visible:boolean){
+  update(match:Match,visible:boolean,windEnabled=true){
     if(!this.supported)return;
     const active=this.enabled&&visible;
     this.scene.lights.setAmbientColor(active?0xb4c8dc:0xffffff);
@@ -77,15 +79,16 @@ export class ArenaLighting {
       for(const site of this.fireSites){
         if(site.x<view.left-125||site.x>view.right+125||site.y<view.top-100||site.y>view.bottom+100)continue;
         const pulse=fireFlicker(match.time,site.station);
+        const wind=windEnabled?environmentWind(match.time,site.x,site.y):{x:0,y:0,gust:0};
         // Irregular stone-facing bounce begins at the brazier's rail bay and
         // fades inward. No disconnected round decal or light in the abyss.
         this.firePools.fillStyle(0xffb66e,.032*pulse).fillPoints(site.outer,true);
         this.firePools.fillStyle(0xffd195,.055*pulse).fillPoints(site.inner,true);
-        for(let i=0;i<2;i++){
+        for(let i=0;i<5;i++){
           const age=(match.time*(.68+i*.11)+site.station*.013+i*.47)%1;
-          const x=Math.round(site.x+Math.sin(match.time*2.6+i*3+site.station)*4+(i?3:-3));
-          const y=Math.round(site.y-age*18);
-          site.embers.fillStyle(i?0xffdd8c:0xff9d54,(1-age)*.52*pulse).fillRect(x,y,i?1:2,i?2:1);
+          const x=Math.round(site.x+Math.sin(match.time*2.6+i*3+site.station)*4+(i?3:-3)+wind.x*age*.4);
+          const y=Math.round(site.y-age*(30+i%3*8));
+          site.embers.fillStyle(i%2?0xffdd8c:0xff9d54,(1-age)*.72*pulse).fillRect(x,y,i%2?2:3,i%2?3:2);
         }
       }
     }

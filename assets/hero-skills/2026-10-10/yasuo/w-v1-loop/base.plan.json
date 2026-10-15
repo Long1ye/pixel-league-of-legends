@@ -8,7 +8,7 @@
     "--generation-speed", "normal", "--no-fill-canvas",
     "--remove-bg-method", "none"
   ],
-  "output_dir": "meowa-output/yasuo-w-v1-loop-base",
+  "output_dir": "assets/generation-archive/legacy-meowa/yasuo-w-v1-loop-base",
   "recovery_command": "pixel-gen-poll",
   "purpose": "One stable horizontal-baseline wind-wall still before a single loop animation; no directional batch"
 }

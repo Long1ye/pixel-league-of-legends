@@ -78,3 +78,16 @@ describe('local camera and world-space input', () => {
     expect(rig.center).toEqual({ x: hero.x, y: hero.y });
   });
 });
+
+
+describe('window-sized camera viewport',()=>{
+ it('uses resized dimensions for bounds, input and the view center',()=>{
+  const rig=new CameraRig();rig.setZoom(1);rig.setViewport(320,510);rig.lookAt({x:500,y:320});
+  expect(rig.bounds.width).toBe(320);expect(rig.bounds.height).toBe(510);
+  expect(rig.screenToWorld({x:160,y:255})).toEqual(rig.center);
+  const point={x:470,y:310};const restored=rig.screenToWorld(rig.worldToScreen(point));
+  expect(restored.x).toBeCloseTo(point.x);expect(restored.y).toBeCloseTo(point.y);
+  rig.setViewport(640,270);expect(rig.screenToWorld({x:320,y:135})).toEqual(rig.center);
+  expect(()=>rig.setViewport(0,270)).toThrow();
+ });
+});

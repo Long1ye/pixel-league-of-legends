@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_8187e59813b44a1d9e7c4f5ba9326e37",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\audio\\ice-bridge-v1\\foley\\Three_distinct_isolated_game_foley_sounds_in_this_order_one_compact_boot_footstep_crunching_fresh_powder_snow_576dba95\\01_Snow_Footstep_Crunch.mp3",
+      "mime_type": "audio/mpeg"
+    },
+    {
+      "type": "media",
+      "path": "assets\\audio\\ice-bridge-v1\\foley\\Three_distinct_isolated_game_foley_sounds_in_this_order_one_compact_boot_footstep_crunching_fresh_powder_snow_576dba95\\02_Stone_Footstep_Tap.mp3",
+      "mime_type": "audio/mpeg"
+    },
+    {
+      "type": "media",
+      "path": "assets\\audio\\ice-bridge-v1\\foley\\Three_distinct_isolated_game_foley_sounds_in_this_order_one_compact_boot_footstep_crunching_fresh_powder_snow_576dba95\\03_Distant_Ice_Crack.mp3",
+      "mime_type": "audio/mpeg"
+    }
+  ]
+}

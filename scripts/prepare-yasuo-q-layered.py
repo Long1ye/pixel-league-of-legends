@@ -8,7 +8,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = ROOT / "assets/hero-skills/2026-10-12/yasuo/q-v3-layered-e"
-Q_SOURCE = Path("D:/Long1ye/资源/yasuo-Q.webp")
+Q_SOURCE = (ROOT / "assets/source-materials/heroes/yasuo/yasuo-Q.webp")
 IDLE_SOURCE = ROOT / "assets/heroes/yasuo/selected-2026-10-10/idle-e.png"
 
 
@@ -43,7 +43,7 @@ def main():
     plan = {
         "command": "image-edit-run",
         "recovery_command": "pixel-gen-poll",
-        "output_dir": "meowa-output/yasuo-q-v3-layered-e-parts",
+        "output_dir": "assets/generation-archive/legacy-meowa/yasuo-q-v3-layered-e-parts",
         "args": [
             "--reference-image", str((refs / "idle-e-prepared.png").relative_to(ROOT)).replace("\\", "/"),
             "--reference-image", str((refs / "q-user-extended.png").relative_to(ROOT)).replace("\\", "/"),

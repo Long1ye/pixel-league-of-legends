@@ -7,7 +7,7 @@ from PIL import Image, ImageChops
 
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCE = Path("D:/Long1ye/资源/yasuo-Q.webp")
+SOURCE = (ROOT / "assets/source-materials/heroes/yasuo/yasuo-Q.webp")
 BASE = ROOT / "assets/hero-skills/2026-10-10/yasuo/q-v2-user-ne"
 TOP = 72
 

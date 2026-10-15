@@ -6,7 +6,7 @@ import shutil
 root = Path(__file__).resolve().parent.parent
 dest = root / 'assets/heroes/yasuo/q-draw-v2-2026-10-13'
 dest.mkdir(parents=True, exist_ok=True)
-source = Path('D:/Long1ye/资源/亚索拔刀v2.webp')
+source = (root / 'assets/source-materials/heroes/yasuo/亚索拔刀v2.webp')
 shutil.copyfile(source, dest / 'body.webp')
 with Image.open(source) as im:
     frames = [f.convert('RGBA').copy() for f in ImageSequence.Iterator(im)]

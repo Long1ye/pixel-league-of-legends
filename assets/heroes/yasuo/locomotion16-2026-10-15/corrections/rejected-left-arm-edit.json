@@ -1,0 +1,6 @@
+{
+  "walk-ne": {
+    "manifest": "assets/heroes/yasuo/locomotion16-2026-10-15/corrections/walk-ne-left-arm/只修正角色左手和左臂_也就是画面左侧没有肩甲的手臂_参照参考图保持肩膀_手肘_cf109bf3/final_outputs.json",
+    "note": "Corrected left arm anatomy and hand continuity; same 16 poses and timing."
+  }
+}

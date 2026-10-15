@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>亚索 Q · 小比例握刀方向样稿</title>
+<style>:root{--lightningcss-light: ;--lightningcss-dark:initial;color-scheme:dark;color:#e6f2ef;background:#0d1b24;font-family:Microsoft YaHei,system-ui,sans-serif}*{box-sizing:border-box}body{margin:0;padding:20px}main{max-width:1180px;margin:auto}h1{font-size:25px}h2{margin-top:0;font-size:17px}p{color:#b8d0ce;line-height:1.7}a{color:#9be5d8}section{background:#142b34;border:1px solid #365251;border-radius:10px;padding:16px}.viewport{overflow:auto}canvas{image-rendering:pixelated;display:block}.checker{background-color:#172e38;background-image:conic-gradient(#294c56 25%,transparent 0 50%,#294c56 0 75%,transparent 0);background-size:20px 20px}.toolbar{flex-wrap:wrap;align-items:center;gap:10px;margin:18px 0;display:flex}button,select,input{font:inherit}button,select{color:#e6f2ef;cursor:pointer;background:#1b3a45;border:1px solid #527575;border-radius:6px;padding:8px 12px}button:disabled{opacity:.5}button[aria-pressed=true]{background:#2a5759;border-color:#9de0cc}output{color:#a8e9d8}.note{color:#dccba9;border-left:2px solid #c6ac7d;padding-left:12px}#directions{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;display:grid}.dir-nw{grid-area:1/1}.missing{color:#e0b699;border-style:dashed;grid-area:1/2}.dir-ne{grid-area:1/3}.dir-w{grid-area:2/1}.map{grid-area:2/2}.dir-e{grid-area:2/3}.dir-sw{grid-area:3/1}.dir-s{grid-area:3/2}.dir-se{grid-area:3/3}.card button{margin-top:12px;font-size:13px}.map p{font-size:13px}.missing p{color:#dcc19f}#scrub{width:190px}@media (width<=950px){#directions{grid-template-columns:repeat(2,minmax(0,1fr))}#directions>section{grid-area:auto}.map{order:-1}.missing{order:2}}@media (width<=650px){#directions{grid-template-columns:1fr}body{padding:16px}}@media (width<=360px){body,section{padding:10px}}#directions.zoomed{grid-template-columns:repeat(auto-fit,minmax(min(100%,550px),1fr))}#directions.zoomed>section{grid-area:auto}.zoomed .map{order:-1}.zoomed .missing{order:2}</style>  <script type="module" crossorigin src="../../../../../assets/yasuoQDirectionStudy-CCY9eYrE.js"></script>
+  <link rel="modulepreload" crossorigin href="../../../../../assets/modulepreload-polyfill-P2Xu9kJm.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/sprite_00-DiyhiSx7.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/rig-D-rc1mL7.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/rig-CnoA9LMJ.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/rig-DjsTylPe.js">
+</head><body><main>
+<p>YASUO / Q / DIRECTIONAL THRUST / V6</p><h1>亚索 Q · 多方向握刀戳刺</h1>
+<p>沿用 V5 的小比例握刀与淡蓝缠风。新增六个朝向，身体不旋转；正上方向按你的选择保留缺失。</p>
+<div class="toolbar"><button id="once" disabled>施法一次</button><button id="repeat" disabled>循环检查</button><button id="pause" disabled>暂停</button>
+<label>像素倍率 <select id="zoom" aria-label="像素倍率"><option value="1" selected>1× 原生检查</option><option value="2">2× 整数放大</option></select></label>
+<label>速度 <select id="speed" aria-label="动画速度"><option value="1">1× · 480ms</option><option value="0.5">0.5× 慢速检查</option></select></label>
+<label><input id="joints" type="checkbox">显示关节连接</label></div>
+<div class="toolbar"><label for="scrub">动作进度</label><input id="scrub" aria-label="动作进度" type="range" min="0" max="480" step="1" value="0"><label>瞄准角度 <input id="angle" aria-label="瞄准角度" type="number" min="0" max="359" step="1" value="315" style="width:76px">°</label><output id="status" aria-live="polite">正在加载…</output></div>
+<div id="directions">
+<section class="missing"><h2>正上 · N · 缺失</h2><p>生成任务失败，未补交。此方向不播放 Q，也不会使用其他方向替代。</p></section>
+<section class="map"><h2>地图瞄准试验</h2><div class="viewport"><canvas id="aim" width="256" height="256" aria-label="鼠标选择 Q 方向的地图预览"></canvas></div><p>点击地图任意位置施放一次。身体选择最近的八向朝向，手、刀和风跟随精确角度；进入正上缺失区时不施放。</p></section>
+</div>
+<p class="note">这是分层动作样稿，不是七条全身逐帧重绘动画。身体固定，方向底图由 game-assets 编辑；小手臂复用 V5，刀与风按角度转向、纵向透视缩短，背向采用身体遮挡。各方向身体统一到 V5 高度；素材原文件不缩放。尚未接入主游戏或命中判定。</p>
+<p id="sources"></p><p><a href="../q-v5-small-grip-wind-e/index.html">V5 朝右原版</a> · <a href="/">返回游戏</a></p>
+</main></body></html>

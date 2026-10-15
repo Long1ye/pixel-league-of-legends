@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>亚索 Q · 小比例握刀与缠风</title>
+<style>:root{--lightningcss-light: ;--lightningcss-dark:initial;color-scheme:dark;color:#e6f2ef;background:#0d1b24;font-family:Microsoft YaHei,system-ui,sans-serif}*{box-sizing:border-box}body{margin:0;padding:20px}main{max-width:1100px;margin:auto}h1{font-size:25px}h2{margin-top:0;font-size:17px}p{color:#b8d0ce;line-height:1.7}a{color:#9be5d8}.panels{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;display:grid}section{background:#142b34;border:1px solid #365251;border-radius:10px;padding:16px}.viewport{overflow:auto}canvas,img{image-rendering:pixelated;display:block}.checker{background-color:#172e38;background-image:conic-gradient(#294c56 25%,transparent 0 50%,#294c56 0 75%,transparent 0);background-size:20px 20px}.toolbar{flex-wrap:wrap;align-items:center;gap:10px;margin:18px 0;display:flex}button,select,input{font:inherit}button,select{color:#e6f2ef;cursor:pointer;background:#1b3a45;border:1px solid #527575;border-radius:6px;padding:8px 12px}button:disabled{opacity:.5}output{color:#a8e9d8}.note{color:#dccba9;border-left:2px solid #c6ac7d;padding-left:12px}#layers{flex-wrap:wrap;align-items:flex-start;gap:16px;display:flex}figure{margin:0}figcaption{color:#b8d0ce;margin-top:8px}details{margin:20px 0}summary{cursor:pointer}blockquote{border-left:2px solid #547775;margin-left:0;padding-left:14px;line-height:1.8}#scrub{width:170px}@media (width<=800px){.panels{grid-template-columns:1fr}body{padding:16px}}@media (width<=360px){body,section{padding:10px}}</style>  <script type="module" crossorigin src="../../../../../assets/yasuoQSmallGripStudy-Cr5b-8tO.js"></script>
+  <link rel="modulepreload" crossorigin href="../../../../../assets/modulepreload-polyfill-P2Xu9kJm.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/sprite_00-DiyhiSx7.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/rig-D-rc1mL7.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/forearm-hand-DRQjD5dB.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/wind-sword-DhlJf1lL.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/rig-CnoA9LMJ.js">
+</head><body><main>
+<p>YASUO / Q / SMALL GRIP / EAST / V5</p>
+<h1>亚索 Q · 小比例握刀</h1>
+<p>恢复握刀，缩小前臂与拳头。淡蓝气流缠绕刀身，刺出时加强前后包裹感；保留前两版对照。</p>
+<div class="toolbar">
+<button id="once" disabled>施法一次</button><button id="repeat" disabled>循环检查</button><button id="pause" disabled>暂停</button>
+<label>像素倍率 <select id="zoom" aria-label="像素倍率"><option value="1" selected>1× 原生</option><option value="2">2× 整数放大</option></select></label>
+<label>速度 <select id="speed" aria-label="动画速度"><option value="1">1× · 480ms</option><option value="0.5">0.5× 慢速检查</option></select></label>
+<label><input id="joints" type="checkbox">显示握刀连接点</label>
+</div>
+<div class="panels">
+<section><h2>小手握刀 · 淡蓝缠风</h2><div class="viewport"><canvas id="rig" class="checker" width="256" height="160" aria-label="缩小手比例的亚索握刀戳刺动画"></canvas></div><p>收刀聚风 → 握刀刺出 → 刺出到位 → 收刀复位</p></section>
+<section><h2>地图上的游戏尺寸检查</h2><div class="viewport"><canvas id="scene" width="256" height="160" aria-label="地图上的小比例握刀技能样稿"></canvas></div><p>沿用当前地图与英雄比例，仅背景合成，不含命中判定。</p></section>
+</div>
+<div class="toolbar"><label for="scrub">动作进度</label><input id="scrub" aria-label="动作进度" type="range" min="0" max="480" step="1" value="0"><output id="status" aria-live="polite">正在加载…</output></div>
+<p class="note">只做朝右。身体保持旧版原像素，较小手臂和缠风刀由 game-assets 修改；关节戳刺与气流运动由代码驱动。身体仍是固定姿态，尚未接入游戏。</p>
+<details><summary>查看独立素材</summary><div id="layers"></div></details>
+<details><summary>查看这次的修改 prompt</summary><blockquote id="prompt"></blockquote></details>
+<p><a id="sheet">查看修改后的素材图</a> · <a href="../q-v3-layered-e/index.html">V3 大比例握刀</a> · <a href="../q-v4-wind-cast-e/index.html">V4 手势施法</a> · <a href="/">返回游戏</a></p>
+</main></body></html>

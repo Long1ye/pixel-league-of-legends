@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_35372604883f4a2983049bf4ff22c999",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "D:\\Long1ye\\pixel-league-of-legends\\assets\\heroes\\yasuo\\locomotion16-2026-10-15\\generated\\idle-s\\角色始终保持输入图中的朝向_屏幕下方_双脚固定_缓慢轻微呼吸_围巾与头发轻摆_动_d0e88152\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "D:\\Long1ye\\pixel-league-of-legends\\assets\\heroes\\yasuo\\locomotion16-2026-10-15\\generated\\idle-s\\角色始终保持输入图中的朝向_屏幕下方_双脚固定_缓慢轻微呼吸_围巾与头发轻摆_动_d0e88152\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "D:\\Long1ye\\pixel-league-of-legends\\assets\\heroes\\yasuo\\locomotion16-2026-10-15\\generated\\idle-s\\角色始终保持输入图中的朝向_屏幕下方_双脚固定_缓慢轻微呼吸_围巾与头发轻摆_动_d0e88152\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

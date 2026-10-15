@@ -1,0 +1,1060 @@
+{
+  "Characters/SRU_OrderMinionRanged/CharacterRecords/URF": {
+    "mCharacterName": "SRU_OrderMinionRanged",
+    "baseHPModifiable": {
+      "baseValue": 275.0,
+      "__type": "ModifiableFloat"
+    },
+    "baseStaticHPRegenModifiable": {
+      "baseValue": 0.0,
+      "__type": "ModifiableFloat"
+    },
+    "healthBarHeight": 48.0,
+    "primaryAbilityResource": {
+      "{726ee5cd}": {
+        "baseValue": 0.0,
+        "__type": "ModifiableFloat"
+      },
+      "{c4ab3550}": {
+        "baseValue": 0.0,
+        "__type": "ModifiableFloat"
+      },
+      "__type": "AbilityResourceSlotInfo"
+    },
+    "baseDamageModifiable": {
+      "baseValue": 19.5,
+      "__type": "ModifiableFloat"
+    },
+    "baseArmorModifiable": {
+      "baseValue": 0.0,
+      "__type": "ModifiableFloat"
+    },
+    "critDamageMultiplier": 2.0,
+    "baseMoveSpeedModifiable": {
+      "baseValue": 350.0,
+      "__type": "ModifiableFloat"
+    },
+    "attackRangeModifiable": {
+      "baseValue": 550.0,
+      "__type": "ModifiableFloat"
+    },
+    "attackSpeedModifiable": {
+      "baseValue": 0.6669999957084656,
+      "__type": "ModifiableFloat"
+    },
+    "attackSpeedRatioModifiable": {
+      "baseValue": 0.6669999957084656,
+      "__type": "ModifiableFloat"
+    },
+    "acquisitionRange": 700.0,
+    "wakeUpRange": 635.0,
+    "firstAcquisitionRange": 900.0,
+    "basicAttack": {
+      "mAttackTotalTime": 1.5,
+      "mAttackCastTime": 0.4699999988079071,
+      "mAttackProbability": 0.5,
+      "__type": "AttackSlotData"
+    },
+    "extraAttacks": [
+      {
+        "mAttackProbability": 0.5,
+        "__type": "AttackSlotData"
+      }
+    ],
+    "towerTargetingPriorityBoost": 1.0,
+    "expGivenOnDeath": 31.0,
+    "goldRadius": 1400.0,
+    "experienceRadius": 1400.0,
+    "localGoldGivenOnDeath": 8.0,
+    "perceptionBubbleRadius": 1200.0,
+    "significance": 0.4000000059604645,
+    "name": "game_character_displayname_Blue_Minion_Wizard",
+    "selectionHeight": 75.0,
+    "selectionRadius": 115.0,
+    "pathfindingCollisionRadius": 35.74369812011719,
+    "overrideGameplayCollisionRadius": 48.0,
+    "unitTagsString": "Minion | Minion_Lane | Minion_Lane_Ranged",
+    "characterToolData": {
+      "mapAIPresence": {
+        "0": {
+          "__type": "ToolAiPresence"
+        },
+        "1": {
+          "__type": "ToolAiPresence"
+        },
+        "2": {
+          "__type": "ToolAiPresence"
+        }
+      },
+      "description": "game_character_description_Blue_Minion_Wizard",
+      "baseAttackSpeedBonus": 60.0,
+      "attackSpeed": 1.600000023841858,
+      "__type": "CharacterToolData"
+    },
+    "mClientSideItemInventory": [
+      "Items/1510"
+    ],
+    "__type": "CharacterRecord"
+  },
+  "Characters/SRU_OrderMinionRanged/CharacterRecords/NexusBlitz": {
+    "mCharacterName": "SRU_OrderMinionRanged",
+    "baseHPModifiable": {
+      "baseValue": 350.0,
+      "__type": "ModifiableFloat"
+    },
+    "baseStaticHPRegenModifiable": {
+      "baseValue": 0.0,
+      "__type": "ModifiableFloat"
+    },
+    "healthBarHeight": 48.0,
+    "primaryAbilityResource": {
+      "{726ee5cd}": {
+        "baseValue": 0.0,
+        "__type": "ModifiableFloat"
+      },
+      "{c4ab3550}": {
+        "baseValue": 0.0,
+        "__type": "ModifiableFloat"
+      },
+      "__type": "AbilityResourceSlotInfo"
+    },
+    "baseDamageModifiable": {
+      "baseValue": 28.0,
+      "__type": "ModifiableFloat"
+    },
+    "baseArmorModifiable": {
+      "baseValue": 0.0,
+      "__type": "ModifiableFloat"
+    },
+    "critDamageMultiplier": 2.0,
+    "baseMoveSpeedModifiable": {
+      "baseValue": 325.0,
+      "__type": "ModifiableFloat"
+    },
+    "attackRangeModifiable": {
+      "baseValue": 550.0,
+      "__type": "ModifiableFloat"
+    },
+    "attackSpeedModifiable": {
+      "baseValue": 0.6669999957084656,
+      "__type": "ModifiableFloat"
+    },
+    "attackSpeedRatioModifiable": {
+      "baseValue": 0.6669999957084656,
+      "__type": "ModifiableFloat"
+    },
+    "acquisitionRange": 700.0,
+    "wakeUpRange": 635.0,
+    "firstAcquisitionRange": 900.0,
+    "basicAttack": {
+      "mAttackTotalTime": 1.5,
+      "mAttackCastTime": 0.4699999988079071,
+      "mAttackProbability": 0.5,
+      "__type": "AttackSlotData"
+    },
+    "extraAttacks": [
+      {
+        "mAttackProbability": 0.5,
+        "__type": "AttackSlotData"
+      }
+    ],
+    "towerTargetingPriorityBoost": 1.0,
+    "expGivenOnDeath": 0.0,
+    "goldGivenOnDeath": 10.0,
+    "perceptionBubbleRadius": 1200.0,
+    "significance": 0.4000000059604645,
+    "name": "game_character_displayname_Blue_Minion_Wizard",
+    "selectionHeight": 75.0,
+    "selectionRadius": 115.0,
+    "pathfindingCollisionRadius": 35.74369812011719,
+    "overrideGameplayCollisionRadius": 48.0,
+    "unitTagsString": "Minion | Minion_Lane | Minion_Lane_Ranged",
+    "characterToolData": {
+      "mapAIPresence": {
+        "0": {
+          "__type": "ToolAiPresence"
+        },
+        "1": {
+          "__type": "ToolAiPresence"
+        },
+        "2": {
+          "__type": "ToolAiPresence"
+        }
+      },
+      "description": "game_character_description_Blue_Minion_Wizard",
+      "baseAttackSpeedBonus": 60.0,
+      "attackSpeed": 1.600000023841858,
+      "__type": "CharacterToolData"
+    },
+    "mClientSideItemInventory": [
+      "Items/1510"
+    ],
+    "__type": "CharacterRecord"
+  },
+  "Characters/SRU_OrderMinionRanged/CharacterRecords/Root": {
+    "mCharacterName": "SRU_OrderMinionRanged",
+    "baseHPModifiable": {
+      "baseValue": 275.0,
+      "__type": "ModifiableFloat"
+    },
+    "baseStaticHPRegenModifiable": {
+      "baseValue": 0.0,
+      "__type": "ModifiableFloat"
+    },
+    "healthBarHeight": 48.0,
+    "primaryAbilityResource": {
+      "{726ee5cd}": {
+        "baseValue": 0.0,
+        "__type": "ModifiableFloat"
+      },
+      "{c4ab3550}": {
+        "baseValue": 0.0,
+        "__type": "ModifiableFloat"
+      },
+      "__type": "AbilityResourceSlotInfo"
+    },
+    "baseDamageModifiable": {
+      "baseValue": 19.5,
+      "__type": "ModifiableFloat"
+    },
+    "baseArmorModifiable": {
+      "baseValue": 0.0,
+      "__type": "ModifiableFloat"
+    },
+    "critDamageMultiplier": 2.0,
+    "baseMoveSpeedModifiable": {
+      "baseValue": 350.0,
+      "__type": "ModifiableFloat"
+    },
+    "attackRangeModifiable": {
+      "baseValue": 550.0,
+      "__type": "ModifiableFloat"
+    },
+    "attackSpeedModifiable": {
+      "baseValue": 0.6669999957084656,
+      "__type": "ModifiableFloat"
+    },
+    "attackSpeedRatioModifiable": {
+      "baseValue": 0.6669999957084656,
+      "__type": "ModifiableFloat"
+    },
+    "acquisitionRange": 700.0,
+    "wakeUpRange": 635.0,
+    "firstAcquisitionRange": 900.0,
+    "basicAttack": {
+      "mAttackTotalTime": 1.5,
+      "mAttackCastTime": 0.4699999988079071,
+      "mAttackProbability": 0.5,
+      "__type": "AttackSlotData"
+    },
+    "extraAttacks": [
+      {
+        "mAttackProbability": 0.5,
+        "__type": "AttackSlotData"
+      }
+    ],
+    "towerTargetingPriorityBoost": 1.0,
+    "expGivenOnDeath": 31.0,
+    "goldGivenOnDeath": 14.0,
+    "experienceRadius": 1400.0,
+    "perceptionBubbleRadius": 1200.0,
+    "significance": 0.4000000059604645,
+    "name": "game_character_displayname_Blue_Minion_Wizard",
+    "selectionHeight": 75.0,
+    "selectionRadius": 115.0,
+    "pathfindingCollisionRadius": 35.74369812011719,
+    "overrideGameplayCollisionRadius": 48.0,
+    "unitTagsString": "Minion | Minion_Lane | Minion_Lane_Ranged",
+    "characterToolData": {
+      "mapAIPresence": {
+        "0": {
+          "__type": "ToolAiPresence"
+        },
+        "1": {
+          "__type": "ToolAiPresence"
+        },
+        "2": {
+          "__type": "ToolAiPresence"
+        }
+      },
+      "description": "game_character_description_Blue_Minion_Wizard",
+      "baseAttackSpeedBonus": 60.0,
+      "attackSpeed": 1.600000023841858,
+      "__type": "CharacterToolData"
+    },
+    "mClientSideItemInventory": [
+      "Items/1510"
+    ],
+    "__type": "CharacterRecord"
+  },
+  "{6cafb323}": {
+    "mCharacterName": "SRU_OrderMinionRanged",
+    "baseHPModifiable": {
+      "baseValue": 275.0,
+      "__type": "ModifiableFloat"
+    },
+    "baseStaticHPRegenModifiable": {
+      "baseValue": 0.0,
+      "__type": "ModifiableFloat"
+    },
+    "healthBarHeight": 48.0,
+    "primaryAbilityResource": {
+      "{726ee5cd}": {
+        "baseValue": 0.0,
+        "__type": "ModifiableFloat"
+      },
+      "{c4ab3550}": {
+        "baseValue": 0.0,
+        "__type": "ModifiableFloat"
+      },
+      "__type": "AbilityResourceSlotInfo"
+    },
+    "baseDamageModifiable": {
+      "baseValue": 19.5,
+      "__type": "ModifiableFloat"
+    },
+    "baseArmorModifiable": {
+      "baseValue": 0.0,
+      "__type": "ModifiableFloat"
+    },
+    "critDamageMultiplier": 2.0,
+    "baseMoveSpeedModifiable": {
+      "baseValue": 350.0,
+      "__type": "ModifiableFloat"
+    },
+    "attackRangeModifiable": {
+      "baseValue": 550.0,
+      "__type": "ModifiableFloat"
+    },
+    "attackSpeedModifiable": {
+      "baseValue": 0.6669999957084656,
+      "__type": "ModifiableFloat"
+    },
+    "attackSpeedRatioModifiable": {
+      "baseValue": 0.6669999957084656,
+      "__type": "ModifiableFloat"
+    },
+    "acquisitionRange": 700.0,
+    "wakeUpRange": 635.0,
+    "firstAcquisitionRange": 900.0,
+    "basicAttack": {
+      "mAttackTotalTime": 1.5,
+      "mAttackCastTime": 0.4699999988079071,
+      "mAttackProbability": 0.5,
+      "__type": "AttackSlotData"
+    },
+    "extraAttacks": [
+      {
+        "mAttackProbability": 0.5,
+        "__type": "AttackSlotData"
+      }
+    ],
+    "towerTargetingPriorityBoost": 1.0,
+    "expGivenOnDeath": 31.0,
+    "goldGivenOnDeath": 14.0,
+    "goldRadius": 1400.0,
+    "experienceRadius": 1400.0,
+    "perceptionBubbleRadius": 1200.0,
+    "significance": 0.4000000059604645,
+    "name": "game_character_displayname_Blue_Minion_Wizard",
+    "selectionHeight": 75.0,
+    "selectionRadius": 115.0,
+    "pathfindingCollisionRadius": 35.74369812011719,
+    "overrideGameplayCollisionRadius": 48.0,
+    "unitTagsString": "Minion | Minion_Lane | Minion_Lane_Ranged",
+    "characterToolData": {
+      "mapAIPresence": {
+        "0": {
+          "__type": "ToolAiPresence"
+        },
+        "1": {
+          "__type": "ToolAiPresence"
+        },
+        "2": {
+          "__type": "ToolAiPresence"
+        }
+      },
+      "description": "game_character_description_Blue_Minion_Wizard",
+      "baseAttackSpeedBonus": 60.0,
+      "attackSpeed": 1.600000023841858,
+      "__type": "CharacterToolData"
+    },
+    "mClientSideItemInventory": [
+      "Items/1510"
+    ],
+    "__type": "CharacterRecord"
+  },
+  "Characters/SRU_OrderMinionRanged/CharacterRecords/Brawl": {
+    "mCharacterName": "SRU_OrderMinionRanged",
+    "baseHPModifiable": {
+      "baseValue": 275.0,
+      "__type": "ModifiableFloat"
+    },
+    "baseStaticHPRegenModifiable": {
+      "baseValue": 0.0,
+      "__type": "ModifiableFloat"
+    },
+    "healthBarHeight": 48.0,
+    "primaryAbilityResource": {
+      "{726ee5cd}": {
+        "baseValue": 0.0,
+        "__type": "ModifiableFloat"
+      },
+      "{c4ab3550}": {
+        "baseValue": 0.0,
+        "__type": "ModifiableFloat"
+      },
+      "__type": "AbilityResourceSlotInfo"
+    },
+    "baseDamageModifiable": {
+      "baseValue": 19.5,
+      "__type": "ModifiableFloat"
+    },
+    "baseArmorModifiable": {
+      "baseValue": 0.0,
+      "__type": "ModifiableFloat"
+    },
+    "critDamageMultiplier": 2.0,
+    "baseMoveSpeedModifiable": {
+      "baseValue": 350.0,
+      "__type": "ModifiableFloat"
+    },
+    "attackRangeModifiable": {
+      "baseValue": 550.0,
+      "__type": "ModifiableFloat"
+    },
+    "attackSpeedModifiable": {
+      "baseValue": 0.6669999957084656,
+      "__type": "ModifiableFloat"
+    },
+    "attackSpeedRatioModifiable": {
+      "baseValue": 0.6669999957084656,
+      "__type": "ModifiableFloat"
+    },
+    "acquisitionRange": 700.0,
+    "wakeUpRange": 635.0,
+    "firstAcquisitionRange": 900.0,
+    "basicAttack": {
+      "mAttackTotalTime": 1.5,
+      "mAttackCastTime": 0.4699999988079071,
+      "mAttackProbability": 0.5,
+      "__type": "AttackSlotData"
+    },
+    "extraAttacks": [
+      {
+        "mAttackProbability": 0.5,
+        "__type": "AttackSlotData"
+      }
+    ],
+    "towerTargetingPriorityBoost": 1.0,
+    "expGivenOnDeath": 31.0,
+    "goldGivenOnDeath": 30.0,
+    "experienceRadius": 1400.0,
+    "localGoldGivenOnDeath": 5.0,
+    "perceptionBubbleRadius": 1200.0,
+    "significance": 0.4000000059604645,
+    "name": "game_character_displayname_Blue_Minion_Wizard",
+    "selectionHeight": 75.0,
+    "selectionRadius": 115.0,
+    "pathfindingCollisionRadius": 35.74369812011719,
+    "overrideGameplayCollisionRadius": 48.0,
+    "unitTagsString": "Minion | Minion_Lane | Minion_Lane_Ranged",
+    "characterToolData": {
+      "mapAIPresence": {
+        "0": {
+          "__type": "ToolAiPresence"
+        },
+        "1": {
+          "__type": "ToolAiPresence"
+        },
+        "2": {
+          "__type": "ToolAiPresence"
+        }
+      },
+      "description": "game_character_description_Blue_Minion_Wizard",
+      "baseAttackSpeedBonus": 60.0,
+      "attackSpeed": 1.600000023841858,
+      "__type": "CharacterToolData"
+    },
+    "mClientSideItemInventory": [
+      "Items/1510"
+    ],
+    "__type": "CharacterRecord"
+  },
+  "Characters/SRU_OrderMinionRanged/CharacterRecords/Jade": {
+    "mCharacterName": "SRU_OrderMinionRanged",
+    "baseHPModifiable": {
+      "baseValue": 280.0,
+      "__type": "ModifiableFloat"
+    },
+    "baseStaticHPRegenModifiable": {
+      "baseValue": 0.0,
+      "__type": "ModifiableFloat"
+    },
+    "healthBarHeight": 48.0,
+    "primaryAbilityResource": {
+      "{726ee5cd}": {
+        "baseValue": 0.0,
+        "__type": "ModifiableFloat"
+      },
+      "{c4ab3550}": {
+        "baseValue": 0.0,
+        "__type": "ModifiableFloat"
+      },
+      "__type": "AbilityResourceSlotInfo"
+    },
+    "baseDamageModifiable": {
+      "baseValue": 22.5,
+      "__type": "ModifiableFloat"
+    },
+    "baseArmorModifiable": {
+      "baseValue": 0.0,
+      "__type": "ModifiableFloat"
+    },
+    "critDamageMultiplier": 2.0,
+    "baseMoveSpeedModifiable": {
+      "baseValue": 325.0,
+      "__type": "ModifiableFloat"
+    },
+    "attackRangeModifiable": {
+      "baseValue": 550.0,
+      "__type": "ModifiableFloat"
+    },
+    "attackSpeedModifiable": {
+      "baseValue": 0.6669999957084656,
+      "__type": "ModifiableFloat"
+    },
+    "attackSpeedRatioModifiable": {
+      "baseValue": 0.6669999957084656,
+      "__type": "ModifiableFloat"
+    },
+    "acquisitionRange": 700.0,
+    "wakeUpRange": 635.0,
+    "firstAcquisitionRange": 900.0,
+    "basicAttack": {
+      "mAttackTotalTime": 1.5,
+      "mAttackCastTime": 0.4699999988079071,
+      "mAttackDelayCastOffsetPercent": 0.008999999612569809,
+      "mAttackProbability": 0.5,
+      "__type": "AttackSlotData"
+    },
+    "extraAttacks": [
+      {
+        "mAttackProbability": 0.5,
+        "__type": "AttackSlotData"
+      }
+    ],
+    "towerTargetingPriorityBoost": 1.0,
+    "expGivenOnDeath": 28.799999237060547,
+    "goldGivenOnDeath": 13.699999809265137,
+    "experienceRadius": 1600.0,
+    "perceptionBubbleRadius": 1200.0,
+    "significance": 0.4000000059604645,
+    "name": "game_character_displayname_Blue_Minion_Wizard",
+    "selectionHeight": 75.0,
+    "selectionRadius": 115.0,
+    "pathfindingCollisionRadius": 35.74369812011719,
+    "overrideGameplayCollisionRadius": 48.0,
+    "unitTagsString": "Minion | Minion_Lane | Minion_Lane_Ranged",
+    "characterToolData": {
+      "mapAIPresence": {
+        "0": {
+          "__type": "ToolAiPresence"
+        },
+        "1": {
+          "__type": "ToolAiPresence"
+        },
+        "2": {
+          "__type": "ToolAiPresence"
+        }
+      },
+      "description": "game_character_description_Blue_Minion_Wizard",
+      "baseAttackSpeedBonus": 60.0,
+      "attackSpeed": 1.600000023841858,
+      "__type": "CharacterToolData"
+    },
+    "Script": "{9db07c36}",
+    "__type": "CharacterRecord"
+  },
+  "Characters/SRU_OrderMinionRanged/Spells/SRU_OrderMinionRangedBasicAttack2": {
+    "ObjectName": "SRU_OrderMinionRangedBasicAttack2",
+    "objectPath": "Characters/SRU_OrderMinionRanged/Spells/SRU_OrderMinionRangedBasicAttack2",
+    "mScriptName": "SRU_OrderMinionRangedBasicAttack2",
+    "mSpell": {
+      "mAffectsTypeFlags": 5327,
+      "mAnimationName": "Attack2",
+      "cooldownTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Cooldown": {
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "{0a3e0478}": 0.0,
+        "__type": "{0a0eddc9}"
+      },
+      "bHaveHitEffect": true,
+      "mConsideredAsAutoAttack": true,
+      "castRange": [
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0
+      ],
+      "castRangeValues": {
+        "values": [
+          200.0,
+          200.0,
+          200.0,
+          200.0,
+          200.0,
+          200.0,
+          200.0
+        ],
+        "{0a3e0478}": 200.0,
+        "__type": "{0a0eddc9}"
+      },
+      "castRadius": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "castConeDistance": 100.0,
+      "mMissileSpec": {
+        "movementComponent": {
+          "mTargetHeightAugment": 60.0,
+          "mOffsetInitialTargetHeight": 60.0,
+          "mStartBoneName": "Buffbone_Glb_Weapon_1",
+          "mSpeed": 650.0,
+          "__type": "FixedSpeedMovement"
+        },
+        "verticalFacing": {
+          "__type": "VeritcalFacingMatchVelocity"
+        },
+        "behaviors": [
+          {
+            "__type": "CastOnMovementComplete"
+          },
+          {
+            "__type": "DestroyOnMovementComplete"
+          }
+        ],
+        "__type": "MissileSpecification"
+      },
+      "mCastType": 1,
+      "castFrame": 14.100000381469727,
+      "missileSpeed": 650.0,
+      "mMissileEffectKey": "{a7b6d3fb}",
+      "mHitEffectKey": "SRU_OrderMinionRanged_BA_Tar",
+      "bHaveHitBone": true,
+      "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+      "mClientData": {
+        "mTargeterDefinitions": [
+          {
+            "__type": "TargeterDefinitionRange"
+          }
+        ],
+        "__type": "SpellDataResourceClient"
+      },
+      "__type": "SpellDataResource"
+    },
+    "__type": "SpellObject"
+  },
+  "Characters/SRU_OrderMinionRanged/Spells/SRU_OrderMinionRangedBasicAttack_Frenzy": {
+    "ObjectName": "SRU_OrderMinionRangedBasicAttack_Frenzy",
+    "objectPath": "Characters/SRU_OrderMinionRanged/Spells/SRU_OrderMinionRangedBasicAttack_Frenzy",
+    "mScriptName": "SRU_OrderMinionRangedBasicAttack_Frenzy",
+    "mSpell": {
+      "mAffectsTypeFlags": 5327,
+      "cooldownTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Cooldown": {
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "{0a3e0478}": 0.0,
+        "__type": "{0a0eddc9}"
+      },
+      "bHaveHitEffect": true,
+      "mConsideredAsAutoAttack": true,
+      "castRange": [
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0
+      ],
+      "castRangeValues": {
+        "values": [
+          200.0,
+          200.0,
+          200.0,
+          200.0,
+          200.0,
+          200.0,
+          200.0
+        ],
+        "{0a3e0478}": 200.0,
+        "__type": "{0a0eddc9}"
+      },
+      "castRadius": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "castConeDistance": 100.0,
+      "mMissileSpec": {
+        "movementComponent": {
+          "mTargetHeightAugment": 60.0,
+          "mOffsetInitialTargetHeight": 60.0,
+          "mStartBoneName": "Buffbone_Glb_Weapon_1",
+          "mSpeed": 1300.0,
+          "__type": "FixedSpeedMovement"
+        },
+        "verticalFacing": {
+          "__type": "VeritcalFacingMatchVelocity"
+        },
+        "behaviors": [
+          {
+            "__type": "CastOnMovementComplete"
+          },
+          {
+            "__type": "DestroyOnMovementComplete"
+          }
+        ],
+        "__type": "MissileSpecification"
+      },
+      "mCastType": 1,
+      "castFrame": 7.050000190734863,
+      "missileSpeed": 1300.0,
+      "mMissileEffectKey": "{a7b6d3fb}",
+      "mHitEffectKey": "SRU_OrderMinionRanged_BA_Tar",
+      "bHaveHitBone": true,
+      "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+      "mClientData": {
+        "mTargeterDefinitions": [
+          {
+            "__type": "TargeterDefinitionRange"
+          }
+        ],
+        "__type": "SpellDataResourceClient"
+      },
+      "__type": "SpellDataResource"
+    },
+    "__type": "SpellObject"
+  },
+  "Characters/SRU_OrderMinionRanged/Spells/SRU_OrderMinionRangedBasicAttack": {
+    "ObjectName": "SRU_OrderMinionRangedBasicAttack",
+    "objectPath": "Characters/SRU_OrderMinionRanged/Spells/SRU_OrderMinionRangedBasicAttack",
+    "mScriptName": "SRU_OrderMinionRangedBasicAttack",
+    "mSpell": {
+      "mAffectsTypeFlags": 5327,
+      "cooldownTime": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Cooldown": {
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "{0a3e0478}": 0.0,
+        "__type": "{0a0eddc9}"
+      },
+      "bHaveHitEffect": true,
+      "mConsideredAsAutoAttack": true,
+      "castRange": [
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0
+      ],
+      "castRangeValues": {
+        "values": [
+          200.0,
+          200.0,
+          200.0,
+          200.0,
+          200.0,
+          200.0,
+          200.0
+        ],
+        "{0a3e0478}": 200.0,
+        "__type": "{0a0eddc9}"
+      },
+      "castRadius": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "castConeDistance": 100.0,
+      "mMissileSpec": {
+        "movementComponent": {
+          "mTargetHeightAugment": 60.0,
+          "mOffsetInitialTargetHeight": 60.0,
+          "mStartBoneName": "Buffbone_Glb_Weapon_1",
+          "mSpeed": 650.0,
+          "__type": "FixedSpeedMovement"
+        },
+        "verticalFacing": {
+          "__type": "VeritcalFacingMatchVelocity"
+        },
+        "behaviors": [
+          {
+            "__type": "CastOnMovementComplete"
+          },
+          {
+            "__type": "DestroyOnMovementComplete"
+          }
+        ],
+        "__type": "MissileSpecification"
+      },
+      "mCastType": 1,
+      "castFrame": 14.100000381469727,
+      "missileSpeed": 650.0,
+      "mMissileEffectKey": "{a7b6d3fb}",
+      "mHitEffectKey": "SRU_OrderMinionRanged_BA_Tar",
+      "bHaveHitBone": true,
+      "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+      "mClientData": {
+        "mTargeterDefinitions": [
+          {
+            "__type": "TargeterDefinitionRange"
+          }
+        ],
+        "__type": "SpellDataResourceClient"
+      },
+      "__type": "SpellDataResource"
+    },
+    "__type": "SpellObject"
+  },
+  "Characters/SRU_OrderMinionRanged/Skins/Meta": {
+    "relativeColorSwapTable": [
+      1,
+      1,
+      3,
+      3,
+      5,
+      5,
+      7,
+      7,
+      9,
+      9,
+      11,
+      11,
+      13,
+      13,
+      15,
+      15,
+      17,
+      17,
+      19,
+      19,
+      21,
+      21,
+      23,
+      23,
+      25,
+      25,
+      27,
+      26
+    ],
+    "spawningSkinOffsets": [
+      {
+        "tag": "PoolPartyMinions",
+        "offset": 2,
+        "__type": "SkinCharacterMetaDataProperties_SpawningSkinOffset"
+      },
+      {
+        "tag": "ProjectMinions",
+        "offset": 4,
+        "__type": "SkinCharacterMetaDataProperties_SpawningSkinOffset"
+      },
+      {
+        "tag": "SnowdownMinions",
+        "offset": 14,
+        "__type": "SkinCharacterMetaDataProperties_SpawningSkinOffset"
+      },
+      {
+        "tag": "DravenMinions",
+        "offset": 8,
+        "__type": "SkinCharacterMetaDataProperties_SpawningSkinOffset"
+      },
+      {
+        "tag": "StarGuardianMinions",
+        "offset": 10,
+        "__type": "SkinCharacterMetaDataProperties_SpawningSkinOffset"
+      },
+      {
+        "tag": "ArcadeMinions",
+        "offset": 12,
+        "__type": "SkinCharacterMetaDataProperties_SpawningSkinOffset"
+      },
+      {
+        "tag": "OdysseyMinions",
+        "offset": 16,
+        "__type": "SkinCharacterMetaDataProperties_SpawningSkinOffset"
+      },
+      {
+        "tag": "AprilFools2019Minions",
+        "offset": 18,
+        "__type": "SkinCharacterMetaDataProperties_SpawningSkinOffset"
+      },
+      {
+        "tag": "TrueshotMinions",
+        "offset": 20,
+        "__type": "SkinCharacterMetaDataProperties_SpawningSkinOffset"
+      },
+      {
+        "tag": "SRSMinions",
+        "offset": 22,
+        "__type": "SkinCharacterMetaDataProperties_SpawningSkinOffset"
+      },
+      {
+        "tag": "BloomMinions",
+        "offset": 24,
+        "__type": "SkinCharacterMetaDataProperties_SpawningSkinOffset"
+      }
+    ],
+    "__type": "SkinCharacterMetaDataProperties"
+  },
+  "{9db07c36}": {
+    "ScriptName": "CharScriptSRU_OrderMinionRanged_Jade",
+    "path": "{9db07c36}",
+    "sequences": {
+      "{6a7835b9}": {
+        "blocks": [
+          null,
+          {
+            "{d851ffa3}": "a0e724ec-3daf-446a-95d0-154d122dff22",
+            "Condition": {
+              "Value1": {
+                "Var": "{50f0bcb0}",
+                "__type": "ScriptTableGet"
+              },
+              "Value2": {
+                "value": true,
+                "__type": "BoolGet"
+              },
+              "__type": "ComparisonScriptCondition"
+            },
+            "Sequence": {
+              "blocks": [
+                null,
+                {
+                  "{d851ffa3}": "a92a2e3e-2029-4a77-a3a8-d8e469f84bc1",
+                  "Formula": "floor(max(0,(ptp.CurrentTime-60)/90))",
+                  "Dest": {
+                    "Var": "FreeUpgrades",
+                    "__type": "ScriptTableSet"
+                  },
+                  "__type": "{15ebaa9c}"
+                },
+                {
+                  "{d851ffa3}": "f9f99b34-09e0-40ba-87bf-7a75254368cb",
+                  "Formula": ".6*ptp.FreeUpgrades",
+                  "Dest": {
+                    "Var": "FreeExp",
+                    "__type": "ScriptTableSet"
+                  },
+                  "__type": "{15ebaa9c}"
+                },
+                {
+                  "{d851ffa3}": "29b0a6de-1761-4dd0-9150-0a2ca642bde7",
+                  "Formula": "0.15*ptp.FreeUpgrades",
+                  "Dest": {
+                    "Var": "FreeGold",
+                    "__type": "ScriptTableSet"
+                  },
+                  "__type": "{15ebaa9c}"
+                },
+                {
+                  "{d851ffa3}": "013e2553-6b5f-4542-82e8-10eb905faf4f",
+                  "Formula": "5*ptp.FreeUpgrades",
+                  "Dest": {
+                    "Var": "FreeHealth",
+                    "__type": "ScriptTableSet"
+                  },
+                  "__type": "{15ebaa9c}"
+                },
+                {
+                  "{d851ffa3}": "f540f4d3-9e14-41af-a74a-b864353c7087",
+                  "Formula": "1.5*ptp.FreeUpgrades",
+                  "Dest": {
+                    "Var": "FreeDamage",
+                    "__type": "ScriptTableSet"
+                  },
+                  "__type": "{15ebaa9c}"
+                },
+                null,
+                null,
+                null,
+                null
+              ],
+              "__type": "ScriptSequence"
+            },
+            "__type": "{e524b2fc}"
+          }
+        ],
+        "__type": "RootScriptSequence"
+      }
+    },
+    "__type": "CharScript"
+  },
+  "__linked": []
+}

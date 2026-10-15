@@ -14,7 +14,7 @@ describe('expanded terrain footprint', () => {
     expect(MAP_LAYOUT.scale).toBe(2);
     const state = new Match(), rig = new CameraRig(); rig.reset(state.hero('blue'));
     expect(rig.zoom).toBe(1); expect(rig.bounds).toMatchObject({ width: 480, height: 270 });
-    expect(state.hero('blue')).toMatchObject({ speed: 53, radius: 7, range: 54 });
+    expect(state.hero('blue')).toMatchObject({ speed: 80, radius: 11, range: 58 });
     expect(BALANCE.melee.speed).toBe(28); expect(BALANCE.waveInterval).toBe(30);
   });
 

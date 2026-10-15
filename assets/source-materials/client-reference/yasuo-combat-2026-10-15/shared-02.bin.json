@@ -1,0 +1,2056 @@
+{
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_dance_sound": {
+    "complexEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 10.0,
+        "emitterName": "empty",
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "meshRenderFlags": 0,
+        "isUniformScale": 1,
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_Emote_dance_sound",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_dance_sound",
+    "soundPersistentDefault": "Play_sfx_Yasuo_Dance3D_buffactivate",
+    "flags": 132,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Emote_dance_sound",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer5": {
+    "complexEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 2.0,
+          "__type": "ValueFloat"
+        },
+        "particleLifetime": {
+          "constantValue": 4.0,
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 14.0,
+        "lifetime": 0.10000000149011612,
+        "isSingleParticle": 1,
+        "emitterName": "timer",
+        "bindWeight": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "FlexShapeDefinition": {
+          "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+          "__type": "VfxFlexShapeDefinitionData"
+        },
+        "primitive": {
+          "mMesh": {
+            "mSimpleMeshName": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_mesh.scb",
+            "__type": "VfxMeshDefinitionData"
+          },
+          "__type": "VfxPrimitiveMesh"
+        },
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Color_Yasuo_E_dash_timer_tar.tex",
+        "blendMode": 4,
+        "colorLookUpTypeY": 1,
+        "disableBackfaceCull": true,
+        "birthRotation0": {
+          "constantValue": [
+            90.0,
+            0.0,
+            180.0
+          ],
+          "__type": "ValueVector3"
+        },
+        "isLocalOrientation": 0,
+        "birthScale0": {
+          "constantValue": [
+            20.0,
+            20.0,
+            0.0
+          ],
+          "__type": "ValueVector3"
+        },
+        "scale0": {
+          "dynamics": {
+            "times": [
+              0.0,
+              0.009999999776482582,
+              0.019999999552965164,
+              0.029999999329447746,
+              1.0
+            ],
+            "values": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.2000000476837158,
+                1.2000000476837158,
+                1.2000000476837158
+              ],
+              [
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929
+              ],
+              [
+                1.0,
+                1.0,
+                1.0
+              ],
+              [
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_ring.tex",
+        "birthUvScrollRate": {
+          "constantValue": [
+            0.11999999731779099,
+            0.0
+          ],
+          "__type": "ValueVector2"
+        },
+        "__type": "VfxEmitterDefinitionData"
+      },
+      {
+        "rate": {
+          "constantValue": 120.0,
+          "__type": "ValueFloat"
+        },
+        "particleLifetime": {
+          "constantValue": 1.0,
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  1.0
+                ],
+                "keyValues": [
+                  0.5,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              1.0
+            ],
+            "__type": "VfxAnimatedFloatVariableData"
+          },
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 2.0,
+        "lifetime": 4.0,
+        "emitterName": "spark",
+        "birthVelocity": {
+          "constantValue": [
+            10.0,
+            10.0,
+            10.0
+          ],
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  0.009999999776482582,
+                  1.0
+                ],
+                "keyValues": [
+                  0.10000000149011612,
+                  -1.0,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "keyTimes": [
+                  1.0
+                ],
+                "keyValues": [
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "keyTimes": [
+                  0.0,
+                  1.0
+                ],
+                "keyValues": [
+                  -1.0,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                10.0,
+                10.0,
+                10.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "worldAcceleration": {
+          "constantValue": [
+            0.0,
+            100.0,
+            0.0
+          ],
+          "dynamics": {
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                0.0,
+                100.0,
+                0.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "IntegratedValueVector3"
+        },
+        "bindWeight": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "SpawnShape": {
+          "emitOffset": {
+            "constantValue": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "dynamics": {
+              "probabilityTables": [
+                {
+                  "keyTimes": [
+                    0.0,
+                    1.0
+                  ],
+                  "keyValues": [
+                    0.9900000095367432,
+                    1.0099999904632568
+                  ],
+                  "__type": "VfxProbabilityTableData"
+                },
+                {
+                  "__type": "VfxProbabilityTableData"
+                },
+                {
+                  "__type": "VfxProbabilityTableData"
+                }
+              ],
+              "times": [
+                0.0
+              ],
+              "values": [
+                [
+                  90.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "__type": "VfxAnimatedVector3fVariableData"
+            },
+            "__type": "ValueVector3"
+          },
+          "emitRotationAngles": [
+            {
+              "constantValue": 1.0,
+              "dynamics": {
+                "times": [
+                  0.0,
+                  1.0
+                ],
+                "values": [
+                  120.0,
+                  460.0
+                ],
+                "__type": "VfxAnimatedFloatVariableData"
+              },
+              "__type": "ValueFloat"
+            }
+          ],
+          "emitRotationAxes": [
+            [
+              0.0,
+              1.0000001192092896,
+              0.0
+            ]
+          ],
+          "__type": "VfxShapeLegacy"
+        },
+        "FlexShapeDefinition": {
+          "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
+          "__type": "VfxFlexShapeDefinitionData"
+        },
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Color_Yasuo_wind_swirl.tex",
+        "blendMode": 4,
+        "pass": 10,
+        "colorLookUpTypeY": 3,
+        "isUniformScale": 1,
+        "isRandomStartFrame": 1,
+        "birthRotation0": {
+          "constantValue": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  1.0
+                ],
+                "keyValues": [
+                  1.0,
+                  360.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "isLocalOrientation": 0,
+        "birthScale0": {
+          "constantValue": [
+            80.0,
+            80.0,
+            80.0
+          ],
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  0.699999988079071,
+                  1.0
+                ],
+                "keyValues": [
+                  0.30000001192092896,
+                  0.5,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                80.0,
+                80.0,
+                80.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "scale0": {
+          "dynamics": {
+            "times": [
+              0.0,
+              0.800000011920929
+            ],
+            "values": [
+              [
+                0.30000001192092896,
+                0.30000001192092896,
+                0.30000001192092896
+              ],
+              [
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy.tex",
+        "texDiv": [
+          4.0,
+          4.0
+        ],
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_NightmareBot_E_timer5",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer5",
+    "overrideScaleCap": 350.0,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer5",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer4": {
+    "complexEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 2.0,
+          "__type": "ValueFloat"
+        },
+        "particleLifetime": {
+          "constantValue": 5.0,
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 15.0,
+        "lifetime": 0.10000000149011612,
+        "isSingleParticle": 1,
+        "emitterName": "timer",
+        "bindWeight": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "FlexShapeDefinition": {
+          "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+          "__type": "VfxFlexShapeDefinitionData"
+        },
+        "primitive": {
+          "mMesh": {
+            "mSimpleMeshName": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_mesh.scb",
+            "__type": "VfxMeshDefinitionData"
+          },
+          "__type": "VfxPrimitiveMesh"
+        },
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Color_Yasuo_E_dash_timer_tar.tex",
+        "blendMode": 4,
+        "colorLookUpTypeY": 1,
+        "disableBackfaceCull": true,
+        "birthRotation0": {
+          "constantValue": [
+            90.0,
+            0.0,
+            180.0
+          ],
+          "__type": "ValueVector3"
+        },
+        "isLocalOrientation": 0,
+        "birthScale0": {
+          "constantValue": [
+            20.0,
+            20.0,
+            0.0
+          ],
+          "__type": "ValueVector3"
+        },
+        "scale0": {
+          "dynamics": {
+            "times": [
+              0.0,
+              0.009999999776482582,
+              0.019999999552965164,
+              0.029999999329447746,
+              1.0
+            ],
+            "values": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.2000000476837158,
+                1.2000000476837158,
+                1.2000000476837158
+              ],
+              [
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929
+              ],
+              [
+                1.0,
+                1.0,
+                1.0
+              ],
+              [
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_ring.tex",
+        "birthUvScrollRate": {
+          "constantValue": [
+            0.09600000083446503,
+            0.0
+          ],
+          "__type": "ValueVector2"
+        },
+        "__type": "VfxEmitterDefinitionData"
+      },
+      {
+        "rate": {
+          "constantValue": 100.0,
+          "__type": "ValueFloat"
+        },
+        "particleLifetime": {
+          "constantValue": 1.0,
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  1.0
+                ],
+                "keyValues": [
+                  0.5,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              1.0
+            ],
+            "__type": "VfxAnimatedFloatVariableData"
+          },
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 2.0,
+        "lifetime": 5.0,
+        "emitterName": "spark",
+        "birthVelocity": {
+          "constantValue": [
+            10.0,
+            10.0,
+            10.0
+          ],
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  0.009999999776482582,
+                  1.0
+                ],
+                "keyValues": [
+                  0.10000000149011612,
+                  -1.0,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "keyTimes": [
+                  1.0
+                ],
+                "keyValues": [
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "keyTimes": [
+                  0.0,
+                  1.0
+                ],
+                "keyValues": [
+                  -1.0,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                10.0,
+                10.0,
+                10.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "worldAcceleration": {
+          "constantValue": [
+            0.0,
+            100.0,
+            0.0
+          ],
+          "dynamics": {
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                0.0,
+                100.0,
+                0.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "IntegratedValueVector3"
+        },
+        "bindWeight": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "SpawnShape": {
+          "emitOffset": {
+            "constantValue": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "dynamics": {
+              "probabilityTables": [
+                {
+                  "keyTimes": [
+                    0.0,
+                    1.0
+                  ],
+                  "keyValues": [
+                    0.9900000095367432,
+                    1.0099999904632568
+                  ],
+                  "__type": "VfxProbabilityTableData"
+                },
+                {
+                  "__type": "VfxProbabilityTableData"
+                },
+                {
+                  "__type": "VfxProbabilityTableData"
+                }
+              ],
+              "times": [
+                0.0
+              ],
+              "values": [
+                [
+                  90.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "__type": "VfxAnimatedVector3fVariableData"
+            },
+            "__type": "ValueVector3"
+          },
+          "emitRotationAngles": [
+            {
+              "constantValue": 1.0,
+              "dynamics": {
+                "times": [
+                  0.0,
+                  1.0
+                ],
+                "values": [
+                  120.0,
+                  460.0
+                ],
+                "__type": "VfxAnimatedFloatVariableData"
+              },
+              "__type": "ValueFloat"
+            }
+          ],
+          "emitRotationAxes": [
+            [
+              0.0,
+              1.0000001192092896,
+              0.0
+            ]
+          ],
+          "__type": "VfxShapeLegacy"
+        },
+        "FlexShapeDefinition": {
+          "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
+          "__type": "VfxFlexShapeDefinitionData"
+        },
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Color_Yasuo_wind_swirl.tex",
+        "blendMode": 4,
+        "pass": 10,
+        "colorLookUpTypeY": 3,
+        "isUniformScale": 1,
+        "isRandomStartFrame": 1,
+        "birthRotation0": {
+          "constantValue": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  1.0
+                ],
+                "keyValues": [
+                  1.0,
+                  360.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "isLocalOrientation": 0,
+        "birthScale0": {
+          "constantValue": [
+            80.0,
+            80.0,
+            80.0
+          ],
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  0.699999988079071,
+                  1.0
+                ],
+                "keyValues": [
+                  0.30000001192092896,
+                  0.5,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                80.0,
+                80.0,
+                80.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "scale0": {
+          "dynamics": {
+            "times": [
+              0.0,
+              0.800000011920929
+            ],
+            "values": [
+              [
+                0.30000001192092896,
+                0.30000001192092896,
+                0.30000001192092896
+              ],
+              [
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy.tex",
+        "texDiv": [
+          4.0,
+          4.0
+        ],
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_NightmareBot_E_timer4",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer4",
+    "overrideScaleCap": 350.0,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer4",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer1": {
+    "complexEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 2.0,
+          "__type": "ValueFloat"
+        },
+        "particleLifetime": {
+          "constantValue": 8.0,
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 18.0,
+        "lifetime": 0.10000000149011612,
+        "isSingleParticle": 1,
+        "emitterName": "timer",
+        "bindWeight": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "FlexShapeDefinition": {
+          "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+          "__type": "VfxFlexShapeDefinitionData"
+        },
+        "primitive": {
+          "mMesh": {
+            "mSimpleMeshName": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_mesh.scb",
+            "__type": "VfxMeshDefinitionData"
+          },
+          "__type": "VfxPrimitiveMesh"
+        },
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Color_Yasuo_E_dash_timer_tar.tex",
+        "blendMode": 4,
+        "Color": {
+          "constantValue": [
+            1.0,
+            1.0,
+            1.0,
+            0.5000079870223999
+          ],
+          "__type": "ValueColor"
+        },
+        "colorLookUpTypeY": 1,
+        "disableBackfaceCull": true,
+        "miscRenderFlags": 1,
+        "birthRotation0": {
+          "constantValue": [
+            90.0,
+            0.0,
+            180.0
+          ],
+          "__type": "ValueVector3"
+        },
+        "isLocalOrientation": 0,
+        "birthScale0": {
+          "constantValue": [
+            20.0,
+            20.0,
+            0.0
+          ],
+          "__type": "ValueVector3"
+        },
+        "scale0": {
+          "dynamics": {
+            "times": [
+              0.0,
+              0.009999999776482582,
+              0.019999999552965164,
+              0.029999999329447746,
+              1.0
+            ],
+            "values": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.2000000476837158,
+                1.2000000476837158,
+                1.2000000476837158
+              ],
+              [
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929
+              ],
+              [
+                1.0,
+                1.0,
+                1.0
+              ],
+              [
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_ring.tex",
+        "birthUvScrollRate": {
+          "constantValue": [
+            0.05999999865889549,
+            0.0
+          ],
+          "__type": "ValueVector2"
+        },
+        "__type": "VfxEmitterDefinitionData"
+      },
+      {
+        "rate": {
+          "constantValue": 100.0,
+          "__type": "ValueFloat"
+        },
+        "particleLifetime": {
+          "constantValue": 1.0,
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  1.0
+                ],
+                "keyValues": [
+                  0.5,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              1.0
+            ],
+            "__type": "VfxAnimatedFloatVariableData"
+          },
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 2.0,
+        "lifetime": 8.0,
+        "emitterName": "spark",
+        "birthVelocity": {
+          "constantValue": [
+            10.0,
+            10.0,
+            10.0
+          ],
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  0.009999999776482582,
+                  1.0
+                ],
+                "keyValues": [
+                  0.10000000149011612,
+                  -1.0,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "keyTimes": [
+                  1.0
+                ],
+                "keyValues": [
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "keyTimes": [
+                  0.0,
+                  1.0
+                ],
+                "keyValues": [
+                  -1.0,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                10.0,
+                10.0,
+                10.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "worldAcceleration": {
+          "constantValue": [
+            0.0,
+            100.0,
+            0.0
+          ],
+          "dynamics": {
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                0.0,
+                100.0,
+                0.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "IntegratedValueVector3"
+        },
+        "bindWeight": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "SpawnShape": {
+          "emitOffset": {
+            "constantValue": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "dynamics": {
+              "probabilityTables": [
+                {
+                  "keyTimes": [
+                    0.0,
+                    1.0
+                  ],
+                  "keyValues": [
+                    0.9900000095367432,
+                    1.0099999904632568
+                  ],
+                  "__type": "VfxProbabilityTableData"
+                },
+                {
+                  "__type": "VfxProbabilityTableData"
+                },
+                {
+                  "__type": "VfxProbabilityTableData"
+                }
+              ],
+              "times": [
+                0.0
+              ],
+              "values": [
+                [
+                  90.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "__type": "VfxAnimatedVector3fVariableData"
+            },
+            "__type": "ValueVector3"
+          },
+          "emitRotationAngles": [
+            {
+              "constantValue": 1.0,
+              "dynamics": {
+                "times": [
+                  0.0,
+                  1.0
+                ],
+                "values": [
+                  120.0,
+                  460.0
+                ],
+                "__type": "VfxAnimatedFloatVariableData"
+              },
+              "__type": "ValueFloat"
+            }
+          ],
+          "emitRotationAxes": [
+            [
+              0.0,
+              1.0000001192092896,
+              0.0
+            ]
+          ],
+          "__type": "VfxShapeLegacy"
+        },
+        "FlexShapeDefinition": {
+          "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
+          "__type": "VfxFlexShapeDefinitionData"
+        },
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Color_Yasuo_wind_swirl.tex",
+        "blendMode": 4,
+        "pass": 10,
+        "colorLookUpTypeY": 3,
+        "isUniformScale": 1,
+        "isRandomStartFrame": 1,
+        "isLocalOrientation": 0,
+        "birthScale0": {
+          "constantValue": [
+            80.0,
+            80.0,
+            80.0
+          ],
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  0.699999988079071,
+                  1.0
+                ],
+                "keyValues": [
+                  0.30000001192092896,
+                  0.5,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                80.0,
+                80.0,
+                80.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "scale0": {
+          "dynamics": {
+            "times": [
+              0.0,
+              0.800000011920929
+            ],
+            "values": [
+              [
+                0.30000001192092896,
+                0.30000001192092896,
+                0.30000001192092896
+              ],
+              [
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy.tex",
+        "texDiv": [
+          4.0,
+          4.0
+        ],
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_NightmareBot_E_timer1",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer1",
+    "overrideScaleCap": 350.0,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer1",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer3": {
+    "complexEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 2.0,
+          "__type": "ValueFloat"
+        },
+        "particleLifetime": {
+          "constantValue": 6.0,
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 16.0,
+        "lifetime": 0.10000000149011612,
+        "isSingleParticle": 1,
+        "emitterName": "timer",
+        "bindWeight": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "FlexShapeDefinition": {
+          "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+          "__type": "VfxFlexShapeDefinitionData"
+        },
+        "primitive": {
+          "mMesh": {
+            "mSimpleMeshName": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_mesh.scb",
+            "__type": "VfxMeshDefinitionData"
+          },
+          "__type": "VfxPrimitiveMesh"
+        },
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Color_Yasuo_E_dash_timer_tar.tex",
+        "blendMode": 4,
+        "colorLookUpTypeY": 1,
+        "disableBackfaceCull": true,
+        "birthRotation0": {
+          "constantValue": [
+            90.0,
+            0.0,
+            180.0
+          ],
+          "__type": "ValueVector3"
+        },
+        "isLocalOrientation": 0,
+        "birthScale0": {
+          "constantValue": [
+            20.0,
+            20.0,
+            0.0
+          ],
+          "__type": "ValueVector3"
+        },
+        "scale0": {
+          "dynamics": {
+            "times": [
+              0.0,
+              0.009999999776482582,
+              0.019999999552965164,
+              0.029999999329447746,
+              1.0
+            ],
+            "values": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.2000000476837158,
+                1.2000000476837158,
+                1.2000000476837158
+              ],
+              [
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929
+              ],
+              [
+                1.0,
+                1.0,
+                1.0
+              ],
+              [
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_ring.tex",
+        "birthUvScrollRate": {
+          "constantValue": [
+            0.07999999821186066,
+            0.0
+          ],
+          "__type": "ValueVector2"
+        },
+        "__type": "VfxEmitterDefinitionData"
+      },
+      {
+        "rate": {
+          "constantValue": 100.0,
+          "__type": "ValueFloat"
+        },
+        "particleLifetime": {
+          "constantValue": 1.0,
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  1.0
+                ],
+                "keyValues": [
+                  0.5,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              1.0
+            ],
+            "__type": "VfxAnimatedFloatVariableData"
+          },
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 2.0,
+        "lifetime": 6.0,
+        "emitterName": "spark",
+        "birthVelocity": {
+          "constantValue": [
+            10.0,
+            10.0,
+            10.0
+          ],
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  0.009999999776482582,
+                  1.0
+                ],
+                "keyValues": [
+                  0.10000000149011612,
+                  -1.0,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "keyTimes": [
+                  1.0
+                ],
+                "keyValues": [
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "keyTimes": [
+                  0.0,
+                  1.0
+                ],
+                "keyValues": [
+                  -1.0,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                10.0,
+                10.0,
+                10.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "worldAcceleration": {
+          "constantValue": [
+            0.0,
+            100.0,
+            0.0
+          ],
+          "dynamics": {
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                0.0,
+                100.0,
+                0.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "IntegratedValueVector3"
+        },
+        "bindWeight": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "SpawnShape": {
+          "emitOffset": {
+            "constantValue": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "dynamics": {
+              "probabilityTables": [
+                {
+                  "keyTimes": [
+                    0.0,
+                    1.0
+                  ],
+                  "keyValues": [
+                    0.9900000095367432,
+                    1.0099999904632568
+                  ],
+                  "__type": "VfxProbabilityTableData"
+                },
+                {
+                  "__type": "VfxProbabilityTableData"
+                },
+                {
+                  "__type": "VfxProbabilityTableData"
+                }
+              ],
+              "times": [
+                0.0
+              ],
+              "values": [
+                [
+                  90.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "__type": "VfxAnimatedVector3fVariableData"
+            },
+            "__type": "ValueVector3"
+          },
+          "emitRotationAngles": [
+            {
+              "constantValue": 1.0,
+              "dynamics": {
+                "times": [
+                  0.0,
+                  1.0
+                ],
+                "values": [
+                  120.0,
+                  460.0
+                ],
+                "__type": "VfxAnimatedFloatVariableData"
+              },
+              "__type": "ValueFloat"
+            }
+          ],
+          "emitRotationAxes": [
+            [
+              0.0,
+              1.0000001192092896,
+              0.0
+            ]
+          ],
+          "__type": "VfxShapeLegacy"
+        },
+        "FlexShapeDefinition": {
+          "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
+          "__type": "VfxFlexShapeDefinitionData"
+        },
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Color_Yasuo_wind_swirl.tex",
+        "blendMode": 4,
+        "pass": 10,
+        "colorLookUpTypeY": 3,
+        "isUniformScale": 1,
+        "isRandomStartFrame": 1,
+        "birthRotation0": {
+          "constantValue": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  1.0
+                ],
+                "keyValues": [
+                  1.0,
+                  360.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "isLocalOrientation": 0,
+        "birthScale0": {
+          "constantValue": [
+            80.0,
+            80.0,
+            80.0
+          ],
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  0.699999988079071,
+                  1.0
+                ],
+                "keyValues": [
+                  0.30000001192092896,
+                  0.5,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                80.0,
+                80.0,
+                80.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "scale0": {
+          "dynamics": {
+            "times": [
+              0.0,
+              0.800000011920929
+            ],
+            "values": [
+              [
+                0.30000001192092896,
+                0.30000001192092896,
+                0.30000001192092896
+              ],
+              [
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy.tex",
+        "texDiv": [
+          4.0,
+          4.0
+        ],
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_NightmareBot_E_timer3",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer3",
+    "overrideScaleCap": 350.0,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer3",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer2": {
+    "complexEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 2.0,
+          "__type": "ValueFloat"
+        },
+        "particleLifetime": {
+          "constantValue": 7.0,
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 17.0,
+        "lifetime": 0.10000000149011612,
+        "isSingleParticle": 1,
+        "emitterName": "timer",
+        "bindWeight": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "FlexShapeDefinition": {
+          "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+          "__type": "VfxFlexShapeDefinitionData"
+        },
+        "primitive": {
+          "mMesh": {
+            "mSimpleMeshName": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_mesh.scb",
+            "__type": "VfxMeshDefinitionData"
+          },
+          "__type": "VfxPrimitiveMesh"
+        },
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Color_Yasuo_E_dash_timer_tar.tex",
+        "blendMode": 4,
+        "colorLookUpTypeY": 1,
+        "disableBackfaceCull": true,
+        "birthRotation0": {
+          "constantValue": [
+            90.0,
+            0.0,
+            180.0
+          ],
+          "__type": "ValueVector3"
+        },
+        "isLocalOrientation": 0,
+        "birthScale0": {
+          "constantValue": [
+            20.0,
+            20.0,
+            0.0
+          ],
+          "__type": "ValueVector3"
+        },
+        "scale0": {
+          "dynamics": {
+            "times": [
+              0.0,
+              0.009999999776482582,
+              0.019999999552965164,
+              0.029999999329447746,
+              1.0
+            ],
+            "values": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.2000000476837158,
+                1.2000000476837158,
+                1.2000000476837158
+              ],
+              [
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929
+              ],
+              [
+                1.0,
+                1.0,
+                1.0
+              ],
+              [
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_ring.tex",
+        "birthUvScrollRate": {
+          "constantValue": [
+            0.0689999982714653,
+            0.0
+          ],
+          "__type": "ValueVector2"
+        },
+        "__type": "VfxEmitterDefinitionData"
+      },
+      {
+        "rate": {
+          "constantValue": 100.0,
+          "__type": "ValueFloat"
+        },
+        "particleLifetime": {
+          "constantValue": 1.0,
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  1.0
+                ],
+                "keyValues": [
+                  0.5,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              1.0
+            ],
+            "__type": "VfxAnimatedFloatVariableData"
+          },
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 2.0,
+        "lifetime": 7.0,
+        "emitterName": "spark",
+        "birthVelocity": {
+          "constantValue": [
+            10.0,
+            10.0,
+            10.0
+          ],
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  0.009999999776482582,
+                  1.0
+                ],
+                "keyValues": [
+                  0.10000000149011612,
+                  -1.0,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "keyTimes": [
+                  1.0
+                ],
+                "keyValues": [
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "keyTimes": [
+                  0.0,
+                  1.0
+                ],
+                "keyValues": [
+                  -1.0,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                10.0,
+                10.0,
+                10.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "worldAcceleration": {
+          "constantValue": [
+            0.0,
+            100.0,
+            0.0
+          ],
+          "dynamics": {
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                0.0,
+                100.0,
+                0.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "IntegratedValueVector3"
+        },
+        "bindWeight": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "SpawnShape": {
+          "emitOffset": {
+            "constantValue": [
+              90.0,
+              0.0,
+              0.0
+            ],
+            "dynamics": {
+              "probabilityTables": [
+                {
+                  "keyTimes": [
+                    0.0,
+                    1.0
+                  ],
+                  "keyValues": [
+                    0.9900000095367432,
+                    1.0099999904632568
+                  ],
+                  "__type": "VfxProbabilityTableData"
+                },
+                {
+                  "__type": "VfxProbabilityTableData"
+                },
+                {
+                  "__type": "VfxProbabilityTableData"
+                }
+              ],
+              "times": [
+                0.0
+              ],
+              "values": [
+                [
+                  90.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "__type": "VfxAnimatedVector3fVariableData"
+            },
+            "__type": "ValueVector3"
+          },
+          "emitRotationAngles": [
+            {
+              "constantValue": 1.0,
+              "dynamics": {
+                "times": [
+                  0.0,
+                  1.0
+                ],
+                "values": [
+                  120.0,
+                  460.0
+                ],
+                "__type": "VfxAnimatedFloatVariableData"
+              },
+              "__type": "ValueFloat"
+            }
+          ],
+          "emitRotationAxes": [
+            [
+              0.0,
+              1.0000001192092896,
+              0.0
+            ]
+          ],
+          "__type": "VfxShapeLegacy"
+        },
+        "FlexShapeDefinition": {
+          "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
+          "__type": "VfxFlexShapeDefinitionData"
+        },
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Color_Yasuo_wind_swirl.tex",
+        "blendMode": 4,
+        "pass": 10,
+        "colorLookUpTypeY": 3,
+        "isUniformScale": 1,
+        "isRandomStartFrame": 1,
+        "birthRotation0": {
+          "constantValue": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  1.0
+                ],
+                "keyValues": [
+                  1.0,
+                  360.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "isLocalOrientation": 0,
+        "birthScale0": {
+          "constantValue": [
+            80.0,
+            80.0,
+            80.0
+          ],
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  0.699999988079071,
+                  1.0
+                ],
+                "keyValues": [
+                  0.30000001192092896,
+                  0.5,
+                  1.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                80.0,
+                80.0,
+                80.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "scale0": {
+          "dynamics": {
+            "times": [
+              0.0,
+              0.800000011920929
+            ],
+            "values": [
+              [
+                0.30000001192092896,
+                0.30000001192092896,
+                0.30000001192092896
+              ],
+              [
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_W_wind_wispy.tex",
+        "texDiv": [
+          4.0,
+          4.0
+        ],
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_NightmareBot_E_timer2",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer2",
+    "overrideScaleCap": 350.0,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_NightmareBot_E_timer2",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "__linked": []
+}

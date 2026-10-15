@@ -1,0 +1,118 @@
+{
+  "sheet": "assets/ui/pixel-hud-v2-2026-10-15/generated/Create_a_crisp_pixel-art_MOBA_HUD_icon_sheet_inspired_by_the_reference_interface_Exactly_eight_separate_square_26529ca9/ui_output.png",
+  "source_sha256": "085974c5a2eb00c11f09574da989b7b8b1191bc02b7bc54aacca0613b28de19c",
+  "icons": [
+    {
+      "id": "portrait",
+      "file": "runtime/portrait.png",
+      "bbox": [
+        106,
+        121,
+        382,
+        398
+      ],
+      "width": 276,
+      "height": 277,
+      "pixels_preserved": true,
+      "sha256": "2ed38dfb37dfac1b41fc35038be964863831ffe70192de17f523ef157bd672a0"
+    },
+    {
+      "id": "passive",
+      "file": "runtime/passive.png",
+      "bbox": [
+        457,
+        121,
+        735,
+        398
+      ],
+      "width": 278,
+      "height": 277,
+      "pixels_preserved": true,
+      "sha256": "e525a331caa73ea16bc397bbd082c4ee780ee0ad03fc67a8ba849160a870bda4"
+    },
+    {
+      "id": "q",
+      "file": "runtime/q.png",
+      "bbox": [
+        807,
+        121,
+        1085,
+        398
+      ],
+      "width": 278,
+      "height": 277,
+      "pixels_preserved": true,
+      "sha256": "837044a2dcb4574650c8d0dc0df72c4f9bae3b52df32290b4c1da660f012db53"
+    },
+    {
+      "id": "w",
+      "file": "runtime/w.png",
+      "bbox": [
+        1156,
+        121,
+        1432,
+        398
+      ],
+      "width": 276,
+      "height": 277,
+      "pixels_preserved": true,
+      "sha256": "488f2b93d4af6d58fdacfde8f69c59cce85cb97af26c3d6201bfec2769f9eb05"
+    },
+    {
+      "id": "e",
+      "file": "runtime/e.png",
+      "bbox": [
+        107,
+        477,
+        382,
+        753
+      ],
+      "width": 275,
+      "height": 276,
+      "pixels_preserved": true,
+      "sha256": "0a28437a0a92978455e0c94b67e12896d7e4203db0e8c40575ae6912f024a1c1"
+    },
+    {
+      "id": "r",
+      "file": "runtime/r.png",
+      "bbox": [
+        458,
+        477,
+        734,
+        753
+      ],
+      "width": 276,
+      "height": 276,
+      "pixels_preserved": true,
+      "sha256": "fdbb915afe0293d9fdb4c3ca7fde65a0979a194367b8eb8c9e48348b2f9ffd8b"
+    },
+    {
+      "id": "d",
+      "file": "runtime/d.png",
+      "bbox": [
+        807,
+        477,
+        1084,
+        753
+      ],
+      "width": 277,
+      "height": 276,
+      "pixels_preserved": true,
+      "sha256": "51c1db57e4e841c9e80e4b73e6d61a124923a5c8f54063135bd2a4ce978c9ca0"
+    },
+    {
+      "id": "f",
+      "file": "runtime/f.png",
+      "bbox": [
+        1157,
+        477,
+        1432,
+        753
+      ],
+      "width": 275,
+      "height": 276,
+      "pixels_preserved": true,
+      "sha256": "164cba1195d851a140c476085bdcbd8cb97b0dde309ecb2e92e97751b5351c02"
+    }
+  ]
+}

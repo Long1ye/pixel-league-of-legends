@@ -1,0 +1,30 @@
+{
+  "music": {
+    "title": "Howling Abyss - Early Game",
+    "uploader": "League of Legends",
+    "duration": 313.646,
+    "webpage_url": "https://soundcloud.com/leagueoflegends/howling-abyss-early-game"
+  },
+  "champions": [
+    {
+      "name": "Yasuo",
+      "page": "https://www.leagueoflegends.com/en-us/champions/yasuo/",
+      "files": [
+        "https://lol.dyn.riotcdn.net/x/videos/champion-abilities/0157/ability_0157_P1.mp4",
+        "https://lol.dyn.riotcdn.net/x/videos/champion-abilities/0157/ability_0157_Q1.mp4",
+        "https://lol.dyn.riotcdn.net/x/videos/champion-abilities/0157/ability_0157_W1.mp4",
+        "https://lol.dyn.riotcdn.net/x/videos/champion-abilities/0157/ability_0157_E1.mp4",
+        "https://lol.dyn.riotcdn.net/x/videos/champion-abilities/0157/ability_0157_R1.mp4"
+      ]
+    },
+    {
+      "name": "Twisted Fate",
+      "page": "https://www.leagueoflegends.com/en-us/champions/twistedfate/",
+      "files": [
+        "https://lol.dyn.riotcdn.net/x/videos/champion-abilities/0004/ability_0004_Q1.webm",
+        "https://lol.dyn.riotcdn.net/x/videos/champion-abilities/0004/ability_0004_W1.webm",
+        "https://lol.dyn.riotcdn.net/x/videos/champion-abilities/0004/ability_0004_E1.webm"
+      ]
+    }
+  ]
+}

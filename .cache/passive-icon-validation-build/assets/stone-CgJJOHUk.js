@@ -1,0 +1,1 @@
+var e=new URL(`stone-HK31IiUu.png`,import.meta.url).href;export{e as t};

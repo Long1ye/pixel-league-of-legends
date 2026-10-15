@@ -38,7 +38,10 @@ export function bridgeRails(){
  return rails;
 }
 export function drawBridgeRails(ctx:CanvasRenderingContext2D,images:HTMLImageElement[]){
- for(const rail of bridgeRails()){
+ for(const rail of bridgeRails())drawBridgeRail(ctx,rail,images[rail.variant]);
+}
+/** Same transform for the baked floor and the foreground interaction slice. */
+export function drawBridgeRail(ctx:CanvasRenderingContext2D,rail:ReturnType<typeof bridgeRails>[number],image:HTMLImageElement,offset={x:0,y:0}){
   const p=bridgePoint(rail.u,rail.side*(halfWidth(BRIDGE,rail.u)-2));
   ctx.save();
   const l=bridgePoint(rail.u-1,rail.side*(halfWidth(BRIDGE,rail.u-1)-2));
@@ -46,9 +49,8 @@ export function drawBridgeRails(ctx:CanvasRenderingContext2D,images:HTMLImageEle
   const slope=(r.y-l.y)/(r.x-l.x),scale=rail.size/512;
   // Generated rails face the opposite diagonal. Mirror in the renderer and
   // align their baseline, preserving vertical posts rather than rotating them.
-  ctx.translate(p.x,p.y);ctx.transform(-scale,(-slope-.35)*scale,0,scale,0,0);
+  ctx.translate(p.x+offset.x,p.y+offset.y);ctx.transform(-scale,(-slope-.35)*scale,0,scale,0,0);
   const foot=[380,390,330,345][rail.variant];
-  ctx.drawImage(images[rail.variant],-256,-foot);
+  ctx.drawImage(image,-256,-foot);
   ctx.restore();
- }
 }

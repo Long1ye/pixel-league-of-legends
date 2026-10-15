@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_d5a69d03d5d74cd4a5522e6c301f8c10",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\generation-archive\\legacy-meowa\\yasuo-w-v1-loop-cleanup\\final_pixel_snapper\\output.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

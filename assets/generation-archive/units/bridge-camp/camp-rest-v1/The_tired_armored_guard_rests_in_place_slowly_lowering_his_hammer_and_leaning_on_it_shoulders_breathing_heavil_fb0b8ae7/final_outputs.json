@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_08d0b2df58684bee91d787e40d79acac",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\units\\bridge-camp\\camp-rest-v1\\The_tired_armored_guard_rests_in_place_slowly_lowering_his_hammer_and_leaning_on_it_shoulders_breathing_heavil_fb0b8ae7\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\units\\bridge-camp\\camp-rest-v1\\The_tired_armored_guard_rests_in_place_slowly_lowering_his_hammer_and_leaning_on_it_shoulders_breathing_heavil_fb0b8ae7\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\units\\bridge-camp\\camp-rest-v1\\The_tired_armored_guard_rests_in_place_slowly_lowering_his_hammer_and_leaning_on_it_shoulders_breathing_heavil_fb0b8ae7\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "source": "D:\\Long1ye\\\u82f1\u96c4\u8054\u76df(26)\\Game\\DATA\\FINAL\\UI.wad.client",
+  "format_reference": "https://github.com/CommunityDragon/CDTB/blob/master/cdtb/export.py",
+  "textures": [
+    {
+      "path": "assets/ux/cursors/upscaled/hover_ally_precise.tga",
+      "hash": "21302d944d52861a",
+      "width": 128,
+      "height": 128,
+      "format": "TGA",
+      "sha256": "880e3b5d786aa6fde5126115cb628174d0350cc32a19cfc8960e7060365679ab",
+      "file": "textures/hover_ally_precise.png"
+    },
+    {
+      "path": "assets/ux/cursors/upscaled/hover_enemy_precise.tga",
+      "hash": "6e58890014d6ac61",
+      "width": 128,
+      "height": 128,
+      "format": "TGA",
+      "sha256": "24a6b4d70781334cbc37949dc1389da70de1cc3f0255e15b4558209c38a3e7e9",
+      "file": "textures/hover_enemy_precise.png"
+    },
+    {
+      "path": "assets/ux/cursors/upscaled/hover_enemycannotattack_precise.tga",
+      "hash": "25710ca56413be0b",
+      "width": 128,
+      "height": 128,
+      "format": "TGA",
+      "sha256": "064c07767aca423e1222c9bba161635700320a4bd7e0dafc25a9151ab0133489",
+      "file": "textures/hover_enemycannotattack_precise.png"
+    },
+    {
+      "path": "assets/ux/cursors/upscaled/hover_precise.tga",
+      "hash": "9c2720e330980809",
+      "width": 128,
+      "height": 128,
+      "format": "TGA",
+      "sha256": "4ab3281d26733b15beaf9130b1e52e8e9e3610c36729e512a8f1a6458a2bc02a",
+      "file": "textures/hover_precise.png"
+    },
+    {
+      "path": "assets/ux/cursors/upscaled/target_precise.tga",
+      "hash": "1cf0db36eacdb772",
+      "width": 128,
+      "height": 128,
+      "format": "TGA",
+      "sha256": "6fb14c5c7073f1b027bd70920dfe4a7ab75d59d59d0e1f3d633bf47a38e3f855",
+      "file": "textures/target_precise.png"
+    },
+    {
+      "path": "assets/ux/floatinghealthbars/champfhbfxatlas.tex",
+      "hash": "515f5bacb3a0cc50",
+      "width": 1024,
+      "height": 2048,
+      "format": 12,
+      "sha256": "fb5d5390d642163dd037102c74c1d850e2f2df5cf24c2d536dd43cc36450e515",
+      "file": "textures/champfhbfxatlas.png"
+    },
+    {
+      "path": "assets/ux/floatinghealthbars/fhbobjdeathfxatlas.tex",
+      "hash": "c78690d0a4453b18",
+      "width": 2048,
+      "height": 1024,
+      "format": 12,
+      "sha256": "140dc5f90d915add7f7b73062267d901348c81423380c19927d3722bc079f295",
+      "file": "textures/fhbobjdeathfxatlas.png"
+    },
+    {
+      "path": "assets/ux/floatinghealthbars/fhbstructuredeathfxatlas.tex",
+      "hash": "354dbb4a7402861d",
+      "width": 1024,
+      "height": 1024,
+      "format": 12,
+      "sha256": "8e6df75ad2028ffe6e4e4c8ee8494167ee462b660174026d63659c00d69cb1ed",
+      "file": "textures/fhbstructuredeathfxatlas.png"
+    },
+    {
+      "path": "assets/ux/floatinghealthbars/healthbaricons.tex",
+      "hash": "4529486963fbc8a5",
+      "width": 32,
+      "height": 512,
+      "format": 12,
+      "sha256": "7bbe80c0785a0037e2f71b3730fccae9b74f1d2c2ccf024ce2d3e5f006a66540",
+      "file": "textures/healthbaricons.png"
+    },
+    {
+      "path": "assets/ux/floatinghealthbars/spotlighthealthbaratlas.tex",
+      "hash": "37b03fb998093e20",
+      "width": 512,
+      "height": 512,
+      "format": 12,
+      "sha256": "0225aeaa445d37cb0f5aa8cbb518cca3335e695b5d4e82efde8705306f46bf4a",
+      "file": "textures/spotlighthealthbaratlas.png"
+    },
+    {
+      "path": "assets/ux/floatinghealthbars/sylasultindicatorbg.tex",
+      "hash": "c634d307b7380144",
+      "width": 256,
+      "height": 128,
+      "format": 12,
+      "sha256": "43b71d812a05423dfb0e68a41dc8536bb3dfeaadf2b5ad80019ac66ee18872d0",
+      "file": "textures/sylasultindicatorbg.png"
+    },
+    {
+      "path": "assets/ux/jade/hud/healthbarsdefault.tex",
+      "hash": "f3bb5328aadc44b5",
+      "width": 512,
+      "height": 512,
+      "format": 12,
+      "sha256": "aaedc9b8cd42e919158d961694f37b10591e908bb85f2b06ae4a1daba6e3ade0",
+      "file": "textures/healthbarsdefault.png"
+    },
+    {
+      "path": "assets/ux/jade/hud/parbars/bar_health/healthbarempty_animated.tex",
+      "hash": "f09ec5b0e9c00a81",
+      "width": 2048,
+      "height": 512,
+      "format": 12,
+      "sha256": "c8ada269ff3f311af3098e8b802185c957c429875f3119ee2724e3a428460520",
+      "file": "textures/healthbarempty_animated.png"
+    },
+    {
+      "path": "assets/ux/jade/hud/parbars/bar_health/healthbarfull_animated.tex",
+      "hash": "3879c15118266bec",
+      "width": 2048,
+      "height": 512,
+      "format": 12,
+      "sha256": "8efc8eb643e0ba39f1c441732fe081a1e0bb8365132256f4cf3e1a004e4f7cc6",
+      "file": "textures/healthbarfull_animated.png"
+    },
+    {
+      "path": "assets/ux/jade/hud/parbars/bar_health/healthbartip_animated.tex",
+      "hash": "ca5fda624ecaa37a",
+      "width": 256,
+      "height": 512,
+      "format": 12,
+      "sha256": "0b7fc864b8f7a591040d71e66f7159e5ed9d6dade8d39bacf4f6ad406adf4834",
+      "file": "textures/healthbartip_animated.png"
+    }
+  ]
+}

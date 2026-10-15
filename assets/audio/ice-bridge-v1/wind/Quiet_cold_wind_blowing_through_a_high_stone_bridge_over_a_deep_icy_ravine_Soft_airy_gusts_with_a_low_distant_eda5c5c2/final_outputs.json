@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_afb515e656a249c09e87e703569fbf4e",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\audio\\ice-bridge-v1\\wind\\Quiet_cold_wind_blowing_through_a_high_stone_bridge_over_a_deep_icy_ravine_Soft_airy_gusts_with_a_low_distant_eda5c5c2\\Cold_Ravine_Wind_Ambience.mp3",
+      "mime_type": "audio/mpeg"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "source": "D:\\Long1ye\\\u82f1\u96c4\u8054\u76df(26)\\Game\\DATA\\FINAL\\DATA.wad.client",
+  "files": [
+    {
+      "path": "data/shared/particles/movement_indicator4.scb",
+      "file": "movement_indicator4.scb",
+      "size": 75228,
+      "sha256": "8007cde645927b238db4f320ba2fd5adaed7c63a026a30867196f84a9647b0ae"
+    },
+    {
+      "path": "data/particles/movement_indicator_colorblind.dds",
+      "file": "movement_indicator_colorblind.dds",
+      "size": 262272,
+      "sha256": "273731f379813c63f085c3aadebfc4dd474ed6c954d6a499c8507ade358145d4"
+    },
+    {
+      "path": "data/particles/movement_indicator_red.dds",
+      "file": "movement_indicator_red.dds",
+      "size": 262272,
+      "sha256": "cd5c0fa98a097cfdc4defdb1a70c0749e41d356c5013669790560860dafc06e1"
+    },
+    {
+      "path": "data/shared/particles/cursor_moveto.scb",
+      "file": "cursor_moveto.scb",
+      "size": 9088,
+      "sha256": "78e5680ec533fb4bf252037b957660960d0886565d71ad12742b8900d8ead3dc"
+    },
+    {
+      "path": "data/particles/cursor_moveto_red.troybin",
+      "file": "cursor_moveto_red.troybin",
+      "size": 1594,
+      "sha256": "5d5b89f3d30715da290719c4024b65a1f89fdf0f03643c5a6734bd32dc9b039e"
+    },
+    {
+      "path": "data/shared/particles/movement_indicator.dds",
+      "file": "movement_indicator.dds",
+      "size": 349680,
+      "sha256": "646ebabccb89dd9312acb03df330aa466436d10c6dbf55964418b75eeb703c5a"
+    },
+    {
+      "path": "data/shared/particles/cursor_moveto.troybin",
+      "file": "cursor_moveto.troybin",
+      "size": 1655,
+      "sha256": "11b51ab1864266bcafab3a6468701588346ae1545cc565ee201d76595ab9e23e"
+    },
+    {
+      "path": "data/shared/particles/color-movetogreen.dds",
+      "file": "color-movetogreen.dds",
+      "size": 256,
+      "sha256": "0bd445926a8b7efeadc239793bc966aa2ed360a6744a3c48e8bc0b7ca5474904"
+    }
+  ]
+}

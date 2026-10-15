@@ -1,0 +1,47 @@
+{
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Wall_XinZhao_OLD": {
+    "particleName": "Yasuo_Base_Wall_XinZhao_OLD",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Wall_XinZhao_OLD",
+    "flags": 134,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Wall_XinZhao_OLD",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q3_Hand": {
+    "particleName": "Yasuo_Base_Q3_Hand",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q3_Hand",
+    "flags": 132,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q3_Hand",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q_sound": {
+    "complexEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 10.0,
+        "lifetime": 1.0,
+        "emitterName": "empty",
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "meshRenderFlags": 0,
+        "isUniformScale": 1,
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_Q_sound",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q_sound",
+    "flags": 132,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q_sound",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q_Hand": {
+    "particleName": "Yasuo_Base_Q_Hand",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q_Hand",
+    "flags": 132,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_Q_Hand",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "__linked": []
+}

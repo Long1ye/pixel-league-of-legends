@@ -1,0 +1,185 @@
+{
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_EQ_SwordGlow": {
+    "complexEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 300.0,
+          "__type": "ValueFloat"
+        },
+        "particleLifetime": {
+          "constantValue": 0.5,
+          "__type": "ValueFloat"
+        },
+        "lifetime": 0.5,
+        "emitterName": "Sword_glow",
+        "birthVelocity": {
+          "constantValue": [
+            -270.0,
+            0.0,
+            0.0
+          ],
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "keyTimes": [
+                  0.0,
+                  1.0
+                ],
+                "keyValues": [
+                  1.0,
+                  1.2999999523162842
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                -270.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "birthAcceleration": {
+          "constantValue": [
+            0.0,
+            -30.0,
+            0.0
+          ],
+          "__type": "ValueVector3"
+        },
+        "bindWeight": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "primitive": {
+          "__type": "VfxPrimitiveArbitraryQuad"
+        },
+        "blendMode": 4,
+        "pass": 10,
+        "colorLookUpTypeY": 3,
+        "particleIsLocalOrientation": 1,
+        "birthRotation0": {
+          "constantValue": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "dynamics": {
+            "probabilityTables": [
+              {
+                "keyTimes": [
+                  0.0,
+                  1.0
+                ],
+                "keyValues": [
+                  0.0,
+                  360.0
+                ],
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              },
+              {
+                "__type": "VfxProbabilityTableData"
+              }
+            ],
+            "times": [
+              0.0
+            ],
+            "values": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "birthScale0": {
+          "constantValue": [
+            150.0,
+            50.0,
+            50.0
+          ],
+          "__type": "ValueVector3"
+        },
+        "scale0": {
+          "dynamics": {
+            "times": [
+              0.0,
+              0.25,
+              0.699999988079071,
+              1.0
+            ],
+            "values": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                1.0,
+                1.0
+              ],
+              [
+                0.800000011920929,
+                0.699999988079071,
+                0.5
+              ],
+              [
+                1.0,
+                0.5,
+                0.5
+              ]
+            ],
+            "__type": "VfxAnimatedVector3fVariableData"
+          },
+          "__type": "ValueVector3"
+        },
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_dash_linger.tex",
+        "uvMode": 2,
+        "birthUvScrollRate": {
+          "constantValue": [
+            0.10000000149011612,
+            1.0
+          ],
+          "__type": "ValueVector2"
+        },
+        "textureMult": {
+          "textureMult": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Color_Yasuo_R_Sword_glow.tex",
+          "birthUvScrollRateMult": {
+            "constantValue": [
+              0.10000000149011612,
+              4.0
+            ],
+            "__type": "ValueVector2"
+          },
+          "__type": "VfxTextureMultDefinitionData"
+        },
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_EQ_SwordGlow",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_EQ_SwordGlow",
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_EQ_SwordGlow",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "__linked": []
+}

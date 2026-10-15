@@ -19,21 +19,20 @@ export const BALANCE = {
   firstWaveAt: 2,
   waveInterval: 30,
   aiInterval: 0.18,
-  hero: { hp: 640, mana: 240, speed: 53, range: 54, damage: 43, attackInterval: 0.8, windup: 0.19 },
-  melee: { hp: 180, speed: 28, range: 11, damage: 10, attackInterval: 1.25, windup: 0.24 },
-  ranged: { hp: 125, speed: 28, range: 90, damage: 13, attackInterval: 1.45, windup: 0.25 },
+  hero: { hp: 640, mana: 0, speed: 80, range: 58, damage: 43, attackInterval: 0.8, windup: 0.19 },
+  melee: { hp: 150, speed: 28, range: 13, damage: 6, attackInterval: 1.25, windup: 0.24 },
+  ranged: { hp: 105, speed: 28, range: 76, damage: 6, attackInterval: 1.45, windup: 0.25 },
   tower: { hp: 1000, range: HOWLING_MAP?bridgeTowerRange(BRIDGE.blue.outerTower[0]):78, damage: 90, attackInterval: 1.15, windup: 0.15 },
   projectileSpeed: 190,
   fountainRadius: 22 * MAP_LAYOUT.scale,
   fountainHeal: 42,
-  manaRegen: 6,
 } as const;
 
 export const ABILITIES: Record<AbilityKey, { name: string; cost: number; cooldown: number; range: number; damage: number }> = {
-  q: { name: '棱光箭', cost: 30, cooldown: 1, range: 145, damage: 85 },
-  w: { name: '风之障壁', cost: 25, cooldown: 8, range: 32, damage: 0 },
-  e: { name: '踏前斩', cost: 0, cooldown: 0.5, range: 60, damage: 55 },
-  r: { name: '狂风绝息斩', cost: 0, cooldown: 70, range: 175, damage: 200 },
+  q: { name: '斩钢闪', cost: 0, cooldown: 2.5, range: 145, damage: 85 },
+  w: { name: '风之障壁', cost: 0, cooldown: 14, range: 32, damage: 0 },
+  e: { name: '踏前斩', cost: 0, cooldown: 0.1, range: 100, damage: 55 },
+  r: { name: '狂风绝息斩', cost: 0, cooldown: 45, range: 420, damage: 200 },
 };
 
 // The study's corner platforms are fountains; combat towers stand further up the lane.

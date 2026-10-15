@@ -1,5 +1,5 @@
 {
   "command": "image-edit-run",
-  "output_dir": "meowa-output/yasuo-q-v1-se-impact",
+  "output_dir": "assets/generation-archive/legacy-meowa/yasuo-q-v1-se-impact",
   "args": ["--reference-image", "assets/hero-skills/2026-10-10/yasuo/q-v1-se/poses/ready.png", "--prompt", "将亚索改为Q刺出到位的姿势：右手向画面右下伸出，沿刀身方向完成一次直线突刺，刀尖向前，身体微微前倾。保持参考图的角色朝向、外观、像素大小和脚底位置，透明背景，不要挥砍、刀光或发光。", "--mode", "pixel", "--strict", "--generation-model", "image-2.5", "--resolution", "1K", "--quality", "detailed", "--remove-bg-method", "standard"]
 }

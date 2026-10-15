@@ -5,7 +5,7 @@ import shutil
 root = Path(__file__).resolve().parent.parent
 dest = root/'assets/heroes/yasuo/q-draw-2026-10-13'
 dest.mkdir(parents=True, exist_ok=True)
-for name, source in [('body', Path('D:/Long1ye/资源/亚索拔刀.webp')), ('sword', root/'assets/hero-skills/2026-10-13/yasuo/q-v25-user-sword-subtle/sword.webp')]:
+for name, source in [('body', (root / 'assets/source-materials/heroes/yasuo/亚索拔刀.webp')), ('sword', root/'assets/hero-skills/2026-10-13/yasuo/q-v25-user-sword-subtle/sword.webp')]:
     shutil.copyfile(source, dest/f'{name}.webp')
     with Image.open(source) as im:
         frames = [f.convert('RGBA').copy() for f in ImageSequence.Iterator(im)]

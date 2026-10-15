@@ -1,13 +1,18 @@
-import qIcon from '../../assets/ui/2026-10-13/league-hud/icons/component_001.png?url';
-import wIcon from '../../assets/ui/2026-10-13/league-hud/icons/component_004.png?url';
-import eIcon from '../../assets/ui/2026-10-13/league-hud/icons/component_002.png?url';
-import rIcon from '../../assets/ui/2026-10-13/league-hud/icons/component_003.png?url';
-import portrait from '../../assets/hero-skills/2026-10-13/yasuo/q-v26-user-eight/bodies/s.png?url';
+import qIcon from '../../assets/ui/pixel-hud-v2-2026-10-15/runtime/q.png?url';
+import wIcon from '../../assets/ui/pixel-hud-v2-2026-10-15/runtime/w.png?url';
+import eIcon from '../../assets/ui/pixel-hud-v2-2026-10-15/runtime/e.png?url';
+import rIcon from '../../assets/ui/yasuo-r-icon-2026-10-15/runtime/r.png?url';
+import portrait from '../../assets/ui/pixel-hud-v2-2026-10-15/runtime/portrait.png?url';
+import passiveIcon from '../../assets/ui/yasuo-passive-icon-2026-10-15/runtime/passive.png?url';
+import dIcon from '../../assets/ui/pixel-hud-v2-2026-10-15/runtime/d.png?url';
+import fIcon from '../../assets/ui/pixel-hud-v2-2026-10-15/runtime/f.png?url';
 import {BALANCE,HOWLING_MAP} from '../game/config';
+import {SUMMONERS,type SummonerKey} from '../game/SummonerSpells';
 import './league-hud.css';
+import './pixel-hud.css';
 
 /** Move existing controls, retaining their ids, listeners and live game state. */
-export function mountLeagueHud(practice:boolean):void {
+export function mountLeagueHud(practice:boolean,actions:{flute:()=>void;stop:()=>void;summoner:(key:SummonerKey)=>void}):void {
  const shell=document.querySelector<HTMLElement>('.match-shell')!;
  if(practice||!HOWLING_MAP){
   const back=document.createElement('a');back.href='/?map=howling';back.textContent='← 返回冰桥对局';
@@ -15,7 +20,7 @@ export function mountLeagueHud(practice:boolean):void {
   back.style.cssText='position:absolute;right:14px;top:94px;z-index:7;padding:7px 12px;background:#0a151be8;border:1px solid #806b45;color:#dfd1ad;font-size:11px;text-decoration:none';
   shell.append(back);
  }
- document.body.classList.add('league-ui');
+ document.body.classList.add('league-ui','pixel-hud');
  for(const [key,url] of Object.entries({q:qIcon,w:wIcon,e:eIcon,r:rIcon})){
   const image=document.createElement('img');image.src=url;image.alt='';image.draggable=false;
   document.querySelector(`#ability-${key} .ability-glyph`)!.replaceChildren(image);
@@ -34,6 +39,29 @@ export function mountLeagueHud(practice:boolean):void {
  for(const [name,value] of [['攻击',BALANCE.hero.damage],['攻速',(1/BALANCE.hero.attackInterval).toFixed(2)],['移速',BALANCE.hero.speed],['射程',BALANCE.hero.range]]){
   const line=document.createElement('div');const label=document.createElement('span');const number=document.createElement('b');label.textContent=String(name);number.textContent=String(value);line.append(label,number);stats.append(line);
  }
- document.querySelector('.match-sidebar')!.prepend(stats);
+ const hud=document.querySelector<HTMLElement>('.player-hud')!;
+ content.append(stats);
+ const commands=document.createElement('div');commands.className='hud-commands';
+ for(const [key,label,action] of [['S','停止',actions.stop]] as const){
+  const button=document.createElement('button');button.type='button';button.className='hud-command';
+  const shortcut=document.createElement('kbd');shortcut.textContent=key;
+  const name=document.createElement('span');name.textContent=label;button.append(shortcut,name);
+  button.title=`${label} · ${key}`;button.onclick=()=>{action();document.querySelector<HTMLElement>('#arena')!.focus({preventScroll:true});};commands.append(button);
+ }
+ content.append(commands);
+ const passive=document.createElement('div');passive.className='passive-slot';passive.title='浪客之道 · 被动技能';passive.setAttribute('aria-label','浪客之道 · 被动技能');
+ const passiveImage=document.createElement('img');passiveImage.src=passiveIcon;passiveImage.alt='';passiveImage.draggable=false;passive.append(passiveImage);
+ document.querySelector('.ability-bar')!.prepend(passive);
+ const spells=document.createElement('div');spells.className='summoner-slots';
+ for(const [key,url] of [['D',dIcon],['F',fIcon]]){
+  const skill=key.toLowerCase() as SummonerKey;
+  const slot=document.createElement('button');slot.type='button';slot.id=`summoner-${skill}`;slot.className='summoner-slot';slot.title=`${key} · ${SUMMONERS[skill].name}`;slot.setAttribute('aria-label',slot.title);
+  slot.onclick=()=>{actions.summoner(skill);document.querySelector<HTMLElement>('#arena')!.focus({preventScroll:true});};
+  const image=document.createElement('img');image.src=url;image.alt='';image.draggable=false;const label=document.createElement('kbd');label.textContent=key;
+  const cooldown=document.createElement('span');cooldown.className='summoner-cooldown';cooldown.id=`summoner-cooldown-${skill}`;slot.append(image,label,cooldown);spells.append(slot);
+ }
+ hud.append(spells);
+ document.querySelector('.team-score.blue .team-label')!.textContent='我方补刀';
+ document.querySelector('.team-score.red .team-label')!.textContent=practice?'练习靶':'敌方补刀';
  const caption=document.createElement('span');caption.className='hud-mode';caption.textContent=practice?'练习模式':'中路 SOLO · 1 对 1';shell.append(caption);
 }

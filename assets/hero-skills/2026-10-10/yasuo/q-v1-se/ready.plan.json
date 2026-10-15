@@ -1,5 +1,5 @@
 {
   "command": "image-edit-run",
-  "output_dir": "meowa-output/yasuo-q-v1-se-ready",
+  "output_dir": "assets/generation-archive/legacy-meowa/yasuo-q-v1-se-ready",
   "args": ["--reference-image", "assets/hero-skills/2026-10-10/yasuo/q-v1-se/references/approved-low-padded.png", "--prompt", "将参考图中的亚索改为Q刺击准备姿势：右手把刀收在腰侧，刀尖朝画面右下，准备沿刀身直线刺出。保持角色朝向、造型、像素大小和脚底位置，完整保留人物与刀，透明背景，不要刀光。", "--mode", "pixel", "--strict", "--generation-model", "image-2.5", "--resolution", "1K", "--quality", "detailed", "--remove-bg-method", "standard"]
 }

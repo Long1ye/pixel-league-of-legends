@@ -1,0 +1,2011 @@
+{
+  "date": "2026-10-15",
+  "status": "verified",
+  "moves": [
+    {
+      "source": "D:\\Long1ye\\abyss-clean-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\abyss-clean-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\abyss-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\abyss-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\bridge-props-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\bridge-props-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\circle-clean-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\circle-clean-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\circle-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\circle-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\damage-clean-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\damage-clean-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\damage-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\damage-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\edge-art-v2",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\edge-art-v2"
+    },
+    {
+      "source": "D:\\Long1ye\\edge-clean-v2",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\edge-clean-v2"
+    },
+    {
+      "source": "D:\\Long1ye\\edge-floor-v3",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\edge-floor-v3"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-art-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-art-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-clean-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-clean-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-parts-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-parts-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-rear-clean-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-rear-clean-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-rear-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-rear-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-story-clean-v2",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-story-clean-v2"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-story-v2",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-story-v2"
+    },
+    {
+      "source": "D:\\Long1ye\\gate-clean-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\gate-clean-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\gate-clean-v2",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\gate-clean-v2"
+    },
+    {
+      "source": "D:\\Long1ye\\gate-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\gate-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\gate-v2",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\gate-v2"
+    },
+    {
+      "source": "D:\\Long1ye\\ice-gatehouse-clean-v4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\ice-gatehouse-clean-v4"
+    },
+    {
+      "source": "D:\\Long1ye\\ice-gatehouse-v4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\ice-gatehouse-v4"
+    },
+    {
+      "source": "D:\\Long1ye\\props-clean-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\props-clean-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\pv1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\pv1"
+    },
+    {
+      "source": "D:\\Long1ye\\pv1-clean",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\pv1-clean"
+    },
+    {
+      "source": "D:\\Long1ye\\rails-clean-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\rails-clean-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\rails-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\rails-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\repair-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\repair-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\seal-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\seal-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\tiles-v2",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\tiles-v2"
+    },
+    {
+      "source": "D:\\Long1ye\\camp-rest-v1",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\units\\bridge-camp\\camp-rest-v1"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\亚索音频",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\audio\\亚索音频"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\风墙特效.mp4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\风墙特效.mp4"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌-e.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌-e.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌-n.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌-n.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌-ne.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌-ne.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌-nw.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌-nw.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌-s.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌-s.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌-se.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌-se.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌-sw.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌-sw.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌-w.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌-w.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌站立-e.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌站立-e.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌站立-n.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌站立-n.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌站立-ne.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌站立-ne.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌站立-nw.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌站立-nw.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌站立-s.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌站立-s.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌站立-se.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌站立-se.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌站立-sw.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌站立-sw.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌站立-w.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌站立-w.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\亚索拔刀.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\亚索拔刀.webp"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\亚索拔刀v2.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\亚索拔刀v2.webp"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\亚索qbadcase.gif",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\亚索qbadcase.gif"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\斩钢闪刀身.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\斩钢闪刀身.webp"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\generated-image-1.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\misc\\generated-image-1.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\generated-image-1.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\misc\\generated-image-1.webp"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\generated-image-2.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\misc\\generated-image-2.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\image-1791616958875-ct7e0o1zgnb.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\misc\\image-1791616958875-ct7e0o1zgnb.webp"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\lol中路地图.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\maps\\lol中路地图.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\q-badcase-nw.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\q-badcase-nw.webp"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\q-badcase-s.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\q-badcase-s.webp"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\q3旋风.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\q3旋风.png"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\QQ20261009-152900-HD.mp4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\motion\\QQ20261009-152900-HD.mp4"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\QQ20261009-153017-HD.mp4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\motion\\QQ20261009-153017-HD.mp4"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\QQ20261009-182535-HD.mp4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\motion\\QQ20261009-182535-HD.mp4"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\QQ20261009-182632-HD.mp4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\motion\\QQ20261009-182632-HD.mp4"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\QQ20261009-182753-HD.mp4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\motion\\QQ20261009-182753-HD.mp4"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\QQ20261009-182843-HD.mp4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\motion\\QQ20261009-182843-HD.mp4"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\QQ20261009-182920-HD.mp4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\motion\\QQ20261009-182920-HD.mp4"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\QQ20261009-190735-HD.mp4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\motion\\QQ20261009-190735-HD.mp4"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\w-q3挥刀.gif",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\w-q3挥刀.gif"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\yasuo-A-v2.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\yasuo-A-v2.webp"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\yasuo-A.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\yasuo-A.webp"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\yasuo-B-v2.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\yasuo-B-v2.webp"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\yasuo-B.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\yasuo-B.webp"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\yasuo-Q.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\yasuo-Q.webp"
+    }
+  ],
+  "files": [
+    {
+      "source": "D:\\Long1ye\\abyss-clean-v1\\result_images_0_url\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\abyss-clean-v1\\result_images_0_url\\final_outputs.json",
+      "bytes": 251,
+      "sha256": "1617BAF28158CD0E9FE981F564C5C0EADD9C5DA4F870C03C157FEFD6B7AF1259",
+      "destination_sha256": "A5C7091D330B5A9D97F32C4A93E02D3E45F95FBF3C6E2E25F3D9343904EAA5D6"
+    },
+    {
+      "source": "D:\\Long1ye\\abyss-clean-v1\\result_images_0_url\\output.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\abyss-clean-v1\\result_images_0_url\\output.png",
+      "bytes": 987750,
+      "sha256": "6E83CDC81040FCA86A8EA3C3506DB835F2FAEDD5B0B70464E491D1242A90F96D",
+      "destination_sha256": "6E83CDC81040FCA86A8EA3C3506DB835F2FAEDD5B0B70464E491D1242A90F96D"
+    },
+    {
+      "source": "D:\\Long1ye\\abyss-v1\\Four_isolated_environment_modules_for_a_dark_frozen_canyon_beneath_a_pixel_art_ancient_stone_bridge_in_a_regul_d694a5cd\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\abyss-v1\\Four_isolated_environment_modules_for_a_dark_frozen_canyon_beneath_a_pixel_art_ancient_stone_bridge_in_a_regul_d694a5cd\\final_outputs.json",
+      "bytes": 358,
+      "sha256": "4D32AC02BBC3D046D42E481095EA34DFB7AE5EDA86E1E0207AD2C1C076F6313A",
+      "destination_sha256": "E95766F17C56018E957FBF26FFC2667C71DF1088B5823A16630C11363B134D34"
+    },
+    {
+      "source": "D:\\Long1ye\\abyss-v1\\Four_isolated_environment_modules_for_a_dark_frozen_canyon_beneath_a_pixel_art_ancient_stone_bridge_in_a_regul_d694a5cd\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\abyss-v1\\Four_isolated_environment_modules_for_a_dark_frozen_canyon_beneath_a_pixel_art_ancient_stone_bridge_in_a_regul_d694a5cd\\result_images_0_url.png",
+      "bytes": 1592765,
+      "sha256": "AA7856346E056BF13E9690DE0CC0C69BE386653AC3ABF0AEFA2F8EE9C9BC3417",
+      "destination_sha256": "AA7856346E056BF13E9690DE0CC0C69BE386653AC3ABF0AEFA2F8EE9C9BC3417"
+    },
+    {
+      "source": "D:\\Long1ye\\bridge-props-v1\\Four_separate_small_environmental_storytelling_prop_clusters_for_a_pixel_art_frozen_stone_bridge_game_regular_e47ee6c1\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\bridge-props-v1\\Four_separate_small_environmental_storytelling_prop_clusters_for_a_pixel_art_frozen_stone_bridge_game_regular_e47ee6c1\\final_outputs.json",
+      "bytes": 364,
+      "sha256": "449F45F93697DF7F811431FB19F09969C36E8E95E11334FE4D8E97F2691D9806",
+      "destination_sha256": "6757E5D5472B6DA5B4E92987FB56FB70F142AE8A1B00E7E21751CAE6AB2704AB"
+    },
+    {
+      "source": "D:\\Long1ye\\bridge-props-v1\\Four_separate_small_environmental_storytelling_prop_clusters_for_a_pixel_art_frozen_stone_bridge_game_regular_e47ee6c1\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\bridge-props-v1\\Four_separate_small_environmental_storytelling_prop_clusters_for_a_pixel_art_frozen_stone_bridge_game_regular_e47ee6c1\\result_images_0_url.png",
+      "bytes": 1583310,
+      "sha256": "9967ABC28C74C8652EB329D103ED3183E6F11809E755830877E0D2A8636B96D1",
+      "destination_sha256": "9967ABC28C74C8652EB329D103ED3183E6F11809E755830877E0D2A8636B96D1"
+    },
+    {
+      "source": "D:\\Long1ye\\circle-clean-v1\\result_images_0_url\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\circle-clean-v1\\result_images_0_url\\final_outputs.json",
+      "bytes": 252,
+      "sha256": "134F4900A077601F445C74A6D79A504EBCDDC2C5CE0EC635B7B2E494F7413D23",
+      "destination_sha256": "7C46AED5FFE166AB142D3C952E581E8D8ABB504E52D4B6B2222F5D9C504891CE"
+    },
+    {
+      "source": "D:\\Long1ye\\circle-clean-v1\\result_images_0_url\\output.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\circle-clean-v1\\result_images_0_url\\output.png",
+      "bytes": 1310703,
+      "sha256": "6D0CF01DAFA4B3C8F28121D67FE52E7658B7AE320545D0DBFA1ABB0B90E496C9",
+      "destination_sha256": "6D0CF01DAFA4B3C8F28121D67FE52E7658B7AE320545D0DBFA1ABB0B90E496C9"
+    },
+    {
+      "source": "D:\\Long1ye\\circle-v1\\One_severely_battle-damaged_circular_rune_pavement_for_a_pixel-art_icy_bridge_Strict_flat_overhead_view_true_c_806ac105\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\circle-v1\\One_severely_battle-damaged_circular_rune_pavement_for_a_pixel-art_icy_bridge_Strict_flat_overhead_view_true_c_806ac105\\final_outputs.json",
+      "bytes": 359,
+      "sha256": "735F0095A648CB40CDF0C6F5F15391C02876B58219816C03F7663AC04D4B94EC",
+      "destination_sha256": "8367483D31E50530085086643810C59A4B70A88C68A6E63C076E5B4C45D2ADFE"
+    },
+    {
+      "source": "D:\\Long1ye\\circle-v1\\One_severely_battle-damaged_circular_rune_pavement_for_a_pixel-art_icy_bridge_Strict_flat_overhead_view_true_c_806ac105\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\circle-v1\\One_severely_battle-damaged_circular_rune_pavement_for_a_pixel-art_icy_bridge_Strict_flat_overhead_view_true_c_806ac105\\result_images_0_url.png",
+      "bytes": 1809842,
+      "sha256": "0BE248F70735D5D1260CD0A10F4658C40F651C3A30A4087EEC37DCBA284B117D",
+      "destination_sha256": "0BE248F70735D5D1260CD0A10F4658C40F651C3A30A4087EEC37DCBA284B117D"
+    },
+    {
+      "source": "D:\\Long1ye\\damage-clean-v1\\result_images_0_url\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\damage-clean-v1\\result_images_0_url\\final_outputs.json",
+      "bytes": 252,
+      "sha256": "FD11E88A15895A1E1C6644D1EA9E9C7FB27DD284AC807741AD1F1913D10AC3F4",
+      "destination_sha256": "AA9266D3314F47E7E5406F9F9B99ADA5957FC6126AA95B95363250A9FAE45449"
+    },
+    {
+      "source": "D:\\Long1ye\\damage-clean-v1\\result_images_0_url\\output.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\damage-clean-v1\\result_images_0_url\\output.png",
+      "bytes": 359044,
+      "sha256": "CB166CC290C8F8EBAEDA3ACA43F91D980F494A2D9F4C6549F2213309953A41B9",
+      "destination_sha256": "CB166CC290C8F8EBAEDA3ACA43F91D980F494A2D9F4C6549F2213309953A41B9"
+    },
+    {
+      "source": "D:\\Long1ye\\damage-v1\\Four_separate_ground_damage_decals_in_a_regular_2_by_2_sprite_sheet_on_transparent_background_Match_the_refere_eb66aa29\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\damage-v1\\Four_separate_ground_damage_decals_in_a_regular_2_by_2_sprite_sheet_on_transparent_background_Match_the_refere_eb66aa29\\final_outputs.json",
+      "bytes": 359,
+      "sha256": "875647CB2C92C36731DD282F1DABA93625B5CF0A536CA97C49E3C06BC766E447",
+      "destination_sha256": "96A0EF37016CC1DABE8BB012951D1B8A0EB1959ABC83128EE1DA83EFA6721D9E"
+    },
+    {
+      "source": "D:\\Long1ye\\damage-v1\\Four_separate_ground_damage_decals_in_a_regular_2_by_2_sprite_sheet_on_transparent_background_Match_the_refere_eb66aa29\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\damage-v1\\Four_separate_ground_damage_decals_in_a_regular_2_by_2_sprite_sheet_on_transparent_background_Match_the_refere_eb66aa29\\result_images_0_url.png",
+      "bytes": 1119454,
+      "sha256": "E1C9B2571927701A896E7A0D48AE277A6D5398692522534A2D66452AA113D883",
+      "destination_sha256": "E1C9B2571927701A896E7A0D48AE277A6D5398692522534A2D66452AA113D883"
+    },
+    {
+      "source": "D:\\Long1ye\\edge-art-v2\\Four_separate_modular_broken_bridge_edge_segments_in_a_2_by_2_asset_sheet_on_transparent_background_Pixel_art_8dc6cc80\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\edge-art-v2\\Four_separate_modular_broken_bridge_edge_segments_in_a_2_by_2_asset_sheet_on_transparent_background_Pixel_art_8dc6cc80\\final_outputs.json",
+      "bytes": 360,
+      "sha256": "99E6D7C4AE8737D2F2A9131B11A3729ECDDF4D683EB7C82FAC3E456467C5CDA3",
+      "destination_sha256": "C54D4AC41499A60F095EEAD7F058910D9F205A5483D667ECB644CC83A6EA5084"
+    },
+    {
+      "source": "D:\\Long1ye\\edge-art-v2\\Four_separate_modular_broken_bridge_edge_segments_in_a_2_by_2_asset_sheet_on_transparent_background_Pixel_art_8dc6cc80\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\edge-art-v2\\Four_separate_modular_broken_bridge_edge_segments_in_a_2_by_2_asset_sheet_on_transparent_background_Pixel_art_8dc6cc80\\result_images_0_url.png",
+      "bytes": 1422721,
+      "sha256": "B5F136B443F9E4F66AD54D9010F6AA0C1578E7B43A49E3692FA4B85CE5EA5D2A",
+      "destination_sha256": "B5F136B443F9E4F66AD54D9010F6AA0C1578E7B43A49E3692FA4B85CE5EA5D2A"
+    },
+    {
+      "source": "D:\\Long1ye\\edge-clean-v2\\result_images_0_url\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\edge-clean-v2\\result_images_0_url\\final_outputs.json",
+      "bytes": 250,
+      "sha256": "D291E179EB95A8F56728D3F2497EBED9F883078703DF6BA4A638341E9AAA83F5",
+      "destination_sha256": "72B8077B2A4009C80C6EDDC99D6E7A079FBDA637F3C76627D02EA51FFE09E62F"
+    },
+    {
+      "source": "D:\\Long1ye\\edge-clean-v2\\result_images_0_url\\output.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\edge-clean-v2\\result_images_0_url\\output.png",
+      "bytes": 745214,
+      "sha256": "EE63BBA998F053D24C77258E34348D120E4E1BB5171B5A718F6D3D1926AF812D",
+      "destination_sha256": "EE63BBA998F053D24C77258E34348D120E4E1BB5171B5A718F6D3D1926AF812D"
+    },
+    {
+      "source": "D:\\Long1ye\\edge-floor-v3\\A_production_texture_atlas_of_sixteen_individual_square_paving_stone_tiles_in_an_exact_4_by_4_grid_no_margins_a77bc582\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\edge-floor-v3\\A_production_texture_atlas_of_sixteen_individual_square_paving_stone_tiles_in_an_exact_4_by_4_grid_no_margins_a77bc582\\final_outputs.json",
+      "bytes": 362,
+      "sha256": "A24A54B83A8B6A75763564525AF4B0DC41785F39B8BD9FBF24760D2600F9C500",
+      "destination_sha256": "FF354823C4BFC3F1B8EB6D3B1E06DE2A546596A5DB30145A93049327C312A49B"
+    },
+    {
+      "source": "D:\\Long1ye\\edge-floor-v3\\A_production_texture_atlas_of_sixteen_individual_square_paving_stone_tiles_in_an_exact_4_by_4_grid_no_margins_a77bc582\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\edge-floor-v3\\A_production_texture_atlas_of_sixteen_individual_square_paving_stone_tiles_in_an_exact_4_by_4_grid_no_margins_a77bc582\\result_images_0_url.png",
+      "bytes": 1776930,
+      "sha256": "0BDC358DB1A8EAC72EFAF0893A5370596FB915A2C7F96DC6F1964BA0611F458C",
+      "destination_sha256": "0BDC358DB1A8EAC72EFAF0893A5370596FB915A2C7F96DC6F1964BA0611F458C"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-art-v1\\Four_separate_finished_pixel-art_fortress_modules_in_an_exact_2_by_2_sheet_each_inside_its_512_square_quadrant_cbba4a25\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-art-v1\\Four_separate_finished_pixel-art_fortress_modules_in_an_exact_2_by_2_sheet_each_inside_its_512_square_quadrant_cbba4a25\\final_outputs.json",
+      "bytes": 365,
+      "sha256": "71E07AEA6FD122B2ADEFA42893A95DAC56DE458A46BE30719ADC7E03C8868EB7",
+      "destination_sha256": "49FAD9EED2EB91E9D3D2323ADFFE5721F90CB665F83BEAE227FAFC97AB370847"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-art-v1\\Four_separate_finished_pixel-art_fortress_modules_in_an_exact_2_by_2_sheet_each_inside_its_512_square_quadrant_cbba4a25\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-art-v1\\Four_separate_finished_pixel-art_fortress_modules_in_an_exact_2_by_2_sheet_each_inside_its_512_square_quadrant_cbba4a25\\result_images_0_url.png",
+      "bytes": 1730154,
+      "sha256": "96ADD70680E5336B5E8A1E789261442BCA7C9AF30A8227B63DCB69BFD98DF49A",
+      "destination_sha256": "96ADD70680E5336B5E8A1E789261442BCA7C9AF30A8227B63DCB69BFD98DF49A"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-clean-v1\\result_images_0_url\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-clean-v1\\result_images_0_url\\final_outputs.json",
+      "bytes": 254,
+      "sha256": "8367FA097A7F511457CF5B038C09DA3B5E9F46C6F48D489817B4B031FC8BF718",
+      "destination_sha256": "B450773089DB3BE16CC9AAE83D248E0922339E0A9B3CFA193AB4F813A978AA72"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-clean-v1\\result_images_0_url\\output.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-clean-v1\\result_images_0_url\\output.png",
+      "bytes": 1160335,
+      "sha256": "E0A70A5A2CA57368D1B6C8504EA2768C1BA1319026C941A398F1B7333DAB5826",
+      "destination_sha256": "E0A70A5A2CA57368D1B6C8504EA2768C1BA1319026C941A398F1B7333DAB5826"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-parts-v1\\component_001.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-parts-v1\\component_001.png",
+      "bytes": 399150,
+      "sha256": "E1C59560FC2415332BB8AAC779DE39887C70A0F3B6654E30BE3CC1A89C097EA8",
+      "destination_sha256": "E1C59560FC2415332BB8AAC779DE39887C70A0F3B6654E30BE3CC1A89C097EA8"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-parts-v1\\component_002.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-parts-v1\\component_002.png",
+      "bytes": 359515,
+      "sha256": "6EEC2F1293BD927FCCEF880E6883B297555EE1F29DDE29467141C6349EA645A8",
+      "destination_sha256": "6EEC2F1293BD927FCCEF880E6883B297555EE1F29DDE29467141C6349EA645A8"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-parts-v1\\component_003.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-parts-v1\\component_003.png",
+      "bytes": 364330,
+      "sha256": "38A18AE8AEED62C6B15BB9BC46324F6240EFAF67B25CAA0D0762A071AC7C78B2",
+      "destination_sha256": "38A18AE8AEED62C6B15BB9BC46324F6240EFAF67B25CAA0D0762A071AC7C78B2"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-parts-v1\\component_004.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-parts-v1\\component_004.png",
+      "bytes": 197138,
+      "sha256": "2A497186CD2BA6FB6043267D1655BEF447B99971AB9FA92D148517E9D09D916C",
+      "destination_sha256": "2A497186CD2BA6FB6043267D1655BEF447B99971AB9FA92D148517E9D09D916C"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-parts-v1\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-parts-v1\\final_outputs.json",
+      "bytes": 1353,
+      "sha256": "AC1F236D431EAECC7C1143CE4D9EDAC909A978B3F02EA4F3184A468BB07487C2",
+      "destination_sha256": "AC1F236D431EAECC7C1143CE4D9EDAC909A978B3F02EA4F3184A468BB07487C2"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-rear-clean-v1\\result_images_0_url\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-rear-clean-v1\\result_images_0_url\\final_outputs.json",
+      "bytes": 259,
+      "sha256": "46317501178D5944A86B1B52D438AAD6E4C43422B784E59CB3BD8A95F6CA66BE",
+      "destination_sha256": "A26A4626CE3915B0EA5DD9298BECCA92F8466A64106E44898F3FC9A9FFBC7381"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-rear-clean-v1\\result_images_0_url\\output.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-rear-clean-v1\\result_images_0_url\\output.png",
+      "bytes": 1157455,
+      "sha256": "15AA4FF24FA290855858674C34FAF850E1F18B3FCC40CFADDF82B751AF7746A3",
+      "destination_sha256": "15AA4FF24FA290855858674C34FAF850E1F18B3FCC40CFADDF82B751AF7746A3"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-rear-v1\\A_dense_rear_district_behind_a_snowy_frontier_fortress_for_an_isometric_pixel_game_Match_the_reference_masonry_123450fe\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-rear-v1\\A_dense_rear_district_behind_a_snowy_frontier_fortress_for_an_isometric_pixel_game_Match_the_reference_masonry_123450fe\\final_outputs.json",
+      "bytes": 366,
+      "sha256": "8E93F8C2FA1EF0DCD51AB17FDE5803556BC01637CC846B5B3BC97AFDDD11ECF3",
+      "destination_sha256": "218210CB6B3C87C47FFB7CE96EAA4E7A99A0A672F7E06011515281E53A37955D"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-rear-v1\\A_dense_rear_district_behind_a_snowy_frontier_fortress_for_an_isometric_pixel_game_Match_the_reference_masonry_123450fe\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-rear-v1\\A_dense_rear_district_behind_a_snowy_frontier_fortress_for_an_isometric_pixel_game_Match_the_reference_masonry_123450fe\\result_images_0_url.png",
+      "bytes": 1498441,
+      "sha256": "56C1829268EA0D80530C5E546AE97835EDB4986F3886DF9C41F11F6025A33F67",
+      "destination_sha256": "56C1829268EA0D80530C5E546AE97835EDB4986F3886DF9C41F11F6025A33F67"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-story-clean-v2\\result_images_0_url\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-story-clean-v2\\result_images_0_url\\final_outputs.json",
+      "bytes": 260,
+      "sha256": "005ED105102018534DAD647E0E2C6F7904FCA7380F36BB4B75FCDE35633E941D",
+      "destination_sha256": "5A8E7ED0848F0234B2A693739299D3D9F6B92F3AD7454355434E67299ACF7839"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-story-clean-v2\\result_images_0_url\\output.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-story-clean-v2\\result_images_0_url\\output.png",
+      "bytes": 952198,
+      "sha256": "AF57AF01A611FBC23B0936F89CC709318F000F386290D90F0030E04A3F870104",
+      "destination_sha256": "AF57AF01A611FBC23B0936F89CC709318F000F386290D90F0030E04A3F870104"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-story-v2\\An_isolated_wide_squat_fortress_building_group_for_an_isometric_pixel_game_matching_the_reference_cold_gray_ma_89a9e7bc\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-story-v2\\An_isolated_wide_squat_fortress_building_group_for_an_isometric_pixel_game_matching_the_reference_cold_gray_ma_89a9e7bc\\final_outputs.json",
+      "bytes": 367,
+      "sha256": "DDB2F6AF6CD9CF80EBB4D6F8EDB5C1E5E2239B821689A0414E95E5836A516B93",
+      "destination_sha256": "19D9D465525BE1E11A8F673388F36E8B04D9E06864520366FF1CAE724BE2C4AD"
+    },
+    {
+      "source": "D:\\Long1ye\\fortress-story-v2\\An_isolated_wide_squat_fortress_building_group_for_an_isometric_pixel_game_matching_the_reference_cold_gray_ma_89a9e7bc\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\fortress-story-v2\\An_isolated_wide_squat_fortress_building_group_for_an_isometric_pixel_game_matching_the_reference_cold_gray_ma_89a9e7bc\\result_images_0_url.png",
+      "bytes": 1334418,
+      "sha256": "D036550DC943E321DDE23A2B94DC59B825C3CBBA2979BF5FC64172A66E697D7C",
+      "destination_sha256": "D036550DC943E321DDE23A2B94DC59B825C3CBBA2979BF5FC64172A66E697D7C"
+    },
+    {
+      "source": "D:\\Long1ye\\gate-clean-v1\\result_images_0_url\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\gate-clean-v1\\result_images_0_url\\final_outputs.json",
+      "bytes": 250,
+      "sha256": "776737E856108AFB9482CF89390F6E11E70BB32070AF6C050F684E636F37970D",
+      "destination_sha256": "EEAA93E98EE38AE6111FD0B2A137AEE2AC80A42E7588C992C49BAF3B27EDBF1D"
+    },
+    {
+      "source": "D:\\Long1ye\\gate-clean-v1\\result_images_0_url\\output.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\gate-clean-v1\\result_images_0_url\\output.png",
+      "bytes": 1310690,
+      "sha256": "8047B06A7B61CA75C473DD38ABB433FBF0D971E69BF9C0DEFCFA13406A53C935",
+      "destination_sha256": "8047B06A7B61CA75C473DD38ABB433FBF0D971E69BF9C0DEFCFA13406A53C935"
+    },
+    {
+      "source": "D:\\Long1ye\\gate-clean-v2\\result_images_0_url\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\gate-clean-v2\\result_images_0_url\\final_outputs.json",
+      "bytes": 250,
+      "sha256": "0DBB088CF1EF24F5E4DCAEEC068D92960AFBAC5DB6771A0F9B6DE3CEB99BB631",
+      "destination_sha256": "04B53DC907EA756BC39DB57ECD56B3FE7DE6FDE312677A96EBF5BC49CAF9167E"
+    },
+    {
+      "source": "D:\\Long1ye\\gate-clean-v2\\result_images_0_url\\output.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\gate-clean-v2\\result_images_0_url\\output.png",
+      "bytes": 972259,
+      "sha256": "385C90760F297732995D178B832A96B210699CCFD4C4BD2A36A63541A4CF1A55",
+      "destination_sha256": "385C90760F297732995D178B832A96B210699CCFD4C4BD2A36A63541A4CF1A55"
+    },
+    {
+      "source": "D:\\Long1ye\\gate-v1\\Four_isolated_pixel_art_environment_modules_in_a_regular_2_by_2_sheet_each_entirely_inside_its_own_quadrant_wi_0a301da8\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\gate-v1\\Four_isolated_pixel_art_environment_modules_in_a_regular_2_by_2_sheet_each_entirely_inside_its_own_quadrant_wi_0a301da8\\final_outputs.json",
+      "bytes": 357,
+      "sha256": "EF36ACA84F425054098CB6ED8377485EBD69A00EC49B1B0F52D5E959E7A53BCC",
+      "destination_sha256": "FB86C6118CE2E24FE6C319955960DF6BAE5215F91742CB1582EFB36C9312BE02"
+    },
+    {
+      "source": "D:\\Long1ye\\gate-v1\\Four_isolated_pixel_art_environment_modules_in_a_regular_2_by_2_sheet_each_entirely_inside_its_own_quadrant_wi_0a301da8\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\gate-v1\\Four_isolated_pixel_art_environment_modules_in_a_regular_2_by_2_sheet_each_entirely_inside_its_own_quadrant_wi_0a301da8\\result_images_0_url.png",
+      "bytes": 1868607,
+      "sha256": "17BFE5093C9DC4A2387617EA9726305425CEEAC56CDD13A79F3C5F1712BA8372",
+      "destination_sha256": "17BFE5093C9DC4A2387617EA9726305425CEEAC56CDD13A79F3C5F1712BA8372"
+    },
+    {
+      "source": "D:\\Long1ye\\gate-v2\\A_2_by_2_sheet_of_four_separated_pixel_art_game_architecture_sprites_on_transparent_background_Same_snowy_grey_57fcde3c\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\gate-v2\\A_2_by_2_sheet_of_four_separated_pixel_art_game_architecture_sprites_on_transparent_background_Same_snowy_grey_57fcde3c\\final_outputs.json",
+      "bytes": 357,
+      "sha256": "1068CCAD8792E920E40CD3D30E62ABFE03081C9C722E3A46AD7C9A307D27B4F9",
+      "destination_sha256": "26CD4CC5BEA9094819A54CB7762BD8523268837105691D19394978C10B511CDC"
+    },
+    {
+      "source": "D:\\Long1ye\\gate-v2\\A_2_by_2_sheet_of_four_separated_pixel_art_game_architecture_sprites_on_transparent_background_Same_snowy_grey_57fcde3c\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\gate-v2\\A_2_by_2_sheet_of_four_separated_pixel_art_game_architecture_sprites_on_transparent_background_Same_snowy_grey_57fcde3c\\result_images_0_url.png",
+      "bytes": 1546319,
+      "sha256": "A26431FCBE2413C4E9AE73162D2EDCBFAA4919DB1B2B8C9820B56C3E8B1CC388",
+      "destination_sha256": "A26431FCBE2413C4E9AE73162D2EDCBFAA4919DB1B2B8C9820B56C3E8B1CC388"
+    },
+    {
+      "source": "D:\\Long1ye\\ice-gatehouse-clean-v4\\result_images_0_url\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\ice-gatehouse-clean-v4\\result_images_0_url\\final_outputs.json",
+      "bytes": 259,
+      "sha256": "4EDCF69FCB69085FCFF5F350E62F5819CFD5FDD06C100D7D34C3B2E5C9407F01",
+      "destination_sha256": "F70FED6DD6435970C0DBD65DC85A6CCD021D789CA6F2B04401D5F6E441F69C56"
+    },
+    {
+      "source": "D:\\Long1ye\\ice-gatehouse-clean-v4\\result_images_0_url\\output.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\ice-gatehouse-clean-v4\\result_images_0_url\\output.png",
+      "bytes": 1012294,
+      "sha256": "E4B8001766DC8DB2C5320EA21A8C9D52E65029CC53134E887BA3A2B00B92FD92",
+      "destination_sha256": "E4B8001766DC8DB2C5320EA21A8C9D52E65029CC53134E887BA3A2B00B92FD92"
+    },
+    {
+      "source": "D:\\Long1ye\\ice-gatehouse-v4\\A_single_wide_low_mountainside_gatehouse_for_an_isometric_pixel-art_frozen_bridge_game_The_bridge_approaches_a_64df42f9\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\ice-gatehouse-v4\\A_single_wide_low_mountainside_gatehouse_for_an_isometric_pixel-art_frozen_bridge_game_The_bridge_approaches_a_64df42f9\\final_outputs.json",
+      "bytes": 366,
+      "sha256": "7923493C261A5528F8C63DB6EDF7C728A494F4035BA22C5C0DE569631DE4A625",
+      "destination_sha256": "695875AC3596F552DC6FB3A2BFC4083AD5CC92AFA310C7302522A5FA3F49241E"
+    },
+    {
+      "source": "D:\\Long1ye\\ice-gatehouse-v4\\A_single_wide_low_mountainside_gatehouse_for_an_isometric_pixel-art_frozen_bridge_game_The_bridge_approaches_a_64df42f9\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\ice-gatehouse-v4\\A_single_wide_low_mountainside_gatehouse_for_an_isometric_pixel-art_frozen_bridge_game_The_bridge_approaches_a_64df42f9\\result_images_0_url.png",
+      "bytes": 1388642,
+      "sha256": "5416115AB2A810D66425B90BF40E8BD1356BCF19815393D43B34BEB0DB71B3E6",
+      "destination_sha256": "5416115AB2A810D66425B90BF40E8BD1356BCF19815393D43B34BEB0DB71B3E6"
+    },
+    {
+      "source": "D:\\Long1ye\\props-clean-v1\\result_images_0_url\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\props-clean-v1\\result_images_0_url\\final_outputs.json",
+      "bytes": 251,
+      "sha256": "5C1FF9A78353DFAE2035F4756F040AD559501DA250FE1CE719BF2F3AF0B7268E",
+      "destination_sha256": "569B211219C805E4F9C96FC06E7C04C34A2D73AE57D19570CD7CC9F702CEFA5F"
+    },
+    {
+      "source": "D:\\Long1ye\\props-clean-v1\\result_images_0_url\\output.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\props-clean-v1\\result_images_0_url\\output.png",
+      "bytes": 876611,
+      "sha256": "232CCDD30F065316992E06E6F648577D10D4573E48DB6619C9CFFE86DF70EF2C",
+      "destination_sha256": "232CCDD30F065316992E06E6F648577D10D4573E48DB6619C9CFFE86DF70EF2C"
+    },
+    {
+      "source": "D:\\Long1ye\\pv1\\job_eb1781e3f3364c7281b8dce902bb2f0b\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\pv1\\job_eb1781e3f3364c7281b8dce902bb2f0b\\final_outputs.json",
+      "bytes": 270,
+      "sha256": "A6EF285C87C16FD8E90563EE28309C3330162A8D353E1C7229A3DAECDD29F9BF",
+      "destination_sha256": "90EA6E55BF3899C66CCDAD2A4AEAB8D37EEF0A2F73EBF8566652905550824F30"
+    },
+    {
+      "source": "D:\\Long1ye\\pv1\\job_eb1781e3f3364c7281b8dce902bb2f0b\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\pv1\\job_eb1781e3f3364c7281b8dce902bb2f0b\\result_images_0_url.png",
+      "bytes": 1241342,
+      "sha256": "A5E43BA63639056D598746D71CA8E246F20F2546CE6F16181ECF5D0756FBB4DA",
+      "destination_sha256": "A5E43BA63639056D598746D71CA8E246F20F2546CE6F16181ECF5D0756FBB4DA"
+    },
+    {
+      "source": "D:\\Long1ye\\pv1-clean\\result_images_0_url\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\pv1-clean\\result_images_0_url\\final_outputs.json",
+      "bytes": 246,
+      "sha256": "9EBD859EA2D3B7FB17C65F2391896BD613399B5953C575DB26506E965016C256",
+      "destination_sha256": "4077007E3550EC0F20C20EBD1612B034F545AE28A27B5DA4AEC235EB3C4204DC"
+    },
+    {
+      "source": "D:\\Long1ye\\pv1-clean\\result_images_0_url\\output.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\pv1-clean\\result_images_0_url\\output.png",
+      "bytes": 645381,
+      "sha256": "88C93FACBC8C7AFA246A704413ACEB75360A117104FAEEB0A3443619B52DE7A0",
+      "destination_sha256": "88C93FACBC8C7AFA246A704413ACEB75360A117104FAEEB0A3443619B52DE7A0"
+    },
+    {
+      "source": "D:\\Long1ye\\rails-clean-v1\\result_images_0_url\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\rails-clean-v1\\result_images_0_url\\final_outputs.json",
+      "bytes": 251,
+      "sha256": "8106DE371DCE1E754F6560306B9531CFBB25CBD0EF3FBAC8F2511460CDADF094",
+      "destination_sha256": "89FEBC05FD8A4FDAACC8A7BB7E85AA7EECD324609FCE9B5348F52C378B92945A"
+    },
+    {
+      "source": "D:\\Long1ye\\rails-clean-v1\\result_images_0_url\\output.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\rails-clean-v1\\result_images_0_url\\output.png",
+      "bytes": 763975,
+      "sha256": "3C852904C4B22DBCE04CCCA463A1CD9FA16F0CEC2C560D95C1AC3F1718F1D50A",
+      "destination_sha256": "3C852904C4B22DBCE04CCCA463A1CD9FA16F0CEC2C560D95C1AC3F1718F1D50A"
+    },
+    {
+      "source": "D:\\Long1ye\\rails-v1\\Four_separate_modular_ruined_stone_bridge_railings_in_an_exact_2_by_2_sprite_sheet_transparent_background_each_3320be27\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\rails-v1\\Four_separate_modular_ruined_stone_bridge_railings_in_an_exact_2_by_2_sprite_sheet_transparent_background_each_3320be27\\final_outputs.json",
+      "bytes": 358,
+      "sha256": "0F58B10EC31CF8E82C2B80568B936CDA84B5D3E73FBA042ECE723317E83A5849",
+      "destination_sha256": "3125C28344ECC832BB00B094D510E029FB7D93D00F9C04BF33379BAB70FC37D1"
+    },
+    {
+      "source": "D:\\Long1ye\\rails-v1\\Four_separate_modular_ruined_stone_bridge_railings_in_an_exact_2_by_2_sprite_sheet_transparent_background_each_3320be27\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\rails-v1\\Four_separate_modular_ruined_stone_bridge_railings_in_an_exact_2_by_2_sprite_sheet_transparent_background_each_3320be27\\result_images_0_url.png",
+      "bytes": 1462669,
+      "sha256": "BFBC6CAC36DE8F7C26E09D701D107FB663B0C59D9FB4E2A23375C332083AEEFF",
+      "destination_sha256": "BFBC6CAC36DE8F7C26E09D701D107FB663B0C59D9FB4E2A23375C332083AEEFF"
+    },
+    {
+      "source": "D:\\Long1ye\\repair-v1\\Four_square_floor_tiles_in_an_exact_2_by_2_atlas_no_gaps_or_margins_Match_the_reference_blue_grey_pixel_stone_3a0049dc\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\repair-v1\\Four_square_floor_tiles_in_an_exact_2_by_2_atlas_no_gaps_or_margins_Match_the_reference_blue_grey_pixel_stone_3a0049dc\\final_outputs.json",
+      "bytes": 358,
+      "sha256": "0BFBBE152A608A90AD1B25CEB4DCD521776E37DB638210FE0225F7EBE2182E9A",
+      "destination_sha256": "C8ADAC988A5FD26CE054E3806C8D8CF39C683F813613DFC8B94AE1AD1B7AD81F"
+    },
+    {
+      "source": "D:\\Long1ye\\repair-v1\\Four_square_floor_tiles_in_an_exact_2_by_2_atlas_no_gaps_or_margins_Match_the_reference_blue_grey_pixel_stone_3a0049dc\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\repair-v1\\Four_square_floor_tiles_in_an_exact_2_by_2_atlas_no_gaps_or_margins_Match_the_reference_blue_grey_pixel_stone_3a0049dc\\result_images_0_url.png",
+      "bytes": 1487484,
+      "sha256": "0F13427497A337BA0E066406CC4B9B51F9D73EBCF51D7E8ED49D571F77E6A393",
+      "destination_sha256": "0F13427497A337BA0E066406CC4B9B51F9D73EBCF51D7E8ED49D571F77E6A393"
+    },
+    {
+      "source": "D:\\Long1ye\\seal-v1\\A_modular_ancient_frost-seal_stone_floor_atlas_exactly_4_columns_and_4_rows_of_equal_square_tiles_no_margins_o_f0cbf618\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\seal-v1\\A_modular_ancient_frost-seal_stone_floor_atlas_exactly_4_columns_and_4_rows_of_equal_square_tiles_no_margins_o_f0cbf618\\final_outputs.json",
+      "bytes": 357,
+      "sha256": "ADCBD8AC5A243B49ADDDF3B62FBDD4C0CEFF7C41E268F8261164431CB9CB9E91",
+      "destination_sha256": "C6FD8D3A5CF34D57A732DAD16418EB0D69092475672259D6FFE6D2C6DC3EC156"
+    },
+    {
+      "source": "D:\\Long1ye\\seal-v1\\A_modular_ancient_frost-seal_stone_floor_atlas_exactly_4_columns_and_4_rows_of_equal_square_tiles_no_margins_o_f0cbf618\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\seal-v1\\A_modular_ancient_frost-seal_stone_floor_atlas_exactly_4_columns_and_4_rows_of_equal_square_tiles_no_margins_o_f0cbf618\\result_images_0_url.png",
+      "bytes": 1836946,
+      "sha256": "28BC2ED07145C20411AA1F068516FDB6AFCA1FC2357B3758A851D4BEF21BEC0A",
+      "destination_sha256": "28BC2ED07145C20411AA1F068516FDB6AFCA1FC2357B3758A851D4BEF21BEC0A"
+    },
+    {
+      "source": "D:\\Long1ye\\tiles-v2\\A_production_texture_atlas_for_a_pixel_art_icy_stone_bridge_game_Exactly_4_columns_by_4_rows_of_equal_square_c_4eb0ae81\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\tiles-v2\\A_production_texture_atlas_for_a_pixel_art_icy_stone_bridge_game_Exactly_4_columns_by_4_rows_of_equal_square_c_4eb0ae81\\final_outputs.json",
+      "bytes": 358,
+      "sha256": "0132E59B5F9228AC69125FD3EDC7CB51E1F2BA82A12750DBC807C73D738D62FA",
+      "destination_sha256": "713CAFE1B96CC17264A89F1E7E8F581B30212AD07155D30C8B02858AFCD7A887"
+    },
+    {
+      "source": "D:\\Long1ye\\tiles-v2\\A_production_texture_atlas_for_a_pixel_art_icy_stone_bridge_game_Exactly_4_columns_by_4_rows_of_equal_square_c_4eb0ae81\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\tiles-v2\\A_production_texture_atlas_for_a_pixel_art_icy_stone_bridge_game_Exactly_4_columns_by_4_rows_of_equal_square_c_4eb0ae81\\result_images_0_url.png",
+      "bytes": 1302526,
+      "sha256": "D96D6ABF53E15C2E6FA4170DF76EF80900E9ECD87F5D09884A4071B48EE676BC",
+      "destination_sha256": "D96D6ABF53E15C2E6FA4170DF76EF80900E9ECD87F5D09884A4071B48EE676BC"
+    },
+    {
+      "source": "D:\\Long1ye\\camp-rest-v1\\The_tired_armored_guard_rests_in_place_slowly_lowering_his_hammer_and_leaning_on_it_shoulders_breathing_heavil_fb0b8ae7\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\units\\bridge-camp\\camp-rest-v1\\The_tired_armored_guard_rests_in_place_slowly_lowering_his_hammer_and_leaning_on_it_shoulders_breathing_heavil_fb0b8ae7\\final_outputs.json",
+      "bytes": 928,
+      "sha256": "F1BE75CF5E3059FCFE1985F9BE0ED2237901E1CAFB7BA978788BB8A41D52E981",
+      "destination_sha256": "9F2A24AF7F543E80C97FACF9CE2E7C2A9A1AC862310B42CABAFAF7975F216370"
+    },
+    {
+      "source": "D:\\Long1ye\\camp-rest-v1\\The_tired_armored_guard_rests_in_place_slowly_lowering_his_hammer_and_leaning_on_it_shoulders_breathing_heavil_fb0b8ae7\\result_output_transparent_output_urls_gif.gif",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\units\\bridge-camp\\camp-rest-v1\\The_tired_armored_guard_rests_in_place_slowly_lowering_his_hammer_and_leaning_on_it_shoulders_breathing_heavil_fb0b8ae7\\result_output_transparent_output_urls_gif.gif",
+      "bytes": 456942,
+      "sha256": "57D24E4414314C3DCCF5ECB0E8E35B00994C8269667EE251B604559556ADDDB4",
+      "destination_sha256": "57D24E4414314C3DCCF5ECB0E8E35B00994C8269667EE251B604559556ADDDB4"
+    },
+    {
+      "source": "D:\\Long1ye\\camp-rest-v1\\The_tired_armored_guard_rests_in_place_slowly_lowering_his_hammer_and_leaning_on_it_shoulders_breathing_heavil_fb0b8ae7\\result_output_transparent_output_urls_png.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\units\\bridge-camp\\camp-rest-v1\\The_tired_armored_guard_rests_in_place_slowly_lowering_his_hammer_and_leaning_on_it_shoulders_breathing_heavil_fb0b8ae7\\result_output_transparent_output_urls_png.png",
+      "bytes": 2169500,
+      "sha256": "0DF5739316C8F3FC25144DFF642BE99374A9D5E20E349044FD9418A08DB1C7C7",
+      "destination_sha256": "0DF5739316C8F3FC25144DFF642BE99374A9D5E20E349044FD9418A08DB1C7C7"
+    },
+    {
+      "source": "D:\\Long1ye\\camp-rest-v1\\The_tired_armored_guard_rests_in_place_slowly_lowering_his_hammer_and_leaning_on_it_shoulders_breathing_heavil_fb0b8ae7\\result_output_url.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\units\\bridge-camp\\camp-rest-v1\\The_tired_armored_guard_rests_in_place_slowly_lowering_his_hammer_and_leaning_on_it_shoulders_breathing_heavil_fb0b8ae7\\result_output_url.webp",
+      "bytes": 1626178,
+      "sha256": "145595B809F7BD2242BE6FA097E26301D9269CDA9723471C2DF930698D45958C",
+      "destination_sha256": "145595B809F7BD2242BE6FA097E26301D9269CDA9723471C2DF930698D45958C"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-brush-clean-v1\\result_images_0_url\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-brush-clean-v1\\result_images_0_url\\final_outputs.json",
+      "bytes": 271,
+      "sha256": "887F818035BE6AB519E2D931C6D2CB2D894133A376C14013887152900333427E",
+      "destination_sha256": "DF030094E08AF4D45B5F35528756F35F196C12B995EF6FAA0C5B4A6F203EC1B1"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-brush-clean-v1\\result_images_0_url\\output.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-brush-clean-v1\\result_images_0_url\\output.png",
+      "bytes": 320242,
+      "sha256": "527F87CB5EA839A4286AD163523A1EF3CED0A7E27C5299E742347303E1E4DE04",
+      "destination_sha256": "527F87CB5EA839A4286AD163523A1EF3CED0A7E27C5299E742347303E1E4DE04"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-brush-clean-v2\\result_images_0_url\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-brush-clean-v2\\result_images_0_url\\final_outputs.json",
+      "bytes": 271,
+      "sha256": "822811F72BED45537EB3A46170F2F6C73B723AC657779D21F98C0100969DD1E0",
+      "destination_sha256": "6739F117BE6A18ED9C28745B58BF1EB518546731FA91C93E71FE3C7852FF9B1F"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-brush-clean-v2\\result_images_0_url\\output.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-brush-clean-v2\\result_images_0_url\\output.png",
+      "bytes": 479367,
+      "sha256": "9B8469288EC2636B2904519F5F884B6EB6539474432534AAC6D9B667884CB234",
+      "destination_sha256": "9B8469288EC2636B2904519F5F884B6EB6539474432534AAC6D9B667884CB234"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-brush-v1\\A_single_low_irregular_patch_of_frost-hardy_reeds_and_icy_brush_for_an_isometric_pixel-art_frozen_stone_bridge_d6fa8cb1\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-brush-v1\\A_single_low_irregular_patch_of_frost-hardy_reeds_and_icy_brush_for_an_isometric_pixel-art_frozen_stone_bridge_d6fa8cb1\\final_outputs.json",
+      "bytes": 378,
+      "sha256": "E630E364576A7A22EBDB3611C1EE54BE7678249253A27667F4828C53B2BDAF74",
+      "destination_sha256": "7E9BEC7222DAD1811D66DF473BA5D63F87E5CB00A98D7F746CED22555C59BC18"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-brush-v1\\A_single_low_irregular_patch_of_frost-hardy_reeds_and_icy_brush_for_an_isometric_pixel-art_frozen_stone_bridge_d6fa8cb1\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-brush-v1\\A_single_low_irregular_patch_of_frost-hardy_reeds_and_icy_brush_for_an_isometric_pixel-art_frozen_stone_bridge_d6fa8cb1\\result_images_0_url.png",
+      "bytes": 746079,
+      "sha256": "2150372EDA1B3195C3A9F68BB31F22CA37D1B52D68129AF5AC10D261D58FB06A",
+      "destination_sha256": "2150372EDA1B3195C3A9F68BB31F22CA37D1B52D68129AF5AC10D261D58FB06A"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-brush-v2\\Create_one_continuous_dense_frost-hardy_brush_patch_for_an_isometric_pixel-art_frozen_bridge_game_Match_the_re_6ca3c08b\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-brush-v2\\Create_one_continuous_dense_frost-hardy_brush_patch_for_an_isometric_pixel-art_frozen_bridge_game_Match_the_re_6ca3c08b\\final_outputs.json",
+      "bytes": 378,
+      "sha256": "6A79DF787FC2D3FB5318495AE901DF9BFCD8C6CA61C2DE26071B9D72CA6BE8BA",
+      "destination_sha256": "E302D5A03936411A800BDEE38F38E7AAFF299D30B45FFD06219E51070F57454F"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-brush-v2\\Create_one_continuous_dense_frost-hardy_brush_patch_for_an_isometric_pixel-art_frozen_bridge_game_Match_the_re_6ca3c08b\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-brush-v2\\Create_one_continuous_dense_frost-hardy_brush_patch_for_an_isometric_pixel-art_frozen_bridge_game_Match_the_re_6ca3c08b\\result_images_0_url.png",
+      "bytes": 913868,
+      "sha256": "FA7A6B0CDAB1877EDD29E16C3C6846E0610E8E61B82F054B7E7768DD0276FDF6",
+      "destination_sha256": "FA7A6B0CDAB1877EDD29E16C3C6846E0610E8E61B82F054B7E7768DD0276FDF6"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-crystal-clean-v1\\result_images_0_url\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-crystal-clean-v1\\result_images_0_url\\final_outputs.json",
+      "bytes": 273,
+      "sha256": "20CB2428BF7A5E16891DCD8DA2796A29E0228AD52B4B80AFC43E667B953766EB",
+      "destination_sha256": "7FCA4D40A569DBD090E9407B70B41F4B003F0FB5524D40ADE595D7D8A4BC88C5"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-crystal-clean-v1\\result_images_0_url\\output.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-crystal-clean-v1\\result_images_0_url\\output.png",
+      "bytes": 502696,
+      "sha256": "AC0FF8337B4466AD1AEB763D4261A8032B40EB3121022F07512B8E7248F74B9A",
+      "destination_sha256": "AC0FF8337B4466AD1AEB763D4261A8032B40EB3121022F07512B8E7248F74B9A"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-crystal-clean-v2\\result_images_0_url\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-crystal-clean-v2\\result_images_0_url\\final_outputs.json",
+      "bytes": 273,
+      "sha256": "C5C0BC34FB491C98D808F0B8A2CF407EBC6B65A506AA8ABECFF64FB9AB033F1E",
+      "destination_sha256": "0B64F3881629F01A88DD04DC630CE07648CBD5D8CB6454CEA7065D55C37989D9"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-crystal-clean-v2\\result_images_0_url\\output.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-crystal-clean-v2\\result_images_0_url\\output.png",
+      "bytes": 719546,
+      "sha256": "24ADAB7DFB89DF997D8679A1CFDFB95631D5D8A62DA7BEE476645E2FFD770C02",
+      "destination_sha256": "24ADAB7DFB89DF997D8679A1CFDFB95631D5D8A62DA7BEE476645E2FFD770C02"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-crystal-v1\\A_single_small_inhibitor_crystal_prop_for_an_isometric_pixel-art_frozen_bridge_game_pale_blue_faceted_crystal_433c8dd0\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-crystal-v1\\A_single_small_inhibitor_crystal_prop_for_an_isometric_pixel-art_frozen_bridge_game_pale_blue_faceted_crystal_433c8dd0\\final_outputs.json",
+      "bytes": 379,
+      "sha256": "1A970730E23D88E27E659AFD80DE3BD414AB3BF5A34724B1F2494E66E31EA0EC",
+      "destination_sha256": "F595ECFCB1D2B48574E990B2B63F5E1300B9F6E4F522AB5937B93306B0090A36"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-crystal-v1\\A_single_small_inhibitor_crystal_prop_for_an_isometric_pixel-art_frozen_bridge_game_pale_blue_faceted_crystal_433c8dd0\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-crystal-v1\\A_single_small_inhibitor_crystal_prop_for_an_isometric_pixel-art_frozen_bridge_game_pale_blue_faceted_crystal_433c8dd0\\result_images_0_url.png",
+      "bytes": 886392,
+      "sha256": "51D8E3BB62AE8D2599AF28E9DFC55059F7BABE4B2633DFF3635629E7A601E94E",
+      "destination_sha256": "51D8E3BB62AE8D2599AF28E9DFC55059F7BABE4B2633DFF3635629E7A601E94E"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-crystal-v2\\Create_one_isometric_pixel-art_inhibitor_crystal_prop_matching_the_reference_s_pale_ice-blue_faceted_crystal_a_e22372ca\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-crystal-v2\\Create_one_isometric_pixel-art_inhibitor_crystal_prop_matching_the_reference_s_pale_ice-blue_faceted_crystal_a_e22372ca\\final_outputs.json",
+      "bytes": 380,
+      "sha256": "978FC93818FE5425BF6E9DF35373CDC0FD47480DBD290423C0DCE4430C241C2C",
+      "destination_sha256": "5411A89B8DFD6E3C07CF991EEDC58A492D88E9F3CCEF97D1301AE8D8B864E8B7"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-crystal-v2\\Create_one_isometric_pixel-art_inhibitor_crystal_prop_matching_the_reference_s_pale_ice-blue_faceted_crystal_a_e22372ca\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-crystal-v2\\Create_one_isometric_pixel-art_inhibitor_crystal_prop_matching_the_reference_s_pale_ice-blue_faceted_crystal_a_e22372ca\\result_images_0_url.png",
+      "bytes": 1170796,
+      "sha256": "FA3A2CA53E7375DAFBA24C201BED7DE0D41AE4C8E4EE583250502CBA7ED2AD1B",
+      "destination_sha256": "FA3A2CA53E7375DAFBA24C201BED7DE0D41AE4C8E4EE583250502CBA7ED2AD1B"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\game_design_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\game_design_outputs.json",
+      "bytes": 11867,
+      "sha256": "620B3D5CFD4FE37BFDBD9805A51234FA1C7B4B6B747D642D16C474688A8E64AF",
+      "destination_sha256": "C7A524D7AFD1D707F2B66F1CB6E9FBAE9E3A93E3A537BB0859C5F747716F0ED1"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\design_docs\\00_concept\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\design_docs\\00_concept\\analysis.md",
+      "bytes": 151,
+      "sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F",
+      "destination_sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\design_docs\\00_concept\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\design_docs\\00_concept\\design.md",
+      "bytes": 261,
+      "sha256": "DCD497C9EA77A3505ACD81F45D29490973BCD757E48C8581D4F12B70D8418979",
+      "destination_sha256": "DCD497C9EA77A3505ACD81F45D29490973BCD757E48C8581D4F12B70D8418979"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\design_docs\\01_top_design\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\design_docs\\01_top_design\\analysis.md",
+      "bytes": 151,
+      "sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F",
+      "destination_sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\design_docs\\01_top_design\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\design_docs\\01_top_design\\design.md",
+      "bytes": 261,
+      "sha256": "49AA01ECA56A5C1EF46E7ACA54266E208593E4181EF6DED4CC61C70B3C7E99A0",
+      "destination_sha256": "49AA01ECA56A5C1EF46E7ACA54266E208593E4181EF6DED4CC61C70B3C7E99A0"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\design_docs\\02_architecture\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\design_docs\\02_architecture\\analysis.md",
+      "bytes": 151,
+      "sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F",
+      "destination_sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\design_docs\\02_architecture\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\design_docs\\02_architecture\\design.md",
+      "bytes": 223,
+      "sha256": "45D816D08E988088264A0554A0F84EFD7BEAF8F4CBFF5D54C6512F15B6111834",
+      "destination_sha256": "45D816D08E988088264A0554A0F84EFD7BEAF8F4CBFF5D54C6512F15B6111834"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\design_docs\\03_systems\\S01_core_gameplay\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\design_docs\\03_systems\\S01_core_gameplay\\analysis.md",
+      "bytes": 151,
+      "sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F",
+      "destination_sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\design_docs\\03_systems\\S01_core_gameplay\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\design_docs\\03_systems\\S01_core_gameplay\\design.md",
+      "bytes": 280,
+      "sha256": "4313372E99A90081D6EFC2A355D92BE6F604A4B8EC99C17BDF8447C5E3B29BBF",
+      "destination_sha256": "4313372E99A90081D6EFC2A355D92BE6F604A4B8EC99C17BDF8447C5E3B29BBF"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\game_design_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\game_design_outputs.json",
+      "bytes": 12240,
+      "sha256": "9D6490F90F9D85315E1042EA3EF670974CA77ABCC608D98505444B30527D3AFB",
+      "destination_sha256": "91C9EB2E2D87AA37B85452EC10AA2381C99C63BC951C394B1E5D671D243387BB"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\design_docs\\00_concept\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\design_docs\\00_concept\\analysis.md",
+      "bytes": 151,
+      "sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F",
+      "destination_sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\design_docs\\00_concept\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\design_docs\\00_concept\\design.md",
+      "bytes": 261,
+      "sha256": "DCD497C9EA77A3505ACD81F45D29490973BCD757E48C8581D4F12B70D8418979",
+      "destination_sha256": "DCD497C9EA77A3505ACD81F45D29490973BCD757E48C8581D4F12B70D8418979"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\design_docs\\01_top_design\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\design_docs\\01_top_design\\analysis.md",
+      "bytes": 151,
+      "sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F",
+      "destination_sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\design_docs\\01_top_design\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\design_docs\\01_top_design\\design.md",
+      "bytes": 261,
+      "sha256": "49AA01ECA56A5C1EF46E7ACA54266E208593E4181EF6DED4CC61C70B3C7E99A0",
+      "destination_sha256": "49AA01ECA56A5C1EF46E7ACA54266E208593E4181EF6DED4CC61C70B3C7E99A0"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\design_docs\\02_architecture\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\design_docs\\02_architecture\\analysis.md",
+      "bytes": 151,
+      "sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F",
+      "destination_sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\design_docs\\02_architecture\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\design_docs\\02_architecture\\design.md",
+      "bytes": 223,
+      "sha256": "45D816D08E988088264A0554A0F84EFD7BEAF8F4CBFF5D54C6512F15B6111834",
+      "destination_sha256": "45D816D08E988088264A0554A0F84EFD7BEAF8F4CBFF5D54C6512F15B6111834"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\design_docs\\03_systems\\S01_core_gameplay\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\design_docs\\03_systems\\S01_core_gameplay\\analysis.md",
+      "bytes": 151,
+      "sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F",
+      "destination_sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\design_docs\\03_systems\\S01_core_gameplay\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\design_docs\\03_systems\\S01_core_gameplay\\design.md",
+      "bytes": 280,
+      "sha256": "4313372E99A90081D6EFC2A355D92BE6F604A4B8EC99C17BDF8447C5E3B29BBF",
+      "destination_sha256": "4313372E99A90081D6EFC2A355D92BE6F604A4B8EC99C17BDF8447C5E3B29BBF"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-light-props-v1\\A_clean_game-asset_sheet_of_three_separate_isometric_pixel-art_bridge-light_props_evenly_spaced_in_one_horizon_35028a92\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-light-props-v1\\A_clean_game-asset_sheet_of_three_separate_isometric_pixel-art_bridge-light_props_evenly_spaced_in_one_horizon_35028a92\\final_outputs.json",
+      "bytes": 384,
+      "sha256": "3C5B8BE1FF3CE212D0A76C55E1582F6666D0333C6887E7C44BEF472622F7C3FF",
+      "destination_sha256": "E185196E7041C1956A82951312ACCDFB4AB9C5A71EB6A84D0B09E6EE17839EC2"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-light-props-v1\\A_clean_game-asset_sheet_of_three_separate_isometric_pixel-art_bridge-light_props_evenly_spaced_in_one_horizon_35028a92\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-light-props-v1\\A_clean_game-asset_sheet_of_three_separate_isometric_pixel-art_bridge-light_props_evenly_spaced_in_one_horizon_35028a92\\result_images_0_url.png",
+      "bytes": 1127912,
+      "sha256": "96ADB1FC25CE02C5DD94D7EC04D131AD4732C7DF850E7BE28368285E5EA53912",
+      "destination_sha256": "96ADB1FC25CE02C5DD94D7EC04D131AD4732C7DF850E7BE28368285E5EA53912"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-light-props-v2\\split\\component_001.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-light-props-v2\\split\\component_001.png",
+      "bytes": 212477,
+      "sha256": "C03255C57611D5146EF86C99B207A71510893693148A575771939BF49578CBE3",
+      "destination_sha256": "C03255C57611D5146EF86C99B207A71510893693148A575771939BF49578CBE3"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-light-props-v2\\split\\component_002.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-light-props-v2\\split\\component_002.png",
+      "bytes": 164803,
+      "sha256": "0989241B3B9D9F709D211F9D86831BF0A5ED8F8FE26C29811CDF25994C955ECE",
+      "destination_sha256": "0989241B3B9D9F709D211F9D86831BF0A5ED8F8FE26C29811CDF25994C955ECE"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-light-props-v2\\split\\component_003.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-light-props-v2\\split\\component_003.png",
+      "bytes": 119045,
+      "sha256": "B2DD8077347895DEBDC5B2C843C64948B5BB746E28FE682A1F88B797E3C9C701",
+      "destination_sha256": "B2DD8077347895DEBDC5B2C843C64948B5BB746E28FE682A1F88B797E3C9C701"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-light-props-v2\\split\\component_004.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-light-props-v2\\split\\component_004.png",
+      "bytes": 3904,
+      "sha256": "78E29374DD208A7A6B1663D1E426DF92E2DA5454116A9A292FB8047DB53E191E",
+      "destination_sha256": "78E29374DD208A7A6B1663D1E426DF92E2DA5454116A9A292FB8047DB53E191E"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-light-props-v2\\split\\component_005.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-light-props-v2\\split\\component_005.png",
+      "bytes": 1376,
+      "sha256": "A0D5433E881AA4E07E27ED8FDDFD572A21693D8E74150015FC7ADCEBC893FFBE",
+      "destination_sha256": "A0D5433E881AA4E07E27ED8FDDFD572A21693D8E74150015FC7ADCEBC893FFBE"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-light-props-v2\\split\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-light-props-v2\\split\\final_outputs.json",
+      "bytes": 1575,
+      "sha256": "8D428799000F135AC23E384DA0FE91432B79833265C67BE859915721A430BCBE",
+      "destination_sha256": "8D428799000F135AC23E384DA0FE91432B79833265C67BE859915721A430BCBE"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-light-props-v2\\Three_NEW_and_DISTINCT_small_isometric_pixel-art_lighting_props_for_a_frozen_battle_bridge_presented_as_separa_e00c947a\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-light-props-v2\\Three_NEW_and_DISTINCT_small_isometric_pixel-art_lighting_props_for_a_frozen_battle_bridge_presented_as_separa_e00c947a\\final_outputs.json",
+      "bytes": 384,
+      "sha256": "F5781CACA5907312B60A3CC85175E5E76071D2C9065BF44A29670470EA4E0304",
+      "destination_sha256": "DD85DD404136B4FC31C57878BB23AC692E919E1E8279003443CCAE315B5B6556"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-light-props-v2\\Three_NEW_and_DISTINCT_small_isometric_pixel-art_lighting_props_for_a_frozen_battle_bridge_presented_as_separa_e00c947a\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-light-props-v2\\Three_NEW_and_DISTINCT_small_isometric_pixel-art_lighting_props_for_a_frozen_battle_bridge_presented_as_separa_e00c947a\\result_images_0_url.png",
+      "bytes": 932641,
+      "sha256": "3CEE285C7DE528C9834A8998D27607D893CB5FE5EF6498A2AD3309875178852C",
+      "destination_sha256": "3CEE285C7DE528C9834A8998D27607D893CB5FE5EF6498A2AD3309875178852C"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\game_design_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\game_design_outputs.json",
+      "bytes": 9801,
+      "sha256": "5341A341B23B3C2C30A69B8356B3906FE330184C767A0C661C51CB16D7E78BF8",
+      "destination_sha256": "AE985BCB131A1445B4D68B0FA818EB6549C2591A2FE5B416628AA2AFC7422D81"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\design_docs\\00_concept\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\design_docs\\00_concept\\analysis.md",
+      "bytes": 151,
+      "sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F",
+      "destination_sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\design_docs\\00_concept\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\design_docs\\00_concept\\design.md",
+      "bytes": 261,
+      "sha256": "DCD497C9EA77A3505ACD81F45D29490973BCD757E48C8581D4F12B70D8418979",
+      "destination_sha256": "DCD497C9EA77A3505ACD81F45D29490973BCD757E48C8581D4F12B70D8418979"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\design_docs\\01_top_design\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\design_docs\\01_top_design\\analysis.md",
+      "bytes": 151,
+      "sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F",
+      "destination_sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\design_docs\\01_top_design\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\design_docs\\01_top_design\\design.md",
+      "bytes": 261,
+      "sha256": "49AA01ECA56A5C1EF46E7ACA54266E208593E4181EF6DED4CC61C70B3C7E99A0",
+      "destination_sha256": "49AA01ECA56A5C1EF46E7ACA54266E208593E4181EF6DED4CC61C70B3C7E99A0"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\design_docs\\02_architecture\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\design_docs\\02_architecture\\analysis.md",
+      "bytes": 151,
+      "sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F",
+      "destination_sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\design_docs\\02_architecture\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\design_docs\\02_architecture\\design.md",
+      "bytes": 223,
+      "sha256": "45D816D08E988088264A0554A0F84EFD7BEAF8F4CBFF5D54C6512F15B6111834",
+      "destination_sha256": "45D816D08E988088264A0554A0F84EFD7BEAF8F4CBFF5D54C6512F15B6111834"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\design_docs\\03_systems\\S01_core_gameplay\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\design_docs\\03_systems\\S01_core_gameplay\\analysis.md",
+      "bytes": 151,
+      "sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F",
+      "destination_sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\design_docs\\03_systems\\S01_core_gameplay\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\design_docs\\03_systems\\S01_core_gameplay\\design.md",
+      "bytes": 280,
+      "sha256": "4313372E99A90081D6EFC2A355D92BE6F604A4B8EC99C17BDF8447C5E3B29BBF",
+      "destination_sha256": "4313372E99A90081D6EFC2A355D92BE6F604A4B8EC99C17BDF8447C5E3B29BBF"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-rail-brazier-v1\\Create_ONE_isolated_game-ready_isometric_pixel-art_bridge_railing_module_Use_the_first_reference_for_exact_sno_992ed8be\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-rail-brazier-v1\\Create_ONE_isolated_game-ready_isometric_pixel-art_bridge_railing_module_Use_the_first_reference_for_exact_sno_992ed8be\\final_outputs.json",
+      "bytes": 385,
+      "sha256": "9A94432E3E9585C8AB14FFC3246E4F0A86113E4B0221B3B06C5DE0B17353CC82",
+      "destination_sha256": "234985A014F3264D979274A7F42EE33EB0BC30BE21BAE57FB6F2FD52F9F5FFE8"
+    },
+    {
+      "source": "D:\\Long1ye\\art-output\\howling-rail-brazier-v1\\Create_ONE_isolated_game-ready_isometric_pixel-art_bridge_railing_module_Use_the_first_reference_for_exact_sno_992ed8be\\result_images_0_url.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-rail-brazier-v1\\Create_ONE_isolated_game-ready_isometric_pixel-art_bridge_railing_module_Use_the_first_reference_for_exact_sno_992ed8be\\result_images_0_url.png",
+      "bytes": 1309805,
+      "sha256": "AAF612B5AA91B44C9C53A7D1C484891E6E82136AE4AAB181CEB7189F4D086EB0",
+      "destination_sha256": "AAF612B5AA91B44C9C53A7D1C484891E6E82136AE4AAB181CEB7189F4D086EB0"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\game_design_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\game_design_outputs.json",
+      "bytes": 5748,
+      "sha256": "98D555F1E0DF94D969688C2CC03431D5477F76D114D76A9F8AF5AE6DF76E54A3",
+      "destination_sha256": "32FD77BC21B4733F0E930B8DDC094BA9F4A717BCC59ABCFA07770331373B992E"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\design_docs\\00_concept\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\design_docs\\00_concept\\analysis.md",
+      "bytes": 872,
+      "sha256": "40061922711545C0271471661DC0C5DD785B6766B2D18E4B0005B0C79C172EFA",
+      "destination_sha256": "40061922711545C0271471661DC0C5DD785B6766B2D18E4B0005B0C79C172EFA"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\design_docs\\00_concept\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\design_docs\\00_concept\\design.md",
+      "bytes": 2714,
+      "sha256": "3854A15E1778732551E0EA8239409D74379C3BD81A108F8FEEC7ABBEC3604E0A",
+      "destination_sha256": "3854A15E1778732551E0EA8239409D74379C3BD81A108F8FEEC7ABBEC3604E0A"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\design_docs\\01_top_design\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\design_docs\\01_top_design\\analysis.md",
+      "bytes": 713,
+      "sha256": "6378179D13E2AE6BCE1749E4603E03E608A13532F84661CA60ABAD5395B14B75",
+      "destination_sha256": "6378179D13E2AE6BCE1749E4603E03E608A13532F84661CA60ABAD5395B14B75"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\design_docs\\01_top_design\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\design_docs\\01_top_design\\design.md",
+      "bytes": 3488,
+      "sha256": "82332EF5A27031C5A72A577E8C575E87B0B22B66B52D992AD2E212ED42062D63",
+      "destination_sha256": "82332EF5A27031C5A72A577E8C575E87B0B22B66B52D992AD2E212ED42062D63"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\design_docs\\02_architecture\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\design_docs\\02_architecture\\analysis.md",
+      "bytes": 831,
+      "sha256": "CDEB646AE69F5F01076606327A0AAE78D0E59BF6126D7D89797F7F98DC6CA0C7",
+      "destination_sha256": "CDEB646AE69F5F01076606327A0AAE78D0E59BF6126D7D89797F7F98DC6CA0C7"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\design_docs\\02_architecture\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\design_docs\\02_architecture\\design.md",
+      "bytes": 3563,
+      "sha256": "C9DF0E18A573DB820382D5B13DD7FAF2286C09CEEAB59C941F4C82C2ADBCD41C",
+      "destination_sha256": "C9DF0E18A573DB820382D5B13DD7FAF2286C09CEEAB59C941F4C82C2ADBCD41C"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\design_docs\\03_systems\\S01_core_gameplay\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\design_docs\\03_systems\\S01_core_gameplay\\analysis.md",
+      "bytes": 741,
+      "sha256": "E7F6146EE83DAE5356BCE12D335E0ECD38A93F67597441F54E9B3CF8FEE98EBE",
+      "destination_sha256": "E7F6146EE83DAE5356BCE12D335E0ECD38A93F67597441F54E9B3CF8FEE98EBE"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\design_docs\\03_systems\\S01_core_gameplay\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\design_docs\\03_systems\\S01_core_gameplay\\design.md",
+      "bytes": 6814,
+      "sha256": "49D7985656D98120DAA2DE0F4AB060863387ED430434C1543CE8D35ED0F6E5FD",
+      "destination_sha256": "49D7985656D98120DAA2DE0F4AB060863387ED430434C1543CE8D35ED0F6E5FD"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\game_design_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\game_design_outputs.json",
+      "bytes": 4380,
+      "sha256": "DF62CDB2EC76674F0DEEA8E4B54357C4995DDED503BB240B5F9DFDBD3D16D788",
+      "destination_sha256": "1DA68B8F9C3ADF9BDE1E30C0D743C20D1ED89A32619DD9F059ADECDB144580F6"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\design_docs\\00_concept\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\design_docs\\00_concept\\analysis.md",
+      "bytes": 151,
+      "sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F",
+      "destination_sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\design_docs\\00_concept\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\design_docs\\00_concept\\design.md",
+      "bytes": 261,
+      "sha256": "DCD497C9EA77A3505ACD81F45D29490973BCD757E48C8581D4F12B70D8418979",
+      "destination_sha256": "DCD497C9EA77A3505ACD81F45D29490973BCD757E48C8581D4F12B70D8418979"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\design_docs\\01_top_design\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\design_docs\\01_top_design\\analysis.md",
+      "bytes": 151,
+      "sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F",
+      "destination_sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\design_docs\\01_top_design\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\design_docs\\01_top_design\\design.md",
+      "bytes": 261,
+      "sha256": "49AA01ECA56A5C1EF46E7ACA54266E208593E4181EF6DED4CC61C70B3C7E99A0",
+      "destination_sha256": "49AA01ECA56A5C1EF46E7ACA54266E208593E4181EF6DED4CC61C70B3C7E99A0"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\design_docs\\02_architecture\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\design_docs\\02_architecture\\analysis.md",
+      "bytes": 151,
+      "sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F",
+      "destination_sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\design_docs\\02_architecture\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\design_docs\\02_architecture\\design.md",
+      "bytes": 223,
+      "sha256": "45D816D08E988088264A0554A0F84EFD7BEAF8F4CBFF5D54C6512F15B6111834",
+      "destination_sha256": "45D816D08E988088264A0554A0F84EFD7BEAF8F4CBFF5D54C6512F15B6111834"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\design_docs\\03_systems\\S01_core_gameplay\\analysis.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\design_docs\\03_systems\\S01_core_gameplay\\analysis.md",
+      "bytes": 151,
+      "sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F",
+      "destination_sha256": "31CD61EF2E002B3F865D4B01AB0EB0C53E823A09BBAE041CB2B6D988B27CA83F"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\design_docs\\03_systems\\S01_core_gameplay\\design.md",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\design_docs\\03_systems\\S01_core_gameplay\\design.md",
+      "bytes": 280,
+      "sha256": "4313372E99A90081D6EFC2A355D92BE6F604A4B8EC99C17BDF8447C5E3B29BBF",
+      "destination_sha256": "4313372E99A90081D6EFC2A355D92BE6F604A4B8EC99C17BDF8447C5E3B29BBF"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v1-se-animation\\亚索朝画面右下完成一次Q直线突刺_短促蓄力_快速伸臂把刀直线刺出_然后顺势收回_2e36e4f8\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v1-se-animation\\亚索朝画面右下完成一次Q直线突刺_短促蓄力_快速伸臂把刀直线刺出_然后顺势收回_2e36e4f8\\final_outputs.json",
+      "bytes": 961,
+      "sha256": "3CD6D1D7A1C859346ED87ED86AEDCCF7BA2C1C326EF858B153BB2DB450EB6E5B",
+      "destination_sha256": "071DF80A61BF363C05FC0EC028F8F504CA6BFF951A942EFB1A8394E0D0B63641"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v1-se-animation\\亚索朝画面右下完成一次Q直线突刺_短促蓄力_快速伸臂把刀直线刺出_然后顺势收回_2e36e4f8\\result_output_transparent_output_urls_gif.gif",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v1-se-animation\\亚索朝画面右下完成一次Q直线突刺_短促蓄力_快速伸臂把刀直线刺出_然后顺势收回_2e36e4f8\\result_output_transparent_output_urls_gif.gif",
+      "bytes": 18934,
+      "sha256": "483F59C0DA88724C8EEAA5B58E940D391CF6929EE9810D9C2E492C91538C87A2",
+      "destination_sha256": "483F59C0DA88724C8EEAA5B58E940D391CF6929EE9810D9C2E492C91538C87A2"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v1-se-animation\\亚索朝画面右下完成一次Q直线突刺_短促蓄力_快速伸臂把刀直线刺出_然后顺势收回_2e36e4f8\\result_output_transparent_output_urls_png.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v1-se-animation\\亚索朝画面右下完成一次Q直线突刺_短促蓄力_快速伸臂把刀直线刺出_然后顺势收回_2e36e4f8\\result_output_transparent_output_urls_png.png",
+      "bytes": 197250,
+      "sha256": "06C7B5360C27B702511C6D9DA296B82865609FAE67636EC25697F4B82C5B816A",
+      "destination_sha256": "06C7B5360C27B702511C6D9DA296B82865609FAE67636EC25697F4B82C5B816A"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v1-se-animation\\亚索朝画面右下完成一次Q直线突刺_短促蓄力_快速伸臂把刀直线刺出_然后顺势收回_2e36e4f8\\result_output_url.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v1-se-animation\\亚索朝画面右下完成一次Q直线突刺_短促蓄力_快速伸臂把刀直线刺出_然后顺势收回_2e36e4f8\\result_output_url.webp",
+      "bytes": 62876,
+      "sha256": "7ADCDB4A5F012664368D20A33E936E297D80F8C254C72ED21C0CDE2E721E6BB7",
+      "destination_sha256": "7ADCDB4A5F012664368D20A33E936E297D80F8C254C72ED21C0CDE2E721E6BB7"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v1-se-impact\\将亚索改为Q刺出到位的姿势_右手向画面右下伸出_沿刀身方向完成一次直线突刺_刀_5833666f\\edited.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v1-se-impact\\将亚索改为Q刺出到位的姿势_右手向画面右下伸出_沿刀身方向完成一次直线突刺_刀_5833666f\\edited.png",
+      "bytes": 36030,
+      "sha256": "DF2BBAA4BC12D7AE7B19C4CA70B53BB3FF39E3364087498AAC1589ED7710A446",
+      "destination_sha256": "DF2BBAA4BC12D7AE7B19C4CA70B53BB3FF39E3364087498AAC1589ED7710A446"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v1-se-impact\\将亚索改为Q刺出到位的姿势_右手向画面右下伸出_沿刀身方向完成一次直线突刺_刀_5833666f\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v1-se-impact\\将亚索改为Q刺出到位的姿势_右手向画面右下伸出_沿刀身方向完成一次直线突刺_刀_5833666f\\final_outputs.json",
+      "bytes": 357,
+      "sha256": "8A0323D66E92A46585733819B483A09ACD50132B1F59BC6B4A083687E667C54E",
+      "destination_sha256": "4B48A778BF798A3B36B5BD93C888D7F4EDE915D64FCF861FDBCAC668733D3B07"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v1-se-ready\\将参考图中的亚索改为Q刺击准备姿势_右手把刀收在腰侧_刀尖朝画面右下_准备沿刀_2dc4e3d5\\edited.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v1-se-ready\\将参考图中的亚索改为Q刺击准备姿势_右手把刀收在腰侧_刀尖朝画面右下_准备沿刀_2dc4e3d5\\edited.png",
+      "bytes": 32622,
+      "sha256": "7003AEA5C725494DB81D26E28FF2C76CCDFE494B64FE3FFC1B6A1AB625CB4547",
+      "destination_sha256": "7003AEA5C725494DB81D26E28FF2C76CCDFE494B64FE3FFC1B6A1AB625CB4547"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v1-se-ready\\将参考图中的亚索改为Q刺击准备姿势_右手把刀收在腰侧_刀尖朝画面右下_准备沿刀_2dc4e3d5\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v1-se-ready\\将参考图中的亚索改为Q刺击准备姿势_右手把刀收在腰侧_刀尖朝画面右下_准备沿刀_2dc4e3d5\\final_outputs.json",
+      "bytes": 356,
+      "sha256": "E83F0BA57B17DEB3EC9F505ED433820D68BBBAFDA08BB8CBE2ADE4553E0FBEB0",
+      "destination_sha256": "1964C8D8D642A018E72BB447E6C4DFC5713967DC1D1104EA8DA0E906892A8CD7"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v2-user-ne\\将参考动画重绘为亚索朝画面右上45度释放Q的版本_人物身体保持直立_朝向右上_刀_2873605b\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v2-user-ne\\将参考动画重绘为亚索朝画面右上45度释放Q的版本_人物身体保持直立_朝向右上_刀_2873605b\\final_outputs.json",
+      "bytes": 640,
+      "sha256": "5AF64385F7EECD3DC1F8874432FA2818DB1BCABB78A715A3E0182E164F9E7C6D",
+      "destination_sha256": "1340B25FF003B56754389F5D311AD9E9133EC248192A9E10A01A9D44DE45CA5D"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v2-user-ne\\将参考动画重绘为亚索朝画面右上45度释放Q的版本_人物身体保持直立_朝向右上_刀_2873605b\\meowa_animation_background.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v2-user-ne\\将参考动画重绘为亚索朝画面右上45度释放Q的版本_人物身体保持直立_朝向右上_刀_2873605b\\meowa_animation_background.webp",
+      "bytes": 127698,
+      "sha256": "889EF05894605A0B5549E0BB2EB92D2C0F3E3F51EC0EF6C5C93C03E676321448",
+      "destination_sha256": "889EF05894605A0B5549E0BB2EB92D2C0F3E3F51EC0EF6C5C93C03E676321448"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v2-user-ne\\将参考动画重绘为亚索朝画面右上45度释放Q的版本_人物身体保持直立_朝向右上_刀_2873605b\\meowa_animation.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v2-user-ne\\将参考动画重绘为亚索朝画面右上45度释放Q的版本_人物身体保持直立_朝向右上_刀_2873605b\\meowa_animation.webp",
+      "bytes": 143892,
+      "sha256": "8A9ED02FC03601347E6820E185F0FF8211B3FA0EA0E54FE23FCF380E071D8B36",
+      "destination_sha256": "8A9ED02FC03601347E6820E185F0FF8211B3FA0EA0E54FE23FCF380E071D8B36"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v3-layered-e-parts\\将参考亚索绘制成朝画面正右的像素Q戳刺分层素材_保持蓝色围巾_单侧肩甲_发型_衣_85946a76\\edited.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v3-layered-e-parts\\将参考亚索绘制成朝画面正右的像素Q戳刺分层素材_保持蓝色围巾_单侧肩甲_发型_衣_85946a76\\edited.png",
+      "bytes": 43055,
+      "sha256": "747B52EE131B738FCC6210C7757F49032C1F83B0092BF26ADBB2EA60BEC8F4D3",
+      "destination_sha256": "747B52EE131B738FCC6210C7757F49032C1F83B0092BF26ADBB2EA60BEC8F4D3"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v3-layered-e-parts\\将参考亚索绘制成朝画面正右的像素Q戳刺分层素材_保持蓝色围巾_单侧肩甲_发型_衣_85946a76\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v3-layered-e-parts\\将参考亚索绘制成朝画面正右的像素Q戳刺分层素材_保持蓝色围巾_单侧肩甲_发型_衣_85946a76\\final_outputs.json",
+      "bytes": 364,
+      "sha256": "7196D9042A94B4B903AACAA597C41E9EDC5843830171F3B8CE841D242A97C698",
+      "destination_sha256": "7B9A2B0EC3C66E1C9BB34F407814517D40AC8FDBE6FB6B7AF65593651CFFE65C"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v4-wind-cast-e-parts\\保持这张像素分层素材图的布局和各部件大小_把右上第二段手臂末端的握刀拳改成_4fc9c9e4\\edited.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v4-wind-cast-e-parts\\保持这张像素分层素材图的布局和各部件大小_把右上第二段手臂末端的握刀拳改成_4fc9c9e4\\edited.png",
+      "bytes": 45071,
+      "sha256": "4156A6939956B3CD8F6E6D6876EC5045D2BFEA7BE3733B17AEA61C7D3656B864",
+      "destination_sha256": "4156A6939956B3CD8F6E6D6876EC5045D2BFEA7BE3733B17AEA61C7D3656B864"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v4-wind-cast-e-parts\\保持这张像素分层素材图的布局和各部件大小_把右上第二段手臂末端的握刀拳改成_4fc9c9e4\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v4-wind-cast-e-parts\\保持这张像素分层素材图的布局和各部件大小_把右上第二段手臂末端的握刀拳改成_4fc9c9e4\\final_outputs.json",
+      "bytes": 365,
+      "sha256": "6AC2A361127572B28189DE29617E3E4FD747699D116BEC9F4B0A5EC2F89E5544",
+      "destination_sha256": "CDC832D854D972B7FB947514910D95BEAE0F6CB50CF820CA16B753BBA14CC0F1"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v5-small-grip-wind-e-parts\\保持左侧亚索身体不变_右上两段手臂改为与身体匹配的小手臂_长度和粗细约原来的_8066a3f6\\edited.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v5-small-grip-wind-e-parts\\保持左侧亚索身体不变_右上两段手臂改为与身体匹配的小手臂_长度和粗细约原来的_8066a3f6\\edited.png",
+      "bytes": 43910,
+      "sha256": "782592675D6D14087B5CA8A5233F8A37425E565925D4D44559AD0697CD3003BB",
+      "destination_sha256": "782592675D6D14087B5CA8A5233F8A37425E565925D4D44559AD0697CD3003BB"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v5-small-grip-wind-e-parts\\保持左侧亚索身体不变_右上两段手臂改为与身体匹配的小手臂_长度和粗细约原来的_8066a3f6\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v5-small-grip-wind-e-parts\\保持左侧亚索身体不变_右上两段手臂改为与身体匹配的小手臂_长度和粗细约原来的_8066a3f6\\final_outputs.json",
+      "bytes": 372,
+      "sha256": "B7D7E6A0D706CCDC2E64479B1118B53B27AE3DAF08FC31406F3425C22B201388",
+      "destination_sha256": "D12017C4B2A0C714D697FB1A6021163A9043845E3ECCF33FA1AB4A697BA016DC"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v6-body-n\\仅编辑参考图1左侧的亚索_朝屏幕正上方_完全背向镜头_只能看到后脑和背部_保持参_3c44aaed\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-n\\仅编辑参考图1左侧的亚索_朝屏幕正上方_完全背向镜头_只能看到后脑和背部_保持参_3c44aaed\\final_outputs.json",
+      "bytes": 98,
+      "sha256": "58E43FB8E41871EF79496286255962393E3A4C381CC9C4673B95B16E40E8CB37",
+      "destination_sha256": "58E43FB8E41871EF79496286255962393E3A4C381CC9C4673B95B16E40E8CB37"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v6-body-ne\\仅编辑参考图1左侧的亚索_朝屏幕右上方_背向镜头偏右_保持参考图1的背面与右侧_ca77c60b\\edited.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-ne\\仅编辑参考图1左侧的亚索_朝屏幕右上方_背向镜头偏右_保持参考图1的背面与右侧_ca77c60b\\edited.png",
+      "bytes": 28288,
+      "sha256": "4D1EF44623CA7ED67F84FCD0244E7771830A1EFEA3C7E10C94E11692ACAE4812",
+      "destination_sha256": "4D1EF44623CA7ED67F84FCD0244E7771830A1EFEA3C7E10C94E11692ACAE4812"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v6-body-ne\\仅编辑参考图1左侧的亚索_朝屏幕右上方_背向镜头偏右_保持参考图1的背面与右侧_ca77c60b\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-ne\\仅编辑参考图1左侧的亚索_朝屏幕右上方_背向镜头偏右_保持参考图1的背面与右侧_ca77c60b\\final_outputs.json",
+      "bytes": 353,
+      "sha256": "53AAF9D7929F6E7AFBB11FA64D78BED4E4EF8B93BF16971A9C5F04A082F7DFDD",
+      "destination_sha256": "EAFCDE5480C8B49EB1A516AF1F770B86A15F1BDBBC208D2BE5241F8A745C9ADD"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v6-body-nw\\仅编辑参考图1左侧的亚索_朝屏幕左上方_背向镜头偏左_保持参考图1的背面与左侧_142a8429\\edited.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-nw\\仅编辑参考图1左侧的亚索_朝屏幕左上方_背向镜头偏左_保持参考图1的背面与左侧_142a8429\\edited.png",
+      "bytes": 28374,
+      "sha256": "6E674BF3E9EE00C258BC4E6E495431ECD7A6D9919438D6B5C44E8FAD434D4BC6",
+      "destination_sha256": "6E674BF3E9EE00C258BC4E6E495431ECD7A6D9919438D6B5C44E8FAD434D4BC6"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v6-body-nw\\仅编辑参考图1左侧的亚索_朝屏幕左上方_背向镜头偏左_保持参考图1的背面与左侧_142a8429\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-nw\\仅编辑参考图1左侧的亚索_朝屏幕左上方_背向镜头偏左_保持参考图1的背面与左侧_142a8429\\final_outputs.json",
+      "bytes": 353,
+      "sha256": "FDB418EE9A0846A0EB3FDCA522F32BA754164159233676AAAFA3362D09190564",
+      "destination_sha256": "FBBD000B4AC7BC18BE15C4B42C4BF2B10CC9C76D2EF6A22858CB46D294086D23"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v6-body-s\\仅编辑参考图1左侧的亚索_朝屏幕正下方_面向镜头_保持参考图1的正面_头部_躯干和_9f684510\\edited.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-s\\仅编辑参考图1左侧的亚索_朝屏幕正下方_面向镜头_保持参考图1的正面_头部_躯干和_9f684510\\edited.png",
+      "bytes": 27636,
+      "sha256": "6E0FDC576586DEE1059B876291922A639AEA55AEDCD9EB7085F382D7BC3F997E",
+      "destination_sha256": "6E0FDC576586DEE1059B876291922A639AEA55AEDCD9EB7085F382D7BC3F997E"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v6-body-s\\仅编辑参考图1左侧的亚索_朝屏幕正下方_面向镜头_保持参考图1的正面_头部_躯干和_9f684510\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-s\\仅编辑参考图1左侧的亚索_朝屏幕正下方_面向镜头_保持参考图1的正面_头部_躯干和_9f684510\\final_outputs.json",
+      "bytes": 354,
+      "sha256": "54A1EAC8B3696977506E66BDE39728C617016D95DD72DB5E47D823A6C562872A",
+      "destination_sha256": "16E19F90249D9487386FA9446FE4A0C554F8A5EC29A4185700D5369138CF7856"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v6-body-se\\仅编辑参考图1左侧的亚索_朝屏幕右下方_能看到正面和右侧_保持参考图1的三分之四_fad859d6\\edited.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-se\\仅编辑参考图1左侧的亚索_朝屏幕右下方_能看到正面和右侧_保持参考图1的三分之四_fad859d6\\edited.png",
+      "bytes": 29639,
+      "sha256": "C8F647B8051E0C514C5C7CDF10A495100465BD5D56C69CC77ED5F32E2222AC18",
+      "destination_sha256": "C8F647B8051E0C514C5C7CDF10A495100465BD5D56C69CC77ED5F32E2222AC18"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v6-body-se\\仅编辑参考图1左侧的亚索_朝屏幕右下方_能看到正面和右侧_保持参考图1的三分之四_fad859d6\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-se\\仅编辑参考图1左侧的亚索_朝屏幕右下方_能看到正面和右侧_保持参考图1的三分之四_fad859d6\\final_outputs.json",
+      "bytes": 356,
+      "sha256": "2564E61D812CDD118AABFDF4A3C0B38DBAAF9262600583E2CE90592F82E453A7",
+      "destination_sha256": "EDE0DBF1E4F61B5A401D35C94107A6398D6755AC8EC997775D599555BB5137C6"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v6-body-sw\\仅编辑参考图1左侧的亚索_朝屏幕左下方_能看到正面和左侧_保持参考图1的三分之四_3a1acd94\\edited.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-sw\\仅编辑参考图1左侧的亚索_朝屏幕左下方_能看到正面和左侧_保持参考图1的三分之四_3a1acd94\\edited.png",
+      "bytes": 29205,
+      "sha256": "2576A5C72B5A99E079EAC09ADD234F5B014868DF5A2543F749A91309AFC22DE9",
+      "destination_sha256": "2576A5C72B5A99E079EAC09ADD234F5B014868DF5A2543F749A91309AFC22DE9"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v6-body-sw\\仅编辑参考图1左侧的亚索_朝屏幕左下方_能看到正面和左侧_保持参考图1的三分之四_3a1acd94\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-sw\\仅编辑参考图1左侧的亚索_朝屏幕左下方_能看到正面和左侧_保持参考图1的三分之四_3a1acd94\\final_outputs.json",
+      "bytes": 356,
+      "sha256": "1C7631CF20FBE5D446FAA09D4A5F1809D8FEF82617E1DFD54E2A47003BC895BB",
+      "destination_sha256": "5F272A7BA0A43977B7CC35522B1C7D3934B5AC673B4C566EC9F1200CE74D8865"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v6-body-w\\仅编辑参考图1左侧的亚索_朝屏幕正左方_保持参考图1的左向侧面_头部_躯干和双脚_d7994949\\edited.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-w\\仅编辑参考图1左侧的亚索_朝屏幕正左方_保持参考图1的左向侧面_头部_躯干和双脚_d7994949\\edited.png",
+      "bytes": 28008,
+      "sha256": "89C989A95D39DDD54EBD9C0521591F5EB2A494A07D0F2F71EEF38ACBCA88A457",
+      "destination_sha256": "89C989A95D39DDD54EBD9C0521591F5EB2A494A07D0F2F71EEF38ACBCA88A457"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-q-v6-body-w\\仅编辑参考图1左侧的亚索_朝屏幕正左方_保持参考图1的左向侧面_头部_躯干和双脚_d7994949\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-w\\仅编辑参考图1左侧的亚索_朝屏幕正左方_保持参考图1的左向侧面_头部_躯干和双脚_d7994949\\final_outputs.json",
+      "bytes": 353,
+      "sha256": "57404AD4787F8454EE8C3B62994D3AC2FDCE045741F639CD260A1E2220D1AD23",
+      "destination_sha256": "0B3C74712972823CB177916CE5F65076A574616AFE646CFD8B8A7EDEB11F226A"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-w-v1-loop-animation\\这面风墙保持成型和原位_内部青白色风纹连续向上翻卷_边缘轻微起伏_流动自然_首_24471dd0\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-w-v1-loop-animation\\这面风墙保持成型和原位_内部青白色风纹连续向上翻卷_边缘轻微起伏_流动自然_首_24471dd0\\final_outputs.json",
+      "bytes": 656,
+      "sha256": "562B7C8258BD2D563A1366620C04D241AD064823B942946B76C614EC32BA9523",
+      "destination_sha256": "2F4503F248A726BC133CBD4238D9FFA80F39FB621CFE25AFBE8AE6C4D13AAF65"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-w-v1-loop-animation\\这面风墙保持成型和原位_内部青白色风纹连续向上翻卷_边缘轻微起伏_流动自然_首_24471dd0\\meowa_animation_background.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-w-v1-loop-animation\\这面风墙保持成型和原位_内部青白色风纹连续向上翻卷_边缘轻微起伏_流动自然_首_24471dd0\\meowa_animation_background.webp",
+      "bytes": 52146,
+      "sha256": "7673D585A5D74B600C28D43F854392F52F829E95FD3AFB99030CD7AB2239462A",
+      "destination_sha256": "7673D585A5D74B600C28D43F854392F52F829E95FD3AFB99030CD7AB2239462A"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-w-v1-loop-animation\\这面风墙保持成型和原位_内部青白色风纹连续向上翻卷_边缘轻微起伏_流动自然_首_24471dd0\\meowa_animation.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-w-v1-loop-animation\\这面风墙保持成型和原位_内部青白色风纹连续向上翻卷_边缘轻微起伏_流动自然_首_24471dd0\\meowa_animation.webp",
+      "bytes": 87956,
+      "sha256": "7DD835CAF16ACBC792D5ECD149FD0106F688B0725F092B499E342733A82F7A7B",
+      "destination_sha256": "7DD835CAF16ACBC792D5ECD149FD0106F688B0725F092B499E342733A82F7A7B"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-w-v1-loop-base\\参考图中亚索风墙的青白色气流_绘制一面独立的像素风墙_适用于俯视斜角MOBA地图_f70ba800\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-w-v1-loop-base\\参考图中亚索风墙的青白色气流_绘制一面独立的像素风墙_适用于俯视斜角MOBA地图_f70ba800\\final_outputs.json",
+      "bytes": 369,
+      "sha256": "CA7A61BA096642206C38CC853D364D9AAB7CFFEBD089635FAD579B26597C6C32",
+      "destination_sha256": "A5007C3C146505E86685BE60D2D7EB09B5C5D91B807C6EAB87DCACFFA88F5ACA"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-w-v1-loop-base\\参考图中亚索风墙的青白色气流_绘制一面独立的像素风墙_适用于俯视斜角MOBA地图_f70ba800\\final_pixel_snapper.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-w-v1-loop-base\\参考图中亚索风墙的青白色气流_绘制一面独立的像素风墙_适用于俯视斜角MOBA地图_f70ba800\\final_pixel_snapper.png",
+      "bytes": 10032,
+      "sha256": "53F37CB74A7DD3A8E37F1F9493461BC7370E2B58E869D47DAB46F74DEBCC4853",
+      "destination_sha256": "53F37CB74A7DD3A8E37F1F9493461BC7370E2B58E869D47DAB46F74DEBCC4853"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-w-v1-loop-cleanup\\final_pixel_snapper\\final_outputs.json",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-w-v1-loop-cleanup\\final_pixel_snapper\\final_outputs.json",
+      "bytes": 261,
+      "sha256": "393A92F4F73440F150299814433BC618AAC4BD35736DA38E2F34ADCA5761B9FB",
+      "destination_sha256": "3B7ED4CD327962339E4F48811EF2BE8D789B8B1E8813A3B6D72E6C081022F642"
+    },
+    {
+      "source": "D:\\Long1ye\\pixel-league-of-legends\\meowa-output\\yasuo-w-v1-loop-cleanup\\final_pixel_snapper\\output.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\generation-archive\\legacy-meowa\\yasuo-w-v1-loop-cleanup\\final_pixel_snapper\\output.png",
+      "bytes": 17302,
+      "sha256": "706B641948859E9974F8A3675419FFC177EB3A8A7BA9FA49E9896728582F150C",
+      "destination_sha256": "706B641948859E9974F8A3675419FFC177EB3A8A7BA9FA49E9896728582F150C"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\亚索音频\\[LOL英雄配音 亚索]哈撒_爱给网_aigei_com.mp3",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\audio\\亚索音频\\[LOL英雄配音 亚索]哈撒_爱给网_aigei_com.mp3",
+      "bytes": 37652,
+      "sha256": "9E4A1451E019985C6342F82C68EB9DCE85091004CDCE236DA9AC9CC27031BCEF",
+      "destination_sha256": "9E4A1451E019985C6342F82C68EB9DCE85091004CDCE236DA9AC9CC27031BCEF"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\亚索音频\\英雄联盟疾风剑豪亚索台词语音包 (35)_爱给网_aigei_com.mp3",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\audio\\亚索音频\\英雄联盟疾风剑豪亚索台词语音包 (35)_爱给网_aigei_com.mp3",
+      "bytes": 207757,
+      "sha256": "4BA2E5574AB6D93EBDBEF8DEC6953AC08D59AB91A3BFCA4AA79A801B00C129FE",
+      "destination_sha256": "4BA2E5574AB6D93EBDBEF8DEC6953AC08D59AB91A3BFCA4AA79A801B00C129FE"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\亚索音频\\LOL疾风剑豪 亚索台词--索_爱给网_aigei_com.mp3",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\audio\\亚索音频\\LOL疾风剑豪 亚索台词--索_爱给网_aigei_com.mp3",
+      "bytes": 33601,
+      "sha256": "EAA8170902EECB188C280D072E0DCF944FC3938962C725C8F054BE58F2F5CCFA",
+      "destination_sha256": "EAA8170902EECB188C280D072E0DCF944FC3938962C725C8F054BE58F2F5CCFA"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\风墙特效.mp4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\风墙特效.mp4",
+      "bytes": 614789,
+      "sha256": "53BAD81132123B561D80911585A415FFAC6D707772A367AD8A7FB8B7574C7C82",
+      "destination_sha256": "53BAD81132123B561D80911585A415FFAC6D707772A367AD8A7FB8B7574C7C82"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌-e.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌-e.png",
+      "bytes": 8161,
+      "sha256": "19E046DAC850DDB7ECEA5AFC686C55C25D7F059E7F503D901CCE641BFD813A16",
+      "destination_sha256": "19E046DAC850DDB7ECEA5AFC686C55C25D7F059E7F503D901CCE641BFD813A16"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌-n.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌-n.png",
+      "bytes": 8417,
+      "sha256": "DBA60479C7C06A9D6040426DB8CC6784B30EBADA13D9BA7A17E346D2E98D8DCB",
+      "destination_sha256": "DBA60479C7C06A9D6040426DB8CC6784B30EBADA13D9BA7A17E346D2E98D8DCB"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌-ne.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌-ne.png",
+      "bytes": 9311,
+      "sha256": "AE7924BEE378609292DDD2205E7474BAF580D6203B791F5C6D7823E4A95A5176",
+      "destination_sha256": "AE7924BEE378609292DDD2205E7474BAF580D6203B791F5C6D7823E4A95A5176"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌-nw.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌-nw.png",
+      "bytes": 9289,
+      "sha256": "C9439E0B3A1CEDE5E6C99311DB1A4531FE900AB5DAB35DE1C8AA49618021DEFB",
+      "destination_sha256": "C9439E0B3A1CEDE5E6C99311DB1A4531FE900AB5DAB35DE1C8AA49618021DEFB"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌-s.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌-s.png",
+      "bytes": 10287,
+      "sha256": "17C27FA07022B384CE147EEEFEA1905595F1EC41E50C3060FBDF1727CB000FEB",
+      "destination_sha256": "17C27FA07022B384CE147EEEFEA1905595F1EC41E50C3060FBDF1727CB000FEB"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌-se.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌-se.png",
+      "bytes": 10684,
+      "sha256": "DD844266AEE203B5E4D03BCCB8A831794885555ACC241F6A117A2006202EDF9D",
+      "destination_sha256": "DD844266AEE203B5E4D03BCCB8A831794885555ACC241F6A117A2006202EDF9D"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌-sw.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌-sw.png",
+      "bytes": 10666,
+      "sha256": "56C8178BD894D3453ECD636C7EA85610D24469D5C5B5BE1D03FDBAE3583AA7D5",
+      "destination_sha256": "56C8178BD894D3453ECD636C7EA85610D24469D5C5B5BE1D03FDBAE3583AA7D5"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌-w.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌-w.png",
+      "bytes": 8163,
+      "sha256": "53BEF5C965DFCE86C3A6EAEC16E4AADA74E534518482E609D3E145C508FABD19",
+      "destination_sha256": "53BEF5C965DFCE86C3A6EAEC16E4AADA74E534518482E609D3E145C508FABD19"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌站立-e.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌站立-e.png",
+      "bytes": 6775,
+      "sha256": "06ED83441A637AF5CCE1A1709A84752522B7501D0A64124750EF679809481A64",
+      "destination_sha256": "06ED83441A637AF5CCE1A1709A84752522B7501D0A64124750EF679809481A64"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌站立-n.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌站立-n.png",
+      "bytes": 9894,
+      "sha256": "66CB4183A6703FD388D36AB2C15E961658B1EEACC67E7F78D51CCE93C1D7EAAF",
+      "destination_sha256": "66CB4183A6703FD388D36AB2C15E961658B1EEACC67E7F78D51CCE93C1D7EAAF"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌站立-ne.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌站立-ne.png",
+      "bytes": 9095,
+      "sha256": "D9C2EE09BA5D43A641B90C0CBEBD85D83E8D15AC0742E2997D0EE744FCBE3713",
+      "destination_sha256": "D9C2EE09BA5D43A641B90C0CBEBD85D83E8D15AC0742E2997D0EE744FCBE3713"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌站立-nw.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌站立-nw.png",
+      "bytes": 9120,
+      "sha256": "E8262FC8655559E3A01DAA39A5E2E044C23A89F3052863848514EE4277E62D0D",
+      "destination_sha256": "E8262FC8655559E3A01DAA39A5E2E044C23A89F3052863848514EE4277E62D0D"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌站立-s.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌站立-s.png",
+      "bytes": 11690,
+      "sha256": "2AD5747A7E739F1F9B0491D0C8CDD2D3FD55FAA878FDE1B8938AE0314F6F3CDD",
+      "destination_sha256": "2AD5747A7E739F1F9B0491D0C8CDD2D3FD55FAA878FDE1B8938AE0314F6F3CDD"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌站立-se.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌站立-se.png",
+      "bytes": 10461,
+      "sha256": "DEBDBAF42C141F53B4C7B198102B3A9C01971045B1B7A313E7D24DBD6BFDECB0",
+      "destination_sha256": "DEBDBAF42C141F53B4C7B198102B3A9C01971045B1B7A313E7D24DBD6BFDECB0"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌站立-sw.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌站立-sw.png",
+      "bytes": 10398,
+      "sha256": "1E6D35A3F34891AAA6B182466CE486F92EF52B25828A5D103FA6E2DF0C40901B",
+      "destination_sha256": "1E6D35A3F34891AAA6B182466CE486F92EF52B25828A5D103FA6E2DF0C40901B"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\卡牌站立-w.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\twisted-fate\\卡牌站立-w.png",
+      "bytes": 6703,
+      "sha256": "05044150DA4CB6189EE530D3940D8541D9F3A47A759C8420E0B88E3CF05CB5D0",
+      "destination_sha256": "05044150DA4CB6189EE530D3940D8541D9F3A47A759C8420E0B88E3CF05CB5D0"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\亚索拔刀.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\亚索拔刀.webp",
+      "bytes": 259938,
+      "sha256": "2032C0DD4BBA2FA979535C736FF69E03EE786E1A189AF7BB103EE58C220EDB0D",
+      "destination_sha256": "2032C0DD4BBA2FA979535C736FF69E03EE786E1A189AF7BB103EE58C220EDB0D"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\亚索拔刀v2.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\亚索拔刀v2.webp",
+      "bytes": 249282,
+      "sha256": "2C17C729CE46E0D40280478B304C606DE9BE25F878E1BFC6D624A11AD9EFD1D0",
+      "destination_sha256": "2C17C729CE46E0D40280478B304C606DE9BE25F878E1BFC6D624A11AD9EFD1D0"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\亚索qbadcase.gif",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\亚索qbadcase.gif",
+      "bytes": 178488,
+      "sha256": "EC97EB74B9B361C1CA8384170F05C3FA2357F40D5CAED6738C4BB3DD8F79C443",
+      "destination_sha256": "EC97EB74B9B361C1CA8384170F05C3FA2357F40D5CAED6738C4BB3DD8F79C443"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\斩钢闪刀身.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\斩钢闪刀身.webp",
+      "bytes": 48520,
+      "sha256": "C25D3954B3CED55C502C7AC9C353BCF38FC7F021F75EC24FA19AA1D7CE69EB7D",
+      "destination_sha256": "C25D3954B3CED55C502C7AC9C353BCF38FC7F021F75EC24FA19AA1D7CE69EB7D"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\generated-image-1.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\misc\\generated-image-1.png",
+      "bytes": 2854,
+      "sha256": "239B3E5C85ABEAD222BEA5A26C15BF1ACE50A09EDD151A53D9641D7975DFC194",
+      "destination_sha256": "239B3E5C85ABEAD222BEA5A26C15BF1ACE50A09EDD151A53D9641D7975DFC194"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\generated-image-1.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\misc\\generated-image-1.webp",
+      "bytes": 101520,
+      "sha256": "30C0ADC93A8C547E059A78BA412D050097B0322FFA69E245777E5E07A1AC4BB3",
+      "destination_sha256": "30C0ADC93A8C547E059A78BA412D050097B0322FFA69E245777E5E07A1AC4BB3"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\generated-image-2.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\misc\\generated-image-2.png",
+      "bytes": 2720,
+      "sha256": "6A3A85CE91FAC746489E7473225384D19C9DD2E704E0AE106233D7C78A2BD460",
+      "destination_sha256": "6A3A85CE91FAC746489E7473225384D19C9DD2E704E0AE106233D7C78A2BD460"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\image-1791616958875-ct7e0o1zgnb.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\misc\\image-1791616958875-ct7e0o1zgnb.webp",
+      "bytes": 196550,
+      "sha256": "E374259AF614DFD66A5459C407967D7AE76F29476F68C671286CA90A594D8CAC",
+      "destination_sha256": "E374259AF614DFD66A5459C407967D7AE76F29476F68C671286CA90A594D8CAC"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\lol中路地图.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\maps\\lol中路地图.png",
+      "bytes": 1235419,
+      "sha256": "2456CD8737DE829406CE2F8E6B967EB41886B836629909663B4EDF0D85948CCF",
+      "destination_sha256": "2456CD8737DE829406CE2F8E6B967EB41886B836629909663B4EDF0D85948CCF"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\q-badcase-nw.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\q-badcase-nw.webp",
+      "bytes": 139752,
+      "sha256": "D74530CB20C95AE5B0CC5D8BA928A800F9BB35C9A57F1257C84E4C5AD4A8AF08",
+      "destination_sha256": "D74530CB20C95AE5B0CC5D8BA928A800F9BB35C9A57F1257C84E4C5AD4A8AF08"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\q-badcase-s.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\q-badcase-s.webp",
+      "bytes": 128396,
+      "sha256": "E934B83689AB9791E8DCB1666003667117BA7BD9DB730A0FF4ED0552DA263EA5",
+      "destination_sha256": "E934B83689AB9791E8DCB1666003667117BA7BD9DB730A0FF4ED0552DA263EA5"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\q3旋风.png",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\q3旋风.png",
+      "bytes": 14060,
+      "sha256": "5D36D89D79AFAC7A2BEBDB0937EAD9E69C1CDC43AF3CD9CE2BEED361DCE0DE8C",
+      "destination_sha256": "5D36D89D79AFAC7A2BEBDB0937EAD9E69C1CDC43AF3CD9CE2BEED361DCE0DE8C"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\QQ20261009-152900-HD.mp4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\motion\\QQ20261009-152900-HD.mp4",
+      "bytes": 322147,
+      "sha256": "08EDE89C65CCAB2CC3B613ACA8079ECDA0DC5424954680777D0C1D4BF22533AA",
+      "destination_sha256": "08EDE89C65CCAB2CC3B613ACA8079ECDA0DC5424954680777D0C1D4BF22533AA"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\QQ20261009-153017-HD.mp4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\motion\\QQ20261009-153017-HD.mp4",
+      "bytes": 469448,
+      "sha256": "DA09A2D7A7CF3663B6C61200BAC8C1E403154EBD3E41F5C3CBABC87DB81DE3A0",
+      "destination_sha256": "DA09A2D7A7CF3663B6C61200BAC8C1E403154EBD3E41F5C3CBABC87DB81DE3A0"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\QQ20261009-182535-HD.mp4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\motion\\QQ20261009-182535-HD.mp4",
+      "bytes": 643820,
+      "sha256": "727D7D819346BE63C720CC84929468AD9A3A27CF2F74C603E3CAEE6B98CB5BE3",
+      "destination_sha256": "727D7D819346BE63C720CC84929468AD9A3A27CF2F74C603E3CAEE6B98CB5BE3"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\QQ20261009-182632-HD.mp4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\motion\\QQ20261009-182632-HD.mp4",
+      "bytes": 595564,
+      "sha256": "5580C8CFB7CBD0FA02F48B69E6D5CB418CCDC567B72958AB0B3405BBAF513F31",
+      "destination_sha256": "5580C8CFB7CBD0FA02F48B69E6D5CB418CCDC567B72958AB0B3405BBAF513F31"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\QQ20261009-182753-HD.mp4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\motion\\QQ20261009-182753-HD.mp4",
+      "bytes": 264440,
+      "sha256": "3CD18F229184D1231B8722D573C485F49933E398BBC94299BC2D5253349B7F26",
+      "destination_sha256": "3CD18F229184D1231B8722D573C485F49933E398BBC94299BC2D5253349B7F26"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\QQ20261009-182843-HD.mp4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\motion\\QQ20261009-182843-HD.mp4",
+      "bytes": 373500,
+      "sha256": "67CAC9A70C09C39653118A56D34EA4DFDBB9E1D71E11DBC0389DABD2DB639C06",
+      "destination_sha256": "67CAC9A70C09C39653118A56D34EA4DFDBB9E1D71E11DBC0389DABD2DB639C06"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\QQ20261009-182920-HD.mp4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\motion\\QQ20261009-182920-HD.mp4",
+      "bytes": 345602,
+      "sha256": "171B079D2A43F575EC3370B2798DE95909BB4B69B3985789B1CDBB0760EABEFA",
+      "destination_sha256": "171B079D2A43F575EC3370B2798DE95909BB4B69B3985789B1CDBB0760EABEFA"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\QQ20261009-190735-HD.mp4",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\references\\motion\\QQ20261009-190735-HD.mp4",
+      "bytes": 733323,
+      "sha256": "CD97C08FEB060F06B2750E38F767CA7C791E52757048251ECC00E26AE751E1FE",
+      "destination_sha256": "CD97C08FEB060F06B2750E38F767CA7C791E52757048251ECC00E26AE751E1FE"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\w-q3挥刀.gif",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\w-q3挥刀.gif",
+      "bytes": 130895,
+      "sha256": "E02E7890F0F09BCCABFED70A597036381989017DF5AD43AE59D5C6F602679249",
+      "destination_sha256": "E02E7890F0F09BCCABFED70A597036381989017DF5AD43AE59D5C6F602679249"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\yasuo-A-v2.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\yasuo-A-v2.webp",
+      "bytes": 417702,
+      "sha256": "D0CCF9CB73128F83F0D924C8F006339ACC863CDC9AC1503BF4E8339E1945720B",
+      "destination_sha256": "D0CCF9CB73128F83F0D924C8F006339ACC863CDC9AC1503BF4E8339E1945720B"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\yasuo-A.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\yasuo-A.webp",
+      "bytes": 204644,
+      "sha256": "C4A040B7B050067DEB56E9FE2AD2E75AF1E284A687DC181876D8000A7A78E273",
+      "destination_sha256": "C4A040B7B050067DEB56E9FE2AD2E75AF1E284A687DC181876D8000A7A78E273"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\yasuo-B-v2.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\yasuo-B-v2.webp",
+      "bytes": 482432,
+      "sha256": "BB34A9B0AA5C47426097F09ED47CDAF6686DF2A52344627903D5EFB751C8ECBC",
+      "destination_sha256": "BB34A9B0AA5C47426097F09ED47CDAF6686DF2A52344627903D5EFB751C8ECBC"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\yasuo-B.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\yasuo-B.webp",
+      "bytes": 215676,
+      "sha256": "97554048D5F1A15EF5063F425C2597C2737988157E96639414C2DFD747831AB2",
+      "destination_sha256": "97554048D5F1A15EF5063F425C2597C2737988157E96639414C2DFD747831AB2"
+    },
+    {
+      "source": "D:\\Long1ye\\资源\\yasuo-Q.webp",
+      "destination": "D:\\Long1ye\\pixel-league-of-legends\\assets\\source-materials\\heroes\\yasuo\\yasuo-Q.webp",
+      "bytes": 149968,
+      "sha256": "A8CC707A91B28754DEBCC4D141FEEC3FCE699417B71D9B0ADB7F8ABED7C7070C",
+      "destination_sha256": "A8CC707A91B28754DEBCC4D141FEEC3FCE699417B71D9B0ADB7F8ABED7C7070C"
+    }
+  ],
+  "updated_reference_files": [
+    "assets\\generation-archive\\legacy-meowa\\game-design\\job_51e46ec45c324df9918dcd5be365b8d1\\game_design_outputs.json",
+    "assets\\generation-archive\\legacy-meowa\\game-design\\job_e7896457a8844fa2a8da47f8a33b610f\\game_design_outputs.json",
+    "assets\\generation-archive\\legacy-meowa\\yasuo-q-v1-se-animation\\亚索朝画面右下完成一次Q直线突刺_短促蓄力_快速伸臂把刀直线刺出_然后顺势收回_2e36e4f8\\final_outputs.json",
+    "assets\\generation-archive\\legacy-meowa\\yasuo-q-v1-se-impact\\将亚索改为Q刺出到位的姿势_右手向画面右下伸出_沿刀身方向完成一次直线突刺_刀_5833666f\\final_outputs.json",
+    "assets\\generation-archive\\legacy-meowa\\yasuo-q-v1-se-ready\\将参考图中的亚索改为Q刺击准备姿势_右手把刀收在腰侧_刀尖朝画面右下_准备沿刀_2dc4e3d5\\final_outputs.json",
+    "assets\\generation-archive\\legacy-meowa\\yasuo-q-v2-user-ne\\将参考动画重绘为亚索朝画面右上45度释放Q的版本_人物身体保持直立_朝向右上_刀_2873605b\\final_outputs.json",
+    "assets\\generation-archive\\legacy-meowa\\yasuo-q-v3-layered-e-parts\\将参考亚索绘制成朝画面正右的像素Q戳刺分层素材_保持蓝色围巾_单侧肩甲_发型_衣_85946a76\\final_outputs.json",
+    "assets\\generation-archive\\legacy-meowa\\yasuo-q-v4-wind-cast-e-parts\\保持这张像素分层素材图的布局和各部件大小_把右上第二段手臂末端的握刀拳改成_4fc9c9e4\\final_outputs.json",
+    "assets\\generation-archive\\legacy-meowa\\yasuo-q-v5-small-grip-wind-e-parts\\保持左侧亚索身体不变_右上两段手臂改为与身体匹配的小手臂_长度和粗细约原来的_8066a3f6\\final_outputs.json",
+    "assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-ne\\仅编辑参考图1左侧的亚索_朝屏幕右上方_背向镜头偏右_保持参考图1的背面与右侧_ca77c60b\\final_outputs.json",
+    "assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-nw\\仅编辑参考图1左侧的亚索_朝屏幕左上方_背向镜头偏左_保持参考图1的背面与左侧_142a8429\\final_outputs.json",
+    "assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-s\\仅编辑参考图1左侧的亚索_朝屏幕正下方_面向镜头_保持参考图1的正面_头部_躯干和_9f684510\\final_outputs.json",
+    "assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-se\\仅编辑参考图1左侧的亚索_朝屏幕右下方_能看到正面和右侧_保持参考图1的三分之四_fad859d6\\final_outputs.json",
+    "assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-sw\\仅编辑参考图1左侧的亚索_朝屏幕左下方_能看到正面和左侧_保持参考图1的三分之四_3a1acd94\\final_outputs.json",
+    "assets\\generation-archive\\legacy-meowa\\yasuo-q-v6-body-w\\仅编辑参考图1左侧的亚索_朝屏幕正左方_保持参考图1的左向侧面_头部_躯干和双脚_d7994949\\final_outputs.json",
+    "assets\\generation-archive\\legacy-meowa\\yasuo-w-v1-loop-animation\\这面风墙保持成型和原位_内部青白色风纹连续向上翻卷_边缘轻微起伏_流动自然_首_24471dd0\\final_outputs.json",
+    "assets\\generation-archive\\legacy-meowa\\yasuo-w-v1-loop-base\\参考图中亚索风墙的青白色气流_绘制一面独立的像素风墙_适用于俯视斜角MOBA地图_f70ba800\\final_outputs.json",
+    "assets\\generation-archive\\legacy-meowa\\yasuo-w-v1-loop-cleanup\\final_pixel_snapper\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\abyss-clean-v1\\result_images_0_url\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\abyss-v1\\Four_isolated_environment_modules_for_a_dark_frozen_canyon_beneath_a_pixel_art_ancient_stone_bridge_in_a_regul_d694a5cd\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\bridge-props-v1\\Four_separate_small_environmental_storytelling_prop_clusters_for_a_pixel_art_frozen_stone_bridge_game_regular_e47ee6c1\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\circle-clean-v1\\result_images_0_url\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\circle-v1\\One_severely_battle-damaged_circular_rune_pavement_for_a_pixel-art_icy_bridge_Strict_flat_overhead_view_true_c_806ac105\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\damage-clean-v1\\result_images_0_url\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\damage-v1\\Four_separate_ground_damage_decals_in_a_regular_2_by_2_sprite_sheet_on_transparent_background_Match_the_refere_eb66aa29\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\edge-art-v2\\Four_separate_modular_broken_bridge_edge_segments_in_a_2_by_2_asset_sheet_on_transparent_background_Pixel_art_8dc6cc80\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\edge-clean-v2\\result_images_0_url\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\edge-floor-v3\\A_production_texture_atlas_of_sixteen_individual_square_paving_stone_tiles_in_an_exact_4_by_4_grid_no_margins_a77bc582\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-brush-clean-v1\\result_images_0_url\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-brush-clean-v2\\result_images_0_url\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-brush-v1\\A_single_low_irregular_patch_of_frost-hardy_reeds_and_icy_brush_for_an_isometric_pixel-art_frozen_stone_bridge_d6fa8cb1\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-brush-v2\\Create_one_continuous_dense_frost-hardy_brush_patch_for_an_isometric_pixel-art_frozen_bridge_game_Match_the_re_6ca3c08b\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-crystal-clean-v1\\result_images_0_url\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-crystal-clean-v2\\result_images_0_url\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-crystal-v1\\A_single_small_inhibitor_crystal_prop_for_an_isometric_pixel-art_frozen_bridge_game_pale_blue_faceted_crystal_433c8dd0\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-crystal-v2\\Create_one_isometric_pixel-art_inhibitor_crystal_prop_matching_the_reference_s_pale_ice-blue_faceted_crystal_a_e22372ca\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-critique-v2\\job_d09c13c49d2c4eedab383ab4f9cfa672\\game_design_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-environment-plan-v1\\job_a389f41d89584663b662434d8193e178\\game_design_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-light-props-v1\\A_clean_game-asset_sheet_of_three_separate_isometric_pixel-art_bridge-light_props_evenly_spaced_in_one_horizon_35028a92\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-light-props-v2\\Three_NEW_and_DISTINCT_small_isometric_pixel-art_lighting_props_for_a_frozen_battle_bridge_presented_as_separa_e00c947a\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-prop-placement-review\\job_80103fa4e1e2419da9e637b642c61547\\game_design_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\environment\\howling-rail-brazier-v1\\Create_ONE_isolated_game-ready_isometric_pixel-art_bridge_railing_module_Use_the_first_reference_for_exact_sno_992ed8be\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\fortress-art-v1\\Four_separate_finished_pixel-art_fortress_modules_in_an_exact_2_by_2_sheet_each_inside_its_512_square_quadrant_cbba4a25\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\fortress-clean-v1\\result_images_0_url\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\fortress-rear-clean-v1\\result_images_0_url\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\fortress-rear-v1\\A_dense_rear_district_behind_a_snowy_frontier_fortress_for_an_isometric_pixel_game_Match_the_reference_masonry_123450fe\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\fortress-story-clean-v2\\result_images_0_url\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\fortress-story-v2\\An_isolated_wide_squat_fortress_building_group_for_an_isometric_pixel_game_matching_the_reference_cold_gray_ma_89a9e7bc\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\gate-clean-v1\\result_images_0_url\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\gate-clean-v2\\result_images_0_url\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\gate-v1\\Four_isolated_pixel_art_environment_modules_in_a_regular_2_by_2_sheet_each_entirely_inside_its_own_quadrant_wi_0a301da8\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\gate-v2\\A_2_by_2_sheet_of_four_separated_pixel_art_game_architecture_sprites_on_transparent_background_Same_snowy_grey_57fcde3c\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\ice-gatehouse-clean-v4\\result_images_0_url\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\ice-gatehouse-v4\\A_single_wide_low_mountainside_gatehouse_for_an_isometric_pixel-art_frozen_bridge_game_The_bridge_approaches_a_64df42f9\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\props-clean-v1\\result_images_0_url\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\pv1\\job_eb1781e3f3364c7281b8dce902bb2f0b\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\pv1-clean\\result_images_0_url\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\rails-clean-v1\\result_images_0_url\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\rails-v1\\Four_separate_modular_ruined_stone_bridge_railings_in_an_exact_2_by_2_sprite_sheet_transparent_background_each_3320be27\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\repair-v1\\Four_square_floor_tiles_in_an_exact_2_by_2_atlas_no_gaps_or_margins_Match_the_reference_blue_grey_pixel_stone_3a0049dc\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\seal-v1\\A_modular_ancient_frost-seal_stone_floor_atlas_exactly_4_columns_and_4_rows_of_equal_square_tiles_no_margins_o_f0cbf618\\final_outputs.json",
+    "assets\\generation-archive\\maps\\howling-abyss\\tiles-v2\\A_production_texture_atlas_for_a_pixel_art_icy_stone_bridge_game_Exactly_4_columns_by_4_rows_of_equal_square_c_4eb0ae81\\final_outputs.json",
+    "assets\\generation-archive\\units\\bridge-camp\\camp-rest-v1\\The_tired_armored_guard_rests_in_place_slowly_lowering_his_hammer_and_leaning_on_it_shoulders_breathing_heavil_fb0b8ae7\\final_outputs.json",
+    "assets\\hero-skills\\2026-10-10\\yasuo\\q-v1-se\\animation.plan.json",
+    "assets\\hero-skills\\2026-10-10\\yasuo\\q-v1-se\\animation.plan.state.json",
+    "assets\\hero-skills\\2026-10-10\\yasuo\\q-v1-se\\impact.plan.json",
+    "assets\\hero-skills\\2026-10-10\\yasuo\\q-v1-se\\impact.plan.state.json",
+    "assets\\hero-skills\\2026-10-10\\yasuo\\q-v1-se\\ready.plan.json",
+    "assets\\hero-skills\\2026-10-10\\yasuo\\q-v2-user-ne\\animation.plan.json",
+    "assets\\hero-skills\\2026-10-10\\yasuo\\q-v2-user-ne\\animation.plan.state.json",
+    "assets\\hero-skills\\2026-10-10\\yasuo\\q-v2-user-ne\\contract.json",
+    "assets\\hero-skills\\2026-10-10\\yasuo\\w-v1-loop\\animation.plan.json",
+    "assets\\hero-skills\\2026-10-10\\yasuo\\w-v1-loop\\animation.plan.state.json",
+    "assets\\hero-skills\\2026-10-10\\yasuo\\w-v1-loop\\base.plan.json",
+    "assets\\hero-skills\\2026-10-10\\yasuo\\w-v1-loop\\base.plan.state.json",
+    "assets\\hero-skills\\2026-10-10\\yasuo\\w-v1-loop\\cleanup.plan.json",
+    "assets\\hero-skills\\2026-10-10\\yasuo\\w-v1-loop\\cleanup.plan.state.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v3-layered-e\\parts.plan.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v3-layered-e\\parts.plan.state.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v4-wind-cast-e\\parts.plan.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v4-wind-cast-e\\parts.plan.state.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v5-small-grip-wind-e\\parts.plan.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v5-small-grip-wind-e\\parts.plan.state.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v6-eight-directions\\plans\\n.plan.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v6-eight-directions\\plans\\ne.plan.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v6-eight-directions\\plans\\ne.plan.state.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v6-eight-directions\\plans\\nw.plan.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v6-eight-directions\\plans\\nw.plan.state.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v6-eight-directions\\plans\\s.plan.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v6-eight-directions\\plans\\s.plan.state.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v6-eight-directions\\plans\\se.plan.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v6-eight-directions\\plans\\se.plan.state.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v6-eight-directions\\plans\\sw.plan.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v6-eight-directions\\plans\\sw.plan.state.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v6-eight-directions\\plans\\w.plan.json",
+    "assets\\hero-skills\\2026-10-12\\yasuo\\q-v6-eight-directions\\plans\\w.plan.state.json",
+    "assets\\map-modules\\howling-paving-v1\\generation-final.json",
+    "scripts\\import-yasuo-q-direction.py",
+    "scripts\\import-yasuo-q-study.py",
+    "scripts\\package-camp.py",
+    "scripts\\package-yasuo-q-draw-v2.py",
+    "scripts\\package-yasuo-q-draw.py",
+    "scripts\\prepare-yasuo-q-direction.py",
+    "scripts\\prepare-yasuo-q-eight-directions.py",
+    "scripts\\prepare-yasuo-q-layered.py",
+    "scripts\\prepare-yasuo-w-study.py",
+    "docs\\resource-path-audit-2026-10-15.json",
+    "scripts\\import-yasuo-ab-v2.py"
+  ],
+  "verification": {
+    "file_count": 225,
+    "unchanged_files": 162,
+    "path_metadata_updated_files": 63,
+    "errors": []
+  }
+}

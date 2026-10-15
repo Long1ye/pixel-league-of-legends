@@ -1,0 +1,275 @@
+{
+  "source_archive": "D:\\Long1ye\\英雄联盟(26)\\Game\\DATA\\FINAL\\Champions\\Yasuo.wad.client",
+  "source_archive_sha256": "6b616272c585b6a1b1e3bda0805c903a48ac527e10d55db4928818ec8492451f",
+  "wad_version": [
+    3,
+    4
+  ],
+  "archive_entries": 3955,
+  "parser": "CommunityDragon CDTB 1.3.0",
+  "files": [
+    {
+      "source_path": "data/characters/yasuo/yasuo.bin",
+      "local_file": "yasuo.bin",
+      "bytes": 57583,
+      "sha256": "10c022bc26c7da7149098643ae24e3386851211d933f8d8cc75b955ad2dd6cd2",
+      "entries": 117,
+      "types": {
+        "SpellObject": 84,
+        "AbilityObject": 5,
+        "StatStoneSet": 3,
+        "StatStoneData": 9,
+        "{6c87d653}": 11,
+        "ItemRecommendationOverrideSet": 1,
+        "RecSpellRankUpInfoList": 1,
+        "ChampionRuneRecommendationsContext": 1,
+        "CharacterRecord": 1,
+        "SkinCharacterMetaDataProperties": 1
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/skins/skin0.bin",
+      "local_file": "skin0.bin",
+      "bytes": 409330,
+      "sha256": "85861536b2af5761905d812188c72d4682267abe156cf3ecdef81efc6bf54213",
+      "entries": 46,
+      "types": {
+        "SkinCharacterDataProperties": 1,
+        "VfxSystemDefinitionData": 44,
+        "ResourceResolver": 1
+      },
+      "linked_files": [
+        "DATA/Characters/Yasuo/Yasuo_Multi_Skins_Skin0_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin54_Skins_Skin55_Skins_Skin56_Skins_Skin58_Skins_Skin59_Skins_Skin60_Skins_Skin61_Skins_Skin62_Skins_Skin63_Skins_Skin64_Skins_Skin65_Skins_Skin66_Skins_Skin67_Skins_Skin9.bin",
+        "DATA/Characters/Yasuo/Yasuo.bin",
+        "DATA/Characters/Yasuo/Yasuo_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin4_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin54_Skins_Skin55_Skins_Skin56_Skins_Skin58_Skins_Skin59_Skins_Skin6_Skins_Skin60_Skins_Skin61_Skins_Skin62_Skins_Skin63_Skins_Skin64_Skins_Skin65_Skins_Skin66_Skins_Skin67_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/Characters/Yasuo/Animations/Skin0.bin",
+        "DATA/Characters/Yasuo/Yasuo_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin4_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin54_Skins_Skin55_Skins_Skin56_Skins_Skin58_Skins_Skin59_Skins_Skin6_Skins_Skin60_Skins_Skin61_Skins_Skin62_Skins_Skin63_Skins_Skin64_Skins_Skin65_Skins_Skin66_Skins_Skin67_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/Characters/Yasuo/Yasuo_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8.bin",
+        "DATA/Characters/Yasuo/Yasuo_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin4_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin54_Skins_Skin55_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/Characters/Yasuo/Yasuo_Multi_Skins_Root_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin35_Skins_Skin36_Skins_Skin37_Skins_Skin38_Skins_Skin39_Skins_Skin4_Skins_Skin40_Skins_Skin41_Skins_Skin42_Skins_Skin43_Skins_Skin44_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin56_Skins_Skin57_Skins_Skin58_Skins_Skin59_Skins_Skin6_Skins_Skin60_Skins_Skin61_Skins_Skin62_Skins_Skin63_Skins_Skin64_Skins_Skin65_Skins_Skin66_Skins_Skin67_Skins_Skin68_Skins_Skin69_Skins_Skin7_Skins_Skin70_Skins_Skin71_Skins_Skin72_Skins_Skin73_Skins_Skin74_Skins_Skin75_Skins_Skin76_Skins_Skin77_Skins_Skin78_Skins_Skin79_Skins_Skin8_Skins_Skin80_Skins_Skin81_Skins_Skin82_Skins_Skin83_Skins_Skin84_Skins_Skin85_Skins_Skin86_Skins_Skin88_Skins_Skin89_Skins_Skin90_Skins_Skin91_Skins_Skin92_Skins_Skin93_Skins_Skin94_Skins_Skin95_Skins_Skin96.bin",
+        "DATA/Characters/Yasuo/Yasuo_Multi_Skins_Skin0_Skins_Skin2_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin54_Skins_Skin55.bin",
+        "DATA/Characters/Yasuo/Yasuo_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin4_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin54_Skins_Skin55_Skins_Skin56_Skins_Skin58_Skins_Skin59_Skins_Skin6_Skins_Skin60_Skins_Skin61_Skins_Skin62_Skins_Skin63_Skins_Skin64_Skins_Skin65_Skins_Skin66_Skins_Skin67_Skins_Skin7_Skins_Skin8_Skins_Skin88_Skins_Skin89_Skins_Skin9_Skins_Skin90_Skins_Skin91_Skins_Skin92_Skins_Skin93_Skins_Skin94_Skins_Skin95_Skins_Skin96.bin",
+        "DATA/Characters/Yasuo/Yasuo_Multi_Skins_Skin0_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin54_Skins_Skin55_Skins_Skin56_Skins_Skin58_Skins_Skin59_Skins_Skin60_Skins_Skin61_Skins_Skin62_Skins_Skin63_Skins_Skin64_Skins_Skin65_Skins_Skin66_Skins_Skin67_Skins_Skin88_Skins_Skin89_Skins_Skin9_Skins_Skin90_Skins_Skin91_Skins_Skin92_Skins_Skin93_Skins_Skin94_Skins_Skin95_Skins_Skin96.bin",
+        "DATA/Characters/Yasuo/Yasuo_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin4_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin54_Skins_Skin55_Skins_Skin56_Skins_Skin58_Skins_Skin59_Skins_Skin6_Skins_Skin60_Skins_Skin61_Skins_Skin62_Skins_Skin63_Skins_Skin64_Skins_Skin65_Skins_Skin66_Skins_Skin67_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/Characters/Yasuo/Yasuo_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin4_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin54_Skins_Skin55_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/Characters/Yasuo/Yasuo_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin4_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin56_Skins_Skin58_Skins_Skin59_Skins_Skin6_Skins_Skin60_Skins_Skin61_Skins_Skin62_Skins_Skin63_Skins_Skin64_Skins_Skin65_Skins_Skin66_Skins_Skin67_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/Characters/Yasuo/Yasuo_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin18_Skins_Skin2_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin4_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin54_Skins_Skin55_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/Characters/Yasuo/Yasuo_Multi_Skins_Skin0_Skins_Skin18_Skins_Skin2_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin54_Skins_Skin55_Skins_Skin56_Skins_Skin58_Skins_Skin59_Skins_Skin60_Skins_Skin61_Skins_Skin62_Skins_Skin63_Skins_Skin64_Skins_Skin65_Skins_Skin66_Skins_Skin67_Skins_Skin9.bin",
+        "DATA/Characters/Yasuo/Yasuo_Multi_Skins_Skin0_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin35_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53.bin",
+        "DATA/Characters/Yasuo/Yasuo_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin18_Skins_Skin2_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin4_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin54_Skins_Skin55_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/Characters/Yasuo/Yasuo_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin2_Skins_Skin34_Skins_Skin4_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin54_Skins_Skin55_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/Characters/Yasuo/Yasuo_Multi_Skins_Skin0_Skins_Skin2_Skins_Skin34_Skins_Skin54_Skins_Skin55_Skins_Skin9.bin"
+      ]
+    },
+    {
+      "source_path": "data/characters/yasuo/yasuo_multi_skins_skin0_skins_skin10_skins_skin11_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin17_skins_skin18_skins_skin19_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin24_skins_skin25_skins_skin26_skins_skin27_skins_skin28_skins_skin29_skins_skin30_skins_skin31_skins_skin32_skins_skin33_skins_skin34_skins_skin35_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin54_skins_skin55_skins_skin56_skins_skin58_skins_skin59_skins_skin60_skins_skin61_skins_skin62_skins_skin63_skins_skin64_skins_skin65_skins_skin66_skins_skin67_skins_skin9.bin",
+      "local_file": "shared-02.bin",
+      "bytes": 12399,
+      "sha256": "3032c4641c50a8a3703c7a8579b84844d708875a246b5749f0d91658cdc24d31",
+      "entries": 6,
+      "types": {
+        "VfxSystemDefinitionData": 6
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/yasuo_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin17_skins_skin18_skins_skin19_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin24_skins_skin25_skins_skin26_skins_skin27_skins_skin28_skins_skin29_skins_skin30_skins_skin31_skins_skin32_skins_skin33_skins_skin34_skins_skin35_skins_skin4_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin5_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin54_skins_skin55_skins_skin56_skins_skin58_skins_skin59_skins_skin6_skins_skin60_skins_skin61_skins_skin62_skins_skin63_skins_skin64_skins_skin65_skins_skin66_skins_skin67_skins_skin7_skins_skin8_skins_skin9.bin",
+      "local_file": "shared-03.bin",
+      "bytes": 4037,
+      "sha256": "38aedd1513c8894fcb668f251f610c0c8060de8ac06e3383e249cc3aeb97a831",
+      "entries": 10,
+      "types": {
+        "VfxSystemDefinitionData": 10
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/animations/skin0.bin",
+      "local_file": "animation-skin0.bin",
+      "bytes": 16569,
+      "sha256": "e9d523c9c107a62ce9efd47418681c557f276e3317a5ec8a65da588e013392a3",
+      "entries": 1,
+      "types": {
+        "AnimationGraphData": 1
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/yasuo_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin17_skins_skin18_skins_skin19_skins_skin2_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin24_skins_skin25_skins_skin26_skins_skin27_skins_skin28_skins_skin29_skins_skin30_skins_skin31_skins_skin32_skins_skin33_skins_skin34_skins_skin35_skins_skin4_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin5_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin54_skins_skin55_skins_skin56_skins_skin58_skins_skin59_skins_skin6_skins_skin60_skins_skin61_skins_skin62_skins_skin63_skins_skin64_skins_skin65_skins_skin66_skins_skin67_skins_skin7_skins_skin8_skins_skin9.bin",
+      "local_file": "shared-05.bin",
+      "bytes": 738,
+      "sha256": "8183a1dade2ea2e9eaefb3db38203f4a0c5f99f9088e11d7c701748a7d860d5c",
+      "entries": 4,
+      "types": {
+        "VfxSystemDefinitionData": 4
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/yasuo_multi_skins_skin0_skins_skin1_skins_skin4_skins_skin5_skins_skin6_skins_skin7_skins_skin8.bin",
+      "local_file": "yasuo_multi_skins_skin0_skins_skin1_skins_skin4_skins_skin5_skins_skin6_skins_skin7_skins_skin8.bin",
+      "bytes": 1607,
+      "sha256": "c29cd7b6f25aca3d8724416e41ccf754c31af9de9f94654254d784b98f93820f",
+      "entries": 1,
+      "types": {
+        "VfxSystemDefinitionData": 1
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/yasuo_multi_skins_skin0_skins_skin1_skins_skin17_skins_skin18_skins_skin19_skins_skin2_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin24_skins_skin25_skins_skin26_skins_skin27_skins_skin28_skins_skin29_skins_skin3_skins_skin30_skins_skin31_skins_skin32_skins_skin33_skins_skin34_skins_skin35_skins_skin4_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin5_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin54_skins_skin55_skins_skin6_skins_skin7_skins_skin8_skins_skin9.bin",
+      "local_file": "shared-07.bin",
+      "bytes": 23706,
+      "sha256": "bc120caa9177b3bf4de64efe9d174ec6574ba45636865cf45684d926404834f9",
+      "entries": 2,
+      "types": {
+        "VfxSystemDefinitionData": 2
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/yasuo_multi_skins_root_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin17_skins_skin18_skins_skin19_skins_skin2_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin24_skins_skin25_skins_skin26_skins_skin27_skins_skin28_skins_skin29_skins_skin3_skins_skin30_skins_skin31_skins_skin32_skins_skin33_skins_skin35_skins_skin36_skins_skin37_skins_skin38_skins_skin39_skins_skin4_skins_skin40_skins_skin41_skins_skin42_skins_skin43_skins_skin44_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin5_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin56_skins_skin57_skins_skin58_skins_skin59_skins_skin6_skins_skin60_skins_skin61_skins_skin62_skins_skin63_skins_skin64_skins_skin65_skins_skin66_skins_skin67_skins_skin68_skins_skin69_skins_skin7_skins_skin70_skins_skin71_skins_skin72_skins_skin73_skins_skin74_skins_skin75_skins_skin76_skins_skin77_skins_skin78_skins_skin79_skins_skin8_skins_skin80_skins_skin81_skins_skin82_skins_skin83_skins_skin84_skins_skin85_skins_skin86_skins_skin88_skins_skin89_skins_skin90_skins_skin91_skins_skin92_skins_skin93_skins_skin94_skins_skin95_skins_skin96.bin",
+      "local_file": "shared-08.bin",
+      "bytes": 5211,
+      "sha256": "34155b8f39741da9f4b4c608201dbc002f02093885368084bcfd5f403e05f157",
+      "entries": 1,
+      "types": {
+        "ContextualActionData": 1
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/yasuo_multi_skins_skin0_skins_skin2_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin54_skins_skin55.bin",
+      "local_file": "shared-09.bin",
+      "bytes": 1271,
+      "sha256": "ab005b7402517f2295720132b1349d04537a440a614e9e3e14b79809f2fc8fc4",
+      "entries": 1,
+      "types": {
+        "VfxSystemDefinitionData": 1
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/yasuo_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin17_skins_skin18_skins_skin19_skins_skin2_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin24_skins_skin25_skins_skin26_skins_skin27_skins_skin28_skins_skin29_skins_skin3_skins_skin30_skins_skin31_skins_skin32_skins_skin33_skins_skin34_skins_skin35_skins_skin4_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin5_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin54_skins_skin55_skins_skin56_skins_skin58_skins_skin59_skins_skin6_skins_skin60_skins_skin61_skins_skin62_skins_skin63_skins_skin64_skins_skin65_skins_skin66_skins_skin67_skins_skin7_skins_skin8_skins_skin88_skins_skin89_skins_skin9_skins_skin90_skins_skin91_skins_skin92_skins_skin93_skins_skin94_skins_skin95_skins_skin96.bin",
+      "local_file": "shared-10.bin",
+      "bytes": 6510,
+      "sha256": "264852c16b4980d4598e52f43e6f04a4e043713b0f674330983110a59de54598",
+      "entries": 1,
+      "types": {
+        "VfxSystemDefinitionData": 1
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/yasuo_multi_skins_skin0_skins_skin10_skins_skin11_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin17_skins_skin18_skins_skin19_skins_skin2_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin24_skins_skin25_skins_skin26_skins_skin27_skins_skin28_skins_skin29_skins_skin3_skins_skin30_skins_skin31_skins_skin32_skins_skin33_skins_skin34_skins_skin35_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin54_skins_skin55_skins_skin56_skins_skin58_skins_skin59_skins_skin60_skins_skin61_skins_skin62_skins_skin63_skins_skin64_skins_skin65_skins_skin66_skins_skin67_skins_skin88_skins_skin89_skins_skin9_skins_skin90_skins_skin91_skins_skin92_skins_skin93_skins_skin94_skins_skin95_skins_skin96.bin",
+      "local_file": "shared-11.bin",
+      "bytes": 468,
+      "sha256": "747266b03f944e62dc7aa393d9e1ce22f24740ecbfc88ff357f8aa720ba4e66a",
+      "entries": 1,
+      "types": {
+        "VfxSystemDefinitionData": 1
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/yasuo_multi_skins_skin0_skins_skin1_skins_skin17_skins_skin18_skins_skin19_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin24_skins_skin25_skins_skin26_skins_skin27_skins_skin28_skins_skin29_skins_skin30_skins_skin31_skins_skin32_skins_skin33_skins_skin34_skins_skin35_skins_skin4_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin5_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin54_skins_skin55_skins_skin56_skins_skin58_skins_skin59_skins_skin6_skins_skin60_skins_skin61_skins_skin62_skins_skin63_skins_skin64_skins_skin65_skins_skin66_skins_skin67_skins_skin7_skins_skin8_skins_skin9.bin",
+      "local_file": "shared-12.bin",
+      "bytes": 134,
+      "sha256": "194b846e90fb94db1792d1f0b399d47c2e5e93d020fc145628a5868d4ef4a7d2",
+      "entries": 1,
+      "types": {
+        "VfxSystemDefinitionData": 1
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/yasuo_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin17_skins_skin18_skins_skin19_skins_skin2_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin24_skins_skin25_skins_skin26_skins_skin27_skins_skin28_skins_skin29_skins_skin3_skins_skin30_skins_skin31_skins_skin32_skins_skin33_skins_skin34_skins_skin35_skins_skin4_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin5_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin54_skins_skin55_skins_skin6_skins_skin7_skins_skin8_skins_skin9.bin",
+      "local_file": "shared-13.bin",
+      "bytes": 9949,
+      "sha256": "20bce81d3b4a20e28d67156012d4411cff2b1dca7569871a74d6497218b7718a",
+      "entries": 3,
+      "types": {
+        "VfxSystemDefinitionData": 3
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/yasuo_multi_skins_skin0_skins_skin1_skins_skin17_skins_skin18_skins_skin19_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin24_skins_skin25_skins_skin26_skins_skin27_skins_skin28_skins_skin29_skins_skin30_skins_skin31_skins_skin32_skins_skin33_skins_skin34_skins_skin35_skins_skin4_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin5_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin56_skins_skin58_skins_skin59_skins_skin6_skins_skin60_skins_skin61_skins_skin62_skins_skin63_skins_skin64_skins_skin65_skins_skin66_skins_skin67_skins_skin7_skins_skin8_skins_skin9.bin",
+      "local_file": "shared-14.bin",
+      "bytes": 497,
+      "sha256": "1b9669124a1be402d4c339a44ae7af1b0b1dcf22e7e297315ba082d62bea2db4",
+      "entries": 1,
+      "types": {
+        "VfxSystemDefinitionData": 1
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/yasuo_multi_skins_skin0_skins_skin1_skins_skin10_skins_skin11_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin18_skins_skin2_skins_skin27_skins_skin28_skins_skin29_skins_skin30_skins_skin31_skins_skin32_skins_skin33_skins_skin34_skins_skin35_skins_skin4_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin5_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin54_skins_skin55_skins_skin6_skins_skin7_skins_skin8_skins_skin9.bin",
+      "local_file": "shared-15.bin",
+      "bytes": 3048,
+      "sha256": "b603c5884f79b4c69b7aec055ee38b34e6110efaba397b7b597156b2a95c9ce0",
+      "entries": 1,
+      "types": {
+        "VfxSystemDefinitionData": 1
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/yasuo_multi_skins_skin0_skins_skin18_skins_skin2_skins_skin27_skins_skin28_skins_skin29_skins_skin30_skins_skin31_skins_skin32_skins_skin33_skins_skin34_skins_skin35_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin54_skins_skin55_skins_skin56_skins_skin58_skins_skin59_skins_skin60_skins_skin61_skins_skin62_skins_skin63_skins_skin64_skins_skin65_skins_skin66_skins_skin67_skins_skin9.bin",
+      "local_file": "shared-16.bin",
+      "bytes": 689,
+      "sha256": "e746053a42f938ec8cd52ac310f4b4b9b010051a1f226e38f9d65c74e57242a8",
+      "entries": 1,
+      "types": {
+        "VfxSystemDefinitionData": 1
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/yasuo_multi_skins_skin0_skins_skin10_skins_skin11_skins_skin12_skins_skin13_skins_skin14_skins_skin15_skins_skin16_skins_skin17_skins_skin18_skins_skin19_skins_skin20_skins_skin21_skins_skin22_skins_skin23_skins_skin24_skins_skin25_skins_skin26_skins_skin27_skins_skin28_skins_skin29_skins_skin30_skins_skin31_skins_skin32_skins_skin33_skins_skin35_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin50_skins_skin51_skins_skin52_skins_skin53.bin",
+      "local_file": "shared-17.bin",
+      "bytes": 1083,
+      "sha256": "b06446ef735cf689d05dc8cc7769c01bb69c5d3356d7903843f011c062421125",
+      "entries": 1,
+      "types": {
+        "VfxSystemDefinitionData": 1
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/yasuo_multi_skins_skin0_skins_skin1_skins_skin18_skins_skin2_skins_skin27_skins_skin28_skins_skin29_skins_skin3_skins_skin30_skins_skin31_skins_skin32_skins_skin33_skins_skin34_skins_skin35_skins_skin4_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin5_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin54_skins_skin55_skins_skin6_skins_skin7_skins_skin8_skins_skin9.bin",
+      "local_file": "shared-18.bin",
+      "bytes": 1933,
+      "sha256": "11c64507e4b34a869fcfb59d8746a95a13b6201622a7ef54c0430e4ca8566908",
+      "entries": 1,
+      "types": {
+        "VfxSystemDefinitionData": 1
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/yasuo_multi_skins_skin0_skins_skin1_skins_skin2_skins_skin34_skins_skin4_skins_skin45_skins_skin46_skins_skin47_skins_skin48_skins_skin49_skins_skin5_skins_skin50_skins_skin51_skins_skin52_skins_skin53_skins_skin54_skins_skin55_skins_skin6_skins_skin7_skins_skin8_skins_skin9.bin",
+      "local_file": "shared-19.bin",
+      "bytes": 2388,
+      "sha256": "a3bd53f8c1535a4496db63ce49494c016435fb7951a30ae3d2a0b54c4fec1e0a",
+      "entries": 2,
+      "types": {
+        "VfxSystemDefinitionData": 2
+      },
+      "linked_files": []
+    },
+    {
+      "source_path": "data/characters/yasuo/yasuo_multi_skins_skin0_skins_skin2_skins_skin34_skins_skin54_skins_skin55_skins_skin9.bin",
+      "local_file": "yasuo_multi_skins_skin0_skins_skin2_skins_skin34_skins_skin54_skins_skin55_skins_skin9.bin",
+      "bytes": 4784,
+      "sha256": "71d0ee5aa9d866c594b29a33a02c62bdcb98646f55b1d648cc1ca84904dc5c66",
+      "entries": 1,
+      "types": {
+        "VfxSystemDefinitionData": 1
+      },
+      "linked_files": []
+    }
+  ]
+}

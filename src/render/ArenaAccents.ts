@@ -9,7 +9,7 @@ import { impactMotion } from './ImpactMotion';
 export class ArenaAccents {
   private floor:Phaser.GameObjects.Graphics;
   private sparks:Phaser.GameObjects.Graphics;
-  private bursts:{x:number;y:number;time:number;color:number;heavy:boolean;lastHit:boolean}[]=[];
+  private bursts:{x:number;y:number;time:number;color:number;heavy:boolean;lastHit:boolean;quiet:boolean}[]=[];
   private clock=-1;
   enabled=true;
   constructor(scene:Phaser.Scene){
@@ -22,7 +22,7 @@ export class ArenaAccents {
     if(!this.enabled||!(event.type==='hit'||event.type==='last-hit'))return;
     if(this.bursts.length>=48)this.bursts.shift();
     this.bursts.push({x:event.x,y:event.y,time,color:event.type==='last-hit'?0xffdc8a:event.team==='blue'?0xc5f4ff:0xffba98,
-      heavy:(event.amount??0)>=80,lastHit:event.type==='last-hit'});
+      heavy:(event.amount??0)>=80,lastHit:event.type==='last-hit',quiet:event.sourceKind!=='hero'&&event.targetKind!=='hero'});
   }
   update(match:Match){
     const time=match.time;
@@ -50,12 +50,13 @@ export class ArenaAccents {
         .lineBetween(x-4,y,x+4,y).lineBetween(x,y-6,x,y+6);
     }
     for(const b of this.bursts){
-      const age=time-b.time,count=b.heavy?10:6;
+      const age=time-b.time,count=b.quiet?2:b.heavy?10:6;
+      if(b.quiet&&age>.18)continue;
       for(let i=0;i<count;i++){
         const p=impactMotion(age,i,b.heavy);
-        this.sparks.fillStyle(b.color,p.alpha*.85).fillRect(Math.round(b.x+p.x),Math.round(b.y-18+p.y),p.size,p.size);
+        this.sparks.fillStyle(b.color,p.alpha*(b.quiet?.35:.85)).fillRect(Math.round(b.x+p.x*(b.quiet?.4:1)),Math.round(b.y-14+p.y*(b.quiet?.4:1)),p.size,p.size);
       }
-      if(age<.08&&!b.lastHit)this.sparks.lineStyle(b.heavy?2:1,0xf1fcff,(1-age/.08)*.8)
+      if(age<.08&&!b.lastHit&&!b.quiet)this.sparks.lineStyle(b.heavy?2:1,0xf1fcff,(1-age/.08)*.8)
         .lineBetween(b.x-5,b.y-14,b.x+5,b.y-24);
       // Ground chips stay below units and cannot obscure their silhouettes.
       if(b.heavy)for(let i=0;i<4;i++){

@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_6718755bffc34dd29ceaa1d19cf39284",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\audio\\ice-bridge-v1\\fire\\A_small_outdoor_iron_brazier_burning_dry_wood_intimate_gentle_crackles_and_occasional_tiny_pops_no_wind_no_voi_abfac177\\Brazier_Fire_Crackle.mp3",
+      "mime_type": "audio/mpeg"
+    }
+  ]
+}

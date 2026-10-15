@@ -1,0 +1,12 @@
+{
+  "job": "job_d4c0808d8946466fbf93c1ee26a24e4f",
+  "officialReference": "https://ddragon.leagueoflegends.com/cdn/16.20.1/img/passive/Yasuo_Passive.png",
+  "file": "runtime/passive.png",
+  "size": [
+    1024,
+    1024
+  ],
+  "mode": "RGB",
+  "resampled": false,
+  "sha256": "1823e9a5665b3bcdf94e05ee78f00de0fc8a03785d51d15aac3afb40d40e38fe"
+}

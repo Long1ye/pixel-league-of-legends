@@ -1,0 +1,10 @@
+<!doctype html><html lang="zh-CN">
+<script type="module" crossorigin src="../../../../../assets/yasuoQMeowaLayered-CRWSfVMd.js"></script>
+<link rel="modulepreload" crossorigin href="../../../../../assets/modulepreload-polyfill-P2Xu9kJm.js">
+<link rel="modulepreload" crossorigin href="../../../../../assets/component_003-C6Yu-GQz.js">
+<link rel="modulepreload" crossorigin href="../../../../../assets/sword-D23qNlFr.js">
+<link rel="modulepreload" crossorigin href="../../../../../assets/sword-BtupMoSk.js">
+<link rel="modulepreload" crossorigin href="../../../../../assets/motion-Cgg06gbv.js">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Q · Meowa 八向分层动画</title><style>body{color:#e0eff7;background:#10252d;margin:24px;font:15px system-ui}p{color:#abc7d2;max-width:760px;line-height:1.7}canvas{image-rendering:pixelated;background:repeating-conic-gradient(#20343d 0% 25%,#263c44 0% 50%) 0/20px 20px}#stage{width:560px;height:440px}button,select{color:#fff;cursor:pointer;background:#274b5b;border:1px solid #648f9d;margin:4px;padding:9px}button[aria-pressed=true]{background:#467e91;border-color:#b7f1ff}#directions{grid-template-columns:80px 80px 80px;width:260px;display:grid}#overview{grid-template-columns:repeat(4,240px);gap:10px;display:grid}figure{margin:0}figcaption{text-align:center;color:#b9d8e4}#overview canvas{width:240px;height:230px}input[type=range]{width:350px}@media (width<=940px){#overview{grid-template-columns:repeat(2,240px)}}a{color:#b6e5ff}</style>
+<h1>Q · Meowa 八向分层动画</h1><p>新身体层 + 原有手臂微动 + 三倍刀身流光。每个方向独立配置肩部连接与遮挡。生成图中的杂线和朝向偏差仍待修整，本页为动画试版，未替换主游戏。</p>
+<div id="directions"></div><canvas id="stage" width="280" height="220"></canvas><div><button id="attack">单次攻击</button><button id="loop">循环开 / 关</button><select id="speed" aria-label="播放速度"><option value="1">原速</option><option value="0.5">半速</option><option value="0.25">四分之一速度</option></select><label><input id="joints" type="checkbox">显示关节</label></div><label>逐帧 <input id="scrub" type="range" min="0" max="480" value="0"></label><p id="status">加载素材…</p><h2>八向同步对照</h2><div id="overview"></div></html>

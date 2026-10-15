@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_b304fdde1444431fbf826335076de92d",
+  "outputs": [
+    {
+      "type": "media",
+      "path": ".cache\\vfxgen\\job_b304fdde1444431fbf826335076de92d\\result_images_0_url.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

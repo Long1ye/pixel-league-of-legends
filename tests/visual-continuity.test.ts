@@ -20,7 +20,7 @@ describe('presentation continuity without changing simulation or depth',()=>{
     const turned=anim.sample(hero,.45);
     expect(turned.state).toBe('walk');
     if(!('durations_ms' in turned.clip))throw new Error('Expected locomotion timing');
-    expect(turned.frame).toBe(spriteFrameAt(350,turned.clip.durations_ms,true));
+    expect(turned.frame).toBe(spriteFrameAt(350*.8/1.04,turned.clip.durations_ms,true));
     expect(anim.sample(hero,.45).frame).toBe(turned.frame);
     expect(anim.sample(hero,.5).state).toBe('idle');
     anim.reset();expect(anim.sample(hero,0).frame).toBe(0);

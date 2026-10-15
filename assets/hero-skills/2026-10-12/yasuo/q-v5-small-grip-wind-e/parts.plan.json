@@ -1,7 +1,7 @@
 {
   "command": "image-edit-run",
   "recovery_command": "pixel-gen-poll",
-  "output_dir": "meowa-output/yasuo-q-v5-small-grip-wind-e-parts",
+  "output_dir": "assets/generation-archive/legacy-meowa/yasuo-q-v5-small-grip-wind-e-parts",
   "args": [
     "--reference-image", "assets/hero-skills/2026-10-12/yasuo/q-v3-layered-e/media/parts-sheet.png",
     "--prompt", "保持左侧亚索身体不变。右上两段手臂改为与身体匹配的小手臂，长度和粗细约原来的七成，护腕末端是紧握刀柄的小拳头，不是张开的手掌，保持原来的护腕和衣服设计。右下武士刀保持金属轮廓、刀柄朝左刀尖朝右，刀身被淡蓝色半透明的风缠绕，几条细气流交替绕到刀身前后，表现包裹感但不遮住刀刃，不要挥砍刀光。保持部件分开放置、透明背景和清晰原生像素。",

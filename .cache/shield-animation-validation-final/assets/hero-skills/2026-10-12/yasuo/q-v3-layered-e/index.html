@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>亚索 Q · 朝右分层戳刺样稿</title>
+<style>:root{--lightningcss-light: ;--lightningcss-dark:initial;color-scheme:dark;color:#e6f2ef;background:#0d1b24;font-family:Microsoft YaHei,system-ui,sans-serif}*{box-sizing:border-box}body{margin:0;padding:20px}main{max-width:1100px;margin:auto}h1{font-size:25px}h2{margin-top:0;font-size:17px}p{color:#b8d0ce;line-height:1.7}a{color:#9be5d8}.panels{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;display:grid}section{background:#142b34;border:1px solid #365251;border-radius:10px;padding:16px}.viewport{overflow:auto}canvas,img{image-rendering:pixelated;display:block}.checker{background-color:#172e38;background-image:conic-gradient(#294c56 25%,transparent 0 50%,#294c56 0 75%,transparent 0);background-size:20px 20px}.toolbar{flex-wrap:wrap;align-items:center;gap:10px;margin:18px 0;display:flex}button,select,input{font:inherit}button,select{color:#e6f2ef;cursor:pointer;background:#1b3a45;border:1px solid #527575;border-radius:6px;padding:8px 12px}button:disabled{opacity:.5}output{color:#a8e9d8}.note{color:#dccba9;border-left:2px solid #c6ac7d;padding-left:12px}#layers{flex-wrap:wrap;align-items:flex-start;gap:16px;display:flex}figure{margin:0}figcaption{color:#b8d0ce;margin-top:8px}details{margin:20px 0}summary{cursor:pointer}blockquote{border-left:2px solid #547775;margin-left:0;padding-left:14px;line-height:1.8}#scrub{width:180px}@media (width<=800px){.panels{grid-template-columns:1fr}body{padding:16px}}</style>  <script type="module" crossorigin src="../../../../../assets/yasuoQLayeredStudy-CuRC2Qzk.js"></script>
+  <link rel="modulepreload" crossorigin href="../../../../../assets/modulepreload-polyfill-P2Xu9kJm.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/sprite_00-DiyhiSx7.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/source-atlas-ClZK_9Ey.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/rig-D-rc1mL7.js">
+</head><body><main>
+<p>YASUO / Q / EAST / LAYERED</p>
+<h1>亚索 Q · 分层戳刺</h1>
+<p>只做朝右。素材由 game-assets 生成，手臂和刀由代码驱动。尚未接入游戏，也未验证八向。</p>
+<div class="toolbar">
+<button id="once" disabled>戳刺一次</button><button id="repeat" disabled>循环检查</button><button id="pause" disabled>暂停</button>
+<label>像素倍率 <select id="zoom" aria-label="像素倍率"><option value="1" selected>1× 原生</option><option value="2">2× 整数放大</option></select></label>
+<label>速度 <select id="speed" aria-label="动画速度"><option value="1">1× · 400ms</option><option value="0.5">0.5× 慢速检查</option></select></label>
+<label><input id="joints" type="checkbox">显示连接点</label>
+</div>
+<div class="panels">
+<section><h2>分层戳刺 · 身体不旋转</h2><div class="viewport"><canvas id="rig" class="checker" width="240" height="160" aria-label="亚索朝右分层戳刺动画"></canvas></div><p>蓄力 → 刺出 → 停留 → 收回</p></section>
+<section><h2>地图上的游戏尺寸检查</h2><div class="viewport"><canvas id="scene" width="240" height="160" aria-label="当前游戏比例下的分层戳刺预览"></canvas></div><p>当前游戏比例：地图 2×、英雄贴图 0.25×。仅背景合成，不含命中判定。</p></section>
+</div>
+<div class="toolbar"><label for="scrub">动作进度</label><input id="scrub" aria-label="动作进度" type="range" min="0" max="400" step="1" value="0"><output id="status" aria-live="polite">正在加载…</output></div>
+<p id="review" class="note">这是分层连接试验：身体暂用固定蓄力姿态，尚未加入腰肩发力、衣物变化和风效。身体细节有重绘差异；不能据此宣称已实现自然的全方向 Q。</p>
+<details open><summary>查看四个独立部件</summary><div id="layers"></div></details>
+<details><summary>查看你的原 Q · 相同 400ms 节奏对照</summary><div class="viewport"><canvas id="reference" class="checker" width="256" height="128" aria-label="用户原Q动画的原帧对照"></canvas></div><p>仅在预览中将原来的16帧按比例播放为400ms；原始文件、帧顺序和像素不改动。</p></details>
+<details><summary>查看素材生成 prompt</summary><blockquote id="prompt"></blockquote></details>
+<p><a id="sheet">查看原始分层素材图</a> · <a href="/">返回游戏</a></p>
+</main></body></html>

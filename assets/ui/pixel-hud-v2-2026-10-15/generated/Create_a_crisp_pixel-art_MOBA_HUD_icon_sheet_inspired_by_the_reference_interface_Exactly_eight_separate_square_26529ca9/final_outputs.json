@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_8985ee41f61e478fafb6aa4ccbfbc30a",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\ui\\pixel-hud-v2-2026-10-15\\generated\\Create_a_crisp_pixel-art_MOBA_HUD_icon_sheet_inspired_by_the_reference_interface_Exactly_eight_separate_square_26529ca9\\ui_output.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

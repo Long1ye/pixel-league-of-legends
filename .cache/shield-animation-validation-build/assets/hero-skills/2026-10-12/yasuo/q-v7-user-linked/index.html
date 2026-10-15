@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>亚索 Q · 你的八向图与腰肩联动</title>
+<style>:root{--lightningcss-light: ;--lightningcss-dark:initial;color-scheme:dark;color:#e6f2ef;background:#0d1b24;font-family:Microsoft YaHei,system-ui,sans-serif}*{box-sizing:border-box}body{margin:0;padding:20px}main{max-width:1200px;margin:auto}h1{font-size:25px}h2{margin-top:0;font-size:17px}h3{margin-top:0;font-size:15px}p{color:#b8d0ce;line-height:1.7}a{color:#9be5d8}section{background:#142b34;border:1px solid #365251;border-radius:10px;padding:14px}.viewport{overflow:auto}canvas{image-rendering:pixelated;display:block}.checker{background-color:#172e38;background-image:conic-gradient(#294c56 25%,transparent 0 50%,#294c56 0 75%,transparent 0);background-size:20px 20px}.toolbar{flex-wrap:wrap;align-items:center;gap:10px;margin:16px 0;display:flex}button,select,input{font:inherit}button,select{color:#e6f2ef;cursor:pointer;background:#1b3a45;border:1px solid #527575;border-radius:6px;padding:7px 10px}button:disabled{opacity:.5}output{color:#a8e9d8}.note{color:#dccba9;border-left:2px solid #c6ac7d;padding-left:12px}#focus,#grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;display:grid}#grid{margin-top:16px}#focus.zoomed,#grid.zoomed{grid-template-columns:1fr}details{margin:22px 0}summary{cursor:pointer;color:#b8e0d8}.scene{margin-top:16px}#scrub{width:160px}#angle{width:72px}.new{border-color:#6ca898}.fixed h2{color:#e0b699}@media (width<=700px){#focus,#grid{grid-template-columns:1fr}body{padding:12px}}@media (width<=360px){body,section{padding:10px}}#clips{flex-wrap:wrap;gap:14px;display:flex}figure{margin:0}img{image-rendering:pixelated;display:block}figcaption{color:#b8d0ce;margin:8px 0}</style>  <script type="module" crossorigin src="../../../../../assets/yasuoQUserLinkedStudy-Bmi0Cuvm.js"></script>
+  <link rel="modulepreload" crossorigin href="../../../../../assets/modulepreload-polyfill-P2Xu9kJm.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/sprite_00-DiyhiSx7.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/forearm-hand-DRQjD5dB.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/wind-sword-DhlJf1lL.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/rig-D-rc1mL7.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/rig-CnoA9LMJ.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/rig-DjsTylPe.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/render-gVU89chm.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/user-ne-BQY9TAqw.js">
+</head><body><main>
+<p>YASUO / Q / USER EIGHT VIEWS / WAIST–SHOULDER LINK / V7</p><h1>亚索 Q · 你的八向图＋腰肩联动</h1>
+<p>八向身体全部采用你提供的版本。两侧使用相同的身体和手臂素材，比较“只动手”与“躯干带动肩膀、手臂出刀”。</p>
+<p><a href="../q-v8-direction-picker/index.html">打开可选方向展示 · 单独播放一个方向</a></p>
+<div class="toolbar"><label>角色朝向 <select id="direction" aria-label="角色朝向"></select></label><button id="once" disabled>施法一次</button><button id="repeat" disabled>循环检查</button><button id="pause" disabled>暂停</button>
+<label>像素倍率 <select id="zoom" aria-label="像素倍率"><option value="1">1× 检查</option><option value="2">2× 整数放大</option></select></label>
+<label>速度 <select id="speed" aria-label="动画速度"><option value="1">1× · 480ms</option><option value="0.5">0.5× 慢速检查</option></select></label><label><input id="joints" type="checkbox">显示腰肩肘腕</label></div>
+<div class="toolbar"><label for="scrub">动作进度</label><input id="scrub" aria-label="动作进度" type="range" min="0" max="480" step="1" value="0"><label>瞄准角度 <input id="angle" aria-label="瞄准角度" type="number" min="0" max="359" value="0">°</label><output id="status" aria-live="polite">正在加载…</output></div>
+<div id="focus">
+<section class="fixed"><h2>对照 · 身体固定</h2><div class="viewport"><canvas id="fixed" class="checker" width="288" height="256" aria-label="相同用户角色但身体固定的对照"></canvas></div><p>新素材＋同一手臂轨迹，关闭躯干参与。</p></section>
+<section class="new"><h2>新版 · 腰肩带动出刀</h2><div class="viewport"><canvas id="linked" class="checker" width="288" height="256" aria-label="使用用户八向图的腰肩联动戳刺"></canvas></div><p>微微蓄力 → 腰肩先动 → 手臂刺出 → 收刀复位。下盘保持固定。</p></section>
+</div>
+<section class="scene"><h2>地图尺寸与瞄准检查</h2><div class="viewport"><canvas id="map" width="288" height="192" aria-label="地图上的用户角色 Q 联动试验"></canvas></div><p>点击地图选择精确出刀方向；身体选择最近的八向朝向。</p></section>
+<details><summary>展开八方向联动总览（含正上与右下）</summary><div id="grid"></div></details>
+<div class="toolbar"><button id="export" disabled>生成八向透明帧图</button><a id="atlas" download="yasuo-q-user-linked-atlas.png" hidden>下载八向帧图</a><output id="export-status" aria-live="polite"></output></div>
+<details><summary>查看已导出的八向 WebP 循环样稿</summary><div id="clips"></div></details>
+<p id="sources"></p><p class="note">原始 1024px 文件完整保留；128px 纹理只用于游戏素材准备。腰腹与肩点共用一个变换，手腕与刀柄共用一个连接点；去掉旧上臂的蓝色袖片、缩短过长的前臂。仍是程序分层样稿，并非重新绘制的全身动画；此轮未调用付费生成，未替换主游戏的待机、走路或 Q 判定。</p>
+<p><a href="../q-v6-eight-directions/index.html">V6 旧样稿对照</a> · <a href="/">返回游戏</a></p>
+</main></body></html>

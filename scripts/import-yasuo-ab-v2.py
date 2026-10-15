@@ -8,7 +8,7 @@ dest=root/'assets/heroes/yasuo/attacks-v2-2026-10-13'
 dest.mkdir(parents=True,exist_ok=True)
 clips=[]
 for name in ['A','B']:
-    source=Path('D:/Long1ye/资源')/f'yasuo-{name}-v2.webp'
+    source=(root/'assets/source-materials/heroes/yasuo')/f'yasuo-{name}-v2.webp'
     shutil.copyfile(source,dest/f'attack-{name}.webp')
     frames=[]; durations=[]
     with Image.open(source) as im:

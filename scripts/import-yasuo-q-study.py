@@ -22,7 +22,7 @@ def digest(path):
 
 
 def declared_outputs(name):
-    directory = ROOT / f"meowa-output/yasuo-q-v1-se-{name}"
+    directory = ROOT / f"assets/generation-archive/legacy-meowa/yasuo-q-v1-se-{name}"
     manifests = list(directory.rglob("final_outputs.json"))
     assert len(manifests) == 1, f"Expected one completed {name} job; never resubmit automatically"
     manifest = read_json(manifests[0])

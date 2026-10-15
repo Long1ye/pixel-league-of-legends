@@ -1,7 +1,7 @@
 {
   "command": "image-edit-run",
   "recovery_command": "pixel-gen-poll",
-  "output_dir": "meowa-output/yasuo-q-v6-body-n",
+  "output_dir": "assets/generation-archive/legacy-meowa/yasuo-q-v6-body-n",
   "args": [
     "--reference-image",
     "assets/hero-skills/2026-10-12/yasuo/q-v6-eight-directions/references/idle-n-prepared.png",

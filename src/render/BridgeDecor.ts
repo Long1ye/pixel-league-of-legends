@@ -1,50 +1,41 @@
 import Phaser from 'phaser';
-import brushUrl from '../../assets/map-modules/howling-brush-crystal-v2/brush.png?url';
 import inhibitorUrl from '../../assets/map-modules/howling-brush-crystal-v2/inhibitor.png?url';
 import redInhibitorUrl from '../../assets/map-modules/howling-red-team-v1/inhibitor.png?url';
 import {BRIDGE,BRIDGE_SLOTS,bridgePoint} from '../game/Bridge';
 import {actorDepth} from './RenderDepth';
 import {BRIDGE_LIGHTS,brazierShear,bridgeLightPoint,lightKey} from './BridgeLights';
 import {BRIDGE_SITE_ART,NEXUS_FOOT_ORIGIN_Y,SITE_ART_URLS,siteArtKey,siteArtPoint,type SiteArtKind} from './BridgeSiteArt';
+import {bridgeRails,drawBridgeRail,railKey} from './BridgeRails';
+import {halfWidth} from '../../assets/map-studies/howling-abyss-v1/geometry';
+import {structureOcclusionAlpha} from './StructureOcclusion';
 import type {Point} from '../game/types';
+import {LivingBrush} from './LivingBrush';
+import type {BuildingMotion} from './BuildingMotion';
 
-const BRUSH_CROP={x:22,y:112,width:988,height:514};
 const INHIBITOR_CROP={x:94,y:40,width:836,height:920};
 // The solid stone base ends at source y=948, not at the crop's full height.
 const INHIBITOR_FOOT_ORIGIN_Y=(948-INHIBITOR_CROP.y)/INHIBITOR_CROP.height;
 
-/** Decorative sprites only. Brush concealment and inhibitor health are separate gameplay work. */
+/** Environmental interaction art. Gameplay brush concealment and inhibitor health remain separate. */
 export class BridgeDecor {
  static preload(scene:Phaser.Scene){
-  scene.load.image('bridge-frost-brush-source',brushUrl);
+  LivingBrush.preload(scene);
   scene.load.image('bridge-inhibitor-source',inhibitorUrl);
   scene.load.image('bridge-inhibitor-red-source',redInhibitorUrl);
   for(const [kind,url] of Object.entries(SITE_ART_URLS))scene.load.image(siteArtKey(kind as SiteArtKind),url);
  }
 
- private bushes:{image:Phaser.GameObjects.Image;phase:number;scaleX:number;scaleY:number;x:number;y:number}[]=[];
- private crystals:Phaser.GameObjects.Image[]=[];
+ private brush:LivingBrush;
+ private crystals:{image:Phaser.GameObjects.Image;x:number;y:number}[]=[];
  private foregroundFires:{image:Phaser.GameObjects.Image;key:string}[]=[];
- private siteViews:{image:Phaser.GameObjects.Image;kind:SiteArtKind;phase:number}[]=[];
+ private foregroundRails:{image:Phaser.GameObjects.Image;key:string;x:number;y:number}[]=[];
+ private siteViews:{image:Phaser.GameObjects.Image;kind:SiteArtKind;phase:number;x:number;y:number}[]=[];
  private foundationSeams:Phaser.GameObjects.Ellipse[]=[];
 
- constructor(private scene:Phaser.Scene){
-  this.crop('bridge-frost-brush-source','bridge-frost-brush',BRUSH_CROP);
+ constructor(private scene:Phaser.Scene,buildingMotion?:BuildingMotion){
+  this.brush=new LivingBrush(scene);
   this.crop('bridge-inhibitor-source','bridge-inhibitor',INHIBITOR_CROP);
   this.crop('bridge-inhibitor-red-source','bridge-inhibitor-red',INHIBITOR_CROP);
-  for(const [index,brush] of BRIDGE.brush.entries()){
-   const count=brush.length>=90?4:3;
-   for(let i=0;i<count;i++){
-    const offset=(i-(count-1)/2)*brush.length/(count+0.6);
-    const p=bridgePoint(brush.u+offset,brush.v+(i%2?4:-4));
-    const scaleX=(index===2?.19:.18)*(i%2?.96:1);
-    const scaleY=scaleX*1.28;
-    const image=scene.add.image(p.x,p.y,'bridge-frost-brush')
-     .setOrigin(.5,.91).setScale(scaleX,scaleY).setDepth(actorDepth(p.y,-2))
-     .setFlipX((i+index)%2===0).setTint(0xc4d2d8).setAlpha(.9);
-    this.bushes.push({image,phase:index*1.7+i*.83,scaleX,scaleY,x:p.x,y:p.y});
-   }
-  }
   for(const slot of BRIDGE_SLOTS.filter(s=>s.id.endsWith('inhibitor'))){
    const p=bridgePoint(slot.u,slot.v);
    // The crystal's isometric stone footprint sits *behind* its frontmost toe.
@@ -53,7 +44,8 @@ export class BridgeDecor {
    const image=scene.add.image(p.x,p.y,slot.team==='red'?'bridge-inhibitor-red':'bridge-inhibitor')
     .setOrigin(.5,INHIBITOR_FOOT_ORIGIN_Y).setScale(.115).setDepth(actorDepth(p.y));
    this.foundationSeams.push(seam);
-   this.crystals.push(image);
+   this.crystals.push({image,x:p.x,y:p.y});
+   buildingMotion?.register(image,'inhibitor',slot.team==='red');
   }
   for(const [index,site] of BRIDGE_SITE_ART.entries()){
    const p=siteArtPoint(site);
@@ -63,7 +55,18 @@ export class BridgeDecor {
     .setDepth(actorDepth(p.y));
    image.texture.setFilter(Phaser.Textures.FilterMode.NEAREST);
    this.foundationSeams.push(seam);
-   this.siteViews.push({image,kind:site.kind,phase:index*1.31});
+   this.siteViews.push({image,kind:site.kind,phase:index*1.31,x:p.x,y:p.y});
+   buildingMotion?.register(image,'nexus',site.kind==='nexusRed');
+  }
+  // Exact local copies of the baked near rail can cover actors behind it.
+  for(const [index,rail] of bridgeRails().filter(r=>r.side===1&&Math.abs(r.u)<=360).entries()){
+   const p=bridgePoint(rail.u,rail.side*(halfWidth(BRIDGE,rail.u)-2));
+   const key=`bridge-front-rail-${index}`,size=256;
+   const texture=scene.textures.createCanvas(key,size,size)!;
+   drawBridgeRail(texture.getContext(),rail,scene.textures.get(railKey(rail.variant)).getSourceImage() as HTMLImageElement,{x:size/2-p.x,y:size/2-p.y});
+   texture.refresh();texture.setFilter(Phaser.Textures.FilterMode.NEAREST);
+   const image=scene.add.image(p.x,p.y,key).setDepth(actorDepth(p.y,4));
+   this.foregroundRails.push({image,key,x:p.x,y:p.y});
   }
   // The central reeds project over the floor composite. Raise only the
   // fire/bowl, not its masonry rail bay, so the rail still joins cleanly.
@@ -93,12 +96,12 @@ export class BridgeDecor {
    this.foregroundFires.push({image,key});
   }
   scene.events.once(Phaser.Scenes.Events.SHUTDOWN,()=>{
-   for(const b of this.bushes)b.image.destroy();
-   for(const image of this.crystals)image.destroy();
+   for(const {image} of this.crystals)image.destroy();
    for(const {image} of this.siteViews)image.destroy();
    for(const seam of this.foundationSeams)seam.destroy();
+   for(const {image,key} of this.foregroundRails){image.destroy();scene.textures.remove(key);}
    for(const {image,key} of this.foregroundFires){image.destroy();scene.textures.remove(key);}
-   scene.textures.remove('bridge-frost-brush');scene.textures.remove('bridge-inhibitor');scene.textures.remove('bridge-inhibitor-red');
+   scene.textures.remove('bridge-inhibitor');scene.textures.remove('bridge-inhibitor-red');
   });
  }
 
@@ -109,33 +112,22 @@ export class BridgeDecor {
   texture.refresh();texture.setFilter(Phaser.Textures.FilterMode.NEAREST);
  }
 
- update(time:number,visible:boolean,animated:boolean,heroes:readonly Point[]=[]){
+
+ reset(){this.brush.reset();}
+
+ update(time:number,visible:boolean,animated:boolean,actors:readonly Point[]=[],lively=true,disturbances:readonly (Point&{strength:number})[]=[]){
   const bounds=this.scene.cameras.main.worldView;
-  for(const b of this.bushes){
-   // Keep every tuft independent; cull the off-screen update without changing
-   // collision or brush concealment. The generous margin includes its height.
-   const inView=b.x>=bounds.left-220&&b.x<=bounds.right+220&&b.y>=bounds.top-220&&b.y<=bounds.bottom+220;
-   b.image.setVisible(visible&&inView);
-   if(!visible||!inView)continue;
-   let nearby=0,lean=0;
-   if(animated)for(const hero of heroes){
-    const dx=b.x-hero.x,dy=b.y-hero.y;
-    const influence=Math.max(0,1-Math.hypot(dx,dy)/115);
-    if(influence>nearby){nearby=influence;lean=(dx>=0?1:-1)*influence;}
-   }
-   const wind=animated?Math.sin(time*.88+b.phase)*.022+Math.sin(time*.27+b.phase*.61)*.012:0;
-   b.image.setRotation(wind+lean*.035);
-   b.image.setScale(b.scaleX*(animated?1+Math.sin(time*1.08+b.phase)*.015:1),b.scaleY*(1-nearby*.025));
-  }
-  for(const [i,image] of this.crystals.entries()){
+  this.brush.update(time,visible,animated&&lively,actors,disturbances);
+  for(const [i,{image,x,y}] of this.crystals.entries()){
    image.setVisible(visible);
-   if(visible)image.setAlpha(animated?.93+.035*Math.sin(time*1.45+i*1.8):.96);
+   if(visible)image.setAlpha((animated?.93+.035*Math.sin(time*1.45+i*1.8):.96)*structureOcclusionAlpha('inhibitor',{x,y},actors));
   }
-  for(const {image,phase} of this.siteViews){
+  for(const {image,phase,x,y} of this.siteViews){
    image.setVisible(visible);
-   if(visible)image.setAlpha(animated?.95+.025*Math.sin(time*1.2+phase):1);
+   if(visible)image.setAlpha((animated?.95+.025*Math.sin(time*1.2+phase):1)*structureOcclusionAlpha('nexus',{x,y},actors));
   }
   for(const seam of this.foundationSeams)seam.setVisible(visible);
+  for(const rail of this.foregroundRails)rail.image.setVisible(visible&&rail.x>=bounds.left-200&&rail.x<=bounds.right+200&&rail.y>=bounds.top-200&&rail.y<=bounds.bottom+200);
   for(const {image} of this.foregroundFires)image.setVisible(visible);
  }
 }

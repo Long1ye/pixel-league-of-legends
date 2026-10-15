@@ -1,0 +1,29 @@
+{
+  "source_archive": "D:\\Long1ye\\英雄联盟(26)\\Game\\DATA\\FINAL\\Champions\\Yasuo.wad.client",
+  "source_effect": "Yasuo_base_E_timer1",
+  "runtime_duration_source": "Match.eTargetLocks / E.targetCooldown (8 seconds), not the source particle lifetime",
+  "files": [
+    {
+      "source_path": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_ring.tex",
+      "wad_hash": "a01f9664f06292f6",
+      "sha256": "87a0dca0a1c6c97a0d86c249599a415b5307f40a1e5ee9af1cd40e1c79aed67d",
+      "bytes": 21884,
+      "width": 128,
+      "height": 128
+    },
+    {
+      "source_path": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Color_Yasuo_E_dash_timer_tar.tex",
+      "wad_hash": "8902317f16fd9e04",
+      "sha256": "6d561ac2ddd17eecee663aba49168fca70832cffd6fde9ce39e9ca28c2179953",
+      "bytes": 5500,
+      "width": 64,
+      "height": 64
+    },
+    {
+      "source_path": "ASSETS/Characters/Yasuo/Skins/Base/Particles/Yasuo_base_E_timer_mesh.scb",
+      "wad_hash": "c26d9d9d30d506a0",
+      "sha256": "cf7a08462398f9001b1f48ad2b86d8c12f8f9c33c8106a4f91a39ede12de8968",
+      "bytes": 8952
+    }
+  ]
+}

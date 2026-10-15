@@ -1,0 +1,80 @@
+[
+  {
+    "key": "q-cast",
+    "event": "Play_sfx_Yasuo_YasuoQ2_OnCast {r}",
+    "file": "assets\\audio\\yasuo-client-v1\\decoded\\q-cast.wav",
+    "seconds": 2.0565079365079364
+  },
+  {
+    "key": "q-wind",
+    "event": "Play_sfx_Yasuo_YasuoQW_buffactivate",
+    "file": "assets\\audio\\yasuo-client-v1\\decoded\\q-wind.wav",
+    "seconds": 11.996145124716554
+  },
+  {
+    "key": "q-hit",
+    "event": "Play_sfx_Yasuo_YasuoQ_hit {r}",
+    "file": "assets\\audio\\yasuo-client-v1\\decoded\\q-hit.wav",
+    "seconds": 2.8426757369614513
+  },
+  {
+    "key": "q3-cast",
+    "event": "Play_sfx_Yasuo_YasuoQ3W_missilelaunch {r}",
+    "file": "assets\\audio\\yasuo-client-v1\\decoded\\q3-cast.wav",
+    "seconds": 3.0984126984126985
+  },
+  {
+    "key": "q3-hit",
+    "event": "Play_sfx_Yasuo_YasuoQ3W_hit {r}",
+    "file": "assets\\audio\\yasuo-client-v1\\decoded\\q3-hit.wav",
+    "seconds": 2.4330839002267575
+  },
+  {
+    "key": "w-cast",
+    "event": "Play_sfx_Yasuo_YasuoWMovingWall_OnCast {r}",
+    "file": "assets\\audio\\yasuo-client-v1\\decoded\\w-cast.wav",
+    "seconds": 1.990453514739229
+  },
+  {
+    "key": "w-loop",
+    "event": "Play_sfx_Yasuo_YasuoWMovingWall_buffactivate",
+    "file": "assets\\audio\\yasuo-client-v1\\decoded\\w-loop.wav",
+    "seconds": 10.523537414965986
+  },
+  {
+    "key": "w-block",
+    "event": "Play_sfx_Yasuo_YasuoWMovingWall_hit {r}",
+    "file": "assets\\audio\\yasuo-client-v1\\decoded\\w-block.wav",
+    "seconds": 3.0234240362811793
+  },
+  {
+    "key": "e-cast",
+    "event": "Play_sfx_Yasuo_YasuoDashWrapper_cast {r}",
+    "file": "assets\\audio\\yasuo-client-v1\\decoded\\e-cast.wav",
+    "seconds": 2.399591836734694
+  },
+  {
+    "key": "e-hit",
+    "event": "Play_sfx_Yasuo_YasuoDashWrapper_hit {r}",
+    "file": "assets\\audio\\yasuo-client-v1\\decoded\\e-hit.wav",
+    "seconds": 1.6000907029478457
+  },
+  {
+    "key": "r-slash",
+    "event": "Play_sfx_Yasuo_YasuoRKnockUpCombo_OnBuffActivate {r}",
+    "file": "assets\\audio\\yasuo-client-v1\\decoded\\r-slash.wav",
+    "seconds": 4.657573696145125
+  },
+  {
+    "key": "r-hit",
+    "event": "Play_sfx_Yasuo_YasuoRKnockUpCombo_hit_land {r}",
+    "file": "assets\\audio\\yasuo-client-v1\\decoded\\r-hit.wav",
+    "seconds": 3.971315192743764
+  },
+  {
+    "key": "r-start",
+    "event": "Play_sfx_Yasuo_YasuoRLeashParticle_buffactivate",
+    "file": "assets\\audio\\yasuo-client-v1\\decoded\\r-start.wav",
+    "seconds": 2.57843537414966
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_recall_start_sound": {
+    "simpleEmitterDefinitionData": [
+      {
+        "rate": {
+          "constantValue": 1.0,
+          "__type": "ValueFloat"
+        },
+        "particleLifetime": {
+          "constantValue": 0.0,
+          "__type": "ValueFloat"
+        },
+        "particleLinger": 10.0,
+        "emitterName": "empty",
+        "particleColorTexture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "meshRenderFlags": 0,
+        "texture": "ASSETS/Characters/Yasuo/Skins/Base/Particles/common_Black.tex",
+        "LegacySimple": {
+          "birthScale": {
+            "constantValue": 0.0,
+            "__type": "ValueFloat"
+          },
+          "__type": "VfxEmitterLegacySimple"
+        },
+        "__type": "VfxEmitterDefinitionData"
+      }
+    ],
+    "particleName": "Yasuo_Base_recall_start_sound",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_recall_start_sound",
+    "soundPersistentDefault": "Play_sfx_Yasuo_Recall_windup",
+    "flags": 164,
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_recall_start_sound",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "__linked": []
+}

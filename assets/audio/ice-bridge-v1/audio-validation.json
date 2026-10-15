@@ -1,0 +1,32 @@
+[
+  {
+    "file": "fire.mp3",
+    "seconds": 6.0,
+    "peak": 0.4846,
+    "rms": 0.0063
+  },
+  {
+    "file": "ice-crack.mp3",
+    "seconds": 2.0,
+    "peak": 0.6588,
+    "rms": 0.0753
+  },
+  {
+    "file": "snow-step.mp3",
+    "seconds": 2.0,
+    "peak": 0.6617,
+    "rms": 0.0617
+  },
+  {
+    "file": "stone-step.mp3",
+    "seconds": 2.0,
+    "peak": 0.6523,
+    "rms": 0.0301
+  },
+  {
+    "file": "wind.mp3",
+    "seconds": 8.0,
+    "peak": 0.6472,
+    "rms": 0.1416
+  }
+]

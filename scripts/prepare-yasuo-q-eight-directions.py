@@ -50,7 +50,7 @@ def main():
             "只画一个完整身体，右半画布保持空白，不画手臂零件、武器、风效、刀光或文字，透明背景。"
         )
         plan = {"command": "image-edit-run", "recovery_command": "pixel-gen-poll",
-                "output_dir": f"meowa-output/yasuo-q-v6-body-{direction}",
+                "output_dir": f"assets/generation-archive/legacy-meowa/yasuo-q-v6-body-{direction}",
                 "args": ["--reference-image", str((refs / f"idle-{direction}-prepared.png").relative_to(ROOT)).replace("\\", "/"),
                          "--reference-image", str((V5 / "media/parts-sheet.png").relative_to(ROOT)).replace("\\", "/"),
                          "--prompt", prompt, "--mode", "pixel", "--strict", "--generation-model", "image-2.5",

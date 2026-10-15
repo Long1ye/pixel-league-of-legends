@@ -1,0 +1,9 @@
+{
+  "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_R_CloneVFX": {
+    "particleName": "Yasuo_Base_R_CloneVFX",
+    "particlePath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_R_CloneVFX",
+    "objectPath": "Characters/Yasuo/Skins/Skin0/Particles/Yasuo_Base_R_CloneVFX",
+    "__type": "VfxSystemDefinitionData"
+  },
+  "__linked": []
+}

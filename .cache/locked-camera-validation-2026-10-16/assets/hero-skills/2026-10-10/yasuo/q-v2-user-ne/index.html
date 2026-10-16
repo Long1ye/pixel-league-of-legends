@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>亚索 Q · 用户模板右上方向试验</title>
+  <style>:root{--lightningcss-light: ;--lightningcss-dark:initial;color-scheme:dark;color:#e0edf0;background:#0d191f;font-family:Microsoft YaHei,system-ui,sans-serif}*{box-sizing:border-box}body{margin:0;padding:24px}main{max-width:1160px;margin:auto}h1{font-size:26px}h2{margin-top:0;font-size:18px}p,blockquote{color:#b8ced6;line-height:1.7}a{color:#91ded1}button,select{font:inherit;color:#e0edf0;cursor:pointer;background:#19333d;border:1px solid #476372;border-radius:6px;padding:8px 12px}button:disabled{opacity:.5;cursor:wait}.toolbar{flex-wrap:wrap;align-items:center;gap:10px;margin:16px 0;display:flex}.compare{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:18px;display:grid}.panel{background:#132831;border:1px solid #335260;border-radius:10px;padding:16px}.viewport{overflow:auto}canvas,img{image-rendering:pixelated;image-rendering:crisp-edges;display:block}.checker{background-color:#192d38;background-image:conic-gradient(#294653 25%, transparent 0 50%, #294653 0 75%, transparent 0);background-size:24px 24px}.review{color:#ddc392;border-left:2px solid #ba9764;padding-left:14px}output{color:#96e0cc}#scrub{width:min(480px,100%)}details{margin:20px 0}summary{cursor:pointer}.frames{flex-wrap:wrap;gap:10px;padding-top:14px;display:flex}.frame{border:1px solid #335260;width:max-content}.frame button{border-radius:0;width:100%;padding:5px;font-size:12px;display:block}.frame.selected{border-color:#e3be77}blockquote{border-left:2px solid #476372;margin-left:0;padding-left:14px}footer{margin-top:20px;font-size:13px}@media (width<=720px){.compare{display:block}.panel+.panel{margin-top:18px}}</style>
+  <script type="module" crossorigin src="../../../../../assets/yasuoQDirectionTrial-Cb2uCIvN.js"></script>
+  <link rel="modulepreload" crossorigin href="../../../../../assets/modulepreload-polyfill-P2Xu9kJm.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/timing-CFMuNAzB.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/source-atlas-ClZK_9Ey.js">
+</head><body><main>
+  <p>YASUO / Q / USER REFERENCE / NORTH EAST TRIAL</p>
+  <h1>亚索 Q · 右上方向试验（方向未通过）</h1>
+  <p>以你制作的完整 Q 为动作参考，只生成一个新方向。这里展示原模板与生成结果，不改动游戏中的 Q 或已选定的 A/B 普攻。</p>
+  <div class="toolbar">
+    <button id="once" disabled>播放一次</button><button id="loop" disabled>循环对比</button><button id="pause" disabled>暂停</button>
+    <label>节奏 <select id="timing" aria-label="动画节奏"><option value="source">原速对比</option><option value="demo">0.5秒节奏试播</option></select></label>
+    <label>倍率 <select id="zoom" aria-label="像素预览倍率"><option value="1">1× 原生像素</option><option value="2">2× 整数放大</option></select></label>
+  </div>
+  <div class="compare">
+    <section class="panel"><h2>你提供的原模板 · 向右刺出</h2><div class="viewport"><canvas id="source" class="checker" aria-label="原模板动画"></canvas></div><p id="source-facts"></p></section>
+    <section class="panel"><h2>生成结果 · 仍向右，未达到右上要求</h2><div class="viewport"><canvas id="result" class="checker" aria-label="方向未通过的生成结果"></canvas></div><p id="result-facts"></p><a id="download">下载试验结果 WebP</a></section>
+  </div>
+  <div class="toolbar"><button id="previous" disabled>上一帧</button><button id="next" disabled>下一帧</button><label for="scrub">结果逐帧</label><input id="scrub" type="range" min="0" value="0" disabled></div>
+  <p><output id="status" aria-live="polite">正在加载…</output></p><p id="review" class="review"></p>
+  <details><summary>查看生成结果全部帧</summary><div class="viewport"><div id="frames" class="frames"></div></div></details>
+  <details><summary>查看生成原文件（原速自动循环）</summary><div class="viewport"><img id="original" class="checker" alt="生成原速WebP"></div><p>上面的调速仅用于试播，生成原文件未剪帧、倒放或修改像素。</p></details>
+  <details><summary>查看本次编辑提示词</summary><h2>编辑要求</h2><blockquote id="intent"></blockquote><h2>参考动画内容</h2><blockquote id="description"></blockquote><p>参考动画编辑使用两项独立文本，不支持普通帧动画的自动优化开关；这里展示实际提交内容。</p></details>
+  <footer><p id="credits"></p><p>当前仍为人物、刀和风效合成在一起的单方向样稿。原模板仅补充上方透明留白，不缩放人物；生成结果方向和细节需你验收。</p><a href="/">返回游戏</a> · <a href="/assets/hero-skills/2026-10-10/yasuo/q-v1-se/index.html">查看此前的 Q 样稿</a></footer>
+</main></body></html>

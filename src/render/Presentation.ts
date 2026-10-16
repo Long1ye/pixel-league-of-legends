@@ -7,4 +7,6 @@ export const HERO_EFFECT_SCALE = 0.25 * HERO_VISUAL_SCALE;
 export const RENDER_SCALE = 3;
 /** Quantize presentation to a render pixel, not a whole world unit. */
 export const snapRenderCoordinate = (value:number,zoom:number) => Math.round(value*zoom*RENDER_SCALE)/(zoom*RENDER_SCALE);
+/** Quantize against the actual camera scroll, keeping a locked actor on one screen pixel. */
+export const snapCameraCoordinate=(value:number,scroll:number,zoom:number)=>scroll+snapRenderCoordinate(value-scroll,zoom);
 export const toLogicalPointer = (point: {x:number;y:number}) => ({x:point.x/RENDER_SCALE,y:point.y/RENDER_SCALE});

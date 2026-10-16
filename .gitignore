@@ -1,5 +1,7 @@
 node_modules/
 dist/
+dist-share/
+.cache/sites/
 .env
 .env.*
 !.env.example

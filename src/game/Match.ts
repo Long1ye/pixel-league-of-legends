@@ -242,16 +242,29 @@ export class Match {
 
   castSummoner(team:Team,key:SummonerKey,point:Point,targetId:number|null=null):boolean {
     const hero=this.hero(team),spec=SUMMONERS[key];
+    const flashWeave=key==='d'&&!hero.rCast&&!hero.wCast&&!!(hero.qCast||hero.q3Cast||hero.eqCast);
     if(this.phase!=='playing'||hero.hp<=0||this.summonerCooldowns[team][key]>this.time||
       inHitStun(hero,this.time)||(hero.airborneUntil??0)>this.time||
-      (committedUntil(hero,this.time)>this.time&&!(key==='f'&&hero.rCast)))return false;
+      (committedUntil(hero,this.time)>this.time&&!(key==='f'&&hero.rCast)&&!flashWeave))return false;
     if(key==='d'){
       const dir=direction(hero,point),length=Math.min(spec.range,distance(hero,point));
       if(length<1)return false;
       const from={x:hero.x,y:hero.y};
       const destination=clampPoint({x:hero.x+dir.x*length,y:hero.y+dir.y*length},hero.radius);
       const to=HOWLING_MAP?clampPoint(clearBridgeFootprints(destination,hero.radius,hero.id),hero.radius):destination;
-      this.stop(team);Object.assign(hero,to);gainFlow(hero,distance(from,to),this.time);
+      const buffered=flashWeave?this.bufferedOrders.get(team):undefined;
+      this.stop(team);
+      if(buffered?.kind==='cast')this.bufferedOrders.set(team,buffered);
+      // Flash ends the dash; a pending circular Q strikes at the landing point.
+      // The teleport itself must never sweep E damage across intervening units.
+      if(flashWeave&&hero.eqCast)hero.eCast=null;
+      Object.assign(hero,to);gainFlow(hero,distance(from,to),this.time);
+      if(hero.eqCast&&!hero.eqCast.hit){
+        hero.eqCast.startedAt=this.time-EQ.windup;
+        hero.eqCast.triggerAt=this.time;
+        hero.eqCast.endsAt=this.time+EQ.recovery;
+        this.resolveEQ(hero);
+      }
       this.summonerEffects.push({kind:'flash',team,startedAt:this.time,endsAt:this.time+.5,from,to:{...to},sourceId:hero.id});
     }else{
       const target=targetId!==null?this.entity(targetId):hero.rCast?.targetIds.map(id=>this.entity(id)).find(e=>e&&e.hp>0&&e.team!==team);
@@ -465,15 +478,7 @@ export class Match {
       gainFlow(entity,distance(previousPosition,entity),this.time);
       if(entity.eqCast && entity.hp>0) {
         const eq=entity.eqCast;
-        if(!eq.hit && this.time>=eq.triggerAt) {
-          eq.hit=true;
-          let connected=false;
-          for(const victim of this.entities) if(victim.hp>0 && victim.team!==entity.team && victim.kind!=='tower' && distance(entity,victim)<=EQ.radius+victim.radius) {
-            connected=true;this.damage(entity,victim,ABILITIES.q.damage,false,eq.empowered?'eq3':'eq',eq.critical);
-            if(eq.empowered && victim.hp>0){victim.airborneUntil=this.time+STORM.knockup;victim.windup=0;victim.attackTargetId=null;}
-          }
-          if(connected && !eq.empowered)grantStorm(entity,this.time);
-        }
+        this.resolveEQ(entity);
         if(this.time>=eq.endsAt) entity.eqCast=null;
       }
     }
@@ -487,6 +492,19 @@ export class Match {
     this.entities = this.entities.filter(e => e.hp > 0 || e.kind === 'hero' || e.kind === 'tower' || this.projectiles.some(s => s.sourceId === e.id));
     this.resolveOutcome();
     if (this.events.length > 300) this.events.splice(0, this.events.length - 300);
+  }
+
+  private resolveEQ(entity:Entity):void {
+    const eq=entity.eqCast;
+    if(!eq||eq.hit||entity.hp<=0||this.time<eq.triggerAt)return;
+    eq.hit=true;
+    let connected=false;
+    for(const victim of this.entities)if(victim.hp>0&&victim.team!==entity.team&&victim.kind!=='tower'&&distance(entity,victim)<=EQ.radius+victim.radius){
+      connected=true;
+      this.damage(entity,victim,ABILITIES.q.damage,false,eq.empowered?'eq3':'eq',eq.critical);
+      if(eq.empowered&&victim.hp>0){victim.airborneUntil=this.time+STORM.knockup;victim.windup=0;victim.attackTargetId=null;}
+    }
+    if(connected&&!eq.empowered)grantStorm(entity,this.time);
   }
 
   private chooseTarget(unit: Entity): void {

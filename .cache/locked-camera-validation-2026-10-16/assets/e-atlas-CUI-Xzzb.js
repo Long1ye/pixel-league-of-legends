@@ -1,0 +1,1 @@
+var e=new URL(`e-atlas-2PvRl9qr.png`,import.meta.url).href;export{e as t};

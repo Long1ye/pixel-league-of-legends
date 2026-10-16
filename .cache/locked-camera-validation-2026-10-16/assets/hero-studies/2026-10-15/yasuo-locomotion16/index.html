@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>亚索 · 16 帧走路与待机对比</title>
+  <style>:root{--lightningcss-light: ;--lightningcss-dark:initial;color-scheme:dark;color:#e1eaf2;background:#0c1520;font:15px system-ui}body{max-width:1320px;margin:24px auto;padding:0 24px}h1{font-size:26px}h2{margin-top:32px;font-size:20px}p{color:#a3b6c8;line-height:1.7}.tools{z-index:2;background:#102132f2;border:1px solid #354d61;border-radius:8px;flex-wrap:wrap;align-items:center;gap:12px;padding:14px;display:flex;position:sticky;top:0}button,select{color:#dceaf0;cursor:pointer;background:#203548;border:1px solid #516a7f;border-radius:4px;padding:8px 12px}input{width:180px}output{font-variant-numeric:tabular-nums}.grid{grid-template-columns:repeat(auto-fit,minmax(274px,1fr));gap:16px;display:grid}figure{background:#142433;border:1px solid #30475a;border-radius:6px;margin:0;padding:12px 8px;overflow:auto}figure:target{outline-offset:3px;outline:2px solid #b9d9eb}figcaption{text-align:center;margin-bottom:8px;font-weight:600}canvas{width:256px;height:128px;image-rendering:pixelated;margin:auto;display:block}.labels{color:#a6bbce;justify-content:space-around;margin:8px 0 0;font-size:12px;display:flex}a{color:#a6d9f2}.status{color:#9eb7cc;font-size:12px}.zoom2 canvas{width:512px;height:256px}.zoom2 .grid{grid-template-columns:repeat(auto-fit,minmax(538px,1fr))}</style>
+  <script type="module" crossorigin src="../../../../assets/yasuoLocomotion16-DiX8LMil.js"></script>
+  <link rel="modulepreload" crossorigin href="../../../../assets/modulepreload-polyfill-P2Xu9kJm.js">
+  <link rel="modulepreload" crossorigin href="../../../../assets/geometry-DAatxw2P.js">
+  <link rel="modulepreload" crossorigin href="../../../../assets/Bridge-DWKP-bAe.js">
+  <link rel="modulepreload" crossorigin href="../../../../assets/geometry-DmtkW-Zx.js">
+  <link rel="modulepreload" crossorigin href="../../../../assets/walk-w-BomqfquE.js">
+  <link rel="modulepreload" crossorigin href="../../../../assets/animations-CUrVsAB3.js">
+  <link rel="modulepreload" crossorigin href="../../../../assets/idle-se-DIg69LZa.js">
+  <link rel="modulepreload" crossorigin href="../../../../assets/attack-B-CJldBM-Q.js">
+  <link rel="modulepreload" crossorigin href="../../../../assets/walk-w-BQBwaT1h.js">
+</head>
+<body>
+  <h1>亚索 · 八向走路与待机 · 16 帧</h1>
+  <p>普通走路放缓至每轮 1.28 秒，加速走路保持每轮 0.8 秒；两种状态均使用完整 16 帧，待机节奏保持原样。可切换回原版 8 帧与新版 16 帧对比。</p>
+  <div class="tools">
+    <button id="play">暂停</button><button id="step">下一帧</button>
+    <label>对比 <select id="comparison"><option value="movement">普通 / 加速</option><option value="frames">8 帧 / 16 帧</option></select></label>
+    <label>速度 <select id="speed"><option value="1">原速</option><option value="0.5">0.5×</option><option value="0.25">0.25×</option></select></label>
+    <label>显示 <select id="zoom"><option value="1">1×</option><option value="2">2×</option></select></label>
+    <input id="seek" type="range" min="0" max="15" value="0" aria-label="动画帧">
+    <output id="frame">加载中…</output><span id="status" class="status"></span>
+  </div>
+  <section><h2>走路</h2><div id="walk" class="grid"></div></section>
+  <section><h2>待机</h2><div id="idle" class="grid"></div></section>
+  <p><a href="../../../../?map=howling">进入冰桥对局</a> · <a href="../yasuo-current-locomotion/index.html">查看原版 8 帧素材</a></p>
+</body>
+</html>

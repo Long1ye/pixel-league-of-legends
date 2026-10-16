@@ -1,0 +1,1 @@
+var e=new URL(`e-atlas-B-1ORexh.png`,import.meta.url).href,t=[{x:88,y:24,rx:64,ry:25},{x:88,y:55,rx:71,ry:25},{x:88,y:86,rx:77,ry:29}];function n(e,n){let r=t[0],i=1/0;for(let a of t){let t=Math.abs(Math.hypot((e-a.x)/a.rx,(n-a.y)/a.ry)-1);t<i&&(i=t,r=a)}return n>=r.y}export{e as n,n as t};

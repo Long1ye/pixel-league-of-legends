@@ -38,7 +38,7 @@ describe('local camera and world-space input', () => {
     slow.reset({ x: 250, y: 170 }); fast.reset({ x: 250, y: 170 });
     for (let i = 0; i < 60; i++) slow.pan(125 / 60, 0);
     for (let i = 0; i < 240; i++) fast.pan(125 / 240, 0);
-    expect(slow.center).toEqual(fast.center); expect(fast.center.x).toBe(375);
+    expect(slow.center.x).toBeCloseTo(fast.center.x,9);expect(slow.center.y).toBe(fast.center.y);expect(fast.center.x).toBeCloseTo(375,9);
   });
 
   it('temporary recentering does not change an unlocked mode', () => {

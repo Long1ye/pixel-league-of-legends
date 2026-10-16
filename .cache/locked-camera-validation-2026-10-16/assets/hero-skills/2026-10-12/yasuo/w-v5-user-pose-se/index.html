@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>亚索 W · 单次横斩人物动画</title>
+<style>:root{--lightningcss-light: ;--lightningcss-dark:initial;color-scheme:dark;color:#e0edf1;background:#0d171d;font-family:system-ui,sans-serif}body{margin:0;padding:24px}main{max-width:1000px;margin:auto}.eyebrow{color:#81cbd7;letter-spacing:2px;font-size:12px}h1{margin:10px 0;font-size:27px}p{color:#a0b7c0;line-height:1.7}a{color:#8dd4e6}.stage{background:#192c32;border:1px solid #36515b;border-radius:12px;justify-content:center;padding:22px;display:flex;overflow:auto}canvas,img{image-rendering:pixelated}canvas{background:repeating-conic-gradient(#192a30 0% 25%,#1d3037 0% 50%) 50%/20px 20px;flex:none}button,select{color:#e6f6fa;cursor:pointer;background:#223944;border:1px solid #40616f;border-radius:6px;padding:10px 13px}button:hover{background:#345360}.primary{background:#28667d}.controls{flex-wrap:wrap;align-items:center;gap:10px;margin:15px 0;display:flex}label{align-items:center;gap:6px;display:inline-flex}.timeline{accent-color:#89d0e2;width:100%}.status{color:#a8d5e2;justify-content:space-between;display:flex}.note{background:#13232b;border-left:3px solid #528c9e;padding:10px 16px;font-size:14px}.grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;display:grid}.grid figure{background:#172a32;border:1px solid #2c4753;border-radius:6px;margin:0;padding:8px;overflow:auto}.grid figcaption{color:#9bb9c6;padding-top:6px;font-size:12px}details{border-top:1px solid #29414d;margin-top:22px;padding-top:14px}summary{cursor:pointer;color:#a9c9d5}.small{font-size:12px}@media (width<=600px){body{padding:12px}.stage{padding:10px}}</style>  <script type="module" crossorigin src="../../../../../assets/yasuoWUserPose-C5i7ro5h.js"></script>
+  <link rel="modulepreload" crossorigin href="../../../../../assets/modulepreload-polyfill-P2Xu9kJm.js">
+  <link rel="modulepreload" crossorigin href="../../../../../assets/e-atlas-CYng4vk3.js">
+</head><body><main>
+<div class="eyebrow">YASUO / WIND WALL CAST / NEW FULL-BODY ANIMATION</div>
+<h1>W · 右下方向单次横斩</h1>
+<p>基于你提供的持刀姿势，重新生成完整人物横斩与淡蓝色刀光。<br>先看人物横斩与蓝色刀光，暂不加入风墙，也不改主游戏。</p>
+<div class="stage"><canvas id="animation" aria-label="亚索右下方向横斩人物动画"></canvas></div>
+<div class="controls"><button class="primary" id="once">播放一次</button><button id="loop">循环观看</button><button id="pause">暂停</button><label>速度<select id="speed"><option value="1">1× 原速</option><option value="0.5">0.5× 慢放</option><option value="1.5">1.5× 快速</option></select></label><label>缩放<select id="zoom"><option value="2">2× 像素</option><option value="1">1× 原像素</option></select></label></div>
+<div class="status"><output id="status">正在加载动画</output><output id="time"></output></div>
+<input id="scrub" class="timeline" type="range" min="0" max="7" value="0" step="1" aria-label="逐帧查看">
+<p class="note">默认播放一次；可慢放和逐帧检查腰肩、手臂与刀光的联动。“循环观看”仅用于反复检查。当前为独立试版，游戏中已有 W 和 Q3 保持不变。</p>
+<div class="controls"><a id="download" download="yasuo-w-user-pose-se.webp">下载人物动画 WebP</a><a id="atlas" download="yasuo-w-user-pose-se-atlas.png">下载透明帧图</a></div>
+<details><summary>展开逐帧检查</summary><div id="frames" class="grid"></div></details>
+<details><summary>查看本次生成提示词与设置</summary><p id="prompt"></p><p id="settings" class="small"></p></details>
+<p class="small"><a href="/">返回主游戏</a> · 独立动作试版，未接入 W 技能逻辑。</p>
+</main></body></html>

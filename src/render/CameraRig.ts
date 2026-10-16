@@ -1,7 +1,6 @@
 import { VIEWPORT, WORLD, HOWLING_MAP } from '../game/config';
 import { clamp } from '../game/geometry';
 import type { Point } from '../game/types';
-import { snapRenderCoordinate } from './Presentation';
 
 /** Camera math is independent of simulation, rendering and the DOM. */
 export class CameraRig {
@@ -16,8 +15,8 @@ export class CameraRig {
 
   get center(): Point {
     return {
-      x: clamp(snapRenderCoordinate(this.focus.x,this.zoom), this.viewport.width / this.zoom / 2, WORLD.width - this.viewport.width / this.zoom / 2),
-      y: clamp(snapRenderCoordinate(this.focus.y,this.zoom), this.viewport.height / this.zoom / 2, WORLD.height - this.viewport.height / this.zoom / 2),
+      x: clamp(this.focus.x, this.viewport.width / this.zoom / 2, WORLD.width - this.viewport.width / this.zoom / 2),
+      y: clamp(this.focus.y, this.viewport.height / this.zoom / 2, WORLD.height - this.viewport.height / this.zoom / 2),
     };
   }
 
@@ -34,7 +33,7 @@ export class CameraRig {
 
   lookAt(point: Point): void {
     const halfWidth = this.viewport.width / this.zoom / 2, halfHeight = this.viewport.height / this.zoom / 2;
-    // Retain subpixel pan increments; only the rendered center snaps to pixels.
+    // Preserve subpixels; actor pixels are snapped relative to this same camera scroll.
     this.focus = {
       x: clamp(point.x, halfWidth, WORLD.width - halfWidth),
       y: clamp(point.y, halfHeight, WORLD.height - halfHeight),

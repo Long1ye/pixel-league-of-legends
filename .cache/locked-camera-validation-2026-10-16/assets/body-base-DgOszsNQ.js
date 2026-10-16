@@ -1,0 +1,1 @@
+var e=new URL(`body-base-Ctqt_WP_.png`,import.meta.url).href;export{e as t};

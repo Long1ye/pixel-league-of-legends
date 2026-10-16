@@ -15,7 +15,8 @@ import {pickUnit, UNIT_METRICS,basicAttackRadius} from '../game/UnitMetrics';
 import homeguardUrl from '../../assets/effects/homeguard-v1/generated/Single_isolated_pixel_art_game_VFX_sprite_for_homeguard_movement_speed_boost_Three_delicate_icy_pale_blue_and_99487f23/result_images_0_url.png?url';
 import { homeguardActive } from '../game/Homeguard';
 import { LayeredForest } from './LayeredForest';
-import { HERO_VISUAL_SCALE, HERO_EFFECT_SCALE, HERO_ATTACHMENT_SCALE, RENDER_SCALE, toLogicalPointer, snapRenderCoordinate } from './Presentation';
+import { HERO_VISUAL_SCALE, HERO_EFFECT_SCALE, HERO_ATTACHMENT_SCALE, RENDER_SCALE, toLogicalPointer, snapCameraCoordinate } from './Presentation';
+import {RenderPositions} from './RenderPositions';
 import rOriginalUrl from '../../assets/hero-skills/2026-10-12/yasuo/r-v1-last-breath/media/e-atlas.png?url';
 import eqRingUrl from '../../assets/hero-skills/2026-10-12/yasuo/eq-v2-ring-only/media/e-atlas.png?url';
 import eq3RingUrl from '../../assets/hero-skills/2026-10-12/yasuo/eq3-v1-layered-ring/refined/media/e-atlas.png?url';
@@ -113,6 +114,9 @@ export class ArenaScene extends Phaser.Scene {
   private yasuoAnimators = {blue:new YasuoAnimator(),red:new YasuoAnimator()};
   private callbacks: SceneCallbacks;
   private accumulator = 0;
+  private renderPositions=new RenderPositions();
+  private renderAlpha=1;
+  private displayedHero():Entity{return this.renderPositions.sample(this.match.hero('blue'),this.renderAlpha);}
   private lastHudAt = -1;
   private views = new Map<number, Phaser.GameObjects.Image>();
   private wallViews = new Map<number, { image: Phaser.GameObjects.Image; texture: Phaser.Textures.CanvasTexture }>();
@@ -333,6 +337,7 @@ export class ArenaScene extends Phaser.Scene {
     this.children.list.filter(c => c instanceof Phaser.GameObjects.Text && c.getData('transient')).forEach(c => c.destroy());
     this.match = match;
     this.accumulator = 0;
+    this.renderPositions.reset();this.renderAlpha=1;
     this.lastHudAt = -1;
     this.selectedId = null;
     this.aimKey = null;
@@ -349,11 +354,13 @@ export class ArenaScene extends Phaser.Scene {
     if (this.match.phase === 'playing') {
       this.accumulator += Math.min(delta / 1000, 0.25) * this.simulationSpeed;
       while (this.accumulator >= WORLD.step) {
+        this.renderPositions.capture(this.match.entities);
         this.match.step(WORLD.step);
         this.accumulator -= WORLD.step;
         if (this.match.phase !== 'playing') { this.accumulator = 0; break; }
       }
     } else this.accumulator = 0;
+    this.renderAlpha=this.match.phase==='playing'?this.accumulator/WORLD.step:1;
     for (const event of this.match.drainEvents()) {
       this.showEvent(event);
       this.callbacks.event(event);
@@ -380,7 +387,7 @@ export class ArenaScene extends Phaser.Scene {
     const camera = this.cameras.main;
     camera.setBounds(0, 0, WORLD.width, WORLD.height);
     camera.setZoom(this.cameraRig.zoom * RENDER_SCALE).centerOn(this.cameraRig.center.x, this.cameraRig.center.y);
-    camera.roundPixels = true;
+    camera.roundPixels = false;
   }
 
   private updateCamera(dt: number): void {
@@ -395,11 +402,11 @@ export class ArenaScene extends Phaser.Scene {
         if (pointer.y < 10) dy--;
         if (pointer.y > this.cameraRig.viewport.height - 10) dy++;
       }
-      if (this.recenterHeld || keys.space.isDown) this.cameraRig.lookAt(this.match.hero('blue'));
+      if (this.recenterHeld || keys.space.isDown) this.cameraRig.lookAt(this.displayedHero());
       else if (dx || dy) {
         const length = Math.hypot(dx, dy), speed = 125 * dt;
         this.cameraRig.pan(dx / length * speed, dy / length * speed);
-      } else if (this.cameraRig.following) this.cameraRig.lookAt(this.match.hero('blue'));
+      } else if (this.cameraRig.following) this.cameraRig.lookAt(this.displayedHero());
     }
     this.applyCamera();
     // Refresh even for a stationary mouse while the camera or hero moves.
@@ -479,29 +486,30 @@ export class ArenaScene extends Phaser.Scene {
 
   private renderMatch(): void {
     if (!this.booted) return;
+    const entities=this.match.entities.map(e=>e.kind==='tower'?e:this.renderPositions.sample(e,this.renderAlpha));
     this.ground.clear(); this.bars.clear(); this.effects.clear();
     this.moveClick?.update(this.time.now);
     this.healthBars?.begin(this.match.entities,this.match.time);
-    this.dashTargetTimer?.update(this.match.entities,this.match.eTargetLocks,this.match.time);
+    this.dashTargetTimer?.update(entities,this.match.eTargetLocks,this.match.time);
     if(this.combatFeedback){this.combatFeedback.enabled=this.combatFeedbackEnabled;this.combatFeedback.update(this.match.time);}
     if(this.accents){this.accents.enabled=this.accentsEnabled;this.accents.update(this.match);}
     this.dashGhosts.forEach(image=>image.setVisible(false));
     this.eqRings.forEach(image=>image.setVisible(false));
     this.readyWind.forEach(image=>image.setVisible(false));
     this.summonerVfx?.update(this.match);
-    this.passiveShieldVfx?.update(this.match.entities,this.match.time);
+    this.passiveShieldVfx?.update(entities,this.match.time);
     const liveIds = new Set(this.match.entities.map(e => e.id));
     this.minionAnimator.retain(liveIds);
     for (const [id, images] of this.homeguardViews) if (!liveIds.has(id)) { images.forEach(image=>image.destroy()); this.homeguardViews.delete(id); }
     for (const [id, view] of this.views) if (!liveIds.has(id)) { view.destroy(); this.views.delete(id); }
-    const hero = this.match.hero('blue');
+    const hero = entities.find(e=>e.kind==='hero'&&e.team==='blue')!;
     if(this.attackSelecting&&this.match.phase==='playing'&&hero.hp>0){
       this.ground.fillStyle(0x65d9ed,.035).fillCircle(hero.x,hero.y,basicAttackRadius(hero));
       this.ground.lineStyle(1,0x89eaff,.8).strokeCircle(hero.x,hero.y,basicAttackRadius(hero));
     }
     this.forest?.update(this.match.time,hero,this.dynamicMap,!this.iceMap);
     this.iceFloor?.setVisible(this.iceMap);
-    const mobileActors=this.match.entities.filter(e=>e.hp>0&&e.kind!=='tower');
+    const mobileActors=entities.filter(e=>e.hp>0&&e.kind!=='tower');
     const heroActors=mobileActors.filter(e=>e.kind==='hero');
     this.wildlife?.update(this.match.time,this.wildlifeEnabled&&this.iceMap&&this.dynamicMap,mobileActors);
     this.bridgeDecor?.update(this.match.time,this.iceMap,this.dynamicMap,mobileActors,this.livingBrushEnabled,this.wildlife?.disturbances);
@@ -519,7 +527,7 @@ export class ArenaScene extends Phaser.Scene {
     }
     for(const view of this.staticLitViews)view.setAlpha(structureOcclusionAlpha('tower',{x:view.x,y:view.y},mobileActors));
     for(const [id,shadow] of this.shadows)if(!liveIds.has(id)){shadow.destroy();this.shadows.delete(id);}
-    for (const entity of this.match.entities) {
+    for (const entity of entities) {
       if (entity.kind === 'hero') {
         let winds=this.homeguardViews.get(entity.id);
         if(!winds){winds=[0,1].map(()=>this.add.image(0,0,'homeguard-wind').setBlendMode(Phaser.BlendModes.ADD));this.homeguardViews.set(entity.id,winds);}
@@ -621,14 +629,16 @@ export class ArenaScene extends Phaser.Scene {
         }
       }
       const lift=airborneLift(entity,this.match.time);
-      const snap=(value:number)=>snapRenderCoordinate(value,this.cameraRig.zoom);
+      const cameraBounds=this.cameraRig.bounds;
+      const snapX=(value:number)=>snapCameraCoordinate(value,cameraBounds.x,this.cameraRig.zoom);
+      const snapY=(value:number)=>snapCameraCoordinate(value,cameraBounds.y,this.cameraRig.zoom);
       const impactAge=this.match.time-entity.hitAt;
       const impact=entity.kind!=='tower'&&entity.hitFrom&&impactAge>=0&&impactAge<.14
         ?Math.pow(1-impactAge/.14,2)*3.5:0;
       const impactDirection=entity.hitFrom?direction(entity.hitFrom,entity):{x:0,y:0};
       const reaction=this.combatFeedbackEnabled?this.combatFeedback?.feel.reaction(entity.id,this.match.time):undefined;
       const renderX=entity.x+(reaction?.active?reaction.x:impactDirection.x*impact),renderY=entity.y+(reaction?.active?reaction.y:impactDirection.y*impact);
-      view.setPosition(snap(renderX), snap(renderY - (isYasuo ? 0 : bob)-lift));
+      view.setPosition(snapX(renderX), snapY(renderY - (isYasuo ? 0 : bob)-lift));
       if(isYasuo&&entity.rCast&&entity.hp>0){
         const age=this.match.time-entity.rCast.startedAt;
         if(age<YASUO_R.animationDuration){view.setTexture('yasuo-r-original',yasuoRFrame(age)).setOrigin(104/176,149/176).setScale(HERO_EFFECT_SCALE).setFlipX(false);}
@@ -643,7 +653,7 @@ export class ArenaScene extends Phaser.Scene {
       if(isMinion){
         const pose=this.minionAnimator.sample(entity,this.match.time);
         view.setTexture(pose.key,pose.frame).setOrigin(pose.originX,pose.originY).setScale(pose.scale)
-          .setFlipX(pose.flip).setPosition(snap(renderX),snap(renderY-lift+pose.breathing));
+          .setFlipX(pose.flip).setPosition(snapX(renderX),snapY(renderY-lift+pose.breathing));
       }
       view.setAlpha((entity.hp > 0 ? 1 : 0.25)*(isMinion?minionHeroVisibility(entity,heroActors,entity.id===this.selectedId||entity.id===hero.targetId):1)*(entity.kind==='tower'&&this.iceMap
         ?structureOcclusionAlpha('tower',entity,mobileActors):1));
@@ -681,9 +691,9 @@ export class ArenaScene extends Phaser.Scene {
       if(entity.kind==='tower'&&entity.team!==hero.team&&towerHint===0)continue;
       const barAlpha=isMinion?((selected||entity.hp<entity.maxHp)? .9:.5):entity.kind==='tower'&&entity.team!==hero.team?towerHint:1;
       const width = entity.kind === 'tower' ? 86 : entity.kind === 'hero' ? Math.round(32*HERO_ATTACHMENT_SCALE) : 18;
-      let y = Math.round(entity.y - lift - (entity.kind === 'tower' ? TOWER_BAR_OFFSET : isYasuo ? 33*HERO_VISUAL_SCALE : entity.kind === 'hero' ? 28*HERO_VISUAL_SCALE : UNIT_METRICS[entity.kind].height+5));
+      let y = snapY(entity.y - lift - (entity.kind === 'tower' ? TOWER_BAR_OFFSET : isYasuo ? 33*HERO_VISUAL_SCALE : entity.kind === 'hero' ? 28*HERO_VISUAL_SCALE : UNIT_METRICS[entity.kind].height+5));
       if(entity.kind==='hero'&&entity.team!==hero.team&&Math.abs(entity.x-hero.x)<width+6&&Math.abs(entity.y-hero.y)<18)y-=18;
-      const x = Math.round(entity.x - width / 2);
+      const x = snapX(entity.x - width / 2);
       this.healthBars?.draw(this.bars,entity,this.match.time,x,y,width,barAlpha);
       if (entity.hp <= hero.damage && entity.team === 'red' && (entity.kind === 'melee' || entity.kind === 'ranged')) {
         this.bars.fillStyle(0xfbd8a0).fillRect(x - 3, y, 1, 2);
@@ -726,7 +736,7 @@ export class ArenaScene extends Phaser.Scene {
       }
     }
     const stormIds=new Set(this.match.projectiles.filter(p=>p.empowered).map(p=>p.id));
-    const swordCasters=this.match.entities.filter(e=>e.kind==='hero'&&e.hp>0&&e.qCast);
+    const swordCasters=entities.filter(e=>e.kind==='hero'&&e.hp>0&&e.qCast);
     const swordIds=new Set(swordCasters.map(e=>e.id));
     for(const [id,image] of this.qSwordViews)if(!swordIds.has(id)){image.destroy();this.qSwordViews.delete(id);}
     for(const caster of swordCasters){

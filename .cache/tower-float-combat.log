@@ -1,0 +1,136 @@
+{
+  "paused": true,
+  "contextState": "running",
+  "audioFiles": 4,
+  "frames": [
+    {
+      "name": "q-draw",
+      "time": 0.21666666666666665,
+      "calls": 69,
+      "geometry": 69,
+      "textures": 25,
+      "cards": []
+    },
+    {
+      "name": "q-contact",
+      "time": 0.4833333333333333,
+      "calls": 74,
+      "geometry": 72,
+      "textures": 28,
+      "cards": [
+        "combat-qWind",
+        "combat-qWindHit"
+      ]
+    },
+    {
+      "name": "wind-wall",
+      "time": 1.566666666666666,
+      "calls": 73,
+      "geometry": 71,
+      "textures": 30,
+      "cards": [
+        "combat-wall",
+        "combat-wall"
+      ]
+    },
+    {
+      "name": "q3-ready",
+      "time": 0.03333333333333333,
+      "calls": 69,
+      "geometry": 71,
+      "textures": 30,
+      "cards": []
+    },
+    {
+      "name": "tornado",
+      "time": 0.4333333333333333,
+      "calls": 71,
+      "geometry": 71,
+      "textures": 31,
+      "cards": [
+        "combat-tornado"
+      ]
+    },
+    {
+      "name": "ultimate",
+      "time": 1.3000000000000003,
+      "calls": 71,
+      "geometry": 71,
+      "textures": 33,
+      "cards": [
+        "combat-tornado"
+      ]
+    },
+    {
+      "name": "eq3",
+      "time": 0.5833333333333335,
+      "calls": 88,
+      "geometry": 82,
+      "textures": 40,
+      "cards": [
+        "meowa-eq-cutting-rim",
+        "meowa-eq3-rear",
+        "meowa-eq3-front",
+        "combat-stormHit",
+        "combat-stormHit",
+        "combat-stormHit"
+      ]
+    },
+    {
+      "name": "shield-ignite",
+      "time": 0.35,
+      "calls": 70,
+      "geometry": 79,
+      "textures": 37,
+      "cards": []
+    },
+    {
+      "name": "flash",
+      "time": 0.44999999999999996,
+      "calls": 72,
+      "geometry": 81,
+      "textures": 37,
+      "cards": []
+    },
+    {
+      "name": "tower-rubble",
+      "time": 0.03333333333333333,
+      "calls": 71,
+      "geometry": 103,
+      "textures": 43,
+      "cards": []
+    },
+    {
+      "name": "fire-and-environment",
+      "time": 0.16666666666666666,
+      "calls": 77,
+      "geometry": 115,
+      "textures": 48,
+      "cards": []
+    }
+  ],
+  "resources": [
+    {
+      "geometry": 113,
+      "textures": 48
+    },
+    {
+      "geometry": 113,
+      "textures": 48
+    },
+    {
+      "geometry": 113,
+      "textures": 48
+    },
+    {
+      "geometry": 113,
+      "textures": 48
+    },
+    {
+      "geometry": 113,
+      "textures": 48
+    }
+  ],
+  "errors": [],
+  "failed": []
+}

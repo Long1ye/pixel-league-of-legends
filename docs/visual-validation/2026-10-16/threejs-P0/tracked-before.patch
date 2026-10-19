@@ -1,0 +1,339 @@
+diff --git a/README.md b/README.md
+index 1ad632d..7867e33 100644
+--- a/README.md
++++ b/README.md
+@@ -58,6 +58,7 @@ npm run preview
+ 
+ ## 代码与文档
+ 
++- [Three.js 像素 ARPG 画面重构流程](docs/threejs-visual-refactor.md)：本次重构的阶段、素材与坐标契约、验收和执行台账；迁移尚未开始。
+ - `src/game/`：不依赖浏览器的比赛模拟、战斗、兵线、技能与 AI。
+ - `src/render/`：Phaser 场景、纯镜头坐标逻辑、地图底图、单位与效果。
+ - `src/ui/`：音效反馈；DOM HUD 与操作连接位于 `src/main.ts`。
+diff --git a/docs/development-workflow.md b/docs/development-workflow.md
+index 69c01f1..7178580 100644
+--- a/docs/development-workflow.md
++++ b/docs/development-workflow.md
+@@ -1,5 +1,7 @@
+ # 像素中路 Solo Demo 开发流程
+ 
++> 2026-10-16：本文保留原项目开发流程。Three.js 画面重构的阶段、边界和验收统一在 [重构流程](threejs-visual-refactor.md) 维护，本文的早期功能状态不代表当前重构进度。
++
+ 制作一个围绕“一血、一塔、一百刀”的像素风中路对线 Demo。开发从比赛规则和灰盒玩法开始，先完成一局可开始、可结束、可重开的比赛，再加入技能、对线 AI 和正式美术。
+ 
+ ## 开发基线
+diff --git a/docs/visual-improvement-roadmap.md b/docs/visual-improvement-roadmap.md
+index 01bc3c9..ea25224 100644
+--- a/docs/visual-improvement-roadmap.md
++++ b/docs/visual-improvement-roadmap.md
+@@ -1,5 +1,7 @@
+ # 像素冰桥画面持续优化计划
+ 
++> 2026-10-16：本文件保留为 Phaser 画面能力与历史优化清单。新的 Three.js 像素 ARPG 重构以 [重构流程](threejs-visual-refactor.md) 为统一入口；下文“无需迁移”的判断属于原优化范围，不约束新方向。已有视觉约束继续沿用，阶段状态和迁移验收在新文档维护。
++
+ 更新日期：2026-10-14。适用版本：Phaser 3.90.0、TypeScript、Vite；主要验收入口为 `/?map=howling`。
+ 
+ 目标是在保留像素角色、清晰走位空间和技能判读的前提下，提升冰桥的空间层次、材质质感与战斗表现。优先修整地图构成和角色融入感，再增加局部效果；目前无需为这些目标迁移到 Three.js 或升级引擎。
+diff --git a/package.json b/package.json
+index 823cd38..c67d641 100644
+--- a/package.json
++++ b/package.json
+@@ -7,6 +7,7 @@
+     "dev": "vite --host 127.0.0.1",
+     "build": "tsc --noEmit && vite build",
+     "preview": "vite preview --host 127.0.0.1",
++    "build:share": "tsc --noEmit && vite build --config vite.share.config.ts",
+     "test": "vitest run",
+     "test:watch": "vitest"
+   },
+diff --git a/src/game/Match.ts b/src/game/Match.ts
+index 69b5b30..9fbf969 100644
+--- a/src/game/Match.ts
++++ b/src/game/Match.ts
+@@ -242,16 +242,29 @@ export class Match {
+ 
+   castSummoner(team:Team,key:SummonerKey,point:Point,targetId:number|null=null):boolean {
+     const hero=this.hero(team),spec=SUMMONERS[key];
++    const flashWeave=key==='d'&&!hero.rCast&&!hero.wCast&&!!(hero.qCast||hero.q3Cast||hero.eqCast);
+     if(this.phase!=='playing'||hero.hp<=0||this.summonerCooldowns[team][key]>this.time||
+       inHitStun(hero,this.time)||(hero.airborneUntil??0)>this.time||
+-      (committedUntil(hero,this.time)>this.time&&!(key==='f'&&hero.rCast)))return false;
++      (committedUntil(hero,this.time)>this.time&&!(key==='f'&&hero.rCast)&&!flashWeave))return false;
+     if(key==='d'){
+       const dir=direction(hero,point),length=Math.min(spec.range,distance(hero,point));
+       if(length<1)return false;
+       const from={x:hero.x,y:hero.y};
+       const destination=clampPoint({x:hero.x+dir.x*length,y:hero.y+dir.y*length},hero.radius);
+       const to=HOWLING_MAP?clampPoint(clearBridgeFootprints(destination,hero.radius,hero.id),hero.radius):destination;
+-      this.stop(team);Object.assign(hero,to);gainFlow(hero,distance(from,to),this.time);
++      const buffered=flashWeave?this.bufferedOrders.get(team):undefined;
++      this.stop(team);
++      if(buffered?.kind==='cast')this.bufferedOrders.set(team,buffered);
++      // Flash ends the dash; a pending circular Q strikes at the landing point.
++      // The teleport itself must never sweep E damage across intervening units.
++      if(flashWeave&&hero.eqCast)hero.eCast=null;
++      Object.assign(hero,to);gainFlow(hero,distance(from,to),this.time);
++      if(hero.eqCast&&!hero.eqCast.hit){
++        hero.eqCast.startedAt=this.time-EQ.windup;
++        hero.eqCast.triggerAt=this.time;
++        hero.eqCast.endsAt=this.time+EQ.recovery;
++        this.resolveEQ(hero);
++      }
+       this.summonerEffects.push({kind:'flash',team,startedAt:this.time,endsAt:this.time+.5,from,to:{...to},sourceId:hero.id});
+     }else{
+       const target=targetId!==null?this.entity(targetId):hero.rCast?.targetIds.map(id=>this.entity(id)).find(e=>e&&e.hp>0&&e.team!==team);
+@@ -465,15 +478,7 @@ export class Match {
+       gainFlow(entity,distance(previousPosition,entity),this.time);
+       if(entity.eqCast && entity.hp>0) {
+         const eq=entity.eqCast;
+-        if(!eq.hit && this.time>=eq.triggerAt) {
+-          eq.hit=true;
+-          let connected=false;
+-          for(const victim of this.entities) if(victim.hp>0 && victim.team!==entity.team && victim.kind!=='tower' && distance(entity,victim)<=EQ.radius+victim.radius) {
+-            connected=true;this.damage(entity,victim,ABILITIES.q.damage,false,eq.empowered?'eq3':'eq',eq.critical);
+-            if(eq.empowered && victim.hp>0){victim.airborneUntil=this.time+STORM.knockup;victim.windup=0;victim.attackTargetId=null;}
+-          }
+-          if(connected && !eq.empowered)grantStorm(entity,this.time);
+-        }
++        this.resolveEQ(entity);
+         if(this.time>=eq.endsAt) entity.eqCast=null;
+       }
+     }
+@@ -489,6 +494,19 @@ export class Match {
+     if (this.events.length > 300) this.events.splice(0, this.events.length - 300);
+   }
+ 
++  private resolveEQ(entity:Entity):void {
++    const eq=entity.eqCast;
++    if(!eq||eq.hit||entity.hp<=0||this.time<eq.triggerAt)return;
++    eq.hit=true;
++    let connected=false;
++    for(const victim of this.entities)if(victim.hp>0&&victim.team!==entity.team&&victim.kind!=='tower'&&distance(entity,victim)<=EQ.radius+victim.radius){
++      connected=true;
++      this.damage(entity,victim,ABILITIES.q.damage,false,eq.empowered?'eq3':'eq',eq.critical);
++      if(eq.empowered&&victim.hp>0){victim.airborneUntil=this.time+STORM.knockup;victim.windup=0;victim.attackTargetId=null;}
++    }
++    if(connected&&!eq.empowered)grantStorm(entity,this.time);
++  }
++
+   private chooseTarget(unit: Entity): void {
+     const radius = unit.kind === 'tower' ? unit.range : unit.formation ? 160 : unit.kind === 'ranged' ? 110 : 39;
+     const minion=unit.kind==='melee'||unit.kind==='ranged';
+diff --git a/src/render/ArenaScene.ts b/src/render/ArenaScene.ts
+index c2b8125..b2eb01a 100644
+--- a/src/render/ArenaScene.ts
++++ b/src/render/ArenaScene.ts
+@@ -15,7 +15,8 @@ import {pickUnit, UNIT_METRICS,basicAttackRadius} from '../game/UnitMetrics';
+ import homeguardUrl from '../../assets/effects/homeguard-v1/generated/Single_isolated_pixel_art_game_VFX_sprite_for_homeguard_movement_speed_boost_Three_delicate_icy_pale_blue_and_99487f23/result_images_0_url.png?url';
+ import { homeguardActive } from '../game/Homeguard';
+ import { LayeredForest } from './LayeredForest';
+-import { HERO_VISUAL_SCALE, HERO_EFFECT_SCALE, HERO_ATTACHMENT_SCALE, RENDER_SCALE, toLogicalPointer, snapRenderCoordinate } from './Presentation';
++import { HERO_VISUAL_SCALE, HERO_EFFECT_SCALE, HERO_ATTACHMENT_SCALE, RENDER_SCALE, toLogicalPointer, snapCameraCoordinate } from './Presentation';
++import {RenderPositions} from './RenderPositions';
+ import rOriginalUrl from '../../assets/hero-skills/2026-10-12/yasuo/r-v1-last-breath/media/e-atlas.png?url';
+ import eqRingUrl from '../../assets/hero-skills/2026-10-12/yasuo/eq-v2-ring-only/media/e-atlas.png?url';
+ import eq3RingUrl from '../../assets/hero-skills/2026-10-12/yasuo/eq3-v1-layered-ring/refined/media/e-atlas.png?url';
+@@ -113,6 +114,9 @@ export class ArenaScene extends Phaser.Scene {
+   private yasuoAnimators = {blue:new YasuoAnimator(),red:new YasuoAnimator()};
+   private callbacks: SceneCallbacks;
+   private accumulator = 0;
++  private renderPositions=new RenderPositions();
++  private renderAlpha=1;
++  private displayedHero():Entity{return this.renderPositions.sample(this.match.hero('blue'),this.renderAlpha);}
+   private lastHudAt = -1;
+   private views = new Map<number, Phaser.GameObjects.Image>();
+   private wallViews = new Map<number, { image: Phaser.GameObjects.Image; texture: Phaser.Textures.CanvasTexture }>();
+@@ -333,6 +337,7 @@ export class ArenaScene extends Phaser.Scene {
+     this.children.list.filter(c => c instanceof Phaser.GameObjects.Text && c.getData('transient')).forEach(c => c.destroy());
+     this.match = match;
+     this.accumulator = 0;
++    this.renderPositions.reset();this.renderAlpha=1;
+     this.lastHudAt = -1;
+     this.selectedId = null;
+     this.aimKey = null;
+@@ -349,11 +354,13 @@ export class ArenaScene extends Phaser.Scene {
+     if (this.match.phase === 'playing') {
+       this.accumulator += Math.min(delta / 1000, 0.25) * this.simulationSpeed;
+       while (this.accumulator >= WORLD.step) {
++        this.renderPositions.capture(this.match.entities);
+         this.match.step(WORLD.step);
+         this.accumulator -= WORLD.step;
+         if (this.match.phase !== 'playing') { this.accumulator = 0; break; }
+       }
+     } else this.accumulator = 0;
++    this.renderAlpha=this.match.phase==='playing'?this.accumulator/WORLD.step:1;
+     for (const event of this.match.drainEvents()) {
+       this.showEvent(event);
+       this.callbacks.event(event);
+@@ -380,7 +387,7 @@ export class ArenaScene extends Phaser.Scene {
+     const camera = this.cameras.main;
+     camera.setBounds(0, 0, WORLD.width, WORLD.height);
+     camera.setZoom(this.cameraRig.zoom * RENDER_SCALE).centerOn(this.cameraRig.center.x, this.cameraRig.center.y);
+-    camera.roundPixels = true;
++    camera.roundPixels = false;
+   }
+ 
+   private updateCamera(dt: number): void {
+@@ -395,11 +402,11 @@ export class ArenaScene extends Phaser.Scene {
+         if (pointer.y < 10) dy--;
+         if (pointer.y > this.cameraRig.viewport.height - 10) dy++;
+       }
+-      if (this.recenterHeld || keys.space.isDown) this.cameraRig.lookAt(this.match.hero('blue'));
++      if (this.recenterHeld || keys.space.isDown) this.cameraRig.lookAt(this.displayedHero());
+       else if (dx || dy) {
+         const length = Math.hypot(dx, dy), speed = 125 * dt;
+         this.cameraRig.pan(dx / length * speed, dy / length * speed);
+-      } else if (this.cameraRig.following) this.cameraRig.lookAt(this.match.hero('blue'));
++      } else if (this.cameraRig.following) this.cameraRig.lookAt(this.displayedHero());
+     }
+     this.applyCamera();
+     // Refresh even for a stationary mouse while the camera or hero moves.
+@@ -479,29 +486,30 @@ export class ArenaScene extends Phaser.Scene {
+ 
+   private renderMatch(): void {
+     if (!this.booted) return;
++    const entities=this.match.entities.map(e=>e.kind==='tower'?e:this.renderPositions.sample(e,this.renderAlpha));
+     this.ground.clear(); this.bars.clear(); this.effects.clear();
+     this.moveClick?.update(this.time.now);
+     this.healthBars?.begin(this.match.entities,this.match.time);
+-    this.dashTargetTimer?.update(this.match.entities,this.match.eTargetLocks,this.match.time);
++    this.dashTargetTimer?.update(entities,this.match.eTargetLocks,this.match.time);
+     if(this.combatFeedback){this.combatFeedback.enabled=this.combatFeedbackEnabled;this.combatFeedback.update(this.match.time);}
+     if(this.accents){this.accents.enabled=this.accentsEnabled;this.accents.update(this.match);}
+     this.dashGhosts.forEach(image=>image.setVisible(false));
+     this.eqRings.forEach(image=>image.setVisible(false));
+     this.readyWind.forEach(image=>image.setVisible(false));
+     this.summonerVfx?.update(this.match);
+-    this.passiveShieldVfx?.update(this.match.entities,this.match.time);
++    this.passiveShieldVfx?.update(entities,this.match.time);
+     const liveIds = new Set(this.match.entities.map(e => e.id));
+     this.minionAnimator.retain(liveIds);
+     for (const [id, images] of this.homeguardViews) if (!liveIds.has(id)) { images.forEach(image=>image.destroy()); this.homeguardViews.delete(id); }
+     for (const [id, view] of this.views) if (!liveIds.has(id)) { view.destroy(); this.views.delete(id); }
+-    const hero = this.match.hero('blue');
++    const hero = entities.find(e=>e.kind==='hero'&&e.team==='blue')!;
+     if(this.attackSelecting&&this.match.phase==='playing'&&hero.hp>0){
+       this.ground.fillStyle(0x65d9ed,.035).fillCircle(hero.x,hero.y,basicAttackRadius(hero));
+       this.ground.lineStyle(1,0x89eaff,.8).strokeCircle(hero.x,hero.y,basicAttackRadius(hero));
+     }
+     this.forest?.update(this.match.time,hero,this.dynamicMap,!this.iceMap);
+     this.iceFloor?.setVisible(this.iceMap);
+-    const mobileActors=this.match.entities.filter(e=>e.hp>0&&e.kind!=='tower');
++    const mobileActors=entities.filter(e=>e.hp>0&&e.kind!=='tower');
+     const heroActors=mobileActors.filter(e=>e.kind==='hero');
+     this.wildlife?.update(this.match.time,this.wildlifeEnabled&&this.iceMap&&this.dynamicMap,mobileActors);
+     this.bridgeDecor?.update(this.match.time,this.iceMap,this.dynamicMap,mobileActors,this.livingBrushEnabled,this.wildlife?.disturbances);
+@@ -519,7 +527,7 @@ export class ArenaScene extends Phaser.Scene {
+     }
+     for(const view of this.staticLitViews)view.setAlpha(structureOcclusionAlpha('tower',{x:view.x,y:view.y},mobileActors));
+     for(const [id,shadow] of this.shadows)if(!liveIds.has(id)){shadow.destroy();this.shadows.delete(id);}
+-    for (const entity of this.match.entities) {
++    for (const entity of entities) {
+       if (entity.kind === 'hero') {
+         let winds=this.homeguardViews.get(entity.id);
+         if(!winds){winds=[0,1].map(()=>this.add.image(0,0,'homeguard-wind').setBlendMode(Phaser.BlendModes.ADD));this.homeguardViews.set(entity.id,winds);}
+@@ -621,14 +629,16 @@ export class ArenaScene extends Phaser.Scene {
+         }
+       }
+       const lift=airborneLift(entity,this.match.time);
+-      const snap=(value:number)=>snapRenderCoordinate(value,this.cameraRig.zoom);
++      const cameraBounds=this.cameraRig.bounds;
++      const snapX=(value:number)=>snapCameraCoordinate(value,cameraBounds.x,this.cameraRig.zoom);
++      const snapY=(value:number)=>snapCameraCoordinate(value,cameraBounds.y,this.cameraRig.zoom);
+       const impactAge=this.match.time-entity.hitAt;
+       const impact=entity.kind!=='tower'&&entity.hitFrom&&impactAge>=0&&impactAge<.14
+         ?Math.pow(1-impactAge/.14,2)*3.5:0;
+       const impactDirection=entity.hitFrom?direction(entity.hitFrom,entity):{x:0,y:0};
+       const reaction=this.combatFeedbackEnabled?this.combatFeedback?.feel.reaction(entity.id,this.match.time):undefined;
+       const renderX=entity.x+(reaction?.active?reaction.x:impactDirection.x*impact),renderY=entity.y+(reaction?.active?reaction.y:impactDirection.y*impact);
+-      view.setPosition(snap(renderX), snap(renderY - (isYasuo ? 0 : bob)-lift));
++      view.setPosition(snapX(renderX), snapY(renderY - (isYasuo ? 0 : bob)-lift));
+       if(isYasuo&&entity.rCast&&entity.hp>0){
+         const age=this.match.time-entity.rCast.startedAt;
+         if(age<YASUO_R.animationDuration){view.setTexture('yasuo-r-original',yasuoRFrame(age)).setOrigin(104/176,149/176).setScale(HERO_EFFECT_SCALE).setFlipX(false);}
+@@ -643,7 +653,7 @@ export class ArenaScene extends Phaser.Scene {
+       if(isMinion){
+         const pose=this.minionAnimator.sample(entity,this.match.time);
+         view.setTexture(pose.key,pose.frame).setOrigin(pose.originX,pose.originY).setScale(pose.scale)
+-          .setFlipX(pose.flip).setPosition(snap(renderX),snap(renderY-lift+pose.breathing));
++          .setFlipX(pose.flip).setPosition(snapX(renderX),snapY(renderY-lift+pose.breathing));
+       }
+       view.setAlpha((entity.hp > 0 ? 1 : 0.25)*(isMinion?minionHeroVisibility(entity,heroActors,entity.id===this.selectedId||entity.id===hero.targetId):1)*(entity.kind==='tower'&&this.iceMap
+         ?structureOcclusionAlpha('tower',entity,mobileActors):1));
+@@ -681,9 +691,9 @@ export class ArenaScene extends Phaser.Scene {
+       if(entity.kind==='tower'&&entity.team!==hero.team&&towerHint===0)continue;
+       const barAlpha=isMinion?((selected||entity.hp<entity.maxHp)? .9:.5):entity.kind==='tower'&&entity.team!==hero.team?towerHint:1;
+       const width = entity.kind === 'tower' ? 86 : entity.kind === 'hero' ? Math.round(32*HERO_ATTACHMENT_SCALE) : 18;
+-      let y = Math.round(entity.y - lift - (entity.kind === 'tower' ? TOWER_BAR_OFFSET : isYasuo ? 33*HERO_VISUAL_SCALE : entity.kind === 'hero' ? 28*HERO_VISUAL_SCALE : UNIT_METRICS[entity.kind].height+5));
++      let y = snapY(entity.y - lift - (entity.kind === 'tower' ? TOWER_BAR_OFFSET : isYasuo ? 33*HERO_VISUAL_SCALE : entity.kind === 'hero' ? 28*HERO_VISUAL_SCALE : UNIT_METRICS[entity.kind].height+5));
+       if(entity.kind==='hero'&&entity.team!==hero.team&&Math.abs(entity.x-hero.x)<width+6&&Math.abs(entity.y-hero.y)<18)y-=18;
+-      const x = Math.round(entity.x - width / 2);
++      const x = snapX(entity.x - width / 2);
+       this.healthBars?.draw(this.bars,entity,this.match.time,x,y,width,barAlpha);
+       if (entity.hp <= hero.damage && entity.team === 'red' && (entity.kind === 'melee' || entity.kind === 'ranged')) {
+         this.bars.fillStyle(0xfbd8a0).fillRect(x - 3, y, 1, 2);
+@@ -726,7 +736,7 @@ export class ArenaScene extends Phaser.Scene {
+       }
+     }
+     const stormIds=new Set(this.match.projectiles.filter(p=>p.empowered).map(p=>p.id));
+-    const swordCasters=this.match.entities.filter(e=>e.kind==='hero'&&e.hp>0&&e.qCast);
++    const swordCasters=entities.filter(e=>e.kind==='hero'&&e.hp>0&&e.qCast);
+     const swordIds=new Set(swordCasters.map(e=>e.id));
+     for(const [id,image] of this.qSwordViews)if(!swordIds.has(id)){image.destroy();this.qSwordViews.delete(id);}
+     for(const caster of swordCasters){
+diff --git a/src/render/CameraRig.ts b/src/render/CameraRig.ts
+index 6dbffa8..c1c372e 100644
+--- a/src/render/CameraRig.ts
++++ b/src/render/CameraRig.ts
+@@ -1,7 +1,6 @@
+ import { VIEWPORT, WORLD, HOWLING_MAP } from '../game/config';
+ import { clamp } from '../game/geometry';
+ import type { Point } from '../game/types';
+-import { snapRenderCoordinate } from './Presentation';
+ 
+ /** Camera math is independent of simulation, rendering and the DOM. */
+ export class CameraRig {
+@@ -16,8 +15,8 @@ export class CameraRig {
+ 
+   get center(): Point {
+     return {
+-      x: clamp(snapRenderCoordinate(this.focus.x,this.zoom), this.viewport.width / this.zoom / 2, WORLD.width - this.viewport.width / this.zoom / 2),
+-      y: clamp(snapRenderCoordinate(this.focus.y,this.zoom), this.viewport.height / this.zoom / 2, WORLD.height - this.viewport.height / this.zoom / 2),
++      x: clamp(this.focus.x, this.viewport.width / this.zoom / 2, WORLD.width - this.viewport.width / this.zoom / 2),
++      y: clamp(this.focus.y, this.viewport.height / this.zoom / 2, WORLD.height - this.viewport.height / this.zoom / 2),
+     };
+   }
+ 
+@@ -34,7 +33,7 @@ export class CameraRig {
+ 
+   lookAt(point: Point): void {
+     const halfWidth = this.viewport.width / this.zoom / 2, halfHeight = this.viewport.height / this.zoom / 2;
+-    // Retain subpixel pan increments; only the rendered center snaps to pixels.
++    // Preserve subpixels; actor pixels are snapped relative to this same camera scroll.
+     this.focus = {
+       x: clamp(point.x, halfWidth, WORLD.width - halfWidth),
+       y: clamp(point.y, halfHeight, WORLD.height - halfHeight),
+diff --git a/src/render/Presentation.ts b/src/render/Presentation.ts
+index 77b32f3..f452808 100644
+--- a/src/render/Presentation.ts
++++ b/src/render/Presentation.ts
+@@ -7,4 +7,6 @@ export const HERO_EFFECT_SCALE = 0.25 * HERO_VISUAL_SCALE;
+ export const RENDER_SCALE = 3;
+ /** Quantize presentation to a render pixel, not a whole world unit. */
+ export const snapRenderCoordinate = (value:number,zoom:number) => Math.round(value*zoom*RENDER_SCALE)/(zoom*RENDER_SCALE);
++/** Quantize against the actual camera scroll, keeping a locked actor on one screen pixel. */
++export const snapCameraCoordinate=(value:number,scroll:number,zoom:number)=>scroll+snapRenderCoordinate(value-scroll,zoom);
+ export const toLogicalPointer = (point: {x:number;y:number}) => ({x:point.x/RENDER_SCALE,y:point.y/RENDER_SCALE});
+diff --git a/tests/camera.test.ts b/tests/camera.test.ts
+index ec32395..f3ab5f1 100644
+--- a/tests/camera.test.ts
++++ b/tests/camera.test.ts
+@@ -38,7 +38,7 @@ describe('local camera and world-space input', () => {
+     slow.reset({ x: 250, y: 170 }); fast.reset({ x: 250, y: 170 });
+     for (let i = 0; i < 60; i++) slow.pan(125 / 60, 0);
+     for (let i = 0; i < 240; i++) fast.pan(125 / 240, 0);
+-    expect(slow.center).toEqual(fast.center); expect(fast.center.x).toBe(375);
++    expect(slow.center.x).toBeCloseTo(fast.center.x,9);expect(slow.center.y).toBe(fast.center.y);expect(fast.center.x).toBeCloseTo(375,9);
+   });
+ 
+   it('temporary recentering does not change an unlocked mode', () => {

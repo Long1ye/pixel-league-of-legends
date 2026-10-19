@@ -1,0 +1,9 @@
+{
+  "options": 26,
+  "frame": "24",
+  "caption": "上轮材质/天气",
+  "split": "inset(0px 30% 0px 0px)",
+  "loaded": true,
+  "playingFrame": "4",
+  "errors": []
+}

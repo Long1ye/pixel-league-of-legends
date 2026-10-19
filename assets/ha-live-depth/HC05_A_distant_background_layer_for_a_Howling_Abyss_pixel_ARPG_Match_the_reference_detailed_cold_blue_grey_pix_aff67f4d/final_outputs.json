@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_3ba722d992704296b66bdcf6817681b7",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\ha-live-depth\\HC05_A_distant_background_layer_for_a_Howling_Abyss_pixel_ARPG_Match_the_reference_detailed_cold_blue_grey_pix_aff67f4d\\result_images_0_url.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

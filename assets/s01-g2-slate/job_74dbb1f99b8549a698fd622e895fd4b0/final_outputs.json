@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_74dbb1f99b8549a698fd622e895fd4b0",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\s01-g2-slate\\job_74dbb1f99b8549a698fd622e895fd4b0\\texture.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

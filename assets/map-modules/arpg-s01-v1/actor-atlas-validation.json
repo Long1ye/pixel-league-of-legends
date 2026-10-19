@@ -1,0 +1,277 @@
+{
+  "status": "dimensions-checked",
+  "atlases": [
+    {
+      "path": "assets/heroes/yasuo/locomotion16-2026-10-15/runtime/idle-se.png",
+      "sheetSize": [
+        512,
+        512
+      ],
+      "frames": 16
+    },
+    {
+      "path": "assets/heroes/yasuo/locomotion16-2026-10-15/runtime/walk-se.png",
+      "sheetSize": [
+        512,
+        512
+      ],
+      "frames": 16
+    },
+    {
+      "path": "assets/heroes/yasuo/locomotion16-2026-10-15/runtime/idle-e.png",
+      "sheetSize": [
+        512,
+        512
+      ],
+      "frames": 16
+    },
+    {
+      "path": "assets/heroes/yasuo/locomotion16-2026-10-15/runtime/walk-e.png",
+      "sheetSize": [
+        512,
+        512
+      ],
+      "frames": 16
+    },
+    {
+      "path": "assets/heroes/yasuo/locomotion16-2026-10-15/runtime/idle-s.png",
+      "sheetSize": [
+        512,
+        512
+      ],
+      "frames": 16
+    },
+    {
+      "path": "assets/heroes/yasuo/locomotion16-2026-10-15/runtime/walk-s.png",
+      "sheetSize": [
+        512,
+        512
+      ],
+      "frames": 16
+    },
+    {
+      "path": "assets/heroes/yasuo/locomotion16-2026-10-15/runtime/idle-sw.png",
+      "sheetSize": [
+        512,
+        512
+      ],
+      "frames": 16
+    },
+    {
+      "path": "assets/heroes/yasuo/locomotion16-2026-10-15/runtime/walk-sw.png",
+      "sheetSize": [
+        512,
+        512
+      ],
+      "frames": 16
+    },
+    {
+      "path": "assets/heroes/yasuo/locomotion16-2026-10-15/runtime/idle-w.png",
+      "sheetSize": [
+        512,
+        512
+      ],
+      "frames": 16
+    },
+    {
+      "path": "assets/heroes/yasuo/locomotion16-2026-10-15/runtime/walk-w.png",
+      "sheetSize": [
+        512,
+        512
+      ],
+      "frames": 16
+    },
+    {
+      "path": "assets/heroes/yasuo/locomotion16-2026-10-15/runtime/idle-nw.png",
+      "sheetSize": [
+        512,
+        512
+      ],
+      "frames": 16
+    },
+    {
+      "path": "assets/heroes/yasuo/locomotion16-2026-10-15/runtime/walk-nw.png",
+      "sheetSize": [
+        512,
+        512
+      ],
+      "frames": 16
+    },
+    {
+      "path": "assets/heroes/yasuo/locomotion16-2026-10-15/runtime/idle-n.png",
+      "sheetSize": [
+        512,
+        512
+      ],
+      "frames": 16
+    },
+    {
+      "path": "assets/heroes/yasuo/locomotion16-2026-10-15/runtime/walk-n.png",
+      "sheetSize": [
+        512,
+        512
+      ],
+      "frames": 16
+    },
+    {
+      "path": "assets/heroes/yasuo/locomotion16-2026-10-15/runtime/idle-ne.png",
+      "sheetSize": [
+        512,
+        512
+      ],
+      "frames": 16
+    },
+    {
+      "path": "assets/heroes/yasuo/locomotion16-2026-10-15/runtime/walk-ne.png",
+      "sheetSize": [
+        512,
+        512
+      ],
+      "frames": 16
+    },
+    {
+      "path": "assets/heroes/yasuo/attacks-v2-2026-10-13/attack-A.png",
+      "sheetSize": [
+        1608,
+        1206
+      ],
+      "frames": 48
+    },
+    {
+      "path": "assets/heroes/yasuo/attacks-v2-2026-10-13/attack-B.png",
+      "sheetSize": [
+        1608,
+        1206
+      ],
+      "frames": 48
+    },
+    {
+      "path": "assets/heroes/yasuo/q-meowa-eight-2026-10-13/q-nw-layered.png",
+      "sheetSize": [
+        1920,
+        3440
+      ],
+      "frames": 31
+    },
+    {
+      "path": "assets/heroes/yasuo/q-meowa-eight-2026-10-13/q-n-layered.png",
+      "sheetSize": [
+        1920,
+        3440
+      ],
+      "frames": 31
+    },
+    {
+      "path": "assets/heroes/yasuo/q-meowa-eight-2026-10-13/q-ne-layered.png",
+      "sheetSize": [
+        1920,
+        3440
+      ],
+      "frames": 31
+    },
+    {
+      "path": "assets/heroes/yasuo/q-meowa-eight-2026-10-13/q-w-layered.png",
+      "sheetSize": [
+        1920,
+        3440
+      ],
+      "frames": 31
+    },
+    {
+      "path": "assets/heroes/yasuo/q-meowa-eight-2026-10-13/q-e-layered.png",
+      "sheetSize": [
+        1920,
+        3440
+      ],
+      "frames": 31
+    },
+    {
+      "path": "assets/heroes/yasuo/q-meowa-eight-2026-10-13/q-sw-layered.png",
+      "sheetSize": [
+        1920,
+        3440
+      ],
+      "frames": 31
+    },
+    {
+      "path": "assets/heroes/yasuo/q-meowa-eight-2026-10-13/q-s-layered.png",
+      "sheetSize": [
+        1920,
+        3440
+      ],
+      "frames": 31
+    },
+    {
+      "path": "assets/heroes/yasuo/q-meowa-eight-2026-10-13/q-se-layered.png",
+      "sheetSize": [
+        1920,
+        3440
+      ],
+      "frames": 31
+    },
+    {
+      "path": "assets/hero-skills/2026-10-12/yasuo/e-v7-fixed-right/nw/media/e-atlas.png",
+      "sheetSize": [
+        512,
+        256
+      ],
+      "frames": 8
+    },
+    {
+      "path": "assets/hero-skills/2026-10-12/yasuo/e-v7-fixed-right/n/media/e-atlas.png",
+      "sheetSize": [
+        512,
+        256
+      ],
+      "frames": 8
+    },
+    {
+      "path": "assets/hero-skills/2026-10-12/yasuo/e-v7-fixed-right/ne/media/e-atlas.png",
+      "sheetSize": [
+        512,
+        256
+      ],
+      "frames": 8
+    },
+    {
+      "path": "assets/hero-skills/2026-10-12/yasuo/e-v7-fixed-right/w/media/e-atlas.png",
+      "sheetSize": [
+        512,
+        256
+      ],
+      "frames": 8
+    },
+    {
+      "path": "assets/hero-skills/2026-10-12/yasuo/e-v7-fixed-right/e/media/e-atlas.png",
+      "sheetSize": [
+        512,
+        256
+      ],
+      "frames": 8
+    },
+    {
+      "path": "assets/hero-skills/2026-10-12/yasuo/e-v7-fixed-right/sw/media/e-atlas.png",
+      "sheetSize": [
+        512,
+        256
+      ],
+      "frames": 8
+    },
+    {
+      "path": "assets/hero-skills/2026-10-12/yasuo/e-v7-fixed-right/s/media/e-atlas.png",
+      "sheetSize": [
+        512,
+        256
+      ],
+      "frames": 8
+    },
+    {
+      "path": "assets/hero-skills/2026-10-12/yasuo/e-v7-fixed-right/se/media/e-atlas.png",
+      "sheetSize": [
+        512,
+        256
+      ],
+      "frames": 8
+    }
+  ]
+}

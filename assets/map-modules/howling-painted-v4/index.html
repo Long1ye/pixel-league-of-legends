@@ -1,0 +1,37 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>冰桥 · 全图部件与布局核对</title><style>
+*{box-sizing:border-box}body{margin:0;background:#101724;color:#d5dfeb;font:15px/1.65 system-ui,sans-serif}main{max-width:1440px;margin:auto;padding:28px}h1{margin:0}p{max-width:1000px;color:#aebed1}a{color:#a8d8f4}button,select{background:#253448;color:#e5edf6;padding:9px 14px;border:1px solid #465773;border-radius:5px;font:inherit;cursor:pointer}nav{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}.reference{position:relative;background:#243245;line-height:0}.reference img{display:block;width:100%;height:auto}.reference svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}svg text{font:22px system-ui;fill:white;paint-order:stroke;stroke:#101724;stroke-width:5px}svg circle{fill:#e6b65e;stroke:#101724;stroke-width:3px}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #334157;padding:12px}th{color:#a9c7e2}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.card{padding:16px;background:#1c283a;border:1px solid #35465d}.card img{width:100%;height:270px;object-fit:contain;background:repeating-conic-gradient(#253348 0 25%,#2e3e55 0 50%) 0/24px 24px}.tag{color:#edc882}.scroll{overflow:auto}section{margin:35px 0}small{color:#9db0c8}.runtime{width:100%;background:#1b2c42;border:1px solid #364b63}input{accent-color:#e6b65e}code{font-size:12px}</style></head><body><main>
+<small>HOWLING ABYSS / COMPONENTS → LAYOUT → GAME</small><h1>四张美术地图 · 部件与布局核对</h1>
+<p>栏墙采用连续墙段：按最终确认取消残墙组合，恢复连续墙脚与承托石沿。旧残墙原图仅归档，不再参与游戏布局。<a href="../howling-painted-v5/README.md">修复说明、原始资源与提示词 ↗</a></p>
+<p>先拆件，再按区域搭建。总览、圣所、外塔、中央是四个独立构图，不能直接拼成四块无缝地面。图中标点为人工识别的美术落点；游戏布局保留已有通路尺度，以关系、数量与落点为约束。中央采用四座错位兽像柱。03 的人像纪念碑造型沿用此前否定意见，替换为战斗塔。</p>
+<nav><select id="scene" aria-label="参考图区域"></select><label><input id="pins" type="checkbox" checked> 显示落点</label><a id="play" href="../../../three.html?map=howling">在游戏中查看这个区域 ↗</a><a id="native" target="_blank" rel="noopener">原尺寸参考图 ↗</a></nav>
+<div class="reference"><img id="reference" alt="当前美术参考图"><svg id="overlay" viewBox="0 0 2048 1152"></svg></div><p id="role"></p>
+<section><h2>布局关系</h2><svg class="runtime" viewBox="0 0 1440 380" id="layout" aria-label="当前游戏地图的部件布置图"></svg><p>示意图使用与场景相同的布置表：两端圣所、外塔和连接桥路，中段四兽柱夹持单个纹章。前后两侧承重节点分别布置，桥墩数量多于兽像。红端是同一语言的延伸，原图未提供完整红方局部构图，不作为原图已有内容。</p></section>
+<section><h2>本轮制作的五类部件</h2><div class="grid" id="assets"></div><p>生成方式：imagegen 内置图像工具；没有购买额度或调用外部付费生成 API。塔与已停用残墙的原始候选及修订提示词均保留。图像采用原生 alpha；游戏使用 alphaTest 丢弃外部低透明度雾边，没有离线抠图加工。2.5D 固定视角恢复近似高度和纵深，支持角色前后遮挡与投影，不支持自由旋转。</p></section>
+<section><h2>26 类部件覆盖表</h2><p>复用表示选用现有资源或其独立 UV 区域，并不表示每一类都需要重新花费生成。远景岩壁、人像和断桥保留在远景层；主路、圆铺地与立体建筑使用各自的投影方式。</p><div class="scroll"><table><thead><tr><th>部件</th><th>美术图</th><th>制作方式</th><th>资源 / 验收条件</th></tr></thead><tbody id="components"></tbody></table></div></section>
+<section><h2>已知边界</h2><p>这是根据参考图解释后的可运行地图，并非像素对像素的摄像机重建。参考图未给出完整两端布局；红方采用受控延伸。火焰仍为绘制帧与呼吸光。神龛箱子是环境美术，尚未新增商店交互。自动测试只能确认落点约束、深度投影和资源生命周期，最终美术质量仍需结合实机画面判断。</p></section>
+</main><script type="module">
+import plan from '../../map-concepts/howling-abyss-target-v1/component-plan.json';
+import { ART_GUARDIANS, ART_PIERS, ART_BRAZIERS, ART_CRYSTALS, ART_OUTER_U } from '../../../src/render-three/PaintedMapLayout.ts';
+import overview from '../../map-concepts/howling-abyss-target-v1/01-overview.png?url';
+import sanctuary from '../../map-concepts/howling-abyss-target-v1/02-sanctuary.png?url';
+import towerRef from '../../map-concepts/howling-abyss-target-v1/03-outer-tower.png?url';
+import central from '../../map-concepts/howling-abyss-target-v1/04-central-bridge.png?url';
+import altar from './sanctuary-altar.png?url';import wall from './sanctuary-backwall.png?url';import paving from './sanctuary-paving.png?url';import tower from './combat-tower.png?url';import broken from './broken-parapet.png?url';
+const $=id=>document.getElementById(id), urls=[overview,sanctuary,towerRef,central], runtimeScenes=['overview','sanctuary','sample','central'];
+plan.scenes.forEach((s,i)=>$('scene').add(new Option(`${i+1} · ${s.id}`,String(i))));
+function show(){const i=Number($('scene').value),s=plan.scenes[i];$('reference').src=urls[i];$('native').href=urls[i];$('role').textContent=s.role;$('play').href=`../../../three.html?map=howling&scene=${runtimeScenes[i]}`;$('overlay').innerHTML=s.landmarks.map(([x,y,label],j)=>`<g><circle cx="${x}" cy="${y}" r="15"/><text x="${Math.min(1700,x+24)}" y="${y-16}">${j+1} ${label}</text></g>`).join('');}
+$('scene').onchange=show;$('pins').onchange=()=>{$('overlay').style.display=$('pins').checked?'block':'none'};show();
+const names={reuse:'复用 / 独立 UV',generate:'本轮生成',geometry:'几何拼接',shader:'渲染层'};
+$('components').innerHTML=plan.components.map(c=>`<tr><td>${c.name}</td><td>${c.refs.map(n=>String(n).padStart(2,'0')).join(' / ')}</td><td class="tag">${names[c.mode]}</td><td><code>${c.asset}</code><br>${c.note}</td></tr>`).join('');
+$('assets').innerHTML=[['晶坛与短阶',altar],['双神龛后墙',wall],['正俯视圆铺地',paving],['战斗塔',tower],['旧残墙（已停用）',broken]].map(([name,url])=>`<article class="card"><img src="${url}" alt="${name}"><h3>${name}</h3><a href="${url}" target="_blank" rel="noopener">查看原图与透明边缘 ↗</a></article>`).join('');
+const X=u=>720+u*.88,Y=v=>190+v*.57;
+let svg='<path d="M86 95 L1354 95 L1354 285 L86 285 Z" fill="#394a60" stroke="#91a4bd"/><path d="M86 95 L306 120 L1134 120 L1354 95 M86 285 L306 260 L1134 260 L1354 285" fill="none" stroke="#6f8aa3"/>';
+for(const side of ART_PIERS)for(const u of side.nodes)svg+=`<rect x="${X(u)-3}" y="${Y(side.side*122)-7}" width="6" height="14" fill="#7b91ac"/>`;
+for(const u of[-580,580])svg+=`<circle cx="${X(u)}" cy="190" r="44" fill="none" stroke="#8fd5ed"/><path d="M${X(u)} 165 l13 25 -13 25 -13 -25Z" fill="#78d1ff"/><text x="${X(u)-44}" y="325">圣所</text>`;
+for(const u of[-ART_OUTER_U,ART_OUTER_U])svg+=`<rect x="${X(u)-13}" y="177" width="26" height="26" fill="#d5c99f"/><text x="${X(u)-24}" y="325">外塔</text>`;
+svg+='<circle cx="720" cy="190" r="36" fill="none" stroke="#b5bdce"/><text x="650" y="360">中央单个圆纹章</text>';
+for(const p of ART_GUARDIANS)svg+=`<circle cx="${X(p.u)}" cy="${Y(p.v)}" r="12" fill="#f1be6e"/><text x="${X(p.u)-30}" y="${Y(p.v)+(p.v<0?-25:38)}">兽柱</text>`;
+for(const p of ART_BRAZIERS)svg+=`<circle cx="${X(p.u)}" cy="${Y(p.v)}" r="4" fill="#ee8e4e"/>`;
+for(const p of ART_CRYSTALS)svg+=`<path d="M${X(p.u)} ${Y(p.v)-8} l5 8 -5 8 -5 -8Z" fill="#7dd9f4"/>`;
+$('layout').innerHTML=svg;
+</script></body></html>

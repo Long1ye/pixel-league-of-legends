@@ -1,0 +1,27 @@
+{
+  "file": "parapet-run.png",
+  "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1435f-dfea-77e0-85b1-67e1d730a72b\\exec-abe0d334-f224-4605-b0b0-d360db6f133a.png",
+  "generator": "built-in image_gen",
+  "reference": "assets/map-concepts/howling-abyss-target-v1/04-central-bridge.png",
+  "builtinImageCalls": 1,
+  "externalPaidRequests": 0,
+  "size": [
+    1919,
+    820
+  ],
+  "mode": "RGBA",
+  "alphaRange": [
+    0,
+    255
+  ],
+  "transparentFraction": 0.7626043798218076,
+  "sha256": "c8dd59a86f5d1782097e354d4610958875ed633e2a98f8a5c18c3a2f87fb97de",
+  "byteIdentical": true,
+  "runtimeCrop": [
+    600,
+    0,
+    1470,
+    820
+  ],
+  "note": "Original raster preserved; panel cuts are chosen in shader UV geometry, not exported raster crops."
+}

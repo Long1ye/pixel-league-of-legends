@@ -1,0 +1,13 @@
+
+> pixel-midline-solo@0.1.0 test
+> vitest run --run tests/three-healthbar-stability.test.ts tests/three-actor-depth.test.ts tests/three-coordinates.test.ts
+
+
+ RUN  v5.0.3 D:/Long1ye/pixel-league-of-legends-V2
+
+
+ Test Files  3 passed (3)
+      Tests  12 passed (12)
+   Start at  14:41:39
+   Duration  1.54s (transform 76%, import 19%, tests 3%, worker 1%)
+

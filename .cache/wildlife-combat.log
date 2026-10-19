@@ -1,0 +1,132 @@
+{
+  "paused": true,
+  "contextState": "running",
+  "audioFiles": 4,
+  "frames": [
+    {
+      "name": "q-draw",
+      "time": 0.21666666666666665,
+      "calls": 68,
+      "geometry": 68,
+      "textures": 25,
+      "cards": []
+    },
+    {
+      "name": "q-contact",
+      "time": 0.4833333333333333,
+      "calls": 73,
+      "geometry": 71,
+      "textures": 28,
+      "cards": [
+        "combat-qWind",
+        "combat-qWindHit"
+      ]
+    },
+    {
+      "name": "wind-wall",
+      "time": 1.566666666666666,
+      "calls": 72,
+      "geometry": 70,
+      "textures": 30,
+      "cards": [
+        "combat-wall",
+        "combat-wall"
+      ]
+    },
+    {
+      "name": "q3-ready",
+      "time": 0.03333333333333333,
+      "calls": 68,
+      "geometry": 70,
+      "textures": 30,
+      "cards": []
+    },
+    {
+      "name": "tornado",
+      "time": 0.4333333333333333,
+      "calls": 70,
+      "geometry": 70,
+      "textures": 31,
+      "cards": [
+        "combat-tornado"
+      ]
+    },
+    {
+      "name": "ultimate",
+      "time": 1.3000000000000003,
+      "calls": 70,
+      "geometry": 70,
+      "textures": 33,
+      "cards": [
+        "combat-tornado"
+      ]
+    },
+    {
+      "name": "eq3",
+      "time": 0.5833333333333335,
+      "calls": 79,
+      "geometry": 77,
+      "textures": 39,
+      "cards": [
+        "approved-eq3-layer",
+        "approved-eq3-layer"
+      ]
+    },
+    {
+      "name": "shield-ignite",
+      "time": 0.35,
+      "calls": 69,
+      "geometry": 74,
+      "textures": 36,
+      "cards": []
+    },
+    {
+      "name": "flash",
+      "time": 0.44999999999999996,
+      "calls": 71,
+      "geometry": 76,
+      "textures": 36,
+      "cards": []
+    },
+    {
+      "name": "tower-rubble",
+      "time": 0.03333333333333333,
+      "calls": 70,
+      "geometry": 98,
+      "textures": 42,
+      "cards": []
+    },
+    {
+      "name": "fire-and-environment",
+      "time": 0.16666666666666666,
+      "calls": 75,
+      "geometry": 109,
+      "textures": 47,
+      "cards": []
+    }
+  ],
+  "resources": [
+    {
+      "geometry": 107,
+      "textures": 47
+    },
+    {
+      "geometry": 107,
+      "textures": 47
+    },
+    {
+      "geometry": 107,
+      "textures": 47
+    },
+    {
+      "geometry": 107,
+      "textures": 47
+    },
+    {
+      "geometry": 107,
+      "textures": 47
+    }
+  ],
+  "errors": [],
+  "failed": []
+}

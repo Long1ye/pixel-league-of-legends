@@ -1,0 +1,27 @@
+
+ RUN  v5.0.3 D:/Long1ye/pixel-league-of-legends-V2
+
+ ❯ tests/three-snow-banks.test.ts (2 tests | 1 failed) 101ms
+   × shares its texture with contact shadows, remains depth-tested and releases owned resources once 69ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/three-snow-banks.test.ts > shares its texture with contact shadows, remains depth-tested and releases owned resources once
+Error: The vi.spyOn() function could not find an object to spy upon. The first argument must be defined.
+ ❯ tests/three-snow-banks.test.ts:33:92
+     31|   const quality = new QualitySettings(), snow = new SnowBanks(quality,…
+     32|   const children = snow.group.children as Mesh<import('three').BufferG…
+     33|   const textureDispose = vi.spyOn(map, 'dispose'), geometryDisposes = …
+       |                                                                                            ^
+     34|   expect(children).toHaveLength(2);
+     35|   expect(children.every(m => m.material.map === map && m.material.dept…
+ ❯ tests/three-snow-banks.test.ts:33:80
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 7 passed (8)
+   Start at  16:07:03
+   Duration  1.41s (tests 76%, transform 18%, import 7%)
+

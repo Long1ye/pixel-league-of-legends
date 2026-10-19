@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_3ecdf44c4d0f45cfb08d70d1e7692707",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\map-modules\\arpg-s01-v1\\generated\\floor\\64x64_seamless_pixel_art_texture_of_broad_weathered_blue_grey_medieval_flagstones_dark_narrow_joints_restraine_e2490620\\texture.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

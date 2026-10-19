@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_131f3338682e4fa8aad5535bfa64cc1b",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\map-modules\\arpg-s01-v1\\generated\\wall\\64x64_seamless_pixel_art_texture_of_heavy_ancient_blue_grey_masonry_blocks_deep_recessed_joints_worn_stone_edg_d9ddc0b5\\texture.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

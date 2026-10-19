@@ -1,0 +1,35 @@
+
+> pixel-midline-solo@0.1.0 test
+> vitest run
+
+
+ RUN  v5.0.3 D:/Long1ye/pixel-league-of-legends-V2
+
+ ❯ tests/minion-normal-waves.test.ts (1 test | 1 failed) 5865ms
+   × keeps normal Howling waves fighting and separated across successive reinforcements 5864ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/minion-normal-waves.test.ts > keeps normal Howling waves fighting and separated across successive reinforcements
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/minion-normal-waves.test.ts:4:1
+      2| afterEach(()=>{vi.unstubAllGlobals();vi.resetModules();});
+      3|
+      4| it('keeps normal Howling waves fighting and separated across successiv…
+       | ^
+      5|  vi.stubGlobal('location',{search:'?map=howling'});vi.resetModules();
+      6|  const {Match}=await import('../src/game/Match');
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 116 passed (117)
+      Tests  1 failed | 681 passed (682)
+   Start at  12:14:15
+   Duration  7.79s (transform 69%, tests 18%, import 13%, worker 1%)
+
+  Transform  transforming modules took 51.70s · 69% of tracked time, re-done on every run
+             persist transforms across runs with fsModuleCache: true
+             learn more: https://vitest.dev/guide/improving-performance#caching-between-reruns
+

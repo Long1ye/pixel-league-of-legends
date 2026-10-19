@@ -7,6 +7,9 @@ export default defineConfig({
     chunkSizeWarningLimit: 1500,
     rolldownOptions: { input: {
       game: 'index.html',
+      threePrototype: 'three.html',
+      howlingComponentsV4: 'assets/map-modules/howling-painted-v4/index.html',
+      howlingDetailConcepts: 'assets/map-concepts/howling-detail-v1/index.html',
       auraSummoners: 'assets/effects/yasuo-aura-summoners-2026-10-15/index.html',
       windWallV2: 'assets/effects/wind-wall-v2-2026-10-15/index.html',
       passiveShield: 'assets/effects/yasuo-passive-shield-2026-10-15/index.html',

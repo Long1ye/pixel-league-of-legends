@@ -33,7 +33,9 @@ export class OriginalCombatAudio {
   })).then(()=>{}).catch(()=>{this.failed=true;});
   return this.loading;
  }
- play(event:GameEvent,context:AudioContext):boolean{
+ play(event:GameEvent,context:AudioContext,speechHandled=false):boolean{
+  // The old user Q/R recordings contain speech; the new VO bank owns that lane.
+  if(speechHandled&&event.type==='cast'&&(event.ability==='q'||event.ability==='r'))return true;
   if(!originalHeroEvent(event))return false;
   const name=originalSound(event,this.qVariant);
   // Cast recordings are retained; actual skill contacts get a short procedural accent.

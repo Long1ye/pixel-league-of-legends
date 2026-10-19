@@ -1,7 +1,7 @@
 import type {Entity,Point} from './types';
 
 /** A spread of reachable E anchors, with a readable frontline and a softer backline. */
-export const MINION_LANE={spacing:34,backline:58,leash:110,heroNotice:86,marchMultiplier:44/28,allySpacing:26,targetCrowdingCost:26} as const;
+export const MINION_LANE={spacing:34,backline:58,leash:145,heroNotice:115,marchMultiplier:44/28,allySpacing:26,targetCrowdingCost:26} as const;
 /** Reinforcements travel briskly; target approach and combat footwork keep their readable pace. */
 export function minionMovementSpeed(unit:Entity,engaged=unit.targetId!==null):number{
  return unit.speed*(unit.formation&&!engaged?MINION_LANE.marchMultiplier:1);

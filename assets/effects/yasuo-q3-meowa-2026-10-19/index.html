@@ -1,0 +1,11 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>亚索 Q3 · Meowa 素材预览</title>
+<style>body{margin:28px;background:#253139;color:#e0e6df;font:16px system-ui}section{display:flex;gap:28px;align-items:flex-start}canvas{background:repeating-conic-gradient(#303c43 0% 25%,#354149 0% 50%) 0/24px 24px;image-rendering:pixelated}a{color:#b5dcd4}button{padding:8px 16px;margin-bottom:18px}</style>
+<h1>亚索 Q3 · Meowa 生成版</h1><p>八帧旋风循环与四帧击飞风流，按原始像素尺寸慢放检查。</p><button id="pause">暂停</button>
+<section><div><p>旋风 · 八帧</p><canvas id="tornado" width="256" height="512"></canvas></div><div><p>命中 · 四帧</p><canvas id="hit" width="512" height="512"></canvas></div></section>
+<p><a href="/three.html?map=howling&scene=combat">进入实机，普通 Q 命中两次蓄风后再按 Q</a></p>
+<script type="module">
+let playing=true,frame=0;document.querySelector('#pause').onclick=()=>{playing=!playing;document.querySelector('#pause').textContent=playing?'暂停':'播放'};
+const sheets=await Promise.all(['tornado','hit'].map(async key=>{const image=new Image();image.src=`./runtime/${key}-atlas.png`;await image.decode();return {image,canvas:document.querySelector(`#${key}`),frames:key==='hit'?4:8,cols:key==='hit'?2:4}}));
+function draw(){for(const {image,canvas,frames,cols} of sheets){const context=canvas.getContext('2d'),i=frame%frames;context.clearRect(0,0,canvas.width,canvas.height);context.drawImage(image,i%cols*canvas.width,Math.floor(i/cols)*canvas.height,canvas.width,canvas.height,0,0,canvas.width,canvas.height)}}
+draw();setInterval(()=>{if(playing){frame++;draw()}},125);window.meowaReady=true;
+</script></html>

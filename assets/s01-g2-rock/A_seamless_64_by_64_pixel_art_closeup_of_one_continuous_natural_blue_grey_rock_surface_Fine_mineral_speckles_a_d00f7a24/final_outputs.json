@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_fdeb815cd8d34e8291fa9223d9fe112e",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\s01-g2-rock\\A_seamless_64_by_64_pixel_art_closeup_of_one_continuous_natural_blue_grey_rock_surface_Fine_mineral_speckles_a_d00f7a24\\texture.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

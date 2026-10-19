@@ -1,0 +1,17 @@
+
+> pixel-midline-solo@0.1.0 test
+> vitest run --maxWorkers=4
+
+
+ RUN  v5.0.3 D:/Long1ye/pixel-league-of-legends-V2
+
+
+ Test Files  118 passed (118)
+      Tests  684 passed (684)
+   Start at  12:31:42
+   Duration  9.83s (tests 41%, transform 38%, import 18%, worker 2%)
+
+  Transform  transforming modules took 7.03s · 38% of tracked time, re-done on every run
+             persist transforms across runs with fsModuleCache: true
+             learn more: https://vitest.dev/guide/improving-performance#caching-between-reruns
+

@@ -476,6 +476,7 @@ window.addEventListener('keydown', event => {
   if (event.repeat || event.ctrlKey || event.metaKey || event.altKey) return;
   if(event.target instanceof HTMLElement&&event.target.closest('input,textarea,select,[contenteditable]'))return;
   const key = event.key.toLowerCase();
+  if(['1','2','4'].includes(key)){event.preventDefault();audio.emote(key==='1'?'joke':key==='2'?'taunt':'laugh',match);return;}
   if (['a', 'q', 'w', 'e', 's', 'y', ' ', 'escape', 'enter', 'arrowleft', 'arrowright', 'arrowup', 'arrowdown'].includes(key)) event.preventDefault();
   if(['q','w','e','r','s'].includes(key))scene.attackSelecting=false;
   if(key==='escape'&&scene.attackSelecting){scene.attackSelecting=false;return;}

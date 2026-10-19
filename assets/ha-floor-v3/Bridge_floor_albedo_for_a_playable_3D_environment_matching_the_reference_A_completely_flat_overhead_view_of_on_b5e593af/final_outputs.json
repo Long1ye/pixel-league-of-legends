@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_4b8bc43437754ba583290e20a725fe77",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\ha-floor-v3\\Bridge_floor_albedo_for_a_playable_3D_environment_matching_the_reference_A_completely_flat_overhead_view_of_on_b5e593af\\result_images_0_url.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

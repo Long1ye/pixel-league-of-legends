@@ -1,5 +1,6 @@
 import type {Entity,GameEvent,ImpactKind,Point,Team} from '../game/types';
 import {circleHit} from '../game/WindWall';
+import {YASUO_Q_CAST_SECONDS} from '../game/YasuoQ';
 
 /** Predict the first contact along the existing Q ray, solely to time its artwork. */
 export function qContactDelay(source:Point&{team:Team},facing:number,targets:readonly Entity[],range:number,speed:number){
@@ -33,7 +34,7 @@ interface Contact {at:number;kind:ImpactKind;direction:Point;heroSource:boolean}
 export class CombatFeel {
  private contacts=new Map<number,Contact>();
  private holds=new Map<number,{at:number;duration:number;kind:ImpactKind}>();
- private qCasts=new Map<number,{startedAt:number;delay:number;contactAt?:number}>();
+ private qCasts=new Map<number,{startedAt:number;delay:number;contactAt?:number;facing?:number}>();
  private clock=-1;
  reset(){this.contacts.clear();this.holds.clear();this.qCasts.clear();this.clock=-1;}
  update(time:number){
@@ -54,7 +55,19 @@ export class CombatFeel {
    if(!previous||at-previous.at>.12)this.holds.set(event.sourceId,{at,duration:impactProfile(kind).hold,kind});
   }
  }
- beginQ(id:number,startedAt:number,delay:number){this.qCasts.set(id,{startedAt,delay});}
+ beginQ(id:number,startedAt:number,delay:number,facing?:number){this.qCasts.set(id,{startedAt,delay,facing});}
+ /** Movement recovery may clear gameplay Q before its remaining artwork ends. */
+ qPresentation(hero:Entity,time:number):Entity['qCast']{
+  const cast=this.qCasts.get(hero.id);
+  if(hero.hp<=0||hero.eCast||hero.eqCast||hero.rCast||hero.wCast||hero.q3Cast||
+    (hero.airborneUntil??0)>time||(!hero.qCast&&(hero.flinchUntil??0)>time)||
+    (cast&&hero.attackStartedAt!==null&&hero.attackStartedAt>cast.startedAt)){
+   this.qCasts.delete(hero.id);return null;
+  }
+  if(hero.qCast)return hero.qCast;
+  if(!cast||cast.facing===undefined||time<cast.startedAt||time>=cast.startedAt+YASUO_Q_CAST_SECONDS)return null;
+  return {startedAt:cast.startedAt,facing:cast.facing,hit:true};
+ }
  qAge(id:number,startedAt:number,now:number,flashAge:number,duration:number){
   const cast=this.qCasts.get(id),age=Math.max(0,now-startedAt);
   if(!cast||cast.startedAt!==startedAt)return age;

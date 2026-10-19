@@ -37,6 +37,10 @@ export interface Entity extends Point {
   wCast?: { startedAt: number; facing: number } | null;
   eCast?: import('./YasuoE').DashCast | null;
   airborneUntil?: number;
+  /** Presentation-only launch clock/direction; control still uses airborneUntil. */
+  airborneStartedAt?: number;
+  airborneDirection?: Point;
+  airborneHold?: { at: number; fromUntil: number };
   rCast?: { startedAt:number; targetIds:number[]; hit:boolean } | null;
   eqCast?: { startedAt: number; triggerAt: number; endsAt: number; eStartedAt: number; facing: number; hit: boolean; empowered?: boolean;critical?:boolean } | null;
   destination: Point | null;

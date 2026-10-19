@@ -5,7 +5,7 @@ import { YASUO_R,findYasuoRTarget } from './YasuoR';
 import { HOMEGUARD, homeguardActive, updateHomeguard } from './Homeguard';
 import { clearStorm, grantStorm, stormReady, STORM } from './YasuoStorm';
 import { E, EQ, dashEndpoint, isDashing, pickDashTarget } from './YasuoE';
-import { bridgeDetour, clearBridgeFootprints } from './BridgeInteraction';
+import { bridgeDetour, clearBridgeFootprints, bridgeFoundationRadius } from './BridgeInteraction';
 import { circleHit, wallHit, W_CAST_SECONDS, W_DELAY, W_DURATION, type WindWall } from './WindWall';
 import {UNIT_METRICS,basicAttackReach} from './UnitMetrics';
 import {gainFlow,absorbWithPassive,yasuoCritStats} from './YasuoPassive';
@@ -332,7 +332,7 @@ export class Match {
       hero.rCast={startedAt:this.time,targetIds:victims.map(e=>e.id),hit:false};
       hero.flow=100;
       clearStorm(hero);
-      for(const v of victims){v.airborneUntil=this.time+YASUO_R.airborneDuration;v.windup=0;v.attackTargetId=null;}
+      for(const v of victims){v.airborneStartedAt??=this.time-.16;v.airborneHold={at:this.time,fromUntil:v.airborneUntil??this.time};v.airborneUntil=this.time+YASUO_R.airborneDuration;v.windup=0;v.attackTargetId=null;}
       const arrival=clampPoint({x:target.x+YASUO_R.offsetX,y:target.y+YASUO_R.offsetY});
       Object.assign(hero,HOWLING_MAP?clampPoint(clearBridgeFootprints(arrival,hero.radius,hero.id)):arrival);hero.facing=Math.PI*.75;
       hero.eCast=null;hero.eqCast=null;hero.qCast=null;hero.q3Cast=null;hero.wCast=null;hero.destination=null;hero.targetId=null;hero.windup=0;hero.attackTargetId=null;this.clearAttackPresentation(hero);
@@ -435,6 +435,7 @@ export class Match {
     target.eqCast = null;
     target.rCast = null;
     target.airborneUntil = 0;
+    target.airborneStartedAt = undefined; target.airborneDirection = undefined; target.airborneHold = undefined;
     target.flow=0;target.passiveShield=0;target.passiveShieldUntil=0;
     this.events.push({ type: 'kill', team: source.team, x: target.x, y: target.y,...feedback });
     if(target.kind==='hero'){this.deaths[target.team]++;if(source.kind==='hero')this.kills[source.team]++;}
@@ -502,7 +503,11 @@ export class Match {
     for(const victim of this.entities)if(victim.hp>0&&victim.team!==entity.team&&victim.kind!=='tower'&&distance(entity,victim)<=EQ.radius+victim.radius){
       connected=true;
       this.damage(entity,victim,ABILITIES.q.damage,false,eq.empowered?'eq3':'eq',eq.critical);
-      if(eq.empowered&&victim.hp>0){victim.airborneUntil=this.time+STORM.knockup;victim.windup=0;victim.attackTargetId=null;}
+      if(eq.empowered&&victim.hp>0){
+        const dx=victim.x-entity.x,dy=victim.y-entity.y,length=Math.hypot(dx,dy);
+        victim.airborneStartedAt=this.time;victim.airborneHold=undefined;victim.airborneDirection=length>.001?{x:dx/length,y:dy/length}:{x:Math.cos(entity.facing),y:Math.sin(entity.facing)};
+        victim.airborneUntil=this.time+STORM.knockup;victim.windup=0;victim.attackTargetId=null;
+      }
     }
     if(connected&&!eq.empowered)grantStorm(entity,this.time);
   }
@@ -513,7 +518,9 @@ export class Match {
     const lane=direction(BASES[unit.team],BASES[enemyOf(unit.team)]);
     const inLaneColumn=(e:Entity)=>!unit.formation||e.kind==='hero'||e.kind==='tower'
       ||Math.abs((e.x-unit.formation.goal.x)*-lane.y+(e.y-unit.formation.goal.y)*lane.x)<=MINION_LANE.spacing*2;
-    const candidates = this.entities.filter(e => e.hp > 0 && e.team !== unit.team && distance(e, unit) <= radius + e.radius
+    // Hero notice must also apply to standalone/practice melee soldiers; their
+    // short minion-vs-minion scan is not their hero awareness distance.
+    const candidates = this.entities.filter(e => e.hp > 0 && e.team !== unit.team && distance(e, unit) <= (minion && e.kind === 'hero' ? MINION_LANE.heroNotice : radius + this.targetRadius(e,unit))
       &&(!minion||inLaneColumn(e))
       &&(!minion||e.kind!=='hero'||distance(unit,e)<=MINION_LANE.heroNotice&&(!unit.formation||distance(unit.formation.goal,e)<=MINION_LANE.leash)));
     if(minion&&unit.aggroUntil>this.time){
@@ -649,7 +656,7 @@ export class Match {
       if(unit.kind!=='hero'&&unit.attackTargetId!==target.id){
         unit.windup=0;unit.attackTargetId=null;this.clearAttackPresentation(unit);return;
       }
-      if (distance(unit, target) > basicAttackReach(unit,target,true)) {
+      if (distance(unit, target) > this.attackReach(unit,target,true)) {
         unit.windup = 0;
         unit.attackTargetId = null;
         this.clearAttackPresentation(unit);
@@ -664,7 +671,7 @@ export class Match {
         if(unit.kind==='hero')this.events.push({type:'attack',team:unit.team,x:unit.x,y:unit.y,at:this.time,sourceId:unit.id,sourceKind:unit.kind,targetId:target.id,targetKind:target.kind,impact:'attack'});
         if (unit.kind === 'melee' || unit.kind === 'hero') this.damage(unit, target, unit.damage);
         else this.projectiles.push({ id: this.nextId++, sourceId: unit.id, team: unit.team,
-          kind: 'attack', x: unit.x, y: unit.y - 4, targetId: target.id,
+          kind: 'attack', startedAt: this.time, x: unit.x, y: unit.y - 4, targetId: target.id,
           damage: unit.damage, speed: unit.kind === 'tower' ? 145 : BALANCE.projectileSpeed,
           vx: 0, vy: 0, remaining: 4, radius: unit.kind === 'tower' ? 3 : 1.5 });
       }
@@ -672,7 +679,7 @@ export class Match {
     }
     // Attack spots guide the approach only. Re-seeking them while already in range
     // makes two opponents chase each other's moving spots and drag the fight apart.
-    if (distance(unit, target) <= basicAttackReach(unit,target)) {
+    if (distance(unit, target) <= this.attackReach(unit,target)) {
       if (unit.cooldown <= 0) {
         unit.windup = BALANCE[unit.kind].windup;
         unit.attackTargetId = target.id;
@@ -682,6 +689,15 @@ export class Match {
     } else if (unit.speed > 0) {
       this.walk(unit,unit.formation?minionAttackSpot(unit,target,BASES[unit.team],this.entities):target,dt);
     }
+  }
+
+  private attackReach(unit:Entity,target:Entity,releasing=false):number {
+    return basicAttackReach(unit,target,releasing)+this.targetRadius(target,unit)-target.radius;
+  }
+
+  private targetRadius(target:Entity,from:Entity):number {
+    const foundation=HOWLING_MAP&&target.kind==='tower'?bridgeFoundationRadius(target,from):null;
+    return Math.max(target.radius,foundation??target.radius);
   }
 
   private walk(unit: Entity, target: Point, dt: number): void {
@@ -737,7 +753,7 @@ export class Match {
           const hit=circleHit(from,to,victim,victim.radius+shot.radius);
           if(hit===null||hit>=wallFraction)continue;
           (shot.hitIds??=[]).push(victim.id);this.damage(source,victim,shot.damage,false,'q3',shot.critical);
-          if(victim.hp>0){victim.airborneUntil=this.time+STORM.knockup;victim.windup=0;victim.attackTargetId=null;}
+          if(victim.hp>0){victim.airborneStartedAt=this.time;victim.airborneHold=undefined;victim.airborneDirection={x:shot.vx,y:shot.vy};victim.airborneUntil=this.time+STORM.knockup;victim.windup=0;victim.attackTargetId=null;}
         }
         shot.remaining-=distance(from,end);shot.x=end.x;shot.y=end.y;
         if(wallFraction>1&&shot.remaining>0)survivors.push(shot);

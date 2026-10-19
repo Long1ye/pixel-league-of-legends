@@ -1,0 +1,63 @@
+{
+  "generator": "built-in image_gen",
+  "builtinImageCalls": 4,
+  "externalPaidRequests": 0,
+  "assets": [
+    {
+      "file": "04-straight-wall-banners.png",
+      "title": "直墙挂旗与铁链",
+      "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1435f-dfea-77e0-85b1-67e1d730a72b\\exec-df748626-0884-4327-943a-9586a496f15b.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "80db851183e92be32eed6ac1d9aeb5f7734d1a98daa0332ad1af4ae313448c83",
+      "byteIdentical": true,
+      "prompt": "04-straight-wall-banners.prompt.txt",
+      "role": "straight-wall detail concept only; not runtime sprite"
+    },
+    {
+      "file": "05-straight-wall-frost-garden.png",
+      "title": "直墙霜草与矮植",
+      "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1435f-dfea-77e0-85b1-67e1d730a72b\\exec-03085e95-a418-4de5-bc82-53e0272668b5.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "210b5834b76e4f375a4a1b0d61069b69c5147db7146f1b8f61882f5a83ffac03",
+      "byteIdentical": true,
+      "prompt": "05-straight-wall-frost-garden.prompt.txt",
+      "role": "straight-wall detail concept only; not runtime sprite"
+    },
+    {
+      "file": "06-straight-wall-winter-wear.png",
+      "title": "直墙积雪与路面磨损",
+      "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1435f-dfea-77e0-85b1-67e1d730a72b\\exec-5b71678f-8d35-474a-937b-4689cb613b50.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "97fc1b806cbf37a155889e898da6fcca2309c47ba02b22870cb6dbb2125de428",
+      "byteIdentical": true,
+      "prompt": "06-straight-wall-winter-wear.prompt.txt",
+      "role": "straight-wall detail concept only; not runtime sprite"
+    },
+    {
+      "file": "07-straight-wall-supplies.png",
+      "title": "直墙补给与暖光",
+      "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1435f-dfea-77e0-85b1-67e1d730a72b\\exec-88905fc2-0721-4070-b389-dd0b6e033a9e.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "5fd4dce51fe553aa6755ea13c2f1e98013b91ec9be665d20aa2f7c5e580242fd",
+      "byteIdentical": true,
+      "prompt": "07-straight-wall-supplies.prompt.txt",
+      "role": "straight-wall detail concept only; not runtime sprite"
+    }
+  ]
+}

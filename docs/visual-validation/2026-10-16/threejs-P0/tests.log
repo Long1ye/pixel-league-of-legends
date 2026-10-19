@@ -1,0 +1,22 @@
+
+> pixel-midline-solo@0.1.0 test
+> vitest run
+
+
+ RUN  v5.0.3 D:/Long1ye/pixel-league-of-legends-V2
+
+
+ Test Files  112 passed (112)
+      Tests  660 passed (660)
+   Start at  11:24:20
+   Duration  4.42s (transform 59%, tests 24%, import 16%, worker 2%)
+
+  Transform  transforming modules took 21.29s · 59% of tracked time, re-done on every run
+             persist transforms across runs with fsModuleCache: true
+             learn more: https://vitest.dev/guide/improving-performance#caching-between-reruns
+
+npm notice
+npm notice New minor version of npm available! 11.9.0 -> 11.21.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.21.1
+npm notice To update run: npm install -g npm@11.21.1
+npm notice

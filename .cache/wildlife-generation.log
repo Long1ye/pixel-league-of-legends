@@ -1,0 +1,13 @@
+[INFO] planned_output_dir=assets\map-modules\howling-wildlife-v1\source\A_game_sprite_sheet_of_one_small_winter_raven_dark_charcoal_feathers_with_readable_slate_blue_highlights_pale_33d90fb9
+[WARN] Your Meowa game-assets Skill is not the latest version. Installed: 2026.10.14.1; latest: 2026.10.16.1. Updating is recommended, but this command will continue.
+[INFO] submitted api_job_id=job_9e8b0dff26f8461a82a948dd955ae1f9
+[INFO] status=running stage=processing progress=������:50%
+[INFO] status=running stage=processing progress=������:50%
+[INFO] status=running stage=processing progress=������:50%
+[INFO] status=running stage=processing progress=������:50%
+[INFO] status=running stage=processing progress=������:50%
+[INFO] status=running stage=processing progress=������:50%
+[INFO] status=success stage=completed progress=�����:100%
+[INFO] downloading_outputs count=2 to=assets\map-modules\howling-wildlife-v1\source\A_game_sprite_sheet_of_one_small_winter_raven_dark_charcoal_feathers_with_readable_slate_blue_highlights_pale_33d90fb9
+[ERROR] [Errno 2] No such file or directory: 'assets\\map-modules\\howling-wildlife-v1\\source\\A_game_sprite_sheet_of_one_small_winter_raven_dark_charcoal_feathers_with_readable_slate_blue_highlights_pale_33d90fb9\\result_images_0_url.bin.3d2d2c40700a4eaa8e410b7091ca95f1.part'
+[WARN] This error may be caused by the outdated Skill version (2026.10.14.1; latest: 2026.10.16.1); update the Skill and retry: https://github.com/Meowa-AI/meowa-skills

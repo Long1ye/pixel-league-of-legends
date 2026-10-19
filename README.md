@@ -1,5 +1,9 @@
 # MIDLINE 像素中路 Solo
 
+持续画质优化入口：[Three.js 画质优化与维护](docs/threejs-quality-roadmap.md)。记录 18 项能力的实际采用状态、验收、参数与回退；本轮加入接地、局部暗部、视野阴影、材质响应、建筑光晕和调色，并提供基础/优化对照与独立细项开关。
+
+2026-10-19：Three.js 冰桥已复用成熟战斗特效与音频，加入角色环境融合、风雪与峡谷视差、冰晶微光和轻量画质档。试玩 `/three.html?map=howling&scene=match`；固定靶使用 `scene=combat`。支持 QWER、D/F、3 吹箫，声音在首次点击或按键后解锁。[迁移及验证记录](docs/visual-validation/2026-10-19/combat-migration/README.md)。根页面仍保留原版本。
+
 浏览器单机中路对线 Demo。玩家控制蓝方亚索美术角色，与红方占位 AI 对战，先取得一血、摧毁对方防御塔或补到 100 刀即可获胜。Q/W/E 和战斗数值仍是原型规则，不是亚索正式技能。
 
 当前为森林地图试玩版本：已接入第一张 Meowa 像素地图样稿，移动、普攻、兵线、补刀、防御塔、胜负结算、Q W E 和 AI 已接通。地形与可攻击的防御塔分层。蓝方亚索复用已有八向待机/走路，并使用用户选定的A/B攻击动画；红方英雄、小兵与塔仍是程序绘制的占位像素资源。完整八向攻击、拔刀/收刀衔接、地形碰撞与最终数值平衡仍在后续阶段。
@@ -58,6 +62,8 @@ npm run preview
 
 ## 代码与文档
 
+- [Three.js 像素 ARPG 画面重构流程](docs/threejs-visual-refactor.md)：阶段、素材与坐标契约、验收和执行台账；P1 必要工程检查完成，P2 首版样板已接入，实机与风格验收待补。
+- Three.js 样板入口：开发服务器的 `/three.html?map=howling`，默认显示 S01 灰烬石桥，可切换 P1 灰盒；原游戏入口保留。详见 [P2 样板记录](docs/visual-validation/2026-10-16/threejs-P2/README.md) 与 [P1 验证记录](docs/visual-validation/2026-10-16/threejs-P1/README.md)。
 - `src/game/`：不依赖浏览器的比赛模拟、战斗、兵线、技能与 AI。
 - `src/render/`：Phaser 场景、纯镜头坐标逻辑、地图底图、单位与效果。
 - `src/ui/`：音效反馈；DOM HUD 与操作连接位于 `src/main.ts`。

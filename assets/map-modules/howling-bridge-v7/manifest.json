@@ -1,0 +1,38 @@
+{
+  "asset": "arch-support.png",
+  "generator": "built-in image_gen",
+  "size": [
+    1778,
+    885
+  ],
+  "mode": "RGBA",
+  "sha256": "ed86f8053a32883b9c554bd63a21897db08a61f141bf1e1eb9dde964fb881e55",
+  "reference": "../howling-painted-v6/parapet-run.png",
+  "attachment": {
+    "left": 200,
+    "right": 1600,
+    "line": "sourceY = 488 - sourceX * 0.261",
+    "nominalSpan": 128,
+    "worldTop": 1.2,
+    "cameraFacingDepthOffset": 0.15
+  },
+  "validation": {
+    "opaque_attachment_samples": 11208,
+    "transparent_attachment_samples": 0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "open_arch_alpha": 0,
+    "focused_tests": "5 files, 15 passed",
+    "build": "TypeScript and Vite passed",
+    "live_views": [
+      "central",
+      "outer tower",
+      "blue sanctuary"
+    ],
+    "browser_errors_and_warnings": 0,
+    "screenshots": "docs/visual-validation/2026-10-19/bridge-v7/"
+  },
+  "integration": "No filler stringcourse; ordinary footing has no projecting lip. Reproject masonry courses to the shared bridge axis and flared edge."
+}

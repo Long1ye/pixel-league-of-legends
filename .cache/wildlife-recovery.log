@@ -1,0 +1,87 @@
+[WARN] Your Meowa game-assets Skill is not the latest version. Installed: 2026.10.14.1; latest: 2026.10.16.1. Updating is recommended, but this command will continue.
+[INFO] status=success stage=completed progress=�����:100%
+[INFO] downloading_outputs count=2 to=.cache\birds\job_9e8b0dff26f8461a82a948dd955ae1f9
+[INFO] downloaded=.cache\birds\job_9e8b0dff26f8461a82a948dd955ae1f9\result_images_0_url.png
+[INFO] saved_dir=.cache\birds\job_9e8b0dff26f8461a82a948dd955ae1f9
+{
+  "job_id": "job_9e8b0dff26f8461a82a948dd955ae1f9",
+  "job_type": "gemini_image",
+  "status": "success",
+  "next_poll_after_seconds": 0,
+  "animation_type": null,
+  "queue": {
+    "position": 0,
+    "estimated_wait_seconds": 0
+  },
+  "progress": {
+    "label": "�����",
+    "percent": 100
+  },
+  "result": {
+    "job_id": "job_9e8b0dff26f8461a82a948dd955ae1f9",
+    "resolution": "1K",
+    "aspect_ratio": "4:3",
+    "image2_quality": "medium",
+    "textParts": [],
+    "images": [
+      {
+        "assetId": "asset_d0b2b356b1d152bb2ba5723940acb1ef",
+        "url": "/api/project-assets/asset_d0b2b356b1d152bb2ba5723940acb1ef/download",
+        "thumbUrl": "/api/project-assets/asset_d0b2b356b1d152bb2ba5723940acb1ef/thumbnail",
+        "mimeType": "image/png",
+        "width": 1024,
+        "height": 768,
+        "byteSize": 1063599
+      }
+    ],
+    "credit_cost": 5,
+    "url": "/api/project-assets/asset_d0b2b356b1d152bb2ba5723940acb1ef/download",
+    "generated_path": "/api/project-assets/asset_d0b2b356b1d152bb2ba5723940acb1ef/download"
+  },
+  "generation_parameters": {
+    "version": 1,
+    "details": [
+      {
+        "key": "resolution",
+        "value": "1K"
+      },
+      {
+        "key": "aspect_ratio",
+        "value": "4:3"
+      },
+      {
+        "key": "quality",
+        "value": "medium"
+      },
+      {
+        "key": "remove_background",
+        "value": "standard"
+      },
+      {
+        "key": "reference_count",
+        "value": 0
+      }
+    ]
+  },
+  "user_prompt": null,
+  "outputs": [
+    {
+      "output_key": "primary",
+      "url": "/api/project-assets/asset_d0b2b356b1d152bb2ba5723940acb1ef/download",
+      "media_type": "image",
+      "mime_type": "image/png",
+      "asset_id": null,
+      "thumb_url": null,
+      "width": null,
+      "height": null,
+      "byte_size": null
+    }
+  ],
+  "error": null,
+  "error_code": null,
+  "error_id": null,
+  "credit_refund": {
+    "refunded": false,
+    "amount": 0
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_aec7aa9da062421a9e8217d41f399a29",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\map-modules\\arpg-s01-ground-v2\\generated\\ice\\A_flat_seamless_64_by_64_pixel_art_material_of_old_blue_grey_thin_ice_with_fine_frost_grains_for_a_dark_fantas_a286450b\\texture.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

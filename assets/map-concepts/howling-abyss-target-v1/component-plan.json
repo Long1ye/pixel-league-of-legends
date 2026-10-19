@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "referenceSize": [2048, 1152],
+  "rules": ["四图是不同构图，不能当作无缝四块地图", "01决定长桥/基地关系，02决定圣所，04决定中央；03保留路面和栏墙布局，弃用纪念碑塔", "参考图坐标为人工视觉标注，不是相机标定结果", "兽像位于栏墙承重节点，中央四座错位，不能每个桥墩都放兽像", "远景人像与可攻击防御塔必须区分"],
+  "components": [
+    {"id":"lane-slate","name":"大石板主路","refs":[1,2,3,4],"mode":"reuse","asset":"howling-target-v2/ground.png","note":"只用外围无徽记UV，保留清晰主路"},
+    {"id":"small-paving","name":"两侧碎石/小砖带","refs":[1,2,3,4],"mode":"reuse","asset":"howling-target-v2/ground.png","note":"边带UV，与雪线共同限定路肩"},
+    {"id":"central-seal","name":"中央破损圆形纹章","refs":[4],"mode":"reuse","asset":"howling-target-v2/ground.png","note":"中央只出现一次"},
+    {"id":"sanctuary-paving","name":"圣所同心圆铺地","refs":[1,2],"mode":"generate","asset":"howling-painted-v4/sanctuary-paving.png","note":"正俯视材质，不能把等距圆图再次压扁"},
+    {"id":"sanctuary-altar","name":"蓝晶祭坛、石台与短阶","refs":[1,2],"mode":"generate","asset":"howling-painted-v4/sanctuary-altar.png","note":"单个组合件，按地台底座中心定位；与圆铺地分离"},
+    {"id":"sanctuary-backwall","name":"双守卫神龛、后墙和储物壁龛","refs":[2],"mode":"generate","asset":"howling-painted-v4/sanctuary-backwall.png","note":"仅圣所后侧，雕像不占主路；储物区域承接商店语义"},
+    {"id":"platform-step","name":"圣所边沿与入场短阶","refs":[2],"mode":"geometry","asset":"procedural-step-edge","note":"厚石台、三阶高差；不抬高战斗碰撞地面"},
+    {"id":"combat-tower","name":"低基座战斗塔","refs":[1,3],"mode":"generate","asset":"howling-painted-v4/combat-tower.png","note":"03人像纪念碑已否定，按01重石火盆塔语言改为紧凑攻击塔"},
+    {"id":"tower-ring","name":"塔位圆铺装","refs":[3],"mode":"reuse","asset":"howling-painted-v4/sanctuary-paving.png","note":"较小比例圆圈，塔位与圣所不同尺寸"},
+    {"id":"guardian","name":"尖耳兽像与雕花高柱","refs":[1,4],"mode":"reuse","asset":"howling-painted-v3/guardian-wall.png","note":"独立UV裁取柱体；04仅四座，禁止均匀十二连发"},
+    {"id":"parapet","name":"积雪栏墙直段","refs":[1,2,3,4],"mode":"reuse","asset":"howling-painted-v5/parapet-run.png","note":"专用连续栏墙，接缝切在两柱之间的完整砖面，避免半截尖柱和密集竖条"},
+    {"id":"broken-parapet","name":"缺口栏墙、端柱与碎石","refs":[1,2,3,4],"mode":"generate","asset":"howling-painted-v4/broken-parapet.png","note":"已停用并保留归档；当前按确认改为连续栏墙，不留坍塌口"},
+    {"id":"corner","name":"圣所围墙转角","refs":[1,2],"mode":"reuse","asset":"howling-painted-v4/sanctuary-backwall.png","note":"后墙组合件含转折，连接直墙而非旋转等距贴图"},
+    {"id":"finial","name":"尖顶矮柱/铁矛饰件","refs":[1,2,3,4],"mode":"reuse","asset":"howling-painted-v4/broken-parapet.png","note":"当前使用 howling-painted-v5/parapet-run.png 连续墙段自带尖顶柱，避免替换成兽像"},
+    {"id":"arch","name":"石桥拱券","refs":[1,2,3,4],"mode":"reuse","asset":"howling-painted-v3/arch-support.png","note":"支撑位于桥面下，透明拱洞保留远景"},
+    {"id":"pier","name":"承重深柱、浮雕与悬旗","refs":[1,2,3,4],"mode":"reuse","asset":"howling-painted-v3/arch-support.png","note":"桥墩比兽像多；不能一对一全配兽像"},
+    {"id":"ice-fringe","name":"檐口长冰挂","refs":[1,2,3,4],"mode":"reuse","asset":"howling-painted-v3/arch-support.png","note":"拱柱原生冰挂；缺口墙也带短冰挂"},
+    {"id":"wall-crystal","name":"栏墙晶簇","refs":[1,2,3,4],"mode":"reuse","asset":"howling-painted-v3/ice-crystal.png","note":"只放路肩和墙节点，禁止路中等距阵列"},
+    {"id":"brazier","name":"矮火盆及暖色接触光","refs":[1,2,3,4],"mode":"reuse","asset":"howling-painted-v3/brazier.png","note":"参考图逐个定位；不在整条桥两边密集等距铺满"},
+    {"id":"snow","name":"檐口雪帽与地面薄雪","refs":[1,2,3,4],"mode":"reuse","asset":"howling-target-v2/ground.png","note":"地面边缘UV、部件原生雪帽；主路不覆盖大白块"},
+    {"id":"rubble","name":"坍塌石块与墙脚碎屑","refs":[1,2,3,4],"mode":"reuse","asset":"howling-painted-v4/broken-parapet.png","note":"残墙组合已停用；当前不放置此资源的碎石，保留原始候选归档"},
+    {"id":"cliff","name":"雪岩绝壁与冰瀑","refs":[1,2,3,4],"mode":"reuse","asset":"howling-central-v1/runtime/depth.png","note":"远景层，保持冷灰低对比"},
+    {"id":"cliff-statue","name":"崖壁持矛人像","refs":[1,2,3,4],"mode":"reuse","asset":"howling-central-v1/runtime/depth.png","note":"远景烘焙人像，不当作游戏攻击塔"},
+    {"id":"distant-bridge","name":"远处断桥与悬空遗迹","refs":[1,2,3,4],"mode":"reuse","asset":"howling-central-v1/runtime/depth.png","note":"与近景桥分层，不能落在通路上"},
+    {"id":"abyss-fog","name":"深渊雾与下沉遮隐","refs":[1,2,3,4],"mode":"shader","asset":"projected-backdrop-mist","note":"淡化桥墩底部截断，避免悬浮贴纸边缘"},
+    {"id":"base-crystal","name":"基地核心与小水晶","refs":[1,2],"mode":"reuse","asset":"howling-painted-v4/sanctuary-altar.png","note":"核心用祭坛，小水晶用现有晶簇；红方只做克制色调区分"}
+  ],
+  "scenes": [
+    {"id":"overview","image":"01-overview.png","role":"全局关系与材质参考","landmarks":[[150,940,"基地晶坛"],[390,640,"侧边石火塔"],[1120,315,"远侧兽柱"],[1540,495,"近侧兽柱"],[1020,820,"桥拱与桥墩"],[1720,110,"延伸主路"]]},
+    {"id":"sanctuary","image":"02-sanctuary.png","role":"圣所局部布局","landmarks":[[610,690,"晶坛脚点"],[600,665,"同心圆铺地"],[540,340,"后侧双神龛"],[225,855,"入场短阶"],[1080,580,"通往桥路"],[1020,800,"前缘火盆"],[1750,360,"远端火盆"]]},
+    {"id":"tower","image":"03-outer-tower.png","role":"采用道路/塔位/围栏关系，弃用人像塔造型","landmarks":[[420,755,"塔脚/替换为战斗塔"],[490,785,"塔位圆铺装"],[1170,500,"主路开敞"],[1200,355,"后墙雕刻"],[870,920,"前缘火盆"],[1530,720,"桥拱下沉"]]},
+    {"id":"central","image":"04-central-bridge.png","role":"四兽柱错位夹持中央纹章","landmarks":[[1020,620,"中央圆纹章"],[350,715,"远侧左兽柱落点"],[1110,300,"远侧右兽柱落点"],[850,1040,"近侧左兽柱落点"],[1750,570,"近侧右兽柱落点"],[490,575,"远侧左火盆"],[1345,715,"近侧右火盆"],[600,550,"墙内冰晶"],[1920,290,"右上火盆"]]}
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "externalPaidRequests": 0,
+  "builtinImageCalls": 4,
+  "assets": [
+    {
+      "file": "guardian-wall.png",
+      "size": [
+        1222,
+        1287
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6164172252551958,
+      "sha256": "7bbd8e09b97fe6f17b479764b74b8a4971d9b19f1a73a3f179093f01e5185a9d",
+      "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1435f-dfea-77e0-85b1-67e1d730a72b\\exec-0c66d2b3-3259-4778-aeb5-69b06ad32d5d.png",
+      "byteIdentical": true,
+      "generator": "built-in image_gen",
+      "reference": "assets/map-concepts/howling-abyss-target-v1/04-central-bridge.png"
+    },
+    {
+      "file": "arch-support.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.5868564979047217,
+      "sha256": "ae63827f346716f3709b4c2f2be4ed2b39d968ca95ead515301556c6121df581",
+      "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1435f-dfea-77e0-85b1-67e1d730a72b\\exec-526ea6e6-2ab8-4638-8e27-e972313fd2c1.png",
+      "byteIdentical": true,
+      "generator": "built-in image_gen",
+      "reference": "assets/map-concepts/howling-abyss-target-v1/04-central-bridge.png"
+    },
+    {
+      "file": "ice-crystal.png",
+      "size": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.7661968052645497,
+      "sha256": "7ed921cd0e8a0f8020f7743c4152d4e053fb714047a95a0b5363621b0678b2f7",
+      "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1435f-dfea-77e0-85b1-67e1d730a72b\\exec-eece4099-91d5-488f-ad71-45b3dbfeb798.png",
+      "byteIdentical": true,
+      "generator": "built-in image_gen",
+      "reference": "assets/map-concepts/howling-abyss-target-v1/04-central-bridge.png"
+    },
+    {
+      "file": "brazier.png",
+      "size": [
+        1350,
+        1165
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "transparentFraction": 0.6944180575425211,
+      "sha256": "c983f95ca56c1b0b9ab163c84aa59de40b5ddf81d9ffdc2223348f3e8425e206",
+      "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1435f-dfea-77e0-85b1-67e1d730a72b\\exec-4eb8b973-6021-4081-b243-93619ada0486.png",
+      "byteIdentical": true,
+      "generator": "built-in image_gen",
+      "reference": "assets/map-concepts/howling-abyss-target-v1/04-central-bridge.png"
+    }
+  ]
+}

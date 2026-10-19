@@ -8,6 +8,19 @@ import type {GameEvent,ImpactKind} from '../src/game/types';
 import {grantStorm} from '../src/game/YasuoStorm';
 const hit=(extra:Partial<GameEvent>={}):GameEvent=>({type:'hit',team:'blue',x:100,y:0,at:1,sourceId:1,targetId:2,sourceKind:'hero',targetKind:'hero',from:{x:0,y:0},impact:'q',amount:85,...extra});
 describe('contact presentation',()=>{
+ it('keeps movement recovery artwork separate and permanently cancels it for a new spell',()=>{
+  const feel=new CombatFeel(),match=createCombatPractice(),hero=match.hero('blue');
+  hero.qCast=null;feel.beginQ(hero.id,0,YASUO_Q_HIT_SECONDS,Math.PI/4);
+  const before=structuredClone(hero);
+  expect(feel.qPresentation(hero,.55)).toMatchObject({startedAt:0,facing:Math.PI/4});
+  expect(hero).toEqual(before);
+  hero.wCast={startedAt:.56,facing:0};expect(feel.qPresentation(hero,.56)).toBeNull();
+  hero.wCast=null;expect(feel.qPresentation(hero,.6)).toBeNull();
+  feel.beginQ(hero.id,1,YASUO_Q_HIT_SECONDS,0);
+  expect(feel.qPresentation(hero,1.7)).not.toBeNull();
+  expect(feel.qPresentation(hero,1+YASUO_Q_CAST_SECONDS)).toBeNull();
+  feel.reset();expect(feel.qPresentation(hero,1.5)).toBeNull();
+ });
  it('holds only the attacker action briefly, then catches up monotonically',()=>{
   const feel=new CombatFeel();feel.event(hit(),1);
   expect(feel.actionTime(1,1.02)).toBe(1);expect(feel.actionTime(2,1.02)).toBe(1.02);

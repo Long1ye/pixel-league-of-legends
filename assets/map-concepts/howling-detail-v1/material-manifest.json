@@ -1,0 +1,50 @@
+{
+  "generator": "built-in image_gen",
+  "builtinImageCalls": 3,
+  "externalPaidRequests": 0,
+  "reference": "../howling-abyss-target-v1/04-central-bridge.png",
+  "assets": [
+    {
+      "file": "09-wall-carving-hardware.png",
+      "title": "古旧墙雕与金属饰件",
+      "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1435f-dfea-77e0-85b1-67e1d730a72b\\exec-53d4ba1c-8986-4206-be14-280cb9371e19.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "ce109df2126edffd5e2c11840a7340129958e58d91763389fcf9053c5519502d",
+      "byteIdentical": true,
+      "prompt": "09-wall-carving-hardware.prompt.txt",
+      "role": "straight-wall environmental detail concept; not runtime sprite"
+    },
+    {
+      "file": "10-frost-crystal-erosion.png",
+      "title": "墙脚霜晶与冰蚀",
+      "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1435f-dfea-77e0-85b1-67e1d730a72b\\exec-49d7effc-e32d-44dc-8016-4532523e532f.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "81bf021ec1fd4acf065faee0eaac48c1bdfa52a0894aad9099118f4fff56e13b",
+      "byteIdentical": true,
+      "prompt": "10-frost-crystal-erosion.prompt.txt",
+      "role": "straight-wall environmental detail concept; not runtime sprite"
+    },
+    {
+      "file": "11-brazier-ash-snowmelt.png",
+      "title": "火盆灰烬与融雪",
+      "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1435f-dfea-77e0-85b1-67e1d730a72b\\exec-d08d7753-95de-40b4-84b0-70e28ca34cf2.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "529ab50a7710660bffa006dd674dad03127cd317b93deb48ba6aa4fda3dd8058",
+      "byteIdentical": true,
+      "prompt": "11-brazier-ash-snowmelt.prompt.txt",
+      "role": "straight-wall environmental detail concept; not runtime sprite"
+    }
+  ]
+}

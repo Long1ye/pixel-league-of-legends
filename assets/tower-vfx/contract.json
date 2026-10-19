@@ -1,0 +1,81 @@
+{
+  "job": "job_2038d9c2fc0445b0b564aebc4ec2270f",
+  "source": "assets\\tower-vfx\\generated\\Create_an_isolated_transparent_game_VFX_atlas_inspired_by_classic_League_of_Legends_turret_energy_bolts_Exact_7333938f\\result_images_0_url.png",
+  "sha256": "111da41afd126a806c860466627a89de49833155096ac7d5eb5fa1443b577649",
+  "cell": [
+    256,
+    256
+  ],
+  "frames": 16,
+  "shifts": [
+    [
+      -11,
+      0
+    ],
+    [
+      -9,
+      1
+    ],
+    [
+      -6,
+      0
+    ],
+    [
+      -4,
+      0
+    ],
+    [
+      -11,
+      16
+    ],
+    [
+      -9,
+      16
+    ],
+    [
+      -5,
+      14
+    ],
+    [
+      -3,
+      13
+    ],
+    [
+      -3,
+      14
+    ],
+    [
+      4,
+      16
+    ],
+    [
+      0,
+      15
+    ],
+    [
+      23,
+      5
+    ],
+    [
+      -3,
+      28
+    ],
+    [
+      4,
+      29
+    ],
+    [
+      0,
+      28
+    ],
+    [
+      31,
+      5
+    ]
+  ],
+  "alpha": [
+    0,
+    254
+  ],
+  "resampled": false
+}

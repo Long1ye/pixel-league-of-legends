@@ -1,0 +1,9 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>防御塔能量弹</title><style>body{background:#202a30;color:#e1ebef;font:16px system-ui;margin:24px}main{display:flex;flex-wrap:wrap;gap:16px}figure{margin:0}canvas{background:#303a3f;border:1px solid #52616b}button{margin:16px 0;padding:8px 20px}</style>
+<h1>防御塔能量弹 · Meowa</h1><p>原生 256 × 256 透明帧，红蓝弹体与命中碎光。</p><button id="toggle">暂停</button><main></main>
+<script type="module">
+const image=new Image();image.src='runtime/energy-atlas.png';await image.decode();
+const labels=['蓝方飞行','红方飞行','蓝方命中','红方命中'];const contexts=labels.map(label=>{const figure=document.createElement('figure'),caption=document.createElement('figcaption'),canvas=document.createElement('canvas');caption.textContent=label;canvas.width=canvas.height=256;figure.append(caption,canvas);document.querySelector('main').append(figure);return canvas.getContext('2d');});
+let elapsed=0,previous=performance.now(),paused=false;window.cycles=0;window.seen=[];
+document.querySelector('#toggle').onclick=e=>{paused=!paused;e.target.textContent=paused?'继续':'暂停';};
+function draw(now){if(!paused)elapsed+=Math.min(100,now-previous);previous=now;window.cycles=Math.floor(elapsed/700);const age=elapsed%700,frame=Math.min(3,Math.floor(age/60));if(age<240&&!window.seen.includes(frame))window.seen.push(frame);contexts.forEach((ctx,row)=>{ctx.clearRect(0,0,256,256);if(row<2||age<240)ctx.drawImage(image,frame*256,row*256,256,256,0,0,256,256);});requestAnimationFrame(draw);}requestAnimationFrame(draw);
+</script></html>

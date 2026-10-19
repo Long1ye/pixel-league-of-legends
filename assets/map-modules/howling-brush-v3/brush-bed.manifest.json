@@ -1,0 +1,21 @@
+{
+  "generator": "built-in image_gen",
+  "builtinImageCalls": 1,
+  "externalPaidRequests": 0,
+  "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1435f-dfea-77e0-85b1-67e1d730a72b\\exec-a9f13ae9-ebfb-41a3-97f5-a44c77f6d2e9.png",
+  "size": [
+    1672,
+    941
+  ],
+  "mode": "RGBA",
+  "alphaRange": [
+    0,
+    254
+  ],
+  "sha256": "cb87aa50b4260e585cb2358a4bf863622d8ba34a29fb75e701a2edd2bcfaa4f6",
+  "byteIdentical": true,
+  "reference": "assets/map-concepts/howling-detail-v1/08-hero-concealment-brush.png",
+  "prompt": "generation.prompt.txt",
+  "postProcessing": "none",
+  "runtime": "src/render-three/PaintedDetails.ts"
+}

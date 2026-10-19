@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_3875b81217ba4e13abc79f3e5b490502",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\ha-mat-v2\\job_3875b81217ba4e13abc79f3e5b490502\\result_images_0_url.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

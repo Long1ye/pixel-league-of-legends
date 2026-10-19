@@ -2,6 +2,7 @@ import {describe,it,expect,vi,afterEach} from 'vitest';
 import {MovementVoice} from '../src/ui/MovementVoice';
 import {AudioFeedback} from '../src/ui/AudioFeedback';
 import {OriginalCombatAudio} from '../src/ui/OriginalCombatAudio';
+import {YasuoVoiceAudio} from '../src/ui/YasuoVoiceAudio';
 import {Match} from '../src/game/Match';
 afterEach(()=>{vi.restoreAllMocks();vi.unstubAllGlobals();});
 function walk(voice:MovementVoice,start:number,end:number,eligible=true){
@@ -35,7 +36,9 @@ describe('travel voice combat integration',()=>{
  it('suppresses nearby enemies and stops for local combat, pause, hidden and mute',()=>{
   vi.stubGlobal('AudioContext',class{state='running';});
   vi.spyOn(OriginalCombatAudio.prototype,'load').mockResolvedValue();
-  const play=vi.spyOn(OriginalCombatAudio.prototype,'playMovement').mockReturnValue(true);
+  vi.spyOn(YasuoVoiceAudio.prototype,'load').mockResolvedValue();
+  vi.spyOn(YasuoVoiceAudio.prototype,'play').mockImplementation(()=>{});
+  const play=vi.spyOn(YasuoVoiceAudio.prototype,'speak').mockReturnValue(true);
   const stop=vi.spyOn(OriginalCombatAudio.prototype,'stopMovement');
   vi.spyOn(OriginalCombatAudio.prototype,'play').mockReturnValue(true);
   const audio=new AudioFeedback();audio.unlock();
@@ -43,7 +46,7 @@ describe('travel voice combat integration',()=>{
   const hero=match.hero('blue');hero.homeguardCombatAt=-Infinity;
   for(const e of match.entities)if(e.team==='red'){e.x=10000;e.y=10000;}
   const advance=(from:number,to:number,near=false)=>{for(let i=from;i<=to;i++){match.time=i/10;hero.x=i*5;if(near){match.hero('red').x=hero.x;match.hero('red').y=hero.y;}audio.updateMovement(match);}};
-  advance(0,23);expect(play).toHaveBeenCalledWith(0,expect.anything());
+  advance(0,23);expect(play).toHaveBeenCalledWith('Move2DStandard',expect.anything(),'blue',1);
   audio.play({type:'cast',team:'red',ability:'q',x:0,y:0});expect(stop).not.toHaveBeenCalled();
   audio.play({type:'cast',team:'blue',ability:'q',x:0,y:0});expect(stop).toHaveBeenCalledTimes(1);
   audio.play({type:'hit',team:'red',targetId:hero.id,x:0,y:0});expect(stop).toHaveBeenCalledTimes(2);

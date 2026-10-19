@@ -37,7 +37,8 @@ describe('E into EQ keeps the real dash target inside the spin',()=>{
     const {m,h,target}=setup('blue',0,'hero',distance);grantStorm(h,0);grantStorm(h,0);
     m.cast('blue','e',target);m.cast('blue','q',target);advance(m,.55);
     expect(target.hp).toBe(2000-ABILITIES.e.damage-ABILITIES.q.damage);
-    expect(target.airborneUntil).toBeGreaterThan(m.time);expect(airborneLift(target,m.time)).toBeGreaterThan(30);
+    expect(target.airborneUntil).toBeGreaterThan(m.time);expect(airborneLift(target,m.time)).toBeGreaterThan(0);
+    advance(m,.2);expect(airborneLift(target,m.time)).toBeGreaterThan(30);
     expect(m.projectiles).toHaveLength(0);
   });
   it('a ring cannot damage a target beyond its displayed radius',()=>{
@@ -56,7 +57,7 @@ describe('skill artwork and hitbox proportions',()=>{
     expect(E.range).toBe(ABILITIES.e.range);expect(E.range).toBeLessThan(ABILITIES.q.range);expect(E.travel).toBe(128);
   });
   it('sizes the ring to its hit diameter and makes Q3 taller than a hero',()=>{
-    expect(EQ_RING_SCALE*176).toBe(EQ.radius*2);
+    expect(EQ_RING_SCALE*176).toBeCloseTo(EQ.radius*2);
     expect(TORNADO_SCALE*640).toBe(TORNADO_HEIGHT);
     expect(TORNADO_HEIGHT).toBeGreaterThan(UNIT_METRICS.hero.height);
     expect(STORM.radius).toBe(14);

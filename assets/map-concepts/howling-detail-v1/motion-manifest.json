@@ -1,0 +1,80 @@
+{
+  "generator": "built-in image_gen",
+  "builtinImageCalls": 4,
+  "externalPaidRequests": 0,
+  "assets": [
+    {
+      "file": "12-wind-banner-brush.png",
+      "title": "风场 · 飘旗与草浪",
+      "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1445e-f14e-7f01-ad7f-92383706ecb6\\exec-a15ec615-2ba2-4f50-b89b-01bc897f6985.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "sha256": "7700e383b67511cc2719fa90ccac11096cdb1b5a32a898e9f716a167121f41b0",
+      "byteIdentical": true,
+      "references": [
+        "04-straight-wall-banners.png",
+        "08-hero-concealment-brush.png"
+      ],
+      "prompt": "12-wind-banner-brush.prompt.txt",
+      "role": "static environmental motion concept; animation not implemented"
+    },
+    {
+      "file": "13-fire-embers-thaw.png",
+      "title": "冷暖 · 飞烬与融雪滴水",
+      "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1445e-f14e-7f01-ad7f-92383706ecb6\\exec-8ede7d6f-23d5-4b8e-a288-504e2378f275.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "sha256": "6595df32f0de3ba3a3c6a2bed99dd2c721aae140ac39c2f621511b500bd64a94",
+      "byteIdentical": true,
+      "references": [
+        "11-brazier-ash-snowmelt.png"
+      ],
+      "prompt": "13-fire-embers-thaw.prompt.txt",
+      "role": "static environmental motion concept; animation not implemented"
+    },
+    {
+      "file": "14-abyss-mist-flight.png",
+      "title": "纵深 · 流雾与掠翼",
+      "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1445e-f14e-7f01-ad7f-92383706ecb6\\exec-17c00611-c314-4620-b390-edc34ab02587.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "sha256": "37a7181ac3f1f84a696d3e7401ae0e71f74e8aa476b66e72eff528adfa6a8463",
+      "byteIdentical": true,
+      "references": [
+        "../howling-abyss-target-v1/04-central-bridge.png"
+      ],
+      "prompt": "14-abyss-mist-flight.prompt.txt",
+      "role": "static environmental motion concept; animation not implemented"
+    },
+    {
+      "file": "15-sanctuary-crystal-poros.png",
+      "title": "生机 · 水晶微光与魄罗",
+      "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1445e-f14e-7f01-ad7f-92383706ecb6\\exec-e65ba816-8faf-4f18-9006-c74cdfd05fbc.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "sha256": "d10cdbac80bac6c58fbab02368f92429ec3237ec5c39daa3e9f4fe5ff67da1ba",
+      "byteIdentical": true,
+      "references": [
+        "03-sanctuary-life.png"
+      ],
+      "prompt": "15-sanctuary-crystal-poros.prompt.txt",
+      "role": "static environmental motion concept; animation not implemented"
+    }
+  ]
+}

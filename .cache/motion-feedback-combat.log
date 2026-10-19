@@ -1,0 +1,144 @@
+{
+  "paused": true,
+  "contextState": "running",
+  "audioFiles": 4,
+  "frames": [
+    {
+      "name": "q-draw",
+      "time": 0.21666666666666665,
+      "calls": 63,
+      "geometry": 65,
+      "textures": 23,
+      "cards": []
+    },
+    {
+      "name": "q-contact",
+      "time": 0.4833333333333333,
+      "calls": 66,
+      "geometry": 67,
+      "textures": 25,
+      "cards": [
+        "combat-qSword"
+      ]
+    },
+    {
+      "name": "wind-wall",
+      "time": 1.566666666666666,
+      "calls": 67,
+      "geometry": 67,
+      "textures": 27,
+      "cards": [
+        "combat-wall",
+        "combat-wall"
+      ]
+    },
+    {
+      "name": "q3-ready",
+      "time": 0.03333333333333333,
+      "calls": 67,
+      "geometry": 67,
+      "textures": 28,
+      "cards": [
+        "combat-aura",
+        "combat-aura"
+      ]
+    },
+    {
+      "name": "tornado",
+      "time": 0.4333333333333333,
+      "calls": 65,
+      "geometry": 67,
+      "textures": 29,
+      "cards": [
+        "combat-tornado"
+      ]
+    },
+    {
+      "name": "ultimate",
+      "time": 1.3000000000000003,
+      "calls": 65,
+      "geometry": 67,
+      "textures": 30,
+      "cards": [
+        "combat-tornado"
+      ]
+    },
+    {
+      "name": "eq3",
+      "time": 0.5833333333333335,
+      "calls": 74,
+      "geometry": 74,
+      "textures": 36,
+      "cards": [
+        "approved-eq3-layer",
+        "approved-eq3-layer"
+      ]
+    },
+    {
+      "name": "shield-ignite",
+      "time": 0.35,
+      "calls": 69,
+      "geometry": 71,
+      "textures": 33,
+      "cards": [
+        "combat-shield",
+        "combat-shield",
+        "combat-aura"
+      ]
+    },
+    {
+      "name": "flash",
+      "time": 0.44999999999999996,
+      "calls": 73,
+      "geometry": 73,
+      "textures": 33,
+      "cards": [
+        "combat-shield",
+        "combat-shield",
+        "combat-aura",
+        "combat-aura",
+        "combat-aura"
+      ]
+    },
+    {
+      "name": "tower-rubble",
+      "time": 0.03333333333333333,
+      "calls": 65,
+      "geometry": 95,
+      "textures": 39,
+      "cards": []
+    },
+    {
+      "name": "fire-and-environment",
+      "time": 0.16666666666666666,
+      "calls": 67,
+      "geometry": 103,
+      "textures": 42,
+      "cards": []
+    }
+  ],
+  "resources": [
+    {
+      "geometry": 101,
+      "textures": 42
+    },
+    {
+      "geometry": 101,
+      "textures": 42
+    },
+    {
+      "geometry": 101,
+      "textures": 42
+    },
+    {
+      "geometry": 101,
+      "textures": 42
+    },
+    {
+      "geometry": 101,
+      "textures": 42
+    }
+  ],
+  "errors": [],
+  "failed": []
+}

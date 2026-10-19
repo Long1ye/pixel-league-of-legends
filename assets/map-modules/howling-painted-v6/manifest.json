@@ -1,0 +1,18 @@
+{
+  "generator": "built-in imagegen",
+  "reference": "assets/map-modules/howling-painted-v5/parapet-run.png",
+  "source": "C:\\Users\\PC\\.codex\\generated_images\\01a14410-ea44-7981-9792-db4a03093b20\\exec-b8e2d160-d0e4-4f40-8a51-3f783679a18d.png",
+  "file": "parapet-run.png",
+  "size": [
+    1918,
+    820
+  ],
+  "alphaRange": [
+    0,
+    255
+  ],
+  "sha256": "2b66a786af80df557cd5566031cf9f3a86fd7f03bf65aac5f47da6befbaa2064",
+  "byteIdentical": true,
+  "runtimeIntegrated": true,
+  "note": "Regenerated masonry; original raster retained. Uniform pixel/world scale .21, no anisotropic stretching."
+}

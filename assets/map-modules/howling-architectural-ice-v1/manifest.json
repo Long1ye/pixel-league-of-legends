@@ -1,0 +1,86 @@
+{
+  "generator": "built-in imagegen",
+  "references": [
+    "assets/map-concepts/howling-detail-v1/05-straight-wall-frost-garden.png",
+    "assets/map-modules/howling-painted-v6/parapet-run.png"
+  ],
+  "runtimeModule": "src/render-three/ArchitecturalIce.ts",
+  "assets": [
+    {
+      "id": "wall-seam",
+      "file": "props/wall-seam.png",
+      "size": [
+        273,
+        451
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sourceRect": [
+        0,
+        0,
+        701,
+        650
+      ],
+      "crop": [
+        239,
+        138,
+        512,
+        589
+      ],
+      "sha256": "0d7fa982c397823bca22e125607477d4113b19a261682a0494f0079b39646295"
+    },
+    {
+      "id": "coping-crown",
+      "file": "props/coping-crown.png",
+      "size": [
+        290,
+        221
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "61fd16cacee595125e2db06a410dd211b006086b1e46a6a4c434eda42edd5877"
+    },
+    {
+      "id": "hanging-shards",
+      "file": "props/hanging-shards.png",
+      "size": [
+        285,
+        250
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sourceRect": [
+        0,
+        650,
+        701,
+        1122
+      ],
+      "crop": [
+        217,
+        109,
+        502,
+        359
+      ],
+      "sha256": "b5b5ec23cb28d96eb842b9a07e1d72de0daaa7c65c99d51497187a550087f047"
+    },
+    {
+      "id": "pillar-foot",
+      "file": "props/pillar-foot.png",
+      "size": [
+        418,
+        251
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sha256": "0f0195856b9b4e733f8fc086e862b1747386e6f54b4ea79132763cdee5e98368"
+    }
+  ]
+}

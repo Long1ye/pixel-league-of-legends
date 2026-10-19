@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>冰雪景观 · 实际游戏画面对照</title><link rel="icon" href="data:,">
+<style>
+body{margin:0;background:#111925;color:#e0e9f2;font:16px system-ui}header{padding:16px 22px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}select,button{font:inherit;color:inherit;background:#26374c;padding:8px 12px;border:1px solid #536680;border-radius:6px}label{display:flex;align-items:center;gap:10px}input{width:220px}.scene{max-width:1600px;aspect-ratio:16/9;position:relative;margin:auto;overflow:hidden}.scene img{position:absolute;width:100%;height:100%;object-fit:contain}#old{clip-path:inset(0 50% 0 0)}.tag{position:absolute;top:12px;background:#101722c9;padding:7px 10px;border-radius:5px}.left{left:12px}.right{right:12px}p{margin:16px 22px;color:#adbdcf;line-height:1.7}a{color:#8dcbff}
+</style>
+<header><strong>冰雪景观 · 实际游戏画面对照</strong><select id="camera"><option value="bridge">桥面与垂冰</option><option value="wall">墙根与火盆</option><option value="red">红方外塔</option><option value="central">中央桥段</option><option value="sanctuary">蓝方圣所</option></select><label>修改前 / 加入后 <input type="range" id="split" value="50" min="0" max="100"></label><button id="before">只看修改前</button><button id="after">只看加入后</button></header>
+<div class="scene"><img id="new" alt="加入冰雪景观后的实际截图"><img id="old" alt="关闭本轮效果的实际截图"><span class="tag left">修改前</span><span class="tag right">加入后</span></div>
+<p><strong>本页为历史版本，积雪已被用户否定。<a href="../snow-bank-revision/comparison.html">查看积雪修订实机对照 →</a></strong></p>
+<p>两张图片来自同一镜头、同一模拟时间；只切换当时的「冰雪景观」。保留此页作为历史证据，不代表当前游戏效果。</p>
+<script>
+const camera=document.querySelector('#camera'),range=document.querySelector('#split'),old=document.querySelector('#old'),current=document.querySelector('#new');
+function show(){old.src=camera.value+'-before.jpg';current.src=camera.value+'-after.jpg'}
+function split(value){range.value=value;old.style.clipPath='inset(0 '+(100-value)+'% 0 0)'}
+camera.onchange=show;range.oninput=()=>split(range.value);document.querySelector('#before').onclick=()=>split(100);document.querySelector('#after').onclick=()=>split(0);show();
+</script></html>

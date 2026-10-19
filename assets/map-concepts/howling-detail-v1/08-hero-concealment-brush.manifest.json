@@ -1,0 +1,17 @@
+{
+  "generator": "built-in image_gen",
+  "builtinImageCalls": 1,
+  "externalPaidRequests": 0,
+  "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1435f-dfea-77e0-85b1-67e1d730a72b\\exec-f84b9263-64e5-4c55-a823-ca5da26030c1.png",
+  "file": "08-hero-concealment-brush.png",
+  "size": [
+    1672,
+    941
+  ],
+  "mode": "RGB",
+  "sha256": "e984a8e393e8c47eada11c0ed6aa433d65bc6c4b9ce5393211fc3de7fe063352",
+  "byteIdentical": true,
+  "reference": "../howling-abyss-target-v1/04-central-bridge.png",
+  "prompt": "08-hero-concealment-brush.prompt.txt",
+  "role": "functional concealment brush concept; gameplay not implemented"
+}

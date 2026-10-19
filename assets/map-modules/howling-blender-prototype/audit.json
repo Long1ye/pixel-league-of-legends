@@ -1,0 +1,13 @@
+{
+  "status": "study_only_not_approved",
+  "paid_requests": 0,
+  "source": "offline Blender modeling",
+  "editable_mesh_count": 277,
+  "export_mesh_count": 12,
+  "triangles": 73322,
+  "gate": {
+    "runtime_integration": false,
+    "target_style_approved": false,
+    "guardian_approved": false
+  }
+}

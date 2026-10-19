@@ -1,0 +1,30 @@
+{
+  "size": [
+    1769,
+    433
+  ],
+  "anchors": [
+    [
+      0.024008726936920115,
+      0.7771825086927314
+    ],
+    [
+      0.9750460671383582,
+      0.11313469574352848
+    ]
+  ],
+  "generator": "built-in imagegen",
+  "source": "C:\\Users\\PC\\.codex\\generated_images\\01a14410-ea44-7981-9792-db4a03093b20\\exec-216d6f13-56b7-4048-8da1-83feafd443af.png",
+  "reference": "assets/map-concepts/howling-detail-v1/04-straight-wall-banners.png",
+  "alphaRange": [
+    0,
+    255
+  ],
+  "crop": [
+    137,
+    153,
+    1906,
+    586
+  ],
+  "note": "Fine wall chain; cropped only, native link proportions retained."
+}

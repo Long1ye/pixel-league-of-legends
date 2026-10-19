@@ -12,7 +12,7 @@ import './league-hud.css';
 import './pixel-hud.css';
 
 /** Move existing controls, retaining their ids, listeners and live game state. */
-export function mountLeagueHud(practice:boolean,actions:{flute:()=>void;stop:()=>void;summoner:(key:SummonerKey)=>void}):void {
+export function mountLeagueHud(practice:boolean,actions:{flute:()=>void;stop:()=>void;summoner:(key:SummonerKey)=>void;focusTarget?:HTMLElement}):void {
  const shell=document.querySelector<HTMLElement>('.match-shell')!;
  if(practice||!HOWLING_MAP){
   const back=document.createElement('a');back.href='/?map=howling';back.textContent='← 返回冰桥对局';
@@ -46,7 +46,7 @@ export function mountLeagueHud(practice:boolean,actions:{flute:()=>void;stop:()=
   const button=document.createElement('button');button.type='button';button.className='hud-command';
   const shortcut=document.createElement('kbd');shortcut.textContent=key;
   const name=document.createElement('span');name.textContent=label;button.append(shortcut,name);
-  button.title=`${label} · ${key}`;button.onclick=()=>{action();document.querySelector<HTMLElement>('#arena')!.focus({preventScroll:true});};commands.append(button);
+  button.title=`${label} · ${key}`;button.onclick=()=>{action();(actions.focusTarget??document.querySelector<HTMLElement>('#arena'))!.focus({preventScroll:true});};commands.append(button);
  }
  content.append(commands);
  const passive=document.createElement('div');passive.className='passive-slot';passive.title='浪客之道 · 被动技能';passive.setAttribute('aria-label','浪客之道 · 被动技能');
@@ -56,7 +56,7 @@ export function mountLeagueHud(practice:boolean,actions:{flute:()=>void;stop:()=
  for(const [key,url] of [['D',dIcon],['F',fIcon]]){
   const skill=key.toLowerCase() as SummonerKey;
   const slot=document.createElement('button');slot.type='button';slot.id=`summoner-${skill}`;slot.className='summoner-slot';slot.title=`${key} · ${SUMMONERS[skill].name}`;slot.setAttribute('aria-label',slot.title);
-  slot.onclick=()=>{actions.summoner(skill);document.querySelector<HTMLElement>('#arena')!.focus({preventScroll:true});};
+  slot.onclick=()=>{actions.summoner(skill);(actions.focusTarget??document.querySelector<HTMLElement>('#arena'))!.focus({preventScroll:true});};
   const image=document.createElement('img');image.src=url;image.alt='';image.draggable=false;const label=document.createElement('kbd');label.textContent=key;
   const cooldown=document.createElement('span');cooldown.className='summoner-cooldown';cooldown.id=`summoner-cooldown-${skill}`;slot.append(image,label,cooldown);spells.append(slot);
  }

@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_ac8897c06cc2473b8c274b2b7eee5cb6",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\map-modules\\arpg-s01-v1\\generated\\moss\\64x64_seamless_pixel_art_texture_of_dark_desaturated_teal_moss_coarse_cold_earth_and_tiny_grey_pebbles_Flat_to_99ef315b\\texture.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

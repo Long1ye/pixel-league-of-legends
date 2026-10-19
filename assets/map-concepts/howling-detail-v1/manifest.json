@@ -1,0 +1,49 @@
+{
+  "generator": "built-in image_gen",
+  "builtinImageCalls": 3,
+  "externalPaidRequests": 0,
+  "assets": [
+    {
+      "file": "01-frost-brush.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1435f-dfea-77e0-85b1-67e1d730a72b\\exec-1678db94-9a26-4520-9e1f-ed0d120dee43.png",
+      "sha256": "9b1b6c383e90af73fd7c7a4ca356869fab01941bc0025d8929aa593263a4a55f",
+      "byteIdentical": true,
+      "reference": "assets/map-concepts/howling-abyss-target-v1/04-central-bridge.png",
+      "prompt": "01-frost-brush.prompt.txt",
+      "role": "scene detail concept; not runtime sprite or implemented brush gameplay"
+    },
+    {
+      "file": "02-ruined-shoulder.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1435f-dfea-77e0-85b1-67e1d730a72b\\exec-83d03898-4e63-454b-b409-22e9522cf42a.png",
+      "sha256": "f830c8ce75befaadaaf9fa263cc34eb88857a5ca22c0b5a75a8f2254d0677afe",
+      "byteIdentical": true,
+      "reference": "assets/map-concepts/howling-abyss-target-v1/04-central-bridge.png",
+      "prompt": "02-ruined-shoulder.prompt.txt",
+      "role": "scene detail concept; not runtime sprite or implemented brush gameplay"
+    },
+    {
+      "file": "03-sanctuary-life.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "source": "C:\\Users\\PC\\.codex\\generated_images\\01a1435f-dfea-77e0-85b1-67e1d730a72b\\exec-9eda6552-8caa-4e6f-9485-cd61d397c3ce.png",
+      "sha256": "242ab8fa091ad0d53c0163892990e0244b8d06859fa34376f8f5b7ce005180dd",
+      "byteIdentical": true,
+      "reference": "assets/map-concepts/howling-abyss-target-v1/02-sanctuary.png",
+      "prompt": "03-sanctuary-life.prompt.txt",
+      "role": "scene detail concept; not runtime sprite or implemented brush gameplay"
+    }
+  ]
+}

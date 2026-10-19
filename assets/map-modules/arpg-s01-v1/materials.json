@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "materials": [
+    {
+      "id": "s01-floor-v1",
+      "path": "assets/map-modules/arpg-s01-v1/runtime/floor.png",
+      "width": 64,
+      "height": 64,
+      "opaque": true,
+      "sha256": "7ddd10e01b4adc961b8713db722e0a102c9a2280102f6fbee5ea143cdeeb6b8c",
+      "jobId": "job_3ecdf44c4d0f45cfb08d70d1e7692707",
+      "sourceManifest": "assets/map-modules/arpg-s01-v1/generated/floor/64x64_seamless_pixel_art_texture_of_broad_weathered_blue_grey_medieval_flagstones_dark_narrow_joints_restraine_e2490620/final_outputs.json",
+      "edgeDelta": {
+        "leftRightMean": 17.473958333333332,
+        "topBottomMean": 36.192708333333336
+      },
+      "status": "dimension-and-alpha-checked; seam review required; gameplay visual approval pending"
+    },
+    {
+      "id": "s01-wall-v1",
+      "path": "assets/map-modules/arpg-s01-v1/runtime/wall.png",
+      "width": 64,
+      "height": 64,
+      "opaque": true,
+      "sha256": "5976110ad55a7bfc7cf968436a84a67d6832ae5612821d827bfee064438ad9b9",
+      "jobId": "job_131f3338682e4fa8aad5535bfa64cc1b",
+      "sourceManifest": "assets/map-modules/arpg-s01-v1/generated/wall/64x64_seamless_pixel_art_texture_of_heavy_ancient_blue_grey_masonry_blocks_deep_recessed_joints_worn_stone_edg_d9ddc0b5/final_outputs.json",
+      "edgeDelta": {
+        "leftRightMean": 16.703125000000004,
+        "topBottomMean": 14.822916666666664
+      },
+      "status": "dimension-and-alpha-checked; seam review required; gameplay visual approval pending"
+    },
+    {
+      "id": "s01-moss-v1",
+      "path": "assets/map-modules/arpg-s01-v1/runtime/moss.png",
+      "width": 64,
+      "height": 64,
+      "opaque": true,
+      "sha256": "cc0cc4025b7c06cac6c1e174bd2b482df7413e3a876569da0210cd961e6a9015",
+      "jobId": "job_ac8897c06cc2473b8c274b2b7eee5cb6",
+      "sourceManifest": "assets/map-modules/arpg-s01-v1/generated/moss/64x64_seamless_pixel_art_texture_of_dark_desaturated_teal_moss_coarse_cold_earth_and_tiny_grey_pebbles_Flat_to_99ef315b/final_outputs.json",
+      "edgeDelta": {
+        "leftRightMean": 16.33854166666667,
+        "topBottomMean": 19.937500000000004
+      },
+      "status": "dimension-and-alpha-checked; seam review required; gameplay visual approval pending"
+    }
+  ]
+}

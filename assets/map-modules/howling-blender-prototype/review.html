@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>免费三维样板 · 质量检查</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#131a25;color:#d8e3ef;font:15px/1.6 system-ui,sans-serif}header{padding:20px 28px;border-bottom:1px solid #394354}h1{font-size:23px;margin:0}p{margin:6px 0;color:#afbdd0}.tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}button,a{padding:7px 13px;background:#28364b;color:#e6eef8;border:1px solid #53627a;border-radius:5px;text-decoration:none;cursor:pointer}button[aria-pressed=true]{background:#3e5679}main{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:22px}section{min-width:0}h2{font-size:17px;margin:0 0 10px}img{width:100%;display:block;border:1px solid #394354}.stage{position:relative;height:65vh;min-height:360px;background:#202b3b}canvas{width:100%;height:100%;display:block}#status{font-variant-numeric:tabular-nums;color:#b4c7df} .finding{background:#202b3b;padding:14px;margin-top:12px} @media(max-width:900px){main{grid-template-columns:1fr}.stage{height:60vh}}
+</style>
+<header><h1>免费三维样板 · 质量检查</h1><p>零新增付费请求。研究样板尚未通过风格验收，未替换进游戏。</p>
+<div class="tools"><button id="architecture" aria-pressed="true">桥墙 GLB</button><button id="lion" aria-pressed="false">兽像候选（未采用）</button><button id="front">主视角</button><button id="side">侧视角</button><a href="bridge-wall-study.blend">Blender 源文件</a><a href="bridge-wall-study.glb">建筑 GLB</a></div></header>
+<main><section><h2>预设美术基准</h2><img src="../../map-concepts/howling-abyss-target-v1/04-central-bridge.png" alt="已认可的中央桥段美术目标"><div class="finding">检查重点：灰紫旧石、精细雕刻、尖耳兽像、薄雪及冰柱、真实桥拱和柱侧厚度。<br>当前差距：建筑石面与破损细节仍不足；兽像候选脸型圆润、鬃毛简化，不符合目标。</div></section>
+<section><h2>Three.js 实际加载 · 可拖动旋转与滚轮缩放</h2><div class="stage" id="stage"></div><p id="status" role="status">正在加载 GLB…</p><p>候选来源及授权记录见 <a href="README.md">资源说明</a>。</p></section></main>
+<script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+const stage=document.querySelector('#stage'),status=document.querySelector('#status');
+const renderer=new THREE.WebGLRenderer({antialias:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(0x202b3b);renderer.toneMapping=THREE.AgXToneMapping;
+renderer.toneMappingExposure=.85;stage.append(renderer.domElement);
+const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(36,1,.01,200);
+const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;
+scene.add(new THREE.HemisphereLight(0xc3d9ff,0x34425a,2));
+for(const [pos,power,color] of [[[3,6,4],3,0xe5edff],[[-4,2,-3],1.5,0x799ed8]]){const l=new THREE.DirectionalLight(color,power);l.position.set(...pos);scene.add(l);}
+let root,extent=5,loadId=0;
+function view(side=false){const direction=new THREE.Vector3(side?-1:1,.65,1.5).normalize();camera.position.copy(controls.target).addScaledVector(direction,extent*2.05);controls.update();}
+async function load(file){
+ const id=++loadId;status.textContent='正在加载 GLB…';
+ try{
+  const gltf=await new GLTFLoader().loadAsync(file);
+  if(id!==loadId){dispose(gltf.scene);return;}
+  if(root){scene.remove(root);dispose(root);}root=gltf.scene;scene.add(root);
+  const bounds=new THREE.Box3().setFromObject(root),size=bounds.getSize(new THREE.Vector3());extent=Math.max(size.x,size.y,size.z);
+  controls.target.copy(bounds.getCenter(new THREE.Vector3()));controls.minDistance=extent*.4;controls.maxDistance=extent*5;
+  camera.near=extent/1000;camera.far=extent*30;camera.updateProjectionMatrix();view();
+  let meshes=0,triangles=0;root.traverse(o=>{if(o.isMesh){meshes++;triangles+=(o.geometry.index?.count??o.geometry.attributes.position.count)/3;}});
+  status.textContent=`GLB 已加载 · ${meshes} 个网格 · ${triangles.toLocaleString()} 三角面 · 未通过风格验收`;
+ }catch(error){status.textContent='加载失败：'+error.message;console.error(error);}
+}
+function dispose(object){const geometries=new Set(),materials=new Set(),textures=new Set();object.traverse(o=>{if(!o.isMesh)return;geometries.add(o.geometry);for(const m of(Array.isArray(o.material)?o.material:[o.material])){materials.add(m);for(const v of Object.values(m))if(v?.isTexture)textures.add(v);}});for(const t of textures)t.dispose();for(const m of materials)m.dispose();for(const g of geometries)g.dispose();}
+for(const [name,file] of [['architecture','bridge-wall-study.glb'],['lion','lion-candidate.glb']])document.querySelector('#'+name).onclick=()=>{for(const id of ['architecture','lion'])document.querySelector('#'+id).setAttribute('aria-pressed',String(id===name));load(file);};
+document.querySelector('#front').onclick=()=>view();document.querySelector('#side').onclick=()=>view(true);
+new ResizeObserver(()=>{renderer.setSize(stage.clientWidth,stage.clientHeight);camera.aspect=stage.clientWidth/stage.clientHeight;camera.updateProjectionMatrix();}).observe(stage);
+renderer.setAnimationLoop(()=>{controls.update();renderer.render(scene,camera);});load('bridge-wall-study.glb');
+addEventListener('pagehide',()=>{renderer.setAnimationLoop(null);controls.dispose();if(root)dispose(root);renderer.dispose();});
+</script>
+</html>

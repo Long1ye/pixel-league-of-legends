@@ -5,9 +5,19 @@ import type {Point} from './types';
 export const BRIDGE_FOOTPRINTS=BRIDGE_SLOTS.filter(slot=>slot.id!=='blue-spawn'&&slot.id!=='red-spawn').map(slot=>{
   const p=bridgePoint(slot.u,slot.v);
   const nexus=slot.id.endsWith('nexus'),inhibitor=slot.id.endsWith('inhibitor');
-  return {id:slot.id,x:p.x,y:p.y-(nexus?32:inhibitor?16:8),
-    rx:nexus?105:inhibitor?47:25,ry:nexus?58:inhibitor?26:18};
+  // Match the current painted plinths, including their front steps. The old
+  // small, rear-shifted ellipses let feet enter the visible stone foundations.
+  return {id:slot.id,x:p.x,y:p.y,
+    rx:nexus?124:inhibitor?47:68,ry:nexus?84:inhibitor?40:64};
 });
+
+/** Melee attacks reach the same foundation that blocks the approach. */
+export function bridgeFoundationRadius(target:Point,from:Point):number|null {
+  const site=BRIDGE_FOOTPRINTS.find(site=>Math.hypot(site.x-target.x,site.y-target.y)<1);
+  if(!site)return null;
+  const dx=from.x-target.x,dy=from.y-target.y,length=Math.hypot(dx,dy);
+  return length>0?length/Math.hypot(dx/site.rx,dy/site.ry):Math.min(site.rx,site.ry);
+}
 
 export function onBridgeFootprint(point:Point,radius=0):boolean {
   return BRIDGE_FOOTPRINTS.some(site=>Math.hypot((point.x-site.x)/(site.rx+radius),(point.y-site.y)/(site.ry+radius))<1);

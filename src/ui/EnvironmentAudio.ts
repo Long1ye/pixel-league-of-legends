@@ -11,6 +11,7 @@ interface Voice {source:AudioBufferSourceNode;gain:GainNode;pan:StereoPannerNode
 const fires=BRIDGE_LIGHTS.filter(f=>f.lit).map(bridgeLightPoint);
 /** Uses the existing, gesture-unlocked AudioContext. No autoplay or separate master toggle. */
 export class EnvironmentAudio {
+ constructor(private readonly firePositions:readonly Point[]=fires){}
  enabled=true;
  failed=false;
  private context:AudioContext|null=null;
@@ -81,7 +82,7 @@ export class EnvironmentAudio {
   const edge=Math.min(1,Math.abs(v)/Math.max(1,halfWidth(BRIDGE,u)));
   const duck=time<this.combatUntil?.62:1,now=context.currentTime;
   this.wind?.gain.gain.setTargetAtTime((.055+wind.gust*.055+edge*.025)*duck,now,.2);
-  const nearby=fires.map(p=>({...p,mix:positionalSound(p,listener,width,450)})).sort((a,b)=>b.mix.gain-a.mix.gain);
+  const nearby=this.firePositions.map(p=>({...p,mix:positionalSound(p,listener,width,450)})).sort((a,b)=>b.mix.gain-a.mix.gain);
   this.fireVoices.forEach((voice,i)=>{
    const mix=nearby[i]?.mix??{gain:0,pan:0};
    voice.gain.gain.setTargetAtTime(mix.gain*.5*duck,now,.15);voice.pan.pan.setTargetAtTime(mix.pan,now,.12);
@@ -91,5 +92,6 @@ export class EnvironmentAudio {
    this.nextIce=time+26+(Math.sin(time*1.7)*.5+.5)*19;
   }
  }
+ reset(){this.stop();this.clock=-1;this.nextIce=24;this.combatUntil=0;}
  dispose(){this.disposed=true;this.stop();}
 }

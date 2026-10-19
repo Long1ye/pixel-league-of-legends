@@ -1,0 +1,81 @@
+{
+  "job": "job_07ad834e0fc844a0b32a6182270a7a2a",
+  "source": "assets\\minion-vfx\\generated\\Transparent_game_VFX_atlas_for_classic_MOBA_minion_attacks_Exact_4_columns_by_4_rows_grid_1024x1024_total_each_da9640f2\\result_images_0_url.png",
+  "sha256": "995dd65e6f0bb69f21639a11da87393ea6385d2dbec394d04bf50fa3e1f1977d",
+  "cell": [
+    256,
+    256
+  ],
+  "frames": 16,
+  "shifts": [
+    [
+      2,
+      0
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      8,
+      0
+    ],
+    [
+      9,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      5,
+      -1
+    ],
+    [
+      8,
+      -1
+    ],
+    [
+      9,
+      -1
+    ],
+    [
+      -14,
+      6
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      12,
+      -7
+    ],
+    [
+      35,
+      49
+    ],
+    [
+      -3,
+      7
+    ],
+    [
+      -3,
+      13
+    ],
+    [
+      25,
+      1
+    ],
+    [
+      -1,
+      7
+    ]
+  ],
+  "alpha": [
+    0,
+    253
+  ],
+  "resampled": false
+}

@@ -1,0 +1,591 @@
+Warning: No mesh data to join
+INFO Draco mesh compression is available, use library at D:\Long1ye\pixel-league-of-legends-V2\.cache\blender-python\bpy\4.5\scripts\addons_core\io_scene_gltf2\extern_draco.dll
+15:47:59 | INFO: Starting glTF 2.0 export
+15:47:59 | INFO: Extracting primitive: thin broken snow cap.011
+15:47:59 | INFO: Primitives created: 1
+15:47:59 | INFO: Extracting primitive: radial arch stone 02.001
+15:47:59 | INFO: Primitives created: 1
+15:47:59 | INFO: Extracting primitive: radial arch stone 14.001
+15:47:59 | INFO: Primitives created: 1
+15:47:59 | INFO: Extracting primitive: Cube.159
+15:47:59 | INFO: Primitives created: 1
+15:47:59 | INFO: Extracting primitive: radial arch stone 13.001
+15:47:59 | INFO: Primitives created: 1
+15:47:59 | INFO: Extracting primitive: radial arch stone 00.001
+15:47:59 | INFO: Primitives created: 1
+15:47:59 | INFO: Extracting primitive: radial arch stone 04.001
+15:47:59 | INFO: Primitives created: 1
+15:47:59 | INFO: Extracting primitive: Cone.088
+15:47:59 | INFO: Primitives created: 1
+15:47:59 | INFO: Extracting primitive: radial arch stone 11.001
+15:47:59 | INFO: Primitives created: 1
+15:47:59 | INFO: Extracting primitive: Cube.218
+15:47:59 | INFO: Primitives created: 1
+15:47:59 | INFO: Extracting primitive: interlaced stone relief.002
+15:47:59 | INFO: Primitives created: 1
+15:47:59 | INFO: Extracting primitive: radial arch stone 01.001
+15:47:59 | INFO: Primitives created: 1
+15:47:59 | INFO: Finished glTF 2.0 export in 0.13791584968566895 s
+Fra:1 Mem:37.94M (Peak 37.94M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | spandrel masonry
+Fra:1 Mem:37.94M (Peak 37.94M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | spandrel masonry.003
+Fra:1 Mem:37.95M (Peak 37.95M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | spandrel masonry.004
+Fra:1 Mem:37.96M (Peak 37.96M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | spandrel masonry.005
+Fra:1 Mem:37.96M (Peak 37.96M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | spandrel masonry.006
+Fra:1 Mem:37.97M (Peak 37.97M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | spandrel masonry.007
+Fra:1 Mem:37.97M (Peak 37.97M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier
+Fra:1 Mem:37.98M (Peak 37.98M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.001
+Fra:1 Mem:37.98M (Peak 37.98M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.002
+Fra:1 Mem:37.99M (Peak 37.99M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.003
+Fra:1 Mem:37.99M (Peak 37.99M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.004
+Fra:1 Mem:38.01M (Peak 38.01M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.005
+Fra:1 Mem:38.49M (Peak 38.49M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.006
+Fra:1 Mem:38.98M (Peak 38.98M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.008
+Fra:1 Mem:38.95M (Peak 38.98M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.009
+Fra:1 Mem:39.06M (Peak 39.06M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.010
+Fra:1 Mem:39.00M (Peak 39.06M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.011
+Fra:1 Mem:39.04M (Peak 39.06M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.012
+Fra:1 Mem:39.20M (Peak 39.20M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.013
+Fra:1 Mem:39.15M (Peak 39.20M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.015
+Fra:1 Mem:39.21M (Peak 39.21M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.016
+Fra:1 Mem:39.39M (Peak 39.39M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.019
+Fra:1 Mem:39.33M (Peak 39.39M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.020
+Fra:1 Mem:39.52M (Peak 39.52M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.021
+Fra:1 Mem:39.85M (Peak 39.85M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.022
+Fra:1 Mem:39.84M (Peak 39.85M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar
+Fra:1 Mem:39.70M (Peak 39.85M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.001
+Fra:1 Mem:39.79M (Peak 39.85M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.002
+Fra:1 Mem:39.82M (Peak 39.85M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.003
+Fra:1 Mem:40.00M (Peak 40.00M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.004
+Fra:1 Mem:40.04M (Peak 40.05M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.006
+Fra:1 Mem:40.11M (Peak 40.11M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.007
+Fra:1 Mem:40.16M (Peak 40.16M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.008
+Fra:1 Mem:40.28M (Peak 40.28M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.011
+Fra:1 Mem:40.25M (Peak 40.28M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.012
+Fra:1 Mem:40.48M (Peak 40.48M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.013
+Fra:1 Mem:40.61M (Peak 40.61M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.014
+Fra:1 Mem:40.82M (Peak 40.82M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.015
+Fra:1 Mem:40.79M (Peak 40.82M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.016
+Fra:1 Mem:40.72M (Peak 40.82M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.017
+Fra:1 Mem:40.84M (Peak 40.84M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.018
+Fra:1 Mem:40.93M (Peak 40.93M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.019
+Fra:1 Mem:40.93M (Peak 40.93M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.020
+Fra:1 Mem:41.03M (Peak 41.03M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.021
+Fra:1 Mem:41.12M (Peak 41.12M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.022
+Fra:1 Mem:41.16M (Peak 41.16M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.023
+Fra:1 Mem:41.32M (Peak 41.32M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.024
+Fra:1 Mem:41.35M (Peak 41.35M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.025
+Fra:1 Mem:41.34M (Peak 41.35M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.026
+Fra:1 Mem:41.44M (Peak 41.44M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.027
+Fra:1 Mem:41.48M (Peak 41.48M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.028
+Fra:1 Mem:41.52M (Peak 41.52M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.029
+Fra:1 Mem:41.55M (Peak 41.55M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.030
+Fra:1 Mem:41.61M (Peak 41.61M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.032
+Fra:1 Mem:41.58M (Peak 41.61M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.034
+Fra:1 Mem:41.77M (Peak 41.77M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.035
+Fra:1 Mem:41.82M (Peak 41.82M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.036
+Fra:1 Mem:41.86M (Peak 41.86M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.037
+Fra:1 Mem:41.87M (Peak 41.87M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.038
+Fra:1 Mem:41.87M (Peak 41.87M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.039
+Fra:1 Mem:42.12M (Peak 42.12M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.040
+Fra:1 Mem:42.19M (Peak 42.19M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | framing bevel.001
+Fra:1 Mem:42.14M (Peak 42.19M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | wall coping
+Fra:1 Mem:42.16M (Peak 42.19M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone
+Fra:1 Mem:42.19M (Peak 42.19M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | framing bevel
+Fra:1 Mem:42.20M (Peak 42.20M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.001
+Fra:1 Mem:42.21M (Peak 42.21M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.002
+Fra:1 Mem:42.22M (Peak 42.22M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | carved diamond.003
+Fra:1 Mem:42.25M (Peak 42.25M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.003
+Fra:1 Mem:42.29M (Peak 42.29M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.006
+Fra:1 Mem:42.25M (Peak 42.29M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.007
+Fra:1 Mem:42.33M (Peak 42.33M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | carved diamond.002
+Fra:1 Mem:42.34M (Peak 42.34M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.010
+Fra:1 Mem:42.36M (Peak 42.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.011
+Fra:1 Mem:42.34M (Peak 42.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.012
+Fra:1 Mem:42.29M (Peak 42.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.015
+Fra:1 Mem:42.30M (Peak 42.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | wall coping.002
+Fra:1 Mem:42.32M (Peak 42.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | carved diamond.001
+Fra:1 Mem:42.28M (Peak 42.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.016
+Fra:1 Mem:42.35M (Peak 42.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.019
+Fra:1 Mem:42.34M (Peak 42.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.021
+Fra:1 Mem:42.35M (Peak 42.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.023
+Fra:1 Mem:42.35M (Peak 42.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.024
+Fra:1 Mem:42.35M (Peak 42.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.025
+Fra:1 Mem:42.36M (Peak 42.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.026
+Fra:1 Mem:42.41M (Peak 42.41M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.027
+Fra:1 Mem:42.43M (Peak 42.43M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.028
+Fra:1 Mem:42.48M (Peak 42.48M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.029
+Fra:1 Mem:42.47M (Peak 42.48M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.031
+Fra:1 Mem:42.44M (Peak 42.48M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | carved diamond
+Fra:1 Mem:42.43M (Peak 42.48M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.032
+Fra:1 Mem:42.48M (Peak 42.48M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.033
+Fra:1 Mem:42.54M (Peak 42.54M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.035
+Fra:1 Mem:42.55M (Peak 42.55M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.034
+Fra:1 Mem:42.57M (Peak 42.57M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.036
+Fra:1 Mem:42.61M (Peak 42.61M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.037
+Fra:1 Mem:42.53M (Peak 42.61M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | wall coping.005
+Fra:1 Mem:42.66M (Peak 42.66M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.040
+Fra:1 Mem:42.70M (Peak 42.70M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.041
+Fra:1 Mem:42.68M (Peak 42.70M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.043
+Fra:1 Mem:42.69M (Peak 42.70M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.044
+Fra:1 Mem:42.70M (Peak 42.70M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.046
+Fra:1 Mem:42.76M (Peak 42.76M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | interlaced stone relief.001
+Fra:1 Mem:42.75M (Peak 42.76M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.047
+Fra:1 Mem:42.72M (Peak 42.76M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | wall coping.006
+Fra:1 Mem:42.77M (Peak 42.77M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.050
+Fra:1 Mem:42.78M (Peak 42.78M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.051
+Fra:1 Mem:42.76M (Peak 42.78M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.052
+Fra:1 Mem:42.88M (Peak 42.88M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.055
+Fra:1 Mem:42.83M (Peak 42.88M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | wall coping.007
+Fra:1 Mem:42.87M (Peak 42.88M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.056
+Fra:1 Mem:42.92M (Peak 42.92M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.058
+Fra:1 Mem:42.99M (Peak 42.99M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.059
+Fra:1 Mem:42.97M (Peak 42.99M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.061
+Fra:1 Mem:42.96M (Peak 42.99M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | interlaced stone relief
+Fra:1 Mem:42.99M (Peak 42.99M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.063
+Fra:1 Mem:43.07M (Peak 43.07M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | wall coping.008
+Fra:1 Mem:43.03M (Peak 43.07M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.064
+Fra:1 Mem:43.05M (Peak 43.07M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.065
+Fra:1 Mem:43.07M (Peak 43.07M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.070
+Fra:1 Mem:43.10M (Peak 43.10M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.071
+Fra:1 Mem:43.11M (Peak 43.11M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | wall coping.009
+Fra:1 Mem:43.13M (Peak 43.13M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.073
+Fra:1 Mem:43.15M (Peak 43.15M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.074
+Fra:1 Mem:43.22M (Peak 43.22M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | thin broken snow cap.010
+Fra:1 Mem:43.24M (Peak 43.24M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.079
+Fra:1 Mem:43.19M (Peak 43.24M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster
+Fra:1 Mem:43.26M (Peak 43.26M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | pedestal core.001
+Fra:1 Mem:43.27M (Peak 43.27M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.002
+Fra:1 Mem:43.30M (Peak 43.30M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | pedestal core.002
+Fra:1 Mem:43.43M (Peak 43.43M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.004
+Fra:1 Mem:43.51M (Peak 43.51M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.005
+Fra:1 Mem:43.46M (Peak 43.51M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | pedestal core.003
+Fra:1 Mem:43.57M (Peak 43.57M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.006
+Fra:1 Mem:43.64M (Peak 43.64M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.007
+Fra:1 Mem:44.01M (Peak 44.01M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | pedestal core.004
+Fra:1 Mem:44.00M (Peak 44.01M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.008
+Fra:1 Mem:44.09M (Peak 44.09M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | thin broken snow cap.009
+Fra:1 Mem:44.12M (Peak 44.12M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | pedestal core.005
+Fra:1 Mem:44.14M (Peak 44.14M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.010
+Fra:1 Mem:44.36M (Peak 44.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.011
+Fra:1 Mem:44.27M (Peak 44.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | pedestal core.006
+Fra:1 Mem:44.33M (Peak 44.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | pedestal core.007
+Fra:1 Mem:44.42M (Peak 44.43M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.014
+Fra:1 Mem:44.51M (Peak 44.51M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | thin broken snow cap.008
+Fra:1 Mem:44.54M (Peak 44.54M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.015
+Fra:1 Mem:44.61M (Peak 44.61M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | pedestal lower plinth
+Fra:1 Mem:44.66M (Peak 44.66M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | guardian seat
+Fra:1 Mem:44.68M (Peak 44.68M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.080
+Fra:1 Mem:44.75M (Peak 44.75M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.081
+Fra:1 Mem:44.73M (Peak 44.75M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.082
+Fra:1 Mem:44.79M (Peak 44.79M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | thin broken snow cap.007
+Fra:1 Mem:44.81M (Peak 44.81M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.083
+Fra:1 Mem:44.85M (Peak 44.85M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.084
+Fra:1 Mem:44.86M (Peak 44.86M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.085
+Fra:1 Mem:44.83M (Peak 44.86M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.086
+Fra:1 Mem:44.85M (Peak 44.86M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.087
+Fra:1 Mem:44.90M (Peak 44.90M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | inset carving field
+Fra:1 Mem:44.89M (Peak 44.90M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | broken masonry fragment
+Fra:1 Mem:44.89M (Peak 44.90M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | broken masonry fragment.001
+Fra:1 Mem:44.92M (Peak 44.92M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | broken masonry fragment.002
+Fra:1 Mem:44.94M (Peak 44.94M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | thin broken snow cap.006
+Fra:1 Mem:45.35M (Peak 45.35M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | broken masonry fragment.004
+Fra:1 Mem:45.36M (Peak 45.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | broken masonry fragment.006
+Fra:1 Mem:45.26M (Peak 45.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | broken masonry fragment.007
+Fra:1 Mem:45.28M (Peak 45.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | broken masonry fragment.010
+Fra:1 Mem:45.34M (Peak 45.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | broken masonry fragment.011
+Fra:1 Mem:45.65M (Peak 45.65M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | broken masonry fragment.012
+Fra:1 Mem:45.61M (Peak 45.65M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | soft cold sky
+Fra:1 Mem:45.71M (Peak 45.71M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | soft side bounce
+Fra:1 Mem:45.69M (Peak 45.71M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | front neutral fill
+Fra:1 Mem:45.74M (Peak 45.74M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 00
+Fra:1 Mem:45.78M (Peak 45.78M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 02
+Fra:1 Mem:45.90M (Peak 45.90M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 03
+Fra:1 Mem:45.97M (Peak 45.97M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 04
+Fra:1 Mem:46.00M (Peak 46.00M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 07
+Fra:1 Mem:46.04M (Peak 46.05M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 09
+Fra:1 Mem:46.00M (Peak 46.05M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 10
+Fra:1 Mem:46.27M (Peak 46.27M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | thin broken snow cap.004
+Fra:1 Mem:46.39M (Peak 46.39M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 11
+Fra:1 Mem:46.45M (Peak 46.45M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 12
+Fra:1 Mem:46.68M (Peak 46.68M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 13
+Fra:1 Mem:46.60M (Peak 46.68M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 14
+Fra:1 Mem:46.59M (Peak 46.68M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 15
+Fra:1 Mem:46.54M (Peak 46.68M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 16
+Fra:1 Mem:46.80M (Peak 46.80M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | thin broken snow cap.003
+Fra:1 Mem:46.80M (Peak 46.80M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 17
+Fra:1 Mem:46.94M (Peak 46.94M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 18
+Fra:1 Mem:46.96M (Peak 46.96M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing
+Fra:1 Mem:46.98M (Peak 46.98M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.001
+Fra:1 Mem:46.99M (Peak 46.99M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.003
+Fra:1 Mem:47.00M (Peak 47.00M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.004
+Fra:1 Mem:47.01M (Peak 47.01M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.006
+Fra:1 Mem:47.06M (Peak 47.06M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.008
+Fra:1 Mem:47.05M (Peak 47.06M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.009
+Fra:1 Mem:47.04M (Peak 47.06M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.010
+Fra:1 Mem:47.07M (Peak 47.07M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.011
+Fra:1 Mem:47.08M (Peak 47.08M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.012
+Fra:1 Mem:47.10M (Peak 47.10M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.015
+Fra:1 Mem:47.03M (Peak 47.10M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.016
+Fra:1 Mem:47.04M (Peak 47.10M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.017
+Fra:1 Mem:47.09M (Peak 47.10M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.021
+Fra:1 Mem:47.05M (Peak 47.10M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.022
+Fra:1 Mem:47.02M (Peak 47.10M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.023
+Fra:1 Mem:47.02M (Peak 47.10M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | thin broken snow cap.001
+Fra:1 Mem:47.07M (Peak 47.10M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.027
+Fra:1 Mem:47.08M (Peak 47.10M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | thin broken snow cap
+Fra:1 Mem:47.15M (Peak 47.15M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:37.33M (Peak 47.15M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:37.33M (Peak 47.15M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:37.33M (Peak 47.15M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:37.33M (Peak 47.15M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:37.42M (Peak 47.15M) | Time:00:00.02 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:37.42M (Peak 47.15M) | Time:00:00.02 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:37.42M (Peak 47.15M) | Time:00:00.02 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:37.42M (Peak 47.15M) | Time:00:00.02 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:37.42M (Peak 47.15M) | Time:00:00.02 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:37.42M (Peak 47.15M) | Time:00:00.02 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:37.49M (Peak 47.15M) | Time:00:00.02 | Mem:0.07M, Peak:0.07M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:37.49M (Peak 47.15M) | Time:00:00.02 | Mem:0.07M, Peak:0.07M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:37.49M (Peak 47.15M) | Time:00:00.02 | Mem:0.07M, Peak:0.07M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:37.49M (Peak 47.15M) | Time:00:00.02 | Mem:0.07M, Peak:0.07M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:37.49M (Peak 47.15M) | Time:00:00.02 | Mem:0.07M, Peak:0.07M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:39.79M (Peak 47.15M) | Time:00:00.02 | Mem:0.10M, Peak:0.10M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:39.75M (Peak 47.15M) | Time:00:00.02 | Mem:2.34M, Peak:2.34M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:39.76M (Peak 47.15M) | Time:00:00.02 | Mem:2.34M, Peak:2.34M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:39.76M (Peak 47.15M) | Time:00:00.02 | Mem:4.57M, Peak:4.57M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:39.76M (Peak 47.15M) | Time:00:00.02 | Mem:7.01M, Peak:9.25M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:39.76M (Peak 47.15M) | Time:00:00.02 | Mem:7.01M, Peak:9.25M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:43.82M (Peak 47.15M) | Time:00:00.03 | Mem:7.01M, Peak:9.25M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:43.82M (Peak 47.15M) | Time:00:00.03 | Mem:11.07M, Peak:11.07M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:43.82M (Peak 47.15M) | Time:00:00.03 | Mem:11.07M, Peak:11.07M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:43.82M (Peak 47.15M) | Time:00:00.03 | Mem:11.07M, Peak:11.07M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:43.82M (Peak 47.15M) | Time:00:00.03 | Mem:11.07M, Peak:11.07M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:43.82M (Peak 47.15M) | Time:00:00.03 | Mem:11.07M, Peak:11.07M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:43.82M (Peak 47.15M) | Time:00:00.03 | Mem:11.16M, Peak:11.16M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:43.82M (Peak 47.15M) | Time:00:00.03 | Mem:11.16M, Peak:11.16M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:43.82M (Peak 47.15M) | Time:00:00.03 | Mem:11.16M, Peak:11.16M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:43.82M (Peak 47.15M) | Time:00:00.03 | Mem:11.16M, Peak:11.16M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:43.83M (Peak 47.15M) | Time:00:00.03 | Mem:11.08M, Peak:11.16M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:43.83M (Peak 47.15M) | Time:00:00.03 | Mem:11.16M, Peak:11.16M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:43.83M (Peak 47.15M) | Time:00:00.03 | Mem:11.16M, Peak:11.16M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:43.83M (Peak 47.15M) | Time:00:00.03 | Mem:11.16M, Peak:11.16M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:1 Mem:43.83M (Peak 47.15M) | Time:00:00.03 | Mem:11.16M, Peak:11.16M | Scene, ViewLayer | Sample 0/32
+Fra:1 Mem:131.00M (Peak 131.00M) | Time:00:00.15 | Remaining:00:03.89 | Mem:98.14M, Peak:98.14M | Scene, ViewLayer | Sample 1/32
+Fra:1 Mem:167.62M (Peak 222.55M) | Time:00:06.85 | Mem:98.14M, Peak:98.14M | Scene, ViewLayer | Sample 32/32
+Fra:1 Mem:167.62M (Peak 222.55M) | Time:00:06.85 | Mem:98.14M, Peak:98.14M | Scene, ViewLayer | Finished
+Saved: 'D:\Long1ye\pixel-league-of-legends-V2\assets\map-modules\howling-blender-prototype\architecture-main.png'
+Time: 00:07.10 (Saving: 00:00.24)
+
+Fra:1 Mem:39.23M (Peak 39.23M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | spandrel masonry
+Fra:1 Mem:39.23M (Peak 39.23M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | spandrel masonry.001
+Fra:1 Mem:39.23M (Peak 39.23M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | spandrel masonry.003
+Fra:1 Mem:39.24M (Peak 39.24M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | spandrel masonry.004
+Fra:1 Mem:39.25M (Peak 39.25M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | spandrel masonry.006
+Fra:1 Mem:39.30M (Peak 39.30M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | spandrel masonry.007
+Fra:1 Mem:39.44M (Peak 39.44M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.001
+Fra:1 Mem:39.80M (Peak 39.80M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.002
+Fra:1 Mem:39.78M (Peak 39.80M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.003
+Fra:1 Mem:39.90M (Peak 39.90M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.004
+Fra:1 Mem:40.00M (Peak 40.00M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.005
+Fra:1 Mem:40.10M (Peak 40.10M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.006
+Fra:1 Mem:39.95M (Peak 40.10M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.007
+Fra:1 Mem:40.03M (Peak 40.10M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.011
+Fra:1 Mem:40.19M (Peak 40.19M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.012
+Fra:1 Mem:40.17M (Peak 40.19M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.013
+Fra:1 Mem:40.25M (Peak 40.25M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.014
+Fra:1 Mem:40.38M (Peak 40.38M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.015
+Fra:1 Mem:40.53M (Peak 40.53M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.017
+Fra:1 Mem:40.64M (Peak 40.64M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.018
+Fra:1 Mem:40.69M (Peak 40.69M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.020
+Fra:1 Mem:40.65M (Peak 40.69M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.021
+Fra:1 Mem:40.85M (Peak 40.85M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | load bearing pier.022
+Fra:1 Mem:40.84M (Peak 40.85M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.001
+Fra:1 Mem:40.82M (Peak 40.85M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.004
+Fra:1 Mem:40.92M (Peak 40.92M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.006
+Fra:1 Mem:41.14M (Peak 41.14M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.007
+Fra:1 Mem:41.46M (Peak 41.46M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.008
+Fra:1 Mem:41.33M (Peak 41.46M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.009
+Fra:1 Mem:41.29M (Peak 41.46M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.010
+Fra:1 Mem:41.33M (Peak 41.46M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.011
+Fra:1 Mem:41.56M (Peak 41.56M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.012
+Fra:1 Mem:41.62M (Peak 41.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.013
+Fra:1 Mem:41.65M (Peak 41.65M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.014
+Fra:1 Mem:41.71M (Peak 41.71M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.015
+Fra:1 Mem:41.74M (Peak 41.74M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.016
+Fra:1 Mem:41.73M (Peak 41.74M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.018
+Fra:1 Mem:41.75M (Peak 41.75M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.019
+Fra:1 Mem:42.03M (Peak 42.03M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.020
+Fra:1 Mem:42.01M (Peak 42.03M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.022
+Fra:1 Mem:41.98M (Peak 42.03M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.024
+Fra:1 Mem:42.15M (Peak 42.15M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.025
+Fra:1 Mem:42.22M (Peak 42.22M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.026
+Fra:1 Mem:42.40M (Peak 42.40M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.027
+Fra:1 Mem:42.48M (Peak 42.48M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.028
+Fra:1 Mem:42.35M (Peak 42.48M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.029
+Fra:1 Mem:42.35M (Peak 42.48M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.031
+Fra:1 Mem:42.63M (Peak 42.63M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.032
+Fra:1 Mem:42.74M (Peak 42.74M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.033
+Fra:1 Mem:42.66M (Peak 42.74M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.034
+Fra:1 Mem:42.73M (Peak 42.74M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.035
+Fra:1 Mem:42.82M (Peak 42.82M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.036
+Fra:1 Mem:42.87M (Peak 42.87M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.037
+Fra:1 Mem:42.90M (Peak 42.90M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.038
+Fra:1 Mem:43.00M (Peak 43.00M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.039
+Fra:1 Mem:43.05M (Peak 43.05M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | parapet ashlar.040
+Fra:1 Mem:43.11M (Peak 43.11M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | wall coping
+Fra:1 Mem:43.08M (Peak 43.11M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone
+Fra:1 Mem:43.16M (Peak 43.16M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.001
+Fra:1 Mem:43.13M (Peak 43.16M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.002
+Fra:1 Mem:43.16M (Peak 43.16M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.003
+Fra:1 Mem:43.17M (Peak 43.17M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.004
+Fra:1 Mem:43.14M (Peak 43.17M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.005
+Fra:1 Mem:43.20M (Peak 43.20M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.006
+Fra:1 Mem:43.18M (Peak 43.20M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.007
+Fra:1 Mem:43.16M (Peak 43.20M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.009
+Fra:1 Mem:43.16M (Peak 43.20M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.011
+Fra:1 Mem:43.13M (Peak 43.20M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.014
+Fra:1 Mem:43.19M (Peak 43.20M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.015
+Fra:1 Mem:43.25M (Peak 43.25M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.016
+Fra:1 Mem:43.30M (Peak 43.30M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.017
+Fra:1 Mem:43.18M (Peak 43.30M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.022
+Fra:1 Mem:43.19M (Peak 43.30M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.023
+Fra:1 Mem:43.21M (Peak 43.30M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.024
+Fra:1 Mem:43.22M (Peak 43.30M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.025
+Fra:1 Mem:43.22M (Peak 43.30M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.026
+Fra:1 Mem:43.22M (Peak 43.30M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.027
+Fra:1 Mem:43.24M (Peak 43.30M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.030
+Fra:1 Mem:43.20M (Peak 43.30M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.031
+Fra:1 Mem:43.22M (Peak 43.30M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | wall coping.004
+Fra:1 Mem:43.29M (Peak 43.30M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.033
+Fra:1 Mem:43.34M (Peak 43.34M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.035
+Fra:1 Mem:43.37M (Peak 43.37M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.037
+Fra:1 Mem:43.36M (Peak 43.37M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | wall coping.005
+Fra:1 Mem:43.44M (Peak 43.44M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.040
+Fra:1 Mem:43.45M (Peak 43.45M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.041
+Fra:1 Mem:43.43M (Peak 43.45M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.043
+Fra:1 Mem:43.40M (Peak 43.45M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.045
+Fra:1 Mem:43.41M (Peak 43.45M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.046
+Fra:1 Mem:43.44M (Peak 43.45M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.047
+Fra:1 Mem:43.46M (Peak 43.46M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | wall coping.006
+Fra:1 Mem:43.46M (Peak 43.46M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.048
+Fra:1 Mem:43.46M (Peak 43.46M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.051
+Fra:1 Mem:43.56M (Peak 43.56M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.053
+Fra:1 Mem:43.58M (Peak 43.58M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.054
+Fra:1 Mem:43.47M (Peak 43.58M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.055
+Fra:1 Mem:43.48M (Peak 43.58M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.058
+Fra:1 Mem:43.48M (Peak 43.58M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | framing bevel.001
+Fra:1 Mem:43.49M (Peak 43.58M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.060
+Fra:1 Mem:43.49M (Peak 43.58M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | framing bevel
+Fra:1 Mem:43.49M (Peak 43.58M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.062
+Fra:1 Mem:43.49M (Peak 43.58M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | wall coping.008
+Fra:1 Mem:43.50M (Peak 43.58M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.064
+Fra:1 Mem:43.54M (Peak 43.58M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.065
+Fra:1 Mem:43.61M (Peak 43.61M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.066
+Fra:1 Mem:43.53M (Peak 43.61M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.068
+Fra:1 Mem:43.54M (Peak 43.61M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.069
+Fra:1 Mem:43.55M (Peak 43.61M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.070
+Fra:1 Mem:43.55M (Peak 43.61M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.072
+Fra:1 Mem:43.56M (Peak 43.61M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | carved diamond.003
+Fra:1 Mem:43.56M (Peak 43.61M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.075
+Fra:1 Mem:43.56M (Peak 43.61M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.076
+Fra:1 Mem:43.57M (Peak 43.61M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.077
+Fra:1 Mem:43.62M (Peak 43.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.078
+Fra:1 Mem:43.63M (Peak 43.63M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | pedestal core
+Fra:1 Mem:43.66M (Peak 43.66M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster
+Fra:1 Mem:43.68M (Peak 43.68M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.001
+Fra:1 Mem:43.77M (Peak 43.77M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | pedestal core.001
+Fra:1 Mem:43.78M (Peak 43.78M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.002
+Fra:1 Mem:43.86M (Peak 43.86M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.003
+Fra:1 Mem:43.98M (Peak 43.98M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | pedestal core.002
+Fra:1 Mem:43.95M (Peak 43.98M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.004
+Fra:1 Mem:44.02M (Peak 44.02M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.005
+Fra:1 Mem:44.13M (Peak 44.13M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | pedestal core.003
+Fra:1 Mem:44.21M (Peak 44.21M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.006
+Fra:1 Mem:44.26M (Peak 44.26M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | carved diamond.001
+Fra:1 Mem:44.25M (Peak 44.26M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.007
+Fra:1 Mem:44.37M (Peak 44.37M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | pedestal core.004
+Fra:1 Mem:44.48M (Peak 44.48M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | carved diamond
+Fra:1 Mem:44.45M (Peak 44.48M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.008
+Fra:1 Mem:44.48M (Peak 44.48M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.009
+Fra:1 Mem:44.51M (Peak 44.51M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.010
+Fra:1 Mem:44.77M (Peak 44.77M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.011
+Fra:1 Mem:44.72M (Peak 44.77M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | pedestal core.006
+Fra:1 Mem:44.77M (Peak 44.77M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | interlaced stone relief.001
+Fra:1 Mem:44.89M (Peak 44.89M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.012
+Fra:1 Mem:45.05M (Peak 45.05M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | interlaced stone relief
+Fra:1 Mem:44.96M (Peak 45.05M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.013
+Fra:1 Mem:44.94M (Peak 45.05M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | pedestal core.007
+Fra:1 Mem:44.99M (Peak 45.05M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.014
+Fra:1 Mem:45.13M (Peak 45.13M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | thin broken snow cap.010
+Fra:1 Mem:45.10M (Peak 45.13M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | projecting carved pilaster.015
+Fra:1 Mem:45.20M (Peak 45.20M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | pedestal lower plinth
+Fra:1 Mem:45.31M (Peak 45.31M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | thin broken snow cap.009
+Fra:1 Mem:45.35M (Peak 45.35M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | guardian seat
+Fra:1 Mem:45.31M (Peak 45.35M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.080
+Fra:1 Mem:45.31M (Peak 45.35M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.082
+Fra:1 Mem:45.40M (Peak 45.40M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.083
+Fra:1 Mem:45.43M (Peak 45.43M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.084
+Fra:1 Mem:45.34M (Peak 45.43M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.085
+Fra:1 Mem:45.33M (Peak 45.43M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cone.087
+Fra:1 Mem:45.28M (Peak 45.43M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | broken masonry fragment
+Fra:1 Mem:45.32M (Peak 45.43M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | broken masonry fragment.001
+Fra:1 Mem:45.41M (Peak 45.43M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | broken masonry fragment.003
+Fra:1 Mem:45.46M (Peak 45.46M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | broken masonry fragment.004
+Fra:1 Mem:45.67M (Peak 45.67M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | broken masonry fragment.005
+Fra:1 Mem:45.55M (Peak 45.67M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | thin broken snow cap.006
+Fra:1 Mem:45.62M (Peak 45.67M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | broken masonry fragment.009
+Fra:1 Mem:45.62M (Peak 45.67M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | broken masonry fragment.010
+Fra:1 Mem:45.62M (Peak 45.67M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | broken masonry fragment.011
+Fra:1 Mem:45.70M (Peak 45.70M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | broken masonry fragment.012
+Fra:1 Mem:45.82M (Peak 45.82M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | soft side bounce
+Fra:1 Mem:45.92M (Peak 45.92M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | thin broken snow cap.004
+Fra:1 Mem:46.11M (Peak 46.11M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | front neutral fill
+Fra:1 Mem:46.06M (Peak 46.11M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | thin broken snow cap.003
+Fra:1 Mem:46.08M (Peak 46.11M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 00
+Fra:1 Mem:46.17M (Peak 46.16M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | thin broken snow cap.002
+Fra:1 Mem:46.05M (Peak 46.16M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | thin broken snow cap.001
+Fra:1 Mem:46.14M (Peak 46.16M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 02
+Fra:1 Mem:46.21M (Peak 46.21M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | thin broken snow cap
+Fra:1 Mem:46.44M (Peak 46.44M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.027
+Fra:1 Mem:46.40M (Peak 46.44M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.026
+Fra:1 Mem:46.35M (Peak 46.44M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 03
+Fra:1 Mem:46.30M (Peak 46.44M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 06
+Fra:1 Mem:46.42M (Peak 46.44M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 08
+Fra:1 Mem:46.43M (Peak 46.44M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.024
+Fra:1 Mem:46.49M (Peak 46.49M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 10
+Fra:1 Mem:46.48M (Peak 46.49M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 11
+Fra:1 Mem:46.62M (Peak 46.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 12
+Fra:1 Mem:46.78M (Peak 46.78M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 13
+Fra:1 Mem:46.71M (Peak 46.78M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 14
+Fra:1 Mem:46.79M (Peak 46.79M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 15
+Fra:1 Mem:46.79M (Peak 46.79M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 16
+Fra:1 Mem:46.92M (Peak 46.92M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 17
+Fra:1 Mem:46.93M (Peak 46.93M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | radial arch stone 18
+Fra:1 Mem:46.88M (Peak 46.93M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing
+Fra:1 Mem:46.97M (Peak 46.97M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.001
+Fra:1 Mem:46.99M (Peak 46.99M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.002
+Fra:1 Mem:47.07M (Peak 47.07M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.005
+Fra:1 Mem:47.10M (Peak 47.10M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.004
+Fra:1 Mem:47.15M (Peak 47.15M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.007
+Fra:1 Mem:47.12M (Peak 47.15M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.008
+Fra:1 Mem:47.14M (Peak 47.15M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.012
+Fra:1 Mem:47.14M (Peak 47.15M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.013
+Fra:1 Mem:47.09M (Peak 47.15M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.015
+Fra:1 Mem:47.12M (Peak 47.15M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.022
+Fra:1 Mem:47.12M (Peak 47.15M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.016
+Fra:1 Mem:47.12M (Peak 47.15M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.017
+Fra:1 Mem:47.14M (Peak 47.15M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.018
+Fra:1 Mem:47.16M (Peak 47.16M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.019
+Fra:1 Mem:47.18M (Peak 47.18M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.020
+Fra:1 Mem:47.13M (Peak 47.18M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | solid spandrel backing.021
+Fra:1 Mem:47.15M (Peak 47.18M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:37.33M (Peak 47.18M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:37.33M (Peak 47.18M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:37.33M (Peak 47.18M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:37.33M (Peak 47.18M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:37.42M (Peak 47.18M) | Time:00:00.02 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:37.42M (Peak 47.18M) | Time:00:00.02 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:37.42M (Peak 47.18M) | Time:00:00.02 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:37.42M (Peak 47.18M) | Time:00:00.02 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:37.42M (Peak 47.18M) | Time:00:00.02 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:37.42M (Peak 47.18M) | Time:00:00.02 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:37.49M (Peak 47.18M) | Time:00:00.02 | Mem:0.07M, Peak:0.07M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:37.49M (Peak 47.18M) | Time:00:00.02 | Mem:0.07M, Peak:0.07M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:37.49M (Peak 47.18M) | Time:00:00.02 | Mem:0.07M, Peak:0.07M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:37.49M (Peak 47.18M) | Time:00:00.02 | Mem:0.07M, Peak:0.07M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:37.49M (Peak 47.18M) | Time:00:00.02 | Mem:0.07M, Peak:0.07M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:39.79M (Peak 47.18M) | Time:00:00.02 | Mem:0.10M, Peak:0.10M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:39.75M (Peak 47.18M) | Time:00:00.02 | Mem:2.34M, Peak:2.34M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:39.76M (Peak 47.18M) | Time:00:00.02 | Mem:2.34M, Peak:2.34M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:39.76M (Peak 47.18M) | Time:00:00.02 | Mem:4.57M, Peak:4.57M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:39.76M (Peak 47.18M) | Time:00:00.02 | Mem:7.01M, Peak:9.25M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:39.76M (Peak 47.18M) | Time:00:00.02 | Mem:7.01M, Peak:9.25M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:43.82M (Peak 47.18M) | Time:00:00.03 | Mem:7.01M, Peak:9.25M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:43.82M (Peak 47.18M) | Time:00:00.03 | Mem:11.07M, Peak:11.07M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:43.82M (Peak 47.18M) | Time:00:00.03 | Mem:11.07M, Peak:11.07M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:43.82M (Peak 47.18M) | Time:00:00.03 | Mem:11.07M, Peak:11.07M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:43.82M (Peak 47.18M) | Time:00:00.03 | Mem:11.07M, Peak:11.07M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:43.82M (Peak 47.18M) | Time:00:00.03 | Mem:11.07M, Peak:11.07M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:43.82M (Peak 47.18M) | Time:00:00.03 | Mem:11.16M, Peak:11.16M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:43.82M (Peak 47.18M) | Time:00:00.03 | Mem:11.16M, Peak:11.16M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:43.82M (Peak 47.18M) | Time:00:00.03 | Mem:11.16M, Peak:11.16M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:43.82M (Peak 47.18M) | Time:00:00.03 | Mem:11.16M, Peak:11.16M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:43.83M (Peak 47.18M) | Time:00:00.03 | Mem:11.08M, Peak:11.16M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:43.83M (Peak 47.18M) | Time:00:00.03 | Mem:11.16M, Peak:11.16M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:43.83M (Peak 47.18M) | Time:00:00.03 | Mem:11.16M, Peak:11.16M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:43.83M (Peak 47.18M) | Time:00:00.03 | Mem:11.16M, Peak:11.16M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:1 Mem:43.83M (Peak 47.18M) | Time:00:00.03 | Mem:11.16M, Peak:11.16M | Scene, ViewLayer | Sample 0/32
+Fra:1 Mem:131.00M (Peak 131.00M) | Time:00:00.15 | Remaining:00:03.74 | Mem:98.14M, Peak:98.14M | Scene, ViewLayer | Sample 1/32
+Fra:1 Mem:167.62M (Peak 222.55M) | Time:00:06.65 | Mem:98.14M, Peak:98.14M | Scene, ViewLayer | Sample 32/32
+Fra:1 Mem:167.62M (Peak 222.55M) | Time:00:06.65 | Mem:98.14M, Peak:98.14M | Scene, ViewLayer | Finished
+Saved: 'D:\Long1ye\pixel-league-of-legends-V2\assets\map-modules\howling-blender-prototype\architecture-side.png'
+Time: 00:06.74 (Saving: 00:00.08)
+
+
+Info: Saved as "bridge-wall-study.blend"
+15:48:13 | INFO: Data are loaded, start creating Blender stuff
+15:48:13 | INFO: Blender create Mesh node Broad triangular feline nose
+15:48:13 | INFO: Blender create Mesh node Carved volumetric mane ruff
+15:48:13 | INFO: Blender create Mesh node Chamfered physical socle
+15:48:13 | INFO: Blender create Mesh node Closed lip and philtrum ridge
+15:48:13 | INFO: Blender create Mesh node Continuous mane nape backing
+15:48:13 | INFO: Blender create Mesh node Curving grounded tail
+15:48:13 | INFO: Blender create Mesh node Left rounded carved ear
+15:48:13 | INFO: Blender create Mesh node Left seated almond eye
+15:48:13 | INFO: Blender create Mesh node Right closed lip ridge
+15:48:13 | INFO: Blender create Mesh node Right rounded carved ear
+15:48:13 | INFO: Blender create Mesh node Right seated almond eye
+15:48:13 | INFO: Blender create Mesh node Seated lion body with articulated limbs and muzzle
+15:48:13 | INFO: Blender create Mesh node Seated tail tuft
+15:48:13 | INFO: glTF import finished in 0.04s
+Fra:1 Mem:33.33M (Peak 33.33M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | soft cold sky
+Fra:1 Mem:33.34M (Peak 33.34M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | front neutral fill
+Fra:1 Mem:33.34M (Peak 33.34M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Broad triangular feline nose
+Fra:1 Mem:33.34M (Peak 33.34M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Closed lip and philtrum ridge
+Fra:1 Mem:33.34M (Peak 33.34M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Right rounded carved ear
+Fra:1 Mem:33.34M (Peak 33.34M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Seated tail tuft
+Fra:1 Mem:34.89M (Peak 34.89M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:34.84M (Peak 34.89M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading stone_sandstone_sculpture_2k
+Fra:1 Mem:50.23M (Peak 66.85M) | Time:00:00.04 | Mem:16.00M, Peak:16.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:50.23M (Peak 66.85M) | Time:00:00.04 | Mem:16.00M, Peak:16.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:50.23M (Peak 66.85M) | Time:00:00.04 | Mem:16.00M, Peak:16.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:50.23M (Peak 66.85M) | Time:00:00.04 | Mem:16.00M, Peak:16.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:50.31M (Peak 66.85M) | Time:00:00.04 | Mem:16.00M, Peak:16.00M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:50.31M (Peak 66.85M) | Time:00:00.04 | Mem:16.00M, Peak:16.00M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:50.31M (Peak 66.85M) | Time:00:00.04 | Mem:16.00M, Peak:16.00M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:50.31M (Peak 66.85M) | Time:00:00.04 | Mem:16.00M, Peak:16.00M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:50.31M (Peak 66.85M) | Time:00:00.04 | Mem:16.00M, Peak:16.00M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:50.31M (Peak 66.85M) | Time:00:00.04 | Mem:16.00M, Peak:16.00M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:50.32M (Peak 66.85M) | Time:00:00.04 | Mem:16.01M, Peak:16.01M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:50.32M (Peak 66.85M) | Time:00:00.04 | Mem:16.01M, Peak:16.01M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:50.32M (Peak 66.85M) | Time:00:00.04 | Mem:16.01M, Peak:16.01M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:50.32M (Peak 66.85M) | Time:00:00.04 | Mem:16.01M, Peak:16.01M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:50.32M (Peak 66.85M) | Time:00:00.04 | Mem:16.01M, Peak:16.01M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:50.72M (Peak 66.85M) | Time:00:00.04 | Mem:16.01M, Peak:16.01M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:50.72M (Peak 66.85M) | Time:00:00.04 | Mem:16.41M, Peak:16.41M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:50.72M (Peak 66.85M) | Time:00:00.04 | Mem:16.41M, Peak:16.41M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:50.72M (Peak 66.85M) | Time:00:00.04 | Mem:16.83M, Peak:16.83M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:50.72M (Peak 66.85M) | Time:00:00.05 | Mem:17.34M, Peak:17.76M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:50.72M (Peak 66.85M) | Time:00:00.05 | Mem:17.34M, Peak:17.76M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:51.09M (Peak 66.85M) | Time:00:00.05 | Mem:17.34M, Peak:17.76M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:51.09M (Peak 66.85M) | Time:00:00.05 | Mem:17.71M, Peak:17.76M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:51.09M (Peak 66.85M) | Time:00:00.05 | Mem:17.71M, Peak:17.76M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:51.09M (Peak 66.85M) | Time:00:00.05 | Mem:17.71M, Peak:17.76M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:51.09M (Peak 66.85M) | Time:00:00.05 | Mem:17.71M, Peak:17.76M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:51.09M (Peak 66.85M) | Time:00:00.05 | Mem:17.71M, Peak:17.76M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:51.09M (Peak 66.85M) | Time:00:00.05 | Mem:17.79M, Peak:17.79M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:51.09M (Peak 66.85M) | Time:00:00.05 | Mem:17.79M, Peak:17.79M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:51.09M (Peak 66.85M) | Time:00:00.05 | Mem:17.80M, Peak:17.80M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:51.09M (Peak 66.85M) | Time:00:00.05 | Mem:17.80M, Peak:17.80M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:51.09M (Peak 66.85M) | Time:00:00.05 | Mem:17.71M, Peak:17.80M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:51.09M (Peak 66.85M) | Time:00:00.05 | Mem:17.80M, Peak:17.80M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:51.09M (Peak 66.85M) | Time:00:00.05 | Mem:17.80M, Peak:17.80M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:51.10M (Peak 66.85M) | Time:00:00.05 | Mem:17.80M, Peak:17.80M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:1 Mem:51.10M (Peak 66.85M) | Time:00:00.05 | Mem:17.80M, Peak:17.80M | Scene, ViewLayer | Sample 0/32
+Fra:1 Mem:138.26M (Peak 138.26M) | Time:00:00.16 | Remaining:00:03.44 | Mem:104.79M, Peak:104.79M | Scene, ViewLayer | Sample 1/32
+Fra:1 Mem:174.89M (Peak 229.82M) | Time:00:06.41 | Mem:104.79M, Peak:104.79M | Scene, ViewLayer | Sample 32/32
+Fra:1 Mem:174.89M (Peak 229.82M) | Time:00:06.41 | Mem:104.79M, Peak:104.79M | Scene, ViewLayer | Finished
+Saved: 'D:\Long1ye\pixel-league-of-legends-V2\assets\map-modules\howling-blender-prototype\lion-candidate-review.png'
+Time: 00:06.49 (Saving: 00:00.08)
+
+OFFLINE_PROTOTYPE_COMPLETE {'status': 'study_only_not_approved', 'paid_requests': 0, 'source': 'offline Blender modeling', 'editable_mesh_count': 277, 'export_mesh_count': 12, 'triangles': 73322, 'gate': {'runtime_integration': False, 'target_style_approved': False, 'guardian_approved': False}}

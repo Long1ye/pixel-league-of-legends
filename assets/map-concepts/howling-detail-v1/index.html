@@ -1,0 +1,27 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>冰桥 · 地图细节概念图</title><style>
+body{margin:0;background:#101824;color:#dce7f1;font:16px/1.7 system-ui,sans-serif}main{max-width:1600px;margin:auto;padding:28px}h1{margin:0}p{color:#b7c7da;max-width:1100px}nav{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}button,a{color:#cbe4f6}button{padding:10px 18px;background:#26374c;border:1px solid #4c637d;border-radius:5px;font:inherit;cursor:pointer}button[aria-pressed=true]{border-color:#e0bb79;color:#f3d499}img{display:block;width:100%;height:auto;border:1px solid #3d506a}small{color:#91a8c2}.links{display:flex;gap:22px;flex-wrap:wrap}article{padding:14px 0}</style></head><body><main>
+<small>HOWLING / ENVIRONMENT DETAIL STUDIES</small><h1>地图细节 · 环境动态概念</h1><p>新增 12—15：飘旗与草浪、飞烬与融雪滴水、深渊流雾与飞鸟、圣所水晶与魄罗。通过风、火、水、雾和生物行为增加生命力；沿用现有冰桥画风，主路保持开敞。四张均为静态动态设计概念，尚未制作循环动画或接入游戏。</p><p>新图是场景概念研究，尚未拆件或接入游戏。01—03 保留为上一轮参考，其中 02 的残墙构造已停用，不作为搭建依据。<a href="./STRAIGHT-WALL-REVIEW.md">查看直墙构造约束与拆件说明 ↗</a></p>
+<nav id="choices" aria-label="概念方向"></nav><h2 id="title"></h2><p id="description"></p><a id="full" target="_blank" rel="noopener"><img id="art" alt="当前地图细节概念图"></a>
+<article><div class="links"><a href="../../../three.html?map=howling">返回游戏 ↗</a><a id="prompt">查看本图提示词 ↗</a><a href="./README.md">资源来源与制作记录 ↗</a></div><p>内置 imagegen 累计生成十五张；动态概念本轮新增四张，没有购买额度或调用外部付费生成 API。原图、精确提示词与来源哈希均保留。概念图不代表已经实现游戏交互；08 的隐蔽判定、视野与碰撞逻辑尚未实现。</p></article>
+</main><script type="module">
+import brush from './01-frost-brush.png?url';import ruin from './02-ruined-shoulder.png?url';import sanctuary from './03-sanctuary-life.png?url';
+import brushPrompt from './01-frost-brush.prompt.txt?url';import ruinPrompt from './02-ruined-shoulder.prompt.txt?url';import sanctuaryPrompt from './03-sanctuary-life.prompt.txt?url';
+import straight from './straight-studies.json';
+import materials from './material-studies.json';
+import motion from './motion-studies.json';
+import concealment from './08-hero-concealment-brush.png?url';
+import concealmentPrompt from './08-hero-concealment-brush.prompt.txt?url';
+const images=import.meta.glob('./*.png',{eager:true,query:'?url',import:'default'});
+const prompts=import.meta.glob('./*.prompt.txt',{eager:true,query:'?url',import:'default'});
+const descriptions=[
+'蓝旗、垂链、小挂灯与金属钩固定于同一面直墙。布褶、金属厚度和接触阴影提供立体感，不增加旗墙或垂直石墙。',
+'仅保留为装饰植被和材质参考，不采用此处多个小草团作为英雄隐蔽区。功能草丛统一参考新增 08 的少量大块连片高草；普通装饰草应降低高度并稀疏布置。',
+'雪帽、短冰挂、浅雪堆、排水格栅与修补路砖增加环境变化。墙体完整共线，道路维持平坦，不新增台阶、沟壑或碰撞障碍。',
+'低木箱、木桶、绳圈、折叠篷布与暖灯收在窄路肩，作为小型停驻痕迹。保持清晰顶面和侧面，不增加摊位、围合墙或建筑。'];
+const studies=[...motion.studies.map(s=>({title:s.file.slice(0,2)+' · '+s.title,url:images['./'+s.file+'.png'],prompt:prompts['./'+s.file+'.prompt.txt'],text:s.text})),...materials.studies.map(s=>({title:s.file.slice(0,2)+' · '+s.title,url:images['./'+s.file+'.png'],prompt:prompts['./'+s.file+'.prompt.txt'],text:s.text})),{title:'08 · 英雄藏身草丛',url:concealment,prompt:concealmentPrompt,text:'功能草丛改为少量大块：连续浓密的高草形成完整隐蔽区，草块之间留出清楚的空地与进入边缘。沿直墙布置，中央战斗路面保持开敞。图中两块是局部设计示例，并非全图数量或最终坐标；旧 05 仅保留为植被材质参考，不采用遍地小草团的功能布局。'},...straight.studies.map((s,i)=>({title:s.file.slice(0,2)+' · '+s.title,url:images['./'+s.file+'.png'],prompt:prompts['./'+s.file+'.prompt.txt'],text:descriptions[i]})),
+{title:'01 · 上轮霜覆草丛',url:brush,prompt:brushPrompt,text:'上一轮参考：沿栏墙布置分层霜草、枯芦苇与小冰簇。植被可参考，墙体构造以本轮 04—07 连续直墙为准。'},
+{title:'02 · 旧残垣（停用）',url:ruin,prompt:ruinPrompt,text:'历史候选，已停用。图中的横向墙体、缺口和围合关系不适合当前连续直墙，不作为游戏搭建依据；挂旗与铁链请改看本轮 04。'},
+{title:'03 · 上轮圣所冬植',url:sanctuary,prompt:sanctuaryPrompt,text:'上一轮参考：小型雪松、石花槽、矮凳、箱笼和灯笼。圣所局部空间另行评估，直墙路肩请优先看本轮 07。'}];
+const $=id=>document.getElementById(id);studies.forEach((s,i)=>{const b=document.createElement('button');b.textContent=s.title;b.onclick=()=>show(i);$('choices').append(b)});
+function show(i){const s=studies[i];$('title').textContent=s.title;$('description').textContent=s.text;$('art').src=s.url;$('full').href=s.url;$('prompt').href=s.prompt;Array.from($('choices').children).forEach((b,j)=>b.setAttribute('aria-pressed',String(i===j)))}show(0);
+</script></body></html>

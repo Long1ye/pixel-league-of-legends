@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_07ad834e0fc844a0b32a6182270a7a2a",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\minion-vfx\\generated\\Transparent_game_VFX_atlas_for_classic_MOBA_minion_attacks_Exact_4_columns_by_4_rows_grid_1024x1024_total_each_da9640f2\\result_images_0_url.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

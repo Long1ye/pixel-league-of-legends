@@ -11,6 +11,7 @@ export class MapMusic {
  private clock=-1;
  private combatUntil=0;
  private generation=0;
+ reset(){this.generation++;this.media?.pause();if(this.media)this.media.currentTime=0;this.active=false;this.clock=-1;this.combatUntil=0;this.failed=false;}
  noticeCombat(time:number){this.combatUntil=time+1.2;}
  update(time:number,phase:MatchPhase,masterEnabled:boolean,visible=true){
   if(this.disposed)return;

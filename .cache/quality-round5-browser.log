@@ -1,0 +1,6 @@
+{"scene":"central","enhanced":false,"time":0.016666666666666666,"calls":79,"geometry":75,"textures":27,"shadowWorldTexel":3.125,"contacts":false,"glow":false}
+{"scene":"central","enhanced":true,"time":0.016666666666666666,"calls":67,"geometry":75,"textures":27,"shadowWorldTexel":0.71875,"contacts":true,"glow":true}
+{"scene":"tower","enhanced":false,"time":0.016666666666666666,"calls":82,"geometry":95,"textures":33,"shadowWorldTexel":3.125,"contacts":false,"glow":false}
+{"scene":"tower","enhanced":true,"time":0.016666666666666666,"calls":74,"geometry":95,"textures":33,"shadowWorldTexel":0.71875,"contacts":true,"glow":true}
+{"scene":"sanctuary","enhanced":false,"time":0.016666666666666666,"calls":96,"geometry":125,"textures":35,"shadowWorldTexel":3.125,"contacts":false,"glow":false}
+{"scene":"sanctuary","enhanced":true,"time":0.016666666666666666,"calls":92,"geometry":125,"textures":35,"shadowWorldTexel":0.84375,"contacts":true,"glow":true}

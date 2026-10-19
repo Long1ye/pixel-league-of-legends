@@ -1,0 +1,47 @@
+THREE.WebGLProgram: Shader Error 0 - VALIDATE_STATUS false
+
+Material Name: 
+Material Type: MeshBasicMaterial
+
+Program Info Log: Fragment shader is not compiled.
+
+FRAGMENT
+
+ERROR: 0:392: '*' : wrong operand types - no operation '*' exists that takes a left-hand operand of type 'highp float' and a right operand of type 'const int' (or there is no acceptable conversion)
+
+  387:           vec4 detailUp = texture2D(map, vMapUv + vec2(0.0, stepUv.y));
+  388:           float detailWeight = detailLeft.a + detailRight.a + detailDown.a + detailUp.a;
+  389:           vec3 localMean = (detailLeft.rgb * detailLeft.a + detailRight.rgb * detailRight.a + detailDown.rgb * detailDown.a + detailUp.rgb * detailUp.a) / max(0.001, detailWeight);
+  390:           float localLuma = dot(localMean * diffuse, vec3(0.2126, 0.7152, 0.0722));
+  391:           float detailLod = 1.0 - smoothstep(1.5, 4.0, length(fwidth(vMapUv) / qualityTexel));
+> 392:           height = clamp(luminance - localLuma, -0.12, 0.12) * 6 * detailLod * step(0.1, detailWeight);
+  393:         #endif
+  394:         vec3 n = normalize(qualityNormal);
+  395:         vec3 q0 = dFdx(qualityView), q1 = dFdy(qualityView);
+  396:         vec3 p0 = cross(q1, n), p1 = cross(n, q0);
+  397:         float determinant = dot(q0, p0);
+  398:         vec3 bump = normalize(abs(determinant) * n - sign(determinant) * (dFdx(height) * p0 + dFdy(height) * p1));
+THREE.WebGLProgram: Shader Error 1282 - VALIDATE_STATUS false
+
+Material Name: 
+Material Type: MeshBasicMaterial
+
+Program Info Log: Fragment shader is not compiled.
+
+FRAGMENT
+
+ERROR: 0:393: '*' : wrong operand types - no operation '*' exists that takes a left-hand operand of type 'highp float' and a right operand of type 'const int' (or there is no acceptable conversion)
+
+  388:           vec4 detailUp = texture2D(map, vMapUv + vec2(0.0, stepUv.y));
+  389:           float detailWeight = detailLeft.a + detailRight.a + detailDown.a + detailUp.a;
+  390:           vec3 localMean = (detailLeft.rgb * detailLeft.a + detailRight.rgb * detailRight.a + detailDown.rgb * detailDown.a + detailUp.rgb * detailUp.a) / max(0.001, detailWeight);
+  391:           float localLuma = dot(localMean * diffuse, vec3(0.2126, 0.7152, 0.0722));
+  392:           float detailLod = 1.0 - smoothstep(1.5, 4.0, length(fwidth(vMapUv) / qualityTexel));
+> 393:           height = clamp(luminance - localLuma, -0.12, 0.12) * 6 * detailLod * step(0.1, detailWeight);
+  394:         #endif
+  395:         vec3 n = normalize(qualityNormal);
+  396:         vec3 q0 = dFdx(qualityView), q1 = dFdy(qualityView);
+  397:         vec3 p0 = cross(q1, n), p1 = cross(n, q0);
+  398:         float determinant = dot(q0, p0);
+  399:         vec3 bump = normalize(abs(determinant) * n - sign(determinant) * (dFdx(height) * p0 + dFdy(height) * p1));
+

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "s01-ground-rubble-v2",
+    "path": "assets/map-modules/arpg-s01-ground-v2/runtime/rubble.png",
+    "sourceManifest": "assets/s01-g2-rock/A_seamless_64_by_64_pixel_art_closeup_of_one_continuous_natural_blue_grey_rock_surface_Fine_mineral_speckles_a_d00f7a24/final_outputs.json",
+    "jobId": "job_fdeb815cd8d34e8291fa9223d9fe112e",
+    "size": [
+      64,
+      64
+    ],
+    "opaque": true,
+    "sha256": "e0d7691ed69fa8b2f18f67ce0ed2bfd3a62b178be7b917cad36575eacaa4cac4",
+    "byteIdentical": true,
+    "edgeDelta": {
+      "leftRightMean": 22.36458333333333,
+      "topBottomMean": 8.572916666666666
+    },
+    "status": "native-size-and-alpha-checked; game-scale visual acceptance pending"
+  },
+  {
+    "id": "s01-ground-repair-v2",
+    "path": "assets/map-modules/arpg-s01-ground-v2/runtime/repair.png",
+    "sourceManifest": "assets/s01-g2-slate/job_74dbb1f99b8549a698fd622e895fd4b0/final_outputs.json",
+    "jobId": "job_74dbb1f99b8549a698fd622e895fd4b0",
+    "size": [
+      64,
+      64
+    ],
+    "opaque": true,
+    "sha256": "330ab837f72bfab4bf5bb497056a8c1ee8c818f92281d28911ddec6398350c9a",
+    "byteIdentical": true,
+    "edgeDelta": {
+      "leftRightMean": 32.942708333333336,
+      "topBottomMean": 21.5
+    },
+    "status": "native-size-and-alpha-checked; game-scale visual acceptance pending"
+  },
+  {
+    "id": "s01-ground-ice-v2",
+    "path": "assets/map-modules/arpg-s01-ground-v2/runtime/ice.png",
+    "sourceManifest": "assets/map-modules/arpg-s01-ground-v2/generated/ice/A_flat_seamless_64_by_64_pixel_art_material_of_old_blue_grey_thin_ice_with_fine_frost_grains_for_a_dark_fantas_a286450b/final_outputs.json",
+    "jobId": "job_aec7aa9da062421a9e8217d41f399a29",
+    "size": [
+      64,
+      64
+    ],
+    "opaque": true,
+    "sha256": "a0a0ff2ac0d41ff0a06e11141b317e2548c0f32c0a02906c5932b0a8aadccd6f",
+    "byteIdentical": true,
+    "edgeDelta": {
+      "leftRightMean": 13.984374999999998,
+      "topBottomMean": 17.088541666666668
+    },
+    "status": "native-size-and-alpha-checked; game-scale visual acceptance pending"
+  }
+]

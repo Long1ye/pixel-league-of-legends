@@ -1,0 +1,58 @@
+[
+  {
+    "id": "01-overview",
+    "path": "assets/map-concepts/howling-abyss-target-v1/01-overview.png",
+    "sourceManifest": "assets/ha-target-a/HA01_A_beautiful_pure_gameplay_environment_target_for_a_pixel_art_action_RPG_inspired_by_the_detailed_pixel_cr_91841649/final_outputs.json",
+    "jobId": "job_2e5ea341f7d44a73ae909c70337c1592",
+    "size": [
+      2048,
+      1152
+    ],
+    "opaque": true,
+    "sha256": "65143f6c84b2682bcdf519d01918de9b3a3c3bf4c2c69920fb07dc36d5eabdfb",
+    "byteIdentical": true,
+    "role": "generated art target candidate, not an in-game screenshot or production tileset"
+  },
+  {
+    "id": "02-sanctuary",
+    "path": "assets/map-concepts/howling-abyss-target-v1/02-sanctuary.png",
+    "sourceManifest": "assets/ha-target-b2/HA02B_A_pure_pixel_art_gameplay_environment_of_the_blue_sanctuary_platform_on_the_Howling_Abyss_bridge_Match_t_59809331/final_outputs.json",
+    "jobId": "job_4ef2cd3bca3342d2937e1429645921b4",
+    "size": [
+      2048,
+      1152
+    ],
+    "opaque": true,
+    "sha256": "2c80423e8fd360646d5f0a967e7141f1e341c55a14173546abdff9cde44ec737",
+    "byteIdentical": true,
+    "role": "generated art target candidate, not an in-game screenshot or production tileset"
+  },
+  {
+    "id": "03-outer-tower",
+    "path": "assets/map-concepts/howling-abyss-target-v1/03-outer-tower.png",
+    "sourceManifest": "assets/ha-target-c/HA03_Create_a_new_pure_gameplay_environment_image_focused_on_the_blue_outer_defensive_tower_and_adjoining_road_0c3b806e/final_outputs.json",
+    "jobId": "job_2dd72ce0aa9e4914b2218ca42b2cf907",
+    "size": [
+      2048,
+      1152
+    ],
+    "opaque": true,
+    "sha256": "d60a68e78cb070ef71f2c9083394bbb65c8696979862bb857169cb10c03ac328",
+    "byteIdentical": true,
+    "role": "generated art target candidate, not an in-game screenshot or production tileset"
+  },
+  {
+    "id": "04-central-bridge",
+    "path": "assets/map-concepts/howling-abyss-target-v1/04-central-bridge.png",
+    "sourceManifest": "assets/ha-target-d/HA04_Create_a_new_pure_gameplay_environment_image_of_the_open_central_combat_crossing_of_the_Howling_Abyss_bri_26c4f234/final_outputs.json",
+    "jobId": "job_de8e3403b85e4e23b557dfdc06b72a99",
+    "size": [
+      2048,
+      1152
+    ],
+    "opaque": true,
+    "sha256": "30180c36ce485c752cd6fe65ab872d548c3303d6d8dcfe84fafef8d98d8598d3",
+    "byteIdentical": true,
+    "role": "generated art target candidate, not an in-game screenshot or production tileset"
+  }
+]

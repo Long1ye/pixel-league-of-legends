@@ -1,0 +1,11 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>亚索 Q · Meowa 素材预览</title>
+<style>body{margin:28px;background:#253139;color:#e0e6df;font:16px system-ui}canvas{display:block;background:repeating-conic-gradient(#303c43 0% 25%,#354149 0% 50%) 0/24px 24px;image-rendering:pixelated;margin:18px 0}a{color:#b5dcd4}button{padding:8px 16px}</style>
+<h1>亚索 Q · Meowa 生成版</h1><p>八帧剑尖风效与四帧命中风雾。下方以原始像素尺寸慢放，便于检查透明边缘。</p><button id="pause">暂停</button>
+<canvas id="thrust" width="512" height="256"></canvas><canvas id="hit" width="512" height="512"></canvas>
+<p><a href="/three.html?map=howling&scene=combat">进入实机，按 Q 试用</a></p>
+<script type="module">
+let playing=true,frame=0;document.querySelector('#pause').onclick=()=>{playing=!playing;document.querySelector('#pause').textContent=playing?'暂停':'播放'};
+const sheets=await Promise.all(['thrust','hit'].map(async key=>{const image=new Image();image.src=`./runtime/${key}-atlas.png`;await image.decode();return {image,canvas:document.querySelector(`#${key}`),frames:key==='hit'?4:8}}));
+function draw(){for(const {image,canvas,frames} of sheets){const context=canvas.getContext('2d'),i=frame%frames;context.clearRect(0,0,canvas.width,canvas.height);context.drawImage(image,i%2*canvas.width,Math.floor(i/2)*canvas.height,canvas.width,canvas.height,0,0,canvas.width,canvas.height)}}
+draw();setInterval(()=>{if(playing){frame++;draw()}},100);window.meowaReady=true;
+</script></html>

@@ -1,0 +1,38 @@
+[
+  {
+    "source": "assets/ha-mat-v2/job_3875b81217ba4e13abc79f3e5b490502/result_images_0_url.png",
+    "jobId": "job_3875b81217ba4e13abc79f3e5b490502",
+    "reference": "assets/map-concepts/howling-abyss-target-v1/04-central-bridge.png",
+    "runtime": "assets/map-modules/howling-target-v2/stone.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alphaRange": [
+      255,
+      255
+    ],
+    "sha256": "a3a62abc9b8b13929ed5fe538ecae26db644472f3ea7ebc6c7a02498135ff2a5",
+    "byteIdentical": true,
+    "credits": 7,
+    "role": "weathered grey violet masonry albedo for solid 3D stonework; visual repeat acceptance pending"
+  },
+  {
+    "source": "assets/ha-floor-v3/Bridge_floor_albedo_for_a_playable_3D_environment_matching_the_reference_A_completely_flat_overhead_view_of_on_b5e593af/result_images_0_url.png",
+    "jobId": "job_4b8bc43437754ba583290e20a725fe77",
+    "reference": "assets/map-concepts/howling-abyss-target-v1/04-central-bridge.png",
+    "runtime": "assets/map-modules/howling-target-v2/ground.png",
+    "size": [
+      2048,
+      1536
+    ],
+    "alphaRange": [
+      255,
+      255
+    ],
+    "sha256": "244e2222adc19914ea065771c776b9f7e59d91349f516e463790b0a9c46923d6",
+    "byteIdentical": true,
+    "credits": 12,
+    "role": "top down paving patch with smaller stonework and one central medallion; not an endlessly tileable map"
+  }
+]

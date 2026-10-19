@@ -1,0 +1,12 @@
+
+ RUN  v5.0.3 D:/Long1ye/pixel-league-of-legends-V2
+
+
+ Test Files  157 passed (157)
+      Tests  852 passed (852)
+   Start at  17:05:09
+   Duration  25.49s (tests 55%, transform 22%, import 20%, worker 3%)
+
+    Isolate  157 workers spawned · ~165ms startup each (spawn + environment, per file)
+             at least ~12.80s faster with isolate: false — reuses workers across files instead of one per file
+

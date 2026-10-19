@@ -1,6 +1,7 @@
 import {EQ} from '../game/YasuoE';
 import {UNIT_METRICS} from '../game/UnitMetrics';
 import type {Entity,GameEvent} from '../game/types';
+import { airborneMotion } from './AirborneMotion';
 
 /** Match the visible ring diameter to its world-space hit radius. */
 export const EQ_RING_SCALE=EQ.radius*2/176;
@@ -17,8 +18,7 @@ export const TORNADO_HEIGHT=96;
 export const TORNADO_SCALE=TORNADO_HEIGHT/640;
 export const TORNADO_ACCENT_SCALE=TORNADO_HEIGHT/40;
 export function airborneLift(entity:Entity,now:number):number {
-  const remaining=Math.max(0,(entity.airborneUntil??0)-now);
-  return Math.min(1,remaining/.18)*UNIT_METRICS[entity.kind].height*.4;
+  return airborneMotion(entity,now).lift;
 }
 
 /** Contact stays on the struck body, including the simulation's knock-up lift. */

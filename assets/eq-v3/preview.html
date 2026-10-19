@@ -1,0 +1,12 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>EQ / EQ3 Meowa 素材预览</title>
+<style>body{background:#202a30;color:#e1ebef;font:16px system-ui;margin:32px}main{display:flex;gap:24px}figure{margin:0}canvas{background:#303a3f;border:1px solid #52616b}button{padding:8px 20px;margin:18px 0}small{color:#a9b8bf}</style>
+<h1>EQ / EQ3 · Meowa</h1><p>8 帧序列，原生 256 × 512，不缩放。实机圆斩在地面投影，EQ3 风带另作前后遮挡。</p>
+<button id="toggle">暂停</button> <span id="status"></span><main><figure><figcaption>EQ 圆斩</figcaption><canvas width="256" height="512"></canvas></figure><figure><figcaption>EQ3 上卷风带</figcaption><canvas width="256" height="512"></canvas></figure></main>
+<script type="module">
+const images = await Promise.all(['slash','storm'].map(key=>new Promise(resolve=>{const image=new Image();image.onload=()=>resolve(image);image.src=`runtime/${key}-atlas.png`;})));
+const canvases=[...document.querySelectorAll('canvas')],status=document.querySelector('#status');let paused=false,elapsed=0,previous=performance.now();
+window.completedCycles=0;window.seenFrames=[];
+document.querySelector('#toggle').onclick=e=>{paused=!paused;e.target.textContent=paused?'继续':'暂停';};
+function render(now){if(!paused)elapsed+=Math.min(100,now-previous);previous=now;window.completedCycles=Math.floor(elapsed/1000);const age=elapsed%1000,frame=Math.min(7,Math.floor(age/75));if(age<600&&!window.seenFrames.includes(frame))window.seenFrames.push(frame);
+canvases.forEach((canvas,i)=>{const ctx=canvas.getContext('2d');ctx.clearRect(0,0,256,512);if(age<600)ctx.drawImage(images[i],frame%4*256,Math.floor(frame/4)*512,256,512,0,0,256,512);});status.textContent=age<600?`帧 ${frame+1} / 8`:'消散';requestAnimationFrame(render);}requestAnimationFrame(render);
+</script></html>

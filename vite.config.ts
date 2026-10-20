@@ -1,7 +1,9 @@
 import { defineConfig } from 'vitest/config';
+import { assetCache } from './scripts/asset-cache';
 
 export default defineConfig({
   base: './',
+  plugins: [assetCache()],
   server: { port: 5173, strictPort: true },
   build: {
     chunkSizeWarningLimit: 1500,
@@ -55,6 +57,8 @@ export default defineConfig({
       yasuoQUserEight: 'assets/hero-skills/2026-10-13/yasuo/q-v26-user-eight/index.html',
       yasuoQUpright: 'assets/hero-skills/2026-10-13/yasuo/q-v27-upright-se/index.html',
       yasuoQMeowaLayered: 'assets/hero-skills/2026-10-13/yasuo/q-v29-meowa-layered/index.html',
+      yasuoEmotesV3: 'assets/heroes/yasuo/emotes-v3-2026-10-19/index.html',
+      yasuoEmotes: 'assets/heroes/yasuo/emotes-2026-10-19/index.html',
       yasuoLocomotion16: 'assets/hero-studies/2026-10-15/yasuo-locomotion16/index.html',
     } },
   },

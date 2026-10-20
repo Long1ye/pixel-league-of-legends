@@ -1,0 +1,34 @@
+{
+  "status": "integrated",
+  "user_requested_direct_resubmit": true,
+  "reference": "reference.png",
+  "source_sha256": "4a31eeceac3d5f0fde08729302dd832dd284916205a6beeb379f2509cd5ab7fe",
+  "resolution": "1080p_full",
+  "quality": "detailed",
+  "duration_seconds": 4,
+  "high_frame_rate": true,
+  "animation_mode": "loop",
+  "style": "pixel",
+  "remove_background": "separate stage after generation",
+  "background_color": "#00b140",
+  "jobs": {
+    "joke": "job_c99ec65ba9c642a7a048d05ccac8faf6",
+    "taunt": "job_c6c496465ef24f2997dbf0c3bbac38fa",
+    "laugh": "job_28e81c9913e5414091078e69efe8d36b"
+  },
+  "recovery": "Use animate-poll --api-job-id with these IDs; no need to submit again",
+  "next_steps": [],
+  "states": {
+    "joke": "integrated: 90 transparent frames / 4000 ms",
+    "taunt": "integrated: 90 transparent frames / 4000 ms",
+    "laugh": "integrated: 90 transparent frames / 4000 ms"
+  },
+  "runtime": "assets/heroes/yasuo/emotes-v3-2026-10-19",
+  "cutout": "Pixel advanced, split into at most 16 source frames by actual background color; laugh frame 7 refined with General removal",
+  "validation": {
+    "build": "passed",
+    "test_files": 171,
+    "tests_passed": 933,
+    "visual": "all 270 native-pixel frames inspected; no edge clipping; browser UI verification unavailable"
+  }
+}

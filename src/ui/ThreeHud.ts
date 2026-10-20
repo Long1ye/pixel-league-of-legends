@@ -1,7 +1,7 @@
 import stablePage from '../../index.html?raw';
 import { mountLeagueHud } from './LeagueHud';
 import type { Match } from '../game/Match';
-import type { AbilityKey, Entity } from '../game/types';
+import type { AbilityKey, Entity, Team } from '../game/types';
 import type { SummonerKey } from '../game/SummonerSpells';
 import { shieldRemaining } from '../game/YasuoPassive';
 import { stormReady } from '../game/YasuoStorm';
@@ -16,8 +16,8 @@ export function mountThreeHud(actions: {
   flute: () => void;
   resume: () => void;
   canSee?: (entity: Entity) => boolean;
-}, signal: AbortSignal): { update: (match: Match, selected: number | null) => void } {
-  const shell = document.querySelector<HTMLElement>('main')!;
+}, signal: AbortSignal): { update: (match: Match, selected: number | null, team?: Team) => void } {
+  const shell = document.querySelector<HTMLElement>('main.match-shell')!;
   const viewport = document.querySelector<HTMLElement>('#viewport')!;
   const template = new DOMParser().parseFromString(stablePage, 'text/html');
   shell.classList.add('match-shell');
@@ -32,14 +32,11 @@ export function mountThreeHud(actions: {
   const controls = document.querySelector('#status')!.nextElementSibling!;
   controls.classList.add('controls-strip');
   mountLeagueHud(false, { ...actions, focusTarget: viewport });
-  const content = document.querySelector('.hud-menu-content')!;
-  const diagnostics = document.createElement('details');
-  const summary = document.createElement('summary'); summary.textContent = '场景与诊断';
-  diagnostics.append(summary);
+  const diagnostics = document.querySelector('.settings-internal')!;
+  document.getElementById('graphics-settings')!.append(document.querySelector('#quality-options .quality-controls')!);
   for (const selector of ['header', '.notice', '#quality-options', '#combat-hud', '#status', '#selection']) {
-    diagnostics.append(document.querySelector(selector)!);
+    diagnostics.append(shell.querySelector(selector)!);
   }
-  content.append(diagnostics);
   const node = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
   node('hero-animation-state').hidden = true;
   node('match-overlay').hidden = true;
@@ -48,8 +45,8 @@ export function mountThreeHud(actions: {
   }
   node('start-button').addEventListener('click', () => { actions.resume(); viewport.focus({ preventScroll: true }); }, { signal });
 
-  return { update(match, selected) {
-    const hero = match.hero('blue'), shield = shieldRemaining(hero, match.time), flow = hero.flow ?? 0;
+  return { update(match, selected, team = 'blue') {
+    const hero = match.hero(team), shield = shieldRemaining(hero, match.time), flow = hero.flow ?? 0;
     node<HTMLProgressElement>('hero-health').max = hero.maxHp;
     node<HTMLProgressElement>('hero-health').value = hero.hp;
     node<HTMLProgressElement>('hero-flow').value = flow;
@@ -60,17 +57,17 @@ export function mountThreeHud(actions: {
     passive.classList.toggle('passive-ready', flow >= 100); passive.classList.toggle('passive-shielded', shield > 0);
     node('match-time').textContent = clock(match.time);
     node('blue-kills').textContent = String(match.deaths.red); node('red-kills').textContent = String(match.deaths.blue);
-    node('player-kda').textContent = `${match.kills.blue}/${match.deaths.blue}/0`; node('player-cs').textContent = String(match.cs.blue);
+    node('player-kda').textContent = `${match.kills[team]}/${match.deaths[team]}/0`; node('player-cs').textContent = String(match.cs[team]);
     for (const key of ['q', 'w', 'e', 'r'] as const) {
       const remaining = Math.max(0, hero.abilities[key] - match.time);
       node(`ability-${key}`).classList.toggle('cooling', remaining > 0);
       node(`cooldown-${key}`).textContent = remaining > 0 ? (remaining < 10 ? remaining.toFixed(1) : String(Math.ceil(remaining))) : '';
     }
     node('ability-q').querySelector('.ability-name')!.textContent = stormReady(hero, match.time) ? 'Q3 · 旋风' : '斩钢闪';
-    const rTarget = match.rTarget('blue');
+    const rTarget = match.rTarget(team);
     node('ability-r').classList.toggle('followup-ready', !!rTarget && (actions.canSee?.(rTarget) ?? true));
     for (const key of ['d', 'f'] as const) {
-      const remaining = Math.max(0, match.summonerCooldowns.blue[key] - match.time);
+      const remaining = Math.max(0, match.summonerCooldowns[team][key] - match.time);
       node(`summoner-${key}`).classList.toggle('cooling', remaining > 0);
       node(`summoner-cooldown-${key}`).textContent = remaining > 0 ? String(Math.ceil(remaining)) : '';
     }
@@ -78,16 +75,16 @@ export function mountThreeHud(actions: {
     node('target-readout').hidden = !target || target.hp <= 0;
     if (target && target.hp > 0) {
       const names = { hero: '亚索', melee: '近战兵', ranged: '远程兵', tower: '防御塔' };
-      node('target-name').textContent = `${target.team === 'blue' ? '友方' : '敌方'} · ${names[target.kind]}`;
+      node('target-name').textContent = `${target.team === team ? '友方' : '敌方'} · ${names[target.kind]}`;
       node('target-health').textContent = `${Math.ceil(target.hp)} / ${target.maxHp}`;
       node<HTMLProgressElement>('target-bar').value = target.hp / target.maxHp * 100;
     }
     node('match-overlay').hidden = match.phase === 'playing';
-    const ended = match.phase === 'ended', won = match.result?.winner === 'blue';
+    const ended = match.phase === 'ended', won = match.result?.winner === team;
     node('overlay-kicker').textContent = ended ? (won ? 'VICTORY' : 'MATCH COMPLETE') : 'TAKE A BREATH';
     node('overlay-symbol').textContent = ended ? '✦' : 'Ⅱ';
     node('overlay-title').textContent = ended ? (won ? '这条中路，属于你。' : '对局结束') : '稍作休息';
-    node('overlay-description').textContent = ended ? `对局用时 ${clock(match.time)} · 补刀 ${match.cs.blue} : ${match.cs.red}` : '比赛时间、兵线和技能冷却已暂停。';
+    node('overlay-description').textContent = ended ? `对局用时 ${clock(match.time)} · 补刀 ${match.cs[team]} : ${match.cs[team === 'blue' ? 'red' : 'blue']}` : '比赛时间、兵线和技能冷却已暂停。';
     node('start-button').textContent = ended ? '再来一局 ↻' : '继续对线 →';
     node('pause').textContent = match.phase === 'paused' ? '继续 · Esc' : '暂停 · Esc';
     node<HTMLButtonElement>('pause').disabled = ended;

@@ -1,0 +1,20 @@
+
+> pixel-midline-solo@0.1.0 test
+> vitest run --maxWorkers=4
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./scripts/asset-cache" without a file extension (vite.config.ts:2:28). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v5.0.3 D:/Long1ye/pixel-league-of-legends-V2
+
+
+ Test Files  171 passed (171)
+      Tests  931 passed (931)
+   Start at  18:55:03
+   Duration  15.56s (tests 49%, transform 29%, import 19%, worker 2%)
+
+  Transform  transforming modules took 9.39s · 29% of tracked time, re-done on every run
+             persist transforms across runs with fsModuleCache: true
+             learn more: https://vitest.dev/guide/improving-performance#caching-between-reruns
+

@@ -26,6 +26,10 @@ export class EnvironmentAudio {
  private active=false;
  private disposed=false;
  noticeCombat(time:number){this.combatUntil=time+1.5;}
+ async preload(context:AudioContext):Promise<void>{
+  this.context=context;this.loading??=this.load(context);await this.loading;
+  if(this.failed)throw new Error('环境音频加载失败，请刷新重试。');
+ }
  private async load(context:AudioContext){
   try{
    const names:Sound[]=['wind','fire','ice-crack'];

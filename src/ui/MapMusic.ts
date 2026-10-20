@@ -11,6 +11,18 @@ export class MapMusic {
  private clock=-1;
  private combatUntil=0;
  private generation=0;
+ private loading:Promise<void>|null=null;
+ preload():Promise<void>{
+  if(this.loading)return this.loading;
+  const media=this.media??=new Audio(bgmUrl);media.preload='auto';media.loop=true;
+  if(typeof document!=='undefined'&&!media.parentNode){media.hidden=true;media.dataset.track='howling-abyss-early';document.body.append(media);}
+  this.loading=new Promise<void>((resolve,reject)=>{
+   if(media.readyState>=4){resolve();return;}
+   const done=()=>{media.removeEventListener('canplaythrough',ready);media.removeEventListener('error',error);};
+   const ready=()=>{done();resolve();};const error=()=>{done();this.failed=true;reject(new Error('背景音乐加载失败，请刷新重试。'));};
+   media.addEventListener('canplaythrough',ready,{once:true});media.addEventListener('error',error,{once:true});media.load();
+  });return this.loading;
+ }
  reset(){this.generation++;this.media?.pause();if(this.media)this.media.currentTime=0;this.active=false;this.clock=-1;this.combatUntil=0;this.failed=false;}
  noticeCombat(time:number){this.combatUntil=time+1.2;}
  update(time:number,phase:MatchPhase,masterEnabled:boolean,visible=true){

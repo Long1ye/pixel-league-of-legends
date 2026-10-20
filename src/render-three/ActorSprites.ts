@@ -1,4 +1,4 @@
-import { Group, Mesh, MeshBasicMaterial, NearestFilter, PlaneGeometry, SRGBColorSpace, TextureLoader, type Texture } from 'three';
+import { Group, Mesh, MeshBasicMaterial, NearestFilter, PlaneGeometry, SRGBColorSpace, TextureLoader, type Texture, type WebGLRenderer } from 'three';
 import type { Entity } from '../game/types';
 import { YasuoAnimator, flipYasuoAttack, attackFrameAt } from '../render/YasuoAnimation';
 import type { CombatFeel } from '../render/CombatFeel';
@@ -20,6 +20,8 @@ import { HeroHealthBar } from './HeroHealthBar';
 import heroHealthFrame from '../../assets/ui/riot-healthbars-2026-10-15/runtime/hero-frame.png?url';
 import { brushAt } from './BrushConcealment';
 import { installClassicQBody } from './ClassicQMaterial';
+const heroAssets = new Map(YASUO_TEXTURES.map(asset => [asset.clip.key, asset]));
+const minionAssets = new Map(Object.entries(MINION_URLS).map(([path, url]) => [`minion-${path.split('/').pop()!.replace('.png', '')}`, url]));
 
 export function atlasRect(frame: number, cellWidth: number, cellHeight: number, sheetWidth: number, sheetHeight: number) {
   if (!Number.isInteger(frame) || ![cellWidth, cellHeight, sheetWidth, sheetHeight].every(value => Number.isInteger(value) && value > 0)) throw new RangeError('Invalid atlas dimensions');
@@ -36,6 +38,7 @@ interface ActorView {
 
 /** Existing pixels and animation times, placed on camera-facing foot-anchored cards. */
 export class ActorSprites {
+  localTeam: import('../game/types').Team = 'blue';
   /** Retain the former presentation for controlled performance comparisons. */
   stableHealthBars = true;
   heroHealthBarsVisible = true;
@@ -49,6 +52,12 @@ export class ActorSprites {
   private readonly environmentEnabled = { value: 1 };
   private disposed = false;
   constructor(private readonly quality = new QualitySettings(), private readonly lighting?: ActorLightField, private readonly illumination?: EnvironmentIllumination) { for (const key of ['qBody', 'cast', 'ultimate'] as const) this.texture(key, COMBAT_ART[key].url); }
+  preload(): void {
+    for (const asset of YASUO_TEXTURES) this.texture(asset.clip.key, asset.url);
+    for (const [key, url] of minionAssets) this.texture(key, url);
+    this.texture('hero-health-frame', heroHealthFrame);
+  }
+  upload(renderer: WebGLRenderer): void { for (const entry of this.textures.values()) renderer.initTexture(entry.texture); }
   hasVisibleBody(id: number): boolean { return this.actors.get(id)?.body.visible ?? false; }
   body(id: number) { return this.actors.get(id)?.body; }
   snapshot(id: number) {
@@ -70,7 +79,7 @@ export class ActorSprites {
       const facing = camera.screenHeading(entity, entity.facing);
       const motion = airborneMotion(entity, time), suspended = motion.airborne && entity.airborneStartedAt !== undefined;
       const visual = suspended ? { ...entity, qCast: null, q3Cast: null, wCast: null, eCast: null, eqCast: null, rCast: null,
-        attackStartedAt: null, attackReleasedAt: null, windup: 0, fluteAt: null } : entity;
+        attackStartedAt: null, attackReleasedAt: null, windup: 0, fluteAt: null, emote: null } : entity;
       const direction = entity.airborneDirection ?? { x: 0, y: 0 };
       const heading = camera.screenHeading(entity, Math.atan2(direction.y, direction.x));
       const tilt = motion.lean * Math.cos(heading) * (Math.hypot(direction.x, direction.y) > 0 ? 1 : 0);
@@ -84,7 +93,7 @@ export class ActorSprites {
           eqCast: visual.eqCast ? { ...visual.eqCast, facing: camera.screenHeading(entity, visual.eqCast.facing) } : visual.eqCast,
         };
         const sample = view.animator.sample(mapped, time), clip = sample.clip;
-        const asset = YASUO_TEXTURES.find(asset => asset.clip.key === clip.key);
+        const asset = heroAssets.get(clip.key);
         if (!asset) { view.body.visible = false; continue; }
         key = clip.key; url = asset.url; frame = sample.frame; width = clip.width; height = clip.height;
         ax = clip.anchor[0] / width; ay = clip.anchor[1] / height; scale = sample.scale * HERO_VISUAL_SCALE;
@@ -99,7 +108,7 @@ export class ActorSprites {
         }
       } else {
         const pose = this.minions.sample({ ...visual, facing }, time), clip = MINION_CLIPS[pose.key.replace('minion-', '') as keyof typeof MINION_CLIPS];
-        key = pose.key; url = Object.entries(MINION_URLS).find(([path]) => path.endsWith(`/${key.replace('minion-', '')}.png`))![1];
+        key = pose.key; url = minionAssets.get(key)!;
         frame = pose.frame; width = clip.width; height = clip.height; ax = pose.originX; ay = pose.originY;
         scale = pose.scale; flip = pose.flip;
       }
@@ -170,7 +179,7 @@ export class ActorSprites {
       view.contact.scale.set(entity.radius * 2.1, entity.radius * 1.3, 1);
       // Keep the player's own concealed silhouette readable through the grass.
       // Other map geometry and actors retain their ordinary depth behavior.
-      const concealed = painted && entity.kind === 'hero' && entity.team === 'blue' && brushAt(entity) !== null;
+      const concealed = painted && entity.kind === 'hero' && entity.team === this.localTeam && brushAt(entity) !== null;
       if (view.body.material.transparent !== concealed) {
         view.body.material.transparent = concealed; view.body.material.needsUpdate = true;
       }
@@ -182,8 +191,8 @@ export class ActorSprites {
       const pixelScale = (camera.camera.top - camera.camera.bottom) / camera.size.height;
       const elevationCos = Math.cos(camera.elevation * Math.PI / 180);
       let barHeight = entity.kind === 'hero' ? 33 * HERO_VISUAL_SCALE / elevationCos : UNIT_METRICS[entity.kind].height + 10;
-      if (entity.kind === 'hero' && entity.team === 'red') {
-        const player = entities.find(e => e.kind === 'hero' && e.team === 'blue' && e.hp > 0);
+      if (entity.kind === 'hero' && entity.team !== this.localTeam) {
+        const player = entities.find(e => e.kind === 'hero' && e.team === this.localTeam && e.hp > 0);
         if (player) {
           const a = camera.project(entity), b = camera.project(player);
           if (Math.abs(a.x - b.x) < 74 && Math.abs(a.y - b.y) < 18) barHeight += 18 * pixelScale / elevationCos;

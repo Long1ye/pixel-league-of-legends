@@ -1,7 +1,8 @@
 import {YasuoSkillAudio} from './YasuoSkillAudio';
 import {SummonerAudio} from './SummonerAudio';
 import {fluteActive} from '../game/YasuoFlute';
-import type { GameEvent } from '../game/types';
+import {emoteActive} from '../game/YasuoEmote';
+import type { GameEvent, Team } from '../game/types';
 import {combatSound} from './CombatSound';
 import type {Match} from '../game/Match';
 import {MovementVoice} from './MovementVoice';
@@ -9,6 +10,7 @@ import {OriginalCombatAudio} from './OriginalCombatAudio';
 import {YasuoVoiceAudio,type YasuoEmote} from './YasuoVoiceAudio';
 
 export class AudioFeedback {
+  localTeam: Team = 'blue';
   enabled = true;
   private context: AudioContext | null = null;
   private noise:AudioBuffer|null=null;
@@ -20,11 +22,17 @@ export class AudioFeedback {
   private movement=new MovementVoice();
   private speech=new YasuoVoiceAudio();
   private fluteStarted:number|null=null;
+  private emoteStarted:string|null=null;
   private heroId:number|null=null;
   get movementPlaying(){return this.speech.talking||this.original.movementPlaying||this.original.flutePlaying;}
   get failed(){return this.speech.failed||this.original.failed||this.skills.failed||this.summoners.failed;}
   updateMovement(match:Match,visible=true){
-    const hero=match.hero('blue');this.heroId=hero.id;
+    const hero=match.hero(this.localTeam);this.heroId=hero.id;
+    const emote=emoteActive(hero,match.time)?hero.emote!:null;
+    const emoteKey=emote?`${emote.action}:${emote.startedAt}`:null;
+    if(this.emoteStarted&&this.emoteStarted!==emoteKey)this.speech.interruptEmote();
+    this.emoteStarted=emoteKey;
+    this.speech.localTeam=this.localTeam;
     this.speech.update(match,this.context,this.enabled,visible);
     this.skills.update(match,this.context,this.enabled,visible);
     this.summoners.update(match,this.context,this.enabled,visible);
@@ -36,20 +44,28 @@ export class AudioFeedback {
       this.original.stopFlute();
       if(this.context&&this.original.playFlute(this.context,match.time-hero.fluteAt!))this.fluteStarted=hero.fluteAt!;
     }
-    const calm=!flute&&hero.hp>0&&match.time-(hero.homeguardCombatAt??-Infinity)>5
+    const calm=!flute&&!emote&&hero.hp>0&&match.time-(hero.homeguardCombatAt??-Infinity)>5
       &&hero.windup<=0&&!hero.qCast&&!hero.q3Cast&&!hero.wCast&&!hero.eCast&&!hero.rCast&&!hero.eqCast
       &&(hero.airborneUntil??0)<=match.time&&(hero.flinchUntil??0)<=match.time
       &&!match.entities.some(e=>e.team!==hero.team&&e.hp>0&&Math.hypot(e.x-hero.x,e.y-hero.y)<260);
     const eligible=this.enabled&&visible&&match.phase==='playing'&&this.context?.state==='running'&&calm;
     const variant=this.movement.update(match.time,hero,eligible);
     if(!eligible){this.original.stopMovement();this.speech.interruptMovement();}
-    if(variant!==null&&this.context&&this.speech.speak('Move2DStandard',this.context,'blue',1))this.movement.played(match.time);
+    if(variant!==null&&this.context&&this.speech.speak('Move2DStandard',this.context,this.localTeam,1))this.movement.played(match.time);
   }
   emote(action:YasuoEmote,match:Match){
-    if(!this.enabled||!this.context||match.phase!=='playing'||match.hero('blue').hp<=0||fluteActive(match.hero('blue'),match.time))return false;
+    if(!this.enabled||!this.context||match.phase!=='playing'||match.hero(this.localTeam).hp<=0||fluteActive(match.hero(this.localTeam),match.time))return false;
+    const emote=match.hero(this.localTeam).emote;
+    this.emoteStarted=emote?`${emote.action}:${emote.startedAt}`:null;
+    this.speech.interruptTalk();
     return this.speech.emote(action,this.context);
   }
   get audioContext(){return this.context;}
+  async preload(): Promise<void> {
+    this.context ??= new AudioContext();
+    await Promise.all([this.original.load(this.context), this.skills.load(this.context), this.summoners.load(this.context), this.speech.load(this.context)]);
+    if (this.failed) throw new Error('战斗音频加载失败，请刷新重试。');
+  }
   /** Called from a real input gesture; constructing the app itself stays silent. */
   unlock():void {
     if(!this.enabled)return;
@@ -69,7 +85,7 @@ export class AudioFeedback {
   play(event: GameEvent): void {
     if (!this.enabled || !this.context || this.context.state !== 'running') return;
     if(event.type==='end'||event.type==='hit'&&event.targetId===this.heroId
-      ||event.team==='blue'&&(event.type==='cast'||event.sourceKind==='hero'&&(event.type==='attack'||event.type==='hit'))){
+      ||event.team===this.localTeam&&(event.type==='cast'||event.sourceKind==='hero'&&(event.type==='attack'||event.type==='hit'))){
       this.original.stopMovement();
       if(event.type==='end'||event.type==='hit'&&event.targetId===this.heroId)this.speech.interruptTalk();
       else this.speech.interruptMovement();

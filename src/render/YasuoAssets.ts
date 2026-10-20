@@ -1,5 +1,6 @@
 import fluteUrl from '../../assets/heroes/yasuo/flute-user/flute.png?url';
 import {YASUO_FLUTE} from './YasuoAnimation';
+import {YASUO_EMOTES} from './YasuoAnimation';
 import { YASUO_ASSETS, type YasuoClip } from './YasuoAnimation';
 import { YASUO_Q_ASSETS } from './YasuoQAnimation';
 import { YASUO_E_CLIPS } from './YasuoEAnimation';
@@ -35,3 +36,9 @@ for (const clip of YASUO_E_CLIPS) {
 }
 
 YASUO_TEXTURES.push({clip:YASUO_FLUTE,url:fluteUrl});
+const emoteUrls=import.meta.glob('../../assets/heroes/yasuo/emotes-v3-2026-10-19/*.png',{eager:true,query:'?url',import:'default'}) as Record<string,string>;
+for(const clip of YASUO_EMOTES){
+  const url=emoteUrls[`../../assets/heroes/yasuo/emotes-v3-2026-10-19/${clip.sheet}`];
+  if(!url)throw new Error(`Missing Yasuo emote atlas: ${clip.sheet}`);
+  YASUO_TEXTURES.push({clip,url});
+}

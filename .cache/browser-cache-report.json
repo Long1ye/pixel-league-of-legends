@@ -1,0 +1,48 @@
+[
+  [
+    {
+      "path": "/assets/map-concepts/howling-abyss-target-v1/01-overview.png",
+      "url": "/assets/map-concepts/howling-abyss-target-v1/01-overview.png?assetv=65143f6c84b2682b",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "transfer": 0,
+      "bytes": 4174531
+    },
+    {
+      "path": "/assets/heroes/yasuo/locomotion16-2026-10-15/runtime/walk-w.png",
+      "url": "/assets/heroes/yasuo/locomotion16-2026-10-15/runtime/walk-w.png?assetv=a97c2ac539a27656",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "transfer": 236985,
+      "bytes": 236685
+    },
+    {
+      "path": "/assets/audio/yasuo-voice-zh-v1/runtime/1007830211.mp3",
+      "url": "/assets/audio/yasuo-voice-zh-v1/runtime/1007830211.mp3?assetv=6e13c8f8fde363d3",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "transfer": 53320,
+      "bytes": 53020
+    }
+  ],
+  [
+    {
+      "path": "/assets/map-concepts/howling-abyss-target-v1/01-overview.png",
+      "url": "/assets/map-concepts/howling-abyss-target-v1/01-overview.png?assetv=65143f6c84b2682b",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "transfer": 0,
+      "bytes": 4174531
+    },
+    {
+      "path": "/assets/heroes/yasuo/locomotion16-2026-10-15/runtime/walk-w.png",
+      "url": "/assets/heroes/yasuo/locomotion16-2026-10-15/runtime/walk-w.png?assetv=a97c2ac539a27656",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "transfer": 0,
+      "bytes": 236685
+    },
+    {
+      "path": "/assets/audio/yasuo-voice-zh-v1/runtime/1007830211.mp3",
+      "url": "/assets/audio/yasuo-voice-zh-v1/runtime/1007830211.mp3?assetv=6e13c8f8fde363d3",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "transfer": 0,
+      "bytes": 53020
+    }
+  ]
+]

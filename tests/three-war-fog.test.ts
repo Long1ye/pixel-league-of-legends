@@ -4,6 +4,31 @@ import { WarFog } from '../src/render-three/WarFog';
 import { Match } from '../src/game/Match';
 
 describe('shared team sight and fog memory', () => {
+  it('keeps the original full-rate pixels while skipping identical GPU uploads', () => {
+    const match = units(), vision = new TeamVision(), fog = new WarFog();
+    try {
+      vision.update(0, match.entities); fog.update(0, vision);
+      const pixels = fog.data.slice(), version = fog.texture.version;
+      for (let i = 1; i <= 20; i++) { vision.update(i / 120, match.entities); fog.update(i / 120, vision); }
+      expect(fog.data).toEqual(pixels); expect(fog.texture.version).toBe(version); expect(fog.updateInterval).toBe(0);
+      match.hero('blue').x += 100; vision.update(.2, match.entities); fog.update(.2, vision);
+      expect(fog.data).not.toEqual(pixels); expect(fog.texture.version).toBeGreaterThan(version);
+    } finally { fog.dispose(); }
+  });
+  it('limits visual texture work without delaying gameplay visibility checks', () => {
+    const match = new Match({ ai: false, waves: false }), vision = new TeamVision(), fog = new WarFog();
+    fog.updateInterval = 1 / 30;
+    try {
+      vision.update(0, match.entities); fog.update(0, vision);
+      const version = fog.texture.version;
+      Object.assign(match.hero('blue'), { x: 1000, y: 1000 }); Object.assign(match.hero('red'), { x: 1100, y: 1000 });
+      vision.update(1 / 120, match.entities); fog.update(1 / 120, vision);
+      expect(vision.entityVisible(match.hero('red'))).toBe(true);
+      expect(fog.texture.version).toBe(version);
+      fog.update(1 / 30, vision); expect(fog.texture.version).toBeGreaterThan(version);
+      fog.reset(); fog.update(0, vision); expect(fog.texture.version).toBeGreaterThan(version + 1);
+    } finally { fog.dispose(); }
+  });
   function units() {
     const match = new Match({ ai: false, waves: false });
     Object.assign(match.hero('blue'), { x: 1000, y: 1000 });

@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_817797cd89e8436ca20f2c4d98f2a8af",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-emotes\\2026-10-19\\yasuo\\taunt\\亚索原版挑衅动作_慢慢拿起腰间小竹酒壶_举到嘴边饮酒_然后朝面前横持的武士刀_f670acbd\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-emotes\\2026-10-19\\yasuo\\taunt\\亚索原版挑衅动作_慢慢拿起腰间小竹酒壶_举到嘴边饮酒_然后朝面前横持的武士刀_f670acbd\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-emotes\\2026-10-19\\yasuo\\taunt\\亚索原版挑衅动作_慢慢拿起腰间小竹酒壶_举到嘴边饮酒_然后朝面前横持的武士刀_f670acbd\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

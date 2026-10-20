@@ -1,5 +1,8 @@
+import {emoteShortcut} from './game/YasuoEmote';
 import './style.css';
 import { mountThreeHud } from './ui/ThreeHud';
+import { SkillCasting } from './presentation/SkillCasting';
+import { mountCastSettings } from './ui/CastSettings';
 import './render-three/prototype.css';
 import { Match } from './game/Match';
 import { ABILITIES, HOWLING_MAP } from './game/config';
@@ -19,39 +22,48 @@ import centralReference from '../assets/map-concepts/howling-abyss-target-v1/04-
 import { MapDrag } from './presentation/MapDrag';
 import { GAMEPLAY_VIEW } from './render-three/Coordinates';
 import { ThreeAudio } from './presentation/ThreeAudio';
+import { NetworkHost } from './network/NetworkHost';
+import { mountLobby } from './network/Lobby';
+import { AssetLoadGate } from './presentation/AssetLoadGate';
+import { mountAssetLoading } from './ui/AssetLoading';
 import type { QualityEffect } from './render-three/QualitySettings';
 
 function element<T extends HTMLElement>(id: string): T {
   const node = document.getElementById(id); if (!node) throw new Error(`Missing ${id}`); return node as T;
 }
-const viewport = element('viewport'), status = element('status'), error = element('error');
-if (!HOWLING_MAP) {
-  // Reload with an explicit map selection before importing a different simulation state.
-  const url = new URL(location.href); url.searchParams.set('map', 'howling'); location.replace(url);
-} else {
-  try { boot(); } catch (cause) {
-    error.hidden = false; error.textContent = `样板启动失败：${cause instanceof Error ? cause.message : String(cause)}\n原版入口仍可从上方链接打开。`;
-  }
-}
-
-function boot(): void {
+export function bootThree(lobbyHost?: NetworkHost): (preserveRoom?: boolean) => void {
+  if (!HOWLING_MAP) throw new Error('冰桥地图尚未初始化');
+  const viewport = element('viewport'), status = element('status');
+  const online = new URLSearchParams(location.search).get('online') === '1';
   const scenario = element<HTMLSelectElement>('scenario');
   const requestedScene = new URLSearchParams(location.search).get('scene');
   if (requestedScene && requestedScene in ART_VIEWS) scenario.value = requestedScene;
+  if (online) { scenario.value = 'match'; scenario.disabled = true; }
   const artView = () => ART_VIEWS[scenario.value as keyof typeof ART_VIEWS] ?? ART_VIEWS.central;
-  const view = new ThreeArena(viewport);
+  const assets = new AssetLoadGate();
+  const loading = mountAssetLoading(document.querySelector('.match-shell')!, assets);
+  let assetsReady = false;
+  let view: ThreeArena;
+  try { view = new ThreeArena(viewport); }
+  catch (cause) { assets.dispose(); loading.fail(cause); return () => loading.dispose(); }
+  view.sprites.preload();
   let fogWanted = true;
   const syncEnvironment = () => { view.showLayout = scenario.value === 'layout'; view.centralOnly = scenario.value === 'central' || scenario.value === 'combat'; view.fogEnabled = fogWanted && scenario.value === 'match'; view.cameraRig.setMapBounds(scenario.value === 'match' && view.paintedArt); };
   syncEnvironment();
   const fogButton = element<HTMLButtonElement>('war-fog');
   const detail = element<HTMLSelectElement>('detail');
+  detail.value = '1920'; view.setResolution(1920);
   const lookSelect = element<HTMLSelectElement>('presentation');
   const requestedLook = new URLSearchParams(location.search).get('look');
   if (requestedLook === 'gray' || requestedLook === 'solid') lookSelect.value = requestedLook;
+  if (online) { lookSelect.value = 'art'; lookSelect.disabled = true; fogButton.disabled = true; }
   view.paintedArt = lookSelect.value === 'art';
   syncEnvironment();
   view.presentation = lookSelect.value === 'gray' ? 'gray' : 'art';
-  const host = new PrototypeHost(() => scenario.value === 'match' ? new Match() : scenario.value === 'combat' ? createCombatPractice() : createS01Match(scenario.value === 'sanctuary' ? -659 : scenario.value === 'sample' ? -ART_OUTER_U + 50 : -10), view);
+  const host = online ? lobbyHost ?? new NetworkHost(view) : new PrototypeHost(() => scenario.value === 'match' ? new Match() : scenario.value === 'combat' ? createCombatPractice() : createS01Match(scenario.value === 'sanctuary' ? -659 : scenario.value === 'sample' ? -ART_OUTER_U + 50 : -10), view);
+  const network = host instanceof NetworkHost ? host : null;
+  network?.attachView(view);
+  const localTeam = () => network?.team ?? 'blue';
   const abort = new AbortController(), signal = abort.signal;
   fogButton.addEventListener('click', () => {
     fogWanted = !fogWanted; syncEnvironment(); fogButton.textContent = `战争迷雾：${fogWanted ? '开' : '关'}`; fogButton.setAttribute('aria-pressed', String(fogWanted));
@@ -63,20 +75,18 @@ function boot(): void {
   sound.addEventListener('click', () => { sound.textContent = `音效：${audio.combat.toggle() ? '开' : '关'}`; sound.setAttribute('aria-pressed', String(audio.combat.enabled)); }, { signal });
   music.addEventListener('click', () => { audio.music.enabled = !audio.music.enabled; music.textContent = `音乐：${audio.music.enabled ? '开' : '关'}`; music.setAttribute('aria-pressed', String(audio.music.enabled)); }, { signal });
   ambience.addEventListener('click', () => { audio.environment.enabled = !audio.environment.enabled; ambience.textContent = `环境声音：${audio.environment.enabled ? '开' : '关'}`; ambience.setAttribute('aria-pressed', String(audio.environment.enabled)); }, { signal });
-  detail.addEventListener('change', () => view.setResolution(detail.value === '640' ? 640 : detail.value === '1280' ? 1280 : 1920), { signal });
+  detail.addEventListener('change', () => view.setResolution(detail.value === '640' ? 640 : detail.value === '960' ? 960 : detail.value === '1280' ? 1280 : 1920), { signal });
   element<HTMLSelectElement>('quality').addEventListener('change', event => view.setQuality((event.target as HTMLSelectElement).value === 'low'), { signal });
   const compare = element<HTMLButtonElement>('quality-compare');
   const qualityInputs = [...document.querySelectorAll<HTMLInputElement>('[data-quality-effect]')];
   const syncQuality = () => {
     const all = qualityInputs.every(input => view.quality[input.dataset.qualityEffect as QualityEffect].value > 0);
-    compare.textContent = `画质对比：${view.quality.enhanced ? all ? '优化' : '自定义' : '基础'}`; compare.setAttribute('aria-pressed', String(view.quality.enhanced));
+    compare.textContent = `画面增强：${view.quality.enhanced ? all ? '开' : '自定义' : '关'}`; compare.setAttribute('aria-pressed', String(view.quality.enhanced));
     for (const input of qualityInputs) { input.checked = view.quality[input.dataset.qualityEffect as QualityEffect].value > 0; input.disabled = !view.quality.enhanced; }
   };
   compare.addEventListener('click', () => { view.setEnhanced(!view.quality.enhanced); syncQuality(); }, { signal });
   for (const input of qualityInputs) input.addEventListener('change', () => { view.setQualityEffect(input.dataset.qualityEffect as QualityEffect, input.checked); syncQuality(); }, { signal });
-  element('fullscreen').addEventListener('click', () => {
-    void document.querySelector<HTMLElement>('.match-shell')!.requestFullscreen().catch(() => { element('selection').textContent = '当前窗口无法全屏，可在浏览器中打开后重试。'; });
-  }, { signal });
+  syncQuality();
   let previous = performance.now(), raf = 0, lastStatus = -1, selected: number | null = null;
   const keys = new Set<string>();
   let pointer: Point | null = null;
@@ -86,7 +96,7 @@ function boot(): void {
     const target = artView(), gameplay = scenario.value === 'match'; view.following = false;
     const frameWidth = scenario.value === 'ice' ? 680 : (scenario.value === 'overview' || scenario.value === 'layout') ? 6200 : scenario.value === 'central' || scenario.value === 'combat' ? 1770 : scenario.value === 'sanctuary' ? 1300 : 900;
     view.cameraRig.setZoom(gameplay ? GAMEPLAY_VIEW.zoom : Math.min(target.zoom, 270 * view.cameraRig.size.width / view.cameraRig.size.height / frameWidth));
-    view.cameraRig.lookAt(gameplay ? host.match.hero('blue') : bridgePoint(target.u, target.v)); syncFollow();
+    view.cameraRig.lookAt(gameplay ? host.match.hero(localTeam()) : bridgePoint(target.u, target.v)); syncFollow();
     const reference = element<HTMLAnchorElement>('art-reference');
     const sources: Record<string, string> = { '01-overview.png': overviewReference, '02-sanctuary.png': sanctuaryReference, '03-outer-tower.png': towerReference, '04-central-bridge.png': centralReference };
     reference.href = sources[target.source];
@@ -102,33 +112,42 @@ function boot(): void {
     setAttackSelecting(false);
     const aim = pointer ? targetAim(pointer) : null;
     if (!aim) { element('selection').textContent = '先将鼠标移到地面或目标，再施放技能。'; return; }
-    const targeted = ability === 'e' ? host.match.dashTarget(aim) : ability === 'r' ? host.match.rTarget('blue') : undefined;
+    const targeted = ability === 'e' ? host.match.dashTarget(aim, localTeam()) : ability === 'r' ? host.match.rTarget(localTeam()) : undefined;
     if (targeted && !view.canSeeEntity(targeted)) { element('selection').textContent = '目标不在我方视野内。'; return; }
     const accepted = host.command({ kind: 'cast', ability, point: aim });
     element('selection').textContent = `${ability.toUpperCase()}：${accepted ? '已释放' : '检查冷却、目标、击飞或当前动作'}。`;
   }
   const castSummoner = (key: 'd' | 'f') => {
+    casting.cancel();
     if (!pointer) return;
     const point = targetAim(pointer);
     if (point) host.command({ kind: 'summoner', key, point, targetId: view.pickActor(pointer) });
   };
-  const hud = mountThreeHud({ cast, summoner: castSummoner, canSee: entity => view.canSeeEntity(entity),
-    stop: () => { setAttackSelecting(false); host.command({ kind: 'stop' }); }, flute: () => { host.command({ kind: 'flute' }); },
+  const casting = new SkillCasting(cast, key => {
+    view.aimKey = key;
+    viewport.dataset.skillSelecting = String(!!key);
+    for (const ability of ['q','w','e','r']) document.getElementById(`ability-${ability}`)?.classList.toggle('cast-selected', ability === key);
+    if (key) { cancelDrag(); setAttackSelecting(false); }
+  });
+  const hud = mountThreeHud({ cast: key => { if (host.match.phase === 'playing') casting.select(key); }, summoner: castSummoner, canSee: entity => view.canSeeEntity(entity),
+    stop: () => { casting.cancel(); setAttackSelecting(false); host.command({ kind: 'stop' }); }, flute: () => { casting.cancel(); host.command({ kind: 'flute' }); },
     resume: () => { if (host.match.phase === 'ended') restart(); else if (host.match.phase === 'paused') host.pause(); },
   }, signal);
+  mountCastSettings(casting);
   view.onFrame = frame => {
     const { match } = frame;
     const selectedEntity = match.entity(selected);
     if (selectedEntity && !view.canSeeEntity(selectedEntity)) { selected = null; view.selectedId = null; element('target-readout').hidden = true; }
-    const attackTarget = match.entity(match.hero('blue').targetId);
+    const attackTarget = match.entity(match.hero(localTeam()).targetId);
     if (attackTarget && !view.canSeeEntity(attackTarget)) host.command({ kind: 'stop' });
-    if (match.phase !== 'playing' || match.hero('blue').hp <= 0) setAttackSelecting(false);
+    if (match.phase !== 'playing' || match.hero(localTeam()).hp <= 0) { setAttackSelecting(false); casting.cancel(); }
     audio.update(view.perceivedFrame(frame), view.cameraRig.focus, view.cameraRig.camera.right - view.cameraRig.camera.left, !document.hidden);
     if (performance.now() - lastStatus < 200) return; lastStatus = performance.now();
-    hud.update(match, selected);
-    const h = match.hero('blue'), target = match.entity(selected);
+    hud.update(match, selected, localTeam());
+    if (network) { document.getElementById('match-overlay')!.hidden = true; element<HTMLButtonElement>('pause').hidden = true; }
+    const h = match.hero(localTeam()), target = match.entity(selected);
     const cooldowns = (['q', 'w', 'e', 'r'] as const).map(key => `${key.toUpperCase()} ${Math.max(0, h.abilities[key] - match.time).toFixed(1)}`).join(' / ');
-    element('combat-hud').textContent = `生命 ${Math.ceil(h.hp)} / ${h.maxHp} · 剑意 ${Math.floor(h.flow ?? 0)} / 100 · ${cooldowns} · D 闪现 ${Math.ceil(Math.max(0, match.summonerCooldowns.blue.d - match.time))} · F 点燃 ${Math.ceil(Math.max(0, match.summonerCooldowns.blue.f - match.time))} · 补刀 ${match.cs.blue}`;
+    element('combat-hud').textContent = `生命 ${Math.ceil(h.hp)} / ${h.maxHp} · 剑意 ${Math.floor(h.flow ?? 0)} / 100 · ${cooldowns} · D 闪现 ${Math.ceil(Math.max(0, match.summonerCooldowns[localTeam()].d - match.time))} · F 点燃 ${Math.ceil(Math.max(0, match.summonerCooldowns[localTeam()].f - match.time))} · 补刀 ${match.cs[localTeam()]}`;
     status.textContent = `${view.presentation === 'art' ? (view.paintedArt ? artView().label : '旧 3D 样板') : 'P1 灰盒'} · ${match.phase} · ${match.time.toFixed(2)}s · HP ${Math.round(h.hp)}/${h.maxHp} · 缩放 ${view.cameraRig.zoom} · ${view.cameraRig.elevation}° · 内部 ${view.renderer.domElement.width}×${view.renderer.domElement.height} · 调用 ${view.renderer.info.render.calls} · 目标 ${target ? `${target.id} HP ${Math.round(target.hp)}` : '无'} · 冷却 ${cooldowns}${view.presentation === 'gray' ? ` · Q 范围 ${ABILITIES.q.range}` : ''}${view.environment.textureErrors.length || view.central.errors.length || view.painted.errors.length || view.landmarks.errors.length || view.details.errors.length || view.smallDetails.errors.length || view.architecturalIce.errors.length || view.poros.errors.length || view.sprites.errors.length ? ' · 部分素材加载失败，请检查本地服务' : ''}`;
     if (view.combat.sprites.errors.length || audio.combat.failed || audio.music.failed || audio.environment.failed) status.textContent += ' · 部分特效或音频加载失败，请刷新重试';
   };
@@ -157,9 +176,10 @@ function boot(): void {
     viewport.focus(); pointer = { x: event.clientX, y: event.clientY };
     const id = view.pickActor(pointer), entity = host.match.entity(id);
     if (event.button === 0 && event.isPrimary) {
+      if (casting.active) { event.preventDefault(); cancelDrag(); casting.confirm(); return; }
       if (view.attackSelecting && host.match.phase === 'playing') {
         event.preventDefault(); cancelDrag(); setAttackSelecting(false);
-        if (entity && entity.team === 'red' && entity.hp > 0) {
+        if (entity && entity.team !== localTeam() && entity.hp > 0) {
           if (host.command({ kind: 'attack', id: entity.id })) view.combat.showMove(entity, host.match.time, true);
           selected = entity.id; view.selectedId = entity.id;
         } else {
@@ -173,8 +193,9 @@ function boot(): void {
       capturedPointer = event.pointerId; viewport.setPointerCapture(event.pointerId);
     }
     if (event.button === 2 && !mapDrag.active) {
+      if (casting.cancel()) { event.preventDefault(); return; }
       setAttackSelecting(false);
-      if (entity && entity.team === 'red' && entity.hp > 0) { if (host.command({ kind: 'attack', id: entity.id })) view.combat.showMove(entity, host.match.time, true); }
+      if (entity && entity.team !== localTeam() && entity.hp > 0) { if (host.command({ kind: 'attack', id: entity.id })) view.combat.showMove(entity, host.match.time, true); }
       else { const point = view.ground(pointer); if (point && host.command({ kind: 'move', point })) view.combat.showMove(point, host.match.time); }
     }
   });
@@ -194,26 +215,39 @@ function boot(): void {
     view.cameraRig.setZoom(next);
   }, { signal, passive: false });
   window.addEventListener('keydown', event => {
+    if (!assetsReady) return;
     if (event.target instanceof HTMLInputElement || event.target instanceof HTMLSelectElement || event.target instanceof HTMLTextAreaElement) return;
+    if (event.metaKey || event.altKey || event.ctrlKey && ['q','w','e','r'].includes(event.key.toLowerCase())) return;
     const key = event.key.toLowerCase();
     if (['a', 'escape', 'arrowup', 'arrowdown', 'arrowleft', 'arrowright', ' '].includes(key)) event.preventDefault();
     keys.add(key); if (event.repeat) return;
+    if (key === 'escape' && casting.cancel()) return;
     if (key === 'escape' && view.attackSelecting) { setAttackSelecting(false); return; }
-    if (key === 'a' && host.match.phase === 'playing' && host.match.hero('blue').hp > 0) { cancelDrag(); setAttackSelecting(true); }
-    if (['q', 'w', 'e', 'r'].includes(key)) cast(key as AbilityKey);
+    if (key === 'a' && host.match.phase === 'playing' && host.match.hero(localTeam()).hp > 0) { casting.cancel(); cancelDrag(); setAttackSelecting(true); }
+    if (['q', 'w', 'e', 'r'].includes(key) && host.match.phase === 'playing' && host.match.hero(localTeam()).hp > 0) { event.preventDefault(); casting.keyDown(key as AbilityKey); }
     if (key === 'd' || key === 'f') castSummoner(key);
     if (key === '3') { event.preventDefault(); host.command({ kind: 'flute' }); }
-    if (!event.ctrlKey&&!event.altKey&&!event.metaKey&&['1','2','4'].includes(key)) { event.preventDefault(); audio.combat.emote(key==='1'?'joke':key==='2'?'taunt':'laugh',host.match); }
-    if (key === 's') { setAttackSelecting(false); host.command({ kind: 'stop' }); }
+    const emote=emoteShortcut(event);
+    if(emote){event.preventDefault();audio.combat.unlock();if(host.command({kind:'emote',action:emote}))audio.combat.emote(emote,host.match);}
+    if (key === 's') { casting.cancel(); setAttackSelecting(false); host.command({ kind: 'stop' }); }
     if (key === 'escape') host.pause();
     if (key === 'y') { view.following = !view.following; syncFollow(); }
   }, { signal });
-  window.addEventListener('keyup', event => keys.delete(event.key.toLowerCase()), { signal });
-  const pauseHidden = () => { keys.clear(); cancelDrag(); setAttackSelecting(false); if (host.match.phase === 'playing') host.pause(); audio.stop(); previous = performance.now(); };
+  window.addEventListener('keyup', event => {
+    const key = event.key.toLowerCase(); keys.delete(key);
+    if (['q','w','e','r'].includes(key)) {
+      if (host.match.phase !== 'playing' || host.match.hero(localTeam()).hp <= 0 || event.target instanceof HTMLElement && event.target.closest('input,select,textarea')) casting.cancel();
+      else casting.keyUp(key as AbilityKey);
+    }
+  }, { signal });
+  const pauseHidden = () => { casting.cancel(); keys.clear(); cancelDrag(); setAttackSelecting(false); if (!network && host.match.phase === 'playing') host.pause(); audio.stop(); previous = performance.now(); };
   window.addEventListener('blur', pauseHidden, { signal });
   document.addEventListener('visibilitychange', () => { if (document.hidden) pauseHidden(); previous = performance.now(); }, { signal });
+  if (network) { element<HTMLButtonElement>('pause').hidden = true; element('restart').textContent = '准备再来一局'; }
   listen(element('pause'), 'click', () => host.pause());
   const restart = () => {
+    casting.cancel();
+    if (network) { network.ready(); return; }
     cancelDrag();
     setAttackSelecting(false);
     audio.stop(); syncEnvironment(); host.restart(); selected = null; view.selectedId = null;
@@ -246,6 +280,7 @@ function boot(): void {
   elevation.disabled = view.paintedArt;
   function frame(now: number): void {
     const dt = Math.min(Math.max(0, now - previous) / 1000, 0.25); previous = now;
+    if (!assetsReady) { raf = requestAnimationFrame(frame); return; }
     const dx = Number(keys.has('arrowright')) - Number(keys.has('arrowleft'));
     const dy = Number(keys.has('arrowdown')) - Number(keys.has('arrowup'));
     if (dx || dy) { view.pan(dx * 280 * dt, dy * 280 * dt); syncFollow(); }
@@ -254,8 +289,27 @@ function boot(): void {
     if (pointer) view.aim = targetAim(pointer);
     host.update(dt); raf = requestAnimationFrame(frame);
   }
+  if (network) {
+    mountLobby(network, signal);
+    network.onRound = () => { casting.cancel(); audio.stop(); selected = null; view.selectedId = null; focusScene(); view.following = true; syncFollow(); };
+  }
   raf = requestAnimationFrame(frame);
-  const dispose = () => { cancelAnimationFrame(raf); cancelDrag(); abort.abort(); audio.dispose(); host.dispose(); };
-  window.addEventListener('pagehide', dispose, { once: true, signal });
+  assets.track('血条界面', view.healthBars.preload());
+  assets.track('界面图标', Promise.all([...document.images].filter(image => !!image.src).map(image => image.decode())));
+  assets.track('战斗音频', audio.combat.preload());
+  assets.track('环境音频', audio.environment.preload(audio.combat.audioContext!));
+  assets.track('背景音乐', audio.music.preload());
+  assets.seal();
+  const loadingTimeout = setTimeout(() => { assets.dispose(); loading.fail(new Error('资源加载超时，请检查连接后刷新重试。')); }, 120_000);
+  void assets.ready.then(async () => {
+    loading.phase('资源已加载，正在准备图形与角色…');
+    await view.prepareAssets(host.match);
+    if (signal.aborted) return;
+    assetsReady = true; network?.setAssetsReady(); previous = performance.now(); loading.complete(); clearTimeout(loadingTimeout);
+  }).catch(cause => { clearTimeout(loadingTimeout); if (!signal.aborted) loading.fail(cause); });
+  let disposed = false;
+  const dispose = (preserveRoom = false) => { if (disposed) return; disposed = true; if (!preserveRoom) network?.leave(); clearTimeout(loadingTimeout); assets.dispose(); loading.dispose(); cancelAnimationFrame(raf); cancelDrag(); abort.abort(); audio.dispose(); host.dispose(); };
+  window.addEventListener('pagehide', () => dispose(true), { once: true, signal });
   if (import.meta.hot) import.meta.hot.dispose(dispose);
+  return dispose;
 }

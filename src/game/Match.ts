@@ -1,16 +1,18 @@
+import type {YasuoEmote} from './YasuoEmote';
 import { ABILITIES, AI_HOLD, BALANCE, BASES, HOWLING_MAP, MINION_EXITS, SPAWNS, TOWERS, WORLD } from './config';
 import { clampPoint, direction, distance, moveTowards, segmentDistance } from './geometry';
 import { isYasuoQCasting, YASUO_Q_HIT_SECONDS, YASUO_Q_HALF_WIDTH } from './YasuoQ';
 import { YASUO_R,findYasuoRTarget } from './YasuoR';
-import { HOMEGUARD, homeguardActive, updateHomeguard } from './Homeguard';
+import { updateHomeguard } from './Homeguard';
 import { clearStorm, grantStorm, stormReady, STORM } from './YasuoStorm';
 import { E, EQ, dashEndpoint, isDashing, pickDashTarget } from './YasuoE';
 import { bridgeDetour, clearBridgeFootprints, bridgeFoundationRadius } from './BridgeInteraction';
-import { circleHit, wallHit, W_CAST_SECONDS, W_DELAY, W_DURATION, type WindWall } from './WindWall';
+import { circleHit, wallHit, W_CAST_SECONDS, W_DELAY, W_DURATION, WIND_WALL, type WindWall } from './WindWall';
 import {UNIT_METRICS,basicAttackReach} from './UnitMetrics';
 import {gainFlow,absorbWithPassive,yasuoCritStats} from './YasuoPassive';
 import {SUMMONERS,type SummonerKey,type SummonerEffect} from './SummonerSpells';
-import {MINION_LANE,minionLaneSlot,minionAttackSpot,minionMovementSpeed,minionTargetCost} from './MinionLane';
+import {MINION_LANE,minionLaneSlot,minionAttackSpot,minionTargetCost} from './MinionLane';
+import { walkUnit } from './Walk';
 import {applyHitStun,inHitStun,committedUntil,HIT_STUN,type BufferedOrder} from './HitStun';
 import {actionReadyAt,finishActionRecovery} from './ActionTiming';
 import { enemyOf, type AbilityKey, type Entity, type EntityKind, type GameEvent, type ImpactKind, type MatchPhase, type MatchResult, type Point, type Projectile, type Team, type WinReason, type Zone } from './types';
@@ -32,6 +34,8 @@ export class Match {
   summonerEffects:SummonerEffect[]=[];
   summonerCooldowns:Record<Team,Record<SummonerKey,number>>={blue:{d:0,f:0},red:{d:0,f:0}};
   eTargetLocks = new Map<number, number>();
+  redETargetLocks = new Map<number, number>();
+  targetLocks(team: Team): Map<number, number> { return team === 'blue' ? this.eTargetLocks : this.redETargetLocks; }
   hitStunEnabled=true;
   private bufferedOrders=new Map<Team,BufferedOrder>();
   private bufferedNavigation=new Map<Team,BufferedOrder>();
@@ -77,7 +81,7 @@ export class Match {
   dashError(point: Point, team:Team='blue',targetId?:number): string | null {
     const hero=this.hero(team), target=this.dashTarget(point,team,targetId);
     if (!target) return '请指向敌方小兵或英雄后按 E。';
-    if ((this.eTargetLocks.get(target.id) ?? 0) > this.time) return '该目标暂时不能再次踏前斩。';
+    if ((this.targetLocks(team).get(target.id) ?? 0) > this.time) return '该目标暂时不能再次踏前斩。';
     if (distance(hero,target)>E.range) return '目标超出踏前斩范围。';
     const end=dashEndpoint(hero,target), dir=direction(hero,target);
     if ((end.x-target.x)*dir.x+(end.y-target.y)*dir.y < hero.radius+target.radius) return '地图边界处没有足够的穿越空间。';
@@ -168,6 +172,11 @@ export class Match {
     }
   }
 
+  startEmote(action:YasuoEmote,team:Team='blue'):boolean {
+    if(!this.startFlute(team))return false;
+    const hero=this.hero(team);hero.fluteAt=null;hero.emote={action,startedAt:this.time};return true;
+  }
+
   startFlute(team:Team='blue'):boolean {
     const hero=this.hero(team);
     if(this.phase!=='playing'||hero.hp<=0||inHitStun(hero,this.time)||(hero.airborneUntil??0)>this.time
@@ -180,7 +189,7 @@ export class Match {
     const hero = this.hero(team);
     if(hero.hp<=0)return;
     this.attackMoveGoals.delete(team);
-    hero.fluteAt=null;
+    hero.fluteAt=null;hero.emote=null;
     if(this.retainBufferedCast(team,{kind:'move',point:{...point},expiresAt:this.inputExpiry(hero)}))return;
     if(inHitStun(hero,this.time)){this.bufferedOrders.set(team,{kind:'move',point:{...point},expiresAt:this.inputExpiry(hero)});return;}
     this.bufferedOrders.delete(team);
@@ -201,7 +210,7 @@ export class Match {
     if (!target || target.team === team || target.hp <= 0) return;
     if(hero.hp<=0)return;
     this.attackMoveGoals.delete(team);
-    hero.fluteAt=null;
+    hero.fluteAt=null;hero.emote=null;
     if(this.retainBufferedCast(team,{kind:'attack',targetId,expiresAt:this.inputExpiry(hero)}))return;
     if(inHitStun(hero,this.time)){this.bufferedOrders.set(team,{kind:'attack',targetId,expiresAt:this.inputExpiry(hero)});return;}
     this.bufferedOrders.delete(team);
@@ -217,7 +226,7 @@ export class Match {
     if(this.phase!=='playing'||hero.hp<=0)return;
     if(this.retainBufferedCast(team,{kind:'attack-move',point:{...point},expiresAt:this.inputExpiry(hero)}))return;
     if(inHitStun(hero,this.time)){
-      hero.fluteAt=null;
+      hero.fluteAt=null;hero.emote=null;
       this.bufferedOrders.set(team,{kind:'attack-move',point:{...point},expiresAt:this.inputExpiry(hero)});
       return;
     }
@@ -269,7 +278,7 @@ export class Match {
     }else{
       const target=targetId!==null?this.entity(targetId):hero.rCast?.targetIds.map(id=>this.entity(id)).find(e=>e&&e.hp>0&&e.team!==team);
       if(!target||target.team===team||target.kind==='tower'||target.hp<=0||distance(hero,target)>spec.range+target.radius)return false;
-      hero.fluteAt=null;
+      hero.fluteAt=null;hero.emote=null;
       this.summonerEffects.push({kind:'ignite',team,startedAt:this.time,endsAt:this.time+SUMMONERS.f.duration,
         from:{x:hero.x,y:hero.y},to:{x:target.x,y:target.y},sourceId:hero.id,targetId:target.id,ticks:0});
     }
@@ -294,7 +303,7 @@ export class Match {
   stop(team: Team): void {
     const hero = this.hero(team);
     this.attackMoveGoals.delete(team);
-    hero.fluteAt=null;
+    hero.fluteAt=null;hero.emote=null;
     this.bufferedNavigation.delete(team);
     if(this.phase==='playing'&&hero.hp>0&&inHitStun(hero,this.time)){this.bufferedOrders.set(team,{kind:'stop',expiresAt:this.inputExpiry(hero)});return;}
     this.bufferedOrders.delete(team);
@@ -310,14 +319,14 @@ export class Match {
     const hero = this.hero(team), spec = ABILITIES[key];
     if(hero.hp<=0)return false;
     const dashTarget=key==='e'?this.dashTarget(point,team,targetId):undefined;
-    if(key==='e'&&(!dashTarget||(this.eTargetLocks.get(dashTarget.id)??0)>this.time))return false;
+    if(key==='e'&&(!dashTarget||(this.targetLocks(team).get(dashTarget.id)??0)>this.time))return false;
     const combo=key==='q'&&isDashing(hero,this.time)&&!hero.eqCast;
     const rInterrupt=key==='r'&&!!this.rTarget(team);
     if(key==='r'&&!rInterrupt)return false;
     const readyAt=Math.max(hero.abilities[key],combo||rInterrupt?this.time:actionReadyAt(hero,this.time));
     if(readyAt>this.time+HIT_STUN.inputBuffer&&(!inHitStun(hero,this.time)||hero.abilities[key]>this.time+HIT_STUN.inputBuffer))return false;
     if(key==='e'&&readyAt<=this.time&&!inHitStun(hero,this.time)&&this.dashError(point,team,targetId))return false;
-    hero.fluteAt=null;
+    hero.fluteAt=null;hero.emote=null;
     if(inHitStun(hero,this.time)||readyAt>this.time){
       this.bufferedOrders.set(team,{kind:'cast',ability:key,point:{...point},...(dashTarget?{targetId:dashTarget.id}:{}),expiresAt:this.inputExpiry(hero)});return true;
     }
@@ -376,7 +385,7 @@ export class Match {
       }
     } else if (key === 'w') {
       hero.wCast = { startedAt: this.time, facing: hero.facing };
-      this.windWalls.push({ id: this.nextId++, team, x: hero.x + dir.x * 32, y: hero.y + dir.y * 32,
+      this.windWalls.push({ id: this.nextId++, team, x: hero.x + dir.x * WIND_WALL.distance, y: hero.y + dir.y * WIND_WALL.distance,
         angle: hero.facing, startsAt: this.time + W_DELAY });
       hero.windup = 0;
       hero.attackTargetId = null;
@@ -386,7 +395,7 @@ export class Match {
       const start={x:hero.x,y:hero.y}, end=dashEndpoint(hero,target);
       hero.facing=Math.atan2(target.y-hero.y,target.x-hero.x);
       hero.eCast={startedAt:this.time,start,end,facing:hero.facing,targetId:target.id,hit:false};
-      this.eTargetLocks.set(target.id,this.time+E.targetCooldown);
+      this.targetLocks(team).set(target.id,this.time+E.targetCooldown);
       hero.destination=null; hero.targetId=null; hero.windup=0; hero.attackTargetId=null;
       this.clearAttackPresentation(hero);
     }
@@ -405,7 +414,7 @@ export class Match {
     const dealt = (amount+bonus)*(critical?crit.multiplier:1) * (impact!=='ignite'&&target.guardUntil > this.time ? 0.6 : 1) * (target.kind === 'tower' ? 0.65 : 1);
     const shield=absorbWithPassive(source,target,dealt,this.time);
     target.hp = Math.max(0, target.hp - shield.remaining);
-    target.fluteAt=null;
+    target.fluteAt=null;target.emote=null;
     target.hitAt = this.time;
     target.hitFrom = {x:source.x,y:source.y};
     if(this.hitStunEnabled)applyHitStun(source,target,impact,this.time,dealt);
@@ -451,7 +460,8 @@ export class Match {
   step(dt: number): void {
     if (this.phase !== 'playing') return;
     this.time += dt;
-    for (const [id,until] of this.eTargetLocks) if (until <= this.time) this.eTargetLocks.delete(id);
+    for (const locks of [this.eTargetLocks, this.redETargetLocks])
+      for (const [id,until] of locks) if (until <= this.time) locks.delete(id);
     if (this.options.waves && this.time >= this.nextWaveAt) {
       this.spawnWave();
       this.nextWaveAt += BALANCE.waveInterval;
@@ -701,16 +711,8 @@ export class Match {
   }
 
   private walk(unit: Entity, target: Point, dt: number): void {
-    if(inHitStun(unit,this.time))return;
-    const waypoint=HOWLING_MAP?bridgeDetour(unit,target,unit.radius,unit.id):target;
-    unit.facing = Math.atan2(waypoint.y - unit.y, waypoint.x - unit.x);
     const opponent=this.entity(unit.targetId);
-    const speed=minionMovementSpeed(unit,!!opponent&&opponent.hp>0);
-    moveTowards(unit, waypoint, speed * dt * (unit.slowUntil > this.time ? 0.7 : 1) * (homeguardActive(unit,this.time) ? HOMEGUARD.multiplier : 1));
-    const point = clampPoint(unit, unit.radius);
-    const placed=HOWLING_MAP?clampPoint(clearBridgeFootprints(point,unit.radius,unit.id)):point;
-    unit.x = placed.x; unit.y = placed.y;
-    if (unit.destination && distance(unit, unit.destination) < 1) unit.destination = null;
+    walkUnit(unit, target, dt, this.time, !!opponent && opponent.hp > 0);
   }
 
   private separateUnits(): void {
@@ -741,8 +743,8 @@ export class Match {
       const from = { x: shot.x, y: shot.y };
       const targetForPath = shot.kind === 'attack' ? this.entity(shot.targetId) : undefined;
       const to = { ...from };
+      const travel = shot.kind === 'q' ? Math.min(shot.speed * dt, shot.remaining) : 0;
       if (shot.kind === 'q') {
-        const travel = Math.min(shot.speed * dt, shot.remaining);
         to.x += shot.vx * travel; to.y += shot.vy * travel;
       } else if (targetForPath) moveTowards(to, targetForPath, shot.speed * dt);
       if(shot.empowered) {
@@ -755,7 +757,9 @@ export class Match {
           (shot.hitIds??=[]).push(victim.id);this.damage(source,victim,shot.damage,false,'q3',shot.critical);
           if(victim.hp>0){victim.airborneStartedAt=this.time;victim.airborneHold=undefined;victim.airborneDirection={x:shot.vx,y:shot.vy};victim.airborneUntil=this.time+STORM.knockup;victim.windup=0;victim.attackTargetId=null;}
         }
-        shot.remaining-=distance(from,end);shot.x=end.x;shot.y=end.y;
+        // Consume planned travel: coordinate rounding can otherwise leave a tiny
+        // positive range and a stationary tornado that hits later arrivals forever.
+        shot.remaining-=travel*fraction;shot.x=end.x;shot.y=end.y;
         if(wallFraction>1&&shot.remaining>0)survivors.push(shot);
         continue;
       }

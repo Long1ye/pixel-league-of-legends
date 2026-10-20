@@ -1,0 +1,41 @@
+{
+  "status": "waiting_service",
+  "source_sha256": "4a31eeceac3d5f0fde08729302dd832dd284916205a6beeb379f2509cd5ab7fe",
+  "resolution": "1080p_full",
+  "quality": "detailed",
+  "duration_seconds": 4,
+  "high_frame_rate": true,
+  "remove_bg_batch_size": 2,
+  "jobs": {
+    "joke": "job_f5bcd0bcfdbe4b019018b9ce0a898f72",
+    "taunt": "job_964612f18700458c9733c8eb01547115",
+    "laugh": "job_ca120b44e6c5410e8305d34bc3156af3"
+  },
+  "recovery": "animate-poll --api-job-id <id>; do not submit again",
+  "failed_refunded": {
+    "joke": {
+      "id": "job_30eb5b22f14247e2ae861c46675a3984",
+      "refunded": 275
+    },
+    "taunt": {
+      "id": "job_5c73eb7381c944a9aa834fcc3368c9fd",
+      "refunded": 275
+    }
+  },
+  "fallback_resolution": "1080p",
+  "latest_known_states": {
+    "joke": "running",
+    "taunt": "queued",
+    "laugh": "running"
+  },
+  "refunded_total": 550,
+  "packager": "scripts/package-yasuo-emotes-high.py",
+  "integration_pending": [
+    "Inspect all returned animations before integration",
+    "Package all original frames; verify actual canvas and anchor",
+    "Switch YasuoAnimation.ts registry and YasuoAssets.ts glob to emotes-v2-high-2026-10-19",
+    "Update preview route and rerun tests/build"
+  ],
+  "new_attempt": "../yasuo-v3-separated/jobs.json",
+  "note": "User explicitly requested direct resubmission; old jobs were not cancelled."
+}

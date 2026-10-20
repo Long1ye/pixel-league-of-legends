@@ -6,10 +6,12 @@ import portrait from '../../assets/ui/pixel-hud-v2-2026-10-15/runtime/portrait.p
 import passiveIcon from '../../assets/ui/yasuo-passive-icon-2026-10-15/runtime/passive.png?url';
 import dIcon from '../../assets/ui/pixel-hud-v2-2026-10-15/runtime/d.png?url';
 import fIcon from '../../assets/ui/pixel-hud-v2-2026-10-15/runtime/f.png?url';
-import {BALANCE,HOWLING_MAP} from '../game/config';
+import {HOWLING_MAP} from '../game/config';
 import {SUMMONERS,type SummonerKey} from '../game/SummonerSpells';
 import './league-hud.css';
 import './pixel-hud.css';
+import { mountOperationGuide } from './OperationGuide';
+import { mountPlayerSettings } from './PlayerSettings';
 
 /** Move existing controls, retaining their ids, listeners and live game state. */
 export function mountLeagueHud(practice:boolean,actions:{flute:()=>void;stop:()=>void;summoner:(key:SummonerKey)=>void;focusTarget?:HTMLElement}):void {
@@ -21,34 +23,17 @@ export function mountLeagueHud(practice:boolean,actions:{flute:()=>void;stop:()=
   shell.append(back);
  }
  document.body.classList.add('league-ui','pixel-hud');
+ mountOperationGuide(shell, practice);
  for(const [key,url] of Object.entries({q:qIcon,w:wIcon,e:eIcon,r:rIcon})){
   const image=document.createElement('img');image.src=url;image.alt='';image.draggable=false;
   document.querySelector(`#ability-${key} .ability-glyph`)!.replaceChildren(image);
  }
  const face=document.createElement('img');face.src=portrait;face.alt='亚索';face.draggable=false;
  document.querySelector('.hero-portrait')!.replaceChildren(face);
- const menu=document.createElement('details');menu.className='hud-menu';
- const summary=document.createElement('summary');summary.textContent='选项 / 练习';
- const content=document.createElement('div');content.className='hud-menu-content';
- content.append(document.querySelector('.match-actions')!,document.querySelector('.controls-strip')!);
- const heading=document.createElement('p');heading.className='hud-menu-heading';heading.textContent=document.querySelector('h1')!.textContent;
- content.prepend(heading);menu.append(summary,content);shell.append(menu);
+ mountPlayerSettings(shell);
  const panels=Array.from(document.querySelectorAll<HTMLElement>('main > section:not(.match-shell)'));
  if(practice&&panels.length){const tools=document.createElement('details');tools.className='hud-practice';const s=document.createElement('summary');s.textContent='训练工具';tools.append(s);for(const panel of panels){panel.removeAttribute('style');tools.append(panel);}shell.append(tools);}
- const stats=document.createElement('div');stats.className='champion-stats';
- for(const [name,value] of [['攻击',BALANCE.hero.damage],['攻速',(1/BALANCE.hero.attackInterval).toFixed(2)],['移速',BALANCE.hero.speed],['射程',BALANCE.hero.range]]){
-  const line=document.createElement('div');const label=document.createElement('span');const number=document.createElement('b');label.textContent=String(name);number.textContent=String(value);line.append(label,number);stats.append(line);
- }
  const hud=document.querySelector<HTMLElement>('.player-hud')!;
- content.append(stats);
- const commands=document.createElement('div');commands.className='hud-commands';
- for(const [key,label,action] of [['S','停止',actions.stop]] as const){
-  const button=document.createElement('button');button.type='button';button.className='hud-command';
-  const shortcut=document.createElement('kbd');shortcut.textContent=key;
-  const name=document.createElement('span');name.textContent=label;button.append(shortcut,name);
-  button.title=`${label} · ${key}`;button.onclick=()=>{action();(actions.focusTarget??document.querySelector<HTMLElement>('#arena'))!.focus({preventScroll:true});};commands.append(button);
- }
- content.append(commands);
  const passive=document.createElement('div');passive.className='passive-slot';passive.title='浪客之道 · 被动技能';passive.setAttribute('aria-label','浪客之道 · 被动技能');
  const passiveImage=document.createElement('img');passiveImage.src=passiveIcon;passiveImage.alt='';passiveImage.draggable=false;passive.append(passiveImage);
  document.querySelector('.ability-bar')!.prepend(passive);

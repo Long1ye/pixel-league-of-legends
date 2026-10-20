@@ -18,6 +18,7 @@ export class ThreeAudio {
   unlock() { this.unlocked = true; this.combat.unlock(); this.music.failed = false; }
   update(frame: PrototypeFrame, listener: Point, width: number, visible = true) {
     const { match } = frame;
+    this.combat.localTeam = frame.localTeam ?? 'blue';
     if (this.match !== match) { this.stop(); this.music.reset(); this.environment.reset(); this.match = match; }
     const playing = match.phase === 'playing' && visible && this.unlocked;
     if (this.playing && !playing) this.combat.stop(); this.playing = playing;

@@ -1,0 +1,24 @@
+.league-ui .operation-guide{position:absolute;top:82px;left:14px;z-index:5;width:246px;max-width:calc(100% - 28px);color:#e5dfcc;font:12px/1.6 'Microsoft YaHei',sans-serif;background:#091722e0;border:1px solid #7d704d;box-shadow:0 2px 10px #0005}
+.league-ui .operation-guide>summary{display:flex;justify-content:space-between;align-items:center;padding:7px 11px;border:0;background:#101f2bde;color:#d8c28a;font-size:12px;letter-spacing:1px}
+.league-ui .operation-guide>summary::before,.league-ui .operation-guide[open]>summary::before{content:none;display:none}
+.league-ui .operation-guide>summary::after{content:'＋';font-size:14px}
+.league-ui .operation-guide[open]>summary::after{content:'−'}
+.league-ui .operation-guide-body{padding:6px 10px 10px;max-height:calc(100dvh - 230px);overflow:auto;scrollbar-width:thin}
+.league-ui .operation-guide-row{display:grid;grid-template-columns:78px 1fr;align-items:start;gap:8px;padding:5px 0;font-size:11px}
+.league-ui .operation-guide-row kbd{justify-self:start;min-width:24px;padding:1px 5px;border:1px solid #586270;border-bottom:2px solid #64717b;border-radius:2px;background:#142532;color:#e5d4a3;font:11px/1.5 Consolas,'Microsoft YaHei',sans-serif;white-space:nowrap;text-align:center;box-shadow:none}
+.league-ui .operation-guide-row span{color:#d2d9d9}
+.league-ui .operation-guide-more{margin-top:5px;padding-top:5px;border-top:1px solid #394550}
+.league-ui .operation-guide-more>summary{padding:4px 0;border:0;background:transparent;color:#b8c7ce;font-size:11px}
+.league-ui .practice-guide{top:132px}
+.league-ui .skill-tooltip{position:fixed;z-index:12;width:270px;max-width:calc(100vw - 16px);padding:12px 14px;box-sizing:border-box;border:1px solid #a18a57;border-top:2px solid #c8b071;background:linear-gradient(#162735f7,#09141df7);box-shadow:0 4px 16px #0008;pointer-events:none;color:#dce3df;text-align:left;font:12px/1.8 'Microsoft YaHei',sans-serif}
+.league-ui .skill-tooltip[hidden]{display:none}
+.league-ui .skill-tooltip strong{display:block;color:#e8d4a3;font-size:14px;font-weight:600}
+.league-ui .skill-tooltip p{margin:6px 0 0}
+.league-ui .cast-settings{display:grid;gap:7px;padding:8px 0 12px;border-bottom:1px solid #48504b;margin-bottom:12px;color:#d8c28a}
+.league-ui .cast-settings select{width:100%;background:#10232b;border:1px solid #7d704d;padding:7px;color:#e5dfcc;font:12px 'Microsoft YaHei',sans-serif}
+.league-ui .cast-settings small{color:#b5c5cc;font-size:11px;line-height:1.7}
+.league-ui .cast-guide-tip{border-top:1px solid #394550;margin:8px 0 0;padding-top:8px;color:#b5c5cc;font-size:10px;line-height:1.7}
+.league-ui .ability.cast-selected{outline:2px solid #86f3ed;outline-offset:3px;box-shadow:0 0 12px #5ce5e180}
+.three-ui #viewport[data-skill-selecting='true']>canvas{cursor:url('../../assets/ui/riot-healthbars-2026-10-15/runtime/target_precise.png') 16 16,crosshair}
+.league-ui .ability:hover .ability-name,.league-ui .ability:focus-visible .ability-name{display:none}
+@media(max-width:650px){.league-ui .operation-guide{top:82px;left:8px;width:230px}.league-ui .practice-guide{top:142px}.league-ui .operation-guide-body{max-height:calc(100dvh - 260px)}}

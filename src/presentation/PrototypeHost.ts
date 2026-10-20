@@ -1,12 +1,12 @@
 import type { Match } from '../game/Match';
 import { WORLD } from '../game/config';
-import type { AbilityKey, GameEvent, Point } from '../game/types';
+import type { AbilityKey, GameEvent, Point, Team } from '../game/types';
 import { RenderPositions } from '../render/RenderPositions';
 
 export type PrototypeCommand = { kind: 'move'; point: Point } | { kind: 'attack'; id: number } | { kind: 'attack-move'; point: Point }
   | { kind: 'cast'; ability: AbilityKey; point: Point } | { kind: 'stop' }
-  | { kind: 'summoner'; key: 'd' | 'f'; point: Point; targetId: number | null } | { kind: 'flute' };
-export interface PrototypeFrame { match: Match; alpha: number; positions: RenderPositions; events: readonly GameEvent[] }
+  | { kind: 'summoner'; key: 'd' | 'f'; point: Point; targetId: number | null } | { kind: 'flute' } | {kind:'emote';action:import('../game/YasuoEmote').YasuoEmote};
+export interface PrototypeFrame { match: Match; alpha: number; positions: RenderPositions; events: readonly GameEvent[]; localTeam?: Team }
 export interface PrototypeView { frame(value: PrototypeFrame): void; dispose(): void }
 
 /** One simulation clock and one event drain. Views never run a second simulation. */
@@ -27,6 +27,7 @@ export class PrototypeHost {
       case 'cast': return this.match.cast('blue', command.ability, command.point);
       case 'stop': this.match.stop('blue'); return true;
       case 'summoner': return this.match.castSummoner('blue', command.key, command.point, command.targetId);
+      case 'emote': return this.match.startEmote(command.action,'blue');
       case 'flute': return this.match.startFlute('blue');
     }
   }

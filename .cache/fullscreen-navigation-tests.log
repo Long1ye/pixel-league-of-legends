@@ -1,0 +1,12 @@
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./scripts/asset-cache" without a file extension (vite.config.ts:2:28). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v5.0.3 D:/Long1ye/pixel-league-of-legends-V2
+
+
+ Test Files  2 passed (2)
+      Tests  7 passed (7)
+   Start at  19:18:56
+   Duration  1.52s (tests 74%, transform 15%, import 11%)
+

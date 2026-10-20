@@ -3,7 +3,7 @@ export const W_CAST_SECONDS = 0.8;
 export const W_DELAY = 0.3;
 export const W_DURATION = 3.9;
 /** Shared world-space dimensions for interception, previews and rendering. */
-export const WIND_WALL = {width:128,height:64,thickness:8,distance:32} as const;
+export const WIND_WALL = {width:128,height:64,thickness:8,distance:48} as const;
 export function circleHit(from: Point, to: Point, center: Point, radius: number): number | null {
   const dx=to.x-from.x, dy=to.y-from.y, ox=from.x-center.x, oy=from.y-center.y;
   const c=ox*ox+oy*oy-radius*radius, a=dx*dx+dy*dy;

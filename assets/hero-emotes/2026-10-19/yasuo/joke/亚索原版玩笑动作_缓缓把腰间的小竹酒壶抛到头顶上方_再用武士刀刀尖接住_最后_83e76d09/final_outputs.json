@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "job_id": "job_e38016381af94e1ebedadd9ab8aec664",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-emotes\\2026-10-19\\yasuo\\joke\\亚索原版玩笑动作_缓缓把腰间的小竹酒壶抛到头顶上方_再用武士刀刀尖接住_最后_83e76d09\\result_output_url.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-emotes\\2026-10-19\\yasuo\\joke\\亚索原版玩笑动作_缓缓把腰间的小竹酒壶抛到头顶上方_再用武士刀刀尖接住_最后_83e76d09\\result_output_transparent_output_urls_gif.gif",
+      "mime_type": "image/gif"
+    },
+    {
+      "type": "media",
+      "path": "assets\\hero-emotes\\2026-10-19\\yasuo\\joke\\亚索原版玩笑动作_缓缓把腰间的小竹酒壶抛到头顶上方_再用武士刀刀尖接住_最后_83e76d09\\result_output_transparent_output_urls_png.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

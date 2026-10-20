@@ -23,7 +23,7 @@ export class TargetCooldownRings {
     for (const entity of frame.match.entities) {
       if (!canSee(entity)) continue;
       const point = frame.positions.sample(entity, frame.alpha);
-      const state = dashTargetTimer(point, frame.match.eTargetLocks.get(entity.id) ?? 0, frame.match.time);
+      const state = dashTargetTimer(point, frame.match.targetLocks(frame.localTeam ?? 'blue').get(entity.id) ?? 0, frame.match.time);
       if (!state) continue;
       active.add(entity.id);
       let timer = this.timers.get(entity.id);

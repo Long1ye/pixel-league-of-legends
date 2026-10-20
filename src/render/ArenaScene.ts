@@ -3,6 +3,7 @@ import {MoveClickIndicator} from './MoveClickIndicator';
 import {minionHeroVisibility} from '../game/MinionLane';
 import {DashTargetTimer} from './DashTargetTimer';
 import Phaser from 'phaser';
+import { skillPreview, SKILL_RANGE_COLOR } from '../presentation/SkillPreview';
 import { actorDepth, RENDER_DEPTH } from './RenderDepth';
 import { ArenaLighting } from './ArenaLighting';
 import { ArenaAccents } from './ArenaAccents';
@@ -27,8 +28,8 @@ import {PassiveShieldVfx} from './PassiveShieldVfx';
 import passiveShieldUrl from '../../assets/effects/yasuo-passive-shield-2026-10-15/runtime/shield-atlas.png?url';
 import passiveShieldLayout from '../../assets/effects/yasuo-passive-shield-2026-10-15/runtime/layout.json';
 import tornadoUrl from '../../assets/hero-skills/2026-10-13/yasuo/q3-v3-pale-tornado/tornado-atlas.png?url';
-import { stormReady, STORM } from '../game/YasuoStorm';
-import { ABILITIES, BALANCE, BASES, WORLD } from '../game/config';
+import { stormReady } from '../game/YasuoStorm';
+import { BALANCE, BASES, WORLD } from '../game/config';
 import { direction, distance } from '../game/geometry';
 import { Match } from '../game/Match';
 import type { AbilityKey, Entity, GameEvent, Point } from '../game/types';
@@ -37,7 +38,7 @@ import {cameraDragStep,startCameraDrag,type CameraDragState} from './CameraDrag'
 import { YasuoAnimator, flipYasuoAttack } from './YasuoAnimation';
 import { Q_DIRECTION_LABELS } from './YasuoQAnimation';
 import { qDrawPose, qSwordFlash, Q_FLASH_START } from './YasuoQDraw';
-import {YASUO_Q_HIT_SECONDS,YASUO_Q_HALF_WIDTH,YASUO_Q_CAST_SECONDS} from '../game/YasuoQ';
+import {YASUO_Q_HIT_SECONDS,YASUO_Q_CAST_SECONDS} from '../game/YasuoQ';
 import qDrawUrl from '../../assets/heroes/yasuo/q-draw-v2-2026-10-13/body.png?url';
 import qSwordUrl from '../../assets/heroes/yasuo/q-draw-2026-10-13/sword.png?url';
 import { yasuoCastFacing } from './YasuoCastFacing';
@@ -48,7 +49,7 @@ import wUserCastUrl from '../../assets/hero-skills/2026-10-12/yasuo/w-v5-user-po
 import { drawWindWall,WIND_WALL_CANVAS } from './WindWallArt';
 import windWallArtUrl from '../../assets/effects/wind-wall-v2-2026-10-15/runtime/wind-wall-atlas.png?url';
 import windWallArtLayout from '../../assets/effects/wind-wall-v2-2026-10-15/runtime/layout.json';
-import { W_CAST_SECONDS, wallEnds,WIND_WALL } from '../game/WindWall';
+import { W_CAST_SECONDS,WIND_WALL } from '../game/WindWall';
 import { E, dashEndpoint } from '../game/YasuoE';
 import forestMapUrl from '../../assets/map-studies/2026-10-09/01-forest/参考图片的地形布局_为我们的像素风中路_Solo_游戏绘制一张完整的俯视地图底图_宽_a7693192/sprite_00.png?url';
 import {IceFloor} from './IceFloor';
@@ -73,6 +74,8 @@ export class ArenaScene extends Phaser.Scene {
   match: Match;
   aim: Point = { x: 240, y: 135 };
   aimKey: AbilityKey | null = null;
+  confirmSkill?: () => boolean;
+  cancelSkill?: () => boolean;
   attackSelecting = false;
   selectedId: number | null = null;
   readonly cameraRig = new CameraRig();
@@ -273,6 +276,7 @@ export class ArenaScene extends Phaser.Scene {
         return;
       }
       if(pointer.leftButtonDown()){
+        if(this.confirmSkill?.()){this.dragState=null;this.pendingSelectionId=null;return;}
         if(this.attackSelecting){
           this.moveClick?.show(this.aim,this.time.now,true);
           this.attackSelecting=false;
@@ -294,6 +298,7 @@ export class ArenaScene extends Phaser.Scene {
       }
       const hit = this.pickEntity(this.aim);
       if (pointer.rightButtonDown()) {
+        if(this.cancelSkill?.())return;
         this.attackSelecting=false;
         if (hit && hit.team !== 'blue') {
           this.match.orderAttack('blue', hit.id);
@@ -557,7 +562,7 @@ export class ArenaScene extends Phaser.Scene {
         const actionTime=this.combatFeedbackEnabled?this.combatFeedback?.feel.actionTime(entity.id,this.match.time)??this.match.time:this.match.time;
         if((sample.state==='A'||sample.state==='B')&&'impact_frame' in clip)sample.frame=attackFrameAt(entity,actionTime,clip);
         view.setTexture(clip.key, sample.frame).setOrigin(clip.anchor[0] / clip.width, clip.anchor[1] / clip.height).setScale(sample.scale * HERO_VISUAL_SCALE);
-        const action = sample.state === 'flute' ? '吹箫' : sample.state === 'Q' ? `Q 戳刺 · ${Q_DIRECTION_LABELS['direction' in clip ? clip.direction : 'e']}`
+        const action = sample.state === 'joke' ? '玩笑 · 抛酒壶' : sample.state === 'taunt' ? '挑衅 · 饮酒洒刃' : sample.state === 'laugh' ? '大笑' : sample.state === 'flute' ? '吹箫' : sample.state === 'Q' ? `Q 戳刺 · ${Q_DIRECTION_LABELS['direction' in clip ? clip.direction : 'e']}`
           : sample.state === 'E' ? `E 滑行 · ${Q_DIRECTION_LABELS['direction' in clip ? clip.direction : 'e']}` : sample.state === 'idle' ? '待机' : sample.state === 'walk' ? '走路' : `攻击 ${sample.state}`;
         if(entity.team==='blue') this.heroAnimationLabel = `亚索 · ${action} · ${sample.frame + 1}/${clip.frame_count}帧`;
         // Mirror only A/B for left-side targets, preserving the off-center foot anchor.
@@ -721,13 +726,8 @@ export class ArenaScene extends Phaser.Scene {
         {image:this.textures.get('wind-wall-loop-art').getSourceImage() as HTMLImageElement,...windWallArtLayout});
       value.texture.refresh(); value.image.setPosition(wall.x, wall.y).setDepth(actorDepth(wall.y,1));
     }
-    if (this.aimKey === 'w') {
-      const angle = Math.atan2(this.aim.y - hero.y, this.aim.x - hero.x);
-      const [a,b] = wallEnds({id:0,team:'blue',startsAt:0,angle,x:hero.x+Math.cos(angle)*32,y:hero.y+Math.sin(angle)*32});
-      this.ground.lineStyle(2, COLORS.blue, 0.7).lineBetween(a.x,a.y,b.x,b.y);
-    }
     const dashTarget=this.match.dashTarget(this.aim);
-    if (dashTarget && this.match.phase==='playing' && !hero.eCast) {
+    if (dashTarget && this.match.phase==='playing' && !hero.eCast && !this.aimKey) {
       const valid=!this.match.dashError(this.aim), color=valid?0xadeee5:0x9c7777;
       this.ground.lineStyle(1,color,0.9).strokeEllipse(dashTarget.x,dashTarget.y+1,dashTarget.radius*2+10,10);
       if(valid) {
@@ -779,15 +779,12 @@ export class ArenaScene extends Phaser.Scene {
       this.ground.lineStyle(1, color, 0.8).strokeCircle(zone.x, zone.y, zone.radius);
       this.ground.lineStyle(1, color, 0.5).strokeCircle(zone.x, zone.y, zone.radius * progress);
     }
-    if (this.aimKey && this.match.phase === 'playing') {
-      this.ground.lineStyle(1, COLORS.blue, 0.3).strokeCircle(hero.x, hero.y, this.aimKey==='q'&&stormReady(hero,this.match.time)?STORM.range:ABILITIES[this.aimKey].range);
-      if(this.aimKey==='q'){
-        const dir=direction(hero,this.abilityAim('q')),range=stormReady(hero,this.match.time)?STORM.range:ABILITIES.q.range;
-        const halfWidth=stormReady(hero,this.match.time)?STORM.radius:YASUO_Q_HALF_WIDTH;
-        for(const side of [-1,1])this.ground.lineStyle(1,COLORS.blue,.65).lineBetween(
-          hero.x-dir.y*halfWidth*side,hero.y+dir.x*halfWidth*side,
-          hero.x+dir.x*range-dir.y*halfWidth*side,hero.y+dir.y*range+dir.x*halfWidth*side);
-      }
+    if (this.aimKey && this.match.phase === 'playing' && hero.hp>0) {
+      const preview=skillPreview(this.match,'blue',this.aimKey,this.abilityAim(this.aimKey));
+      const color=preview.valid?0x86f3ed:0xed947f;
+      this.ground.lineStyle(1,SKILL_RANGE_COLOR,.45).strokePoints(preview.range,false);
+      for(const shape of preview.fills)this.ground.fillStyle(color,.12).fillPoints(shape,true);
+      for(const path of preview.paths)this.ground.lineStyle(1.5,color,.95).strokePoints(path,false);
     }
     if (hero.windup > 0) this.bars.lineStyle(1, COLORS.blue, 0.6).strokeCircle(hero.x, hero.y - 12, 12);
   }

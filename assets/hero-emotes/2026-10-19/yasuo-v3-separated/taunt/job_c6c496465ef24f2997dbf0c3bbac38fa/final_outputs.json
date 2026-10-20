@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_c6c496465ef24f2997dbf0c3bbac38fa",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-emotes\\2026-10-19\\yasuo-v3-separated\\taunt\\job_c6c496465ef24f2997dbf0c3bbac38fa\\meowa_animation.webp",
+      "mime_type": "image/webp"
+    }
+  ]
+}

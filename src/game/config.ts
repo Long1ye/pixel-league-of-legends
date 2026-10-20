@@ -1,6 +1,9 @@
 import type { AbilityKey, Point, Team } from './types';
+import { WIND_WALL } from './WindWall';
 import {bridgePoint,bridgeTowerRange,BRIDGE_WORLD,BRIDGE} from './Bridge';
-export const HOWLING_MAP=typeof location!=='undefined'&&new URLSearchParams(location.search).get('map')==='howling';
+// A headless authority explicitly selects the same map as its browser clients.
+export const HOWLING_MAP=(globalThis as typeof globalThis & { __MIDLINE_MAP__?: string }).__MIDLINE_MAP__ === 'howling'
+  || typeof location!=='undefined'&&new URLSearchParams(location.search).get('map')==='howling';
 
 // Expand terrain in world space without enlarging actors or changing the camera.
 // Keep the source PNG untouched and use integer, nearest-neighbor terrain scale.
@@ -30,7 +33,7 @@ export const BALANCE = {
 
 export const ABILITIES: Record<AbilityKey, { name: string; cost: number; cooldown: number; range: number; damage: number }> = {
   q: { name: '斩钢闪', cost: 0, cooldown: 2.5, range: 145, damage: 85 },
-  w: { name: '风之障壁', cost: 0, cooldown: 14, range: 32, damage: 0 },
+  w: { name: '风之障壁', cost: 0, cooldown: 14, range: WIND_WALL.distance, damage: 0 },
   e: { name: '踏前斩', cost: 0, cooldown: 0.1, range: 100, damage: 55 },
   r: { name: '狂风绝息斩', cost: 0, cooldown: 45, range: 420, damage: 200 },
 };

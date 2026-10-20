@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_6001808927304fafbfa72023ef3a4f12",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "assets\\hero-emotes\\2026-10-19\\yasuo-v3-separated\\laugh-cutout\\004\\004\\output.webp",
+      "mime_type": "image/webp"
+    }
+  ]
+}

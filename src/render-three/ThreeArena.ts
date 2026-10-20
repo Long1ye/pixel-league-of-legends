@@ -1,10 +1,12 @@
 import {
   AmbientLight, BufferGeometry, ConeGeometry, CylinderGeometry, DirectionalLight,
   Group, Line, LineBasicMaterial, Mesh, MeshLambertMaterial, Raycaster,
-  Scene, SphereGeometry, Vector3, WebGLRenderer, Fog, BasicShadowMap, PCFShadowMap, ACESFilmicToneMapping, NoToneMapping, SRGBColorSpace, MeshBasicMaterial, type Texture,
+  Scene, SphereGeometry, Vector3, WebGLRenderer, Fog, BasicShadowMap, PCFShadowMap, ACESFilmicToneMapping, NoToneMapping, SRGBColorSpace, MeshBasicMaterial, Texture,
 } from 'three';
 import type { PrototypeFrame, PrototypeView } from '../presentation/PrototypeHost';
-import type { Entity, Point } from '../game/types';
+import type { AbilityKey, Entity, Point, Team } from '../game/types';
+import { skillPreview } from '../presentation/SkillPreview';
+import { SkillIndicator } from './SkillIndicator';
 import { ABILITIES } from '../game/config';
 import { BRIDGE_SLOTS, bridgePoint } from '../game/Bridge';
 import { TeamVision } from '../presentation/TeamVision';
@@ -46,17 +48,21 @@ import { basicAttackRadius } from '../game/UnitMetrics';
 import { trackHeroCamera } from './CameraTracking';
 import { WinterDressing } from './WinterDressing';
 import { SnowBanks } from './SnowBanks';
+import { Match } from '../game/Match';
+import { RenderPositions } from '../render/RenderPositions';
+type RenderWidth = 640 | 960 | 1280 | 1920;
 
 /** P2 art sample with a retained P1 diagnostic mode. Visual approval is separate. */
 export class ThreeArena implements PrototypeView {
   fogEnabled = false;
-  readonly vision = new TeamVision('blue', brushAt);
+  localTeam: Team = 'blue';
+  vision = new TeamVision('blue', brushAt);
   readonly warFog = new WarFog();
   private readonly visibleIds = new Set<number>();
   private enemyTowerKnownAlive = true;
-  private readonly baseVision = BRIDGE_SLOTS.filter(slot => slot.team === 'blue' && /spawn|inner|nexus-tower/.test(slot.id)).map(slot => ({ ...bridgePoint(slot.u, slot.v), radius: 420 }));
+  private get baseVision() { return BRIDGE_SLOTS.filter(slot => slot.team === this.localTeam && /spawn|inner|nexus-tower/.test(slot.id)).map(slot => ({ ...bridgePoint(slot.u, slot.v), radius: 420 })); }
   get fogActive(): boolean { return this.fogEnabled && this.paintedArt && this.presentation === 'art'; }
-  canSeeEntity(entity: Entity): boolean { return !this.fogActive || entity.team === 'blue' || this.visibleIds.has(entity.id); }
+  canSeeEntity(entity: Entity): boolean { return !this.fogActive || entity.team === this.localTeam || this.visibleIds.has(entity.id); }
   canSeePoint(point: Point): boolean { return !this.fogActive || this.vision.pointVisible(point); }
   perceivedFrame(frame: PrototypeFrame): PrototypeFrame { return this.fogActive ? { ...frame, events: frame.events.filter(event => this.vision.eventVisible(event)) } : frame; }
   readonly quality = new QualitySettings();
@@ -97,6 +103,8 @@ export class ThreeArena implements PrototypeView {
   selectedId: number | null = null;
   attackSelecting = false;
   aim: Point | null = null;
+  aimKey: AbilityKey | null = null;
+  readonly skillIndicator = new SkillIndicator();
   onFrame?: (value: PrototypeFrame) => void;
   private readonly actors = new Map<number, Mesh>();
   private readonly dynamic = new Group();
@@ -113,12 +121,13 @@ export class ThreeArena implements PrototypeView {
   private readonly range: Line;
   private readonly aimLine: Line;
   private disposed = false;
-  private renderWidth: 640 | 1280 | 1920 = 1920;
+  private renderWidth: RenderWidth = 1920;
   private currentMatch: PrototypeFrame['match'] | null = null;
   private transientResources: { dispose(): void }[] = [];
   private readonly observer: ResizeObserver;
   readonly healthBars: WorldHealthBars;
   readonly targetCooldowns: TargetCooldownRings;
+  private readonly shadowCasters: Mesh[] = [];
   private readonly qualityTextures = new Map<Texture, number>();
 
   constructor(private readonly container: HTMLElement, options: { smoothSampling?: boolean } = {}) {
@@ -150,6 +159,7 @@ export class ThreeArena implements PrototypeView {
     this.aimLine = new Line(new BufferGeometry().setFromPoints([new Vector3(), new Vector3(1, 0, 0)]), this.hintMaterial);
     this.aimLine.frustumCulled = false; // Endpoints change every frame; no stale bounding sphere.
     this.scene.add(this.selection, this.range, this.aimLine);
+    this.scene.add(this.skillIndicator.group);
     this.scene.add(this.contacts.group, this.pavingShadows.group, this.architecturalGlow.group);
     const treated = new Set<MeshBasicMaterial>();
     for (const root of [this.painted.group, this.landmarks.group, this.details.group, this.smallDetails.group, this.architecturalIce.group]) root.traverse(object => {
@@ -171,6 +181,7 @@ export class ThreeArena implements PrototypeView {
     const anisotropy = Math.min(8, this.renderer.capabilities.getMaxAnisotropy());
     for (const material of treated) if (material.map && !this.qualityTextures.has(material.map)) { this.qualityTextures.set(material.map, material.map.anisotropy); material.map.anisotropy = anisotropy; }
     // Forward arrow is a visible diagnostic of each actor's simulation heading.
+    for (const root of [this.painted.group, this.landmarks.group, this.details.group]) root.traverse(object => { if (object instanceof Mesh && object.castShadow) this.shadowCasters.push(object); });
     this.observer = new ResizeObserver(() => this.resize()); this.observer.observe(container); this.resize();
   }
   resize(): void {
@@ -181,7 +192,31 @@ export class ThreeArena implements PrototypeView {
       ? this.renderWidth * 9 / 16 : Math.max(1, Math.round(this.renderWidth * height / width));
     this.renderer.setSize(this.renderWidth, renderHeight, false);
   }
-  setResolution(width: 640 | 1280 | 1920): void { this.renderWidth = width; this.resize(); }
+  setResolution(width: RenderWidth): void { this.renderWidth = width; this.resize(); }
+  async prepareAssets(target: Match): Promise<void> {
+    if (this.disposed) return;
+    const textures = new Set<Texture>();
+    this.scene.traverse(object => {
+      if (!(object instanceof Mesh)) return;
+      for (const material of [...(Array.isArray(object.material) ? object.material : [object.material]), object.customDepthMaterial].filter(value => !!value))
+        for (const value of Object.values(material)) if (value instanceof Texture) textures.add(value);
+    });
+    for (const texture of textures) this.renderer.initTexture(texture);
+    this.sprites.upload(this.renderer);
+    // Build actual actor/material variants behind the loading screen, without ticking a match.
+    const warmup = new Match({ ai: false, waves: false });
+    for (const team of ['blue', 'red'] as const) for (const kind of ['melee', 'ranged'] as const)
+      warmup.spawnMinion(team, kind, warmup.hero(team));
+    const fog = this.fogEnabled, callback = this.onFrame;
+    this.fogEnabled = false; this.onFrame = undefined;
+    try {
+      this.frame({ match: warmup, alpha: 1, positions: new RenderPositions(), events: [], localTeam: this.localTeam });
+      this.combat.sprites.warmup(this.renderer, this.cameraRig);
+      await this.renderer.compileAsync(this.scene, this.cameraRig.camera);
+      this.combat.sprites.reset();
+      this.currentMatch = target;
+    } finally { this.fogEnabled = fog; this.onFrame = callback; }
+  }
   setQuality(reduced: boolean): void {
     this.quality.reduced = reduced;
     this.atmosphere.setQuality(reduced); this.renderer.shadowMap.enabled = !reduced;
@@ -202,7 +237,7 @@ export class ThreeArena implements PrototypeView {
   ground(client: Point): Point | null { return this.cameraRig.pick(client, this.renderer.domElement.getBoundingClientRect()); }
   pickActor(client: Point): number | null {
     const rect = this.renderer.domElement.getBoundingClientRect();
-    return pickActorId(this.cameraRig, rect, client, [...this.actors.values()].filter(actor => !this.fogActive || this.visibleIds.has(actor.userData.entityId)), this.raycaster, { preferredTeam: 'red', paddingCss: 5 });
+    return pickActorId(this.cameraRig, rect, client, [...this.actors.values()].filter(actor => !this.fogActive || this.visibleIds.has(actor.userData.entityId)), this.raycaster, { preferredTeam: this.localTeam === 'blue' ? 'red' : 'blue', paddingCss: 5 });
   }
   pan(dx: number, dy: number): void {
     this.following = false;
@@ -210,6 +245,8 @@ export class ThreeArena implements PrototypeView {
   }
   frame(value: PrototypeFrame): void {
     if (this.disposed) return;
+    if (this.localTeam !== (value.localTeam ?? 'blue')) { this.localTeam = value.localTeam ?? 'blue'; this.vision = new TeamVision(this.localTeam, brushAt); this.warFog.reset(); this.enemyTowerKnownAlive = true; }
+    this.sprites.localTeam = this.localTeam;
     if (this.currentMatch !== value.match) { this.clearActors(); this.sprites.reset(); this.currentMatch = value.match; this.selectedId = null; this.vision.reset(); this.warFog.reset(); this.enemyTowerKnownAlive = true; }
     const { match, positions, alpha } = value;
     const renderedEntities = match.entities.map(entity => positions.sample(entity, alpha));
@@ -218,7 +255,8 @@ export class ThreeArena implements PrototypeView {
       this.vision.update(match.time, renderedEntities, value.events, this.baseVision);
       this.warFog.update(match.time, this.vision);
       for (const entity of renderedEntities) if (this.vision.entityVisible(entity)) this.visibleIds.add(entity.id);
-      if (this.canSeeEntity(match.tower('red'))) this.enemyTowerKnownAlive = match.tower('red').hp > 0;
+      const enemy = this.localTeam === 'blue' ? 'red' : 'blue';
+      if (this.canSeeEntity(match.tower(enemy))) this.enemyTowerKnownAlive = match.tower(enemy).hp > 0;
       if (this.selectedId !== null && !this.visibleIds.has(this.selectedId)) this.selectedId = null;
     }
     this.combat.canSeeEntity = entity => this.canSeeEntity(entity);
@@ -250,7 +288,7 @@ export class ThreeArena implements PrototypeView {
           this.poros.update(match.time, this.cameraRig, scenicHeroes);
           this.ravens.update(match.time, this.cameraRig, scenicHeroes);
         }
-        this.landmarks.update(match.time, hero, this.cameraRig, { blue: match.tower('blue').hp > 0, red: this.fogActive ? this.enemyTowerKnownAlive : match.tower('red').hp > 0 }, [match.tower('blue'), match.tower('red')].filter(entity => this.canSeeEntity(entity)));
+        this.landmarks.update(match.time, hero, this.cameraRig, { blue: this.fogActive && this.localTeam === 'red' ? this.enemyTowerKnownAlive : match.tower('blue').hp > 0, red: this.fogActive && this.localTeam === 'blue' ? this.enemyTowerKnownAlive : match.tower('red').hp > 0 }, [match.tower('blue'), match.tower('red')].filter(entity => this.canSeeEntity(entity)));
         this.contacts.update();
         this.pavingShadows.update();
         this.illumination.update(match.time);
@@ -258,12 +296,12 @@ export class ThreeArena implements PrototypeView {
         this.snowBanks.update();
         this.crystalMotes.update(match.time, this.cameraRig, this.renderer.domElement.height);
         const casterState: string[] = [];
-        for (const root of [this.painted.group, this.landmarks.group, this.details.group]) root.traverse(object => {
-          if (object instanceof Mesh && object.castShadow) {
+        for (const object of this.shadowCasters) {
+          if (object.castShadow) {
             object.updateWorldMatrix(true, false);
             casterState.push([object.id, object.visible, object.parent?.visible, ...object.matrixWorld.elements].join(':'));
           }
-        });
+        }
         this.shadowFocus.update(this.cameraRig, this.quality.enhanced, casterState.join('|'));
         this.architecturalGlow.update();
         this.actorLighting.update();
@@ -297,7 +335,8 @@ export class ThreeArena implements PrototypeView {
       mesh.scale.set(body.radius, body.height, body.radius);
       mesh.userData.entityTeam = entity.team;
       mesh.position.copy(toThree(p, body.height / 2 + lift));
-      mesh.visible = !art || (entity.kind === 'tower' ? !this.paintedArt && entity.team !== 'blue' : !this.sprites.hasVisibleBody(entity.id));
+      // Picking proxies are never visible in the art presentation, even on load failure.
+      mesh.visible = !art || (entity.kind === 'tower' && !this.paintedArt && entity.team !== 'blue');
       // Invisible selection proxies follow torso width, independently of the
       // much smaller simulation collision radius. Weapons never enlarge them.
       if (!mesh.visible && entity.kind !== 'tower') mesh.scale.x = metrics.halfWidth;
@@ -306,8 +345,16 @@ export class ThreeArena implements PrototypeView {
     const selected = match.entity(this.selectedId);
     this.selection.visible = !!selected && selected.hp > 0 && this.canSeeEntity(selected);
     if (selected) { this.selection.position.copy(toThree(positions.sample(selected, alpha), 1.5)); this.selection.scale.setScalar(selected.radius + 6); }
-    this.range.position.copy(toThree(hero, 1.5)); this.range.scale.setScalar(this.attackSelecting ? basicAttackRadius(hero) : ABILITIES.q.range);
-    this.range.visible = (this.attackSelecting || !art) && match.phase === 'playing' && hero.hp > 0;
+    this.range.position.copy(toThree(hero, 1.5)); this.range.scale.setScalar(ABILITIES.q.range);
+    this.range.visible = !this.attackSelecting && !art && match.phase === 'playing' && hero.hp > 0;
+    const attackRange = this.attackSelecting ? Array.from({length:65},(_,i)=>({
+      x:hero.x+Math.cos(i*Math.PI/32)*basicAttackRadius(hero),
+      y:hero.y+Math.sin(i*Math.PI/32)*basicAttackRadius(hero),
+    })) : [];
+    this.skillIndicator.update(match.phase === 'playing' && hero.hp > 0
+      ? this.aimKey && this.aim ? skillPreview(match,this.localTeam,this.aimKey,this.aim,entity=>this.canSeeEntity(entity))
+        : this.attackSelecting ? {valid:true,range:attackRange,paths:[],fills:[]} : null : null,
+      this.cameraRig.size.width,this.cameraRig.size.height);
     this.aimLine.visible = !art && !!this.aim;
     if (this.aim) {
       this.aimLine.geometry.setFromPoints([toThree(hero, 2), toThree(this.aim, 2)]);

@@ -1,4 +1,4 @@
-import { AdditiveBlending, DoubleSide, Group, Mesh, MeshBasicMaterial, NearestFilter, NormalBlending, PlaneGeometry, SRGBColorSpace, TextureLoader, type Texture } from 'three';
+import { AdditiveBlending, DoubleSide, Group, Mesh, MeshBasicMaterial, NearestFilter, NormalBlending, PlaneGeometry, SRGBColorSpace, TextureLoader, type Texture, type WebGLRenderer } from 'three';
 import type { Point } from '../game/types';
 import { COMBAT_ART, type CombatArtKey } from './CombatArt';
 import { toThree, type ThreeCamera } from './Coordinates';
@@ -36,6 +36,11 @@ export class CombatSprites {
       this.textures.set(key, map);
     }
     return map;
+  }
+  warmup(renderer: WebGLRenderer, camera: ThreeCamera): void {
+    for (const texture of this.textures.values()) renderer.initTexture(texture);
+    this.begin();
+    for (const key of this.textures.keys()) this.draw(key, 0, camera.focus, 1, 1, camera);
   }
   begin(): void { this.used = 0; }
   draw(key: CombatArtKey, frame: number, point: Point, width: number, height: number, camera: ThreeCamera, options: CardOptions = {}) {

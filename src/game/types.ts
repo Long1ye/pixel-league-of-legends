@@ -15,6 +15,7 @@ export interface Entity extends Point {
   radius: number;
   speed: number;
   fluteAt?: number | null;
+  emote?: {action:import('./YasuoEmote').YasuoEmote;startedAt:number}|null;
   homeguardUntil?: number;
   homeguardCombatAt?: number;
   range: number;

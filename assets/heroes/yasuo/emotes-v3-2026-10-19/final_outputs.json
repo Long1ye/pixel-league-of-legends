@@ -1,0 +1,40 @@
+{
+  "status": "success",
+  "outputs": [
+    {
+      "type": "media",
+      "path": "joke.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "joke.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "taunt.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "taunt.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "laugh.png",
+      "mime_type": "image/png"
+    },
+    {
+      "type": "media",
+      "path": "laugh.webp",
+      "mime_type": "image/webp"
+    },
+    {
+      "type": "media",
+      "path": "comparison.webp",
+      "mime_type": "image/webp"
+    }
+  ]
+}

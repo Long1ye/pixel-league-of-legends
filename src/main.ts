@@ -1,3 +1,4 @@
+import {emoteShortcut} from './game/YasuoEmote';
 import {fluteShortcut} from './game/YasuoFlute';
 import Phaser from 'phaser';
 import './style.css';
@@ -14,12 +15,18 @@ import {createCombatPractice} from './game/CombatPractice';
 import {createMinionPractice} from './game/MinionPractice';
 import { clearStorm, grantStorm, stormReady } from './game/YasuoStorm';
 import { mountLeagueHud } from './ui/LeagueHud';
+import { SkillCasting } from './presentation/SkillCasting';
+import { mountCastSettings } from './ui/CastSettings';
 import { RENDER_SCALE } from './render/Presentation';
 import { HOWLING_MAP } from './game/config';
 import type {SummonerKey} from './game/SummonerSpells';
 import {shieldRemaining,passiveShieldStrength,yasuoCritStats} from './game/YasuoPassive';
 import {pickUnit} from './game/UnitMetrics';
 
+export function bootLegacy(): () => void {
+const scope = new AbortController();
+const listenWindow = <K extends keyof WindowEventMap>(type: K, listener: (event: WindowEventMap[K]) => void, options: AddEventListenerOptions = {}) => globalThis.window.addEventListener(type, listener, { ...options, signal: scope.signal });
+const listenDocument = <K extends keyof DocumentEventMap>(type: K, listener: (event: DocumentEventMap[K]) => void, options: AddEventListenerOptions = {}) => globalThis.document.addEventListener(type, listener, { ...options, signal: scope.signal });
 function element<T extends HTMLElement>(id: string): T {
   const node = document.getElementById(id);
   if (!node) throw new Error(`Missing UI element: ${id}`);
@@ -45,32 +52,37 @@ const audio = new AudioFeedback();
 const environmentAudio=new EnvironmentAudio();
 environmentAudio.enabled=false;
 const unlockSound=(event:Event)=>{if(event.target instanceof Element&&event.target.closest('#sound-button'))return;audio.unlock();};
-document.addEventListener('pointerdown',unlockSound,{capture:true});
-document.addEventListener('keydown',unlockSound,{capture:true});
+listenDocument('pointerdown',unlockSound,{capture:true});
+listenDocument('keydown',unlockSound,{capture:true});
 const mapMusic=new MapMusic();
-window.addEventListener('pagehide',()=>{environmentAudio.dispose();audio.dispose();mapMusic.dispose();});
-document.addEventListener('visibilitychange',()=>{if(document.hidden){audio.stop();mapMusic.update(match.time,match.phase,false,false);environmentAudio.update(match,scene.cameraRig.center,scene.cameraRig.bounds.width,audio.audioContext,false);}});
+listenWindow('pagehide',()=>{environmentAudio.dispose();audio.dispose();mapMusic.dispose();});
+listenDocument('visibilitychange',()=>{if(document.hidden){audio.stop();mapMusic.update(match.time,match.phase,false,false);environmentAudio.update(match,scene.cameraRig.center,scene.cameraRig.bounds.width,audio.audioContext,false);}});
 if(HOWLING_MAP){
   const atmosphereToggle=document.createElement('button');
+  atmosphereToggle.dataset.settingGroup='graphics';
   atmosphereToggle.textContent='风雪氛围：开';atmosphereToggle.setAttribute('aria-pressed','true');
   atmosphereToggle.onclick=()=>{scene.atmosphereEnabled=!scene.atmosphereEnabled;atmosphereToggle.textContent=scene.atmosphereEnabled?'风雪氛围：开':'风雪氛围：关';atmosphereToggle.setAttribute('aria-pressed',String(scene.atmosphereEnabled));};
   document.querySelector('.match-actions')!.append(atmosphereToggle);
   const snowContactToggle=document.createElement('button');
+  snowContactToggle.dataset.settingGroup='graphics';
   snowContactToggle.textContent='踩雪反馈：开';snowContactToggle.setAttribute('aria-pressed','true');
   snowContactToggle.onclick=()=>{scene.snowContactEnabled=!scene.snowContactEnabled;snowContactToggle.textContent=scene.snowContactEnabled?'踩雪反馈：开':'踩雪反馈：关';snowContactToggle.setAttribute('aria-pressed',String(scene.snowContactEnabled));};
   document.querySelector('.match-actions')!.append(snowContactToggle);
   const buildingToggle=document.createElement('button');
+  buildingToggle.dataset.settingGroup='graphics';
   buildingToggle.textContent='建筑动态：开';buildingToggle.setAttribute('aria-pressed','true');
   buildingToggle.title='水晶浮动、环绕碎片、塔纹流光和火焰伸缩';
   buildingToggle.onclick=()=>{scene.buildingMotionEnabled=!scene.buildingMotionEnabled;buildingToggle.textContent=scene.buildingMotionEnabled?'建筑动态：开':'建筑动态：关';buildingToggle.setAttribute('aria-pressed',String(scene.buildingMotionEnabled));};
   document.querySelector('.match-actions')!.append(buildingToggle);
   for(const [property,label] of [['combatFeedbackEnabled','战斗反馈'],['livingBrushEnabled','草丛灵动'],['battlefieldEnabled','兵线与战场痕迹'],['abyssLifeEnabled','桥边落雪'],['wildlifeEnabled','小雪兽']] as const){
     const toggle=document.createElement('button');toggle.textContent=`${label}：开`;toggle.setAttribute('aria-pressed','true');
+    toggle.dataset.settingGroup='graphics';
     if(property==='combatFeedbackEnabled'){toggle.dataset.combatFeedback='true';toggle.title='控制命中刀光、受击回弹与动作顿挫；声音由音效开关控制';}
     toggle.onclick=()=>{scene[property]=!scene[property];toggle.textContent=`${label}：${scene[property]?'开':'关'}`;toggle.setAttribute('aria-pressed',String(scene[property]));if(property==='combatFeedbackEnabled')syncCombatFeedback();};
     document.querySelector('.match-actions')!.append(toggle);
   }
   const ambienceToggle=document.createElement('button');ambienceToggle.textContent='环境声音：关';ambienceToggle.setAttribute('aria-pressed','false');
+  ambienceToggle.dataset.settingGroup='operation';
   ambienceToggle.title='跟随音效总开关；风、火盆与远处冰裂';
   ambienceToggle.onclick=()=>{environmentAudio.enabled=!environmentAudio.enabled;ambienceToggle.textContent=environmentAudio.enabled?'环境声音：开':'环境声音：关';ambienceToggle.setAttribute('aria-pressed',String(environmentAudio.enabled));syncHud(match);};
   document.querySelector('.match-actions')!.append(ambienceToggle);
@@ -220,7 +232,7 @@ function syncHud(state: Match): void {
 }
 
 const scene = new ArenaScene(match, {
-  frame: syncHud,
+  frame: state => { if (state.phase !== 'playing' || state.hero('blue').hp <= 0) casting.cancel(); syncHud(state); },
   event: event => {
     audio.play(event);
     if(event.type==='hit'||event.type==='cast'){
@@ -231,6 +243,13 @@ const scene = new ArenaScene(match, {
     if (event.type === 'last-hit' && event.team === 'blue' && match.cs.blue === 1) toast('补刀 +1。先到 100 刀也能获胜。');
   },
 });
+const casting = new SkillCasting(cast, key => {
+  scene.aimKey = key;
+  if(key)scene.attackSelecting=false;
+  for(const ability of ['q','w','e','r'])document.getElementById(`ability-${ability}`)?.classList.toggle('cast-selected',ability===key);
+});
+scene.confirmSkill=()=>casting.confirm();
+scene.cancelSkill=()=>casting.cancel();
 const game = new Phaser.Game({
   type: Phaser.AUTO, parent: 'game', width: VIEWPORT.width * RENDER_SCALE, height: VIEWPORT.height * RENDER_SCALE,
   backgroundColor: '#142b28', pixelArt: true, roundPixels: true,
@@ -262,13 +281,14 @@ game.events.on(Phaser.Core.Events.POST_RENDER, () => {
   fpsReadout.textContent = `FPS ${Math.round(fpsFrames * 1000 / elapsed)}`;
   fpsSampleAt = now; fpsFrames = 0;
 });
-document.addEventListener('visibilitychange', resetFpsSample);
+listenDocument('visibilitychange', resetFpsSample);
 game.events.once(Phaser.Core.Events.DESTROY, () => {
   document.removeEventListener('visibilitychange', resetFpsSample);
   fpsReadout.remove();
 });
 
 function reset(start = true): void {
+  casting.cancel();
   audio.stop();
   const hitStunEnabled=match.hitStunEnabled;
   match = createMatch();
@@ -290,6 +310,7 @@ function begin(): void {
   ui.arena.focus({ preventScroll: true });
 }
 function castSummoner(key:SummonerKey):void {
+  casting.cancel();
   if(match.phase!=='playing')return;
   scene.attackSelecting=false;
   const hovered=pickUnit(match.entities,scene.aim);
@@ -312,15 +333,18 @@ function cast(key: AbilityKey): void {
 }
 const practiceLink = document.createElement('a');
 const musicToggle=document.createElement('button');musicToggle.textContent='背景音乐：开';musicToggle.setAttribute('aria-pressed','true');
+musicToggle.dataset.settingGroup='operation';
 musicToggle.title='嚎哭深渊官方 Early Game 原声；跟随音效总开关，交战时自动降低音量';
 musicToggle.onclick=()=>{mapMusic.enabled=!mapMusic.enabled;musicToggle.textContent=mapMusic.enabled?'背景音乐：开':'背景音乐：关';musicToggle.setAttribute('aria-pressed',String(mapMusic.enabled));syncHud(match);};
 const musicLabel=document.createElement('label');musicLabel.textContent='音乐音量 ';
+musicLabel.dataset.settingGroup='operation';
 const musicVolume=document.createElement('input');musicVolume.type='range';musicVolume.min='0';musicVolume.max='50';musicVolume.value='16';musicVolume.setAttribute('aria-label','背景音乐音量');musicVolume.oninput=()=>{mapMusic.volume=Number(musicVolume.value)/100;syncHud(match);};musicLabel.append(musicVolume);
 document.querySelector('.match-actions')!.append(musicToggle,musicLabel);
 function syncCombatFeedback(){
  document.querySelectorAll<HTMLButtonElement>('[data-combat-feedback]').forEach(button=>{button.textContent=`战斗反馈：${scene.combatFeedbackEnabled?'开':'关'}`;button.setAttribute('aria-pressed',String(scene.combatFeedbackEnabled));});
 }
 const accentsToggle=document.createElement('button');
+accentsToggle.dataset.settingGroup='graphics';
 accentsToggle.textContent='场景与命中特效：开';accentsToggle.setAttribute('aria-pressed','true');
 accentsToggle.onclick=()=>{scene.accentsEnabled=!scene.accentsEnabled;accentsToggle.textContent=scene.accentsEnabled?'场景与命中特效：开':'场景与命中特效：关';accentsToggle.setAttribute('aria-pressed',String(scene.accentsEnabled));};
 document.querySelector('.match-actions')!.append(accentsToggle);
@@ -328,6 +352,7 @@ if(HOWLING_MAP){
   const lightToggle=document.createElement('button');
   const firelightToggle=document.createElement('button');
   const materialToggle=document.createElement('button');
+  for(const toggle of [lightToggle,firelightToggle,materialToggle])toggle.dataset.settingGroup='graphics';
   materialToggle.textContent='石砖凹凸受光：开';materialToggle.setAttribute('aria-pressed','true');
   materialToggle.title='需要开启引擎光影；使用程序生成的浅浮雕法线，不改变地形';
   materialToggle.onclick=()=>{scene.materialLightingEnabled=!scene.materialLightingEnabled;materialToggle.textContent=scene.materialLightingEnabled?'石砖凹凸受光：开':'石砖凹凸受光：关';materialToggle.setAttribute('aria-pressed',String(scene.materialLightingEnabled));};
@@ -341,6 +366,7 @@ if(HOWLING_MAP){
   document.querySelector('.match-actions')!.append(firelightToggle);
 }
 const mapToggle=document.createElement('button');
+mapToggle.dataset.settingGroup='graphics';
 const iceToggle=document.createElement('button');
 iceToggle.textContent='地面：新版石砖＋积雪';iceToggle.setAttribute('aria-pressed','true');
 iceToggle.onclick=()=>{scene.iceMap=!scene.iceMap;iceToggle.textContent=scene.iceMap?'地面：新版石砖＋积雪':'地面：原森林';iceToggle.setAttribute('aria-pressed',String(scene.iceMap));mapToggle.disabled=scene.iceMap;};
@@ -434,7 +460,8 @@ if (ePractice) {
   clear.onclick = () => { match.eTargetLocks.clear(); match.hero('blue').abilities.e=match.time; match.hero('blue').abilities.q=match.time; syncHud(match); };
   panel.append(slow,clear); document.querySelector('.page-heading')!.after(panel);
 }
-mountLeagueHud(ePractice || rPractice || qPractice || combatPractice,{flute:playFlute,summoner:castSummoner,stop:()=>{if(match.phase==='playing'){match.stop('blue');syncHud(match);}}});
+mountLeagueHud(ePractice || rPractice || qPractice || combatPractice,{flute:playFlute,summoner:castSummoner,stop:()=>{casting.cancel();if(match.phase==='playing'){match.stop('blue');syncHud(match);}}});
+mountCastSettings(casting);
 ui.start.addEventListener('click', begin);
 ui.restart.addEventListener('click', () => reset());
 ui.pause.addEventListener('click', () => { match.togglePause(); syncHud(match); });
@@ -451,12 +478,11 @@ function toggleCamera(): void {
 ui.camera.addEventListener('click', toggleCamera);
 for (const key of ['q', 'w', 'e', 'r'] as const) {
   const button = element(`ability-${key}`);
-  button.title = `${key.toUpperCase()} ${key === 'q' ? '斩钢闪（八向动画）' : ABILITIES[key].name} · 无消耗 · ${ABILITIES[key].cooldown}s 冷却${key==='r'?` · 范围 ${ABILITIES.r.range} · 按键自动接击飞`:''}`;
-  button.addEventListener('click', () => cast(key));
-  button.addEventListener('mouseenter', () => { scene.aimKey = key; });
-  button.addEventListener('mouseleave', () => { scene.aimKey = null; });
+  if (!button.hasAttribute('aria-describedby')) button.title = `${key.toUpperCase()} ${key === 'q' ? '斩钢闪（八向动画）' : ABILITIES[key].name} · 无消耗 · ${ABILITIES[key].cooldown}s 冷却${key==='r'?` · 范围 ${ABILITIES.r.range} · 按键自动接击飞`:''}`;
+  button.addEventListener('click', () => { if(match.phase==='playing'&&match.hero('blue').hp>0)casting.select(key); ui.arena.focus({preventScroll:true}); });
 }
 function playFlute():void {
+  casting.cancel();
   if(match.phase!=='playing'){toast('请先进入或继续对线，再按 3 吹箫。');return;}
   audio.unlock();
   if(!match.startFlute())toast('当前动作结束后可吹箫。');
@@ -467,23 +493,23 @@ fluteButton.textContent='吹箫 · 3';fluteButton.title='按 3 吹箫；Ctrl+3 �
 fluteButton.onclick=()=>{playFlute();ui.arena.focus({preventScroll:true});};
 document.querySelector('.match-actions')!.append(fluteButton);
 // Capture early when the host forwards the chord; host-level tab shortcuts still need the plain-3 fallback.
-window.addEventListener('keydown',event=>{
-  if(!fluteShortcut(event)||event.target instanceof HTMLElement&&event.target.closest('input,textarea,select,[contenteditable]'))return;
+listenWindow('keydown',event=>{
+  if((!fluteShortcut(event)&&!emoteShortcut(event))||event.target instanceof HTMLElement&&event.target.closest('input,textarea,select,[contenteditable]'))return;
   event.preventDefault();event.stopImmediatePropagation();
-  if(!event.repeat)playFlute();
+  if(!event.repeat){const action=emoteShortcut(event);if(action){audio.unlock();if(match.startEmote(action))audio.emote(action,match);}else playFlute();}
 },{capture:true});
-window.addEventListener('keydown', event => {
+listenWindow('keydown', event => {
   if (event.repeat || event.ctrlKey || event.metaKey || event.altKey) return;
   if(event.target instanceof HTMLElement&&event.target.closest('input,textarea,select,[contenteditable]'))return;
   const key = event.key.toLowerCase();
-  if(['1','2','4'].includes(key)){event.preventDefault();audio.emote(key==='1'?'joke':key==='2'?'taunt':'laugh',match);return;}
   if (['a', 'q', 'w', 'e', 's', 'y', ' ', 'escape', 'enter', 'arrowleft', 'arrowright', 'arrowup', 'arrowdown'].includes(key)) event.preventDefault();
   if(['q','w','e','r','s'].includes(key))scene.attackSelecting=false;
+  if(key==='escape'&&casting.cancel())return;
   if(key==='escape'&&scene.attackSelecting){scene.attackSelecting=false;return;}
-  if(key==='a'&&match.phase==='playing'){scene.attackSelecting=true;scene.aimKey=null;}
+  if(key==='a'&&match.phase==='playing'){casting.cancel();scene.attackSelecting=true;scene.aimKey=null;}
   else if(key==='d'||key==='f')castSummoner(key);
-  else if (key === 'q' || key === 'w' || key === 'e' || key === 'r') cast(key);
-  else if (key === 's' && match.phase === 'playing') match.stop('blue');
+  else if (key === 'q' || key === 'w' || key === 'e' || key === 'r') { if(match.phase==='playing'&&match.hero('blue').hp>0)casting.keyDown(key); }
+  else if (key === 's' && match.phase === 'playing') { casting.cancel(); match.stop('blue'); }
   else if (key === 'escape') { match.togglePause(); syncHud(match); }
   else if (key === 'enter' && match.phase !== 'playing') begin();
   else if (key === 'y') toggleCamera();
@@ -492,12 +518,21 @@ window.addEventListener('keydown', event => {
     scene.cameraRig.lookAt(match.hero('blue'));
   }
 });
-window.addEventListener('keyup', event => { if (event.key === ' ') scene.recenterHeld = false; });
-window.addEventListener('blur', () => {
+listenWindow('keyup', event => {
+  if (event.key === ' ') scene.recenterHeld = false;
+  const key=event.key.toLowerCase();
+  if(['q','w','e','r'].includes(key)) {
+    if(match.phase!=='playing'||match.hero('blue').hp<=0||event.target instanceof HTMLElement&&event.target.closest('input,select,textarea'))casting.cancel();
+    else casting.keyUp(key as AbilityKey);
+  }
+});
+listenWindow('blur', () => {
+  casting.cancel();
   scene.attackSelecting=false;
   scene.recenterHeld = false;
   if (match.phase === 'playing') { match.togglePause(); syncHud(match); }
 });
+listenDocument('visibilitychange',()=>{if(document.hidden)casting.cancel();});
 function resize(): void {
   const width=ui.arena.clientWidth,height=ui.arena.clientHeight;
   if(!width||!height)return;
@@ -512,5 +547,12 @@ function resize(): void {
 game.events.once(Phaser.Core.Events.READY, resize);
 const observer = new ResizeObserver(resize);
 observer.observe(ui.arena);
-window.addEventListener('beforeunload', () => { observer.disconnect(); game.destroy(true); });
+listenWindow('beforeunload', () => { observer.disconnect(); game.destroy(true); });
 syncHud(match);
+return () => {
+  scope.abort(); observer.disconnect(); window.clearTimeout(toastTimer);
+  casting.cancel(); environmentAudio.dispose(); audio.dispose(); mapMusic.dispose();
+  game.destroy(true);
+};
+}
+

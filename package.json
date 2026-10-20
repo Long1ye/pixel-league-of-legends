@@ -9,14 +9,20 @@
     "preview": "vite preview --host 127.0.0.1",
     "build:share": "tsc --noEmit && vite build --config vite.share.config.ts",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "dev:lan": "tsx server/index.ts",
+    "check:server": "tsc --noEmit -p server/tsconfig.json"
   },
   "dependencies": {
     "phaser": "3.90.0",
-    "three": "0.186.1"
+    "three": "0.186.1",
+    "ws": "^8.22.0"
   },
   "devDependencies": {
+    "@types/node": "^26.6.5",
     "@types/three": "0.186.0",
+    "@types/ws": "^8.18.2",
+    "tsx": "^4.23.15",
     "typescript": "7.0.2",
     "vite": "8.3.4",
     "vitest": "5.0.3"

@@ -1,5 +1,8 @@
 import fluteClip from '../../assets/heroes/yasuo/flute-user/animation.json';
 import {fluteActive} from '../game/YasuoFlute';
+import emoteRegistry from '../../assets/heroes/yasuo/emotes-v3-2026-10-19/animations.json';
+import {emoteActive} from '../game/YasuoEmote';
+export const YASUO_EMOTES=emoteRegistry.clips;
 export const YASUO_FLUTE=fluteClip;
 import originalRegistry from '../../assets/heroes/yasuo/selected-2026-10-10/animations.json';
 import attackRegistry from '../../assets/heroes/yasuo/attacks-v2-2026-10-13/animations.json';
@@ -15,8 +18,8 @@ import { sampleYasuoQ, type YasuoQClip } from './YasuoQAnimation';
 import { sampleYasuoE, type YasuoEClip } from './YasuoEAnimation';
 
 export const YASUO_ASSETS = registry;
-export type YasuoClip = typeof fluteClip | typeof registry.attacks[number] | typeof registry.locomotion[number] | YasuoQClip | YasuoEClip;
-export interface YasuoSample { clip: YasuoClip; frame: number; state: 'idle' | 'walk' | 'A' | 'B' | 'Q' | 'E' | 'flute'; scale: number }
+export type YasuoClip = typeof YASUO_EMOTES[number] | typeof fluteClip | typeof registry.attacks[number] | typeof registry.locomotion[number] | YasuoQClip | YasuoEClip;
+export interface YasuoSample { clip: YasuoClip; frame: number; state: 'idle' | 'walk' | 'A' | 'B' | 'Q' | 'E' | 'flute' | 'joke' | 'taunt' | 'laugh'; scale: number }
 
 /** A quicker stride for the faster hero, while keeping ordinary steps measured. */
 export const NORMAL_WALK_CYCLE_SECONDS=1.04;
@@ -72,6 +75,12 @@ export class YasuoAnimator {
     if (this.previous && this.previous.time !== now) this.moving = Math.hypot(entity.x - this.previous.x, entity.y - this.previous.y) > 0.01;
     this.previous = { x: entity.x, y: entity.y, time: now };
     this.direction = headingToDirection(entity.facing, this.direction);
+    if(emoteActive(entity,now)){
+      const emote=entity.emote!,clip=YASUO_EMOTES.find(c=>c.action===emote.action)!;
+      this.locomotionState=null;
+      const ms=(now-emote.startedAt)*1000;
+      return {clip,frame:spriteFrameAt(ms,clip.durations_ms,true),state:emote.action,scale:clip.scale_in_world};
+    }
     if(fluteActive(entity,now)){this.locomotionState=null;return {clip:fluteClip,frame:spriteFrameAt((now-entity.fluteAt!)*1000,fluteClip.durations_ms,true),state:'flute',scale:fluteClip.scale_in_world};}
     const e = sampleYasuoE(entity, now);
     if (e) { this.locomotionState = null; return e; }

@@ -173,7 +173,7 @@ export class CombatEffects {
     }
     const activeTowerShots = new Set<number>();
     for (const shot of match.projectiles) {
-      if (shot.team !== 'blue' && !this.canSeePoint(shot)) continue;
+      if (shot.team !== (frame.localTeam ?? 'blue') && !this.canSeePoint(shot)) continue;
       if (shot.empowered) {
         const age = Math.max(0, time - (shot.startedAt ?? time));
         const pose = meowaStormPose(age, shot.remaining);

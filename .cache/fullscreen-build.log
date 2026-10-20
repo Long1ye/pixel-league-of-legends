@@ -1,0 +1,7 @@
+
+> pixel-midline-solo@0.1.0 build
+> tsc --noEmit && vite build
+
+src/game/Match.ts(88,30): error TS2304: Cannot find name 'bridgeDetour'.
+src/game/Match.ts(749,33): error TS2304: Cannot find name 'moveTowards'.
+src/game/Match.ts(779,40): error TS2304: Cannot find name 'moveTowards'.

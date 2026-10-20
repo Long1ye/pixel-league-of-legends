@@ -1,0 +1,62 @@
+{
+  "hash": "27d875ad",
+  "configHash": "19c93788",
+  "lockfileHash": "fa68bb2e",
+  "browserHash": "d8de32b0",
+  "optimized": {
+    "phaser": {
+      "src": "../../../node_modules/phaser/dist/phaser.js",
+      "file": "phaser.js",
+      "fileHash": "f378b0a8",
+      "needsInterop": true
+    },
+    "three": {
+      "src": "../../../node_modules/three/build/three.module.js",
+      "file": "three.js",
+      "fileHash": "b000a6c9",
+      "needsInterop": false
+    },
+    "three/addons/controls/OrbitControls.js": {
+      "src": "../../../node_modules/three/examples/jsm/controls/OrbitControls.js",
+      "file": "three_addons_controls_OrbitControls__js.js",
+      "fileHash": "1d5575c6",
+      "needsInterop": false
+    },
+    "three/addons/lines/LineMaterial.js": {
+      "src": "../../../node_modules/three/examples/jsm/lines/LineMaterial.js",
+      "file": "three_addons_lines_LineMaterial__js.js",
+      "fileHash": "9bf86ac1",
+      "needsInterop": false
+    },
+    "three/addons/lines/LineSegments2.js": {
+      "src": "../../../node_modules/three/examples/jsm/lines/LineSegments2.js",
+      "file": "three_addons_lines_LineSegments2__js.js",
+      "fileHash": "29c72d45",
+      "needsInterop": false
+    },
+    "three/addons/lines/LineSegmentsGeometry.js": {
+      "src": "../../../node_modules/three/examples/jsm/lines/LineSegmentsGeometry.js",
+      "file": "three_addons_lines_LineSegmentsGeometry__js.js",
+      "fileHash": "9dbd19d3",
+      "needsInterop": false
+    },
+    "three/addons/loaders/GLTFLoader.js": {
+      "src": "../../../node_modules/three/examples/jsm/loaders/GLTFLoader.js",
+      "file": "three_addons_loaders_GLTFLoader__js.js",
+      "fileHash": "534ef846",
+      "needsInterop": false
+    },
+    "three/addons/utils/BufferGeometryUtils.js": {
+      "src": "../../../node_modules/three/examples/jsm/utils/BufferGeometryUtils.js",
+      "file": "three_addons_utils_BufferGeometryUtils__js.js",
+      "fileHash": "a9e20857",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "three.module-Bj7iJlUn": {
+      "file": "three.module-Bj7iJlUn.js",
+      "isDynamicEntry": false
+    }
+  }
+}

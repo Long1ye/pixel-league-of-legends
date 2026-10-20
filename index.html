@@ -4,10 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0b111b" />
+    <style>
+      body.launcher-pending{margin:0;background:#08121c}.launcher-pending>:not(.start-screen):not(.boot-screen):not(script){display:none!important}
+      .boot-screen{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;background:#08121c;color:#e7edf0;font:15px/1.8 "Segoe UI","Microsoft YaHei",sans-serif}.boot-content{width:min(440px,calc(100% - 48px))}.boot-brand{color:#d5bc83;letter-spacing:6px;font-size:13px}.boot-screen h1{font-size:26px;font-weight:500;margin:16px 0 12px}.boot-screen p{color:#a8bdc9;margin:14px 0;overflow-wrap:anywhere}.boot-screen progress{display:block;width:100%;height:5px;margin:24px 0;accent-color:#d5bc83}.boot-screen button{padding:9px 18px;background:#102630;border:1px solid #718895;color:#e7edf0;font:inherit;cursor:pointer}.boot-screen button:focus-visible{outline:2px solid #d5bc83;outline-offset:4px}.boot-screen[hidden],.boot-screen button[hidden]{display:none}
+    </style>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%236de5db' d='M16 2 29 16 16 30 3 16z'/%3E%3Cpath fill='%230b111b' d='m16 9 7 7-7 7-7-7z'/%3E%3C/svg%3E" />
     <title>MIDLINE · 中路 Solo</title>
   </head>
-  <body>
+  <body class="launcher-pending">
+    <section id="boot-screen" class="boot-screen" aria-label="启动游戏" aria-busy="true">
+      <div class="boot-content"><div class="boot-brand">MIDLINE · 中路试炼</div><h1>正在启动游戏</h1><p data-boot-message role="status" aria-live="polite">正在准备菜单，请稍候…</p><progress aria-label="正在加载启动资源"></progress><button type="button" hidden>刷新重试</button><noscript><p>请启用浏览器 JavaScript 后刷新页面。</p></noscript></div>
+    </section>
+    <script>
+      (()=>{const panel=document.getElementById('boot-screen'),message=panel.querySelector('[data-boot-message]'),retry=panel.querySelector('button');retry.onclick=()=>location.reload();const slow=setTimeout(()=>{if(panel.isConnected){message.textContent='启动资源仍在加载，请保持主机服务运行。';retry.hidden=false}},8000);document.addEventListener('midline:boot-ready',()=>{clearTimeout(slow);panel.remove()},{once:true});window.addEventListener('error',event=>{if(panel.isConnected&&event.target instanceof HTMLScriptElement){clearTimeout(slow);message.textContent='启动文件加载失败，请检查主机服务后刷新重试。';panel.setAttribute('aria-busy','false');retry.hidden=false}},true)})();
+    </script>
     <div class="app-shell">
       <header class="site-header">
         <a class="brand" href="/?map=howling" aria-label="MIDLINE 冰桥对局"><span class="brand-mark">◈</span><span>MIDLINE<span class="brand-sub">PIXEL SOLO</span></span></a>
@@ -76,6 +86,6 @@
         <footer class="page-footer"><span>练习走位。读懂兵线。把握时机。</span><span>MIDLINE <span class="divider">/</span> LOCAL SOLO DEMO</span></footer>
       </main>
     </div>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/launch.ts"></script>
   </body>
 </html>

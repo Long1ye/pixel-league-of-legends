@@ -1,0 +1,152 @@
+{
+  "job_id": "job_618a17613ee34b1b9df33dcda7108d8b",
+  "source": "assets/ui/equipment-icons-v2-2026-10-20/source-atlas.png",
+  "sha256": "c7e4847c5741f8843f9aa332daec0c90dbbc43a8b74ce77747ff6fcd9b97ce9f",
+  "format": "lossless WebP",
+  "outputs": [
+    {
+      "id": 1036,
+      "name": "长剑",
+      "cell": 0,
+      "path": "assets/ui/equipment-icons-v2-2026-10-20/runtime/1036.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 207524
+    },
+    {
+      "id": 1042,
+      "name": "短剑",
+      "cell": 1,
+      "path": "assets/ui/equipment-icons-v2-2026-10-20/runtime/1042.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 192872
+    },
+    {
+      "id": 1001,
+      "name": "鞋子",
+      "cell": 2,
+      "path": "assets/ui/equipment-icons-v2-2026-10-20/runtime/1001.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 260834
+    },
+    {
+      "id": 1055,
+      "name": "多兰之刃",
+      "cell": 3,
+      "path": "assets/ui/equipment-icons-v2-2026-10-20/runtime/1055.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 250606
+    },
+    {
+      "id": 1018,
+      "name": "灵巧披风",
+      "cell": 4,
+      "path": "assets/ui/equipment-icons-v2-2026-10-20/runtime/1018.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 287438
+    },
+    {
+      "id": 1037,
+      "name": "十字镐",
+      "cell": 5,
+      "path": "assets/ui/equipment-icons-v2-2026-10-20/runtime/1037.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 217176
+    },
+    {
+      "id": 1038,
+      "name": "暴风之剑",
+      "cell": 6,
+      "path": "assets/ui/equipment-icons-v2-2026-10-20/runtime/1038.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 286488
+    },
+    {
+      "id": 1053,
+      "name": "吸血鬼节杖",
+      "cell": 7,
+      "path": "assets/ui/equipment-icons-v2-2026-10-20/runtime/1053.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 242122
+    },
+    {
+      "id": 1043,
+      "name": "反曲之弓",
+      "cell": 8,
+      "path": "assets/ui/equipment-icons-v2-2026-10-20/runtime/1043.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 222234
+    },
+    {
+      "id": 3086,
+      "name": "狂热",
+      "cell": 9,
+      "path": "assets/ui/equipment-icons-v2-2026-10-20/runtime/3086.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 270762
+    },
+    {
+      "id": 1028,
+      "name": "红水晶",
+      "cell": 10,
+      "path": "assets/ui/equipment-icons-v2-2026-10-20/runtime/1028.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 237838
+    },
+    {
+      "id": 1029,
+      "name": "布甲",
+      "cell": 11,
+      "path": "assets/ui/equipment-icons-v2-2026-10-20/runtime/1029.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 292354
+    },
+    {
+      "id": 3006,
+      "name": "狂战士胫甲",
+      "cell": 12,
+      "path": "assets/ui/equipment-icons-v2-2026-10-20/runtime/3006.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 321906
+    },
+    {
+      "id": 3031,
+      "name": "无尽之刃",
+      "cell": 13,
+      "path": "assets/ui/equipment-icons-v2-2026-10-20/runtime/3031.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 304452
+    },
+    {
+      "id": 3046,
+      "name": "幻影之舞",
+      "cell": 14,
+      "path": "assets/ui/equipment-icons-v2-2026-10-20/runtime/3046.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 261512
+    },
+    {
+      "id": 3153,
+      "name": "破败王者之刃",
+      "cell": 15,
+      "path": "assets/ui/equipment-icons-v2-2026-10-20/runtime/3153.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 292266
+    }
+  ]
+}

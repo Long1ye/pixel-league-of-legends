@@ -21,4 +21,4 @@
 .league-ui .ability.cast-selected{outline:2px solid #86f3ed;outline-offset:3px;box-shadow:0 0 12px #5ce5e180}
 .three-ui #viewport[data-skill-selecting='true']>canvas{cursor:url('../../assets/ui/riot-healthbars-2026-10-15/runtime/target_precise.png') 16 16,crosshair}
 .league-ui .ability:hover .ability-name,.league-ui .ability:focus-visible .ability-name{display:none}
-@media(max-width:650px){.league-ui .operation-guide{top:82px;left:8px;width:230px}.league-ui .practice-guide{top:142px}.league-ui .operation-guide-body{max-height:calc(100dvh - 260px)}}
+@media(max-width:650px){.league-ui .operation-guide{top:102px;left:8px;width:230px}.league-ui .practice-guide{top:142px}.league-ui .operation-guide-body{max-height:calc(100dvh - 280px)}}

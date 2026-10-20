@@ -4,7 +4,7 @@ import type { AbilityKey, GameEvent, Point, Team } from '../game/types';
 import { RenderPositions } from '../render/RenderPositions';
 
 export type PrototypeCommand = { kind: 'move'; point: Point } | { kind: 'attack'; id: number } | { kind: 'attack-move'; point: Point }
-  | { kind: 'cast'; ability: AbilityKey; point: Point } | { kind: 'stop' }
+  | { kind: 'cast'; ability: AbilityKey; point: Point } | {kind:'upgrade';ability:AbilityKey} | {kind:'buy';itemId:number} | {kind:'sell';slot:number} | {kind:'use-item';slot:number;point:Point} | { kind: 'stop' }
   | { kind: 'summoner'; key: 'd' | 'f'; point: Point; targetId: number | null } | { kind: 'flute' } | {kind:'emote';action:import('../game/YasuoEmote').YasuoEmote};
 export interface PrototypeFrame { match: Match; alpha: number; positions: RenderPositions; events: readonly GameEvent[]; localTeam?: Team }
 export interface PrototypeView { frame(value: PrototypeFrame): void; dispose(): void }
@@ -25,6 +25,10 @@ export class PrototypeHost {
       case 'attack': this.match.orderAttack('blue', command.id); return true;
       case 'attack-move': this.match.orderAttackMove('blue', command.point); return true;
       case 'cast': return this.match.cast('blue', command.ability, command.point);
+      case 'upgrade': return this.match.upgradeSkill('blue',command.ability);
+      case 'buy': return this.match.buyItem('blue',command.itemId);
+      case 'sell': return this.match.sellItem('blue',command.slot);
+      case 'use-item': return this.match.useItem('blue',command.slot,command.point);
       case 'stop': this.match.stop('blue'); return true;
       case 'summoner': return this.match.castSummoner('blue', command.key, command.point, command.targetId);
       case 'emote': return this.match.startEmote(command.action,'blue');

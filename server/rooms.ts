@@ -79,7 +79,7 @@ export class BattleRooms {
         let code: string;
         do { code = String(randomInt(100000, 1000000)); } while (this.rooms.has(code));
         const player = this.player('blue');
-        const room: Room = { code, match: new Match({ ai: false }), players: [player], countdownAt: 0, round: 0, accumulator: 0, emptyAt: Date.now(), eventSeq: 0 };
+        const room: Room = { code, match: new Match({ ai: false, league:true }), players: [player], countdownAt: 0, round: 0, accumulator: 0, emptyAt: Date.now(), eventSeq: 0 };
         this.rooms.set(code, room); this.attach(socket, connection, room, player); return;
       }
       const code = typeof message.code === 'string' ? message.code.trim() : '';
@@ -104,7 +104,7 @@ export class BattleRooms {
       if (!player.loaded) { this.send(socket, { type: 'error', message: '请等待游戏资源加载完成后再准备。' }); return; }
       player.ready = true;
       if (room.players.length === 2 && room.players.every(p => p.socket && p.ready && p.loaded)) {
-        room.match = new Match({ ai: false }); room.round++; room.countdownAt = Date.now() + 3000; room.accumulator = 0;
+        room.match = new Match({ ai: false, league:true }); room.round++; room.countdownAt = Date.now() + 3000; room.accumulator = 0;
       }
       this.broadcast(room);
     } else if (message.type === 'command' && player.loaded && room.match.phase === 'playing' && !room.countdownAt

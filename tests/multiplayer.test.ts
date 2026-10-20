@@ -78,7 +78,10 @@ describe('authoritative room transport', () => {
     await a.wait('state', m => !!m.state.entities.find(e => e.kind === 'hero' && e.team === 'blue')?.destination);
     expect(room.match.hero('red').destination).toBeNull(); expect(room.match.hero('red').x).toBe(redStart.x);
     expect(room.match.hero('blue').hp).toBe(room.match.hero('blue').maxHp);
-    b.send({ type: 'command', seq: 1, command: { kind: 'cast', ability: 'q', point: { x: 300, y: 200 } } });
+    b.send({ type: 'command', seq: 1, command: { kind: 'upgrade', ability: 'q' } });
+    await b.wait('state',m=>m.state.entities.some(e=>e.kind==='hero'&&e.team==='red'&&e.skillRanks?.q===1));
+    expect(room.match.hero('blue').skillRanks?.q).toBe(0);
+    b.send({ type: 'command', seq: 2, command: { kind: 'cast', ability: 'q', point: { x: 300, y: 200 } } });
     const cast = await a.wait('state', m => m.events.some(e => e.team === 'red' && e.type === 'cast'));
     expect(cast.state.entities.find(e => e.team === 'red' && e.kind === 'hero')!.abilities.q).toBeGreaterThan(0);
     a.send({ type: 'command', seq: 1, command: { kind: 'stop' } }); // Replay ignored.
@@ -108,7 +111,7 @@ describe('authoritative room transport', () => {
     expect(rematch.room.phase).toBe('countdown'); expect(rematch.state.time).toBe(0); expect(rematch.state.result).toBeNull();
     expect(rematch.state.entities.filter(e => e.kind === 'hero').every(e => e.hp === e.maxHp)).toBe(true);
     room.countdownAt = Date.now() - 1; await a.wait('state', m => m.room.round === 2 && m.room.phase === 'playing');
-    room.match.damage(room.match.hero('blue'), room.match.tower('red'), 9999);
+    room.match.damage(room.match.hero('blue'), room.match.tower('red'), 1e9);
     expect((await a.wait('state', m => m.state.phase === 'ended' && m.room.round === 2)).state.result).toMatchObject({ winner: 'blue', reason: 'first-tower' });
     a.send({ type: 'leave' }); await resumed.wait('error', m => !!m.reset); await a.wait('error', m => !!m.reset); expect(service.rooms.size).toBe(0);
     a.send({ type: 'create', version: PROTOCOL_VERSION });

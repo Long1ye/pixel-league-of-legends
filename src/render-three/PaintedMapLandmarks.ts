@@ -8,6 +8,7 @@ import inhibitorBlueUrl from '../../assets/map-modules/howling-team-structures-v
 import inhibitorRedUrl from '../../assets/map-modules/howling-team-structures-v1/inhibitor-red.png?url';
 import teamGeometry from '../../assets/map-modules/howling-team-structures-v1/geometry.json';
 import { bridgePoint } from '../game/Bridge';
+import {SANCTUARY_SHOPS} from '../game/SanctuaryLayout';
 import type { Point } from '../game/types';
 import { toThree, type ThreeCamera } from './Coordinates';
 import { ART_OUTER_U, ART_BASE } from './PaintedMapLayout';
@@ -119,14 +120,14 @@ export class PaintedMapLandmarks {
         width: spec.size[0] * spec.scale * .5, height: spec.size[1] * spec.scale });
       return mesh;
     };
-    const paving = (u: number, width: number) => {
+    const paving = (u: number, width: number, v=0) => {
       const material = new MeshBasicMaterial({ map: maps.paving, toneMapped: false, fog: false, transparent: true, depthWrite: false });
       material.onBeforeCompile = shader => {
         shader.fragmentShader = shader.fragmentShader.replace('#include <alphatest_fragment>', 'diffuseColor.a *= 1.0 - smoothstep(0.43, 0.5, length(vMapUv - vec2(0.5)));\n#include <alphatest_fragment>');
       };
       material.customProgramCacheKey = () => 'sanctuary-circular-paving-edge-v1';
       const mesh = new Mesh(new PlaneGeometry(width, width), material);
-      mesh.rotation.x = -Math.PI / 2; mesh.position.copy(toThree(bridgePoint(u), .68)); mesh.name = 'painted-circular-paving'; this.group.add(mesh);
+      mesh.rotation.x = -Math.PI / 2; mesh.position.copy(toThree(bridgePoint(u,v), .68)); mesh.name = 'painted-circular-paving'; this.group.add(mesh);
     };
     for (const sign of [-1, 1]) {
       // The altar is central in its circular court. The paired niches sit only
@@ -162,6 +163,8 @@ export class PaintedMapLandmarks {
         guard.name = 'painted-nexus-tower';
       }
       paving(-ART_BASE.spawn[0] * sign, 85);
+      const shop=SANCTUARY_SHOPS.find(site=>site.team===team)!;
+      paving(shop.u,124,shop.v);
     }
     this.update(0, bridgePoint(0));
   }

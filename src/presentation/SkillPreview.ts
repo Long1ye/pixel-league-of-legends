@@ -16,7 +16,7 @@ export function skillPreview(match: Match, team: Team, key: AbilityKey, aim: Poi
   const hero = match.hero(team), dir = direction(hero, aim);
   const empowered = stormReady(hero, match.time);
   const range = key === 'q' && empowered ? STORM.range : ABILITIES[key].range;
-  const result: SkillPreview = {valid:hero.abilities[key]<=match.time,range:circle(hero, range),paths:[],fills:[]};
+  const result: SkillPreview = {valid:hero.abilities[key]<=match.time&&(!match.leagueRules||!!hero.skillRanks?.[key]),range:circle(hero, range),paths:[],fills:[]};
   if (key === 'q') {
     if (hero.eCast) {
       const ring = circle(hero.eCast.end, EQ.radius); result.paths.push(ring); result.fills.push(ring);

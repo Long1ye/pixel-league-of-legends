@@ -1,5 +1,7 @@
 import type Phaser from 'phaser';
 import type {Entity} from '../game/types';
+import {itemShieldRemaining} from '../game/EquipmentEffects';
+import {shieldRemaining} from '../game/YasuoPassive';
 import {RENDER_DEPTH} from './RenderDepth';
 import {HealthBarTrail} from './HealthBarTrail';
 import heroFrame from '../../assets/ui/riot-healthbars-2026-10-15/runtime/hero-frame.png?url';
@@ -34,9 +36,15 @@ export class HealthBars {
   g.fillStyle(fill[0],alpha).fillRect(x,y,amount,height);
   g.fillStyle(fill[1],alpha).fillRect(x,y,amount,1);
   g.fillStyle(fill[2],alpha).fillRect(x,y+height-1,amount,1);
+  const shield=shieldRemaining(e,time)+itemShieldRemaining(e,time);
+  if(shield>0){const shieldWidth=Math.max(1,Math.min(width*.5,width*shield/e.maxHp)),left=x+Math.min(width-shieldWidth,amount);g.fillStyle(0xc2dce7,alpha).fillRect(left,y,shieldWidth,height);g.fillStyle(0xedf9ff,alpha).fillRect(left,y,shieldWidth,1);}
   if(hero||tower){
-   const step=hero?100:250;
-   for(let hp=step;hp<e.maxHp;hp+=step){const dx=Math.round(width*hp/e.maxHp);g.fillStyle(0x081115,alpha*.8).fillRect(x+dx,y,1,height);}
+   if(tower&&e.towerHasPlates){
+    for(const ratio of [.3,.55,.75,.9])g.fillStyle(0x081115,alpha*.8).fillRect(x+Math.round(width*ratio),y,1,height);
+   }else{
+    const step=hero?100:250;
+    for(let hp=step;hp<e.maxHp;hp+=step){const dx=Math.round(width*hp/e.maxHp);g.fillStyle(0x081115,alpha*.8).fillRect(x+dx,y,1,height);}
+   }
   }
   if(hero){
    g.fillStyle(0x07121b,alpha).fillRect(x,y+9,width,2);

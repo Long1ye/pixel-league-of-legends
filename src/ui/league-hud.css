@@ -1,5 +1,4 @@
 /* Classic MOBA HUD: compact metal panels over the battlefield. */
-@media(min-width:651px){body.league-ui .target-readout{top:104px}}
 body.league-ui{--gold:#b59b62;--cyan:#5dc3cb;background:#070e13;color:#d6d0bd;overflow:hidden}
 .league-ui .app-shell{max-width:none;padding:0}.league-ui main{height:100dvh}.league-ui .site-header,.league-ui .page-heading,.league-ui .page-footer{display:none}
 .league-ui .match-shell{height:100dvh;min-height:540px;border:0;border-radius:0;position:relative;background:#091319;overflow:hidden}
@@ -72,3 +71,5 @@ body.league-ui{--gold:#b59b62;--cyan:#5dc3cb;background:#070e13;color:#d6d0bd;ov
 .league-ui .match-shell{min-height:0;height:100dvh}
 .league-ui #game{position:absolute;inset:0;display:block;overflow:hidden}
 .league-ui #game canvas{position:absolute;left:0;top:0}
+/* Keep target details above the guide, below the scoreboard on narrow screens. */
+@media(max-width:650px){body.league-ui .target-readout{top:38px}}

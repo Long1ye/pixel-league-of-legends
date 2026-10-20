@@ -1,4 +1,4 @@
-/* Pixel HUD v2: approved minimal gameplay layout, no levels or inventory. */
+/* Pixel HUD v2: compact gameplay layout; champion growth extends it separately. */
 body.pixel-hud{--pixel-frame:#9d874e;--pixel-highlight:#dbc48a;--pixel-bg:#08151c}
 .pixel-hud .player-hud{width:404px;height:94px;min-height:0;left:50%;bottom:0;transform:translateX(-50%);padding:8px;display:grid;grid-template-columns:68px 244px 56px;grid-template-rows:46px 25px;gap:5px 8px;border:2px solid var(--pixel-frame);border-top-color:var(--pixel-highlight);border-bottom:0;background:linear-gradient(#2b3b39 0 2px,#10232b 2px 5px,#08151c 5px);box-shadow:0 -2px #03090c,2px 0 #03090c,-2px 0 #03090c,inset 0 0 0 2px #1c3033;border-radius:0}
 .pixel-hud .player-hud::before,.pixel-hud .player-hud::after{display:none}

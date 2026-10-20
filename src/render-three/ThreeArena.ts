@@ -43,6 +43,7 @@ import { EnvironmentIllumination } from './EnvironmentIllumination';
 import { PavingShadows } from './PavingShadows';
 import { WorldHealthBars } from './WorldHealthBars';
 import { TargetCooldownRings } from './TargetCooldownRings';
+import { TowerRangeIndicator } from './TowerRangeIndicator';
 import { CrystalMotes } from './CrystalMotes';
 import { basicAttackRadius } from '../game/UnitMetrics';
 import { trackHeroCamera } from './CameraTracking';
@@ -50,6 +51,8 @@ import { WinterDressing } from './WinterDressing';
 import { SnowBanks } from './SnowBanks';
 import { Match } from '../game/Match';
 import { RenderPositions } from '../render/RenderPositions';
+import {SanctuaryShop} from './SanctuaryShop';
+import {pickSanctuaryShop} from './SanctuaryShopPicking';
 type RenderWidth = 640 | 960 | 1280 | 1920;
 
 /** P2 art sample with a retained P1 diagnostic mode. Visual approval is separate. */
@@ -88,6 +91,7 @@ export class ThreeArena implements PrototypeView {
   readonly illumination = new EnvironmentIllumination([this.painted.group, this.smallDetails.group]);
   readonly winterDressing: WinterDressing;
   readonly snowBanks: SnowBanks;
+  readonly sanctuaryShop:SanctuaryShop;
   paintedArt = true;
   private readonly actorLighting = new ActorLightField([this.painted.group, this.landmarks.group]);
   readonly sprites = new ActorSprites(this.quality, this.actorLighting, this.illumination);
@@ -105,6 +109,7 @@ export class ThreeArena implements PrototypeView {
   aim: Point | null = null;
   aimKey: AbilityKey | null = null;
   readonly skillIndicator = new SkillIndicator();
+  readonly towerRangeIndicator = new TowerRangeIndicator();
   onFrame?: (value: PrototypeFrame) => void;
   private readonly actors = new Map<number, Mesh>();
   private readonly dynamic = new Group();
@@ -131,6 +136,7 @@ export class ThreeArena implements PrototypeView {
   private readonly qualityTextures = new Map<Texture, number>();
 
   constructor(private readonly container: HTMLElement, options: { smoothSampling?: boolean } = {}) {
+    this.sanctuaryShop=new SanctuaryShop();this.scene.add(this.sanctuaryShop.group);
     this.combat.towerMuzzle = entity => this.paintedArt ? this.landmarks.towerMuzzle(entity) : null;
     const smoothSampling = options.smoothSampling ?? true;
     this.sprites.stableHealthBars = smoothSampling;
@@ -160,6 +166,7 @@ export class ThreeArena implements PrototypeView {
     this.aimLine.frustumCulled = false; // Endpoints change every frame; no stale bounding sphere.
     this.scene.add(this.selection, this.range, this.aimLine);
     this.scene.add(this.skillIndicator.group);
+    this.scene.add(this.towerRangeIndicator.group);
     this.scene.add(this.contacts.group, this.pavingShadows.group, this.architecturalGlow.group);
     const treated = new Set<MeshBasicMaterial>();
     for (const root of [this.painted.group, this.landmarks.group, this.details.group, this.smallDetails.group, this.architecturalIce.group]) root.traverse(object => {
@@ -239,6 +246,11 @@ export class ThreeArena implements PrototypeView {
     const rect = this.renderer.domElement.getBoundingClientRect();
     return pickActorId(this.cameraRig, rect, client, [...this.actors.values()].filter(actor => !this.fogActive || this.visibleIds.has(actor.userData.entityId)), this.raycaster, { preferredTeam: this.localTeam === 'blue' ? 'red' : 'blue', paddingCss: 5 });
   }
+  pickShop(client:Point):boolean {
+    if(!this.currentMatch?.leagueRules||!this.paintedArt||this.presentation!=='art')return false;
+    const targets=[...this.sanctuaryShop.targets,...this.landmarks.group.children.filter((mesh):mesh is Mesh=>mesh instanceof Mesh&&mesh.name==='painted-nexus')];
+    return pickSanctuaryShop(this.cameraRig,this.renderer.domElement.getBoundingClientRect(),client,targets,this.localTeam,this.raycaster);
+  }
   pan(dx: number, dy: number): void {
     this.following = false;
     this.cameraRig.panScreen(dx, dy);
@@ -252,7 +264,8 @@ export class ThreeArena implements PrototypeView {
     const renderedEntities = match.entities.map(entity => positions.sample(entity, alpha));
     this.visibleIds.clear();
     if (this.fogActive) {
-      this.vision.update(match.time, renderedEntities, value.events, this.baseVision);
+      const wards=match.entities.filter(e=>e.kind==='hero'&&e.team===this.localTeam).flatMap(hero=>(hero.itemWards??[]).filter(ward=>ward.until>match.time));
+      this.vision.update(match.time, renderedEntities, value.events, [...this.baseVision,...wards]);
       this.warFog.update(match.time, this.vision);
       for (const entity of renderedEntities) if (this.vision.entityVisible(entity)) this.visibleIds.add(entity.id);
       const enemy = this.localTeam === 'blue' ? 'red' : 'blue';
@@ -377,7 +390,9 @@ export class ThreeArena implements PrototypeView {
       this.transientResources.push(line.geometry); this.dynamic.add(line);
     }
     this.healthBars.update(value, this.cameraRig, art, this.paintedArt, entity => this.canSeeEntity(entity), this.landmarks.towerFloatEnabled ? PAINTED_TOWER_CROWN_LIFT : 0);
+    this.towerRangeIndicator.update(value, this.cameraRig, entity => this.canSeeEntity(entity));
     this.targetCooldowns.update(value, this.cameraRig, art, entity => this.canSeeEntity(entity));
+    this.sanctuaryShop.update(this.localTeam,art&&this.paintedArt,match.time);
     if (this.fogActive) this.warFog.render(this.renderer, this.scene, this.cameraRig);
     else this.renderer.render(this.scene, this.cameraRig.camera);
     this.onFrame?.(value);
@@ -402,6 +417,8 @@ export class ThreeArena implements PrototypeView {
     this.healthBars.dispose();
     this.warFog.dispose();
     this.targetCooldowns.dispose();
+    this.towerRangeIndicator.dispose();
+    this.sanctuaryShop.dispose();
     this.crystalMotes.dispose();
     this.winterDressing.dispose();
     this.snowBanks.dispose();

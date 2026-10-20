@@ -1,4 +1,5 @@
 import {emoteShortcut} from './game/YasuoEmote';
+import {updateTargetHud} from './ui/TargetHud';
 import {fluteShortcut} from './game/YasuoFlute';
 import Phaser from 'phaser';
 import './style.css';
@@ -15,12 +16,14 @@ import {createCombatPractice} from './game/CombatPractice';
 import {createMinionPractice} from './game/MinionPractice';
 import { clearStorm, grantStorm, stormReady } from './game/YasuoStorm';
 import { mountLeagueHud } from './ui/LeagueHud';
+import {updateChampionHud} from './ui/ChampionHud';
 import { SkillCasting } from './presentation/SkillCasting';
 import { mountCastSettings } from './ui/CastSettings';
 import { RENDER_SCALE } from './render/Presentation';
 import { HOWLING_MAP } from './game/config';
 import type {SummonerKey} from './game/SummonerSpells';
 import {shieldRemaining,passiveShieldStrength,yasuoCritStats} from './game/YasuoPassive';
+import {itemShieldRemaining} from './game/EquipmentEffects';
 import {pickUnit} from './game/UnitMetrics';
 
 export function bootLegacy(): () => void {
@@ -43,8 +46,6 @@ const ui = {
   start: element<HTMLButtonElement>('start-button'), pause: element<HTMLButtonElement>('pause-button'),
   restart: element<HTMLButtonElement>('restart-button'), sound: element<HTMLButtonElement>('sound-button'),
   toast: element('toast'), arena: element('arena'),
-  target: element('target-readout'), targetName: element('target-name'), targetHealth: element('target-health'),
-  targetBar: element<HTMLProgressElement>('target-bar'),
   camera: element<HTMLButtonElement>('camera-button'), cameraLabel: element('camera-label'),
   heroAnimation: element('hero-animation-state'),
 };
@@ -102,7 +103,7 @@ if (ePractice) {
   document.querySelector('.heading-description')!.textContent='八向固定靶 · 指向小兵按 E，滑行期间按 Q 接环斩 · 右键移动。方向按钮默认复位并试放 EQ，可取消勾选对照普通 E。';
 }
 function createMatch(): Match {
-  return minionPractice?createMinionPractice():combatPractice?createCombatPractice():rPractice || qPractice ? createRPractice() : ePractice ? createEPractice() : new Match();
+  return minionPractice?createMinionPractice():combatPractice?createCombatPractice():rPractice || qPractice ? createRPractice() : ePractice ? createEPractice() : new Match({league:true});
 }
 let match = createMatch();
 let displayedPhase: MatchPhase | null = null;
@@ -125,6 +126,7 @@ function syncHud(state: Match): void {
   mapMusic.update(state.time,state.phase,audio.enabled,!document.hidden);
   if(HOWLING_MAP)environmentAudio.update(state,scene.cameraRig.center,scene.cameraRig.bounds.width,audio.audioContext,audio.enabled,!document.hidden&&scene.iceMap);
   const hero = state.hero('blue');
+  updateChampionHud(state,hero);
   ui.heroAnimation.textContent = scene.heroAnimationLabel;
   const buffered=state.bufferedOrder('blue');
   if((hero.flinchUntil??0)>state.time)ui.heroAnimation.textContent+=' · 受击硬直';
@@ -149,12 +151,12 @@ function syncHud(state: Match): void {
   if (ePractice) ui.wave.textContent = `E 测试 · 八向固定靶 · ${scene.simulationSpeed}× 速度`;
   if(rPractice) ui.wave.textContent=`R 原版测试 · ${scene.simulationSpeed}× 速度 · 先击飞再按 R`;
   if(qPractice)ui.wave.textContent=`Q 测试 · ${scene.simulationSpeed}× · 独立蓄风 / 横斩 / 龙卷风`;
-  ui.hp.value = hero.hp; ui.flow.value = hero.flow??0;
-  ui.hpText.textContent = `${Math.ceil(hero.hp)} / ${hero.maxHp}`;
+  ui.hp.max=hero.maxHp;ui.hp.value = hero.hp; ui.flow.value = hero.flow??0;
+  ui.hpText.textContent = `${Math.ceil(hero.hp)} / ${Math.ceil(hero.maxHp)}`;
   ui.flowText.textContent = `${Math.floor(hero.flow??0)} / 100`;
   const passiveShield=shieldRemaining(hero,state.time),flowReady=(hero.flow??0)>=100;
   ui.flow.classList.toggle('flow-ready',flowReady);
-  ui.hpText.textContent+=passiveShield>0?` +${Math.ceil(passiveShield)}盾`:'';
+  const totalShield=passiveShield+itemShieldRemaining(hero,state.time);ui.hpText.textContent+=totalShield>0?` +${Math.ceil(totalShield)}盾`:'';
   const passiveSlot=document.querySelector<HTMLElement>('.passive-slot');
   if(passiveSlot){
     const stats=yasuoCritStats(hero);
@@ -162,16 +164,10 @@ function syncHud(state: Match): void {
     passiveSlot.classList.toggle('passive-shielded',passiveShield>0);
     passiveSlot.title=`浪客之道 · 剑意 ${Math.floor(hero.flow??0)}/100\n移动积攒；满剑意受英雄伤害触发 ${Math.round(passiveShieldStrength(hero))} 护盾，持续1秒。\n暴击率翻倍；当前 ${(stats.chance*100).toFixed(0)}%，溢出提供 ${stats.bonusAD.toFixed(0)} 攻击力。${passiveShield>0?`\n剩余护盾 ${Math.ceil(passiveShield)}`:''}`;
   }
-  ui.blueTower.value = state.tower('blue').hp;
-  ui.redTower.value = state.tower('red').hp;
+  ui.blueTower.max=state.tower('blue').maxHp;ui.blueTower.value = state.tower('blue').hp;
+  ui.redTower.max=state.tower('red').maxHp;ui.redTower.value = state.tower('red').hp;
   const target = state.entity(scene.selectedId);
-  ui.target.hidden = !target || target.hp <= 0;
-  if (target && target.hp > 0) {
-    const names = { hero: '亚索', melee: '近战兵', ranged: '远程兵', tower: '防御塔' };
-    ui.targetName.textContent = `${target.team === 'blue' ? '友方' : '敌方'} · ${names[target.kind]}`;
-    ui.targetHealth.textContent = `${Math.ceil(target.hp)} / ${target.maxHp}${(target.flinchUntil??0)>state.time?' · 硬直':(target.flinchProtectedUntil??0)>state.time?' · 保护':''}`;
-    ui.targetBar.value = target.hp / target.maxHp * 100;
-  }
+  updateTargetHud(state,target);
   for (const key of ['q', 'w', 'e', 'r'] as const) {
     const remaining = Math.max(0, hero.abilities[key] - state.time);
     element(`ability-${key}`).classList.toggle('cooling', remaining > 0);
@@ -460,7 +456,8 @@ if (ePractice) {
   clear.onclick = () => { match.eTargetLocks.clear(); match.hero('blue').abilities.e=match.time; match.hero('blue').abilities.q=match.time; syncHud(match); };
   panel.append(slow,clear); document.querySelector('.page-heading')!.after(panel);
 }
-mountLeagueHud(ePractice || rPractice || qPractice || combatPractice,{flute:playFlute,summoner:castSummoner,stop:()=>{casting.cancel();if(match.phase==='playing'){match.stop('blue');syncHud(match);}}});
+mountLeagueHud(ePractice || rPractice || qPractice || combatPractice,{signal:scope.signal,use:slot=>{match.useItem('blue',slot,match.hero('blue'));syncHud(match);},buy:id=>{match.buyItem('blue',id);syncHud(match);},sell:slot=>{match.sellItem('blue',slot);syncHud(match);},upgrade:key=>{match.upgradeSkill('blue',key);syncHud(match);},flute:playFlute,summoner:castSummoner,stop:()=>{casting.cancel();if(match.phase==='playing'){match.stop('blue');syncHud(match);}}});
+listenDocument('midline:shop-open' as keyof DocumentEventMap,()=>{casting.cancel();scene.attackSelecting=false;scene.recenterHeld=false;});
 mountCastSettings(casting);
 ui.start.addEventListener('click', begin);
 ui.restart.addEventListener('click', () => reset());
@@ -498,7 +495,11 @@ listenWindow('keydown',event=>{
   event.preventDefault();event.stopImmediatePropagation();
   if(!event.repeat){const action=emoteShortcut(event);if(action){audio.unlock();if(match.startEmote(action))audio.emote(action,match);}else playFlute();}
 },{capture:true});
+document.addEventListener('midline:settings-open',()=>{casting.cancel();scene.attackSelecting=false;scene.recenterHeld=false;},{signal:scope.signal});
 listenWindow('keydown', event => {
+  if(event.ctrlKey&&!event.metaKey&&!event.altKey&&['q','w','e','r'].includes(event.key.toLowerCase())&&!(event.target instanceof HTMLElement&&event.target.closest('input,textarea,select,[contenteditable]'))){
+    event.preventDefault();if(!event.repeat){match.upgradeSkill('blue',event.key.toLowerCase() as AbilityKey);syncHud(match);}return;
+  }
   if (event.repeat || event.ctrlKey || event.metaKey || event.altKey) return;
   if(event.target instanceof HTMLElement&&event.target.closest('input,textarea,select,[contenteditable]'))return;
   const key = event.key.toLowerCase();
@@ -510,7 +511,6 @@ listenWindow('keydown', event => {
   else if(key==='d'||key==='f')castSummoner(key);
   else if (key === 'q' || key === 'w' || key === 'e' || key === 'r') { if(match.phase==='playing'&&match.hero('blue').hp>0)casting.keyDown(key); }
   else if (key === 's' && match.phase === 'playing') { casting.cancel(); match.stop('blue'); }
-  else if (key === 'escape') { match.togglePause(); syncHud(match); }
   else if (key === 'enter' && match.phase !== 'playing') begin();
   else if (key === 'y') toggleCamera();
   else if (key === ' ' && match.phase === 'playing') {
@@ -555,4 +555,3 @@ return () => {
   game.destroy(true);
 };
 }
-

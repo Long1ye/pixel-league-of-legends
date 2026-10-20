@@ -10,7 +10,7 @@ const SESSION_KEY = 'midline-room-v1';
 
 /** Authority owns combat; the local replica predicts navigation for presentation only. */
 export class NetworkHost {
-  match = new Match({ ai: false });
+  match = new Match({ ai: false, league:true });
   team: Team = 'blue';
   room: RoomInfo | null = null;
   connected = false;
@@ -67,7 +67,7 @@ export class NetworkHost {
           this.message = `已加入房间 ${message.code}，你是${this.team === 'blue' ? '蓝' : '红'}方。`; break;
         case 'state': {
           const fresh = this.round !== message.room.round;
-          if (fresh) { this.match = new Match({ ai: false }); this.positions.reset(); this.snapshots.reset(); this.prediction.reset(); this.round = message.room.round; applyState(this.match, message.state); }
+          if (fresh) { this.match = new Match({ ai: false, league:true }); this.positions.reset(); this.snapshots.reset(); this.prediction.reset(); this.round = message.room.round; applyState(this.match, message.state); }
           const now = performance.now();
           this.snapshots.push(message.state, message.events, now, message.eventBatches); this.room = message.room;
           this.prediction.receive(message.state, this.team, message.ack[this.team], now, this.predictionRtt);

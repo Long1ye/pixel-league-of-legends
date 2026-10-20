@@ -1,4 +1,6 @@
 import type { Entity } from '../game/types';
+import {itemShieldRemaining} from '../game/EquipmentEffects';
+import {shieldRemaining} from '../game/YasuoPassive';
 import type { PrototypeFrame } from '../presentation/PrototypeHost';
 import type { ThreeCamera } from './Coordinates';
 import { HERO_VISUAL_SCALE } from '../render/Presentation';
@@ -7,7 +9,6 @@ import { HealthBarTrail } from '../render/HealthBarTrail';
 import { LANDMARK_SPECS, PAINTED_TOWER_SCALE } from './PaintedMapLandmarks';
 import heroFrameUrl from '../../assets/ui/riot-healthbars-2026-10-15/runtime/hero-frame.png?url';
 import towerFrameUrl from '../../assets/ui/riot-healthbars-2026-10-15/runtime/tower-frame.png?url';
-import { brushAt } from './BrushConcealment';
 
 interface BarView { canvas: HTMLCanvasElement; context: CanvasRenderingContext2D; offset: number; separated: boolean; signature: string }
 
@@ -19,7 +20,6 @@ export class WorldHealthBars {
   private readonly trail = new HealthBarTrail();
   private readonly heroFrame = new Image();
   private readonly towerFrame = new Image();
-  private readonly concealmentLabel = document.createElement('span');
   private match: PrototypeFrame['match'] | null = null;
   private previous = performance.now();
 
@@ -28,10 +28,6 @@ export class WorldHealthBars {
     this.element.setAttribute('aria-hidden', 'true');
     this.element.style.cssText = 'position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:2';
     this.heroFrame.src = heroFrameUrl; this.towerFrame.src = towerFrameUrl;
-    this.concealmentLabel.className = 'brush-concealment-status'; this.concealmentLabel.textContent = '草丛隐蔽';
-    this.concealmentLabel.style.cssText = 'position:absolute;left:0;top:0;pointer-events:none;font:10px/16px Microsoft YaHei,sans-serif;color:#b9e8dc;background:#102a2dcc;padding:0 5px;border:1px solid #638f8577;white-space:nowrap';
-    this.concealmentLabel.hidden = true;
-    this.element.append(this.concealmentLabel);
     container.append(this.element);
   }
 
@@ -45,7 +41,6 @@ export class WorldHealthBars {
     const entities = match.entities.filter(e => e.hp > 0 && canSee(e) && (e.kind === 'hero' || e.kind === 'tower'));
     const alive = new Set(entities.map(e => e.id)); this.trail.retain(alive);
     const player = positions.sample(match.hero(frame.localTeam ?? 'blue'), alpha), playerScreen = camera.project(player);
-    this.concealmentLabel.hidden = !visible || !painted || player.hp <= 0 || brushAt(player) === null;
     const pixelsPerUnit = camera.size.height / (camera.camera.top - camera.camera.bottom);
     for (const entity of entities) {
       let bar = this.bars.get(entity.id);
@@ -75,9 +70,6 @@ export class WorldHealthBars {
       const offset = tower ? (painted ? LANDMARK_SPECS.tower.anchor[1] * LANDMARK_SPECS.tower.scale * PAINTED_TOWER_SCALE + 12 + towerCrownLift * Math.SQRT1_2 : 120) : 33 * HERO_VISUAL_SCALE;
       const anchor = camera.project(point, airborneLift(entity, match.time));
       bar.canvas.style.transform = `translate3d(${screen.x - (width + 4) / 2}px,${anchor.y - offset * pixelsPerUnit - bar.offset - 2}px,0)`;
-      if (entity.kind === 'hero' && entity.team === (frame.localTeam ?? 'blue')) {
-        this.concealmentLabel.style.transform = `translate3d(${screen.x - 26}px,${anchor.y - offset * pixelsPerUnit - 22}px,0)`;
-      }
       this.draw(bar, entity, match.time, width, height, entity.team === (frame.localTeam ?? 'blue'));
     }
     for (const [id, bar] of this.bars) if (!alive.has(id)) { bar.canvas.remove(); this.bars.delete(id); }
@@ -86,7 +78,8 @@ export class WorldHealthBars {
   private draw(bar: BarView, entity: Entity, time: number, width: number, height: number, friendly: boolean): void {
     const context = bar.context, tower = entity.kind === 'tower', image = tower ? this.towerFrame : this.heroFrame;
     const health = Math.max(0, Math.min(1, entity.hp / entity.maxHp)), lag = this.trail.sample(entity.id, entity.hp, entity.maxHp, time);
-    const signature = [entity.hp, entity.maxHp, entity.flow, Math.ceil(width * lag), image.complete && image.naturalWidth].join(':');
+    const shield=shieldRemaining(entity,time)+itemShieldRemaining(entity,time);
+    const signature = [entity.hp, entity.maxHp, entity.flow,Math.ceil(shield), Math.ceil(width * lag), image.complete && image.naturalWidth].join(':');
     if (bar.signature === signature) return;
     bar.signature = signature;
     context.clearRect(0, 0, width + 4, height);
@@ -98,8 +91,11 @@ export class WorldHealthBars {
     context.fillStyle = colors[0]; context.fillRect(2, 2, amount, 7);
     context.fillStyle = colors[1]; context.fillRect(2, 2, amount, 1);
     context.fillStyle = colors[2]; context.fillRect(2, 8, amount, 1);
+    if(shield>0){const shieldWidth=Math.max(1,Math.min(width*.5,width*shield/entity.maxHp)),left=2+Math.min(width-shieldWidth,amount);context.fillStyle='#c2dce7';context.fillRect(left,2,shieldWidth,7);context.fillStyle='#edf9ff';context.fillRect(left,2,shieldWidth,1);}
     context.fillStyle = '#081115';
-    for (let hp = tower ? 250 : 100; hp < entity.maxHp; hp += tower ? 250 : 100) context.fillRect(2 + Math.round(width * hp / entity.maxHp), 2, 1, 7);
+    if(tower&&entity.towerHasPlates){
+      for(const ratio of [.3,.55,.75,.9])context.fillRect(2+Math.round(width*ratio),2,1,7);
+    }else for (let hp = tower ? 250 : 100; hp < entity.maxHp; hp += tower ? 250 : 100) context.fillRect(2 + Math.round(width * hp / entity.maxHp), 2, 1, 7);
     if (!tower) {
       const flow = Math.max(0, Math.min(1, (entity.flow ?? 0) / 100));
       context.fillStyle = '#07121b'; context.fillRect(2, 11, width, 2);
@@ -108,6 +104,6 @@ export class WorldHealthBars {
     }
   }
 
-  reset(): void { this.element.replaceChildren(this.concealmentLabel); this.concealmentLabel.hidden = true; this.bars.clear(); this.trail.reset(); }
+  reset(): void { this.element.replaceChildren(); this.bars.clear(); this.trail.reset(); }
   dispose(): void { this.reset(); this.element.remove(); }
 }

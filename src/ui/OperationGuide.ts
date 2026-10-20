@@ -33,7 +33,11 @@ export function mountOperationGuide(shell: HTMLElement, practice: boolean): void
     ['左键', '选择单位'],
     ['A → 左键', '攻击目标 / 向地面攻击移动'],
     ['Q W E R', '释放技能 · 悬停图标查看说明'],
+    ['Ctrl + 技能键', '学习 / 升级，也可点击技能上方的 +'],
     ['S', '停止行动'],
+    ['P', '装备商店 · 也可点击己方圣所或摊位'],
+    ['1·2·5·6·7·8', '使用装备主动效果 · 也可右键装备栏'],
+    ['4', '使用饰品 · 指向目标位置放置'],
     ['Space', '按住将视角拉回英雄'],
     ['Y', '切换镜头跟随'],
   ]);
@@ -46,7 +50,8 @@ export function mountOperationGuide(shell: HTMLElement, practice: boolean): void
     ['鼠标拖动', '左键 / 中键拖动地图'],
     ['滚轮', '调整视角缩放'],
     ['3', '吹箫 · 移动或受击打断'],
-    ['Esc', '取消 A 选点 / 单人对局暂停'],
+    ['Esc', '退出全屏 / 非全屏时取消施法或 A 选点'],
+    ['F10', '打开 / 关闭设置窗口'],
   ]);
   body.append(more); guide.append(summary, body); shell.append(guide);
   guide.addEventListener('toggle', () => {

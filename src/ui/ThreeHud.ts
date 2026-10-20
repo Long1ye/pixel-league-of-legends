@@ -4,13 +4,20 @@ import type { Match } from '../game/Match';
 import type { AbilityKey, Entity, Team } from '../game/types';
 import type { SummonerKey } from '../game/SummonerSpells';
 import { shieldRemaining } from '../game/YasuoPassive';
+import {itemShieldRemaining} from '../game/EquipmentEffects';
 import { stormReady } from '../game/YasuoStorm';
+import {updateChampionHud} from './ChampionHud';
+import {updateTargetHud} from './TargetHud';
 
 const clock = (time: number) => `${Math.floor(time / 60).toString().padStart(2, '0')}:${Math.floor(time % 60).toString().padStart(2, '0')}`;
 
 /** Reuse the stable entry's markup, icons and styles with the current simulation. */
 export function mountThreeHud(actions: {
   cast: (key: AbilityKey) => void;
+  upgrade: (key:AbilityKey)=>void;
+  buy:(id:number)=>void;
+  sell:(slot:number)=>void;
+  use:(slot:number)=>void;
   summoner: (key: SummonerKey) => void;
   stop: () => void;
   flute: () => void;
@@ -31,7 +38,7 @@ export function mountThreeHud(actions: {
   document.querySelector('nav')!.classList.add('match-actions');
   const controls = document.querySelector('#status')!.nextElementSibling!;
   controls.classList.add('controls-strip');
-  mountLeagueHud(false, { ...actions, focusTarget: viewport });
+  mountLeagueHud(false, { ...actions, focusTarget: viewport,signal });
   const diagnostics = document.querySelector('.settings-internal')!;
   document.getElementById('graphics-settings')!.append(document.querySelector('#quality-options .quality-controls')!);
   for (const selector of ['header', '.notice', '#quality-options', '#combat-hud', '#status', '#selection']) {
@@ -46,11 +53,12 @@ export function mountThreeHud(actions: {
   node('start-button').addEventListener('click', () => { actions.resume(); viewport.focus({ preventScroll: true }); }, { signal });
 
   return { update(match, selected, team = 'blue') {
-    const hero = match.hero(team), shield = shieldRemaining(hero, match.time), flow = hero.flow ?? 0;
+    const hero = match.hero(team), shield = shieldRemaining(hero, match.time)+itemShieldRemaining(hero,match.time), flow = hero.flow ?? 0;
+    updateChampionHud(match,hero);
     node<HTMLProgressElement>('hero-health').max = hero.maxHp;
     node<HTMLProgressElement>('hero-health').value = hero.hp;
     node<HTMLProgressElement>('hero-flow').value = flow;
-    node('health-text').textContent = `${Math.ceil(hero.hp)} / ${hero.maxHp}${shield > 0 ? ` +${Math.ceil(shield)}盾` : ''}`;
+    node('health-text').textContent = `${Math.ceil(hero.hp)} / ${Math.ceil(hero.maxHp)}${shield > 0 ? ` +${Math.ceil(shield)}盾` : ''}`;
     node('flow-text').textContent = `${Math.floor(flow)} / 100`;
     node('hero-flow').classList.toggle('flow-ready', flow >= 100);
     const passive = document.querySelector('.passive-slot')!;
@@ -72,13 +80,7 @@ export function mountThreeHud(actions: {
       node(`summoner-cooldown-${key}`).textContent = remaining > 0 ? String(Math.ceil(remaining)) : '';
     }
     const target = match.entity(selected);
-    node('target-readout').hidden = !target || target.hp <= 0;
-    if (target && target.hp > 0) {
-      const names = { hero: '亚索', melee: '近战兵', ranged: '远程兵', tower: '防御塔' };
-      node('target-name').textContent = `${target.team === team ? '友方' : '敌方'} · ${names[target.kind]}`;
-      node('target-health').textContent = `${Math.ceil(target.hp)} / ${target.maxHp}`;
-      node<HTMLProgressElement>('target-bar').value = target.hp / target.maxHp * 100;
-    }
+    updateTargetHud(match,target,team);
     node('match-overlay').hidden = match.phase === 'playing';
     const ended = match.phase === 'ended', won = match.result?.winner === team;
     node('overlay-kicker').textContent = ended ? (won ? 'VICTORY' : 'MATCH COMPLETE') : 'TAKE A BREATH';

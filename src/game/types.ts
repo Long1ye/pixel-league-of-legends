@@ -21,6 +21,16 @@ export interface Entity extends Point {
   range: number;
   damage: number;
   attackInterval: number;
+  attackWindup?:number;
+  laneRules?:boolean;
+  projectileSpeed?:number;
+  /** Plating belongs to Summoner's Rift, never Howling Abyss. */
+  towerHasPlates?:boolean;
+  towerPlates?:number;
+  towerBulwarks?:{until:number;armor:number}[];
+  towerHeat?:number;
+  towerHeatUntil?:number;
+  towerMinionsSeenAt?:number;
   cooldown: number;
   windup: number;
   targetId: number | null;
@@ -62,7 +72,34 @@ export interface Entity extends Point {
   passiveShieldAt?:number;
   passiveShieldUntil?:number;
   level?:number;
+  experience?:number;
+  skillPoints?:number;
+  skillRanks?:Record<AbilityKey,number>;
+  armor?:number;
+  magicResist?:number;
+  healthRegen?:number;
+  bonusAttackSpeed?:number;
+  eDamageStacks?:number;
+  eDamageStacksUntil?:number;
   critChance?:number;
+  gold?:number;
+  inventory?:(number|null)[];
+  itemHitCasts?:string[];
+  ruinedKing?:{targetId:number;hits:number;expiresAt:number;cooldownUntil:number};
+  abilityPower?:number;
+  abilityHaste?:number;
+  bonusMana?:number;
+  trinket?:number|null;
+  itemState?:Record<string,number>;
+  itemBuffs?:{id:number;until:number;stats:import('./ItemCatalog').ItemStats}[];
+  itemShields?:{amount:number;until:number;magic?:boolean}[];
+  itemDots?:{key?:number;sourceId:number;until:number;dps:number;magic:boolean;trueDamage?:boolean}[];
+  itemBursts?:{sourceId:number;at:number;amount:number}[];
+  itemWards?:{x:number;y:number;until:number;radius:number}[];
+  grievousUntil?:number;
+  stasisUntil?:number;
+  lastHeroDamageAt?:number;
+  potion?:{until:number;perSecond:number};
   abilities: Record<AbilityKey, number>;
   guardUntil: number;
   aggroUntil: number;
@@ -102,7 +139,7 @@ export interface MatchResult {
   time: number;
 }
 
-export type ImpactKind = 'attack' | 'q' | 'q3' | 'e' | 'eq' | 'eq3' | 'r' | 'spell' | 'ignite';
+export type ImpactKind = 'attack' | 'q' | 'q3' | 'e' | 'eq' | 'eq3' | 'r' | 'spell' | 'ignite'|'item-magic'|'item-physical'|'item-true';
 export interface GameEvent extends Point {
   type: 'hit' | 'kill' | 'last-hit' | 'wave' | 'cast' | 'end' | 'move' | 'attack';
   team: Team;

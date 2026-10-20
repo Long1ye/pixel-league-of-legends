@@ -1,4 +1,5 @@
 import {HealthBars} from './HealthBars';
+import {towerRangeHint} from './TowerRangeHint';
 import {MoveClickIndicator} from './MoveClickIndicator';
 import {minionHeroVisibility} from '../game/MinionLane';
 import {DashTargetTimer} from './DashTargetTimer';
@@ -688,11 +689,8 @@ export class ArenaScene extends Phaser.Scene {
       // World-space proximity keeps panning the camera from revealing distant tower UI.
       const towerHint=entity.kind==='tower'&&hero.hp>0
         ?Math.max(0,Math.min(1,(entity.range+hero.radius+85-distance(hero,entity))/65)):0;
-      if (entity.kind==='tower'&&entity.team!==hero.team&&towerHint>0) {
-        const danger=distance(hero,entity)<=entity.range+hero.radius;
-        // Keep the bridge surface clear; only a restrained boundary warns on approach.
-        this.ground.lineStyle(danger?1.5:1,COLORS[entity.team],towerHint*(danger?.65:.3)).strokeCircle(entity.x,entity.y,entity.range);
-      }
+      const rangeHint=towerRangeHint(entity,hero);
+      if(rangeHint)this.ground.lineStyle(rangeHint.danger?1.5:1,rangeHint.color,rangeHint.alpha).strokeCircle(entity.x,entity.y,rangeHint.radius);
       if(entity.kind==='tower'&&entity.team!==hero.team&&towerHint===0)continue;
       const barAlpha=isMinion?((selected||entity.hp<entity.maxHp)? .9:.5):entity.kind==='tower'&&entity.team!==hero.team?towerHint:1;
       const width = entity.kind === 'tower' ? 86 : entity.kind === 'hero' ? Math.round(32*HERO_ATTACHMENT_SCALE) : 18;

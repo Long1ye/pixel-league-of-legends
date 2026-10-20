@@ -4,7 +4,7 @@ import type {Entity,Point} from './types';
 export const MINION_LANE={spacing:34,backline:58,leash:145,heroNotice:115,marchMultiplier:44/28,allySpacing:26,targetCrowdingCost:26} as const;
 /** Reinforcements travel briskly; target approach and combat footwork keep their readable pace. */
 export function minionMovementSpeed(unit:Entity,engaged=unit.targetId!==null):number{
- return unit.speed*(unit.formation&&!engaged?MINION_LANE.marchMultiplier:1);
+ return unit.speed*(unit.formation&&!engaged&&!unit.laneRules?MINION_LANE.marchMultiplier:1);
 }
 export function minionLaneSlot(front:Point,direction:Point,slot:number,hasFrontline=true):Point{
  const column=slot%3-1,back=slot<3||!hasFrontline?0:MINION_LANE.backline;

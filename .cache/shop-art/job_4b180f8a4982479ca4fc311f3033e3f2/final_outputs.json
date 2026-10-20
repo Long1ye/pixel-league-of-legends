@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "job_id": "job_4b180f8a4982479ca4fc311f3033e3f2",
+  "outputs": [
+    {
+      "type": "media",
+      "path": ".cache\\shop-art\\job_4b180f8a4982479ca4fc311f3033e3f2\\result_images_0_url.png",
+      "mime_type": "image/png"
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 import {emoteShortcut} from './game/YasuoEmote';
+import {updateHeroStatusHud} from './ui/HeroStatusHud';
 import './style.css';
 import { mountThreeHud } from './ui/ThreeHud';
+import {preloadEquipmentIcons} from './ui/EquipmentHud';
 import { SkillCasting } from './presentation/SkillCasting';
 import { mountCastSettings } from './ui/CastSettings';
 import './render-three/prototype.css';
@@ -60,7 +62,7 @@ export function bootThree(lobbyHost?: NetworkHost): (preserveRoom?: boolean) => 
   view.paintedArt = lookSelect.value === 'art';
   syncEnvironment();
   view.presentation = lookSelect.value === 'gray' ? 'gray' : 'art';
-  const host = online ? lobbyHost ?? new NetworkHost(view) : new PrototypeHost(() => scenario.value === 'match' ? new Match() : scenario.value === 'combat' ? createCombatPractice() : createS01Match(scenario.value === 'sanctuary' ? -659 : scenario.value === 'sample' ? -ART_OUTER_U + 50 : -10), view);
+  const host = online ? lobbyHost ?? new NetworkHost(view) : new PrototypeHost(() => scenario.value === 'match' ? new Match({league:true}) : scenario.value === 'combat' ? createCombatPractice() : createS01Match(scenario.value === 'sanctuary' ? -659 : scenario.value === 'sample' ? -ART_OUTER_U + 50 : -10), view);
   const network = host instanceof NetworkHost ? host : null;
   network?.attachView(view);
   const localTeam = () => network?.team ?? 'blue';
@@ -129,12 +131,13 @@ export function bootThree(lobbyHost?: NetworkHost): (preserveRoom?: boolean) => 
     for (const ability of ['q','w','e','r']) document.getElementById(`ability-${ability}`)?.classList.toggle('cast-selected', ability === key);
     if (key) { cancelDrag(); setAttackSelecting(false); }
   });
-  const hud = mountThreeHud({ cast: key => { if (host.match.phase === 'playing') casting.select(key); }, summoner: castSummoner, canSee: entity => view.canSeeEntity(entity),
+  const hud = mountThreeHud({use:slot=>{host.command({kind:'use-item',slot,point:view.aim??host.match.hero(localTeam())});},buy:id=>{host.command({kind:'buy',itemId:id});},sell:slot=>{host.command({kind:'sell',slot});}, cast: key => { if (host.match.phase === 'playing') casting.select(key); },upgrade:key=>{host.command({kind:'upgrade',ability:key});}, summoner: castSummoner, canSee: entity => view.canSeeEntity(entity),
     stop: () => { casting.cancel(); setAttackSelecting(false); host.command({ kind: 'stop' }); }, flute: () => { casting.cancel(); host.command({ kind: 'flute' }); },
     resume: () => { if (host.match.phase === 'ended') restart(); else if (host.match.phase === 'paused') host.pause(); },
   }, signal);
   mountCastSettings(casting);
   view.onFrame = frame => {
+    updateHeroStatusHud(frame.match,frame.match.hero(localTeam()));
     const { match } = frame;
     const selectedEntity = match.entity(selected);
     if (selectedEntity && !view.canSeeEntity(selectedEntity)) { selected = null; view.selectedId = null; element('target-readout').hidden = true; }
@@ -171,6 +174,8 @@ export function bootThree(lobbyHost?: NetworkHost): (preserveRoom?: boolean) => 
     pointer = { x: event.clientX, y: event.clientY };
     if (mapDrag.active && !(event.buttons & 1)) cancelDrag();
     panDrag(mapDrag.move(event.pointerId, pointer)); view.aim = targetAim(pointer);
+    const overShop=!mapDrag.dragging&&!casting.active&&!view.attackSelecting&&view.pickActor(pointer)===null&&view.pickShop(pointer);
+    view.sanctuaryShop.hovered=overShop;viewport.dataset.shopHover=String(overShop);
   });
   listen(viewport, 'pointerdown', event => {
     viewport.focus(); pointer = { x: event.clientX, y: event.clientY };
@@ -202,7 +207,10 @@ export function bootThree(lobbyHost?: NetworkHost): (preserveRoom?: boolean) => 
   listen(viewport, 'pointerup', event => {
     if (event.button !== 0) return;
     const result = mapDrag.end(event.pointerId, { x: event.clientX, y: event.clientY });
-    if (result) { panDrag(result.pan); if (result.click) { selected = result.target; view.selectedId = result.target; } }
+    if (result) { panDrag(result.pan); if (result.click) {
+      if(result.target===null&&view.pickShop({x:event.clientX,y:event.clientY}))document.dispatchEvent(new Event('midline:shop-request'));
+      else {selected = result.target; view.selectedId = result.target;}
+    } }
     delete viewport.dataset.dragging;
     capturedPointer = null;
     if (viewport.hasPointerCapture(event.pointerId)) viewport.releasePointerCapture(event.pointerId);
@@ -214,10 +222,15 @@ export function bootThree(lobbyHost?: NetworkHost): (preserveRoom?: boolean) => 
     const next = event.deltaY < 0 ? levels.find(level => level > current + .001) ?? levels[levels.length - 1] : [...levels].reverse().find(level => level < current - .001) ?? levels[0];
     view.cameraRig.setZoom(next);
   }, { signal, passive: false });
+  document.addEventListener('midline:settings-open',()=>{casting.cancel();keys.clear();cancelDrag();setAttackSelecting(false);},{signal});
+  document.addEventListener('midline:shop-open',()=>{casting.cancel();keys.clear();cancelDrag();setAttackSelecting(false);},{signal});
   window.addEventListener('keydown', event => {
     if (!assetsReady) return;
     if (event.target instanceof HTMLInputElement || event.target instanceof HTMLSelectElement || event.target instanceof HTMLTextAreaElement) return;
-    if (event.metaKey || event.altKey || event.ctrlKey && ['q','w','e','r'].includes(event.key.toLowerCase())) return;
+    if(event.ctrlKey&&['q','w','e','r'].includes(event.key.toLowerCase())&&!event.metaKey&&!event.altKey){
+      event.preventDefault();if(!event.repeat)host.command({kind:'upgrade',ability:event.key.toLowerCase() as AbilityKey});return;
+    }
+    if (event.metaKey || event.altKey) return;
     const key = event.key.toLowerCase();
     if (['a', 'escape', 'arrowup', 'arrowdown', 'arrowleft', 'arrowright', ' '].includes(key)) event.preventDefault();
     keys.add(key); if (event.repeat) return;
@@ -230,7 +243,6 @@ export function bootThree(lobbyHost?: NetworkHost): (preserveRoom?: boolean) => 
     const emote=emoteShortcut(event);
     if(emote){event.preventDefault();audio.combat.unlock();if(host.command({kind:'emote',action:emote}))audio.combat.emote(emote,host.match);}
     if (key === 's') { casting.cancel(); setAttackSelecting(false); host.command({ kind: 'stop' }); }
-    if (key === 'escape') host.pause();
     if (key === 'y') { view.following = !view.following; syncFollow(); }
   }, { signal });
   window.addEventListener('keyup', event => {
@@ -296,6 +308,7 @@ export function bootThree(lobbyHost?: NetworkHost): (preserveRoom?: boolean) => 
   raf = requestAnimationFrame(frame);
   assets.track('血条界面', view.healthBars.preload());
   assets.track('界面图标', Promise.all([...document.images].filter(image => !!image.src).map(image => image.decode())));
+  assets.track('装备图标',preloadEquipmentIcons());
   assets.track('战斗音频', audio.combat.preload());
   assets.track('环境音频', audio.environment.preload(audio.combat.audioContext!));
   assets.track('背景音乐', audio.music.preload());

@@ -18,3 +18,4 @@ body.three-ui{overflow:hidden}
 .three-ui .quality-controls{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
 .three-ui .quality-controls label{display:flex;align-items:center;gap:4px;font-size:10px}
 .three-ui .match-overlay{z-index:6}
+#viewport[data-shop-hover=true] canvas{cursor:pointer}

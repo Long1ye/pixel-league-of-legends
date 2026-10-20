@@ -12,9 +12,13 @@ import './league-hud.css';
 import './pixel-hud.css';
 import { mountOperationGuide } from './OperationGuide';
 import { mountPlayerSettings } from './PlayerSettings';
+import {mountChampionHud} from './ChampionHud';
+import {mountEquipmentHud} from './EquipmentHud';
+import {mountTargetHud} from './TargetHud';
+import type {AbilityKey} from '../game/types';
 
 /** Move existing controls, retaining their ids, listeners and live game state. */
-export function mountLeagueHud(practice:boolean,actions:{flute:()=>void;stop:()=>void;summoner:(key:SummonerKey)=>void;focusTarget?:HTMLElement}):void {
+export function mountLeagueHud(practice:boolean,actions:{flute:()=>void;stop:()=>void;summoner:(key:SummonerKey)=>void;focusTarget?:HTMLElement;upgrade?:(key:AbilityKey)=>void;buy:(id:number)=>void;sell:(slot:number)=>void;use:(slot:number)=>void;signal?:AbortSignal}):void {
  const shell=document.querySelector<HTMLElement>('.match-shell')!;
  if(practice||!HOWLING_MAP){
   const back=document.createElement('a');back.href='/?map=howling';back.textContent='← 返回冰桥对局';
@@ -24,12 +28,15 @@ export function mountLeagueHud(practice:boolean,actions:{flute:()=>void;stop:()=
  }
  document.body.classList.add('league-ui','pixel-hud');
  mountOperationGuide(shell, practice);
+ mountTargetHud();
  for(const [key,url] of Object.entries({q:qIcon,w:wIcon,e:eIcon,r:rIcon})){
   const image=document.createElement('img');image.src=url;image.alt='';image.draggable=false;
   document.querySelector(`#ability-${key} .ability-glyph`)!.replaceChildren(image);
  }
  const face=document.createElement('img');face.src=portrait;face.alt='亚索';face.draggable=false;
  document.querySelector('.hero-portrait')!.replaceChildren(face);
+ mountChampionHud(key=>actions.upgrade?.(key));
+ mountEquipmentHud(actions);
  mountPlayerSettings(shell);
  const panels=Array.from(document.querySelectorAll<HTMLElement>('main > section:not(.match-shell)'));
  if(practice&&panels.length){const tools=document.createElement('details');tools.className='hud-practice';const s=document.createElement('summary');s.textContent='训练工具';tools.append(s);for(const panel of panels){panel.removeAttribute('style');tools.append(panel);}shell.append(tools);}

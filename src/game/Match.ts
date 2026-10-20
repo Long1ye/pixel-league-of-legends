@@ -1,4 +1,8 @@
 import type {YasuoEmote} from './YasuoEmote';
+import {useEquipment,equipmentCast,defendWithItems,equipmentHit,equipmentKill,updateEquipmentEffects,healFromItems,equipmentSpellProc,equipmentTrueProc,equipmentDamageMultiplier,preventItemDeath} from './EquipmentEffects';
+import {equipmentStats} from './ItemCatalog';
+import {atShop,buyItem as purchaseItem,sellItem as sellEquipment,ECONOMY,itemContact} from './Equipment';
+import {hasItem} from './ItemCatalog';
 import { ABILITIES, AI_HOLD, BALANCE, BASES, HOWLING_MAP, MINION_EXITS, SPAWNS, TOWERS, WORLD } from './config';
 import { clampPoint, direction, distance, moveTowards, segmentDistance } from './geometry';
 import { isYasuoQCasting, YASUO_Q_HIT_SECONDS, YASUO_Q_HALF_WIDTH } from './YasuoQ';
@@ -12,12 +16,16 @@ import {UNIT_METRICS,basicAttackReach} from './UnitMetrics';
 import {gainFlow,absorbWithPassive,yasuoCritStats} from './YasuoPassive';
 import {SUMMONERS,type SummonerKey,type SummonerEffect} from './SummonerSpells';
 import {MINION_LANE,minionLaneSlot,minionAttackSpot,minionTargetCost} from './MinionLane';
+import {MINION_PACING,minionWaveFront} from './MinionPacing';
 import { walkUnit } from './Walk';
 import {applyHitStun,inHitStun,committedUntil,HIT_STUN,type BufferedOrder} from './HitStun';
 import {actionReadyAt,finishActionRecovery} from './ActionTiming';
+import {initializeChampion,grantExperience,upgradeSkill,skillCooldown,skillDamage,mitigateDamage,championKillExperience,LEAGUE_RULES} from './ChampionProgression';
+import {initializeLaneUnit,updateOuterTurret,updateTowerMinionPresence,resolveTowerPlates,laneAttackDamage,turretIncomingMultiplier} from './LaneStats';
+import {resistanceMultiplier} from './ChampionProgression';
 import { enemyOf, type AbilityKey, type Entity, type EntityKind, type GameEvent, type ImpactKind, type MatchPhase, type MatchResult, type Point, type Projectile, type Team, type WinReason, type Zone } from './types';
 
-export interface MatchOptions { ai?: boolean; waves?: boolean; random?:()=>number }
+export interface MatchOptions { ai?: boolean; waves?: boolean; random?:()=>number; league?:boolean }
 
 /** Pure simulation. No Phaser, DOM, browser timers or asset dependencies. */
 export class Match {
@@ -37,6 +45,25 @@ export class Match {
   redETargetLocks = new Map<number, number>();
   targetLocks(team: Team): Map<number, number> { return team === 'blue' ? this.eTargetLocks : this.redETargetLocks; }
   hitStunEnabled=true;
+  leagueRules=false;
+  buyItem(team:Team,id:number):boolean {return this.leagueRules&&this.phase==='playing'&&purchaseItem(this.hero(team),id,this.time);}
+  useItem(team:Team,slot:number,point:Point):boolean {return useEquipment(this,team,slot,clampPoint(point));}
+  sellItem(team:Team,slot:number):boolean {return this.leagueRules&&this.phase==='playing'&&sellEquipment(this.hero(team),slot);}
+  upgradeSkill(team:Team,key:AbilityKey):boolean {
+    return this.leagueRules&&this.phase==='playing'&&upgradeSkill(this.hero(team),key);
+  }
+  private abilityDamage(hero:Entity,key:'q'|'e'|'r'):number {
+    return this.leagueRules?skillDamage(hero,key):ABILITIES[key].damage;
+  }
+  private awardExperience(source:Entity,target:Entity):void {
+    if(!this.leagueRules||target.kind==='tower')return;
+    const recipients=this.entities.filter(h=>h.kind==='hero'&&h.team!==target.team&&
+      (target.kind==='hero'?h.id===source.id:h.hp>0&&distance(h,target)<=LEAGUE_RULES.xpRadius||h.id===source.id));
+    for(const hero of recipients){
+      const amount=target.kind==='hero'?championKillExperience(hero,target):LEAGUE_RULES.minionXP[target.kind]*(recipients.length>1?1.3/recipients.length:1);
+      grantExperience(hero,amount);
+    }
+  }
   private bufferedOrders=new Map<Team,BufferedOrder>();
   private bufferedNavigation=new Map<Team,BufferedOrder>();
   private attackMoveGoals=new Map<Team,Point>();
@@ -98,18 +125,20 @@ export class Match {
   private options: Required<MatchOptions>;
 
   constructor(options: MatchOptions = {}) {
-    this.options = { ai: options.ai ?? true, waves: options.waves ?? true,random:options.random??Math.random };
+    this.options = { ai: options.ai ?? true, waves: options.waves ?? true,random:options.random??Math.random,league:options.league??false };
+    this.leagueRules=this.options.league;
     this.entities.push(this.createEntity('tower', 'blue', TOWERS.blue));
     this.entities.push(this.createEntity('tower', 'red', TOWERS.red));
     this.entities.push(this.createEntity('hero', 'blue', SPAWNS.blue));
     this.entities.push(this.createEntity('hero', 'red', SPAWNS.red));
+    if(this.leagueRules&&!HOWLING_MAP)for(const team of ['blue','red'] as const)Object.assign(this.hero(team),BASES[team]);
   }
 
   hero(team: Team): Entity { return this.entities.find(e => e.kind === 'hero' && e.team === team)!; }
   rTarget(team:Team):Entity|undefined {
     const hero=this.hero(team);
     if(this.phase!=='playing'||hero.hp<=0||hero.abilities.r>this.time||hero.rCast||(hero.airborneUntil??0)>this.time||
-      (hero.q3Cast&&!hero.q3Cast.released))return undefined;
+      (hero.q3Cast&&!hero.q3Cast.released)||this.leagueRules&&!hero.skillRanks?.r)return undefined;
     return findYasuoRTarget(hero,this.entities,this.time,ABILITIES.r.range);
   }
   tower(team: Team): Entity { return this.entities.find(e => e.kind === 'tower' && e.team === team)!; }
@@ -123,7 +152,7 @@ export class Match {
 
   private createEntity(kind: EntityKind, team: Team, position: Point): Entity {
     const spec = BALANCE[kind];
-    return {
+    const entity:Entity = {
       ...position, id: this.nextId++, kind, team,
       hp: spec.hp, maxHp: spec.hp,
       radius: UNIT_METRICS[kind].radius,
@@ -140,6 +169,9 @@ export class Match {
       abilities: { q: 0, w: 0, e: 0, r: 0 }, guardUntil: 0,
       aggroUntil: 0, aggroTargetId: null,
     };
+    if(kind==='hero'&&this.leagueRules)initializeChampion(entity);
+    else if(this.leagueRules)initializeLaneUnit(entity,this.time,HOWLING_MAP);
+    return entity;
   }
 
   spawnMinion(team: Team, kind: 'melee' | 'ranged', position: Point): Entity {
@@ -151,12 +183,7 @@ export class Match {
   private spawnWave(): void {
     this.wave++;
     for (const team of ['blue', 'red'] as const) {
-      const base = BASES[team], dir = direction(base, BASES[enemyOf(team)]);
-      const exit=MINION_EXITS[team];
-      const front=HOWLING_MAP
-        ? {x:exit.x+dir.x*90,y:exit.y+dir.y*90}
-        : {x:base.x+dir.x*180,y:base.y+dir.y*180};
-      this.spawnMinionLane(team,front,this.wave);
+      this.spawnMinionLane(team,minionWaveFront(team),this.wave);
     }
     this.events.push({ type: 'wave', team: 'blue', ...(HOWLING_MAP?MINION_EXITS.blue:SPAWNS.blue) });
   }
@@ -282,7 +309,7 @@ export class Match {
       this.summonerEffects.push({kind:'ignite',team,startedAt:this.time,endsAt:this.time+SUMMONERS.f.duration,
         from:{x:hero.x,y:hero.y},to:{x:target.x,y:target.y},sourceId:hero.id,targetId:target.id,ticks:0});
     }
-    this.summonerCooldowns[team][key]=this.time+spec.cooldown;
+    this.summonerCooldowns[team][key]=this.time+spec.cooldown/(this.leagueRules&&hasItem(hero,3158)?1.1:1);
     return true;
   }
 
@@ -293,7 +320,7 @@ export class Match {
       const due=Math.min(SUMMONERS.f.ticks,Math.floor((this.time-effect.startedAt+1e-9)/(SUMMONERS.f.duration/SUMMONERS.f.ticks)));
       while((effect.ticks??0)<due&&target.hp>0){
         effect.ticks=(effect.ticks??0)+1;
-        this.damage(source,target,SUMMONERS.f.damage/SUMMONERS.f.ticks,false,'ignite');
+        this.damage(source,target,(this.leagueRules?50+20*(source.level??1):SUMMONERS.f.damage)/SUMMONERS.f.ticks,false,'ignite');
       }
       if(target.hp<=0)effect.endsAt=this.time;
     }
@@ -317,7 +344,9 @@ export class Match {
   cast(team: Team, key: AbilityKey, point: Point,targetId?:number): boolean {
     if (this.phase !== 'playing') return false;
     const hero = this.hero(team), spec = ABILITIES[key];
-    if(hero.hp<=0)return false;
+    if(hero.hp<=0||(hero.stasisUntil??0)>this.time)return false;
+    if(this.leagueRules&&!hero.skillRanks?.[key])return false;
+    const cooldown=this.leagueRules?skillCooldown(hero,key):spec.cooldown;
     const dashTarget=key==='e'?this.dashTarget(point,team,targetId):undefined;
     if(key==='e'&&(!dashTarget||(this.targetLocks(team).get(dashTarget.id)??0)>this.time))return false;
     const combo=key==='q'&&isDashing(hero,this.time)&&!hero.eqCast;
@@ -345,7 +374,8 @@ export class Match {
       const arrival=clampPoint({x:target.x+YASUO_R.offsetX,y:target.y+YASUO_R.offsetY});
       Object.assign(hero,HOWLING_MAP?clampPoint(clearBridgeFootprints(arrival,hero.radius,hero.id)):arrival);hero.facing=Math.PI*.75;
       hero.eCast=null;hero.eqCast=null;hero.qCast=null;hero.q3Cast=null;hero.wCast=null;hero.destination=null;hero.targetId=null;hero.windup=0;hero.attackTargetId=null;this.clearAttackPresentation(hero);
-      hero.abilities.r=this.time+spec.cooldown;
+      hero.abilities.r=this.time+cooldown;
+      if(this.leagueRules)equipmentCast(hero,this.time,'r');
       hero.homeguardUntil=0;hero.homeguardCombatAt=this.time;
       this.events.push({type:'cast',team,x:hero.x,y:hero.y,ability:key});return true;
     }
@@ -354,7 +384,8 @@ export class Match {
     if (isDashing(hero,this.time)) {
       if(key!=='q'||hero.eqCast) return false;
       const cast=hero.eCast!, triggerAt=Math.max(cast.startedAt+E.startup+E.dash,this.time+EQ.windup);
-      hero.abilities.q=this.time+spec.cooldown;
+      hero.abilities.q=this.time+cooldown;
+      if(this.leagueRules)equipmentCast(hero,this.time,'q');
       const empowered=stormReady(hero,this.time);
       if(empowered)clearStorm(hero);
       hero.eqCast={startedAt:triggerAt-EQ.windup,triggerAt,endsAt:triggerAt+EQ.recovery,eStartedAt:cast.startedAt,facing:cast.facing,hit:false,empowered,critical:this.rollCritical(hero)};
@@ -365,7 +396,8 @@ export class Match {
     }
     if(hero.eqCast && this.time<hero.eqCast.endsAt) return false;
     if (key==='e' && this.dashError(point,team,targetId)) return false;
-    hero.abilities[key] = this.time + spec.cooldown;
+    hero.abilities[key] = this.time + cooldown;
+    if(this.leagueRules)equipmentCast(hero,this.time,key);
     const aim = clampPoint(point), dir = direction(hero, aim);
     hero.facing = Math.atan2(dir.y, dir.x);
     hero.qCast = key === 'q' ? { startedAt: this.time, facing: hero.facing,critical:this.rollCritical(hero) } : null;
@@ -391,11 +423,14 @@ export class Match {
       hero.attackTargetId = null;
       this.clearAttackPresentation(hero);
     } else {
+      if(this.leagueRules){
+        if((hero.eDamageStacksUntil??0)<=this.time)hero.eDamageStacks=0;
+      }
       const target=this.dashTarget(point,team,targetId)!;
       const start={x:hero.x,y:hero.y}, end=dashEndpoint(hero,target);
       hero.facing=Math.atan2(target.y-hero.y,target.x-hero.x);
       hero.eCast={startedAt:this.time,start,end,facing:hero.facing,targetId:target.id,hit:false};
-      this.targetLocks(team).set(target.id,this.time+E.targetCooldown);
+      this.targetLocks(team).set(target.id,this.time+(this.leagueRules?11-hero.skillRanks!.e:E.targetCooldown));
       hero.destination=null; hero.targetId=null; hero.windup=0; hero.attackTargetId=null;
       this.clearAttackPresentation(hero);
     }
@@ -406,22 +441,55 @@ export class Match {
 
   /** All lethal outcomes are resolved together at the end of the current tick. */
   private rollCritical(source:Entity){return source.kind==='hero'&&yasuoCritStats(source).chance>0&&this.options.random()<yasuoCritStats(source).chance;}
-  damage(source: Entity, target: Entity, amount: number, slow = false, impact: ImpactKind = 'attack',criticalOverride?:boolean): void {
+  damage(source: Entity, target: Entity, amount: number, slow = false, impact: ImpactKind = 'attack',criticalOverride?:boolean,itemCastKey?:string): void {
     if (this.phase !== 'playing' || amount<=0 || target.hp <= 0 || target.team === source.team) return;
+    if(this.leagueRules&&(target.stasisUntil??0)>this.time)return;
+    if(this.leagueRules){target.itemState??={};target.itemState.beforeHitHP=target.hp;}
     const crit=yasuoCritStats(source),canCrit=source.kind==='hero'&&target.kind!=='tower'&&['attack','q','q3','eq','eq3'].includes(impact);
     const critical=canCrit&&(criticalOverride??this.rollCritical(source));
-    const bonus=source.kind!=='hero'?0:impact==='attack'||['q','q3','eq','eq3'].includes(impact)?crit.bonusAD:impact==='e'?crit.bonusAD*.2:impact==='r'?crit.bonusAD*1.5:0;
-    const dealt = (amount+bonus)*(critical?crit.multiplier:1) * (impact!=='ignite'&&target.guardUntil > this.time ? 0.6 : 1) * (target.kind === 'tower' ? 0.65 : 1);
+    const bonus=source.kind!=='hero'||this.leagueRules?0:impact==='attack'||['q','q3','eq','eq3'].includes(impact)?crit.bonusAD:impact==='e'?crit.bonusAD*.2:impact==='r'?crit.bonusAD*1.5:0;
+    const contact=this.leagueRules&&source.kind==='hero'?itemContact(source,target,impact,this.time,itemCastKey):{onHit:0,magic:0,lifesteal:0,omnivamp:0};
+    const critMultiplier=this.leagueRules?1.9+(source.kind==='hero'?equipmentStats(source).critDamage*.95:0):crit.multiplier;
+    let raw = ((amount+bonus)*(critical?critMultiplier:1)+contact.onHit) * (impact!=='ignite'&&target.guardUntil > this.time ? 0.6 : 1);
+    if(this.leagueRules&&source.kind==='hero')raw*=equipmentDamageMultiplier(source,target,impact,this.time);
+    if(this.leagueRules){
+      if(impact==='attack')raw=laneAttackDamage(source,target,raw,this.time);
+      if(target.kind==='tower'){
+        updateOuterTurret(target,this.time);updateTowerMinionPresence(target,this.entities,this.time);
+        raw*=turretIncomingMultiplier(target,source,this.time);
+      }
+    }else if(target.kind==='tower')raw*=.65;
+    const baseDealt=this.leagueRules?(source.kind==='tower'&&target.kind==='hero'&&impact==='attack'
+      ?raw*resistanceMultiplier((target.armor??0)*.7):mitigateDamage(target,raw,impact,source)):raw;
+    const magicExtra=this.leagueRules?contact.magic+(source.kind==='hero'&&target.kind!=='tower'?equipmentSpellProc(source,impact,this.time):0):0;
+    const trueExtra=this.leagueRules&&source.kind==='hero'?equipmentTrueProc(source,target,impact,this.time):0;
+    const dealt=this.leagueRules?defendWithItems(target,source,baseDealt,impact,critical,this.time)
+      +(magicExtra>0?defendWithItems(target,source,mitigateDamage(target,magicExtra,'item-magic',source),'item-magic',false,this.time,true):0)
+      +(trueExtra>0?defendWithItems(target,source,trueExtra,'item-true',false,this.time,true):0):baseDealt;
+    if(dealt<=0)return;
     const shield=absorbWithPassive(source,target,dealt,this.time);
+    const healthLost=Math.min(target.hp,shield.remaining);
     target.hp = Math.max(0, target.hp - shield.remaining);
+    if(this.leagueRules&&target.kind!=='tower'&&target.hp>0&&hasItem(source,6676)&&target.hp<target.maxHp*.05)target.hp=0;
+    if(this.leagueRules)preventItemDeath(this,target);
+    if(this.leagueRules&&source.kind==='hero'&&source.hp>0){
+      const grievous=this.summonerEffects.some(e=>e.kind==='ignite'&&e.targetId===source.id&&e.endsAt>this.time)?.6:1;
+      healFromItems(source,healthLost*(contact.lifesteal+contact.omnivamp),this.time,grievous<1);
+    }
+    if(this.leagueRules&&target.kind==='tower'){
+      const plates=target.towerPlates??0;resolveTowerPlates(target,this.entities,this.time);
+      const reward=((target.towerPlates??0)-plates)*ECONOMY.plateGold;
+      const recipient=this.hero(source.team);if(recipient.hp>0&&distance(recipient,target)<=850*LEAGUE_RULES.worldScale)recipient.gold=(recipient.gold??0)+reward;
+    }
     target.fluteAt=null;target.emote=null;
     target.hitAt = this.time;
     target.hitFrom = {x:source.x,y:source.y};
     if(this.hitStunEnabled)applyHitStun(source,target,impact,this.time,dealt);
-    if (target.kind === 'hero') { target.homeguardUntil = 0; target.homeguardCombatAt = this.time; }
-    if (slow) target.slowUntil = this.time + 1.5;
+    if (target.kind === 'hero') { target.homeguardUntil = 0; target.homeguardCombatAt = this.time;if(source.kind==='hero'){target.lastHeroDamageAt=source.lastHeroDamageAt=this.time;} }
+    if (slow) target.slowUntil = this.time + 1.5*(1-Math.min(.75,target.kind==='hero'?equipmentStats(target).tenacity:0));
     const feedback={at:this.time,sourceId:source.id,targetId:target.id,sourceKind:source.kind,targetKind:target.kind,from:{x:source.x,y:source.y},impact};
     this.events.push({ type: 'hit', team: source.team, x: target.x, y: target.y, amount: Math.round(shield.remaining),absorbed:shield.absorbed,critical,...feedback });
+    if(this.leagueRules)equipmentHit(this,source,target,impact);
     if (source.kind === 'hero' && target.kind === 'hero') {
       // Trading beside an enemy wave creates a short, local retaliation window.
       for(const minion of this.entities)if(minion.team===target.team&&(minion.kind==='melee'||minion.kind==='ranged')&&minion.hp>0&&distance(minion,source)<MINION_LANE.heroNotice){
@@ -434,6 +502,9 @@ export class Match {
       }
     }
     if (target.hp > 0) return;
+    if(this.leagueRules)equipmentKill(source,target,this.time);
+    if(this.leagueRules&&source.kind==='hero')source.gold=(source.gold??0)+(target.kind==='melee'?ECONOMY.meleeGold+Math.floor(this.time/90)*.125:target.kind==='ranged'?ECONOMY.rangedGold:target.kind==='hero'?ECONOMY.killGold:250);
+    this.awardExperience(source,target);
     target.flinchUntil=0;target.flinchProtectedUntil=0;
     if(target.kind==='hero'){this.bufferedOrders.delete(target.team);this.bufferedNavigation.delete(target.team);this.attackMoveGoals.delete(target.team);}
     target.qCast = null;
@@ -459,24 +530,35 @@ export class Match {
 
   step(dt: number): void {
     if (this.phase !== 'playing') return;
+    const goldSeconds=Math.max(0,this.time+dt-ECONOMY.passiveStart)-Math.max(0,this.time-ECONOMY.passiveStart);
+    if(this.leagueRules)for(const team of ['blue','red'] as const){const hero=this.hero(team);hero.gold=(hero.gold??0)+goldSeconds*ECONOMY.goldPerSecond;}
     this.time += dt;
     for (const locks of [this.eTargetLocks, this.redETargetLocks])
       for (const [id,until] of locks) if (until <= this.time) locks.delete(id);
     if (this.options.waves && this.time >= this.nextWaveAt) {
       this.spawnWave();
-      this.nextWaveAt += BALANCE.waveInterval;
+      this.nextWaveAt += this.leagueRules?MINION_PACING.waveInterval:BALANCE.waveInterval;
     }
     if (this.options.ai && this.time >= this.nextAiAt) {
       this.thinkAi();
       this.nextAiAt = this.time + BALANCE.aiInterval;
     }
     this.updateMinionLanes(dt);
+    if(this.leagueRules)updateEquipmentEffects(this,dt);
     for (const entity of this.entities) {
       if((entity.qStacksUntil??0)<=this.time && (entity.qStacks??0)>0)clearStorm(entity);
       if (entity.hp <= 0) continue;
+      if(this.leagueRules&&entity.kind==='tower'){
+        updateOuterTurret(entity,this.time);updateTowerMinionPresence(entity,this.entities,this.time);
+      }
       const previousPosition={x:entity.x,y:entity.y};
       entity.cooldown = Math.max(0, entity.cooldown - dt);
       if (entity.kind === 'hero') {
+        if(this.leagueRules){
+          if((entity.eDamageStacksUntil??0)<=this.time)entity.eDamageStacks=0;
+          const regen=(entity.healthRegen??0)/5*(this.summonerEffects.some(e=>e.kind==='ignite'&&e.targetId===entity.id&&e.endsAt>this.time)||(entity.grievousUntil??0)>this.time ? .6 : 1);
+          entity.hp=Math.min(entity.maxHp,entity.hp+regen*dt);
+        }
         updateHomeguard(entity, this.time);
         if((entity.passiveShieldUntil??0)<=this.time)entity.passiveShield=0;
         if (distance(entity, BASES[entity.team]) < BALANCE.fountainRadius) {
@@ -512,7 +594,7 @@ export class Match {
     let connected=false;
     for(const victim of this.entities)if(victim.hp>0&&victim.team!==entity.team&&victim.kind!=='tower'&&distance(entity,victim)<=EQ.radius+victim.radius){
       connected=true;
-      this.damage(entity,victim,ABILITIES.q.damage,false,eq.empowered?'eq3':'eq',eq.critical);
+      this.damage(entity,victim,this.abilityDamage(entity,'q'),false,eq.empowered?'eq3':'eq',eq.critical);
       if(eq.empowered&&victim.hp>0){
         const dx=victim.x-entity.x,dy=victim.y-entity.y,length=Math.hypot(dx,dy);
         victim.airborneStartedAt=this.time;victim.airborneHold=undefined;victim.airborneDirection=length>.001?{x:dx/length,y:dy/length}:{x:Math.cos(entity.facing),y:Math.sin(entity.facing)};
@@ -523,7 +605,7 @@ export class Match {
   }
 
   private chooseTarget(unit: Entity): void {
-    const radius = unit.kind === 'tower' ? unit.range : unit.formation ? 160 : unit.kind === 'ranged' ? 110 : 39;
+    const radius = unit.kind === 'tower' ? unit.range : Math.max(unit.formation ? 160 : unit.kind === 'ranged' ? 110 : 39,unit.laneRules?unit.range:0);
     const minion=unit.kind==='melee'||unit.kind==='ranged';
     const lane=direction(BASES[unit.team],BASES[enemyOf(unit.team)]);
     const inLaneColumn=(e:Entity)=>!unit.formation||e.kind==='hero'||e.kind==='tower'
@@ -541,7 +623,9 @@ export class Match {
       const forced = candidates.find(e => e.id === unit.aggroTargetId);
       if (forced) { unit.targetId = forced.id; return; }
     }
-    const priority = (e: Entity): number => e.kind === 'melee' || e.kind === 'ranged' ? 0 : e.kind === 'hero' ? 1 : 2;
+    const priority = (e: Entity): number => unit.kind==='tower'&&unit.laneRules
+      ? e.kind==='melee'?0:e.kind==='ranged'?1:e.kind==='hero'?2:3
+      : e.kind === 'melee' || e.kind === 'ranged' ? 0 : e.kind === 'hero' ? 1 : 2;
     const previous = candidates.find(e => e.id === unit.targetId);
     // Keep a valid opponent instead of swapping targets as neighbours shuffle.
     if(previous&&priority(previous)===Math.min(...candidates.map(priority)))unit.targetId=previous.id;
@@ -559,15 +643,16 @@ export class Match {
       const dir=direction(BASES[f.team],BASES[enemyOf(f.team)]);
       const members=this.entities.filter(e=>e.hp>0&&e.team===f.team&&e.formation?.wave===f.wave);
       const hasMelee=members.some(e=>e.kind==='melee');
+      const frontMember=members.find(e=>e.kind==='melee')??members[0];
       let clearance=Infinity;
       for(const e of this.entities){
         if(e.hp<=0||e.team===f.team)continue;
         const dx=e.x-f.front.x,dy=e.y-f.front.y;
         const ahead=dx*dir.x+dy*dir.y,side=-dx*dir.y+dy*dir.x;
-        if(ahead>=-30&&Math.abs(side)<100)clearance=Math.min(clearance,ahead-e.radius-(hasMelee?BALANCE.melee.range-2:BALANCE.ranged.range-2));
+        if(ahead>=-30&&Math.abs(side)<100)clearance=Math.min(clearance,ahead-e.radius-(this.leagueRules&&frontMember?frontMember.range-2:hasMelee?BALANCE.melee.range-2:BALANCE.ranged.range-2));
       }
       // No collective arrival gate: one blocked or fighting soldier cannot freeze its wave.
-      const advance=Math.max(0,Math.min(BALANCE.melee.speed*MINION_LANE.marchMultiplier*dt,clearance));
+      const advance=Math.max(0,Math.min((this.leagueRules&&frontMember?frontMember.speed:BALANCE.melee.speed*MINION_LANE.marchMultiplier)*dt,clearance));
       f.front=clampPoint({x:f.front.x+dir.x*advance,y:f.front.y+dir.y*advance});
       for(const e of members){
         e.formation!.goal=clampPoint(minionLaneSlot(f.front,dir,e.formation!.slot,hasMelee),e.radius);
@@ -586,7 +671,7 @@ export class Match {
     if(unit.kind==='hero'&&!queuedEQ&&(unit.destination||unit.targetId!==null||this.bufferedOrder(unit.team)))finishActionRecovery(unit,this.time);
     if(unit.rCast) {
       const cast=unit.rCast;
-      if(!cast.hit && this.time>=cast.startedAt+YASUO_R.hitAt){cast.hit=true;for(const id of cast.targetIds){const victim=this.entity(id);if(victim&&victim.hp>0)this.damage(unit,victim,ABILITIES.r.damage,false,'r');}}
+      if(!cast.hit && this.time>=cast.startedAt+YASUO_R.hitAt){cast.hit=true;for(const id of cast.targetIds){const victim=this.entity(id);if(victim&&victim.hp>0)this.damage(unit,victim,this.abilityDamage(unit,'r'),false,'r');}}
       if(this.time>=cast.startedAt+YASUO_R.duration)unit.rCast=null;
       return;
     }
@@ -595,7 +680,7 @@ export class Match {
       const cast=unit.q3Cast;unit.facing=cast.facing;
       if(!cast.released && this.time>=cast.startedAt+STORM.releaseDelay) {
         cast.released=true;
-        this.projectiles.push({id:this.nextId++,sourceId:unit.id,team:unit.team,kind:'q',empowered:true,critical:cast.critical,startedAt:this.time,hitIds:[],x:unit.x,y:unit.y,targetId:null,damage:ABILITIES.q.damage,speed:STORM.speed,vx:Math.cos(cast.facing),vy:Math.sin(cast.facing),remaining:STORM.range,radius:STORM.radius});
+        this.projectiles.push({id:this.nextId++,sourceId:unit.id,team:unit.team,kind:'q',empowered:true,critical:cast.critical,startedAt:this.time,hitIds:[],x:unit.x,y:unit.y,targetId:null,damage:this.abilityDamage(unit,'q'),speed:STORM.speed,vx:Math.cos(cast.facing),vy:Math.sin(cast.facing),remaining:STORM.range,radius:STORM.radius});
       }
       if(this.time>=cast.startedAt+STORM.castDuration)unit.q3Cast=null;
       return;
@@ -609,7 +694,8 @@ export class Match {
       Object.assign(unit,HOWLING_MAP?clampPoint(clearBridgeFootprints(dashPoint,unit.radius,unit.id)):dashPoint);
       const target=this.entity(cast.targetId);
       if (!cast.hit && progress>0 && target && target.hp>0 && segmentDistance(target,from,unit)<=target.radius+unit.radius) {
-        cast.hit=true; this.damage(unit,target,ABILITIES.e.damage,false,'e');
+        cast.hit=true; this.damage(unit,target,this.abilityDamage(unit,'e'),false,'e');
+        if(this.leagueRules){unit.eDamageStacks=Math.min(4,(unit.eDamageStacks??0)+1);unit.eDamageStacksUntil=this.time+5;}
       }
       if (this.time >= cast.startedAt+E.duration) unit.eCast=null;
       return;
@@ -629,7 +715,7 @@ export class Match {
         const end={x:unit.x+dir.x*ABILITIES.q.range,y:unit.y+dir.y*ABILITIES.q.range};
         const victims=this.entities.filter(v=>v.hp>0&&v.team!==unit.team&&v.kind!=='tower'&&
           (v.x-unit.x)*dir.x+(v.y-unit.y)*dir.y>=0&&segmentDistance(v,unit,end)<=v.radius+YASUO_Q_HALF_WIDTH);
-        for(const victim of victims)this.damage(unit,victim,ABILITIES.q.damage,false,'q',cast.critical);
+        for(const victim of victims)this.damage(unit,victim,this.abilityDamage(unit,'q'),false,'q',cast.critical);
         if(victims.length)grantStorm(unit,this.time);
       }
       if(isYasuoQCasting(unit,this.time))return;
@@ -674,7 +760,7 @@ export class Match {
       }
       unit.windup -= dt;
       if (unit.windup <= 0) {
-        unit.cooldown = unit.attackInterval;
+        unit.cooldown = this.leagueRules?Math.max(0,unit.attackInterval-(this.time-(unit.attackStartedAt??this.time))):unit.attackInterval;
         unit.attackTargetId = null;
         unit.attackReleasedAt = this.time;
         unit.attacksReleased++;
@@ -682,7 +768,7 @@ export class Match {
         if (unit.kind === 'melee' || unit.kind === 'hero') this.damage(unit, target, unit.damage);
         else this.projectiles.push({ id: this.nextId++, sourceId: unit.id, team: unit.team,
           kind: 'attack', startedAt: this.time, x: unit.x, y: unit.y - 4, targetId: target.id,
-          damage: unit.damage, speed: unit.kind === 'tower' ? 145 : BALANCE.projectileSpeed,
+          damage: unit.damage, speed: unit.projectileSpeed??(unit.kind === 'tower' ? 145 : BALANCE.projectileSpeed),
           vx: 0, vy: 0, remaining: 4, radius: unit.kind === 'tower' ? 3 : 1.5 });
       }
       return;
@@ -691,7 +777,7 @@ export class Match {
     // makes two opponents chase each other's moving spots and drag the fight apart.
     if (distance(unit, target) <= this.attackReach(unit,target)) {
       if (unit.cooldown <= 0) {
-        unit.windup = BALANCE[unit.kind].windup;
+        unit.windup = this.leagueRules&&unit.kind==='hero'?unit.attackInterval*.22:unit.attackWindup??BALANCE[unit.kind].windup;
         unit.attackTargetId = target.id;
         unit.attackStartedAt = this.time;
         unit.attackReleasedAt = null;
@@ -720,6 +806,7 @@ export class Match {
     for (let i = 0; i < alive.length; i++) {
       for (let j = i + 1; j < alive.length; j++) {
         const a = alive[i], b = alive[j], length = distance(a, b);
+        if(this.leagueRules&&a.kind!=='tower'&&b.kind!=='tower'&&(hasItem(a,3046)||hasItem(b,3046)))continue;
         const minions=(a.kind==='melee'||a.kind==='ranged')&&(b.kind==='melee'||b.kind==='ranged');
         const minimum = minions?Math.max(a.radius+b.radius-1,a.team===b.team?MINION_LANE.allySpacing:18):a.radius+b.radius-1;
         if (a.eCast || b.eCast || a.rCast || b.rCast || (a.airborneUntil??0)>this.time || (b.airborneUntil??0)>this.time) continue;
@@ -754,7 +841,7 @@ export class Match {
         for(const victim of this.entities)if(victim.hp>0&&victim.team!==shot.team&&victim.kind!=='tower'&&!shot.hitIds?.includes(victim.id)) {
           const hit=circleHit(from,to,victim,victim.radius+shot.radius);
           if(hit===null||hit>=wallFraction)continue;
-          (shot.hitIds??=[]).push(victim.id);this.damage(source,victim,shot.damage,false,'q3',shot.critical);
+          (shot.hitIds??=[]).push(victim.id);this.damage(source,victim,shot.damage,false,'q3',shot.critical,`q3:${shot.id}`);
           if(victim.hp>0){victim.airborneStartedAt=this.time;victim.airborneHold=undefined;victim.airborneDirection={x:shot.vx,y:shot.vy};victim.airborneUntil=this.time+STORM.knockup;victim.windup=0;victim.attackTargetId=null;}
         }
         // Consume planned travel: coordinate rounding can otherwise leave a tiny
@@ -824,6 +911,12 @@ export class Match {
   private thinkAi(): void {
     const hero = this.hero('red'), player = this.hero('blue');
     if (hero.hp <= 0 || player.hp <= 0) return;
+    if(this.leagueRules&&atShop(hero)){
+      if(!(hero.inventory??[]).some(Boolean))this.buyItem('red',1055);
+      for(const id of [3006,3153,3031,3046])if(!hasItem(hero,id)&&this.buyItem('red',id))break;
+      if(!hasItem(hero,3006)&&!hasItem(hero,1001))this.buyItem('red',1001);
+    }
+    if(this.leagueRules)for(const key of ['r','q','e','w'] as const)while(this.upgradeSkill('red',key)){ /* Spend available legal ranks. */ }
     if(committedUntil(hero,this.time)>this.time||inHitStun(hero,this.time))return;
     const health = hero.hp / hero.maxHp, enemyTower = this.tower('blue');
     const alliesAtTower = this.entities.some(e => e.team === 'red' && e.kind !== 'hero' && e.kind !== 'tower' && e.hp > 0 && distance(e, enemyTower) < enemyTower.range);

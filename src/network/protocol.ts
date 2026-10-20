@@ -1,8 +1,9 @@
 import type { Match } from '../game/Match';
 import type { GameEvent, Team } from '../game/types';
 import type { PrototypeCommand } from '../presentation/PrototypeHost';
+import {itemById} from '../game/ItemCatalog';
 
-export const PROTOCOL_VERSION = 3;
+export const PROTOCOL_VERSION = 6;
 export const SNAPSHOT_MS = 50;
 export const RECONNECT_MS = 30_000;
 export type RoomPhase = 'waiting' | 'loading' | 'countdown' | 'playing' | 'ended' | 'reconnecting';
@@ -15,7 +16,7 @@ export interface RoomInfo {
   round: number;
 }
 export type MatchState = Pick<Match, 'phase' | 'time' | 'wave' | 'cs' | 'kills' | 'deaths' | 'entities'
-  | 'projectiles' | 'zones' | 'windWalls' | 'summonerEffects' | 'summonerCooldowns' | 'result' | 'hitStunEnabled'>
+  | 'projectiles' | 'zones' | 'windWalls' | 'summonerEffects' | 'summonerCooldowns' | 'result' | 'hitStunEnabled' | 'leagueRules'>
   & { eLocks: [number, number][]; redELocks: [number, number][] };
 export interface EventBatch { id: number; time: number; events: GameEvent[] }
 export type ClientMessage =
@@ -39,7 +40,7 @@ export function matchState(match: Match): MatchState {
     phase: match.phase, time: match.time, wave: match.wave, cs: match.cs, kills: match.kills, deaths: match.deaths,
     entities: match.entities, projectiles: match.projectiles, zones: match.zones, windWalls: match.windWalls,
     summonerEffects: match.summonerEffects, summonerCooldowns: match.summonerCooldowns,
-    result: match.result, hitStunEnabled: match.hitStunEnabled,
+    result: match.result, hitStunEnabled: match.hitStunEnabled,leagueRules:match.leagueRules,
     eLocks: [...match.eTargetLocks], redELocks: [...match.redETargetLocks],
   };
 }
@@ -63,6 +64,10 @@ export function validCommand(value: unknown): value is PrototypeCommand {
     case 'move': case 'attack-move': return point(c.point);
     case 'attack': return id(c.id);
     case 'cast': return ['q', 'w', 'e', 'r'].includes(c.ability as string) && point(c.point);
+    case 'upgrade': return ['q','w','e','r'].includes(c.ability as string);
+    case 'buy': return Number.isSafeInteger(c.itemId)&&!!itemById(c.itemId as number);
+    case 'sell': return Number.isInteger(c.slot)&&(c.slot as number)>=0&&(c.slot as number)<=6;
+    case 'use-item': return Number.isInteger(c.slot)&&(c.slot as number)>=0&&(c.slot as number)<=6&&point(c.point);
     case 'summoner': return ['d', 'f'].includes(c.key as string) && point(c.point) && (c.targetId === null || id(c.targetId));
     case 'stop': case 'flute': return true;
     case 'emote': return ['joke', 'taunt', 'laugh'].includes(c.action as string);
@@ -77,6 +82,10 @@ export function executeCommand(match: Match, team: Team, command: PrototypeComma
     case 'attack-move': match.orderAttackMove(team, command.point); return true;
     case 'attack': match.orderAttack(team, command.id); return true;
     case 'cast': return match.cast(team, command.ability, command.point);
+    case 'upgrade': return match.upgradeSkill(team,command.ability);
+    case 'buy': return match.buyItem(team,command.itemId);
+    case 'sell': return match.sellItem(team,command.slot);
+    case 'use-item': return match.useItem(team,command.slot,command.point);
     case 'summoner': return match.castSummoner(team, command.key, command.point, command.targetId);
     case 'stop': match.stop(team); return true;
     case 'flute': return match.startFlute(team);
